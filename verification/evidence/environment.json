@@ -1,6 +1,6 @@
 {
   "astropy": "8.0.1",
-  "git_commit": "7188e742806c1c607cd8d7dea65c2cb8c80203b1",
+  "git_commit": "cb011e62a91f7437b015786f759cf1e238d645a9",
   "git_dirty": false,
   "implementation": "CPython",
   "os": "Windows",
