@@ -135,5 +135,8 @@ def test_command_line_reports_and_refuses(capsys):
     assert main(["2030-01-01T00:00:00+00:00"]) == 2
     assert "update it from IERS" in capsys.readouterr().err
     assert main(["2026-09-28T00:00:00"]) == 2          # no timezone: refused, not guessed
-    assert "no timezone" in capsys.readouterr().err
+    assert "no timezone; add one, e.g. 2026-09-28T00:00:00Z" in capsys.readouterr().err
+    assert main(["2026-09-28"]) == 2                    # a date alone is also ambiguous
+    assert "e.g. 2026-09-28T00:00:00Z" in capsys.readouterr().err
     assert main(["not-a-date"]) == 2
+    assert "is not an ISO-8601 instant" in capsys.readouterr().err

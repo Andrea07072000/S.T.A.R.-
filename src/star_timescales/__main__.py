@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: Apache-2.0
 # Copyright 2026 Andrea Cavazzini
-"""python -m star_timescales [ISO-8601 UTC instant]
+"""python -m star_timescales [instant, e.g. 2026-09-28T12:00:00Z]
 
 Prints TAI - UTC, TT - UTC and the Julian dates for an instant (default: now), and how long the
 embedded leap-second table remains valid. Exit code 0 if the instant is covered, 2 if it is not.
@@ -32,8 +32,15 @@ def main(argv: list[str] | None = None) -> int:
         when = datetime.fromisoformat(args[0].replace("Z", "+00:00")) if args else datetime.now(timezone.utc)
         tai, tt = tai_minus_utc(when), tt_minus_utc(when)  # refused before anything is printed
         jd, mjd = julian_date(when), modified_julian_date(when)
-    except (LeapSecondTableError, NaiveDatetimeError, ValueError) as exc:
+    except NaiveDatetimeError:
+        print(f"refused: '{args[0]}' has no timezone; add one, e.g. {args[0].split('T')[0]}T00:00:00Z",
+              file=sys.stderr)
+        return 2
+    except LeapSecondTableError as exc:
         print(f"refused: {exc}", file=sys.stderr)
+        return 2
+    except ValueError:  # not parseable (LeapSecondTableError, a ValueError, is handled above)
+        print(f"refused: '{args[0]}' is not an ISO-8601 instant; e.g. 2026-09-28T12:00:00Z", file=sys.stderr)
         return 2
     print(f"instant (UTC)   {when.astimezone(timezone.utc).isoformat(timespec='seconds')}")
     print(f"TAI - UTC       {tai} s")
