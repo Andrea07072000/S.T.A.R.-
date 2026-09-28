@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "star-timescales"
+version = "0.1.0"
+description = "UTC/TAI/TT offsets from the IERS leap-second table and Julian dates, with explicit validity domains."
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+crosscheck = ["astropy>=6"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+markers = ["req(id): requirement verified by this test (see verification/REQUIREMENTS.md)"]

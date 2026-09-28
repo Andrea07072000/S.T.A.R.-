@@ -216,3 +216,29 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# --- S.T.A.R. public repository: local, generated and private material never published ---
+# Evidence under verification/evidence/ IS versioned on purpose (do not ignore it).
+node_modules/
+dist/
+build/
+src-tauri/target/
+playwright-report/
+test-results/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+var/
+.claude/
+.phoenix/
+n/
+private/
+confidential/
+customer-data/
+customer_data/
+andkey
+andkey.*
