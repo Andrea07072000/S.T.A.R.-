@@ -1,0 +1,2 @@
+# Evidence files are hashed in SHA256SUMS: keep them byte-identical on every OS.
+verification/evidence/** -text

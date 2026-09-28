@@ -1,0 +1,11 @@
+{
+  "astropy": "8.0.1",
+  "git_commit": "b283db36f9d8113aff96c6468a9d67a3a6c0bb96",
+  "git_dirty": false,
+  "implementation": "CPython",
+  "os": "Windows",
+  "pyerfa": "2.0.1.5",
+  "pytest": "9.1.1",
+  "pytest_exit_code": 0,
+  "python": "3.12.10"
+}
