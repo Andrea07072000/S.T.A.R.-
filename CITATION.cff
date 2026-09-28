@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "S.T.A.R. star_timescales: UTC/TAI/TT offsets from the IERS leap-second table and Julian dates"
+authors:
+  - family-names: Cavazzini
+    given-names: Andrea
+version: 0.1.0
+date-released: 2026-09-28
+license: Apache-2.0
+repository-code: "https://github.com/Andrea07072000/S.T.A.R.-"
+keywords:
+  - time scales
+  - leap seconds
+  - TAI
+  - Julian date
+  - verification

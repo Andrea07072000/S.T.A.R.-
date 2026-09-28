@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- Continuous integration on Linux, macOS and Windows with Python 3.10–3.13, including the ERFA cross-check.
+- Packaging: require setuptools >= 77 (needed for the SPDX license expression in `pyproject.toml`).
+- `CITATION.cff`; an issue form for wrong results that asks for the reference source.
+
 ## 0.1.0 — 2026-09-28
 
 First public release.

@@ -1,0 +1,32 @@
+name: Wrong result or bug
+description: A value that is wrong, an error that should not happen, or one that should.
+body:
+  - type: textarea
+    id: input
+    attributes:
+      label: Input
+      description: The exact call, including the datetime and its timezone.
+      render: python
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed
+      description: What you got (value or full error message).
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected, and the source
+      description: What you expected and where it comes from (IERS bulletin, SOFA/ERFA, a publication). A primary source is better than another library.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: star_timescales version or commit, Python version, OS.
+    validations:
+      required: true
