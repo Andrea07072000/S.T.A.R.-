@@ -30,12 +30,27 @@ tai_minus_utc(datetime(2026, 9, 28))
 # NaiveDatetimeError: 2026-09-28T00:00:00 has no timezone; pass an aware datetime ...
 ```
 
+From a terminal, for any instant or for now:
+
+```text
+$ python -m star_timescales 2026-09-28T00:00:00Z
+instant (UTC)   2026-09-28T00:00:00+00:00
+TAI - UTC       37 s
+TT - UTC        69.184 s
+JD / MJD        2461311.500000 / 61311.000000
+table           IERS Bulletin C, Leap_Second.dat (updated through Bulletin 72, July 2026; expires 2027-06-28)
+table valid     until 2027-06-28 (N days from today)
+
+$ python -m star_timescales 2030-01-01T00:00:00Z
+refused: leap-second table valid until 2027-06-28; update it from IERS Bulletin C before using later epochs
+```
+
 Install and test:
 
 ```bash
 python -m pip install "git+https://github.com/Andrea07072000/S.T.A.R.-"   # the library, no dependencies
 git clone https://github.com/Andrea07072000/S.T.A.R.- && cd S.T.A.R.-
-python -m pip install pytest pyerfa && python -m pytest                    # 22 tests
+python -m pip install pytest pyerfa && python -m pytest                    # 23 tests
 ```
 
 Python 3.10 to 3.13; tested on Linux, macOS and Windows (see the badge above).

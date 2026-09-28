@@ -123,3 +123,17 @@ def test_agrees_with_an_independent_implementation():
                 assert 0 < julian_date(when) - (jd1 + jd2) <= 1 / 86400 + 1e-9, when
             else:
                 assert julian_date(when) == pytest.approx(jd1 + jd2, abs=1e-8), when
+
+
+@pytest.mark.req("TS-REQ-002")
+def test_command_line_reports_and_refuses(capsys):
+    from star_timescales.__main__ import main
+    assert main(["2026-09-28T00:00:00Z"]) == 0
+    out = capsys.readouterr().out
+    assert "TAI - UTC       37 s" in out and "69.184" in out and "2461311.500000" in out
+    assert "valid     until 2027-06-28" in out
+    assert main(["2030-01-01T00:00:00+00:00"]) == 2
+    assert "update it from IERS" in capsys.readouterr().err
+    assert main(["2026-09-28T00:00:00"]) == 2          # no timezone: refused, not guessed
+    assert "no timezone" in capsys.readouterr().err
+    assert main(["not-a-date"]) == 2

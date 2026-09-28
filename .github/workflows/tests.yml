@@ -25,3 +25,18 @@ jobs:
         run: python -m pip install . pytest pyerfa
       - name: Test (including the ERFA cross-check)
         run: python -m pytest -q -rs
+      - name: Use it like a user (installed package, outside the source tree)
+        shell: bash
+        run: |
+          cd "$RUNNER_TEMP"
+          python -m star_timescales 2026-09-28T00:00:00Z | tee out.txt
+          grep -q "TAI - UTC       37 s" out.txt
+          grep -q "JD / MJD        2461311.500000 / 61311.000000" out.txt
+          set +e
+          python -m star_timescales 2030-01-01T00:00:00Z 2> err.txt
+          code=$?
+          set -e
+          cat err.txt
+          test "$code" -eq 2
+          grep -q "update it from IERS Bulletin C" err.txt
+          python -c "from star_timescales import tai_minus_utc; from datetime import datetime, timezone; assert tai_minus_utc(datetime(2026, 9, 28, tzinfo=timezone.utc)) == 37"
