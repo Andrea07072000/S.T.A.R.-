@@ -41,6 +41,7 @@ TT - UTC        69.184 s
 JD / MJD        2461311.500000 / 61311.000000
 GPS - UTC       18 s
 GPS week / SOW  2438 / 86418.000000 s
+CCSDS CUC       1E 81 4C 0C A5 00 00  (Level 1, P-field 1E: 4+2 octets, TAI since 1958)
 table           IERS Bulletin C, Leap_Second.dat (updated through Bulletin 72, July 2026; expires 2027-06-28)
 table valid     until 2027-06-28 (N days from today)
 
@@ -48,25 +49,46 @@ $ python -m star_timescales 2030-01-01T00:00:00Z
 refused: leap-second table valid until 2027-06-28; update it from IERS Bulletin C before using later epochs
 ```
 
+### Spacecraft time: GPS weeks and CCSDS time codes
+
+Telemetry is timestamped in TAI-based codes, ground systems think in UTC, navigation in GPS weeks. The same
+verified leap-second table drives all three:
+
+```python
+from star_timescales import encode_cuc, decode_cuc, cuc_to_utc, gps_week_and_seconds
+
+t = datetime(2026, 9, 28, tzinfo=timezone.utc)
+encode_cuc(t).hex(" ").upper()   # '1E 81 4C 0C A5 00 00'  CCSDS CUC Level 1, 4 coarse + 2 fine octets
+decode_cuc(encode_cuc(t))        # Fraction(2169244837, 1)  exact TAI seconds since 1958-01-01
+cuc_to_utc(encode_cuc(t, fine_octets=3)) == t   # True: exact round trip to the microsecond
+gps_week_and_seconds(t)          # (2438, 86418.0)  full week number, not modulo 1024
+```
+
+Across the leap second of 2016-12-31 both scales advance by 2 s between UTC 23:59:59 and 00:00:00, as they
+must; a code that falls inside 23:59:60 is refused when converted back to UTC, not silently shifted.
+
 Install and test:
 
 ```bash
 python -m pip install "git+https://github.com/Andrea07072000/S.T.A.R.-"   # the library, no dependencies
 git clone https://github.com/Andrea07072000/S.T.A.R.- && cd S.T.A.R.-
-python -m pip install pytest pyerfa && python -m pytest                    # 23 tests
+python -m pip install pytest pyerfa && python -m pytest                    # 42 tests
 ```
 
 Python 3.10 to 3.13; tested on Linux, macOS and Windows (see the badge above).
 
 ## How it is verified
 
-- **Requirements.** Six requirements (`TS-REQ-001` to `006`) in [`verification/REQUIREMENTS.md`](verification/REQUIREMENTS.md),
+- **Requirements.** Nine requirements (`TS-REQ-001` to `009`) in [`verification/REQUIREMENTS.md`](verification/REQUIREMENTS.md),
   each linked to the tests that verify it.
 - **Primary source.** IERS publishes the Modified Julian Date of every leap-second step. Every calendar date in
   the table, converted by this library, must give exactly the published MJD.
 - **Independent implementation.** Results are compared with ERFA, the open implementation of the IAU SOFA
   routines: TAI − UTC one second before, at, and 100 days after every step. The one convention difference
   (ERFA stretches a leap-second day to 86 401 s for Julian dates) is measured and bounded, not hidden.
+  CCSDS codes are checked the same way against ERFA's `utctai`, at every leap-second step and at 300 random instants.
+- **Published values.** GPS weeks are checked against the week-number rollovers of 1999-08-21T23:59:47Z (week
+  1024) and 2019-04-06T23:59:42Z (week 2048); the CUC P-field against the layout of CCSDS 301.0-B-4.
 - **Evidence.** `python verification/run_verification.py` regenerates [`verification/evidence/`](verification/evidence/):
   test results, environment and SHA-256 digests. The committed copy records the commit it was produced from.
 
@@ -77,20 +99,21 @@ account of how that was found is in [`verification/REQUIREMENTS.md`](verificatio
 
 | | Status |
 |---|---|
-| `star_timescales` 0.1.0 | Implemented, verified as above |
+| `star_timescales` 0.2.0 | Implemented, verified as above |
 | Further open components | Published one at a time, only once verified |
 | The S.T.A.R. assurance tooling (requirement-to-evidence traceability) | In development, not open source, not in this repository |
 
 ## What is not claimed
 
-S.T.A.R. is not affiliated with, endorsed or certified by NASA, ESA, SpaceX, IERS, the IAU or any regulatory or
+S.T.A.R. is not affiliated with, endorsed or certified by NASA, ESA, SpaceX, CCSDS, IERS, the IAU or any regulatory or
 mission authority; those names appear only to cite public data and algorithms. Nothing here is flight-certified
 or a statement of compliance with a standard.
 
 ## Sources
 
 Leap seconds: IERS Earth Orientation Centre, Bulletin C, `Leap_Second.dat` (through Bulletin 72, July 2026;
-expires 2027-06-28). Julian date: J. Meeus, *Astronomical Algorithms*, reimplemented.
+expires 2027-06-28). Julian date: J. Meeus, *Astronomical Algorithms*, reimplemented. CCSDS 301.0-B-4,
+*Time Code Formats* (section 3.2, Unsegmented Time Code). GPS time: IS-GPS-200 (GPS = TAI − 19 s).
 
 ## License, security, contributing
 

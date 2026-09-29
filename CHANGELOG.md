@@ -1,7 +1,10 @@
 # Changelog
 
-## Unreleased
+## 0.2.0 — 2026-09-29
 
+- CCSDS Unsegmented Time Code (CUC), Level 1: `encode_cuc`, `decode_cuc` (exact `Fraction`), `cuc_to_utc`,
+  `cuc_p_field`, `CucFormatError`; requirements `TS-REQ-008` and `TS-REQ-009`, cross-checked against ERFA.
+  The command line prints the CUC code of the instant.
 - GPS time: `gps_minus_utc`, `gps_week_and_seconds` (full week number, not modulo 1024), `GPS_EPOCH`,
   `GpsTimeError`; requirement `TS-REQ-007`, checked against the published week-number rollovers.
   The command line prints GPS - UTC and GPS week / seconds of week.

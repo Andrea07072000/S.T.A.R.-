@@ -4,8 +4,8 @@ title: "S.T.A.R. star_timescales: UTC/TAI/TT offsets from the IERS leap-second t
 authors:
   - family-names: Cavazzini
     given-names: Andrea
-version: 0.1.0
-date-released: 2026-09-28
+version: 0.2.0
+date-released: 2026-09-29
 license: Apache-2.0
 repository-code: "https://github.com/Andrea07072000/S.T.A.R.-"
 keywords:

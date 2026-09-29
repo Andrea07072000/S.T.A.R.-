@@ -1,10 +1,11 @@
 # SPDX-License-Identifier: Apache-2.0
 # Copyright 2026 Andrea Cavazzini
-"""star_timescales: UTC, TAI, TT and GPS offsets, GPS weeks and Julian dates, with explicit validity domains.
+"""star_timescales: UTC, TAI, TT and GPS offsets, GPS weeks, CCSDS CUC time codes and Julian dates, with explicit validity domains.
 
 Part of the public S.T.A.R. engineering repository. See README.md.
 """
 
+from .ccsds import CUC_EPOCH_TAI, CucFormatError, cuc_p_field, cuc_to_utc, decode_cuc, encode_cuc
 from .leap_seconds import (
     GPS_EPOCH,
     LEAP_SECONDS,
@@ -26,6 +27,12 @@ from .leap_seconds import (
 )
 
 __all__ = [
+    "CUC_EPOCH_TAI",
+    "CucFormatError",
+    "cuc_p_field",
+    "cuc_to_utc",
+    "decode_cuc",
+    "encode_cuc",
     "GPS_EPOCH",
     "LEAP_SECONDS",
     "LEAP_SECONDS_SOURCE",
@@ -44,4 +51,4 @@ __all__ = [
     "tai_minus_utc",
     "tt_minus_utc",
 ]
-__version__ = "0.1.0"
+__version__ = "0.2.0"

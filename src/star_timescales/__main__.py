@@ -2,7 +2,7 @@
 # Copyright 2026 Andrea Cavazzini
 """python -m star_timescales [instant, e.g. 2026-09-28T12:00:00Z]
 
-Prints TAI - UTC, TT - UTC, GPS time and the Julian dates for an instant (default: now), and how long the
+Prints TAI - UTC, TT - UTC, GPS time, the CCSDS CUC time code and the Julian dates for an instant (default: now), and how long the
 embedded leap-second table remains valid. Exit code 0 if the instant is covered, 2 if it is not.
 """
 
@@ -16,6 +16,7 @@ from . import (
     LEAP_SECONDS_VALID_UNTIL,
     GPS_EPOCH,
     LeapSecondTableError,
+    encode_cuc,
     NaiveDatetimeError,
     gps_minus_utc,
     gps_week_and_seconds,
@@ -56,6 +57,7 @@ def main(argv: list[str] | None = None) -> int:
     else:
         print(f"GPS             not defined before {GPS_EPOCH:%Y-%m-%d}")
     days = (LEAP_SECONDS_VALID_UNTIL - datetime.now(timezone.utc)).days
+    print(f"CCSDS CUC       {encode_cuc(when).hex(' ').upper()}  (Level 1, P-field 1E: 4+2 octets, TAI since 1958)")
     print(f"table           {LEAP_SECONDS_SOURCE}")
     print(f"table valid     until {LEAP_SECONDS_VALID_UNTIL:%Y-%m-%d} ({days} days from today)")
     return 0

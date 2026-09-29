@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "star-timescales"
-version = "0.1.0"
+version = "0.2.0"
 description = "UTC/TAI/TT offsets from the IERS leap-second table and Julian dates, with explicit validity domains."
 readme = "README.md"
 license = "Apache-2.0"

@@ -12,6 +12,8 @@ Each requirement is verified by the tests that carry its ID (`@pytest.mark.req("
 | TS-REQ-005 | Julian and Modified Julian Dates match published reference epochs (J2000.0, MJD 0, Unix epoch, a Gregorian century boundary). | T | `test_julian_date_reference_values`, `test_mjd_round_trip` |
 | TS-REQ-006 | Results agree with an independent implementation (ERFA, the open implementation of the IAU SOFA routines); the one convention difference is measured and bounded, not hidden. | T | `test_agrees_with_an_independent_implementation` (skipped if `pyerfa` is not installed) |
 | TS-REQ-007 | GPS - UTC equals TAI - UTC - 19 s; the full GPS week number and seconds of week match the published epoch and week-number rollovers (1999-08-21T23:59:47Z, 2019-04-06T23:59:42Z), stay continuous across leap seconds and keep microseconds; instants before 1980-01-06 are refused. | T | `tests/test_gps_time.py` |
+| TS-REQ-008 | CCSDS CUC Level 1 codes (CCSDS 301.0-B-4 §3.2) have the standard P-field layout (4+2 octets = `0x1E`), a truncated binary fraction, exact round trips to the microsecond with 3 fine octets, the stated resolution bound otherwise, continuity across leap seconds, refusal of instants inside a leap second when decoding, and refusal of malformed codes. | T | `tests/test_ccsds.py` |
+| TS-REQ-009 | The TAI seconds since 1958-01-01 carried by a CUC code agree with an independent implementation (ERFA `utctai`) at every leap-second step, one second before and after it, 100 days after it, and at 300 random instants, within ERFA's floating-point noise (2 µs). | T | `test_agrees_with_erfa_utc_to_tai` (skipped if `pyerfa` is not installed) |
 
 ## Two independent checks
 
