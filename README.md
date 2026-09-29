@@ -17,12 +17,13 @@ offset inside the table's validity, and **refuses** outside it.
 
 ```python
 from datetime import datetime, timezone
-from star_timescales import tai_minus_utc, tt_minus_utc, julian_date
+from star_timescales import tai_minus_utc, tt_minus_utc, julian_date, gps_week_and_seconds
 
 t = datetime(2026, 9, 28, tzinfo=timezone.utc)
 tai_minus_utc(t)   # 37        TAI - UTC, seconds (IERS Bulletin C)
 tt_minus_utc(t)    # 69.184    TT - UTC, seconds
 julian_date(t)     # 2461311.5
+gps_week_and_seconds(t)  # (2438, 86418.0)  full GPS week, seconds of week
 
 tai_minus_utc(datetime(2030, 1, 1, tzinfo=timezone.utc))
 # LeapSecondTableError: leap-second table valid until 2027-06-28; update it from IERS Bulletin C ...
@@ -38,6 +39,8 @@ instant (UTC)   2026-09-28T00:00:00+00:00
 TAI - UTC       37 s
 TT - UTC        69.184 s
 JD / MJD        2461311.500000 / 61311.000000
+GPS - UTC       18 s
+GPS week / SOW  2438 / 86418.000000 s
 table           IERS Bulletin C, Leap_Second.dat (updated through Bulletin 72, July 2026; expires 2027-06-28)
 table valid     until 2027-06-28 (N days from today)
 

@@ -11,6 +11,7 @@ Each requirement is verified by the tests that carry its ID (`@pytest.mark.req("
 | TS-REQ-004 | TT − UTC = TAI − UTC + 32.184 s. | T | `test_tt_minus_utc` |
 | TS-REQ-005 | Julian and Modified Julian Dates match published reference epochs (J2000.0, MJD 0, Unix epoch, a Gregorian century boundary). | T | `test_julian_date_reference_values`, `test_mjd_round_trip` |
 | TS-REQ-006 | Results agree with an independent implementation (ERFA, the open implementation of the IAU SOFA routines); the one convention difference is measured and bounded, not hidden. | T | `test_agrees_with_an_independent_implementation` (skipped if `pyerfa` is not installed) |
+| TS-REQ-007 | GPS - UTC equals TAI - UTC - 19 s; the full GPS week number and seconds of week match the published epoch and week-number rollovers (1999-08-21T23:59:47Z, 2019-04-06T23:59:42Z), stay continuous across leap seconds and keep microseconds; instants before 1980-01-06 are refused. | T | `tests/test_gps_time.py` |
 
 ## Two independent checks
 

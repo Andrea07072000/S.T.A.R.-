@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- GPS time: `gps_minus_utc`, `gps_week_and_seconds` (full week number, not modulo 1024), `GPS_EPOCH`,
+  `GpsTimeError`; requirement `TS-REQ-007`, checked against the published week-number rollovers.
+  The command line prints GPS - UTC and GPS week / seconds of week.
+
 ## 0.1.0 — 2026-09-28
 
 First public release.

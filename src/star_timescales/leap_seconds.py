@@ -19,7 +19,7 @@ issued in July 2026", "File expires on 28 June 2027". Values checked against tha
 from __future__ import annotations
 
 import math
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 
 #: TT - TAI in seconds, fixed by definition (IAU 1991 Resolution A4).
 TT_MINUS_TAI_S: float = 32.184
@@ -122,3 +122,35 @@ def jd_to_mjd(jd: float) -> float:
 
 def mjd_to_jd(mjd: float) -> float:
     return mjd + _MJD_OFFSET
+
+
+# ---------------------------------------------------------------- GPS time
+#: GPS time is a continuous scale that coincided with UTC at its epoch and runs a constant 19 s behind TAI
+#: (IS-GPS-200, section 3.3.4). It does not include the leap seconds added after 1980-01-06.
+GPS_EPOCH: datetime = datetime(1980, 1, 6, tzinfo=timezone.utc)
+TAI_MINUS_GPS_S: int = 19
+_WEEK = timedelta(weeks=1)
+
+
+class GpsTimeError(ValueError):
+    """The instant is before the GPS epoch (1980-01-06T00:00:00Z)."""
+
+
+def gps_minus_utc(utc: datetime) -> int:
+    """GPS - UTC in seconds valid at the given instant (TAI - UTC - 19 s)."""
+    t = _as_utc(utc)
+    if t < GPS_EPOCH:
+        raise GpsTimeError(f"GPS time starts at {GPS_EPOCH:%Y-%m-%d}; {t.isoformat()} is before it")
+    return tai_minus_utc(t) - TAI_MINUS_GPS_S
+
+
+def gps_week_and_seconds(utc: datetime) -> tuple[int, float]:
+    """Full GPS week number (not modulo 1024) and seconds of week of a UTC instant.
+
+    The arithmetic is done on ``timedelta`` (integer microseconds), so no precision is lost to floats
+    before the seconds of week are returned.
+    """
+    t = _as_utc(utc)
+    elapsed = (t - GPS_EPOCH) + timedelta(seconds=gps_minus_utc(t))
+    week, rest = divmod(elapsed, _WEEK)
+    return week, rest.total_seconds()
