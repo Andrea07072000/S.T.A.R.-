@@ -115,6 +115,11 @@ Leap seconds: IERS Earth Orientation Centre, Bulletin C, `Leap_Second.dat` (thro
 expires 2027-06-28). Julian date: J. Meeus, *Astronomical Algorithms*, reimplemented. CCSDS 301.0-B-4,
 *Time Code Formats* (section 3.2, Unsegmented Time Code). GPS time: IS-GPS-200 (GPS = TAI − 19 s).
 
+## Also from this author
+
+[**nightshift-skills**](https://github.com/Andrea07072000/nightshift-skills) — skills for AI coding agents that work
+unattended (preflight before overnight runs, honest status reports), each one benchmarked with and without the skill.
+
 ## License, security, contributing
 
 [Apache-2.0](LICENSE) · [Security policy](SECURITY.md) · [Contributing](CONTRIBUTING.md) ·
