@@ -10,6 +10,7 @@ being true, that workflow turns red in public.
   python-sgp4, spacepackets, ccsdspy, pyorbital…);
 - **mutation testing**: we deliberately break the code hundreds of times and check that the tests notice
   (score ≥ 0.80 required; most are above 0.85);
+- one license for everything: **Apache-2.0**;
 - installation **from its own release tag** in a fresh environment, tests run outside the source tree, on Windows and
   Linux.
 
@@ -18,6 +19,8 @@ being true, that workflow turns red in public.
 | Package | What it does | Notable evidence |
 |---|---|---|
 | `star_audit` | **Independent auditors of other space libraries**: geodesy, leap seconds, SGP4, TEME→GCRS frames, TDB−TT, GMST, orbital elements, CCSDS TM frames, CCSDS Space Packets, TLE ingestion | each auditor is first validated on a published value; it measures agreement, model families and what a library silently accepts |
+| `star_crosscheck` | Cross-check engine: runs the same computation through independent implementations and reports AGREE / DISAGREE / INSUFFICIENT / DEGRADED, never a silent pass | 13 campaigns (time scales, geodesy, SGP4, CCSDS, Lambert, elements, TDB, GMST...) with recorded evidence |
+| `star_telemetry_c` | The CCSDS AOS/TM frame check in C99 (no dynamic memory), for flight-like targets | field-equal to the Python reference on 305 frames (5 NASA F Prime frames + 300 corrupted); built with `-Werror` on x86_64 and, under qemu-user, aarch64 and riscv64 in this repository's CI |
 | `star_telemetry` | CCSDS AOS/TM transfer frames and Space Packets (Python) | field-exact against spacepackets and ccsdspy on 300 frames; real NASA Europa Clipper telemetry (ccsdspy test data) |
 | `conjunction_screen_sgp4` | All-vs-all satellite conjunction screening with SGP4 | rejects and **counts** malformed TLEs (a risk our own TLE audit found) |
 | `star_cdm` | CCSDS 508.0 Conjunction Data Message parser + component-level consistency checks | RTN projection agrees with Orekit to < 1e-6 m |

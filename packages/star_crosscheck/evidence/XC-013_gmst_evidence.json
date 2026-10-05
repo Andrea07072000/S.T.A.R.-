@@ -1,0 +1,1059 @@
+[
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "GMST (IAU 1982)",
+  "unit": "deg",
+  "inputs": {
+   "jd": 2448854.5,
+   "frac": 0.5097222222222222
+  },
+  "tolerance": 1e-07,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_sidereal",
+    "lineage": "S.T.A.R. Vallado eq. 3-47",
+    "version": "0.1.0",
+    "state": "OK",
+    "value": [
+     152.578787852
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "pyerfa",
+    "lineage": "ERFA/SOFA gmst82",
+    "version": "2.0.1.5",
+    "state": "OK",
+    "value": [
+     152.578787852
+    ],
+    "elapsed_s": 0.3494
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_sidereal",
+    "b": "pyerfa",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "ERFA/SOFA gmst82",
+   "S.T.A.R. Vallado eq. 3-47"
+  ],
+  "n_failed": 0,
+  "reference": {
+   "source": "Vallado, Fundamentals of Astrodynamics, Example 3-5",
+   "value": [
+    152.57878781
+   ],
+   "max_dev": 4.200001058052294e-08,
+   "ref_tolerance": 1e-07,
+   "within_tol": true,
+   "per_engine": {
+    "star_sidereal": 4.200001058052294e-08,
+    "pyerfa": 4.200001058052294e-08
+   }
+  },
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-04T13:08:50+00:00",
+  "sha256": "44b4fcb2c344fb2786180ee4c0515da87eea9f428c08609ff044a7202aa4e2c0"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "GMST (IAU 1982)",
+  "unit": "deg",
+  "inputs": {
+   "jd": 2415020.5,
+   "frac": 0.0
+  },
+  "tolerance": 1e-07,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_sidereal",
+    "lineage": "S.T.A.R. Vallado eq. 3-47",
+    "version": "0.1.0",
+    "state": "OK",
+    "value": [
+     100.183776397
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "pyerfa",
+    "lineage": "ERFA/SOFA gmst82",
+    "version": "2.0.1.5",
+    "state": "OK",
+    "value": [
+     100.183776398
+    ],
+    "elapsed_s": 0.3296
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_sidereal",
+    "b": "pyerfa",
+    "same_lineage": false,
+    "diff": 1.0000036354540498e-09,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "ERFA/SOFA gmst82",
+   "S.T.A.R. Vallado eq. 3-47"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-04T13:08:51+00:00",
+  "sha256": "a9c0c277a3cc3d1c5997af8bee2d24a1ca76de042c543ec79b528c5f82a67512"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "GMST (IAU 1982)",
+  "unit": "deg",
+  "inputs": {
+   "jd": 2415020.5,
+   "frac": 0.3
+  },
+  "tolerance": 1e-07,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_sidereal",
+    "lineage": "S.T.A.R. Vallado eq. 3-47",
+    "version": "0.1.0",
+    "state": "OK",
+    "value": [
+     208.479470603
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "pyerfa",
+    "lineage": "ERFA/SOFA gmst82",
+    "version": "2.0.1.5",
+    "state": "OK",
+    "value": [
+     208.479470602
+    ],
+    "elapsed_s": 0.3378
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_sidereal",
+    "b": "pyerfa",
+    "same_lineage": false,
+    "diff": 1.000017846308765e-09,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "ERFA/SOFA gmst82",
+   "S.T.A.R. Vallado eq. 3-47"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-04T13:08:51+00:00",
+  "sha256": "2f592671fcb1501b4e06477decd4cd6eeea18987b2fb9d4e0914eae99caa3cc0"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "GMST (IAU 1982)",
+  "unit": "deg",
+  "inputs": {
+   "jd": 2415020.5,
+   "frac": 0.75
+  },
+  "tolerance": 1e-07,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_sidereal",
+    "lineage": "S.T.A.R. Vallado eq. 3-47",
+    "version": "0.1.0",
+    "state": "OK",
+    "value": [
+     10.923011907
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "pyerfa",
+    "lineage": "ERFA/SOFA gmst82",
+    "version": "2.0.1.5",
+    "state": "OK",
+    "value": [
+     10.923011907
+    ],
+    "elapsed_s": 0.3204
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_sidereal",
+    "b": "pyerfa",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "ERFA/SOFA gmst82",
+   "S.T.A.R. Vallado eq. 3-47"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-04T13:08:51+00:00",
+  "sha256": "f36cb871f3dd314ac200d65ff32e754d6f85455998c82c0426d9076d993dc7c6"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "GMST (IAU 1982)",
+  "unit": "deg",
+  "inputs": {
+   "jd": 2440587.5,
+   "frac": 0.0
+  },
+  "tolerance": 1e-07,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_sidereal",
+    "lineage": "S.T.A.R. Vallado eq. 3-47",
+    "version": "0.1.0",
+    "state": "OK",
+    "value": [
+     100.229637207
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "pyerfa",
+    "lineage": "ERFA/SOFA gmst82",
+    "version": "2.0.1.5",
+    "state": "OK",
+    "value": [
+     100.229637207
+    ],
+    "elapsed_s": 0.3174
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_sidereal",
+    "b": "pyerfa",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "ERFA/SOFA gmst82",
+   "S.T.A.R. Vallado eq. 3-47"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-04T13:08:52+00:00",
+  "sha256": "9ee52e2413f81daaae5b7dbc2e66ff111405064657e5a0a27bc00f91bf0f91a7"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "GMST (IAU 1982)",
+  "unit": "deg",
+  "inputs": {
+   "jd": 2440587.5,
+   "frac": 0.3
+  },
+  "tolerance": 1e-07,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_sidereal",
+    "lineage": "S.T.A.R. Vallado eq. 3-47",
+    "version": "0.1.0",
+    "state": "OK",
+    "value": [
+     208.525331414
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "pyerfa",
+    "lineage": "ERFA/SOFA gmst82",
+    "version": "2.0.1.5",
+    "state": "OK",
+    "value": [
+     208.525331415
+    ],
+    "elapsed_s": 0.3531
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_sidereal",
+    "b": "pyerfa",
+    "same_lineage": false,
+    "diff": 1.000017846308765e-09,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "ERFA/SOFA gmst82",
+   "S.T.A.R. Vallado eq. 3-47"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-04T13:08:52+00:00",
+  "sha256": "8823d3c2c244298770a640fbb65432b2671c285710fd712e862700f882074ee2"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "GMST (IAU 1982)",
+  "unit": "deg",
+  "inputs": {
+   "jd": 2440587.5,
+   "frac": 0.75
+  },
+  "tolerance": 1e-07,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_sidereal",
+    "lineage": "S.T.A.R. Vallado eq. 3-47",
+    "version": "0.1.0",
+    "state": "OK",
+    "value": [
+     10.968872727
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "pyerfa",
+    "lineage": "ERFA/SOFA gmst82",
+    "version": "2.0.1.5",
+    "state": "OK",
+    "value": [
+     10.968872727
+    ],
+    "elapsed_s": 0.3346
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_sidereal",
+    "b": "pyerfa",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "ERFA/SOFA gmst82",
+   "S.T.A.R. Vallado eq. 3-47"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-04T13:08:52+00:00",
+  "sha256": "27d12fc4652bda455657cd26bddb610db7cd9361f884cf6dff01874423cb59d4"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "GMST (IAU 1982)",
+  "unit": "deg",
+  "inputs": {
+   "jd": 2451544.5,
+   "frac": 0.0
+  },
+  "tolerance": 1e-07,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_sidereal",
+    "lineage": "S.T.A.R. Vallado eq. 3-47",
+    "version": "0.1.0",
+    "state": "OK",
+    "value": [
+     99.967794692
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "pyerfa",
+    "lineage": "ERFA/SOFA gmst82",
+    "version": "2.0.1.5",
+    "state": "OK",
+    "value": [
+     99.967794692
+    ],
+    "elapsed_s": 0.3153
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_sidereal",
+    "b": "pyerfa",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "ERFA/SOFA gmst82",
+   "S.T.A.R. Vallado eq. 3-47"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-04T13:08:53+00:00",
+  "sha256": "68bb87ed8dae348fbe071cb3548360ead41f734f9763c2eea03187ba2e8a393f"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "GMST (IAU 1982)",
+  "unit": "deg",
+  "inputs": {
+   "jd": 2451544.5,
+   "frac": 0.3
+  },
+  "tolerance": 1e-07,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_sidereal",
+    "lineage": "S.T.A.R. Vallado eq. 3-47",
+    "version": "0.1.0",
+    "state": "OK",
+    "value": [
+     208.263488902
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "pyerfa",
+    "lineage": "ERFA/SOFA gmst82",
+    "version": "2.0.1.5",
+    "state": "OK",
+    "value": [
+     208.263488902
+    ],
+    "elapsed_s": 0.3244
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_sidereal",
+    "b": "pyerfa",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "ERFA/SOFA gmst82",
+   "S.T.A.R. Vallado eq. 3-47"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-04T13:08:53+00:00",
+  "sha256": "b457e9662945f8f90b2a280b422aa7a46ffdd9292e547e36743edf789d78093d"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "GMST (IAU 1982)",
+  "unit": "deg",
+  "inputs": {
+   "jd": 2451544.5,
+   "frac": 0.75
+  },
+  "tolerance": 1e-07,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_sidereal",
+    "lineage": "S.T.A.R. Vallado eq. 3-47",
+    "version": "0.1.0",
+    "state": "OK",
+    "value": [
+     10.707030217
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "pyerfa",
+    "lineage": "ERFA/SOFA gmst82",
+    "version": "2.0.1.5",
+    "state": "OK",
+    "value": [
+     10.707030217
+    ],
+    "elapsed_s": 0.3308
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_sidereal",
+    "b": "pyerfa",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "ERFA/SOFA gmst82",
+   "S.T.A.R. Vallado eq. 3-47"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-04T13:08:53+00:00",
+  "sha256": "3d6cdeea153d1193369f43aa990a43a89ae7ad644c235d789a097cf7c993b72e"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "GMST (IAU 1982)",
+  "unit": "deg",
+  "inputs": {
+   "jd": 2455197.5,
+   "frac": 0.0
+  },
+  "tolerance": 1e-07,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_sidereal",
+    "lineage": "S.T.A.R. Vallado eq. 3-47",
+    "version": "0.1.0",
+    "state": "OK",
+    "value": [
+     100.537627615
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "pyerfa",
+    "lineage": "ERFA/SOFA gmst82",
+    "version": "2.0.1.5",
+    "state": "OK",
+    "value": [
+     100.537627615
+    ],
+    "elapsed_s": 0.3197
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_sidereal",
+    "b": "pyerfa",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "ERFA/SOFA gmst82",
+   "S.T.A.R. Vallado eq. 3-47"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-04T13:08:54+00:00",
+  "sha256": "4b4627c05aad9ae9c56a4e3afacd50f9e3511d916effdb3d255ec38b95b3178f"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "GMST (IAU 1982)",
+  "unit": "deg",
+  "inputs": {
+   "jd": 2455197.5,
+   "frac": 0.3
+  },
+  "tolerance": 1e-07,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_sidereal",
+    "lineage": "S.T.A.R. Vallado eq. 3-47",
+    "version": "0.1.0",
+    "state": "OK",
+    "value": [
+     208.833321826
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "pyerfa",
+    "lineage": "ERFA/SOFA gmst82",
+    "version": "2.0.1.5",
+    "state": "OK",
+    "value": [
+     208.833321826
+    ],
+    "elapsed_s": 0.3138
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_sidereal",
+    "b": "pyerfa",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "ERFA/SOFA gmst82",
+   "S.T.A.R. Vallado eq. 3-47"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-04T13:08:54+00:00",
+  "sha256": "692b1151c5c3d2b5ca664b57040015a321b1d33f75354f1175619e517881a636"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "GMST (IAU 1982)",
+  "unit": "deg",
+  "inputs": {
+   "jd": 2455197.5,
+   "frac": 0.75
+  },
+  "tolerance": 1e-07,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_sidereal",
+    "lineage": "S.T.A.R. Vallado eq. 3-47",
+    "version": "0.1.0",
+    "state": "OK",
+    "value": [
+     11.276863142
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "pyerfa",
+    "lineage": "ERFA/SOFA gmst82",
+    "version": "2.0.1.5",
+    "state": "OK",
+    "value": [
+     11.276863141
+    ],
+    "elapsed_s": 0.3233
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_sidereal",
+    "b": "pyerfa",
+    "same_lineage": false,
+    "diff": 1.000000082740371e-09,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "ERFA/SOFA gmst82",
+   "S.T.A.R. Vallado eq. 3-47"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-04T13:08:54+00:00",
+  "sha256": "2d359adffc5032573f48dbf2ab16364e2d3c89e03491fdd06a60379d9d438abb"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "GMST (IAU 1982)",
+  "unit": "deg",
+  "inputs": {
+   "jd": 2460586.5,
+   "frac": 0.0
+  },
+  "tolerance": 1e-07,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_sidereal",
+    "lineage": "S.T.A.R. Vallado eq. 3-47",
+    "version": "0.1.0",
+    "state": "OK",
+    "value": [
+     12.191304424
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "pyerfa",
+    "lineage": "ERFA/SOFA gmst82",
+    "version": "2.0.1.5",
+    "state": "OK",
+    "value": [
+     12.191304424
+    ],
+    "elapsed_s": 0.3438
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_sidereal",
+    "b": "pyerfa",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "ERFA/SOFA gmst82",
+   "S.T.A.R. Vallado eq. 3-47"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-04T13:08:55+00:00",
+  "sha256": "99af8d4ae030460b138b703ad5a59c5040bd236caea4098f6ec1cf72fd928355"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "GMST (IAU 1982)",
+  "unit": "deg",
+  "inputs": {
+   "jd": 2460586.5,
+   "frac": 0.3
+  },
+  "tolerance": 1e-07,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_sidereal",
+    "lineage": "S.T.A.R. Vallado eq. 3-47",
+    "version": "0.1.0",
+    "state": "OK",
+    "value": [
+     120.486998636
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "pyerfa",
+    "lineage": "ERFA/SOFA gmst82",
+    "version": "2.0.1.5",
+    "state": "OK",
+    "value": [
+     120.486998636
+    ],
+    "elapsed_s": 0.3101
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_sidereal",
+    "b": "pyerfa",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "ERFA/SOFA gmst82",
+   "S.T.A.R. Vallado eq. 3-47"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-04T13:08:55+00:00",
+  "sha256": "84463e9df61fc4bdf318b449d137374910c97962b194735219a72d91d85c2174"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "GMST (IAU 1982)",
+  "unit": "deg",
+  "inputs": {
+   "jd": 2460586.5,
+   "frac": 0.75
+  },
+  "tolerance": 1e-07,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_sidereal",
+    "lineage": "S.T.A.R. Vallado eq. 3-47",
+    "version": "0.1.0",
+    "state": "OK",
+    "value": [
+     282.930539953
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "pyerfa",
+    "lineage": "ERFA/SOFA gmst82",
+    "version": "2.0.1.5",
+    "state": "OK",
+    "value": [
+     282.930539953
+    ],
+    "elapsed_s": 0.3249
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_sidereal",
+    "b": "pyerfa",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "ERFA/SOFA gmst82",
+   "S.T.A.R. Vallado eq. 3-47"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-04T13:08:55+00:00",
+  "sha256": "272d9051c83282682bdae3ee86e8269411da250662ee56b5da07ee9227e134c3"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "GMST (IAU 1982)",
+  "unit": "deg",
+  "inputs": {
+   "jd": 2469807.5,
+   "frac": 0.0
+  },
+  "tolerance": 1e-07,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_sidereal",
+    "lineage": "S.T.A.R. Vallado eq. 3-47",
+    "version": "0.1.0",
+    "state": "OK",
+    "value": [
+     100.84574216
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "pyerfa",
+    "lineage": "ERFA/SOFA gmst82",
+    "version": "2.0.1.5",
+    "state": "OK",
+    "value": [
+     100.845742159
+    ],
+    "elapsed_s": 0.3182
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_sidereal",
+    "b": "pyerfa",
+    "same_lineage": false,
+    "diff": 1.0000036354540498e-09,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "ERFA/SOFA gmst82",
+   "S.T.A.R. Vallado eq. 3-47"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-04T13:08:56+00:00",
+  "sha256": "31db98598eee5e250206b194d2d5b16353a8327bd8b7932335005ac2d279464a"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "GMST (IAU 1982)",
+  "unit": "deg",
+  "inputs": {
+   "jd": 2469807.5,
+   "frac": 0.3
+  },
+  "tolerance": 1e-07,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_sidereal",
+    "lineage": "S.T.A.R. Vallado eq. 3-47",
+    "version": "0.1.0",
+    "state": "OK",
+    "value": [
+     209.141436372
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "pyerfa",
+    "lineage": "ERFA/SOFA gmst82",
+    "version": "2.0.1.5",
+    "state": "OK",
+    "value": [
+     209.141436372
+    ],
+    "elapsed_s": 0.312
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_sidereal",
+    "b": "pyerfa",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "ERFA/SOFA gmst82",
+   "S.T.A.R. Vallado eq. 3-47"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-04T13:08:56+00:00",
+  "sha256": "576e4ab731dd3b21634e085a2cd519e446bce6d2b9a57d7031352a37b8a9bcf2"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "GMST (IAU 1982)",
+  "unit": "deg",
+  "inputs": {
+   "jd": 2469807.5,
+   "frac": 0.75
+  },
+  "tolerance": 1e-07,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_sidereal",
+    "lineage": "S.T.A.R. Vallado eq. 3-47",
+    "version": "0.1.0",
+    "state": "OK",
+    "value": [
+     11.584977693
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "pyerfa",
+    "lineage": "ERFA/SOFA gmst82",
+    "version": "2.0.1.5",
+    "state": "OK",
+    "value": [
+     11.584977692
+    ],
+    "elapsed_s": 0.3287
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_sidereal",
+    "b": "pyerfa",
+    "same_lineage": false,
+    "diff": 1.000000082740371e-09,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "ERFA/SOFA gmst82",
+   "S.T.A.R. Vallado eq. 3-47"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-04T13:08:56+00:00",
+  "sha256": "14938c089d0ab543b99b6e2fb9b0417bb5e36fad54cbbb6d0a3e2541115b674f"
+ }
+]

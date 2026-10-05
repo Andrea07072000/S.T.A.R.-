@@ -1,0 +1,353 @@
+[
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "SGP4 TEME Position Vector",
+  "unit": "km",
+  "inputs": {
+   "dt_minutes": 0.0
+  },
+  "tolerance": 0.005,
+  "diff_mode": "norm",
+  "engines": [
+   {
+    "engine": "sgp4",
+    "lineage": "Vallado SGP4 / Satrec",
+    "version": "2.27",
+    "state": "OK",
+    "value": [
+     7022.4653,
+     -1400.083,
+     0.04
+    ],
+    "elapsed_s": 0.1271
+   },
+   {
+    "engine": "skyfield",
+    "lineage": "Vallado SGP4 / Satrec",
+    "version": "1.55",
+    "state": "OK",
+    "value": [
+     7022.4653,
+     -1400.083,
+     0.04
+    ],
+    "elapsed_s": 0.5272
+   },
+   {
+    "engine": "pyorbital",
+    "lineage": "PyTroll SGDP4 pure-Python",
+    "version": "1.13.0",
+    "state": "OK",
+    "value": [
+     7022.4653,
+     -1400.083,
+     0.04
+    ],
+    "elapsed_s": 1.6008
+   }
+  ],
+  "pairs": [
+   {
+    "a": "sgp4",
+    "b": "skyfield",
+    "same_lineage": true,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "sgp4",
+    "b": "pyorbital",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "skyfield",
+    "b": "pyorbital",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "PyTroll SGDP4 pure-Python",
+   "Vallado SGP4 / Satrec"
+  ],
+  "n_failed": 0,
+  "reference": {
+   "source": "Vallado AIAA-2006-6753 Table 4 Vanguard 1 at epoch",
+   "value": [
+    7022.4653,
+    -1400.083,
+    0.04
+   ],
+   "max_dev": 0.0,
+   "ref_tolerance": 0.005,
+   "within_tol": true,
+   "per_engine": {
+    "sgp4": 0.0,
+    "skyfield": 0.0,
+    "pyorbital": 0.0
+   }
+  },
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T15:54:36+00:00",
+  "sha256": "8fff19cb091b7be41b0620af01e4db3d16ca845a15cc7932ad25cee1b6ad3432"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "SGP4 TEME Position Vector",
+  "unit": "km",
+  "inputs": {
+   "dt_minutes": 60.0
+  },
+  "tolerance": 0.005,
+  "diff_mode": "norm",
+  "engines": [
+   {
+    "engine": "sgp4",
+    "lineage": "Vallado SGP4 / Satrec",
+    "version": "2.27",
+    "state": "OK",
+    "value": [
+     -8198.27,
+     5546.9047,
+     2599.0679
+    ],
+    "elapsed_s": 0.1294
+   },
+   {
+    "engine": "skyfield",
+    "lineage": "Vallado SGP4 / Satrec",
+    "version": "1.55",
+    "state": "OK",
+    "value": [
+     -8198.27,
+     5546.9047,
+     2599.0679
+    ],
+    "elapsed_s": 0.5207
+   },
+   {
+    "engine": "pyorbital",
+    "lineage": "PyTroll SGDP4 pure-Python",
+    "version": "1.13.0",
+    "state": "OK",
+    "value": [
+     -8198.27,
+     5546.9047,
+     2599.0679
+    ],
+    "elapsed_s": 1.578
+   }
+  ],
+  "pairs": [
+   {
+    "a": "sgp4",
+    "b": "skyfield",
+    "same_lineage": true,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "sgp4",
+    "b": "pyorbital",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "skyfield",
+    "b": "pyorbital",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "PyTroll SGDP4 pure-Python",
+   "Vallado SGP4 / Satrec"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T15:54:39+00:00",
+  "sha256": "5eef10d1f6252453ea49d8f0fde137923c64cdfb51a95d89283af0a56316e75e"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "SGP4 TEME Position Vector",
+  "unit": "km",
+  "inputs": {
+   "dt_minutes": 360.0
+  },
+  "tolerance": 0.005,
+  "diff_mode": "norm",
+  "engines": [
+   {
+    "engine": "sgp4",
+    "lineage": "Vallado SGP4 / Satrec",
+    "version": "2.27",
+    "state": "OK",
+    "value": [
+     -7154.0312,
+     -3783.1768,
+     -3536.1941
+    ],
+    "elapsed_s": 0.124
+   },
+   {
+    "engine": "skyfield",
+    "lineage": "Vallado SGP4 / Satrec",
+    "version": "1.55",
+    "state": "OK",
+    "value": [
+     -7154.0312,
+     -3783.1768,
+     -3536.1941
+    ],
+    "elapsed_s": 0.5352
+   },
+   {
+    "engine": "pyorbital",
+    "lineage": "PyTroll SGDP4 pure-Python",
+    "version": "1.13.0",
+    "state": "OK",
+    "value": [
+     -7154.0312,
+     -3783.1768,
+     -3536.1941
+    ],
+    "elapsed_s": 1.8571
+   }
+  ],
+  "pairs": [
+   {
+    "a": "sgp4",
+    "b": "skyfield",
+    "same_lineage": true,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "sgp4",
+    "b": "pyorbital",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "skyfield",
+    "b": "pyorbital",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "PyTroll SGDP4 pure-Python",
+   "Vallado SGP4 / Satrec"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T15:54:41+00:00",
+  "sha256": "ae921f6d87e5077571279d21f339c18065f36ac3976e49cb4dd867666b6d0535"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "SGP4 TEME Position Vector",
+  "unit": "km",
+  "inputs": {
+   "dt_minutes": 1440.0
+  },
+  "tolerance": 0.005,
+  "diff_mode": "norm",
+  "engines": [
+   {
+    "engine": "sgp4",
+    "lineage": "Vallado SGP4 / Satrec",
+    "version": "2.27",
+    "state": "OK",
+    "value": [
+     -938.5592,
+     -6268.1875,
+     -4294.0292
+    ],
+    "elapsed_s": 0.1248
+   },
+   {
+    "engine": "skyfield",
+    "lineage": "Vallado SGP4 / Satrec",
+    "version": "1.55",
+    "state": "OK",
+    "value": [
+     -938.5592,
+     -6268.1875,
+     -4294.0292
+    ],
+    "elapsed_s": 0.5185
+   },
+   {
+    "engine": "pyorbital",
+    "lineage": "PyTroll SGDP4 pure-Python",
+    "version": "1.13.0",
+    "state": "OK",
+    "value": [
+     -938.5592,
+     -6268.1875,
+     -4294.0292
+    ],
+    "elapsed_s": 1.5795
+   }
+  ],
+  "pairs": [
+   {
+    "a": "sgp4",
+    "b": "skyfield",
+    "same_lineage": true,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "sgp4",
+    "b": "pyorbital",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "skyfield",
+    "b": "pyorbital",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "PyTroll SGDP4 pure-Python",
+   "Vallado SGP4 / Satrec"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T15:54:43+00:00",
+  "sha256": "254675f9112cf44fa9749c7254e584c96cf2b3f6bbebfb2444d2890e8511a884"
+ }
+]

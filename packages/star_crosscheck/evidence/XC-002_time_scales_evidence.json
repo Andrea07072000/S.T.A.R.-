@@ -1,0 +1,1034 @@
+[
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "TAI-UTC, TT-UTC",
+  "unit": "s",
+  "inputs": {
+   "utc": "1999-06-30T12:00:00"
+  },
+  "tolerance": 1e-06,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_timescales",
+    "lineage": "S.T.A.R. leap-second table",
+    "version": "0.2.0",
+    "state": "OK",
+    "value": [
+     32.0,
+     64.184
+    ],
+    "elapsed_s": 0.1718
+   },
+   {
+    "engine": "astropy",
+    "lineage": "IAU SOFA/ERFA",
+    "version": "8.0.1",
+    "state": "OK",
+    "value": [
+     32.0,
+     64.184
+    ],
+    "elapsed_s": 2.0905
+   },
+   {
+    "engine": "pyerfa",
+    "lineage": "IAU SOFA/ERFA",
+    "version": "2.0.1.5",
+    "state": "OK",
+    "value": [
+     32.0,
+     64.184
+    ],
+    "elapsed_s": 0.7334
+   },
+   {
+    "engine": "skyfield",
+    "lineage": "skyfield builtin leap-second table",
+    "version": "1.55",
+    "state": "OK",
+    "value": [
+     32.0,
+     64.184
+    ],
+    "elapsed_s": 0.6015
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_timescales",
+    "b": "astropy",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "star_timescales",
+    "b": "pyerfa",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "star_timescales",
+    "b": "skyfield",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "astropy",
+    "b": "pyerfa",
+    "same_lineage": true,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "astropy",
+    "b": "skyfield",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "pyerfa",
+    "b": "skyfield",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "IAU SOFA/ERFA",
+   "S.T.A.R. leap-second table",
+   "skyfield builtin leap-second table"
+  ],
+  "n_failed": 0,
+  "reference": {
+   "source": "IERS Bulletin C leap-second history; TT-TAI = 32.184 s (IAU)",
+   "value": [
+    32.0,
+    64.184
+   ],
+   "max_dev": 0.0,
+   "ref_tolerance": 1e-06,
+   "within_tol": true,
+   "per_engine": {
+    "star_timescales": 0.0,
+    "astropy": 0.0,
+    "pyerfa": 0.0,
+    "skyfield": 0.0
+   }
+  },
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T14:28:51+00:00",
+  "sha256": "7df56e7599fdb0ba2e3aa5bc37b73ac706d210477d3e3ee8ddf5fedd4618d421"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "TAI-UTC, TT-UTC",
+  "unit": "s",
+  "inputs": {
+   "utc": "2005-12-31T23:59:59"
+  },
+  "tolerance": 1e-06,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_timescales",
+    "lineage": "S.T.A.R. leap-second table",
+    "version": "0.2.0",
+    "state": "OK",
+    "value": [
+     32.0,
+     64.184
+    ],
+    "elapsed_s": 0.1595
+   },
+   {
+    "engine": "astropy",
+    "lineage": "IAU SOFA/ERFA",
+    "version": "8.0.1",
+    "state": "OK",
+    "value": [
+     32.0,
+     64.184
+    ],
+    "elapsed_s": 1.3412
+   },
+   {
+    "engine": "pyerfa",
+    "lineage": "IAU SOFA/ERFA",
+    "version": "2.0.1.5",
+    "state": "OK",
+    "value": [
+     32.0,
+     64.184
+    ],
+    "elapsed_s": 0.3502
+   },
+   {
+    "engine": "skyfield",
+    "lineage": "skyfield builtin leap-second table",
+    "version": "1.55",
+    "state": "OK",
+    "value": [
+     32.0,
+     64.184
+    ],
+    "elapsed_s": 0.6326
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_timescales",
+    "b": "astropy",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "star_timescales",
+    "b": "pyerfa",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "star_timescales",
+    "b": "skyfield",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "astropy",
+    "b": "pyerfa",
+    "same_lineage": true,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "astropy",
+    "b": "skyfield",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "pyerfa",
+    "b": "skyfield",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "IAU SOFA/ERFA",
+   "S.T.A.R. leap-second table",
+   "skyfield builtin leap-second table"
+  ],
+  "n_failed": 0,
+  "reference": {
+   "source": "IERS Bulletin C leap-second history; TT-TAI = 32.184 s (IAU)",
+   "value": [
+    32.0,
+    64.184
+   ],
+   "max_dev": 0.0,
+   "ref_tolerance": 1e-06,
+   "within_tol": true,
+   "per_engine": {
+    "star_timescales": 0.0,
+    "astropy": 0.0,
+    "pyerfa": 0.0,
+    "skyfield": 0.0
+   }
+  },
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T14:28:54+00:00",
+  "sha256": "f58dc2bab745f6ee7c7cd54e2de379b4480b03a50efedd9a8e613f5508ab05ea"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "TAI-UTC, TT-UTC",
+  "unit": "s",
+  "inputs": {
+   "utc": "2006-01-01T00:00:00"
+  },
+  "tolerance": 1e-06,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_timescales",
+    "lineage": "S.T.A.R. leap-second table",
+    "version": "0.2.0",
+    "state": "OK",
+    "value": [
+     33.0,
+     65.184
+    ],
+    "elapsed_s": 0.1556
+   },
+   {
+    "engine": "astropy",
+    "lineage": "IAU SOFA/ERFA",
+    "version": "8.0.1",
+    "state": "OK",
+    "value": [
+     33.0,
+     65.184
+    ],
+    "elapsed_s": 1.5249
+   },
+   {
+    "engine": "pyerfa",
+    "lineage": "IAU SOFA/ERFA",
+    "version": "2.0.1.5",
+    "state": "OK",
+    "value": [
+     33.0,
+     65.184
+    ],
+    "elapsed_s": 0.3999
+   },
+   {
+    "engine": "skyfield",
+    "lineage": "skyfield builtin leap-second table",
+    "version": "1.55",
+    "state": "OK",
+    "value": [
+     33.0,
+     65.184
+    ],
+    "elapsed_s": 0.7173
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_timescales",
+    "b": "astropy",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "star_timescales",
+    "b": "pyerfa",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "star_timescales",
+    "b": "skyfield",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "astropy",
+    "b": "pyerfa",
+    "same_lineage": true,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "astropy",
+    "b": "skyfield",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "pyerfa",
+    "b": "skyfield",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "IAU SOFA/ERFA",
+   "S.T.A.R. leap-second table",
+   "skyfield builtin leap-second table"
+  ],
+  "n_failed": 0,
+  "reference": {
+   "source": "IERS Bulletin C leap-second history; TT-TAI = 32.184 s (IAU)",
+   "value": [
+    33.0,
+    65.184
+   ],
+   "max_dev": 0.0,
+   "ref_tolerance": 1e-06,
+   "within_tol": true,
+   "per_engine": {
+    "star_timescales": 0.0,
+    "astropy": 0.0,
+    "pyerfa": 0.0,
+    "skyfield": 0.0
+   }
+  },
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T14:28:57+00:00",
+  "sha256": "03eb30311d760a9ea76897200aa0ba2c4cddb726830935e5724e12b758060a32"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "TAI-UTC, TT-UTC",
+  "unit": "s",
+  "inputs": {
+   "utc": "2012-06-30T23:59:59"
+  },
+  "tolerance": 1e-06,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_timescales",
+    "lineage": "S.T.A.R. leap-second table",
+    "version": "0.2.0",
+    "state": "OK",
+    "value": [
+     34.0,
+     66.184
+    ],
+    "elapsed_s": 0.1776
+   },
+   {
+    "engine": "astropy",
+    "lineage": "IAU SOFA/ERFA",
+    "version": "8.0.1",
+    "state": "OK",
+    "value": [
+     34.0,
+     66.184
+    ],
+    "elapsed_s": 1.634
+   },
+   {
+    "engine": "pyerfa",
+    "lineage": "IAU SOFA/ERFA",
+    "version": "2.0.1.5",
+    "state": "OK",
+    "value": [
+     34.0,
+     66.184
+    ],
+    "elapsed_s": 0.4227
+   },
+   {
+    "engine": "skyfield",
+    "lineage": "skyfield builtin leap-second table",
+    "version": "1.55",
+    "state": "OK",
+    "value": [
+     34.0,
+     66.184
+    ],
+    "elapsed_s": 0.6594
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_timescales",
+    "b": "astropy",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "star_timescales",
+    "b": "pyerfa",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "star_timescales",
+    "b": "skyfield",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "astropy",
+    "b": "pyerfa",
+    "same_lineage": true,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "astropy",
+    "b": "skyfield",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "pyerfa",
+    "b": "skyfield",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "IAU SOFA/ERFA",
+   "S.T.A.R. leap-second table",
+   "skyfield builtin leap-second table"
+  ],
+  "n_failed": 0,
+  "reference": {
+   "source": "IERS Bulletin C leap-second history; TT-TAI = 32.184 s (IAU)",
+   "value": [
+    34.0,
+    66.184
+   ],
+   "max_dev": 0.0,
+   "ref_tolerance": 1e-06,
+   "within_tol": true,
+   "per_engine": {
+    "star_timescales": 0.0,
+    "astropy": 0.0,
+    "pyerfa": 0.0,
+    "skyfield": 0.0
+   }
+  },
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T14:28:59+00:00",
+  "sha256": "845febb68aba2aabd6ba27736cf43254d46d47289064c72d689f22b310a9a4d1"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "TAI-UTC, TT-UTC",
+  "unit": "s",
+  "inputs": {
+   "utc": "2012-07-01T00:00:01"
+  },
+  "tolerance": 1e-06,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_timescales",
+    "lineage": "S.T.A.R. leap-second table",
+    "version": "0.2.0",
+    "state": "OK",
+    "value": [
+     35.0,
+     67.184
+    ],
+    "elapsed_s": 0.1952
+   },
+   {
+    "engine": "astropy",
+    "lineage": "IAU SOFA/ERFA",
+    "version": "8.0.1",
+    "state": "OK",
+    "value": [
+     35.0,
+     67.184
+    ],
+    "elapsed_s": 1.5371
+   },
+   {
+    "engine": "pyerfa",
+    "lineage": "IAU SOFA/ERFA",
+    "version": "2.0.1.5",
+    "state": "OK",
+    "value": [
+     35.0,
+     67.184
+    ],
+    "elapsed_s": 0.4597
+   },
+   {
+    "engine": "skyfield",
+    "lineage": "skyfield builtin leap-second table",
+    "version": "1.55",
+    "state": "OK",
+    "value": [
+     35.0,
+     67.184
+    ],
+    "elapsed_s": 0.8075
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_timescales",
+    "b": "astropy",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "star_timescales",
+    "b": "pyerfa",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "star_timescales",
+    "b": "skyfield",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "astropy",
+    "b": "pyerfa",
+    "same_lineage": true,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "astropy",
+    "b": "skyfield",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "pyerfa",
+    "b": "skyfield",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "IAU SOFA/ERFA",
+   "S.T.A.R. leap-second table",
+   "skyfield builtin leap-second table"
+  ],
+  "n_failed": 0,
+  "reference": {
+   "source": "IERS Bulletin C leap-second history; TT-TAI = 32.184 s (IAU)",
+   "value": [
+    35.0,
+    67.184
+   ],
+   "max_dev": 0.0,
+   "ref_tolerance": 1e-06,
+   "within_tol": true,
+   "per_engine": {
+    "star_timescales": 0.0,
+    "astropy": 0.0,
+    "pyerfa": 0.0,
+    "skyfield": 0.0
+   }
+  },
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T14:29:02+00:00",
+  "sha256": "6c5dfae6b69b3f3838c7132a61e6dec6c96d59968efa3beb2e6ae7756df7b431"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "TAI-UTC, TT-UTC",
+  "unit": "s",
+  "inputs": {
+   "utc": "2016-12-31T23:59:59"
+  },
+  "tolerance": 1e-06,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_timescales",
+    "lineage": "S.T.A.R. leap-second table",
+    "version": "0.2.0",
+    "state": "OK",
+    "value": [
+     36.0,
+     68.184
+    ],
+    "elapsed_s": 0.175
+   },
+   {
+    "engine": "astropy",
+    "lineage": "IAU SOFA/ERFA",
+    "version": "8.0.1",
+    "state": "OK",
+    "value": [
+     36.0,
+     68.184
+    ],
+    "elapsed_s": 1.6668
+   },
+   {
+    "engine": "pyerfa",
+    "lineage": "IAU SOFA/ERFA",
+    "version": "2.0.1.5",
+    "state": "OK",
+    "value": [
+     36.0,
+     68.184
+    ],
+    "elapsed_s": 0.386
+   },
+   {
+    "engine": "skyfield",
+    "lineage": "skyfield builtin leap-second table",
+    "version": "1.55",
+    "state": "OK",
+    "value": [
+     36.0,
+     68.184
+    ],
+    "elapsed_s": 0.6749
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_timescales",
+    "b": "astropy",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "star_timescales",
+    "b": "pyerfa",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "star_timescales",
+    "b": "skyfield",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "astropy",
+    "b": "pyerfa",
+    "same_lineage": true,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "astropy",
+    "b": "skyfield",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "pyerfa",
+    "b": "skyfield",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "IAU SOFA/ERFA",
+   "S.T.A.R. leap-second table",
+   "skyfield builtin leap-second table"
+  ],
+  "n_failed": 0,
+  "reference": {
+   "source": "IERS Bulletin C leap-second history; TT-TAI = 32.184 s (IAU)",
+   "value": [
+    36.0,
+    68.184
+   ],
+   "max_dev": 0.0,
+   "ref_tolerance": 1e-06,
+   "within_tol": true,
+   "per_engine": {
+    "star_timescales": 0.0,
+    "astropy": 0.0,
+    "pyerfa": 0.0,
+    "skyfield": 0.0
+   }
+  },
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T14:29:05+00:00",
+  "sha256": "3e1b21b932479d56a5a2e53f8964e5f80c5858f4fec0831de2c404e20edbfa83"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "TAI-UTC, TT-UTC",
+  "unit": "s",
+  "inputs": {
+   "utc": "2017-01-01T00:00:00"
+  },
+  "tolerance": 1e-06,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_timescales",
+    "lineage": "S.T.A.R. leap-second table",
+    "version": "0.2.0",
+    "state": "OK",
+    "value": [
+     37.0,
+     69.184
+    ],
+    "elapsed_s": 0.2135
+   },
+   {
+    "engine": "astropy",
+    "lineage": "IAU SOFA/ERFA",
+    "version": "8.0.1",
+    "state": "OK",
+    "value": [
+     37.0,
+     69.184
+    ],
+    "elapsed_s": 1.8553
+   },
+   {
+    "engine": "pyerfa",
+    "lineage": "IAU SOFA/ERFA",
+    "version": "2.0.1.5",
+    "state": "OK",
+    "value": [
+     37.0,
+     69.184
+    ],
+    "elapsed_s": 0.4323
+   },
+   {
+    "engine": "skyfield",
+    "lineage": "skyfield builtin leap-second table",
+    "version": "1.55",
+    "state": "OK",
+    "value": [
+     37.0,
+     69.184
+    ],
+    "elapsed_s": 0.7093
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_timescales",
+    "b": "astropy",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "star_timescales",
+    "b": "pyerfa",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "star_timescales",
+    "b": "skyfield",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "astropy",
+    "b": "pyerfa",
+    "same_lineage": true,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "astropy",
+    "b": "skyfield",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "pyerfa",
+    "b": "skyfield",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "IAU SOFA/ERFA",
+   "S.T.A.R. leap-second table",
+   "skyfield builtin leap-second table"
+  ],
+  "n_failed": 0,
+  "reference": {
+   "source": "IERS Bulletin C leap-second history; TT-TAI = 32.184 s (IAU)",
+   "value": [
+    37.0,
+    69.184
+   ],
+   "max_dev": 0.0,
+   "ref_tolerance": 1e-06,
+   "within_tol": true,
+   "per_engine": {
+    "star_timescales": 0.0,
+    "astropy": 0.0,
+    "pyerfa": 0.0,
+    "skyfield": 0.0
+   }
+  },
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T14:29:09+00:00",
+  "sha256": "718200bcf2f26a45c8ac702fe9e49ce57e2cc86beecbf791e7392f2a0a4935c9"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "TAI-UTC, TT-UTC",
+  "unit": "s",
+  "inputs": {
+   "utc": "2026-10-03T12:00:00"
+  },
+  "tolerance": 1e-06,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_timescales",
+    "lineage": "S.T.A.R. leap-second table",
+    "version": "0.2.0",
+    "state": "OK",
+    "value": [
+     37.0,
+     69.184
+    ],
+    "elapsed_s": 0.1954
+   },
+   {
+    "engine": "astropy",
+    "lineage": "IAU SOFA/ERFA",
+    "version": "8.0.1",
+    "state": "OK",
+    "value": [
+     37.0,
+     69.184
+    ],
+    "elapsed_s": 1.567
+   },
+   {
+    "engine": "pyerfa",
+    "lineage": "IAU SOFA/ERFA",
+    "version": "2.0.1.5",
+    "state": "OK",
+    "value": [
+     37.0,
+     69.184
+    ],
+    "elapsed_s": 0.3767
+   },
+   {
+    "engine": "skyfield",
+    "lineage": "skyfield builtin leap-second table",
+    "version": "1.55",
+    "state": "OK",
+    "value": [
+     37.0,
+     69.184
+    ],
+    "elapsed_s": 0.717
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_timescales",
+    "b": "astropy",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "star_timescales",
+    "b": "pyerfa",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "star_timescales",
+    "b": "skyfield",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "astropy",
+    "b": "pyerfa",
+    "same_lineage": true,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "astropy",
+    "b": "skyfield",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "pyerfa",
+    "b": "skyfield",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "IAU SOFA/ERFA",
+   "S.T.A.R. leap-second table",
+   "skyfield builtin leap-second table"
+  ],
+  "n_failed": 0,
+  "reference": {
+   "source": "IERS Bulletin C leap-second history; TT-TAI = 32.184 s (IAU)",
+   "value": [
+    37.0,
+    69.184
+   ],
+   "max_dev": 0.0,
+   "ref_tolerance": 1e-06,
+   "within_tol": true,
+   "per_engine": {
+    "star_timescales": 0.0,
+    "astropy": 0.0,
+    "pyerfa": 0.0,
+    "skyfield": 0.0
+   }
+  },
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T14:29:11+00:00",
+  "sha256": "f40ce75d91b38c97c6157e99d6d39413430f8aa02d5427c4dca5d77983b365d2"
+ }
+]

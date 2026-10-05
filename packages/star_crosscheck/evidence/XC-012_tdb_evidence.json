@@ -1,0 +1,704 @@
+[
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "TDB - TT",
+  "unit": "s",
+  "inputs": {
+   "jd_tt": 2305447.5
+  },
+  "tolerance": 1e-05,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_tdb",
+    "lineage": "USNO Circular 179 eq. 2.6 (7-term series)",
+    "version": "0.1.0",
+    "state": "OK",
+    "value": [
+     0.000132413656
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "pyerfa",
+    "lineage": "ERFA dtdb (Fairhead & Bretagnon 1990 full series)",
+    "version": "2.0.1.5",
+    "state": "OK",
+    "value": [
+     0.00013269239
+    ],
+    "elapsed_s": 0.3372
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_tdb",
+    "b": "pyerfa",
+    "same_lineage": false,
+    "diff": 2.787340000000077e-07,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "ERFA dtdb (Fairhead & Bretagnon 1990 full series)",
+   "USNO Circular 179 eq. 2.6 (7-term series)"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-04T05:34:25+00:00",
+  "sha256": "bf5be4d4aa492a2dd370d5d8d93ef320791c8a7725c80c01a5f2c1f773eff7de"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "TDB - TT",
+  "unit": "s",
+  "inputs": {
+   "jd_tt": 2342000.5
+  },
+  "tolerance": 1e-05,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_tdb",
+    "lineage": "USNO Circular 179 eq. 2.6 (7-term series)",
+    "version": "0.1.0",
+    "state": "OK",
+    "value": [
+     0.000855269912
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "pyerfa",
+    "lineage": "ERFA dtdb (Fairhead & Bretagnon 1990 full series)",
+    "version": "2.0.1.5",
+    "state": "OK",
+    "value": [
+     0.000856984574
+    ],
+    "elapsed_s": 0.517
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_tdb",
+    "b": "pyerfa",
+    "same_lineage": false,
+    "diff": 1.7146619999999476e-06,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "ERFA dtdb (Fairhead & Bretagnon 1990 full series)",
+   "USNO Circular 179 eq. 2.6 (7-term series)"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-04T05:34:26+00:00",
+  "sha256": "0a665c680f557c144f36a495df6a8a8106c2e6e6f609fd87bd956110d2da882d"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "TDB - TT",
+  "unit": "s",
+  "inputs": {
+   "jd_tt": 2378496.5
+  },
+  "tolerance": 1e-05,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_tdb",
+    "lineage": "USNO Circular 179 eq. 2.6 (7-term series)",
+    "version": "0.1.0",
+    "state": "OK",
+    "value": [
+     2.6864299e-05
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "pyerfa",
+    "lineage": "ERFA dtdb (Fairhead & Bretagnon 1990 full series)",
+    "version": "2.0.1.5",
+    "state": "OK",
+    "value": [
+     3.0482177e-05
+    ],
+    "elapsed_s": 0.3287
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_tdb",
+    "b": "pyerfa",
+    "same_lineage": false,
+    "diff": 3.617878000000001e-06,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "ERFA dtdb (Fairhead & Bretagnon 1990 full series)",
+   "USNO Circular 179 eq. 2.6 (7-term series)"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-04T05:34:26+00:00",
+  "sha256": "3062e87d26e68f80974ab74bd81735cb7b4776ee514fe6b4af08c6e13435c529"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "TDB - TT",
+  "unit": "s",
+  "inputs": {
+   "jd_tt": 2415020.5
+  },
+  "tolerance": 1e-05,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_tdb",
+    "lineage": "USNO Circular 179 eq. 2.6 (7-term series)",
+    "version": "0.1.0",
+    "state": "OK",
+    "value": [
+     -1.84112e-05
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "pyerfa",
+    "lineage": "ERFA dtdb (Fairhead & Bretagnon 1990 full series)",
+    "version": "2.0.1.5",
+    "state": "OK",
+    "value": [
+     -1.8460232e-05
+    ],
+    "elapsed_s": 0.3216
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_tdb",
+    "b": "pyerfa",
+    "same_lineage": false,
+    "diff": 4.9031999999999906e-08,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "ERFA dtdb (Fairhead & Bretagnon 1990 full series)",
+   "USNO Circular 179 eq. 2.6 (7-term series)"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-04T05:34:27+00:00",
+  "sha256": "0cb7312131998eecc9a2d95ccccf0d53625e8a566ae159491f9672a4bbead9be"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "TDB - TT",
+  "unit": "s",
+  "inputs": {
+   "jd_tt": 2433282.5
+  },
+  "tolerance": 1e-05,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_tdb",
+    "lineage": "USNO Circular 179 eq. 2.6 (7-term series)",
+    "version": "0.1.0",
+    "state": "OK",
+    "value": [
+     -6.9686405e-05
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "pyerfa",
+    "lineage": "ERFA dtdb (Fairhead & Bretagnon 1990 full series)",
+    "version": "2.0.1.5",
+    "state": "OK",
+    "value": [
+     -7.0698296e-05
+    ],
+    "elapsed_s": 0.345
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_tdb",
+    "b": "pyerfa",
+    "same_lineage": false,
+    "diff": 1.0118909999999983e-06,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "ERFA dtdb (Fairhead & Bretagnon 1990 full series)",
+   "USNO Circular 179 eq. 2.6 (7-term series)"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-04T05:34:27+00:00",
+  "sha256": "b275c2e7cef48a58f98ee0b30d7d757c6364637c162622a006c3e31c7c42e023"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "TDB - TT",
+  "unit": "s",
+  "inputs": {
+   "jd_tt": 2444239.5
+  },
+  "tolerance": 1e-05,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_tdb",
+    "lineage": "USNO Circular 179 eq. 2.6 (7-term series)",
+    "version": "0.1.0",
+    "state": "OK",
+    "value": [
+     -5.5680463e-05
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "pyerfa",
+    "lineage": "ERFA dtdb (Fairhead & Bretagnon 1990 full series)",
+    "version": "2.0.1.5",
+    "state": "OK",
+    "value": [
+     -5.7579568e-05
+    ],
+    "elapsed_s": 0.3251
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_tdb",
+    "b": "pyerfa",
+    "same_lineage": false,
+    "diff": 1.8991049999999971e-06,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "ERFA dtdb (Fairhead & Bretagnon 1990 full series)",
+   "USNO Circular 179 eq. 2.6 (7-term series)"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-04T05:34:27+00:00",
+  "sha256": "14ac8f845dfa58b18e279d1491c0cddef0b0792500803abf3835d8a92fc9216a"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "TDB - TT",
+  "unit": "s",
+  "inputs": {
+   "jd_tt": 2451545.0
+  },
+  "tolerance": 1e-05,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_tdb",
+    "lineage": "USNO Circular 179 eq. 2.6 (7-term series)",
+    "version": "0.1.0",
+    "state": "OK",
+    "value": [
+     -9.5757435e-05
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "pyerfa",
+    "lineage": "ERFA dtdb (Fairhead & Bretagnon 1990 full series)",
+    "version": "2.0.1.5",
+    "state": "OK",
+    "value": [
+     -9.9307199e-05
+    ],
+    "elapsed_s": 0.3241
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_tdb",
+    "b": "pyerfa",
+    "same_lineage": false,
+    "diff": 3.5497639999999993e-06,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "ERFA dtdb (Fairhead & Bretagnon 1990 full series)",
+   "USNO Circular 179 eq. 2.6 (7-term series)"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-04T05:34:28+00:00",
+  "sha256": "4cb0ac008a27373bd17dd45f7e7a25e7169e3603fdbad7850ca7e3630eed4e92"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "TDB - TT",
+  "unit": "s",
+  "inputs": {
+   "jd_tt": 2455197.5
+  },
+  "tolerance": 1e-05,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_tdb",
+    "lineage": "USNO Circular 179 eq. 2.6 (7-term series)",
+    "version": "0.1.0",
+    "state": "OK",
+    "value": [
+     -8.9693426e-05
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "pyerfa",
+    "lineage": "ERFA dtdb (Fairhead & Bretagnon 1990 full series)",
+    "version": "2.0.1.5",
+    "state": "OK",
+    "value": [
+     -9.4137349e-05
+    ],
+    "elapsed_s": 0.3111
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_tdb",
+    "b": "pyerfa",
+    "same_lineage": false,
+    "diff": 4.443922999999996e-06,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "ERFA dtdb (Fairhead & Bretagnon 1990 full series)",
+   "USNO Circular 179 eq. 2.6 (7-term series)"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-04T05:34:28+00:00",
+  "sha256": "c03f91653ac3c7731ea56e923dd274820eea6c907eaad4295676d7f19c56b674"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "TDB - TT",
+  "unit": "s",
+  "inputs": {
+   "jd_tt": 2459959.5
+  },
+  "tolerance": 1e-05,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_tdb",
+    "lineage": "USNO Circular 179 eq. 2.6 (7-term series)",
+    "version": "0.1.0",
+    "state": "OK",
+    "value": [
+     0.000291414793
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "pyerfa",
+    "lineage": "ERFA dtdb (Fairhead & Bretagnon 1990 full series)",
+    "version": "2.0.1.5",
+    "state": "OK",
+    "value": [
+     0.000282418301
+    ],
+    "elapsed_s": 0.3278
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_tdb",
+    "b": "pyerfa",
+    "same_lineage": false,
+    "diff": 8.996492000000033e-06,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "ERFA dtdb (Fairhead & Bretagnon 1990 full series)",
+   "USNO Circular 179 eq. 2.6 (7-term series)"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-04T05:34:28+00:00",
+  "sha256": "fb38943a9951d032f4cccf6c1265275d6d1aa1ec675e2f00de3c0614be17d1a9"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "TDB - TT",
+  "unit": "s",
+  "inputs": {
+   "jd_tt": 2460586.5
+  },
+  "tolerance": 1e-05,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_tdb",
+    "lineage": "USNO Circular 179 eq. 2.6 (7-term series)",
+    "version": "0.1.0",
+    "state": "OK",
+    "value": [
+     -0.001636832109
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "pyerfa",
+    "lineage": "ERFA dtdb (Fairhead & Bretagnon 1990 full series)",
+    "version": "2.0.1.5",
+    "state": "OK",
+    "value": [
+     -0.001639348014
+    ],
+    "elapsed_s": 0.3188
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_tdb",
+    "b": "pyerfa",
+    "same_lineage": false,
+    "diff": 2.515905000000096e-06,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "ERFA dtdb (Fairhead & Bretagnon 1990 full series)",
+   "USNO Circular 179 eq. 2.6 (7-term series)"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-04T05:34:29+00:00",
+  "sha256": "6703e2c4d94b53535995e6471f68827fda2b012af7c07452f90c7337e52a890c"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "TDB - TT",
+  "unit": "s",
+  "inputs": {
+   "jd_tt": 2469807.5
+  },
+  "tolerance": 1e-05,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_tdb",
+    "lineage": "USNO Circular 179 eq. 2.6 (7-term series)",
+    "version": "0.1.0",
+    "state": "OK",
+    "value": [
+     -7.9700248e-05
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "pyerfa",
+    "lineage": "ERFA dtdb (Fairhead & Bretagnon 1990 full series)",
+    "version": "2.0.1.5",
+    "state": "OK",
+    "value": [
+     -8.0188295e-05
+    ],
+    "elapsed_s": 0.317
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_tdb",
+    "b": "pyerfa",
+    "same_lineage": false,
+    "diff": 4.880470000000013e-07,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "ERFA dtdb (Fairhead & Bretagnon 1990 full series)",
+   "USNO Circular 179 eq. 2.6 (7-term series)"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-04T05:34:29+00:00",
+  "sha256": "6d9a23b4f914f4c3294b7c7dce6d86a33272025df34b0894ab0c5f28687e35ba"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "TDB - TT",
+  "unit": "s",
+  "inputs": {
+   "jd_tt": 2488070.5
+  },
+  "tolerance": 1e-05,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_tdb",
+    "lineage": "USNO Circular 179 eq. 2.6 (7-term series)",
+    "version": "0.1.0",
+    "state": "OK",
+    "value": [
+     -5.6504655e-05
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "pyerfa",
+    "lineage": "ERFA dtdb (Fairhead & Bretagnon 1990 full series)",
+    "version": "2.0.1.5",
+    "state": "OK",
+    "value": [
+     -6.1259512e-05
+    ],
+    "elapsed_s": 0.3444
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_tdb",
+    "b": "pyerfa",
+    "same_lineage": false,
+    "diff": 4.754857000000007e-06,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "ERFA dtdb (Fairhead & Bretagnon 1990 full series)",
+   "USNO Circular 179 eq. 2.6 (7-term series)"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-04T05:34:29+00:00",
+  "sha256": "8fde6fc9cfb497cce491310a50cafeb1015a77fd56d457452a4ba2e357b9880b"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "TDB - TT",
+  "unit": "s",
+  "inputs": {
+   "jd_tt": 2524593.5
+  },
+  "tolerance": 1e-05,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_tdb",
+    "lineage": "USNO Circular 179 eq. 2.6 (7-term series)",
+    "version": "0.1.0",
+    "state": "OK",
+    "value": [
+     -0.000198304436
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "pyerfa",
+    "lineage": "ERFA dtdb (Fairhead & Bretagnon 1990 full series)",
+    "version": "2.0.1.5",
+    "state": "OK",
+    "value": [
+     -0.000201699087
+    ],
+    "elapsed_s": 0.342
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_tdb",
+    "b": "pyerfa",
+    "same_lineage": false,
+    "diff": 3.394651000000016e-06,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "ERFA dtdb (Fairhead & Bretagnon 1990 full series)",
+   "USNO Circular 179 eq. 2.6 (7-term series)"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-04T05:34:30+00:00",
+  "sha256": "6fee2de80fe61a8d89472ee9f7eccd6761a26defe8f56248b1a62840aa352d03"
+ }
+]

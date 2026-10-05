@@ -1,0 +1,27 @@
+{
+ "id": "star.telemetry.aos-c",
+ "name": "STAR Telemetry — AOS/TM frame check in C (embedded-oriented)",
+ "domain": "telemetry",
+ "summary": "CCSDS AOS v2 / TM v1 primary header decode and FECF CRC-16 check in C99, verified identical on 18 emulated ISAs and 12 simulated MCUs / space processors, cross-checked with spacepackets, fuzzed and mutation-tested.",
+ "package_dir": "08_PROTOTYPES/star_telemetry_c",
+ "module": "src/star_aos.c",
+ "xc": null,
+ "reference": "CCSDS 732.0-B (AOS) and 132.0-B (TM) frame layouts; CRC-16/CCITT-FALSE check value 0x29B1; NASA JPL F Prime native AOS frames",
+ "reference_observed": "5 F Prime native frames + 300 bit-flipped equal to the Python reference on 30 targets; spacepackets agreement 40/40 + 260/260",
+ "na": {
+  "G-09": "no simulation component of its own (runs ON simulators)",
+  "G-10": "not flight software (no flight heritage claimed)",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R1-R5",
+  "G-02": "src/star_aos.h (API), src/star_aos.c (core), src/host_main.c (host driver), fw/ (per-target startup and UART)",
+  "G-03": "star_aos_parse(), star_crc16_ccitt()",
+  "G-04": "octets in, header fields out; no units",
+  "G-06": "no third-party code; F Prime frames used as test data with provenance in star_telemetry",
+  "G-08": "no I/O in the core; host_main reads a file given on the command line",
+  "G-11": "30 targets: 18 qemu-user ISAs + 12 Renode platforms (12_EVIDENCE/hw/hw_targets_30_run_20261005.txt)",
+  "G-13": "R4: NULL and short inputs return error codes; fuzzing with ASan/UBSan finds no out-of-bounds read"
+ }
+}

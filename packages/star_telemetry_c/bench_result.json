@@ -1,0 +1,23 @@
+{
+ "frames": 30000,
+ "bytes": 7668000,
+ "python_frames_per_s": 1718,
+ "x86_64": {
+  "frames": 30000,
+  "invalid": 0,
+  "seconds": 0.064113,
+  "frames_per_s": 467924
+ },
+ "aarch64": {
+  "frames": 30000,
+  "invalid": 0,
+  "seconds": 0.275142,
+  "frames_per_s": 109035
+ },
+ "armhf": {
+  "frames": 30000,
+  "invalid": 0,
+  "seconds": 0.39642,
+  "frames_per_s": 75677
+ }
+}

@@ -1,0 +1,754 @@
+[
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "Geodetic [lat ndeg, lon ndeg, h 0.1mm]",
+  "unit": "ndeg / 0.1 mm",
+  "inputs": {
+   "xyz": [
+    6378137.0,
+    0.0,
+    0.0
+   ],
+   "geodetic_in": [
+    0,
+    0,
+    0
+   ]
+  },
+  "tolerance": 10,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_geodesy",
+    "lineage": "S.T.A.R. iterative latitude",
+    "version": "0.1.0",
+    "state": "OK",
+    "value": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "pyproj",
+    "lineage": "PROJ (OSGeo)",
+    "version": "3.8.0/PROJ 9.8.1",
+    "state": "OK",
+    "value": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "elapsed_s": 0.9079
+   },
+   {
+    "engine": "pymap3d",
+    "lineage": "pymap3d (scivision)",
+    "version": "3.2.0",
+    "state": "OK",
+    "value": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "elapsed_s": 0.3529
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_geodesy",
+    "b": "pyproj",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "star_geodesy",
+    "b": "pymap3d",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "pyproj",
+    "b": "pymap3d",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "PROJ (OSGeo)",
+   "S.T.A.R. iterative latitude",
+   "pymap3d (scivision)"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T21:33:27+00:00",
+  "sha256": "82e5e549ecfaa804ed3cc75ebc2dc04482542883574b00c17a7d12e5e71320cb"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "Geodetic [lat ndeg, lon ndeg, h 0.1mm]",
+  "unit": "ndeg / 0.1 mm",
+  "inputs": {
+   "xyz": [
+    4477066.883,
+    605323.192,
+    4487560.541
+   ],
+   "geodetic_in": [
+    45,
+    7.7,
+    300
+   ]
+  },
+  "tolerance": 10,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_geodesy",
+    "lineage": "S.T.A.R. iterative latitude",
+    "version": "0.1.0",
+    "state": "OK",
+    "value": [
+     45000000003.0,
+     7700000002.0,
+     2999998.0
+    ],
+    "elapsed_s": 0.0001
+   },
+   {
+    "engine": "pyproj",
+    "lineage": "PROJ (OSGeo)",
+    "version": "3.8.0/PROJ 9.8.1",
+    "state": "OK",
+    "value": [
+     45000000003.0,
+     7700000002.0,
+     2999998.0
+    ],
+    "elapsed_s": 0.554
+   },
+   {
+    "engine": "pymap3d",
+    "lineage": "pymap3d (scivision)",
+    "version": "3.2.0",
+    "state": "OK",
+    "value": [
+     45000000003.0,
+     7700000002.0,
+     2999998.0
+    ],
+    "elapsed_s": 0.2647
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_geodesy",
+    "b": "pyproj",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "star_geodesy",
+    "b": "pymap3d",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "pyproj",
+    "b": "pymap3d",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "PROJ (OSGeo)",
+   "S.T.A.R. iterative latitude",
+   "pymap3d (scivision)"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T21:33:28+00:00",
+  "sha256": "ab633aa7194c99473ec9c0225e8a88bfc83b430fdde947d23cf2692a65d9d8e0"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "Geodetic [lat ndeg, lon ndeg, h 0.1mm]",
+  "unit": "ndeg / 0.1 mm",
+  "inputs": {
+   "xyz": [
+    5028535.6,
+    1672771.152,
+    -3537253.714
+   ],
+   "geodetic_in": [
+    -33.9,
+    18.4,
+    15
+   ]
+  },
+  "tolerance": 10,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_geodesy",
+    "lineage": "S.T.A.R. iterative latitude",
+    "version": "0.1.0",
+    "state": "OK",
+    "value": [
+     -33900000000.0,
+     18399999997.0,
+     149998.0
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "pyproj",
+    "lineage": "PROJ (OSGeo)",
+    "version": "3.8.0/PROJ 9.8.1",
+    "state": "OK",
+    "value": [
+     -33900000000.0,
+     18399999997.0,
+     149998.0
+    ],
+    "elapsed_s": 0.5503
+   },
+   {
+    "engine": "pymap3d",
+    "lineage": "pymap3d (scivision)",
+    "version": "3.2.0",
+    "state": "OK",
+    "value": [
+     -33900000000.0,
+     18399999997.0,
+     149998.0
+    ],
+    "elapsed_s": 0.3095
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_geodesy",
+    "b": "pyproj",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "star_geodesy",
+    "b": "pymap3d",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "pyproj",
+    "b": "pymap3d",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "PROJ (OSGeo)",
+   "S.T.A.R. iterative latitude",
+   "pymap3d (scivision)"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T21:33:29+00:00",
+  "sha256": "8bf241ffc87759eedcc107c814f024172d6b8f8a5e7d301382bbf4aed2d5c7a1"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "Geodetic [lat ndeg, lon ndeg, h 0.1mm]",
+  "unit": "ndeg / 0.1 mm",
+  "inputs": {
+   "xyz": [
+    2591985.066,
+    -1041971.316,
+    5714638.046
+   ],
+   "geodetic_in": [
+    64.1,
+    -21.9,
+    50
+   ]
+  },
+  "tolerance": 10,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_geodesy",
+    "lineage": "S.T.A.R. iterative latitude",
+    "version": "0.1.0",
+    "state": "OK",
+    "value": [
+     64099999999.0,
+     -21900000006.0,
+     499999.0
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "pyproj",
+    "lineage": "PROJ (OSGeo)",
+    "version": "3.8.0/PROJ 9.8.1",
+    "state": "OK",
+    "value": [
+     64099999999.0,
+     -21900000006.0,
+     499999.0
+    ],
+    "elapsed_s": 0.5845
+   },
+   {
+    "engine": "pymap3d",
+    "lineage": "pymap3d (scivision)",
+    "version": "3.2.0",
+    "state": "OK",
+    "value": [
+     64099999999.0,
+     -21900000006.0,
+     499999.0
+    ],
+    "elapsed_s": 0.2971
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_geodesy",
+    "b": "pyproj",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "star_geodesy",
+    "b": "pymap3d",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "pyproj",
+    "b": "pymap3d",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "PROJ (OSGeo)",
+   "S.T.A.R. iterative latitude",
+   "pymap3d (scivision)"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T21:33:30+00:00",
+  "sha256": "3aeb8df20e153062db23bd6537f09caf75eb0e0e44452ed36c02722511b7c13a"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "Geodetic [lat ndeg, lon ndeg, h 0.1mm]",
+  "unit": "ndeg / 0.1 mm",
+  "inputs": {
+   "xyz": [
+    -27923.177,
+    48364.361,
+    6356518.637
+   ],
+   "geodetic_in": [
+    89.5,
+    120,
+    10
+   ]
+  },
+  "tolerance": 10,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_geodesy",
+    "lineage": "S.T.A.R. iterative latitude",
+    "version": "0.1.0",
+    "state": "OK",
+    "value": [
+     89500000001.0,
+     120000000140.0,
+     100000.0
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "pyproj",
+    "lineage": "PROJ (OSGeo)",
+    "version": "3.8.0/PROJ 9.8.1",
+    "state": "OK",
+    "value": [
+     89500000001.0,
+     120000000140.0,
+     100000.0
+    ],
+    "elapsed_s": 0.78
+   },
+   {
+    "engine": "pymap3d",
+    "lineage": "pymap3d (scivision)",
+    "version": "3.2.0",
+    "state": "OK",
+    "value": [
+     89500000001.0,
+     120000000140.0,
+     100000.0
+    ],
+    "elapsed_s": 0.3694
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_geodesy",
+    "b": "pyproj",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "star_geodesy",
+    "b": "pymap3d",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "pyproj",
+    "b": "pymap3d",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "PROJ (OSGeo)",
+   "S.T.A.R. iterative latitude",
+   "pymap3d (scivision)"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T21:33:31+00:00",
+  "sha256": "7deccdd506632befc17da0ba31d1e75dd109913508f7c454601ae3c1c9ecb71c"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "Geodetic [lat ndeg, lon ndeg, h 0.1mm]",
+  "unit": "ndeg / 0.1 mm",
+  "inputs": {
+   "xyz": [
+    828369.705,
+    -1434778.416,
+    -6141663.46
+   ],
+   "geodetic_in": [
+    -75,
+    -60,
+    3000
+   ]
+  },
+  "tolerance": 10,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_geodesy",
+    "lineage": "S.T.A.R. iterative latitude",
+    "version": "0.1.0",
+    "state": "OK",
+    "value": [
+     -75000000000.0,
+     -59999999991.0,
+     30000002.0
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "pyproj",
+    "lineage": "PROJ (OSGeo)",
+    "version": "3.8.0/PROJ 9.8.1",
+    "state": "OK",
+    "value": [
+     -75000000000.0,
+     -59999999991.0,
+     30000002.0
+    ],
+    "elapsed_s": 0.5916
+   },
+   {
+    "engine": "pymap3d",
+    "lineage": "pymap3d (scivision)",
+    "version": "3.2.0",
+    "state": "OK",
+    "value": [
+     -75000000000.0,
+     -59999999991.0,
+     30000002.0
+    ],
+    "elapsed_s": 0.2591
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_geodesy",
+    "b": "pyproj",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "star_geodesy",
+    "b": "pymap3d",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "pyproj",
+    "b": "pymap3d",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "PROJ (OSGeo)",
+   "S.T.A.R. iterative latitude",
+   "pymap3d (scivision)"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T21:33:32+00:00",
+  "sha256": "74d9dbd2f791aacdbaf3eb11028a777ce6d59adbffe038af7147880c18266d78"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "Geodetic [lat ndeg, lon ndeg, h 0.1mm]",
+  "unit": "ndeg / 0.1 mm",
+  "inputs": {
+   "xyz": [
+    -1107936.776,
+    6283421.697,
+    1117613.366
+   ],
+   "geodetic_in": [
+    10,
+    100,
+    100000
+   ]
+  },
+  "tolerance": 10,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_geodesy",
+    "lineage": "S.T.A.R. iterative latitude",
+    "version": "0.1.0",
+    "state": "OK",
+    "value": [
+     10000000005.0,
+     99999999997.0,
+     1000000000.0
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "pyproj",
+    "lineage": "PROJ (OSGeo)",
+    "version": "3.8.0/PROJ 9.8.1",
+    "state": "OK",
+    "value": [
+     10000000005.0,
+     99999999997.0,
+     1000000000.0
+    ],
+    "elapsed_s": 0.5304
+   },
+   {
+    "engine": "pymap3d",
+    "lineage": "pymap3d (scivision)",
+    "version": "3.2.0",
+    "state": "OK",
+    "value": [
+     10000000005.0,
+     99999999997.0,
+     1000000000.0
+    ],
+    "elapsed_s": 0.2459
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_geodesy",
+    "b": "pyproj",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "star_geodesy",
+    "b": "pymap3d",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "pyproj",
+    "b": "pymap3d",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "PROJ (OSGeo)",
+   "S.T.A.R. iterative latitude",
+   "pymap3d (scivision)"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T21:33:32+00:00",
+  "sha256": "ed2c38ba93edc847cd25b1ef519b707cc1d17478f648b9fdb25035f07738eb04"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "Geodetic [lat ndeg, lon ndeg, h 0.1mm]",
+  "unit": "ndeg / 0.1 mm",
+  "inputs": {
+   "xyz": [
+    3978015.777,
+    -9025.847,
+    4967579.849
+   ],
+   "geodetic_in": [
+    51.5,
+    -0.13,
+    -1000
+   ]
+  },
+  "tolerance": 10,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_geodesy",
+    "lineage": "S.T.A.R. iterative latitude",
+    "version": "0.1.0",
+    "state": "OK",
+    "value": [
+     51499999996.0,
+     -130000000.0,
+     -9999998.0
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "pyproj",
+    "lineage": "PROJ (OSGeo)",
+    "version": "3.8.0/PROJ 9.8.1",
+    "state": "OK",
+    "value": [
+     51499999996.0,
+     -130000000.0,
+     -9999998.0
+    ],
+    "elapsed_s": 0.5364
+   },
+   {
+    "engine": "pymap3d",
+    "lineage": "pymap3d (scivision)",
+    "version": "3.2.0",
+    "state": "OK",
+    "value": [
+     51499999996.0,
+     -130000000.0,
+     -9999998.0
+    ],
+    "elapsed_s": 0.2695
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_geodesy",
+    "b": "pyproj",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "star_geodesy",
+    "b": "pymap3d",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "pyproj",
+    "b": "pymap3d",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "PROJ (OSGeo)",
+   "S.T.A.R. iterative latitude",
+   "pymap3d (scivision)"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T21:33:33+00:00",
+  "sha256": "4a9e370451064becf9ad6155db8270fa1256cb54477c8a8ebbd4e68aa48aa042"
+ }
+]

@@ -1,0 +1,446 @@
+[
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "geocentric Moon distance",
+  "unit": "km",
+  "inputs": {
+   "utc": "2000-01-01T12:00:00"
+  },
+  "tolerance": 50.0,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "spiceypy",
+    "lineage": "JPL DE440",
+    "version": "CSPICE_N0067",
+    "state": "OK",
+    "value": [
+     402450.70160924003
+    ],
+    "elapsed_s": 0.9147
+   },
+   {
+    "engine": "skyfield",
+    "lineage": "JPL DE440",
+    "version": "1.55",
+    "state": "OK",
+    "value": [
+     402450.70160850004
+    ],
+    "elapsed_s": 1.1811
+   },
+   {
+    "engine": "jplephem",
+    "lineage": "JPL DE440",
+    "version": "2.24",
+    "state": "OK",
+    "value": [
+     402450.7016116066
+    ],
+    "elapsed_s": 0.717
+   },
+   {
+    "engine": "astropy-builtin",
+    "lineage": "ERFA builtin (analytic)",
+    "version": "8.0.1",
+    "state": "OK",
+    "value": [
+     402412.8372519663
+    ],
+    "elapsed_s": 3.0466
+   },
+   {
+    "engine": "pyephem",
+    "lineage": "PyEphem/libastro (analytic)",
+    "version": "4.2.1",
+    "state": "OK",
+    "value": [
+     402450.62923879444
+    ],
+    "elapsed_s": 0.165
+   }
+  ],
+  "pairs": [
+   {
+    "a": "spiceypy",
+    "b": "skyfield",
+    "same_lineage": true,
+    "diff": 7.399939931929111e-07,
+    "within_tol": true
+   },
+   {
+    "a": "spiceypy",
+    "b": "jplephem",
+    "same_lineage": true,
+    "diff": 2.3665488697588444e-06,
+    "within_tol": true
+   },
+   {
+    "a": "spiceypy",
+    "b": "astropy-builtin",
+    "same_lineage": false,
+    "diff": 37.86435727373464,
+    "within_tol": true
+   },
+   {
+    "a": "spiceypy",
+    "b": "pyephem",
+    "same_lineage": false,
+    "diff": 0.07237044558860362,
+    "within_tol": true
+   },
+   {
+    "a": "skyfield",
+    "b": "jplephem",
+    "same_lineage": true,
+    "diff": 3.1065428629517555e-06,
+    "within_tol": true
+   },
+   {
+    "a": "skyfield",
+    "b": "astropy-builtin",
+    "same_lineage": false,
+    "diff": 37.86435653374065,
+    "within_tol": true
+   },
+   {
+    "a": "skyfield",
+    "b": "pyephem",
+    "same_lineage": false,
+    "diff": 0.07236970559461042,
+    "within_tol": true
+   },
+   {
+    "a": "jplephem",
+    "b": "astropy-builtin",
+    "same_lineage": false,
+    "diff": 37.86435964028351,
+    "within_tol": true
+   },
+   {
+    "a": "jplephem",
+    "b": "pyephem",
+    "same_lineage": false,
+    "diff": 0.07237281213747337,
+    "within_tol": true
+   },
+   {
+    "a": "astropy-builtin",
+    "b": "pyephem",
+    "same_lineage": false,
+    "diff": 37.79198682814604,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "ERFA builtin (analytic)",
+   "JPL DE440",
+   "PyEphem/libastro (analytic)"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T14:28:41+00:00",
+  "sha256": "75023b32dba650f4e00f77a60129dcef03b118dec0319915df85b39fca1d8949"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "geocentric Moon distance",
+  "unit": "km",
+  "inputs": {
+   "utc": "2026-10-03T00:00:00"
+  },
+  "tolerance": 50.0,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "spiceypy",
+    "lineage": "JPL DE440",
+    "version": "CSPICE_N0067",
+    "state": "OK",
+    "value": [
+     369707.87358677137
+    ],
+    "elapsed_s": 0.4546
+   },
+   {
+    "engine": "skyfield",
+    "lineage": "JPL DE440",
+    "version": "1.55",
+    "state": "OK",
+    "value": [
+     369707.873586946
+    ],
+    "elapsed_s": 0.6199
+   },
+   {
+    "engine": "jplephem",
+    "lineage": "JPL DE440",
+    "version": "2.24",
+    "state": "OK",
+    "value": [
+     369707.87359912985
+    ],
+    "elapsed_s": 0.3751
+   },
+   {
+    "engine": "astropy-builtin",
+    "lineage": "ERFA builtin (analytic)",
+    "version": "8.0.1",
+    "state": "OK",
+    "value": [
+     369672.201958701
+    ],
+    "elapsed_s": 1.4894
+   },
+   {
+    "engine": "pyephem",
+    "lineage": "PyEphem/libastro (analytic)",
+    "version": "4.2.1",
+    "state": "OK",
+    "value": [
+     369707.95143234124
+    ],
+    "elapsed_s": 0.1483
+   }
+  ],
+  "pairs": [
+   {
+    "a": "spiceypy",
+    "b": "skyfield",
+    "same_lineage": true,
+    "diff": 1.7462298274040222e-07,
+    "within_tol": true
+   },
+   {
+    "a": "spiceypy",
+    "b": "jplephem",
+    "same_lineage": true,
+    "diff": 1.235847594216466e-05,
+    "within_tol": true
+   },
+   {
+    "a": "spiceypy",
+    "b": "astropy-builtin",
+    "same_lineage": false,
+    "diff": 35.67162807035493,
+    "within_tol": true
+   },
+   {
+    "a": "spiceypy",
+    "b": "pyephem",
+    "same_lineage": false,
+    "diff": 0.07784556987462565,
+    "within_tol": true
+   },
+   {
+    "a": "skyfield",
+    "b": "jplephem",
+    "same_lineage": true,
+    "diff": 1.2183852959424257e-05,
+    "within_tol": true
+   },
+   {
+    "a": "skyfield",
+    "b": "astropy-builtin",
+    "same_lineage": false,
+    "diff": 35.67162824497791,
+    "within_tol": true
+   },
+   {
+    "a": "skyfield",
+    "b": "pyephem",
+    "same_lineage": false,
+    "diff": 0.07784539525164291,
+    "within_tol": true
+   },
+   {
+    "a": "jplephem",
+    "b": "astropy-builtin",
+    "same_lineage": false,
+    "diff": 35.67164042883087,
+    "within_tol": true
+   },
+   {
+    "a": "jplephem",
+    "b": "pyephem",
+    "same_lineage": false,
+    "diff": 0.07783321139868349,
+    "within_tol": true
+   },
+   {
+    "a": "astropy-builtin",
+    "b": "pyephem",
+    "same_lineage": false,
+    "diff": 35.74947364022955,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "ERFA builtin (analytic)",
+   "JPL DE440",
+   "PyEphem/libastro (analytic)"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T14:28:44+00:00",
+  "sha256": "e6e3cd6e2828efe1d6af015659ec1b8b440c08b03b0451c93486e92a9591b7e0"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "geocentric Moon distance",
+  "unit": "km",
+  "inputs": {
+   "utc": "2030-06-15T06:00:00"
+  },
+  "tolerance": 50.0,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "spiceypy",
+    "lineage": "JPL DE440",
+    "version": "CSPICE_N0067",
+    "state": "OK",
+    "value": [
+     358252.56304121314
+    ],
+    "elapsed_s": 0.463
+   },
+   {
+    "engine": "skyfield",
+    "lineage": "JPL DE440",
+    "version": "1.55",
+    "state": "OK",
+    "value": [
+     358252.56304114376
+    ],
+    "elapsed_s": 0.6136
+   },
+   {
+    "engine": "jplephem",
+    "lineage": "JPL DE440",
+    "version": "2.24",
+    "state": "OK",
+    "value": [
+     358252.5630380544
+    ],
+    "elapsed_s": 0.3409
+   },
+   {
+    "engine": "astropy-builtin",
+    "lineage": "ERFA builtin (analytic)",
+    "version": "8.0.1",
+    "state": "OK",
+    "value": [
+     358254.0975315724
+    ],
+    "elapsed_s": 1.5358
+   },
+   {
+    "engine": "pyephem",
+    "lineage": "PyEphem/libastro (analytic)",
+    "version": "4.2.1",
+    "state": "OK",
+    "value": [
+     358252.6728421228
+    ],
+    "elapsed_s": 0.1432
+   }
+  ],
+  "pairs": [
+   {
+    "a": "spiceypy",
+    "b": "skyfield",
+    "same_lineage": true,
+    "diff": 6.938353180885315e-08,
+    "within_tol": true
+   },
+   {
+    "a": "spiceypy",
+    "b": "jplephem",
+    "same_lineage": true,
+    "diff": 3.1587551347911358e-06,
+    "within_tol": true
+   },
+   {
+    "a": "spiceypy",
+    "b": "astropy-builtin",
+    "same_lineage": false,
+    "diff": 1.5344903592485934,
+    "within_tol": true
+   },
+   {
+    "a": "spiceypy",
+    "b": "pyephem",
+    "same_lineage": false,
+    "diff": 0.10980090964585543,
+    "within_tol": true
+   },
+   {
+    "a": "skyfield",
+    "b": "jplephem",
+    "same_lineage": true,
+    "diff": 3.0893716029822826e-06,
+    "within_tol": true
+   },
+   {
+    "a": "skyfield",
+    "b": "astropy-builtin",
+    "same_lineage": false,
+    "diff": 1.5344904286321253,
+    "within_tol": true
+   },
+   {
+    "a": "skyfield",
+    "b": "pyephem",
+    "same_lineage": false,
+    "diff": 0.10980097902938724,
+    "within_tol": true
+   },
+   {
+    "a": "jplephem",
+    "b": "astropy-builtin",
+    "same_lineage": false,
+    "diff": 1.5344935180037282,
+    "within_tol": true
+   },
+   {
+    "a": "jplephem",
+    "b": "pyephem",
+    "same_lineage": false,
+    "diff": 0.10980406840099022,
+    "within_tol": true
+   },
+   {
+    "a": "astropy-builtin",
+    "b": "pyephem",
+    "same_lineage": false,
+    "diff": 1.424689449602738,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "ERFA builtin (analytic)",
+   "JPL DE440",
+   "PyEphem/libastro (analytic)"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T14:28:47+00:00",
+  "sha256": "6bac04a6c604fcb183f2632ae685d20074e71bd7101e389d79db00829f5d0b9b"
+ }
+]

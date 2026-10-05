@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "star-crosscheck"
+version = "0.1.1"
+description = "Cross-solver verification fabric: run engines of different lineage on the same inputs, get a verdict and a reproducible evidence bundle."
+requires-python = ">=3.10"
+dependencies = []
+license = {text = "Apache-2.0"}
+
+[project.scripts]
+star-xc = "star_crosscheck.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

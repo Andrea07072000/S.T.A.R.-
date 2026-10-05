@@ -1,0 +1,27 @@
+{
+ "id": "star.crosscheck.fabric",
+ "name": "STAR Cross-solver verification fabric",
+ "domain": "assurance",
+ "summary": "Runs engines of declared lineage (each optionally in its own venv) on the same inputs; AGREE only with >= 2 distinct lineages within tolerance, failed engines never count, published references compared; tamper-evident sha256 evidence bundles.",
+ "package_dir": "08_PROTOTYPES/star_crosscheck",
+ "module": "src/star_crosscheck/core.py",
+ "xc": null,
+ "reference": "XC-001 geocentric Moon distance: JPL DE440 via SPICE / skyfield / jplephem (one lineage) vs PyEphem/libastro vs ERFA builtin",
+ "reference_observed": "DE440 engines agree to 0.000 km; PyEphem 0.07-0.11 km; astropy builtin 1.4-38 km within 50 km -> AGREE on 3 epochs; same-lineage engines counted as one witness",
+ "na": {
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R1-R5",
+  "G-02": "core.py (Engine, crosscheck, bundle_sha256), cli.py (verify-bundle), campaigns/ (XC-001..XC-013)",
+  "G-03": "Engine.run(), crosscheck(), bundle_sha256()",
+  "G-04": "unit is declared per quantity and carried in the bundle",
+  "G-06": "engines are third-party libraries in their own venvs, registered in THIRD_PARTY_MANIFEST",
+  "G-08": "subprocess only for isolated engines (inputs via stdin JSON); no network",
+  "G-13": "failed engine -> DEGRADED with the error; fewer than 2 lineages -> INSUFFICIENT_INDEPENDENCE; reference miss -> DISAGREE"
+ }
+}

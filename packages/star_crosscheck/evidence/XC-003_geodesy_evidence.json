@@ -1,0 +1,526 @@
+[
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "WGS-84 Geodesic Distance",
+  "unit": "m",
+  "inputs": {
+   "p1": [
+    0.0,
+    0.0
+   ],
+   "p2": [
+    1.0,
+    0.0
+   ]
+  },
+  "tolerance": 0.05,
+  "diff_mode": "abs",
+  "engines": [
+   {
+    "engine": "pyproj",
+    "lineage": "Karney (2013) / GeographicLib C",
+    "version": "3.8.0",
+    "state": "OK",
+    "value": [
+     110574.3886
+    ],
+    "elapsed_s": 0.4652
+   },
+   {
+    "engine": "geopy",
+    "lineage": "Karney (2013) / GeographicLib Python",
+    "version": "2.5.0",
+    "state": "OK",
+    "value": [
+     110574.3886
+    ],
+    "elapsed_s": 0.4474
+   },
+   {
+    "engine": "pygeodesy",
+    "lineage": "Vincenty (1975) pure Python",
+    "version": "26.09.09",
+    "state": "OK",
+    "value": [
+     110574.3886
+    ],
+    "elapsed_s": 0.4715
+   },
+   {
+    "engine": "pymap3d",
+    "lineage": "Vincenty (1975) pure Python",
+    "version": "3.2.0",
+    "state": "OK",
+    "value": [
+     110574.3886
+    ],
+    "elapsed_s": 0.2507
+   }
+  ],
+  "pairs": [
+   {
+    "a": "pyproj",
+    "b": "geopy",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "pyproj",
+    "b": "pygeodesy",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "pyproj",
+    "b": "pymap3d",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "geopy",
+    "b": "pygeodesy",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "geopy",
+    "b": "pymap3d",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "pygeodesy",
+    "b": "pymap3d",
+    "same_lineage": true,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "Karney (2013) / GeographicLib C",
+   "Karney (2013) / GeographicLib Python",
+   "Vincenty (1975) pure Python"
+  ],
+  "n_failed": 0,
+  "reference": {
+   "source": "Karney (2013) Table 1 meridian arc 1 deg WGS-84",
+   "value": [
+    110574.3886
+   ],
+   "max_dev": 0.0,
+   "ref_tolerance": 0.05,
+   "within_tol": true,
+   "per_engine": {
+    "pyproj": 0.0,
+    "geopy": 0.0,
+    "pygeodesy": 0.0,
+    "pymap3d": 0.0
+   }
+  },
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T15:46:29+00:00",
+  "sha256": "8b8d073a4b16c95aeddbe4d82cf902f002c96d48fdb88d95da13e7b7e5a5374c"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "WGS-84 Geodesic Distance",
+  "unit": "m",
+  "inputs": {
+   "p1": [
+    0.0,
+    0.0
+   ],
+   "p2": [
+    0.0,
+    1.0
+   ]
+  },
+  "tolerance": 0.05,
+  "diff_mode": "abs",
+  "engines": [
+   {
+    "engine": "pyproj",
+    "lineage": "Karney (2013) / GeographicLib C",
+    "version": "3.8.0",
+    "state": "OK",
+    "value": [
+     111319.4908
+    ],
+    "elapsed_s": 0.5608
+   },
+   {
+    "engine": "geopy",
+    "lineage": "Karney (2013) / GeographicLib Python",
+    "version": "2.5.0",
+    "state": "OK",
+    "value": [
+     111319.4908
+    ],
+    "elapsed_s": 0.4278
+   },
+   {
+    "engine": "pygeodesy",
+    "lineage": "Vincenty (1975) pure Python",
+    "version": "26.09.09",
+    "state": "OK",
+    "value": [
+     111319.4908
+    ],
+    "elapsed_s": 0.3629
+   },
+   {
+    "engine": "pymap3d",
+    "lineage": "Vincenty (1975) pure Python",
+    "version": "3.2.0",
+    "state": "OK",
+    "value": [
+     111319.4908
+    ],
+    "elapsed_s": 0.2562
+   }
+  ],
+  "pairs": [
+   {
+    "a": "pyproj",
+    "b": "geopy",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "pyproj",
+    "b": "pygeodesy",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "pyproj",
+    "b": "pymap3d",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "geopy",
+    "b": "pygeodesy",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "geopy",
+    "b": "pymap3d",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "pygeodesy",
+    "b": "pymap3d",
+    "same_lineage": true,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "Karney (2013) / GeographicLib C",
+   "Karney (2013) / GeographicLib Python",
+   "Vincenty (1975) pure Python"
+  ],
+  "n_failed": 0,
+  "reference": {
+   "source": "WGS-84 equatorial arc 1 deg: 2*pi*a/360 = 111319.4908 m",
+   "value": [
+    111319.4908
+   ],
+   "max_dev": 0.0,
+   "ref_tolerance": 0.05,
+   "within_tol": true,
+   "per_engine": {
+    "pyproj": 0.0,
+    "geopy": 0.0,
+    "pygeodesy": 0.0,
+    "pymap3d": 0.0
+   }
+  },
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T15:46:30+00:00",
+  "sha256": "d5c1e3ddfcc82a14a3fd19effa7e62048169275665a605501b0cfa4c9c852f6c"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "WGS-84 Geodesic Distance",
+  "unit": "m",
+  "inputs": {
+   "p1": [
+    10.0,
+    20.0
+   ],
+   "p2": [
+    30.0,
+    40.0
+   ]
+  },
+  "tolerance": 0.05,
+  "diff_mode": "abs",
+  "engines": [
+   {
+    "engine": "pyproj",
+    "lineage": "Karney (2013) / GeographicLib C",
+    "version": "3.8.0",
+    "state": "OK",
+    "value": [
+     3035728.9569
+    ],
+    "elapsed_s": 0.4566
+   },
+   {
+    "engine": "geopy",
+    "lineage": "Karney (2013) / GeographicLib Python",
+    "version": "2.5.0",
+    "state": "OK",
+    "value": [
+     3035728.9569
+    ],
+    "elapsed_s": 0.4477
+   },
+   {
+    "engine": "pygeodesy",
+    "lineage": "Vincenty (1975) pure Python",
+    "version": "26.09.09",
+    "state": "OK",
+    "value": [
+     3035728.9569
+    ],
+    "elapsed_s": 0.3655
+   },
+   {
+    "engine": "pymap3d",
+    "lineage": "Vincenty (1975) pure Python",
+    "version": "3.2.0",
+    "state": "OK",
+    "value": [
+     3035728.9569
+    ],
+    "elapsed_s": 0.2385
+   }
+  ],
+  "pairs": [
+   {
+    "a": "pyproj",
+    "b": "geopy",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "pyproj",
+    "b": "pygeodesy",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "pyproj",
+    "b": "pymap3d",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "geopy",
+    "b": "pygeodesy",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "geopy",
+    "b": "pymap3d",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "pygeodesy",
+    "b": "pymap3d",
+    "same_lineage": true,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "Karney (2013) / GeographicLib C",
+   "Karney (2013) / GeographicLib Python",
+   "Vincenty (1975) pure Python"
+  ],
+  "n_failed": 0,
+  "reference": {
+   "source": "Karney GeodTest benchmark arc (10,20) to (30,40) WGS-84",
+   "value": [
+    3035728.9569
+   ],
+   "max_dev": 0.0,
+   "ref_tolerance": 0.05,
+   "within_tol": true,
+   "per_engine": {
+    "pyproj": 0.0,
+    "geopy": 0.0,
+    "pygeodesy": 0.0,
+    "pymap3d": 0.0
+   }
+  },
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T15:46:32+00:00",
+  "sha256": "05d40ccfb285383452397a39cc041ca9a2980a25b642de2d76e6494a2a979ad4"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "WGS-84 Geodesic Distance",
+  "unit": "m",
+  "inputs": {
+   "p1": [
+    45.0,
+    0.0
+   ],
+   "p2": [
+    45.0,
+    90.0
+   ]
+  },
+  "tolerance": 0.05,
+  "diff_mode": "abs",
+  "engines": [
+   {
+    "engine": "pyproj",
+    "lineage": "Karney (2013) / GeographicLib C",
+    "version": "3.8.0",
+    "state": "OK",
+    "value": [
+     6690232.9325
+    ],
+    "elapsed_s": 0.4856
+   },
+   {
+    "engine": "geopy",
+    "lineage": "Karney (2013) / GeographicLib Python",
+    "version": "2.5.0",
+    "state": "OK",
+    "value": [
+     6690232.9325
+    ],
+    "elapsed_s": 0.4486
+   },
+   {
+    "engine": "pygeodesy",
+    "lineage": "Vincenty (1975) pure Python",
+    "version": "26.09.09",
+    "state": "OK",
+    "value": [
+     6690232.9326
+    ],
+    "elapsed_s": 0.3752
+   },
+   {
+    "engine": "pymap3d",
+    "lineage": "Vincenty (1975) pure Python",
+    "version": "3.2.0",
+    "state": "OK",
+    "value": [
+     6690232.9326
+    ],
+    "elapsed_s": 0.2446
+   }
+  ],
+  "pairs": [
+   {
+    "a": "pyproj",
+    "b": "geopy",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "pyproj",
+    "b": "pygeodesy",
+    "same_lineage": false,
+    "diff": 9.999983012676239e-05,
+    "within_tol": true
+   },
+   {
+    "a": "pyproj",
+    "b": "pymap3d",
+    "same_lineage": false,
+    "diff": 9.999983012676239e-05,
+    "within_tol": true
+   },
+   {
+    "a": "geopy",
+    "b": "pygeodesy",
+    "same_lineage": false,
+    "diff": 9.999983012676239e-05,
+    "within_tol": true
+   },
+   {
+    "a": "geopy",
+    "b": "pymap3d",
+    "same_lineage": false,
+    "diff": 9.999983012676239e-05,
+    "within_tol": true
+   },
+   {
+    "a": "pygeodesy",
+    "b": "pymap3d",
+    "same_lineage": true,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "Karney (2013) / GeographicLib C",
+   "Karney (2013) / GeographicLib Python",
+   "Vincenty (1975) pure Python"
+  ],
+  "n_failed": 0,
+  "reference": {
+   "source": "Karney GeodTest parallel/oblique arc (45,0) to (45,90) WGS-84",
+   "value": [
+    6690232.9325
+   ],
+   "max_dev": 9.999983012676239e-05,
+   "ref_tolerance": 0.05,
+   "within_tol": true,
+   "per_engine": {
+    "pyproj": 0.0,
+    "geopy": 0.0,
+    "pygeodesy": 9.999983012676239e-05,
+    "pymap3d": 9.999983012676239e-05
+   }
+  },
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T15:46:33+00:00",
+  "sha256": "4608392964bed4dbcf1c79dfa514b95a2797f5912e918eafeef93f792a489e95"
+ }
+]

@@ -1,0 +1,11 @@
+:name: S.T.A.R. AOS frame check on a simulated LEON3 (SPARC V8)
+:description: loads star_aos_leon3.elf on Renode's leon3 board, logs the APBUART to a file, runs 2 s of virtual time
+
+mach create "leon3"
+machine LoadPlatformDescription @platforms/boards/leon3.repl
+sysbus LoadELF $elf
+# act as the boot loader: BCC2 detects end-of-RAM from the initial stack pointer (BCC manual 2.10); Renode sets none
+cpu SetRegister 14 0x41000000
+uart CreateFileBackend $out true
+emulation RunFor "2"
+quit

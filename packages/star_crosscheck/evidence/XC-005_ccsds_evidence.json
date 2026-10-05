@@ -1,0 +1,502 @@
+[
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "CCSDS Space Packet Primary Header",
+  "unit": "counts",
+  "inputs": {
+   "hex": "0123c02a0003deadbeef"
+  },
+  "tolerance": 0.0,
+  "diff_mode": "abs",
+  "engines": [
+   {
+    "engine": "star_telemetry",
+    "lineage": "S.T.A.R. native engine",
+    "version": "0.2.0",
+    "state": "OK",
+    "value": [
+     291.0,
+     42.0,
+     10.0
+    ],
+    "elapsed_s": 0.2022
+   },
+   {
+    "engine": "spacepackets",
+    "lineage": "Sat-RS / spacepackets library",
+    "version": "0.32.0",
+    "state": "OK",
+    "value": [
+     291.0,
+     42.0,
+     10.0
+    ],
+    "elapsed_s": 0.3184
+   },
+   {
+    "engine": "ccsdspy",
+    "lineage": "IAU / Astropy ccsdspy parser",
+    "version": "2.0.1",
+    "state": "OK",
+    "value": [
+     291.0,
+     42.0,
+     10.0
+    ],
+    "elapsed_s": 0.4162
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_telemetry",
+    "b": "spacepackets",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "star_telemetry",
+    "b": "ccsdspy",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "spacepackets",
+    "b": "ccsdspy",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "IAU / Astropy ccsdspy parser",
+   "S.T.A.R. native engine",
+   "Sat-RS / spacepackets library"
+  ],
+  "n_failed": 0,
+  "reference": {
+   "source": "CCSDS 133.0-B-2 canonical header: APID 0x123, seq 42, len 3+7=10",
+   "value": [
+    291.0,
+    42.0,
+    10.0
+   ],
+   "max_dev": 0.0,
+   "ref_tolerance": 0.0,
+   "within_tol": true,
+   "per_engine": {
+    "star_telemetry": 0.0,
+    "spacepackets": 0.0,
+    "ccsdspy": 0.0
+   }
+  },
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T15:56:00+00:00",
+  "sha256": "98340c3e39ee34558f990bbb6f7f638cbdc14f0b04ffe5139015e29304405d83"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "CCSDS Space Packet Primary Header",
+  "unit": "counts",
+  "inputs": {
+   "hex": "0001c3e800070102030405060708"
+  },
+  "tolerance": 0.0,
+  "diff_mode": "abs",
+  "engines": [
+   {
+    "engine": "star_telemetry",
+    "lineage": "S.T.A.R. native engine",
+    "version": "0.2.0",
+    "state": "OK",
+    "value": [
+     1.0,
+     1000.0,
+     14.0
+    ],
+    "elapsed_s": 0.2507
+   },
+   {
+    "engine": "spacepackets",
+    "lineage": "Sat-RS / spacepackets library",
+    "version": "0.32.0",
+    "state": "OK",
+    "value": [
+     1.0,
+     1000.0,
+     14.0
+    ],
+    "elapsed_s": 0.3974
+   },
+   {
+    "engine": "ccsdspy",
+    "lineage": "IAU / Astropy ccsdspy parser",
+    "version": "2.0.1",
+    "state": "OK",
+    "value": [
+     1.0,
+     1000.0,
+     14.0
+    ],
+    "elapsed_s": 0.4009
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_telemetry",
+    "b": "spacepackets",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "star_telemetry",
+    "b": "ccsdspy",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "spacepackets",
+    "b": "ccsdspy",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "IAU / Astropy ccsdspy parser",
+   "S.T.A.R. native engine",
+   "Sat-RS / spacepackets library"
+  ],
+  "n_failed": 0,
+  "reference": {
+   "source": "CCSDS 133.0-B-2 canonical header: APID 1, seq 1000, len 7+7=14",
+   "value": [
+    1.0,
+    1000.0,
+    14.0
+   ],
+   "max_dev": 0.0,
+   "ref_tolerance": 0.0,
+   "within_tol": true,
+   "per_engine": {
+    "star_telemetry": 0.0,
+    "spacepackets": 0.0,
+    "ccsdspy": 0.0
+   }
+  },
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T15:56:01+00:00",
+  "sha256": "4bf8b7d2b22c953a2494648fb335734bc652a0fe2ecc5bcd720a1934ef51348a"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "CCSDS Space Packet Primary Header",
+  "unit": "counts",
+  "inputs": {
+   "hex": "07ffffff0001aabb"
+  },
+  "tolerance": 0.0,
+  "diff_mode": "abs",
+  "engines": [
+   {
+    "engine": "star_telemetry",
+    "lineage": "S.T.A.R. native engine",
+    "version": "0.2.0",
+    "state": "OK",
+    "value": [
+     2047.0,
+     16383.0,
+     8.0
+    ],
+    "elapsed_s": 0.1845
+   },
+   {
+    "engine": "spacepackets",
+    "lineage": "Sat-RS / spacepackets library",
+    "version": "0.32.0",
+    "state": "OK",
+    "value": [
+     2047.0,
+     16383.0,
+     8.0
+    ],
+    "elapsed_s": 0.2968
+   },
+   {
+    "engine": "ccsdspy",
+    "lineage": "IAU / Astropy ccsdspy parser",
+    "version": "2.0.1",
+    "state": "OK",
+    "value": [
+     2047.0,
+     16383.0,
+     8.0
+    ],
+    "elapsed_s": 0.4342
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_telemetry",
+    "b": "spacepackets",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "star_telemetry",
+    "b": "ccsdspy",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "spacepackets",
+    "b": "ccsdspy",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "IAU / Astropy ccsdspy parser",
+   "S.T.A.R. native engine",
+   "Sat-RS / spacepackets library"
+  ],
+  "n_failed": 0,
+  "reference": {
+   "source": "CCSDS 133.0-B-2 idle packet: APID 2047, seq 16383, len 1+7=8",
+   "value": [
+    2047.0,
+    16383.0,
+    8.0
+   ],
+   "max_dev": 0.0,
+   "ref_tolerance": 0.0,
+   "within_tol": true,
+   "per_engine": {
+    "star_telemetry": 0.0,
+    "spacepackets": 0.0,
+    "ccsdspy": 0.0
+   }
+  },
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T15:56:02+00:00",
+  "sha256": "d235d2248faadb7208f9eb7e9bacc64c352bdf5a239cb7dd1b9121b93bf31fc5"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "CCSDS Space Packet Primary Header",
+  "unit": "counts",
+  "inputs": {
+   "hex": "0cc0e735009d000027360000000000000000498e020300001b11011b110111110100000000000000000100000400000400000400000030000000013d000000000b4d540a734df61280ec2ad10a69d60a7370075a70f59e6801f0c01fd7d5d212ea1e3d84cf73e2ce1e7fce4677ce1e77ddfaface1e7ef24918ce1e63f61a4ecf9f5fceb4ddd21d17ce1c21cfc55f1f5676d27c4809d162d3ab6c044b25d430a90000e932"
+  },
+  "tolerance": 0.0,
+  "diff_mode": "abs",
+  "engines": [
+   {
+    "engine": "star_telemetry",
+    "lineage": "S.T.A.R. native engine",
+    "version": "0.2.0",
+    "state": "OK",
+    "value": [
+     1216.0,
+     10037.0,
+     164.0
+    ],
+    "elapsed_s": 0.1814
+   },
+   {
+    "engine": "spacepackets",
+    "lineage": "Sat-RS / spacepackets library",
+    "version": "0.32.0",
+    "state": "OK",
+    "value": [
+     1216.0,
+     10037.0,
+     164.0
+    ],
+    "elapsed_s": 0.4196
+   },
+   {
+    "engine": "ccsdspy",
+    "lineage": "IAU / Astropy ccsdspy parser",
+    "version": "2.0.1",
+    "state": "OK",
+    "value": [
+     1216.0,
+     10037.0,
+     164.0
+    ],
+    "elapsed_s": 0.4641
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_telemetry",
+    "b": "spacepackets",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "star_telemetry",
+    "b": "ccsdspy",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "spacepackets",
+    "b": "ccsdspy",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "IAU / Astropy ccsdspy parser",
+   "S.T.A.R. native engine",
+   "Sat-RS / spacepackets library"
+  ],
+  "n_failed": 0,
+  "reference": {
+   "source": "NASA JPL Europa Clipper ECM packet #1 (SHA256: b72089379d201e...)",
+   "value": [
+    1216.0,
+    10037.0,
+    164.0
+   ],
+   "max_dev": 0.0,
+   "ref_tolerance": 0.0,
+   "within_tol": true,
+   "per_engine": {
+    "star_telemetry": 0.0,
+    "spacepackets": 0.0,
+    "ccsdspy": 0.0
+   }
+  },
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T15:56:03+00:00",
+  "sha256": "4bf03908b14b0ca5fc4fa82e80fc493eff85bac882d8927da44af2777310e901"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "CCSDS Space Packet Primary Header",
+  "unit": "counts",
+  "inputs": {
+   "hex": "0cc0e736009d000027370000000000000000498e020300001b11011b110111110100000000000080000100000400000400000400000030000000013d000000000b4d570a7356f6128cec2aeb0a69ee0a7384075a85f59e6f01f10a1fd7d2d2123b1e3d9ccf73dcce1e99ce468bce1e81ddfb18ce1e91f2491cce1e7cf61a54cf9f6fceb4ebd21d23ce1c2acfc56d1f5677d27c5709d15dd3ab8e044b3cd430c00000ff8e"
+  },
+  "tolerance": 0.0,
+  "diff_mode": "abs",
+  "engines": [
+   {
+    "engine": "star_telemetry",
+    "lineage": "S.T.A.R. native engine",
+    "version": "0.2.0",
+    "state": "OK",
+    "value": [
+     1216.0,
+     10038.0,
+     164.0
+    ],
+    "elapsed_s": 0.2339
+   },
+   {
+    "engine": "spacepackets",
+    "lineage": "Sat-RS / spacepackets library",
+    "version": "0.32.0",
+    "state": "OK",
+    "value": [
+     1216.0,
+     10038.0,
+     164.0
+    ],
+    "elapsed_s": 0.3851
+   },
+   {
+    "engine": "ccsdspy",
+    "lineage": "IAU / Astropy ccsdspy parser",
+    "version": "2.0.1",
+    "state": "OK",
+    "value": [
+     1216.0,
+     10038.0,
+     164.0
+    ],
+    "elapsed_s": 0.3931
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_telemetry",
+    "b": "spacepackets",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "star_telemetry",
+    "b": "ccsdspy",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "spacepackets",
+    "b": "ccsdspy",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "IAU / Astropy ccsdspy parser",
+   "S.T.A.R. native engine",
+   "Sat-RS / spacepackets library"
+  ],
+  "n_failed": 0,
+  "reference": {
+   "source": "NASA JPL Europa Clipper ECM packet #2 (SHA256: b72089379d201e...)",
+   "value": [
+    1216.0,
+    10038.0,
+    164.0
+   ],
+   "max_dev": 0.0,
+   "ref_tolerance": 0.0,
+   "within_tol": true,
+   "per_engine": {
+    "star_telemetry": 0.0,
+    "spacepackets": 0.0,
+    "ccsdspy": 0.0
+   }
+  },
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T15:56:04+00:00",
+  "sha256": "348d5a0f3845bd9ee7a5a0aa984c7ad32dc529e8f09a6072ce7f069d2b920e98"
+ }
+]

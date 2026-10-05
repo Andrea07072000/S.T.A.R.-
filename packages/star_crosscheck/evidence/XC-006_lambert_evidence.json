@@ -1,0 +1,1444 @@
+[
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "Lambert v1",
+  "unit": "km/s",
+  "inputs": {
+   "r1": [
+    5000,
+    10000,
+    2100
+   ],
+   "r2": [
+    -14600,
+    2500,
+    7000
+   ],
+   "tof": 3600
+  },
+  "tolerance": 1e-06,
+  "diff_mode": "norm",
+  "engines": [
+   {
+    "engine": "star_lambert",
+    "lineage": "universal variables (BMW/Curtis)",
+    "version": "0.1",
+    "state": "OK",
+    "value": [
+     -5.99249502005808,
+     1.9253667141903996,
+     3.245638050488974
+    ],
+    "elapsed_s": 0.0016
+   },
+   {
+    "engine": "hapsira-izzo",
+    "lineage": "Izzo 2015",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     -5.992495020058078,
+     1.925366714190404,
+     3.2456380504889744
+    ],
+    "elapsed_s": 12.7147
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_lambert",
+    "b": "hapsira-izzo",
+    "same_lineage": false,
+    "diff": 5.197930934883577e-15,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "Izzo 2015",
+   "universal variables (BMW/Curtis)"
+  ],
+  "n_failed": 0,
+  "reference": {
+   "source": "Curtis, Orbital Mechanics for Engineering Students, Ex. 5.2",
+   "value": [
+    -5.9925,
+    1.9254,
+    3.2456
+   ],
+   "max_dev": 5.079945524730602e-05,
+   "ref_tolerance": 0.0005,
+   "within_tol": true,
+   "per_engine": {
+    "star_lambert": 5.079945524730602e-05,
+    "hapsira-izzo": 5.079945524499001e-05
+   }
+  },
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T14:29:25+00:00",
+  "sha256": "a524f2d9fa5d446a22958bfc205194e1002c2baff19ad436db076ff79667ba05"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "Lambert v1",
+  "unit": "km/s",
+  "inputs": {
+   "r1": [
+    -4564.725872049703,
+    28950.16035589783,
+    236.4712141640124
+   ],
+   "r2": [
+    1292.063195376296,
+    7570.9172423313075,
+    176.69948742291126
+   ],
+   "tof": 35881.25948632509
+  },
+  "tolerance": 1e-06,
+  "diff_mode": "norm",
+  "engines": [
+   {
+    "engine": "star_lambert",
+    "lineage": "universal variables (BMW/Curtis)",
+    "version": "0.1",
+    "state": "OK",
+    "value": [
+     -1.2235042973482122,
+     3.1599659297129357,
+     -0.007699653671056229
+    ],
+    "elapsed_s": 0.0047
+   },
+   {
+    "engine": "hapsira-izzo",
+    "lineage": "Izzo 2015",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     -1.223504297348213,
+     3.1599659297129414,
+     -0.007699653671056163
+    ],
+    "elapsed_s": 9.9513
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_lambert",
+    "b": "hapsira-izzo",
+    "same_lineage": false,
+    "diff": 5.841453546014535e-15,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "Izzo 2015",
+   "universal variables (BMW/Curtis)"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T14:29:35+00:00",
+  "sha256": "f9486b1849809d8cae7ab20ebc3f4dff2de68a22671272d491f1c7c880dae48a"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "Lambert v1",
+  "unit": "km/s",
+  "inputs": {
+   "r1": [
+    9688.115189158787,
+    1834.3645164656007,
+    5.355288103362398
+   ],
+   "r2": [
+    4253.75916397791,
+    21229.681966116546,
+    -473.46403031613636
+   ],
+   "tof": 9395.598256229972
+  },
+  "tolerance": 1e-06,
+  "diff_mode": "norm",
+  "engines": [
+   {
+    "engine": "star_lambert",
+    "lineage": "universal variables (BMW/Curtis)",
+    "version": "0.1",
+    "state": "OK",
+    "value": [
+     4.446150339478982,
+     5.608096200644884,
+     -0.10857968352176206
+    ],
+    "elapsed_s": 0.0022
+   },
+   {
+    "engine": "hapsira-izzo",
+    "lineage": "Izzo 2015",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     4.446150339478983,
+     5.6080962006448845,
+     -0.1085796835217621
+    ],
+    "elapsed_s": 9.7283
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_lambert",
+    "b": "hapsira-izzo",
+    "same_lineage": false,
+    "diff": 1.2567637595793301e-15,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "Izzo 2015",
+   "universal variables (BMW/Curtis)"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T14:29:44+00:00",
+  "sha256": "91fe9f2a00e0d37b8fb296b9e5df2bc99a3eb256fe08cc0c6b19c3f03e9ffe49"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "Lambert v1",
+  "unit": "km/s",
+  "inputs": {
+   "r1": [
+    5500.468984429099,
+    29161.717944495424,
+    309.43045667782667
+   ],
+   "r2": [
+    -22027.179102929054,
+    -13779.136149373762,
+    -493.501240321939
+   ],
+   "tof": 32582.295420013263
+  },
+  "tolerance": 1e-06,
+  "diff_mode": "norm",
+  "engines": [
+   {
+    "engine": "star_lambert",
+    "lineage": "universal variables (BMW/Curtis)",
+    "version": "0.1",
+    "state": "OK",
+    "value": [
+     -2.830978883541354,
+     2.238353739336855,
+     -0.0344021292495601
+    ],
+    "elapsed_s": 0.0033
+   },
+   {
+    "engine": "hapsira-izzo",
+    "lineage": "Izzo 2015",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     -2.8309788835413525,
+     2.2383537393368527,
+     -0.034402129249560084
+    ],
+    "elapsed_s": 9.5229
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_lambert",
+    "b": "hapsira-izzo",
+    "same_lineage": false,
+    "diff": 2.5895000072162656e-15,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "Izzo 2015",
+   "universal variables (BMW/Curtis)"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T14:29:54+00:00",
+  "sha256": "d25c9e99d5d406110b7086a170dbcc40b354583e4988e835d3dbb92e4ff201d8"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "Lambert v1",
+  "unit": "km/s",
+  "inputs": {
+   "r1": [
+    17569.70472609908,
+    25993.559716418767,
+    -163.40545488737325
+   ],
+   "r2": [
+    18087.066808897835,
+    -5042.510810010325,
+    -407.2541566198521
+   ],
+   "tof": 5494.565595038325
+  },
+  "tolerance": 1e-06,
+  "diff_mode": "norm",
+  "engines": [
+   {
+    "engine": "star_lambert",
+    "lineage": "universal variables (BMW/Curtis)",
+    "version": "0.1",
+    "state": "OK",
+    "value": [
+     -4.662353540617736,
+     -4.922209381573906,
+     0.05821090894426402
+    ],
+    "elapsed_s": 0.0035
+   },
+   {
+    "engine": "hapsira-izzo",
+    "lineage": "Izzo 2015",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     -4.6623535406177306,
+     -4.922209381573898,
+     0.05821090894426399
+    ],
+    "elapsed_s": 10.2061
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_lambert",
+    "b": "hapsira-izzo",
+    "same_lineage": false,
+    "diff": 9.60715859569499e-15,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "Izzo 2015",
+   "universal variables (BMW/Curtis)"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T14:30:04+00:00",
+  "sha256": "6755b7de4babd094c93e88fa99bd9d9265571c46f34e5bd5894f6495f3d791ec"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "Lambert v1",
+  "unit": "km/s",
+  "inputs": {
+   "r1": [
+    12780.13143615308,
+    -34330.11995213537,
+    36.22809145470069
+   ],
+   "r2": [
+    -3627.3020872347856,
+    -27815.643971797752,
+    473.1157639793706
+   ],
+   "tof": 16260.013209359104
+  },
+  "tolerance": 1e-06,
+  "diff_mode": "norm",
+  "engines": [
+   {
+    "engine": "star_lambert",
+    "lineage": "universal variables (BMW/Curtis)",
+    "version": "0.1",
+    "state": "OK",
+    "value": [
+     0.8078717062810474,
+     1.4059922220139414,
+     -0.043735286650751215
+    ],
+    "elapsed_s": 0.005
+   },
+   {
+    "engine": "hapsira-izzo",
+    "lineage": "Izzo 2015",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     0.8078717062810509,
+     1.4059922220139376,
+     -0.043735286650751284
+    ],
+    "elapsed_s": 9.5048
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_lambert",
+    "b": "hapsira-izzo",
+    "same_lineage": false,
+    "diff": 5.108703794053316e-15,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "Izzo 2015",
+   "universal variables (BMW/Curtis)"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T14:30:14+00:00",
+  "sha256": "49e4dfb10eda3c0fa6f438e5d1386d77acc47197c8feacf0a1046ed7ad2f7555"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "Lambert v1",
+  "unit": "km/s",
+  "inputs": {
+   "r1": [
+    -19323.352146470803,
+    -17740.264331663195,
+    77.35214525676201
+   ],
+   "r2": [
+    23164.693523409,
+    -27550.68383197518,
+    204.57183621492345
+   ],
+   "tof": 3550.4914556462963
+  },
+  "tolerance": 1e-06,
+  "diff_mode": "norm",
+  "engines": [
+   {
+    "engine": "star_lambert",
+    "lineage": "universal variables (BMW/Curtis)",
+    "version": "0.1",
+    "state": "OK",
+    "value": [
+     11.660131190134146,
+     -3.841304344775013,
+     0.04191076107206513
+    ],
+    "elapsed_s": 0.0014
+   },
+   {
+    "engine": "hapsira-izzo",
+    "lineage": "Izzo 2015",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     11.660131190134154,
+     -3.841304344775012,
+     0.041910761072065136
+    ],
+    "elapsed_s": 9.522
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_lambert",
+    "b": "hapsira-izzo",
+    "same_lineage": false,
+    "diff": 7.160726708066325e-15,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "Izzo 2015",
+   "universal variables (BMW/Curtis)"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T14:30:23+00:00",
+  "sha256": "ddb9c5a4f79d9d1f94ad8c6fdfe80ec801c1919a741b37255d666e26085f3eb5"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "Lambert v1",
+  "unit": "km/s",
+  "inputs": {
+   "r1": [
+    12999.766606875777,
+    7120.275583382908,
+    -398.9985705902709
+   ],
+   "r2": [
+    1845.6570184240438,
+    16885.889033173367,
+    -222.02639688990786
+   ],
+   "tof": 26083.145770900086
+  },
+  "tolerance": 1e-06,
+  "diff_mode": "norm",
+  "engines": [
+   {
+    "engine": "star_lambert",
+    "lineage": "universal variables (BMW/Curtis)",
+    "version": "0.1",
+    "state": "OK",
+    "value": [
+     3.7024880724421343,
+     4.576896848546913,
+     -0.1401933850818907
+    ],
+    "elapsed_s": 0.0022
+   },
+   {
+    "engine": "hapsira-izzo",
+    "lineage": "Izzo 2015",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     3.702488072442136,
+     4.576896848546916,
+     -0.14019338508189078
+    ],
+    "elapsed_s": 10.1964
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_lambert",
+    "b": "hapsira-izzo",
+    "same_lineage": false,
+    "diff": 3.2034551839651118e-15,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "Izzo 2015",
+   "universal variables (BMW/Curtis)"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T14:30:33+00:00",
+  "sha256": "7d23614c13dc4897e2990d301b5e977c6c54ed20015f21f1a345bae4b7052846"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "Lambert v1",
+  "unit": "km/s",
+  "inputs": {
+   "r1": [
+    4956.3796148429155,
+    19006.475389693445,
+    436.65458771249394
+   ],
+   "r2": [
+    -2094.6222681767013,
+    19719.43542743315,
+    148.0353852465936
+   ],
+   "tof": 25068.80441647895
+  },
+  "tolerance": 1e-06,
+  "diff_mode": "norm",
+  "engines": [
+   {
+    "engine": "star_lambert",
+    "lineage": "universal variables (BMW/Curtis)",
+    "version": "0.1",
+    "state": "OK",
+    "value": [
+     0.3912113255363027,
+     4.623613846573452,
+     0.07189577372728934
+    ],
+    "elapsed_s": 0.0046
+   },
+   {
+    "engine": "hapsira-izzo",
+    "lineage": "Izzo 2015",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     0.39121132553630233,
+     4.623613846573452,
+     0.07189577372728932
+    ],
+    "elapsed_s": 9.8493
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_lambert",
+    "b": "hapsira-izzo",
+    "same_lineage": false,
+    "diff": 3.888257972851056e-16,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "Izzo 2015",
+   "universal variables (BMW/Curtis)"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T14:30:43+00:00",
+  "sha256": "ad8d55ac1b626b09e2d96281601a2de4a19303dbbbafc592b9820d2c688045fa"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "Lambert v1",
+  "unit": "km/s",
+  "inputs": {
+   "r1": [
+    6644.16269267942,
+    10968.689103258352,
+    489.5233506365953
+   ],
+   "r2": [
+    -23563.002576368912,
+    22333.3434562674,
+    139.99975985409287
+   ],
+   "tof": 23075.480212191487
+  },
+  "tolerance": 1e-06,
+  "diff_mode": "norm",
+  "engines": [
+   {
+    "engine": "star_lambert",
+    "lineage": "universal variables (BMW/Curtis)",
+    "version": "0.1",
+    "state": "OK",
+    "value": [
+     -0.9828825345654627,
+     6.564058128424969,
+     0.17840747475562535
+    ],
+    "elapsed_s": 0.0041
+   },
+   {
+    "engine": "hapsira-izzo",
+    "lineage": "Izzo 2015",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     -0.9828825345654608,
+     6.56405812842497,
+     0.17840747475562546
+    ],
+    "elapsed_s": 9.6745
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_lambert",
+    "b": "hapsira-izzo",
+    "same_lineage": false,
+    "diff": 2.5942184945888343e-15,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "Izzo 2015",
+   "universal variables (BMW/Curtis)"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T14:30:53+00:00",
+  "sha256": "97894411f82de244876c3db6c0f614f1be62162bc09d062dd4c10f6404a4da46"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "Lambert v1",
+  "unit": "km/s",
+  "inputs": {
+   "r1": [
+    4949.841675122378,
+    -30499.36928718022,
+    -467.89975609596223
+   ],
+   "r2": [
+    4813.395890440494,
+    36149.33627974445,
+    -184.54695194091806
+   ],
+   "tof": 12027.701462271843
+  },
+  "tolerance": 1e-06,
+  "diff_mode": "norm",
+  "engines": [
+   {
+    "engine": "star_lambert",
+    "lineage": "universal variables (BMW/Curtis)",
+    "version": "0.1",
+    "state": "OK",
+    "value": [
+     3.404567109128472,
+     4.167616962105832,
+     -0.21848581463436106
+    ],
+    "elapsed_s": 0.002
+   },
+   {
+    "engine": "hapsira-izzo",
+    "lineage": "Izzo 2015",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     3.4045671091284664,
+     4.1676169621058206,
+     -0.21848581463436068
+    ],
+    "elapsed_s": 10.2031
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_lambert",
+    "b": "hapsira-izzo",
+    "same_lineage": false,
+    "diff": 1.2915024550328145e-14,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "Izzo 2015",
+   "universal variables (BMW/Curtis)"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T14:31:03+00:00",
+  "sha256": "0fb0e613831e7b1ce7daf1753d448921118151ffabec055f6ed3686f6dc9690e"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "Lambert v1",
+  "unit": "km/s",
+  "inputs": {
+   "r1": [
+    10117.91493768699,
+    -10001.191616119455,
+    155.43866529488002
+   ],
+   "r2": [
+    -15770.97045376948,
+    36749.29030951467,
+    -104.36809893933577
+   ],
+   "tof": 36735.717928088765
+  },
+  "tolerance": 1e-06,
+  "diff_mode": "norm",
+  "engines": [
+   {
+    "engine": "star_lambert",
+    "lineage": "universal variables (BMW/Curtis)",
+    "version": "0.1",
+    "state": "OK",
+    "value": [
+     5.871766471491842,
+     2.8837508250818846,
+     0.14683088717878923
+    ],
+    "elapsed_s": 0.0065
+   },
+   {
+    "engine": "hapsira-izzo",
+    "lineage": "Izzo 2015",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     5.871766471491851,
+     2.88375082508188,
+     0.14683088717878945
+    ],
+    "elapsed_s": 9.8513
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_lambert",
+    "b": "hapsira-izzo",
+    "same_lineage": false,
+    "diff": 9.932618836903125e-15,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "Izzo 2015",
+   "universal variables (BMW/Curtis)"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T14:31:13+00:00",
+  "sha256": "939e9e596892225917ef342b86b0158139752ffae590c832c8bb55531ae2cf55"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "Lambert v1",
+  "unit": "km/s",
+  "inputs": {
+   "r1": [
+    504.33376703078653,
+    22946.043474916,
+    -237.25839147706472
+   ],
+   "r2": [
+    -14950.756171725388,
+    -6037.485518497554,
+    84.58599022354053
+   ],
+   "tof": 36096.83415361462
+  },
+  "tolerance": 1e-06,
+  "diff_mode": "norm",
+  "engines": [
+   {
+    "engine": "star_lambert",
+    "lineage": "universal variables (BMW/Curtis)",
+    "version": "0.1",
+    "state": "OK",
+    "value": [
+     -2.8225329113986057,
+     3.4285031578701317,
+     -0.031116581830249308
+    ],
+    "elapsed_s": 0.0043
+   },
+   {
+    "engine": "hapsira-izzo",
+    "lineage": "Izzo 2015",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     -2.822532911398605,
+     3.428503157870133,
+     -0.031116581830249325
+    ],
+    "elapsed_s": 9.8162
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_lambert",
+    "b": "hapsira-izzo",
+    "same_lineage": false,
+    "diff": 1.6012803841058252e-15,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "Izzo 2015",
+   "universal variables (BMW/Curtis)"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T14:31:23+00:00",
+  "sha256": "99a0c5e35127f0e982ff5c6f81d0f236d106edaa548a5921f8da1736fd133ac0"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "Lambert v1",
+  "unit": "km/s",
+  "inputs": {
+   "r1": [
+    31957.604014354103,
+    13472.072481858733,
+    496.12138024009676
+   ],
+   "r2": [
+    -15921.68102588586,
+    14685.265027398387,
+    29.11434509913704
+   ],
+   "tof": 38895.19402484021
+  },
+  "tolerance": 1e-06,
+  "diff_mode": "norm",
+  "engines": [
+   {
+    "engine": "star_lambert",
+    "lineage": "universal variables (BMW/Curtis)",
+    "version": "0.1",
+    "state": "OK",
+    "value": [
+     0.9165042913084217,
+     3.0131568070991372,
+     0.04814621652705306
+    ],
+    "elapsed_s": 0.0049
+   },
+   {
+    "engine": "hapsira-izzo",
+    "lineage": "Izzo 2015",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     0.9165042913084213,
+     3.0131568070991372,
+     0.04814621652705305
+    ],
+    "elapsed_s": 9.744
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_lambert",
+    "b": "hapsira-izzo",
+    "same_lineage": false,
+    "diff": 4.441434166503682e-16,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "Izzo 2015",
+   "universal variables (BMW/Curtis)"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T14:31:33+00:00",
+  "sha256": "532127c18d124e1b86d549f46e047f4014d513dbfe13f66338b55c30d1a3a8fc"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "Lambert v1",
+  "unit": "km/s",
+  "inputs": {
+   "r1": [
+    -6870.109142019071,
+    -36457.790088928145,
+    36.97033040879512
+   ],
+   "r2": [
+    -3011.361327904212,
+    -6544.556549406171,
+    -233.17481004745724
+   ],
+   "tof": 26284.740705748667
+  },
+  "tolerance": 1e-06,
+  "diff_mode": "norm",
+  "engines": [
+   {
+    "engine": "star_lambert",
+    "lineage": "universal variables (BMW/Curtis)",
+    "version": "0.1",
+    "state": "OK",
+    "value": [
+     -0.02673915685654124,
+     -1.9731392301686528,
+     0.04854142600704932
+    ],
+    "elapsed_s": 0.0111
+   },
+   {
+    "engine": "hapsira-izzo",
+    "lineage": "Izzo 2015",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     -0.0267391568565446,
+     -1.973139230168656,
+     0.04854142600704896
+    ],
+    "elapsed_s": 9.7899
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_lambert",
+    "b": "hapsira-izzo",
+    "same_lineage": false,
+    "diff": 4.743686906850036e-15,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "Izzo 2015",
+   "universal variables (BMW/Curtis)"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T14:31:42+00:00",
+  "sha256": "3f42b578a33a19f3f46e536ad17bc98ab6977b8f7ef7aa7aab22017e598948e2"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "Lambert v1",
+  "unit": "km/s",
+  "inputs": {
+   "r1": [
+    -37629.94146199282,
+    -78.57656342643817,
+    412.6278393448205
+   ],
+   "r2": [
+    6973.993800444254,
+    14479.292805777814,
+    370.5185698367669
+   ],
+   "tof": 13200.591033337776
+  },
+  "tolerance": 1e-06,
+  "diff_mode": "norm",
+  "engines": [
+   {
+    "engine": "star_lambert",
+    "lineage": "universal variables (BMW/Curtis)",
+    "version": "0.1",
+    "state": "OK",
+    "value": [
+     1.9075530181823759,
+     -2.046745041429274,
+     -0.0842890232623759
+    ],
+    "elapsed_s": 0.0039
+   },
+   {
+    "engine": "hapsira-izzo",
+    "lineage": "Izzo 2015",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     1.9075530181823763,
+     -2.0467450414292734,
+     -0.08428902326237592
+    ],
+    "elapsed_s": 9.7786
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_lambert",
+    "b": "hapsira-izzo",
+    "same_lineage": false,
+    "diff": 6.281902941027859e-16,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "Izzo 2015",
+   "universal variables (BMW/Curtis)"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T14:31:52+00:00",
+  "sha256": "ba7620419864a8de0c7875935f46603080e8ec121528dca8fcd0d4c6afd008e5"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "Lambert v1",
+  "unit": "km/s",
+  "inputs": {
+   "r1": [
+    16803.05100440521,
+    23992.11244542485,
+    39.37903011962578
+   ],
+   "r2": [
+    2148.887089376613,
+    -28153.861969661193,
+    278.62647863055827
+   ],
+   "tof": 22059.51027785578
+  },
+  "tolerance": 1e-06,
+  "diff_mode": "norm",
+  "engines": [
+   {
+    "engine": "star_lambert",
+    "lineage": "universal variables (BMW/Curtis)",
+    "version": "0.1",
+    "state": "OK",
+    "value": [
+     -3.3193599575530084,
+     1.3951365035258636,
+     -0.06153536405258998
+    ],
+    "elapsed_s": 0.0041
+   },
+   {
+    "engine": "hapsira-izzo",
+    "lineage": "Izzo 2015",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     -3.319359957553006,
+     1.3951365035258627,
+     -0.061535364052589935
+    ],
+    "elapsed_s": 9.7302
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_lambert",
+    "b": "hapsira-izzo",
+    "same_lineage": false,
+    "diff": 2.391986794912173e-15,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "Izzo 2015",
+   "universal variables (BMW/Curtis)"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T14:32:02+00:00",
+  "sha256": "b17196011b7b49e97f6870da2f799338886cf69ea81f9ca9112c9b45edbb9872"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "Lambert v1",
+  "unit": "km/s",
+  "inputs": {
+   "r1": [
+    6769.17734957167,
+    832.1186040805928,
+    378.7218778231842
+   ],
+   "r2": [
+    16409.694970863933,
+    -7895.358739933978,
+    331.66552936117944
+   ],
+   "tof": 13547.039590381666
+  },
+  "tolerance": 1e-06,
+  "diff_mode": "norm",
+  "engines": [
+   {
+    "engine": "star_lambert",
+    "lineage": "universal variables (BMW/Curtis)",
+    "version": "0.1",
+    "state": "OK",
+    "value": [
+     -8.354508343990204,
+     4.2010678517865365,
+     -0.15812722326109904
+    ],
+    "elapsed_s": 0.0071
+   },
+   {
+    "engine": "hapsira-izzo",
+    "lineage": "Izzo 2015",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     -8.354508343990204,
+     4.201067851786529,
+     -0.15812722326109946
+    ],
+    "elapsed_s": 9.6732
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_lambert",
+    "b": "hapsira-izzo",
+    "same_lineage": false,
+    "diff": 7.117614180969604e-15,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "Izzo 2015",
+   "universal variables (BMW/Curtis)"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T14:32:12+00:00",
+  "sha256": "93495d08d8f81adce8ca2f897b024082482f0223cc477131be4104f3beccf014"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "Lambert v1",
+  "unit": "km/s",
+  "inputs": {
+   "r1": [
+    8343.700838449025,
+    -2917.1859390919976,
+    -14.009536683386216
+   ],
+   "r2": [
+    32381.278414316206,
+    19318.14071199815,
+    -430.7874815316164
+   ],
+   "tof": 30855.002712826245
+  },
+  "tolerance": 1e-06,
+  "diff_mode": "norm",
+  "engines": [
+   {
+    "engine": "star_lambert",
+    "lineage": "universal variables (BMW/Curtis)",
+    "version": "0.1",
+    "state": "OK",
+    "value": [
+     8.597521689419432,
+     0.694149744002632,
+     -0.059892507765465584
+    ],
+    "elapsed_s": 0.0036
+   },
+   {
+    "engine": "hapsira-izzo",
+    "lineage": "Izzo 2015",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     8.597521689419432,
+     0.6941497440026296,
+     -0.05989250776546557
+    ],
+    "elapsed_s": 9.922
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_lambert",
+    "b": "hapsira-izzo",
+    "same_lineage": false,
+    "diff": 2.33150965428689e-15,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "Izzo 2015",
+   "universal variables (BMW/Curtis)"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T14:32:21+00:00",
+  "sha256": "622b7823d5af6831d2259dc78ed02959f6e39b42ba09206da575b2c624746714"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "Lambert v1",
+  "unit": "km/s",
+  "inputs": {
+   "r1": [
+    -33343.13618460691,
+    5272.136924743192,
+    -234.9433710599409
+   ],
+   "r2": [
+    -10775.76409839112,
+    -3465.726691712681,
+    372.4330410852574
+   ],
+   "tof": 17963.86931567388
+  },
+  "tolerance": 1e-06,
+  "diff_mode": "norm",
+  "engines": [
+   {
+    "engine": "star_lambert",
+    "lineage": "universal variables (BMW/Curtis)",
+    "version": "0.1",
+    "state": "OK",
+    "value": [
+     -1.7001465050125049,
+     -0.36259842295812134,
+     0.04278420126419079
+    ],
+    "elapsed_s": 0.0016
+   },
+   {
+    "engine": "hapsira-izzo",
+    "lineage": "Izzo 2015",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     -1.700146505012506,
+     -0.3625984229581215,
+     0.0427842012641908
+    ],
+    "elapsed_s": 9.9494
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_lambert",
+    "b": "hapsira-izzo",
+    "same_lineage": false,
+    "diff": 1.1227293300708972e-15,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "Izzo 2015",
+   "universal variables (BMW/Curtis)"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T14:32:31+00:00",
+  "sha256": "4f57e342687951e38b58c1f6db82d9da9f8e2342b213667641f83c00733e3060"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "Lambert v1",
+  "unit": "km/s",
+  "inputs": {
+   "r1": [
+    -10487.100546925953,
+    -14348.498252122921,
+    17.575841035590656
+   ],
+   "r2": [
+    -38683.10247695845,
+    15915.538117923306,
+    -378.9958041317343
+   ],
+   "tof": 10383.43827460549
+  },
+  "tolerance": 1e-06,
+  "diff_mode": "norm",
+  "engines": [
+   {
+    "engine": "star_lambert",
+    "lineage": "universal variables (BMW/Curtis)",
+    "version": "0.1",
+    "state": "OK",
+    "value": [
+     5.592153244417274,
+     2.7396575772187353,
+     0.02229280885876271
+    ],
+    "elapsed_s": 0.0074
+   },
+   {
+    "engine": "hapsira-izzo",
+    "lineage": "Izzo 2015",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     5.592153244417274,
+     2.739657577218731,
+     0.022292808858762732
+    ],
+    "elapsed_s": 10.107
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_lambert",
+    "b": "hapsira-izzo",
+    "same_lineage": false,
+    "diff": 4.440940887330385e-15,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "Izzo 2015",
+   "universal variables (BMW/Curtis)"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T14:32:42+00:00",
+  "sha256": "ba1246ef225c8ebbf2b45ccd2aa283a2d60f8889d8e2446ac2c0f03ee6c6b213"
+ }
+]

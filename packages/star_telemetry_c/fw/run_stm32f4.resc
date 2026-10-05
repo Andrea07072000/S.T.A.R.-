@@ -1,0 +1,9 @@
+:name: S.T.A.R. AOS frame check on a simulated STM32F4 Discovery (Cortex-M4)
+:description: loads star_aos_fw.elf, logs USART2 to a file, runs for 2 s of virtual time, then quits
+
+mach create "stm32f4"
+machine LoadPlatformDescription @platforms/boards/stm32f4_discovery-kit.repl
+sysbus LoadELF $elf
+usart2 CreateFileBackend $out true
+emulation RunFor "2"
+quit

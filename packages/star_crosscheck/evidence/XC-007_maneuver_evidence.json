@@ -1,0 +1,420 @@
+[
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "Hohmann Transfer Delta-V",
+  "unit": "km/s",
+  "inputs": {
+   "r1_km": 6678,
+   "r2_km": 42164,
+   "mu": 398600.4418
+  },
+  "tolerance": 1e-05,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_maneuver",
+    "lineage": "S.T.A.R. native vis-viva / Battin 1999",
+    "version": "0.1.0",
+    "state": "OK",
+    "value": [
+     3.892608
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "hapsira",
+    "lineage": "Poliastro / OpenAstronomy state vectors",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     3.892608
+    ],
+    "elapsed_s": 26.3262
+   },
+   {
+    "engine": "sympy",
+    "lineage": "SymPy exact symbolic CAS",
+    "version": "1.14.0",
+    "state": "OK",
+    "value": [
+     3.892608
+    ],
+    "elapsed_s": 0.9842
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_maneuver",
+    "b": "hapsira",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "star_maneuver",
+    "b": "sympy",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "hapsira",
+    "b": "sympy",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "Poliastro / OpenAstronomy state vectors",
+   "S.T.A.R. native vis-viva / Battin 1999",
+   "SymPy exact symbolic CAS"
+  ],
+  "n_failed": 0,
+  "reference": {
+   "source": "Curtis, Orbital Mechanics for Engineering Students (3rd ed. 2014), Ex 6.1",
+   "value": [
+    3.8926
+   ],
+   "max_dev": 8.000000000230045e-06,
+   "ref_tolerance": 0.0005,
+   "within_tol": true,
+   "per_engine": {
+    "star_maneuver": 8.000000000230045e-06,
+    "hapsira": 8.000000000230045e-06,
+    "sympy": 8.000000000230045e-06
+   }
+  },
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T16:33:17+00:00",
+  "sha256": "12856f69aca8748c417df629d7cb62b2da2e11036d1b99b19a2f8cfc535d22a9"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "Hohmann Transfer Delta-V",
+  "unit": "km/s",
+  "inputs": {
+   "r1_km": 6678,
+   "r2_km": 26560,
+   "mu": 398600.4418
+  },
+  "tolerance": 1e-05,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_maneuver",
+    "lineage": "S.T.A.R. native vis-viva / Battin 1999",
+    "version": "0.1.0",
+    "state": "OK",
+    "value": [
+     3.459328
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "hapsira",
+    "lineage": "Poliastro / OpenAstronomy state vectors",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     3.459328
+    ],
+    "elapsed_s": 16.614
+   },
+   {
+    "engine": "sympy",
+    "lineage": "SymPy exact symbolic CAS",
+    "version": "1.14.0",
+    "state": "OK",
+    "value": [
+     3.459328
+    ],
+    "elapsed_s": 1.114
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_maneuver",
+    "b": "hapsira",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "star_maneuver",
+    "b": "sympy",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "hapsira",
+    "b": "sympy",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "Poliastro / OpenAstronomy state vectors",
+   "S.T.A.R. native vis-viva / Battin 1999",
+   "SymPy exact symbolic CAS"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T16:33:35+00:00",
+  "sha256": "0f280c116cf0e22c8dc9c7c754d11a0959cf563d081b9aaaa79d0e091b41a6dd"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "Hohmann Transfer Delta-V",
+  "unit": "km/s",
+  "inputs": {
+   "r1_km": 6578,
+   "r2_km": 7178,
+   "mu": 398600.4418
+  },
+  "tolerance": 1e-05,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_maneuver",
+    "lineage": "S.T.A.R. native vis-viva / Battin 1999",
+    "version": "0.1.0",
+    "state": "OK",
+    "value": [
+     0.332282
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "hapsira",
+    "lineage": "Poliastro / OpenAstronomy state vectors",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     0.332282
+    ],
+    "elapsed_s": 19.4706
+   },
+   {
+    "engine": "sympy",
+    "lineage": "SymPy exact symbolic CAS",
+    "version": "1.14.0",
+    "state": "OK",
+    "value": [
+     0.332282
+    ],
+    "elapsed_s": 1.6945
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_maneuver",
+    "b": "hapsira",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "star_maneuver",
+    "b": "sympy",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "hapsira",
+    "b": "sympy",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "Poliastro / OpenAstronomy state vectors",
+   "S.T.A.R. native vis-viva / Battin 1999",
+   "SymPy exact symbolic CAS"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T16:33:56+00:00",
+  "sha256": "b9ef4cb8994f2313cf04f3655be7eecc62c0c73bc079211f0ef7fb19c766eb02"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "Hohmann Transfer Delta-V",
+  "unit": "km/s",
+  "inputs": {
+   "r1_km": 6678,
+   "r2_km": 384400,
+   "mu": 398600.4418
+  },
+  "tolerance": 1e-05,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_maneuver",
+    "lineage": "S.T.A.R. native vis-viva / Battin 1999",
+    "version": "0.1.0",
+    "state": "OK",
+    "value": [
+     3.936579
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "hapsira",
+    "lineage": "Poliastro / OpenAstronomy state vectors",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     3.936579
+    ],
+    "elapsed_s": 22.5554
+   },
+   {
+    "engine": "sympy",
+    "lineage": "SymPy exact symbolic CAS",
+    "version": "1.14.0",
+    "state": "OK",
+    "value": [
+     3.936579
+    ],
+    "elapsed_s": 1.2986
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_maneuver",
+    "b": "hapsira",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "star_maneuver",
+    "b": "sympy",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "hapsira",
+    "b": "sympy",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "Poliastro / OpenAstronomy state vectors",
+   "S.T.A.R. native vis-viva / Battin 1999",
+   "SymPy exact symbolic CAS"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T16:34:20+00:00",
+  "sha256": "72bd96f50690e23e11af2ae0bf40838c9097ff64107bb861c3aafa81efc68a48"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "Hohmann Transfer Delta-V",
+  "unit": "km/s",
+  "inputs": {
+   "r1_km": 7000,
+   "r2_km": 40000,
+   "mu": 398600.4418
+  },
+  "tolerance": 1e-05,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_maneuver",
+    "lineage": "S.T.A.R. native vis-viva / Battin 1999",
+    "version": "0.1.0",
+    "state": "OK",
+    "value": [
+     3.732816
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "hapsira",
+    "lineage": "Poliastro / OpenAstronomy state vectors",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     3.732816
+    ],
+    "elapsed_s": 20.8555
+   },
+   {
+    "engine": "sympy",
+    "lineage": "SymPy exact symbolic CAS",
+    "version": "1.14.0",
+    "state": "OK",
+    "value": [
+     3.732816
+    ],
+    "elapsed_s": 1.2744
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_maneuver",
+    "b": "hapsira",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "star_maneuver",
+    "b": "sympy",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   },
+   {
+    "a": "hapsira",
+    "b": "sympy",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "Poliastro / OpenAstronomy state vectors",
+   "S.T.A.R. native vis-viva / Battin 1999",
+   "SymPy exact symbolic CAS"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T16:34:42+00:00",
+  "sha256": "c61822a2cbb8fd22fe98b3fe8f22d9ee4057f7ab0168b7fcc276327fac8dc1d6"
+ }
+]

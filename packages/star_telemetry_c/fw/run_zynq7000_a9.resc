@@ -1,0 +1,7 @@
+:name: S.T.A.R. AOS frame check on a simulated zynq7000_a9
+mach create "zynq7000_a9"
+machine LoadPlatformDescription @platforms/cpus/zynq-7000.repl
+sysbus LoadELF $elf
+uart0 CreateFileBackend $out true
+emulation RunFor "2"
+quit

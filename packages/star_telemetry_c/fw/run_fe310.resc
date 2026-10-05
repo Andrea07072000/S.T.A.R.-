@@ -1,0 +1,7 @@
+:name: S.T.A.R. AOS frame check on a simulated fe310
+mach create "fe310"
+machine LoadPlatformDescription @platforms/cpus/sifive-fe310.repl
+sysbus LoadELF $elf
+uart0 CreateFileBackend $out true
+emulation RunFor "2"
+quit

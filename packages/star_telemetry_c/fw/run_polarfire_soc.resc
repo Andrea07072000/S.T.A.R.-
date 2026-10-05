@@ -1,0 +1,7 @@
+:name: S.T.A.R. AOS frame check on a simulated polarfire_soc
+mach create "polarfire_soc"
+machine LoadPlatformDescription @platforms/boards/mpfs-icicle-kit.repl
+sysbus LoadELF $elf
+mmuart0 CreateFileBackend $out true
+emulation RunFor "2"
+quit

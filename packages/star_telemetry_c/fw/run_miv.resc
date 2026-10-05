@@ -1,0 +1,7 @@
+:name: S.T.A.R. AOS frame check on a simulated miv
+mach create "miv"
+machine LoadPlatformDescription @platforms/boards/miv-board.repl
+sysbus LoadELF $elf
+uart CreateFileBackend $out true
+emulation RunFor "2"
+quit

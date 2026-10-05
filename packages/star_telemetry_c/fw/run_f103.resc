@@ -1,0 +1,7 @@
+:name: S.T.A.R. AOS check on simulated STM32F103 (Cortex-M3)
+mach create "f103"
+machine LoadPlatformDescription @platforms/cpus/stm32f103.repl
+sysbus LoadELF $elf
+usart2 CreateFileBackend $out true
+emulation RunFor "2"
+quit

@@ -1,0 +1,1209 @@
+[
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "Eccentric anomaly E",
+  "unit": "deg",
+  "inputs": {
+   "M_deg": 235.4,
+   "e": 0.4
+  },
+  "tolerance": 1e-08,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_elements",
+    "lineage": "S.T.A.R. Newton (Vallado Alg. 2 start)",
+    "version": "0.2.0",
+    "state": "OK",
+    "value": [
+     220.512074768
+    ],
+    "elapsed_s": 0.0001
+   },
+   {
+    "engine": "hapsira",
+    "lineage": "poliastro/hapsira angles",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     220.512074768
+    ],
+    "elapsed_s": 2.7401
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_elements",
+    "b": "hapsira",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "S.T.A.R. Newton (Vallado Alg. 2 start)",
+   "poliastro/hapsira angles"
+  ],
+  "n_failed": 0,
+  "reference": {
+   "source": "Vallado, Fundamentals of Astrodynamics, Example 2-1 (E only)",
+   "value": [
+    220.512074767522
+   ],
+   "max_dev": 4.779963092005346e-10,
+   "ref_tolerance": 1e-08,
+   "within_tol": true,
+   "per_engine": {
+    "star_elements": 4.779963092005346e-10,
+    "hapsira": 4.779963092005346e-10
+   }
+  },
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T21:12:34+00:00",
+  "sha256": "739422d60b456b5c1de0f8153497de316282238afe6b64d1458924fdf4c04525"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "[E, nu]",
+  "unit": "deg",
+  "inputs": {
+   "M_deg": 5.0,
+   "e": 0.0
+  },
+  "tolerance": 1e-08,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_elements",
+    "lineage": "S.T.A.R. Newton (Vallado Alg. 2 start)",
+    "version": "0.2.0",
+    "state": "OK",
+    "value": [
+     5.0,
+     5.0
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "hapsira",
+    "lineage": "poliastro/hapsira angles",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     5.0,
+     5.0
+    ],
+    "elapsed_s": 2.1401
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_elements",
+    "b": "hapsira",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "S.T.A.R. Newton (Vallado Alg. 2 start)",
+   "poliastro/hapsira angles"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T21:12:36+00:00",
+  "sha256": "adf791a7e264bf257ccc5b3c4ad8498fcc5a728a571b9de16b24e77d5b40fb12"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "[E, nu]",
+  "unit": "deg",
+  "inputs": {
+   "M_deg": 90.0,
+   "e": 0.0
+  },
+  "tolerance": 1e-08,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_elements",
+    "lineage": "S.T.A.R. Newton (Vallado Alg. 2 start)",
+    "version": "0.2.0",
+    "state": "OK",
+    "value": [
+     90.0,
+     90.0
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "hapsira",
+    "lineage": "poliastro/hapsira angles",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     90.0,
+     90.0
+    ],
+    "elapsed_s": 2.1743
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_elements",
+    "b": "hapsira",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "S.T.A.R. Newton (Vallado Alg. 2 start)",
+   "poliastro/hapsira angles"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T21:12:38+00:00",
+  "sha256": "b00eb1c0d7b57cc601c0a0911a817f2b09f68c44f12ee63c0e1637be229c8e92"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "[E, nu]",
+  "unit": "deg",
+  "inputs": {
+   "M_deg": 179.0,
+   "e": 0.0
+  },
+  "tolerance": 1e-08,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_elements",
+    "lineage": "S.T.A.R. Newton (Vallado Alg. 2 start)",
+    "version": "0.2.0",
+    "state": "OK",
+    "value": [
+     179.0,
+     179.0
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "hapsira",
+    "lineage": "poliastro/hapsira angles",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     179.0,
+     179.0
+    ],
+    "elapsed_s": 2.1315
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_elements",
+    "b": "hapsira",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "S.T.A.R. Newton (Vallado Alg. 2 start)",
+   "poliastro/hapsira angles"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T21:12:40+00:00",
+  "sha256": "57e950e1e726d49e78e61a6c88e355234a38ca5257311c0fb8ebb1a22cd5d40c"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "[E, nu]",
+  "unit": "deg",
+  "inputs": {
+   "M_deg": 300.0,
+   "e": 0.0
+  },
+  "tolerance": 1e-08,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_elements",
+    "lineage": "S.T.A.R. Newton (Vallado Alg. 2 start)",
+    "version": "0.2.0",
+    "state": "OK",
+    "value": [
+     300.0,
+     300.0
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "hapsira",
+    "lineage": "poliastro/hapsira angles",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     300.0,
+     300.0
+    ],
+    "elapsed_s": 2.2208
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_elements",
+    "b": "hapsira",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "S.T.A.R. Newton (Vallado Alg. 2 start)",
+   "poliastro/hapsira angles"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T21:12:42+00:00",
+  "sha256": "952da1f6bbb74c8dc84d0bd512c9883583faa173751bf141ade778c789dc47c2"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "[E, nu]",
+  "unit": "deg",
+  "inputs": {
+   "M_deg": 5.0,
+   "e": 0.1
+  },
+  "tolerance": 1e-08,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_elements",
+    "lineage": "S.T.A.R. Newton (Vallado Alg. 2 start)",
+    "version": "0.2.0",
+    "state": "OK",
+    "value": [
+     5.554589254,
+     6.139761521
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "hapsira",
+    "lineage": "poliastro/hapsira angles",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     5.554589254,
+     6.139761521
+    ],
+    "elapsed_s": 2.1172
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_elements",
+    "b": "hapsira",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "S.T.A.R. Newton (Vallado Alg. 2 start)",
+   "poliastro/hapsira angles"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T21:12:44+00:00",
+  "sha256": "6d0735787d0399dfa2e6219d8b0670e3c596aaf3acef4bd707b63c72638766fd"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "[E, nu]",
+  "unit": "deg",
+  "inputs": {
+   "M_deg": 90.0,
+   "e": 0.1
+  },
+  "tolerance": 1e-08,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_elements",
+    "lineage": "S.T.A.R. Newton (Vallado Alg. 2 start)",
+    "version": "0.2.0",
+    "state": "OK",
+    "value": [
+     95.701236175,
+     101.383814606
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "hapsira",
+    "lineage": "poliastro/hapsira angles",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     95.701236175,
+     101.383814606
+    ],
+    "elapsed_s": 2.1363
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_elements",
+    "b": "hapsira",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "S.T.A.R. Newton (Vallado Alg. 2 start)",
+   "poliastro/hapsira angles"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T21:12:46+00:00",
+  "sha256": "45bcc64419d0cc3dee1d6bab92bc62d5e638ac735062910f54992e9bcf706525"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "[E, nu]",
+  "unit": "deg",
+  "inputs": {
+   "M_deg": 179.0,
+   "e": 0.1
+  },
+  "tolerance": 1e-08,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_elements",
+    "lineage": "S.T.A.R. Newton (Vallado Alg. 2 start)",
+    "version": "0.2.0",
+    "state": "OK",
+    "value": [
+     179.090905623,
+     179.17769006
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "hapsira",
+    "lineage": "poliastro/hapsira angles",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     179.090905623,
+     179.17769006
+    ],
+    "elapsed_s": 2.1224
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_elements",
+    "b": "hapsira",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "S.T.A.R. Newton (Vallado Alg. 2 start)",
+   "poliastro/hapsira angles"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T21:12:49+00:00",
+  "sha256": "ff3bc931c9b2ff81a6dafd401d0ccd87ee6c20b52612d8821c400df3accb494d"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "[E, nu]",
+  "unit": "deg",
+  "inputs": {
+   "M_deg": 300.0,
+   "e": 0.1
+  },
+  "tolerance": 1e-08,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_elements",
+    "lineage": "S.T.A.R. Newton (Vallado Alg. 2 start)",
+    "version": "0.2.0",
+    "state": "OK",
+    "value": [
+     294.798766433,
+     289.47631362
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "hapsira",
+    "lineage": "poliastro/hapsira angles",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     294.798766433,
+     289.47631362
+    ],
+    "elapsed_s": 2.2388
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_elements",
+    "b": "hapsira",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "S.T.A.R. Newton (Vallado Alg. 2 start)",
+   "poliastro/hapsira angles"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T21:12:51+00:00",
+  "sha256": "a7a571cf77dc95f0498b620a380dfc9248526c3564ad7ce76fdd53d416584144"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "[E, nu]",
+  "unit": "deg",
+  "inputs": {
+   "M_deg": 5.0,
+   "e": 0.5
+  },
+  "tolerance": 1e-08,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_elements",
+    "lineage": "S.T.A.R. Newton (Vallado Alg. 2 start)",
+    "version": "0.2.0",
+    "state": "OK",
+    "value": [
+     9.950062589,
+     17.148292441
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "hapsira",
+    "lineage": "poliastro/hapsira angles",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     9.950062589,
+     17.148292441
+    ],
+    "elapsed_s": 2.1397
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_elements",
+    "b": "hapsira",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "S.T.A.R. Newton (Vallado Alg. 2 start)",
+   "poliastro/hapsira angles"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T21:12:53+00:00",
+  "sha256": "caa82e6716a68db32012f95eec003db55682112b0d3dda6b675f16d9616bc2eb"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "[E, nu]",
+  "unit": "deg",
+  "inputs": {
+   "M_deg": 90.0,
+   "e": 0.5
+  },
+  "tolerance": 1e-08,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_elements",
+    "lineage": "S.T.A.R. Newton (Vallado Alg. 2 start)",
+    "version": "0.2.0",
+    "state": "OK",
+    "value": [
+     115.793620933,
+     140.177612629
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "hapsira",
+    "lineage": "poliastro/hapsira angles",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     115.793620933,
+     140.177612629
+    ],
+    "elapsed_s": 2.1782
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_elements",
+    "b": "hapsira",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "S.T.A.R. Newton (Vallado Alg. 2 start)",
+   "poliastro/hapsira angles"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T21:12:55+00:00",
+  "sha256": "a6f8a93dac42c8ee051c289858970dce26efe63bc73aa09e6aa5643b6728a40b"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "[E, nu]",
+  "unit": "deg",
+  "inputs": {
+   "M_deg": 179.0,
+   "e": 0.5
+  },
+  "tolerance": 1e-08,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_elements",
+    "lineage": "S.T.A.R. Newton (Vallado Alg. 2 start)",
+    "version": "0.2.0",
+    "state": "OK",
+    "value": [
+     179.333328319,
+     179.61509403
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "hapsira",
+    "lineage": "poliastro/hapsira angles",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     179.333328319,
+     179.61509403
+    ],
+    "elapsed_s": 2.0881
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_elements",
+    "b": "hapsira",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "S.T.A.R. Newton (Vallado Alg. 2 start)",
+   "poliastro/hapsira angles"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T21:12:57+00:00",
+  "sha256": "58c1f37b2e5e55c2ebe1341d1ed488a4711432730148cab7d39614a71cc6f64f"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "[E, nu]",
+  "unit": "deg",
+  "inputs": {
+   "M_deg": 300.0,
+   "e": 0.5
+  },
+  "tolerance": 1e-08,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_elements",
+    "lineage": "S.T.A.R. Newton (Vallado Alg. 2 start)",
+    "version": "0.2.0",
+    "state": "OK",
+    "value": [
+     271.360182432,
+     241.184999073
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "hapsira",
+    "lineage": "poliastro/hapsira angles",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     271.360182432,
+     241.184999073
+    ],
+    "elapsed_s": 2.1025
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_elements",
+    "b": "hapsira",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "S.T.A.R. Newton (Vallado Alg. 2 start)",
+   "poliastro/hapsira angles"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T21:12:59+00:00",
+  "sha256": "c4ea867a1cfddf7a2d0642915620ea2883b185e197e75c3657baf7678bc75983"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "[E, nu]",
+  "unit": "deg",
+  "inputs": {
+   "M_deg": 5.0,
+   "e": 0.9
+  },
+  "tolerance": 1e-08,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_elements",
+    "lineage": "S.T.A.R. Newton (Vallado Alg. 2 start)",
+    "version": "0.2.0",
+    "state": "OK",
+    "value": [
+     33.344446959,
+     105.093494839
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "hapsira",
+    "lineage": "poliastro/hapsira angles",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     33.344446959,
+     105.093494839
+    ],
+    "elapsed_s": 2.1496
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_elements",
+    "b": "hapsira",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "S.T.A.R. Newton (Vallado Alg. 2 start)",
+   "poliastro/hapsira angles"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T21:13:01+00:00",
+  "sha256": "00c95cbc1f448696fd8996e2e9c234045ddbea5898c13435635c5dd84d94db99"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "[E, nu]",
+  "unit": "deg",
+  "inputs": {
+   "M_deg": 90.0,
+   "e": 0.9
+  },
+  "tolerance": 1e-08,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_elements",
+    "lineage": "S.T.A.R. Newton (Vallado Alg. 2 start)",
+    "version": "0.2.0",
+    "state": "OK",
+    "value": [
+     129.68413288,
+     167.700305517
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "hapsira",
+    "lineage": "poliastro/hapsira angles",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     129.68413288,
+     167.700305517
+    ],
+    "elapsed_s": 2.1819
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_elements",
+    "b": "hapsira",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "S.T.A.R. Newton (Vallado Alg. 2 start)",
+   "poliastro/hapsira angles"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T21:13:04+00:00",
+  "sha256": "5eff2e9c813702bba99b9e3a7e8b40006638cead1b609705ac8bc03f761a55eb"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "[E, nu]",
+  "unit": "deg",
+  "inputs": {
+   "M_deg": 179.0,
+   "e": 0.9
+  },
+  "tolerance": 1e-08,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_elements",
+    "lineage": "S.T.A.R. Newton (Vallado Alg. 2 start)",
+    "version": "0.2.0",
+    "state": "OK",
+    "value": [
+     179.473680704,
+     179.879253268
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "hapsira",
+    "lineage": "poliastro/hapsira angles",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     179.473680704,
+     179.879253268
+    ],
+    "elapsed_s": 2.1251
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_elements",
+    "b": "hapsira",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "S.T.A.R. Newton (Vallado Alg. 2 start)",
+   "poliastro/hapsira angles"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T21:13:06+00:00",
+  "sha256": "58207535be462605436235580ea8f4deabe8edb85860557cea11d0eb03a93113"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "[E, nu]",
+  "unit": "deg",
+  "inputs": {
+   "M_deg": 300.0,
+   "e": 0.9
+  },
+  "tolerance": 1e-08,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_elements",
+    "lineage": "S.T.A.R. Newton (Vallado Alg. 2 start)",
+    "version": "0.2.0",
+    "state": "OK",
+    "value": [
+     251.188290637,
+     198.650639702
+    ],
+    "elapsed_s": 0.0001
+   },
+   {
+    "engine": "hapsira",
+    "lineage": "poliastro/hapsira angles",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     251.188290637,
+     198.650639702
+    ],
+    "elapsed_s": 2.0941
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_elements",
+    "b": "hapsira",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "S.T.A.R. Newton (Vallado Alg. 2 start)",
+   "poliastro/hapsira angles"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T21:13:08+00:00",
+  "sha256": "955f258503e30a2fa070587b229d1b7ff1864094a30dd55a1e692a6abc753911"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "[E, nu]",
+  "unit": "deg",
+  "inputs": {
+   "M_deg": 5.0,
+   "e": 0.99
+  },
+  "tolerance": 1e-08,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_elements",
+    "lineage": "S.T.A.R. Newton (Vallado Alg. 2 start)",
+    "version": "0.2.0",
+    "state": "OK",
+    "value": [
+     45.361022937,
+     160.745615961
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "hapsira",
+    "lineage": "poliastro/hapsira angles",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     45.361022937,
+     160.745615961
+    ],
+    "elapsed_s": 2.6829
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_elements",
+    "b": "hapsira",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "S.T.A.R. Newton (Vallado Alg. 2 start)",
+   "poliastro/hapsira angles"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T21:13:11+00:00",
+  "sha256": "437bdab19f4f9fabeb8ed7d46acd74e10928a7f1f95038d477fa16946cb36aca"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "[E, nu]",
+  "unit": "deg",
+  "inputs": {
+   "M_deg": 90.0,
+   "e": 0.99
+  },
+  "tolerance": 1e-08,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_elements",
+    "lineage": "S.T.A.R. Newton (Vallado Alg. 2 start)",
+    "version": "0.2.0",
+    "state": "OK",
+    "value": [
+     132.092163929,
+     176.392345155
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "hapsira",
+    "lineage": "poliastro/hapsira angles",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     132.092163929,
+     176.392345155
+    ],
+    "elapsed_s": 2.4398
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_elements",
+    "b": "hapsira",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "S.T.A.R. Newton (Vallado Alg. 2 start)",
+   "poliastro/hapsira angles"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T21:13:13+00:00",
+  "sha256": "0f660ea242fde645058b668e6d6fb339e7f3297f9ce30a56f4886b54ef0b86d3"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "[E, nu]",
+  "unit": "deg",
+  "inputs": {
+   "M_deg": 179.0,
+   "e": 0.99
+  },
+  "tolerance": 1e-08,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_elements",
+    "lineage": "S.T.A.R. Newton (Vallado Alg. 2 start)",
+    "version": "0.2.0",
+    "state": "OK",
+    "value": [
+     179.497484232,
+     179.964377374
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "hapsira",
+    "lineage": "poliastro/hapsira angles",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     179.497484232,
+     179.964377374
+    ],
+    "elapsed_s": 2.8873
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_elements",
+    "b": "hapsira",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "S.T.A.R. Newton (Vallado Alg. 2 start)",
+   "poliastro/hapsira angles"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T21:13:16+00:00",
+  "sha256": "54e9e1108a5e86abf58af9a802a33a50cecdb6bf693c8ec31d0cc0ef3084e8a1"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "[E, nu]",
+  "unit": "deg",
+  "inputs": {
+   "M_deg": 300.0,
+   "e": 0.99
+  },
+  "tolerance": 1e-08,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_elements",
+    "lineage": "S.T.A.R. Newton (Vallado Alg. 2 start)",
+    "version": "0.2.0",
+    "state": "OK",
+    "value": [
+     247.568885967,
+     185.430732232
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "hapsira",
+    "lineage": "poliastro/hapsira angles",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     247.568885967,
+     185.430732232
+    ],
+    "elapsed_s": 2.1555
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_elements",
+    "b": "hapsira",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "S.T.A.R. Newton (Vallado Alg. 2 start)",
+   "poliastro/hapsira angles"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T21:13:18+00:00",
+  "sha256": "dd5a94e927a77c2d3e671c80df085e411914f1ce18b31925823c06a93ea578ec"
+ }
+]

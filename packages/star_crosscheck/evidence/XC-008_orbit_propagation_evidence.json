@@ -1,0 +1,350 @@
+[
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "Cowell J2 Orbit Position Vector",
+  "unit": "m",
+  "inputs": {
+   "r_mag_m": 7000000.0,
+   "inc_deg": 45.0,
+   "duration_s": 5828.5165
+  },
+  "tolerance": 0.05,
+  "diff_mode": "norm",
+  "engines": [
+   {
+    "engine": "star_orbit",
+    "lineage": "S.T.A.R. Cowell fixed-step RK4 numerical integrator",
+    "version": "0.2.0",
+    "state": "OK",
+    "value": [
+     6999543.6672,
+     31438.4197,
+     73430.7778
+    ],
+    "elapsed_s": 0.0138
+   },
+   {
+    "engine": "hapsira_cowell_j2",
+    "lineage": "poliastro/hapsira force model (J2_perturbation) and Cowell propagator",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     6999543.6675,
+     31438.4094,
+     73430.7674
+    ],
+    "elapsed_s": 9.341
+   },
+   {
+    "engine": "scipy_dop853",
+    "lineage": "SciPy Dormand-Prince 8(5,3) adaptive numerical integrator",
+    "version": "1.18.1",
+    "state": "OK",
+    "value": [
+     6999543.6675,
+     31438.4093,
+     73430.7674
+    ],
+    "elapsed_s": 1.4637
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_orbit",
+    "b": "hapsira_cowell_j2",
+    "same_lineage": false,
+    "diff": 0.014640355193687967,
+    "within_tol": true
+   },
+   {
+    "a": "star_orbit",
+    "b": "scipy_dop853",
+    "same_lineage": false,
+    "diff": 0.014710880334639744,
+    "within_tol": true
+   },
+   {
+    "a": "hapsira_cowell_j2",
+    "b": "scipy_dop853",
+    "same_lineage": false,
+    "diff": 0.00010000000111176632,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "S.T.A.R. Cowell fixed-step RK4 numerical integrator",
+   "SciPy Dormand-Prince 8(5,3) adaptive numerical integrator",
+   "poliastro/hapsira force model (J2_perturbation) and Cowell propagator"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T20:32:49+00:00",
+  "sha256": "21ada19b89554298623da2f8c5e950e539bd020b3532de484283f4a9cd284bb8"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "Cowell J2 Orbit Position Vector",
+  "unit": "m",
+  "inputs": {
+   "r_mag_m": 7000000.0,
+   "inc_deg": 90.0,
+   "duration_s": 5828.5165
+  },
+  "tolerance": 0.05,
+  "diff_mode": "norm",
+  "engines": [
+   {
+    "engine": "star_orbit",
+    "lineage": "S.T.A.R. Cowell fixed-step RK4 numerical integrator",
+    "version": "0.2.0",
+    "state": "OK",
+    "value": [
+     6999937.6934,
+     -0.0,
+     29494.5618
+    ],
+    "elapsed_s": 0.0133
+   },
+   {
+    "engine": "hapsira_cowell_j2",
+    "lineage": "poliastro/hapsira force model (J2_perturbation) and Cowell propagator",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     6999937.6936,
+     -0.0,
+     29494.5472
+    ],
+    "elapsed_s": 8.2925
+   },
+   {
+    "engine": "scipy_dop853",
+    "lineage": "SciPy Dormand-Prince 8(5,3) adaptive numerical integrator",
+    "version": "1.18.1",
+    "state": "OK",
+    "value": [
+     6999937.6936,
+     -0.0,
+     29494.5471
+    ],
+    "elapsed_s": 1.4276
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_orbit",
+    "b": "hapsira_cowell_j2",
+    "same_lineage": false,
+    "diff": 0.01460136979271053,
+    "within_tol": true
+   },
+   {
+    "a": "star_orbit",
+    "b": "scipy_dop853",
+    "same_lineage": false,
+    "diff": 0.01470136047636025,
+    "within_tol": true
+   },
+   {
+    "a": "hapsira_cowell_j2",
+    "b": "scipy_dop853",
+    "same_lineage": false,
+    "diff": 0.00010000000111176632,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "S.T.A.R. Cowell fixed-step RK4 numerical integrator",
+   "SciPy Dormand-Prince 8(5,3) adaptive numerical integrator",
+   "poliastro/hapsira force model (J2_perturbation) and Cowell propagator"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T20:32:59+00:00",
+  "sha256": "2c355721c912742b94c30f08a506a7efe03fb7957a2726df96dd5ff0ede19588"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "Cowell J2 Orbit Position Vector",
+  "unit": "m",
+  "inputs": {
+   "r_mag_m": 7000000.0,
+   "inc_deg": 0.0,
+   "duration_s": 5828.5165
+  },
+  "tolerance": 0.05,
+  "diff_mode": "norm",
+  "engines": [
+   {
+    "engine": "star_orbit",
+    "lineage": "S.T.A.R. Cowell fixed-step RK4 numerical integrator",
+    "version": "0.2.0",
+    "state": "OK",
+    "value": [
+     6998993.016,
+     118709.8639,
+     0.0
+    ],
+    "elapsed_s": 0.0108
+   },
+   {
+    "engine": "hapsira_cowell_j2",
+    "lineage": "poliastro/hapsira force model (J2_perturbation) and Cowell propagator",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     6998993.0164,
+     118709.8492,
+     0.0
+    ],
+    "elapsed_s": 9.8183
+   },
+   {
+    "engine": "scipy_dop853",
+    "lineage": "SciPy Dormand-Prince 8(5,3) adaptive numerical integrator",
+    "version": "1.18.1",
+    "state": "OK",
+    "value": [
+     6998993.0164,
+     118709.849,
+     0.0
+    ],
+    "elapsed_s": 1.4365
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_orbit",
+    "b": "hapsira_cowell_j2",
+    "same_lineage": false,
+    "diff": 0.014705441176423422,
+    "within_tol": true
+   },
+   {
+    "a": "star_orbit",
+    "b": "scipy_dop853",
+    "same_lineage": false,
+    "diff": 0.014905368161926611,
+    "within_tol": true
+   },
+   {
+    "a": "hapsira_cowell_j2",
+    "b": "scipy_dop853",
+    "same_lineage": false,
+    "diff": 0.00019999999494757503,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "S.T.A.R. Cowell fixed-step RK4 numerical integrator",
+   "SciPy Dormand-Prince 8(5,3) adaptive numerical integrator",
+   "poliastro/hapsira force model (J2_perturbation) and Cowell propagator"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T20:33:10+00:00",
+  "sha256": "92c75cf15d08651fb5d37eaa0ccc86b3138bf68a0957b30c0afc6501ecfeabfd"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "Cowell J2 Orbit Position Vector",
+  "unit": "m",
+  "inputs": {
+   "r_mag_m": 10000000.0,
+   "inc_deg": 28.5,
+   "duration_s": 10000.0
+  },
+  "tolerance": 0.05,
+  "diff_mode": "norm",
+  "engines": [
+   {
+    "engine": "star_orbit",
+    "lineage": "S.T.A.R. Cowell fixed-step RK4 numerical integrator",
+    "version": "0.2.0",
+    "state": "OK",
+    "value": [
+     9993068.5849,
+     318395.8745,
+     192669.4244
+    ],
+    "elapsed_s": 0.0189
+   },
+   {
+    "engine": "hapsira_cowell_j2",
+    "lineage": "poliastro/hapsira force model (J2_perturbation) and Cowell propagator",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     9993068.585,
+     318395.8724,
+     192669.4232
+    ],
+    "elapsed_s": 9.1949
+   },
+   {
+    "engine": "scipy_dop853",
+    "lineage": "SciPy Dormand-Prince 8(5,3) adaptive numerical integrator",
+    "version": "1.18.1",
+    "state": "OK",
+    "value": [
+     9993068.585,
+     318395.8723,
+     192669.4231
+    ],
+    "elapsed_s": 1.5403
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_orbit",
+    "b": "hapsira_cowell_j2",
+    "same_lineage": false,
+    "diff": 0.00242074374224838,
+    "within_tol": true
+   },
+   {
+    "a": "star_orbit",
+    "b": "scipy_dop853",
+    "same_lineage": false,
+    "diff": 0.002557342413451251,
+    "within_tol": true
+   },
+   {
+    "a": "hapsira_cowell_j2",
+    "b": "scipy_dop853",
+    "same_lineage": false,
+    "diff": 0.0001414213423749491,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "S.T.A.R. Cowell fixed-step RK4 numerical integrator",
+   "SciPy Dormand-Prince 8(5,3) adaptive numerical integrator",
+   "poliastro/hapsira force model (J2_perturbation) and Cowell propagator"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T20:33:21+00:00",
+  "sha256": "b6d748d770688718294b82a82ac9150d7070f3a0c13bcc0a10c2dc1c4eddd796"
+ }
+]

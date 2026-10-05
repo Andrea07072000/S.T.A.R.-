@@ -1,0 +1,8 @@
+:name: S.T.A.R. AOS frame check on a simulated gr712rc
+mach create "gr712rc"
+machine LoadPlatformDescription @platforms/cpus/gr712rc.repl
+sysbus LoadELF $elf
+cpu SetRegister 14 0x48000000
+uart0 CreateFileBackend $out true
+emulation RunFor "2"
+quit

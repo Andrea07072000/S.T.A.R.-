@@ -1,0 +1,373 @@
+[
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "Classical elements [e, i, RAAN, argp, nu]",
+  "unit": "deg (e dimensionless)",
+  "inputs": {
+   "r": [
+    -6045.0,
+    -3490.0,
+    2500.0
+   ],
+   "v": [
+    -3.457,
+    6.618,
+    2.533
+   ]
+  },
+  "tolerance": 1e-06,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_elements",
+    "lineage": "S.T.A.R. Curtis Algorithm 4.2",
+    "version": "0.1.0",
+    "state": "OK",
+    "value": [
+     0.171211182,
+     153.2492285,
+     255.2792853,
+     20.06814,
+     28.445805
+    ],
+    "elapsed_s": 0.0001
+   },
+   {
+    "engine": "hapsira",
+    "lineage": "poliastro/hapsira rv2coe",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     0.171211182,
+     153.2492285,
+     255.2792853,
+     20.06814,
+     28.445805
+    ],
+    "elapsed_s": 8.047
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_elements",
+    "b": "hapsira",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "S.T.A.R. Curtis Algorithm 4.2",
+   "poliastro/hapsira rv2coe"
+  ],
+  "n_failed": 0,
+  "reference": {
+   "source": "Curtis, Orbital Mechanics for Engineering Students, Example 4.3",
+   "value": [
+    0.1712,
+    153.2,
+    255.3,
+    20.07,
+    28.45
+   ],
+   "max_dev": 0.04922849999999812,
+   "ref_tolerance": 0.05,
+   "within_tol": true,
+   "per_engine": {
+    "star_elements": 0.04922849999999812,
+    "hapsira": 0.04922849999999812
+   }
+  },
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T20:54:18+00:00",
+  "sha256": "b704a6ad2402a3590ae168ca65a1df342992996b06d7534d218f38e12f5fdbfb"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "Classical elements [e, i, RAAN, argp, nu]",
+  "unit": "deg (e dimensionless)",
+  "inputs": {
+   "r": [
+    7000.0,
+    0.0,
+    0.0
+   ],
+   "v": [
+    0.0,
+    6.5,
+    3.8
+   ]
+  },
+  "tolerance": 1e-06,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_elements",
+    "lineage": "S.T.A.R. Curtis Algorithm 4.2",
+    "version": "0.1.0",
+    "state": "OK",
+    "value": [
+     0.004441645,
+     30.3112132,
+     0.0,
+     180.0,
+     180.0
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "hapsira",
+    "lineage": "poliastro/hapsira rv2coe",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     0.004441645,
+     30.3112132,
+     0.0,
+     180.0,
+     180.0
+    ],
+    "elapsed_s": 8.3361
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_elements",
+    "b": "hapsira",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "S.T.A.R. Curtis Algorithm 4.2",
+   "poliastro/hapsira rv2coe"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T20:54:26+00:00",
+  "sha256": "9822beedfcca88066ea933b724f7db4da90eedf20268bd5260bb52dba36ddaa2"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "Classical elements [e, i, RAAN, argp, nu]",
+  "unit": "deg (e dimensionless)",
+  "inputs": {
+   "r": [
+    -2000.0,
+    6800.0,
+    1200.0
+   ],
+   "v": [
+    -7.1,
+    -1.9,
+    2.2
+   ]
+  },
+  "tolerance": 1e-06,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_elements",
+    "lineage": "S.T.A.R. Curtis Algorithm 4.2",
+    "version": "0.1.0",
+    "state": "OK",
+    "value": [
+     0.093924714,
+     18.7960403,
+     76.5595861,
+     337.9517921,
+     53.2515388
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "hapsira",
+    "lineage": "poliastro/hapsira rv2coe",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     0.093924714,
+     18.7960403,
+     76.5595861,
+     337.9517921,
+     53.2515388
+    ],
+    "elapsed_s": 7.7221
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_elements",
+    "b": "hapsira",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "S.T.A.R. Curtis Algorithm 4.2",
+   "poliastro/hapsira rv2coe"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T20:54:34+00:00",
+  "sha256": "4fb245b834987251f6aedfaa87850beb8b7ef40cdea9bc38b480e8d265ef7fff"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "Classical elements [e, i, RAAN, argp, nu]",
+  "unit": "deg (e dimensionless)",
+  "inputs": {
+   "r": [
+    12000.0,
+    -3000.0,
+    -5000.0
+   ],
+   "v": [
+    1.5,
+    5.2,
+    -1.1
+   ]
+  },
+  "tolerance": 1e-06,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_elements",
+    "lineage": "S.T.A.R. Curtis Algorithm 4.2",
+    "version": "0.1.0",
+    "state": "OK",
+    "value": [
+     0.109207961,
+     24.0453631,
+     101.0087748,
+     161.6911889,
+     85.2000531
+    ],
+    "elapsed_s": 0.0
+   },
+   {
+    "engine": "hapsira",
+    "lineage": "poliastro/hapsira rv2coe",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     0.109207961,
+     24.0453631,
+     101.0087748,
+     161.6911889,
+     85.2000531
+    ],
+    "elapsed_s": 7.4726
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_elements",
+    "b": "hapsira",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "S.T.A.R. Curtis Algorithm 4.2",
+   "poliastro/hapsira rv2coe"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T20:54:42+00:00",
+  "sha256": "2cc66d4e506d2bbc66598a856203d6bc218dc73b0a43e10b9f14e78cd209d1cc"
+ },
+ {
+  "schema": "star_crosscheck/1",
+  "quantity": "Classical elements [e, i, RAAN, argp, nu]",
+  "unit": "deg (e dimensionless)",
+  "inputs": {
+   "r": [
+    6578.0,
+    100.0,
+    -50.0
+   ],
+   "v": [
+    -0.2,
+    10.4,
+    1.9
+   ]
+  },
+  "tolerance": 1e-06,
+  "diff_mode": "max_abs",
+  "engines": [
+   {
+    "engine": "star_elements",
+    "lineage": "S.T.A.R. Curtis Algorithm 4.2",
+    "version": "0.1.0",
+    "state": "OK",
+    "value": [
+     0.8454428,
+     10.3585969,
+     3.2539724,
+     358.2438153,
+     359.3337304
+    ],
+    "elapsed_s": 0.0001
+   },
+   {
+    "engine": "hapsira",
+    "lineage": "poliastro/hapsira rv2coe",
+    "version": "0.18.0",
+    "state": "OK",
+    "value": [
+     0.8454428,
+     10.3585969,
+     3.2539724,
+     358.2438153,
+     359.3337304
+    ],
+    "elapsed_s": 7.6337
+   }
+  ],
+  "pairs": [
+   {
+    "a": "star_elements",
+    "b": "hapsira",
+    "same_lineage": false,
+    "diff": 0.0,
+    "within_tol": true
+   }
+  ],
+  "independent_lineages": [
+   "S.T.A.R. Curtis Algorithm 4.2",
+   "poliastro/hapsira rv2coe"
+  ],
+  "n_failed": 0,
+  "reference": null,
+  "verdict": "AGREE",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "run_at": "2026-10-03T20:54:49+00:00",
+  "sha256": "28bb917b597a728eea3461fba5def11069fb269e808789e93e7ab6ec2e834d49"
+ }
+]

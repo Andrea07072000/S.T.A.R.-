@@ -1,0 +1,7 @@
+:name: S.T.A.R. AOS frame check on a simulated cortex_r52
+mach create "cortex_r52"
+machine LoadPlatformDescription @platforms/cpus/cortex-r52.repl
+sysbus LoadELF $elf
+uart0 CreateFileBackend $out true
+emulation RunFor "2"
+quit
