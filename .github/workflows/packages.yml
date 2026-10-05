@@ -1,0 +1,40 @@
+name: packages
+
+# Every S.T.A.R. package under packages/ is installed in a fresh environment and its own tests are run, on every push.
+# This is the independent reproduction of the results claimed in each package README: a GitHub-hosted runner, not the
+# authors' machine. Tests that need tools absent from the runner (Orekit in WSL, Renode) skip and say so (-rs).
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        package: [conjunction_screen_sgp4, star_audit, star_cdm, star_elements, star_geodesy, star_lambert, star_orbit,
+                  star_sidereal, star_tdb, star_telemetry]
+        python: ["3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install star-timescales (repository root) and sibling packages
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install . pytest
+          python -m pip install ./packages/star_geodesy
+      - name: Install the package and its test-only cross-check libraries
+        run: |
+          python -m pip install "./packages/${{ matrix.package }}"
+          if [ "${{ matrix.package }}" = "star_telemetry" ]; then python -m pip install ccsdspy spacepackets; fi
+      - name: Run the package tests
+        working-directory: packages/${{ matrix.package }}
+        run: python -m pytest -q -rs -p no:cacheprovider

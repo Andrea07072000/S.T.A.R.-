@@ -1,0 +1,28 @@
+{
+ "id": "star.audit.leapseconds",
+ "name": "STAR Assurance \u2014 Leap-second handling audit of time libraries",
+ "domain": "assurance",
+ "summary": "Audits UTC->TAI conversion of time libraries across leap seconds (incl. 23:59:60) and their behaviour beyond the leap table, via documented APIs only.",
+ "package_dir": "08_PROTOTYPES/star_audit",
+ "module": "leapsec_audit.py",
+ "xc": null,
+ "reference": "IERS Bulletin C leap-second table (hand-written truth, confirmed by ERFA/SOFA on 6/6 probes)",
+ "reference_observed": "reference driver OK on all 6 truth probes; injected defects (ignored leap second, refusal, silent extrapolation) classified as WRONG / REJECTED / PAST_TABLE_SILENT",
+ "na": {
+  "G-02": "single-module tool",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R4",
+  "G-03": "audit(), classify(), PROBES",
+  "G-04": "UTC and TAI ISO strings to the millisecond",
+  "G-06": "truth from IERS Bulletin C",
+  "G-08": "subprocess only to run the audited library in its own venv; probes via stdin JSON",
+  "G-13": "failing library raises; refusing library -> REJECTED",
+  "G-16": "truth cross-checked by ERFA/SOFA"
+ }
+}

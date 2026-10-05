@@ -1,0 +1,27 @@
+{
+ "id": "star.audit.elements",
+ "name": "STAR Assurance \u2014 orbital-elements conversion cross-audit",
+ "domain": "assurance",
+ "summary": "Cross-audit of state-vector to classical-elements implementations (Vallado rv2coe via python-sgp4, hapsira, skyfield, star_elements) validated on Vallado Example 2-5; regular-case envelopes and a map of singular-case conventions.",
+ "package_dir": "08_PROTOTYPES/star_audit",
+ "module": "elements_audit.py",
+ "xc": null,
+ "reference": "Vallado, Fundamentals of Astrodynamics and Applications, Example 2-5 (rv2coe)",
+ "reference_observed": "all 4 implementations reproduce Example 2-5 within the printed precision (max 0.0083 km in p, 0.0049 deg in argp); a textbook reference decoder recovers the generator truth to < 1e-7; known-defect drivers (0.02 deg inclination offset, sentinel, NaN) classified exactly",
+ "na": {
+  "G-02": "single-module tool",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R10",
+  "G-03": "coe_to_rv(), corpus(), classify(), run(), audit()",
+  "G-04": "km, km/s, degrees; mu 398600.4418 km^3/s^2",
+  "G-06": "published example cited in source; corpus generated in-repo and sha256-pinned; documented APIs only",
+  "G-08": "subprocess only for the audited implementation; cases via stdin; runner names prefixed",
+  "G-13": "failed run raises with stderr tail; refusals counted per implementation; unvalidated implementations excluded"
+ }
+}

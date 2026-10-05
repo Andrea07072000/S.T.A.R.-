@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "conjunction-screen-sgp4"
+version = "0.2.0"
+description = "S.T.A.R. SSA: conjunction screening of TLE catalogues with SGP4, KD-tree coarse pass and closed-form TCA refinement."
+requires-python = ">=3.9"
+dependencies = ["numpy", "scipy", "sgp4>=2.20"]
+license = {text = "Apache-2.0"}
+
+[tool.setuptools]
+py-modules = ["screen"]

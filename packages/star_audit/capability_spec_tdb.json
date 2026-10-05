@@ -1,0 +1,27 @@
+{
+ "id": "star.audit.tdb",
+ "name": "STAR Assurance \u2014 TT to TDB implementation cross-audit",
+ "domain": "assurance",
+ "summary": "Cross-audit of TDB - TT implementations (ERFA, astropy, skyfield, SPICE, star_tdb, a paper model of USNO C179 eq. 2.6) validated on the published low-precision formula; per-century divergence envelopes and model-family separation 1900-2100.",
+ "package_dir": "08_PROTOTYPES/star_audit",
+ "module": "tdb_audit.py",
+ "xc": null,
+ "reference": "Explanatory Supplement to the Astronomical Almanac low-precision TDB-TT formula; USNO Circular 179 (Kaplan 2005) eq. 2.6; SOFA/ERFA dtdb (Fairhead & Bretagnon 1990)",
+ "reference_observed": "all 6 implementations within 50 us of the published formula (max 34.8 us ERFA); paper model of C179 eq. 2.6 equals skyfield to 5e-12 s; synthetic drivers: 49 us valid, 51 us excluded, 10 us post-2000 offset measured exactly",
+ "na": {
+  "G-02": "single-module tool",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R8",
+  "G-03": "low_precision(), default_epochs(), run(), audit()",
+  "G-04": "seconds (TDB - TT), JD on the TT scale",
+  "G-06": "published formulas cited in source; drivers use documented APIs only (skyfield two-part times)",
+  "G-08": "subprocess only for the audited implementation; epochs via stdin; runner names prefixed",
+  "G-13": "failed run raises with stderr tail; refusing or out-of-tolerance implementations excluded from comparisons"
+ }
+}

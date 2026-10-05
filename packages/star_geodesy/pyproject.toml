@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "star-geodesy"
+version = "0.1.0"
+description = "S.T.A.R. Geodesy: WGS-84 geodetic to/from ECEF with exact inversion at any altitude."
+requires-python = ">=3.9"
+dependencies = []
+license = {text = "Apache-2.0"}
+
+[tool.setuptools]
+py-modules = ["star_geodesy"]

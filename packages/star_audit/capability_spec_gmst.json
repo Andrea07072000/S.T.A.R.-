@@ -1,0 +1,27 @@
+{
+ "id": "star.audit.gmst",
+ "name": "STAR Assurance \u2014 GMST implementation cross-audit",
+ "domain": "assurance",
+ "summary": "Cross-audit of GMST implementations (ERFA gmst82/gmst06, astropy, skyfield, python-sgp4, pyorbital, star_sidereal) validated on Vallado Example 3-5; wrap-safe envelopes 1950-2050 separating IAU 1982 and IAU 2006 families.",
+ "package_dir": "08_PROTOTYPES/star_audit",
+ "module": "gmst_audit.py",
+ "xc": null,
+ "reference": "Vallado, Fundamentals of Astrodynamics and Applications, Example 3-5 (GMST 152.578787810 deg at 1992-08-20 12:14 UT1)",
+ "reference_observed": "IAU 1982 implementations reproduce Vallado to 1e-5 arcsec, IAU 2006 ones to 0.035 arcsec (model difference); synthetic: 0.09 arcsec valid, 0.11 excluded, 0.05 arcsec post-2000 offset measured, 359.9999 vs 0.0001 deg = 0.72 arcsec",
+ "na": {
+  "G-02": "single-module tool",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R9",
+  "G-03": "arcsec_diff(), default_epochs(), run(), audit()",
+  "G-04": "degrees in, arcsec differences; JD on the UT1 scale (TT = UT1 + 69.184 s where a model needs TT)",
+  "G-06": "published constants cited in source; drivers use documented APIs only",
+  "G-08": "subprocess only for the audited implementation; epochs via stdin; runner names prefixed",
+  "G-13": "failed run raises with stderr tail; refusing or unvalidated implementations excluded from comparisons"
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "id": "star.audit.geodesy",
+ "name": "STAR Assurance \u2014 Geodetic conversion accuracy audit",
+ "domain": "assurance",
+ "summary": "Measures the accuracy envelope (per altitude band, 0-36,000 km) of any ECEF->geodetic library against an exact reference.",
+ "package_dir": "08_PROTOTYPES/star_audit",
+ "module": "star_audit.py",
+ "xc": null,
+ "reference": "exact closed-loop reference star_geodesy (forward WGS-84 transform, NIMA TR8350.2) + injected-defect self-tests",
+ "reference_observed": "exact library < 1 um; injected 0.25 m height error and 1e-6 deg latitude bias measured with their injected size in the right band",
+ "na": {
+  "G-02": "single-module tool",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user",
+  "G-16": "the auditor is itself the independent check; its correctness is established by injected-defect tests"
+ },
+ "review": {
+  "G-01": "README R1-R3",
+  "G-03": "audit_function, run_external, envelope",
+  "G-04": "deg, m, altitude bands",
+  "G-06": "truth points generated from the WGS-84 forward transform",
+  "G-08": "subprocess only to run the audited library in its own venv; input via stdin JSON",
+  "G-13": "failing library run raises; length mismatch raises"
+ }
+}

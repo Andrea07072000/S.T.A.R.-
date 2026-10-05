@@ -1,0 +1,27 @@
+{
+ "id": "star.audit.tle",
+ "name": "STAR Assurance \u2014 TLE ingestion audit",
+ "domain": "assurance",
+ "summary": "Differential audit of what TLE readers accept (python-sgp4, skyfield, pyorbital, Orekit) on a pinned corpus of well-formed and deliberately malformed TLEs derived from SGP4-VER; reference is the TLE format rule.",
+ "package_dir": "08_PROTOTYPES/star_audit",
+ "module": "tle_audit.py",
+ "xc": null,
+ "reference": "NORAD/CelesTrak two-line element format: checksum mod 10 ('-' counts 1) in column 69, line numbers, satellite number columns 3-7, 69 characters; SGP4-VER TLEs (Vallado et al., AIAA 2006-6753)",
+ "reference_observed": "a strict reader written from the rule scores 0 verdict errors on 203 cases; accept-all, checksum-only and misreading readers are scored exactly as constructed",
+ "na": {
+  "G-02": "single-module tool",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R11",
+  "G-03": "checksum(), well_formed(), base_tles(), corpus(), run(), audit()",
+  "G-04": "TLE text lines; inclination in degrees",
+  "G-06": "SGP4-VER fixture with provenance (python-sgp4 2.27, MIT, sha256 in test_sgp4_audit); corpus sha256-pinned",
+  "G-08": "subprocess only for the audited reader; cases via stdin; runner names prefixed",
+  "G-13": "failed run raises with stderr tail; readers that reject or misread a valid TLE are not validated"
+ }
+}

@@ -1,0 +1,668 @@
+{
+ "python-sgp4 2.27 (C++ accelerated)": {
+  "satellites": 33,
+  "audited": 32,
+  "refused": [],
+  "max_err_km": 1.1819340224563003e-07,
+  "median_err_km": 4.9815501079138736e-09,
+  "worst_sat": "32:20413",
+  "per_sat": {
+   "0:5": {
+    "max_km": 6.819206706052019e-09,
+    "n": 13,
+    "missing": 0
+   },
+   "1:4632": {
+    "max_km": 5.971630012994096e-09,
+    "n": 5,
+    "missing": 0
+   },
+   "2:6251": {
+    "max_km": 7.2664658657912765e-09,
+    "n": 25,
+    "missing": 0
+   },
+   "3:8195": {
+    "max_km": 6.271563674150092e-09,
+    "n": 25,
+    "missing": 0
+   },
+   "4:9880": {
+    "max_km": 7.026854713478568e-09,
+    "n": 25,
+    "missing": 0
+   },
+   "5:9998": {
+    "max_km": 7.892990544801977e-09,
+    "n": 14,
+    "missing": 0
+   },
+   "6:11801": {
+    "max_km": 6.878727878066807e-09,
+    "n": 5,
+    "missing": 0
+   },
+   "7:14128": {
+    "max_km": 6.951438481755432e-09,
+    "n": 25,
+    "missing": 0
+   },
+   "8:16925": {
+    "max_km": 8.09569741469056e-09,
+    "n": 13,
+    "missing": 0
+   },
+   "9:20413": {
+    "max_km": 7.768205512677044e-09,
+    "n": 26,
+    "missing": 0
+   },
+   "10:21897": {
+    "max_km": 7.584151928203928e-09,
+    "n": 25,
+    "missing": 0
+   },
+   "11:22312": {
+    "max_km": 6.469873266902578e-09,
+    "n": 23,
+    "missing": 0
+   },
+   "12:22674": {
+    "max_km": 7.2442362308627566e-09,
+    "n": 25,
+    "missing": 0
+   },
+   "13:23177": {
+    "max_km": 7.118343732320022e-09,
+    "n": 13,
+    "missing": 0
+   },
+   "14:23333": {
+    "max_km": 7.06901502481523e-09,
+    "n": 15,
+    "missing": 0
+   },
+   "15:23599": {
+    "max_km": 7.678012839314649e-09,
+    "n": 37,
+    "missing": 0
+   },
+   "16:24208": {
+    "max_km": 6.4871247406421005e-09,
+    "n": 13,
+    "missing": 0
+   },
+   "17:25954": {
+    "max_km": 7.548090843961288e-09,
+    "n": 26,
+    "missing": 0
+   },
+   "18:26900": {
+    "max_km": 5.6502350690767294e-09,
+    "n": 4,
+    "missing": 0
+   },
+   "19:26975": {
+    "max_km": 7.624644193403026e-09,
+    "n": 25,
+    "missing": 0
+   },
+   "20:28057": {
+    "max_km": 6.7684750646472335e-09,
+    "n": 25,
+    "missing": 0
+   },
+   "21:28129": {
+    "max_km": 7.330376034693547e-09,
+    "n": 13,
+    "missing": 0
+   },
+   "22:28350": {
+    "max_km": 6.341733602743029e-09,
+    "n": 13,
+    "missing": 0
+   },
+   "23:28623": {
+    "max_km": 6.159446910209455e-09,
+    "n": 13,
+    "missing": 0
+   },
+   "24:28626": {
+    "max_km": 7.004958743381598e-09,
+    "n": 13,
+    "missing": 0
+   },
+   "25:28872": {
+    "max_km": 7.3135302567225524e-09,
+    "n": 11,
+    "missing": 0
+   },
+   "26:29141": {
+    "max_km": 6.6719744616052284e-09,
+    "n": 22,
+    "missing": 0
+   },
+   "27:29238": {
+    "max_km": 7.090778811912148e-09,
+    "n": 13,
+    "missing": 0
+   },
+   "28:88888": {
+    "max_km": 6.393689033861506e-09,
+    "n": 13,
+    "missing": 0
+   },
+   "29:33333": {
+    "max_km": 7.087980619934126e-09,
+    "n": 5,
+    "missing": 0
+   },
+   "31:33335": {
+    "max_km": 8.121826864374133e-09,
+    "n": 73,
+    "missing": 0
+   },
+   "32:20413": {
+    "max_km": 1.1819340224563003e-07,
+    "n": 70,
+    "missing": 0
+   }
+  }
+ },
+ "python-sgp4 2.27 (pure Python)": {
+  "satellites": 33,
+  "audited": 32,
+  "refused": [],
+  "max_err_km": 1.1691319154628896e-07,
+  "median_err_km": 4.98411804109126e-09,
+  "worst_sat": "32:20413",
+  "per_sat": {
+   "0:5": {
+    "max_km": 6.819697246153152e-09,
+    "n": 13,
+    "missing": 0
+   },
+   "1:4632": {
+    "max_km": 6.008825763858433e-09,
+    "n": 5,
+    "missing": 0
+   },
+   "2:6251": {
+    "max_km": 7.270144487702476e-09,
+    "n": 25,
+    "missing": 0
+   },
+   "3:8195": {
+    "max_km": 6.26696356974671e-09,
+    "n": 25,
+    "missing": 0
+   },
+   "4:9880": {
+    "max_km": 7.026174982351508e-09,
+    "n": 25,
+    "missing": 0
+   },
+   "5:9998": {
+    "max_km": 7.914218668721764e-09,
+    "n": 14,
+    "missing": 0
+   },
+   "6:11801": {
+    "max_km": 6.879294782642276e-09,
+    "n": 5,
+    "missing": 0
+   },
+   "7:14128": {
+    "max_km": 6.951438481755432e-09,
+    "n": 25,
+    "missing": 0
+   },
+   "8:16925": {
+    "max_km": 8.098723486972347e-09,
+    "n": 13,
+    "missing": 0
+   },
+   "9:20413": {
+    "max_km": 7.78557771763664e-09,
+    "n": 26,
+    "missing": 0
+   },
+   "10:21897": {
+    "max_km": 7.593396919149424e-09,
+    "n": 25,
+    "missing": 0
+   },
+   "11:22312": {
+    "max_km": 6.4695499712598105e-09,
+    "n": 23,
+    "missing": 0
+   },
+   "12:22674": {
+    "max_km": 7.2442362308627566e-09,
+    "n": 25,
+    "missing": 0
+   },
+   "13:23177": {
+    "max_km": 7.120804044822648e-09,
+    "n": 13,
+    "missing": 0
+   },
+   "14:23333": {
+    "max_km": 7.102241272690491e-09,
+    "n": 15,
+    "missing": 0
+   },
+   "15:23599": {
+    "max_km": 7.690992920437181e-09,
+    "n": 37,
+    "missing": 0
+   },
+   "16:24208": {
+    "max_km": 6.45220833048105e-09,
+    "n": 13,
+    "missing": 0
+   },
+   "17:25954": {
+    "max_km": 7.554665738759705e-09,
+    "n": 26,
+    "missing": 0
+   },
+   "18:26900": {
+    "max_km": 5.667772314602419e-09,
+    "n": 4,
+    "missing": 0
+   },
+   "19:26975": {
+    "max_km": 7.615656215656502e-09,
+    "n": 25,
+    "missing": 0
+   },
+   "20:28057": {
+    "max_km": 6.768609907622696e-09,
+    "n": 25,
+    "missing": 0
+   },
+   "21:28129": {
+    "max_km": 7.328397915353216e-09,
+    "n": 13,
+    "missing": 0
+   },
+   "22:28350": {
+    "max_km": 6.336550887990769e-09,
+    "n": 13,
+    "missing": 0
+   },
+   "23:28623": {
+    "max_km": 6.159110883301844e-09,
+    "n": 13,
+    "missing": 0
+   },
+   "24:28626": {
+    "max_km": 6.979675864563899e-09,
+    "n": 13,
+    "missing": 0
+   },
+   "25:28872": {
+    "max_km": 7.3097237498647595e-09,
+    "n": 11,
+    "missing": 0
+   },
+   "26:29141": {
+    "max_km": 6.674902420069674e-09,
+    "n": 22,
+    "missing": 0
+   },
+   "27:29238": {
+    "max_km": 7.090653897947754e-09,
+    "n": 13,
+    "missing": 0
+   },
+   "28:88888": {
+    "max_km": 6.393044392690918e-09,
+    "n": 13,
+    "missing": 0
+   },
+   "29:33333": {
+    "max_km": 7.078369858269262e-09,
+    "n": 5,
+    "missing": 0
+   },
+   "31:33335": {
+    "max_km": 8.123954894237264e-09,
+    "n": 73,
+    "missing": 0
+   },
+   "32:20413": {
+    "max_km": 1.1691319154628896e-07,
+    "n": 70,
+    "missing": 0
+   }
+  }
+ },
+ "pyorbital (independent Python)": {
+  "satellites": 33,
+  "audited": 4,
+  "refused": [
+   {
+    "case": 1,
+    "satnum": 4632,
+    "error": "NotImplementedError: Deep space calculations not supported"
+   },
+   {
+    "case": 3,
+    "satnum": 8195,
+    "error": "NotImplementedError: Deep space calculations not supported"
+   },
+   {
+    "case": 4,
+    "satnum": 9880,
+    "error": "NotImplementedError: Deep space calculations not supported"
+   },
+   {
+    "case": 5,
+    "satnum": 9998,
+    "error": "NotImplementedError: Deep space calculations not supported"
+   },
+   {
+    "case": 6,
+    "satnum": 11801,
+    "error": "NotImplementedError: Deep space calculations not supported"
+   },
+   {
+    "case": 7,
+    "satnum": 14128,
+    "error": "NotImplementedError: Deep space calculations not supported"
+   },
+   {
+    "case": 8,
+    "satnum": 16925,
+    "error": "NotImplementedError: Deep space calculations not supported"
+   },
+   {
+    "case": 9,
+    "satnum": 20413,
+    "error": "NotImplementedError: Deep space calculations not supported"
+   },
+   {
+    "case": 10,
+    "satnum": 21897,
+    "error": "NotImplementedError: Deep space calculations not supported"
+   },
+   {
+    "case": 12,
+    "satnum": 22674,
+    "error": "NotImplementedError: Deep space calculations not supported"
+   },
+   {
+    "case": 13,
+    "satnum": 23177,
+    "error": "NotImplementedError: Deep space calculations not supported"
+   },
+   {
+    "case": 14,
+    "satnum": 23333,
+    "error": "NotImplementedError: Deep space calculations not supported"
+   },
+   {
+    "case": 15,
+    "satnum": 23599,
+    "error": "NotImplementedError: Deep space calculations not supported"
+   },
+   {
+    "case": 16,
+    "satnum": 24208,
+    "error": "NotImplementedError: Deep space calculations not supported"
+   },
+   {
+    "case": 17,
+    "satnum": 25954,
+    "error": "NotImplementedError: Deep space calculations not supported"
+   },
+   {
+    "case": 18,
+    "satnum": 26900,
+    "error": "NotImplementedError: Deep space calculations not supported"
+   },
+   {
+    "case": 19,
+    "satnum": 26975,
+    "error": "NotImplementedError: Deep space calculations not supported"
+   },
+   {
+    "case": 21,
+    "satnum": 28129,
+    "error": "NotImplementedError: Deep space calculations not supported"
+   },
+   {
+    "case": 23,
+    "satnum": 28623,
+    "error": "NotImplementedError: Deep space calculations not supported"
+   },
+   {
+    "case": 24,
+    "satnum": 28626,
+    "error": "NotImplementedError: Deep space calculations not supported"
+   },
+   {
+    "case": 29,
+    "satnum": 33333,
+    "error": "ChecksumError: SAT 1 33333U 05037B   05333.02012661  .25992681  00000-0  24476-3 0  1534"
+   },
+   {
+    "case": 30,
+    "satnum": 33334,
+    "error": "ChecksumError: SAT 1 33334U 78066F   06174.85818871  .00000620  00000-0  10000-3 0  6809"
+   },
+   {
+    "case": 31,
+    "satnum": 33335,
+    "error": "ChecksumError: SAT 1 33335U 05008A   06176.46683397 -.00000205  00000-0  10000-3 0  2190"
+   },
+   {
+    "case": 32,
+    "satnum": 20413,
+    "error": "NotImplementedError: Deep space calculations not supported"
+   }
+  ],
+  "max_err_km": 0.0003451539960326819,
+  "median_err_km": 2.138228230548523e-06,
+  "worst_sat": "26:29141",
+  "per_sat": {
+   "0:5": {
+    "max_km": 3.1419778898059835e-06,
+    "n": 13,
+    "missing": 0
+   },
+   "2:6251": {
+    "max_km": 2.0785099675299054e-06,
+    "n": 25,
+    "missing": 0
+   },
+   "20:28057": {
+    "max_km": 2.1707817365779126e-06,
+    "n": 25,
+    "missing": 0
+   },
+   "26:29141": {
+    "max_km": 0.0003451539960326819,
+    "n": 22,
+    "missing": 0
+   }
+  }
+ },
+ "Orekit 13.1 TLEPropagator (Java)": {
+  "satellites": 33,
+  "audited": 33,
+  "refused": [],
+  "max_err_km": 27924.019787954345,
+  "median_err_km": 7.86625181388708e-09,
+  "worst_sat": "32:20413",
+  "per_sat": {
+   "0:5": {
+    "max_km": 9.428555377322693e-09,
+    "n": 13,
+    "missing": 0
+   },
+   "1:4632": {
+    "max_km": 5.822903295755482e-09,
+    "n": 5,
+    "missing": 0
+   },
+   "2:6251": {
+    "max_km": 7.299954073498224e-09,
+    "n": 25,
+    "missing": 0
+   },
+   "3:8195": {
+    "max_km": 2.7835248381823336e-07,
+    "n": 25,
+    "missing": 0
+   },
+   "4:9880": {
+    "max_km": 2.7536636778241493e-07,
+    "n": 25,
+    "missing": 0
+   },
+   "5:9998": {
+    "max_km": 2.9036399084623873e-08,
+    "n": 14,
+    "missing": 0
+   },
+   "6:11801": {
+    "max_km": 1.8736853951975317e-08,
+    "n": 5,
+    "missing": 0
+   },
+   "7:14128": {
+    "max_km": 2.333547076494464e-08,
+    "n": 25,
+    "missing": 0
+   },
+   "8:16925": {
+    "max_km": 1.194841360782687e-08,
+    "n": 13,
+    "missing": 0
+   },
+   "9:20413": {
+    "max_km": 2.180191930628323e-08,
+    "n": 26,
+    "missing": 0
+   },
+   "10:21897": {
+    "max_km": 1.5620580368866038e-07,
+    "n": 25,
+    "missing": 0
+   },
+   "11:22312": {
+    "max_km": 4.30975856826982e-08,
+    "n": 23,
+    "missing": 0
+   },
+   "12:22674": {
+    "max_km": 3.6887010996296356e-07,
+    "n": 25,
+    "missing": 0
+   },
+   "13:23177": {
+    "max_km": 7.130337535115258e-09,
+    "n": 13,
+    "missing": 0
+   },
+   "14:23333": {
+    "max_km": 3.6090209470381686e-07,
+    "n": 15,
+    "missing": 0
+   },
+   "15:23599": {
+    "max_km": 7.693006095040131e-09,
+    "n": 37,
+    "missing": 0
+   },
+   "16:24208": {
+    "max_km": 1.1962760743977136e-08,
+    "n": 13,
+    "missing": 0
+   },
+   "17:25954": {
+    "max_km": 2.8840066459037548e-08,
+    "n": 26,
+    "missing": 0
+   },
+   "18:26900": {
+    "max_km": 1.9742034744334066e-06,
+    "n": 4,
+    "missing": 0
+   },
+   "19:26975": {
+    "max_km": 1.611401082964316e-07,
+    "n": 25,
+    "missing": 0
+   },
+   "20:28057": {
+    "max_km": 1.172186246448306e-08,
+    "n": 25,
+    "missing": 0
+   },
+   "21:28129": {
+    "max_km": 7.410363652649969e-09,
+    "n": 13,
+    "missing": 0
+   },
+   "22:28350": {
+    "max_km": 2.2388745562727235e-07,
+    "n": 13,
+    "missing": 0
+   },
+   "23:28623": {
+    "max_km": 1.8545584853021522e-08,
+    "n": 13,
+    "missing": 0
+   },
+   "24:28626": {
+    "max_km": 6.738603076654149e-09,
+    "n": 13,
+    "missing": 0
+   },
+   "25:28872": {
+    "max_km": 1.7668686825570747e-08,
+    "n": 11,
+    "missing": 0
+   },
+   "26:29141": {
+    "max_km": 1.5588361329996564e-06,
+    "n": 22,
+    "missing": 0
+   },
+   "27:29238": {
+    "max_km": 7.2402012773095626e-09,
+    "n": 13,
+    "missing": 0
+   },
+   "28:88888": {
+    "max_km": 1.1210272544263282e-08,
+    "n": 13,
+    "missing": 0
+   },
+   "29:33333": {
+    "max_km": 3398.271593969985,
+    "n": 5,
+    "missing": 0
+   },
+   "30:33334": {
+    "max_km": NaN,
+    "n": 1,
+    "missing": 0
+   },
+   "31:33335": {
+    "max_km": 0.050591700435943535,
+    "n": 73,
+    "missing": 0
+   },
+   "32:20413": {
+    "max_km": 27924.019787954345,
+    "n": 70,
+    "missing": 0
+   }
+  }
+ }
+}

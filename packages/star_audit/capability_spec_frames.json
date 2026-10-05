@@ -1,0 +1,27 @@
+{
+ "id": "star.audit.frames",
+ "name": "STAR Assurance \u2014 TEME to GCRS frame-transformation cross-audit",
+ "domain": "assurance",
+ "summary": "Cross-audit of TEME->GCRS implementations (astropy, skyfield, Orekit, model routes from ERFA primitives) validated on Vallado's published example; divergence envelopes 1980-2050 and isolation of model dependence.",
+ "package_dir": "08_PROTOTYPES/star_audit",
+ "module": "frame_audit.py",
+ "xc": null,
+ "reference": "Vallado, Fundamentals of Astrodynamics and Applications (4th ed.), TEME->GCRF example 2004-04-06 07:51:28.386009 UTC",
+ "reference_observed": "astropy 3.8 mm, skyfield 3.8 mm, Orekit 0.72 m, FK5+bias route 0.79 m from the published GCRF vector; synthetic drivers: injected 0.9995 m valid, 1.1 m invalid, 5 m pair envelope measured exactly",
+ "na": {
+  "G-02": "single-module tool",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R6",
+  "G-03": "default_cases(), run(), audit()",
+  "G-04": "km in and out; UTC ISO strings",
+  "G-06": "published reference constants in source; drivers use documented APIs only",
+  "G-08": "subprocess only for the audited implementation; driver and cases via stdin; runner names prefixed",
+  "G-13": "failed run raises with stderr tail; refusals listed; invalid probe flagged"
+ }
+}

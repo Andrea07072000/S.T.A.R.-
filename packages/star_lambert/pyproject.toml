@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "star-lambert"
+version = "0.1.1"
+description = "S.T.A.R. Astrodynamics: universal-variable Lambert orbital boundary value problem solver."
+requires-python = ">=3.9"
+dependencies = []
+license = {text = "Apache-2.0"}
+
+[tool.setuptools]
+py-modules = ["star_lambert"]

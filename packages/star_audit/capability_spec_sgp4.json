@@ -1,0 +1,27 @@
+{
+ "id": "star.audit.sgp4",
+ "name": "STAR Assurance \u2014 SGP4 implementation audit vs Vallado SGP4-VER",
+ "domain": "assurance",
+ "summary": "Per-case accuracy audit of SGP4/SDP4 implementations against Vallado's official SGP4-VER verification data, including the published special cases.",
+ "package_dir": "08_PROTOTYPES/star_audit",
+ "module": "sgp4_audit.py",
+ "xc": null,
+ "reference": "Vallado, Crawford, Hujsak, Kelso, 'Revisiting Spacetrack Report #3', AIAA 2006-6753: SGP4-VER.TLE + tcppver.out",
+ "reference_observed": "replayed reference scores 0; injected 0.25 km offset measured exactly; refusals listed; Vallado-lineage python-sgp4 reproduces the reference to 1.2e-7 km",
+ "na": {
+  "G-02": "single-module tool",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R5",
+  "G-03": "load_reference(), audit()",
+  "G-04": "TEME km, tsince minutes",
+  "G-06": "fixtures copied from python-sgp4 2.27 (MIT) with sha256",
+  "G-08": "subprocess only for the audited implementation; driver and cases via stdin",
+  "G-13": "order mismatch raises; failed run raises; refusals listed"
+ }
+}

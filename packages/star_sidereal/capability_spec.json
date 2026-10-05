@@ -1,0 +1,9 @@
+{"id": "star.time.sidereal", "name": "STAR Time — Greenwich mean sidereal time (IAU 1982)", "domain": "time",
+ "summary": "GMST and local mean sidereal time, IAU 1982 (Vallado eq. 3-47); verified against Vallado and ERFA.",
+ "package_dir": "08_PROTOTYPES/star_sidereal", "module": "star_sidereal.py", "xc": "XC-013",
+ "reference": "Vallado, Fundamentals of Astrodynamics and Applications, Example 3-5",
+ "reference_observed": "GMST 152.578787810 deg and LST 48.578787810 deg within 1e-7 deg; J2000 noon 280.46061837 deg",
+ "na": {"G-02": "single-module library", "G-09": "no simulation component", "G-10": "not flight software", "G-11": "no hardware",
+        "G-12": "no FDIR role", "G-14": "no performance requirement declared by any user"},
+ "review": {"G-01": "README requirements R1-R3", "G-03": "two documented functions", "G-04": "degrees, UT1 Julian date split day+fraction",
+            "G-06": "model constants from Vallado eq. 3-47 / IAU 1982", "G-08": "no dependencies, no IO", "G-13": "non-finite input raises"}}

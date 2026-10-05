@@ -1,0 +1,71 @@
+{
+  "frames": [
+    {
+      "index": 0,
+      "name": "nominal_single_packet",
+      "frame_size": 256,
+      "tfvn": 1,
+      "scid": 68,
+      "vcid": 7,
+      "vc_count": 0,
+      "fhp": 0,
+      "has_fecf": true,
+      "packets": [{"apid": 1, "seq": 10, "data_len": 50, "total_size": 56}]
+    },
+    {
+      "index": 1,
+      "name": "multiple_packets",
+      "frame_size": 256,
+      "tfvn": 1,
+      "scid": 68,
+      "vcid": 0,
+      "vc_count": 1,
+      "fhp": 0,
+      "has_fecf": true,
+      "packets": [
+        {"apid": 16, "seq": 1, "data_len": 20, "total_size": 26},
+        {"apid": 17, "seq": 2, "data_len": 25, "total_size": 31},
+        {"apid": 18, "seq": 3, "data_len": 30, "total_size": 36}
+      ]
+    },
+    {
+      "index": 2,
+      "name": "spanning_packet_part1",
+      "frame_size": 256,
+      "tfvn": 1,
+      "scid": 68,
+      "vcid": 0,
+      "vc_count": 2,
+      "fhp": 0,
+      "has_fecf": true,
+      "packets": [{"apid": 32, "seq": 42, "data_len": 296, "total_size": 302, "spanning": true, "part": 1}]
+    },
+    {
+      "index": 3,
+      "name": "spanning_packet_part2_plus_next",
+      "frame_size": 256,
+      "tfvn": 1,
+      "scid": 68,
+      "vcid": 0,
+      "vc_count": 3,
+      "fhp": 56,
+      "has_fecf": true,
+      "packets": [
+        {"apid": 32, "seq": 42, "data_len": 296, "total_size": 302, "spanning": true, "part": 2},
+        {"apid": 33, "seq": 43, "data_len": 20, "total_size": 26}
+      ]
+    },
+    {
+      "index": 4,
+      "name": "no_fecf_frame",
+      "frame_size": 254,
+      "tfvn": 1,
+      "scid": 68,
+      "vcid": 2,
+      "vc_count": 4,
+      "fhp": 0,
+      "has_fecf": false,
+      "packets": [{"apid": 64, "seq": 99, "data_len": 40, "total_size": 46}]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+ "id": "star.audit.ccsds",
+ "name": "STAR Assurance \u2014 CCSDS TM frame-decoder differential audit",
+ "domain": "assurance",
+ "summary": "Differential audit of CCSDS TM transfer-frame decoders on a pinned corpus of valid and bit-flipped frames: field-exact decoding, silent acceptance of corrupted frames, disagreements; probe-validated.",
+ "package_dir": "08_PROTOTYPES/star_audit",
+ "module": "ccsds_audit.py",
+ "xc": null,
+ "reference": "CCSDS 132.0-B-3 TM Space Data Link Protocol (frame layout) and CCSDS 131.0-B / 132.0-B FECF (CRC-16/CCITT, check value 0x29B1)",
+ "reference_observed": "generator frames carry FECF with zero residue; a reference decoder written from the standard validates 12/12 and rejects exactly the bad-FECF frames; known-defect decoders (accept-all, MC-as-VC, OCF-in-data, broken driver) caught exactly",
+ "na": {
+  "G-02": "single-module tool",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R7",
+  "G-03": "tm_frame(), corpus(), run(), audit()",
+  "G-04": "octets, hex strings; frame length 64",
+  "G-06": "corpus generated in-repo with pinned sha256; drivers use documented APIs only",
+  "G-08": "subprocess only for the audited decoder; frames via stdin; runner names prefixed",
+  "G-13": "failed run raises with stderr tail; driver exceptions listed; unvalidated implementations excluded from comparisons"
+ }
+}

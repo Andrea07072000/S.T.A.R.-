@@ -1,6 +1,11 @@
 # S.T.A.R. — Systems, Testing, Assurance & Reliability
 
 [![tests](https://github.com/Andrea07072000/S.T.A.R.-/actions/workflows/tests.yml/badge.svg)](https://github.com/Andrea07072000/S.T.A.R.-/actions/workflows/tests.yml)
+[![packages](https://github.com/Andrea07072000/S.T.A.R.-/actions/workflows/packages.yml/badge.svg)](https://github.com/Andrea07072000/S.T.A.R.-/actions/workflows/packages.yml)
+
+> **New (2026-10-05): 10 more packages in [`packages/`](packages/README.md)** — independent auditors of other space
+> libraries (SGP4, frames, time scales, orbital elements, CCSDS, TLE ingestion), CCSDS telemetry, conjunction screening,
+> CDM consistency. Each is re-tested by GitHub on every push, and its README says what it does *not* claim.
 
 S.T.A.R. is an engineering platform for verification evidence: every requirement is linked to the tests
 that check it, and every result can be reproduced. This repository holds its open components. Each one ships
