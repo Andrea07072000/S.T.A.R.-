@@ -1,5 +1,6 @@
 """TDB - TT vs ERFA dtdb (full Fairhead & Bretagnon series), values frozen 2026-10-04 with pyerfa 2.0.1.5, geocentre
-(ut=0, observer at origin). Acceptance: the stated accuracy of USNO Circular 179 eq. 2.6, 10 microseconds."""
+(ut=0, observer at origin). Acceptance: the stated accuracy of USNO Circular 179 eq. 2.6, 10 microseconds.
+Verifies: R2, R3 (README)."""
 import pytest
 
 from star_tdb import tdb_minus_tt

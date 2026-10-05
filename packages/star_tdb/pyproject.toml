@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "star-tdb"
-version = "0.1.0"
+version = "0.1.1"
 description = "S.T.A.R. Time: TDB - TT with the USNO Circular 179 series, verified against ERFA full series within 10 microseconds."
 requires-python = ">=3.9"
 dependencies = []

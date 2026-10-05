@@ -1,5 +1,6 @@
 """References: Vallado (4th ed.) Example 3-5, 1992 Aug 20 12:14:00 UT1 -> GMST 152.578787810 deg, LST at 104 deg W
-48.578787810 deg; IAU 1982 at J2000.0 12h UT1 = 280.46061837 deg (18h41m50.54841s)."""
+48.578787810 deg; IAU 1982 at J2000.0 12h UT1 = 280.46061837 deg (18h41m50.54841s).
+Verifies: R1, R2, R3 (README)."""
 import math
 
 import pytest
