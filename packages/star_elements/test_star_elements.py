@@ -1,5 +1,6 @@
 """Published references: Curtis (3rd ed.) Example 4.3 (r, v -> elements) and Example 4.7 (elements -> r, v),
-printed to 4 significant figures; round-trip and singular-case contracts."""
+printed to 4 significant figures; round-trip and singular-case contracts.
+Verifies: R1, R2, R3 (README)."""
 import math
 import random
 

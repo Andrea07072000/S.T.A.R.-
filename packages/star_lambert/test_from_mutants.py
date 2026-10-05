@@ -1,6 +1,7 @@
 """Tests written from mutation survivors (12_EVIDENCE/mutation/star_lambert_20261004.json, score 0.467): the original
 suite checked only final velocities, so the Newton derivative, the small-|z| series, the hyperbolic branch and the
-retrograde branch were never exercised."""
+retrograde branch were never exercised.
+Verifies: R1, R3 (README)."""
 import math
 
 import pytest

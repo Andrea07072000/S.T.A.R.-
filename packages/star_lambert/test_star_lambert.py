@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """star_lambert tests: a PUBLISHED value (Curtis Ex. 5.2), a PHYSICAL property (propagating v1 for tof reaches r2,
-checked with an independent RK4 two-body integrator), and the failure contract."""
+checked with an independent RK4 two-body integrator), and the failure contract.
+Verifies: R1, R3 (README)."""
 import math
 
 import pytest

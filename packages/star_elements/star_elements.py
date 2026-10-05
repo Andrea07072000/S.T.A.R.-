@@ -29,6 +29,9 @@ def _norm(a):
 
 def rv_to_coe(r: Sequence[float], v: Sequence[float], mu: float = MU_EARTH) -> Tuple[float, ...]:
     """Curtis Algorithm 4.2. Returns (h, e, i, raan, argp, nu)."""
+    # 2026-10-05 (probe of R3): non-finite r or v returned NaN/inf elements instead of refusing
+    if not all(map(math.isfinite, (mu, *r, *v))):
+        raise ValueError("inputs must be finite")
     if mu <= 0:
         raise ValueError("mu must be positive")
     R, V = _norm(r), _norm(v)
@@ -62,6 +65,8 @@ def rv_to_coe(r: Sequence[float], v: Sequence[float], mu: float = MU_EARTH) -> T
 
 def coe_to_rv(h: float, e: float, i: float, raan: float, argp: float, nu: float, mu: float = MU_EARTH):
     """Curtis Algorithm 4.5. Returns (r, v) in the geocentric equatorial frame."""
+    if not all(map(math.isfinite, (h, e, i, raan, argp, nu, mu))):
+        raise ValueError("inputs must be finite")
     if h <= 0 or e < 0 or mu <= 0:
         raise ValueError("h and mu must be positive, e non-negative")
     if e >= 1 and 1 + e * math.cos(nu) <= 0:
@@ -91,6 +96,8 @@ def mean_to_eccentric(M: float, e: float, tol: float = 1e-14, max_iter: int = 50
     unconverged value: RuntimeError instead. Result in [0, 2*pi)."""
     if not 0 <= e < 1:
         raise ValueError("elliptic anomalies need 0 <= e < 1 (hyperbolic/parabolic not supported)")
+    if not math.isfinite(M):  # was reported as "did not converge"
+        raise ValueError("mean anomaly must be finite")
     M = M % (2 * math.pi)
     E = M + e if M < math.pi else M - e
     for _ in range(max_iter):
@@ -105,16 +112,22 @@ def mean_to_eccentric(M: float, e: float, tol: float = 1e-14, max_iter: int = 50
 def eccentric_to_true(E: float, e: float) -> float:
     if not 0 <= e < 1:
         raise ValueError("0 <= e < 1 required")
+    if not math.isfinite(E):
+        raise ValueError("eccentric anomaly must be finite")
     return _wrap(2 * math.atan2(math.sqrt(1 + e) * math.sin(E / 2), math.sqrt(1 - e) * math.cos(E / 2)))
 
 
 def true_to_eccentric(nu: float, e: float) -> float:
     if not 0 <= e < 1:
         raise ValueError("0 <= e < 1 required")
+    if not math.isfinite(nu):
+        raise ValueError("true anomaly must be finite")
     return _wrap(2 * math.atan2(math.sqrt(1 - e) * math.sin(nu / 2), math.sqrt(1 + e) * math.cos(nu / 2)))
 
 
 def eccentric_to_mean(E: float, e: float) -> float:
     if not 0 <= e < 1:
         raise ValueError("0 <= e < 1 required")
+    if not math.isfinite(E):
+        raise ValueError("eccentric anomaly must be finite")
     return _wrap(E - e * math.sin(E))

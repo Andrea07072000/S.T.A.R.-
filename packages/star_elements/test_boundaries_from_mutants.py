@@ -1,5 +1,6 @@
 """Tests written from mutation-testing survivors (12_EVIDENCE/mutation/star_elements_20261004.json, score 0.812).
-Each test pins a boundary the original suite never touched."""
+Each test pins a boundary the original suite never touched.
+Verifies: R1, R2, R3, R4 (README)."""
 import math
 
 import pytest

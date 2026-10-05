@@ -1,5 +1,6 @@
 """Anomaly conversions. References: Vallado (4th ed.) Example 2-1 (M = 235.4 deg, e = 0.4 -> E = 220.512074767522 deg)
-and Curtis (3rd ed.) Example 3.2 (M = 3.6029 rad, e = 0.37255 -> E = 3.4794 rad, printed to 5 figures)."""
+and Curtis (3rd ed.) Example 3.2 (M = 3.6029 rad, e = 0.37255 -> E = 3.4794 rad, printed to 5 figures).
+Verifies: R4 (README)."""
 import math
 import random
 

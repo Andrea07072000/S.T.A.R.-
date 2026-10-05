@@ -60,6 +60,12 @@ def _universal_functions(r1n: float, r2n: float, A: float, mu: float, tof: float
 
 def lambert(r1: Sequence[float], r2: Sequence[float], tof: float, mu: float = MU_EARTH, prograde: bool = True,
             tol: float = 1e-10, max_iter: int = 200) -> Tuple[Tuple[float, float, float], Tuple[float, float, float]]:
+    # 2026-10-05 (probe of R3): non-finite input gave ZeroDivisionError or a false "did not converge", mu <= 0 a
+    # misleading domain error, and a 0-degree transfer divided by zero before the degeneracy check
+    if not all(map(math.isfinite, (tof, mu, *r1, *r2))):
+        raise ValueError("inputs must be finite")
+    if mu <= 0:
+        raise ValueError("mu must be positive")
     if tof <= 0:
         raise ValueError("time of flight must be positive")
     r1n, r2n = _norm(r1), _norm(r2)
@@ -70,6 +76,8 @@ def lambert(r1: Sequence[float], r2: Sequence[float], tof: float, mu: float = MU
     dnu = math.acos(cos_dnu)
     if (prograde and cz < 0) or (not prograde and cz >= 0):
         dnu = 2 * math.pi - dnu
+    if 1 - math.cos(dnu) < 1e-15:
+        raise ValueError("degenerate geometry (transfer angle 0 or 180 deg)")
     A = math.sin(dnu) * math.sqrt(r1n * r2n / (1 - math.cos(dnu)))
     if abs(A) < 1e-12:
         raise ValueError("degenerate geometry (transfer angle 0 or 180 deg)")
