@@ -18,7 +18,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        package: [conjunction_screen_sgp4, star_audit, star_cdm, star_crosscheck, star_elements, star_geodesy, star_lambert, star_orbit,
+        package: [conjunction_screen_sgp4, star_audit, star_cdm, star_crosscheck, star_elements, star_geodesy, star_lambert, star_maneuver, star_orbit,
                   star_sidereal, star_tdb, star_telemetry, star_telemetry_c]
         python: ["3.11", "3.12"]
     steps:

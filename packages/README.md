@@ -25,6 +25,7 @@ being true, that workflow turns red in public.
 | `conjunction_screen_sgp4` | All-vs-all satellite conjunction screening with SGP4 | rejects and **counts** malformed TLEs (a risk our own TLE audit found) |
 | `star_cdm` | CCSDS 508.0 Conjunction Data Message parser + component-level consistency checks | RTN projection agrees with Orekit to < 1e-6 m |
 | `star_orbit` | Cowell propagator (J2, drag, SRP) | GMST vs ERFA, Sun direction vs astropy, J2 vs the gradient of the potential |
+| `star_maneuver` | Vis-viva, Hohmann, bi-elliptic, plane change, combined burn | published values (Vallado sec. 6.3 crossovers); invalid input (r > 2a, NaN, mu <= 0) raises instead of returning a number |
 | `star_elements`, `star_lambert` | State ↔ classical elements; Lambert problem | agree with Vallado, hapsira and skyfield to 1e-11; Lambert vs hapsira (Izzo) on 24 geometries |
 | `star_geodesy`, `star_sidereal`, `star_tdb` | ECEF ↔ geodetic, sidereal time, TDB−TT | published examples + independent libraries |
 
