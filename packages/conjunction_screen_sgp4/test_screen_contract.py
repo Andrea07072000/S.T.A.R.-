@@ -1,5 +1,6 @@
 """Contract of the screening report, each field recomputed independently (mutation survivors 2026-10-04, score 0.502:
-3-line name parsing, provenance, epoch range, ages, ordering, cross-only and the CLI were never checked)."""
+3-line name parsing, provenance, epoch range, ages, ordering, cross-only and the CLI were never checked).
+Verifies: R1, R2, R3 (README)."""
 import hashlib
 import json
 import math

@@ -2,6 +2,7 @@
 # Copyright 2026 S.T.A.R.
 """
 test_telemetry.py: Verification suite for star_telemetry engine federated with star_timescales CUC decoding.
+Verifies: R2, R3 (README).
 """
 
 import os

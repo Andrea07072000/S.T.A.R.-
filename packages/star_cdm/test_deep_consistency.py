@@ -1,5 +1,6 @@
 """deep_consistency on the official CCSDS 508.0-B examples, with the RTN projection checked against Orekit 13.1
-(LOFType.QSW, orekit_rtn_probe.py, values frozen 2026-10-05) and on constructed messages whose truth is known."""
+(LOFType.QSW, orekit_rtn_probe.py, values frozen 2026-10-05) and on constructed messages whose truth is known.
+Verifies: R3 (README)."""
 import copy
 from pathlib import Path
 

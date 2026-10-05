@@ -99,13 +99,28 @@ def mean_to_eccentric(M: float, e: float, tol: float = 1e-14, max_iter: int = 50
     if not math.isfinite(M):  # was reported as "did not converge"
         raise ValueError("mean anomaly must be finite")
     M = M % (2 * math.pi)
+    # 2026-10-05 (kepler_audit): plain Newton never met |dE| < 1e-14 at e = 0.99, M = 6.2776 - the residual there is
+    # rounding noise (~2e-14 / (1 - e cos E)) - and refused a solvable case. Safeguarded Newton: the root is always
+    # bracketed in [0, 2 pi] (f(0) = -M <= 0, f(2 pi) = 2 pi - M >= 0), a step leaving the bracket is replaced by
+    # bisection, and the loop also stops when the residual is at rounding level.
+    lo, hi = 0.0, 2 * math.pi
     E = M + e if M < math.pi else M - e
+    noise = 4 * 2.220446049250313e-16 * 2 * math.pi
     for _ in range(max_iter):
         f = E - e * math.sin(E) - M
+        if abs(f) <= noise:   # residual at rounding level: one last Newton correction (matters when e -> 1)
+            return _wrap(min(max(E - f / (1 - e * math.cos(E)), lo), hi))
+        if f < 0:
+            lo = E
+        else:
+            hi = E
         dE = -f / (1 - e * math.cos(E))
-        E += dE
-        if abs(dE) < tol:
-            return _wrap(E)
+        new = E + dE
+        if not lo < new < hi:
+            new = 0.5 * (lo + hi)
+        if abs(new - E) < tol:
+            return _wrap(new)
+        E = new
     raise RuntimeError(f"Kepler equation did not converge (M={M}, e={e})")
 
 

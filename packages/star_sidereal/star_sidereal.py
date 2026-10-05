@@ -23,5 +23,7 @@ def gmst82_deg(jd_ut1_day: float, jd_ut1_frac: float = 0.0) -> float:
 
 def lst_deg(jd_ut1_day: float, jd_ut1_frac: float, east_longitude_deg: float) -> float:
     """Local mean sidereal time in degrees, [0, 360): GMST + east longitude."""
-    v = (gmst82_deg(jd_ut1_day, jd_ut1_frac) + east_longitude_deg) % 360.0
+    if not math.isfinite(east_longitude_deg):  # 2026-10-05 probe: NaN/inf longitude returned nan (R3)
+        raise ValueError("east longitude must be finite")
+    v =(gmst82_deg(jd_ut1_day, jd_ut1_frac) + east_longitude_deg) % 360.0
     return 0.0 if v >= 360.0 else v

@@ -1,5 +1,6 @@
 """Tests written from mutation survivors (12_EVIDENCE/mutation/star_cdm_20261004.json, score 0.710). One survivor
-group was dead code (a units table overwritten on the next line): removed, not tested."""
+group was dead code (a units table overwritten on the next line): removed, not tested.
+Verifies: R1, R2, R3 (README)."""
 from pathlib import Path
 
 from star_cdm import UNITS, consistency_report, parse_cdm

@@ -1,6 +1,7 @@
 """Reproducible benchmark: re-run the Orekit CdmParser (WSL /root/orekit_venv, OpenJDK 17) on the corrected official
 examples and compare 6 fields with star_cdm. Skips ONLY if the oracle runtime is absent (explicit reason); any
-disagreement or oracle error is a failure."""
+disagreement or oracle error is a failure.
+Verifies: R3 (README)."""
 import json
 import shutil
 import subprocess

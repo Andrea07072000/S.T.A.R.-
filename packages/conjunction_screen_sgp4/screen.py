@@ -109,6 +109,21 @@ def refine_tca(state_at, step: float, iterations: int = 3):
 
 def screen(paths, start: datetime, hours: float, step: float, coarse_km, final_km: float, cross_only: bool = False,
            refine: str = "linear"):
+    # 2026-10-05, probe with hostile inputs. Each of these returned "no conjunction" or a shifted window SILENTLY:
+    # final_km NaN or < 0 -> 0 events; coarse_km < final_km -> the coarse filter dropped every encounter -> 0 events;
+    # a start with a non-UTC offset was read as UTC wall time (window shifted by the offset); a naive start was
+    # propagated as UTC but its TCA computed with start.timestamp(), i.e. LOCAL time. step <= 0 / hours < 0 / NaN
+    # failed with unrelated errors. A screening that can answer "nothing close" for a bad input must refuse instead.
+    if not isinstance(start, datetime) or start.tzinfo is None or start.utcoffset() is None:
+        raise ValueError("start must be a timezone-aware datetime (UTC recommended)")
+    start = start.astimezone(timezone.utc)
+    for name, val, ok in (("step", step, lambda x: x > 0), ("hours", hours, lambda x: x >= 0),
+                          ("final_km", final_km, lambda x: x > 0)):
+        if not (isinstance(val, (int, float)) and np.isfinite(val) and ok(val)):
+            raise ValueError(f"{name} must be finite and {'> 0' if name != 'hours' else '>= 0'}, got {val!r}")
+    if coarse_km is not None and not (np.isfinite(coarse_km) and coarse_km >= final_km):
+        raise ValueError(f"coarse_km must be finite and >= final_km ({final_km}), got {coarse_km!r}: a smaller coarse "
+                         "radius would discard encounters before refinement")
     if coarse_km is None:
         # raggio minimo che non perde incontri: soglia + meta' dello spostamento relativo massimo in un passo (LEO <= 15,5 km/s)
         coarse_km = final_km + 15.5 * step / 2 + 1.0
@@ -266,7 +281,9 @@ def main(argv=None):
     ap.add_argument("--final-km", type=float, default=5)
     ap.add_argument("--out", required=True)
     a = ap.parse_args(argv)
-    start = datetime.fromisoformat(a.start).replace(tzinfo=timezone.utc)
+    start = datetime.fromisoformat(a.start)
+    # documented as UTC: a time without offset is UTC; an explicit offset is honoured (replace() used to overwrite it)
+    start = start.replace(tzinfo=timezone.utc) if start.tzinfo is None else start.astimezone(timezone.utc)
     res = screen(a.tle, start, a.hours, a.step, a.coarse_km, a.final_km, a.cross_only, a.refine)
     Path(a.out).parent.mkdir(parents=True, exist_ok=True)
     Path(a.out).write_text(json.dumps(res, indent=1, ensure_ascii=False), encoding="utf-8")

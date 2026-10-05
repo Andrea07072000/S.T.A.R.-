@@ -16,6 +16,8 @@ import math
 import subprocess
 from typing import Dict, List
 
+from audit_guard import finite_rows  # a NaN must be a refusal, never vanish inside max() (2026-10-05)
+
 VALIDATION_TOL_S = 50e-6
 BOOT = "import json, sys\npayload = json.loads(sys.stdin.read())\nexec(payload['code'])\n"
 RUNNER = ("\nimport json as __ta_json\n__ta_out = []\nfor __ta_jd in payload['epochs']:\n"
@@ -45,7 +47,7 @@ def run(command: List[str], driver: str, epochs: List[float], env: Dict | None =
 
 def audit(impls: Dict[str, Dict], epochs: List[float] | None = None) -> Dict:
     epochs = epochs or default_epochs()
-    res = {n: run(i["command"], i["driver"], epochs, i.get("env")) for n, i in impls.items()}
+    res = {n: finite_rows(run(i["command"], i["driver"], epochs, i.get("env")), ["v"]) for n, i in impls.items()}
     validation = {}
     for n, rows in res.items():
         errs = [abs(x["v"] - low_precision(jd)) for jd, x in zip(epochs, rows) if "v" in x]

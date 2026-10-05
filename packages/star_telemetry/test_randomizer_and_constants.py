@@ -1,7 +1,8 @@
 # SPDX-License-Identifier: Apache-2.0
 """Regression for the CCSDS pseudo-randomizer (found 2026-10-04 by mutation review: exported and imported by two test
 files, never checked against a value; output was ff1aaf66.. instead of the published sequence) plus the constants
-whose mutants survived. Reference: CCSDS 131.0-B pseudo-randomizer, h(x) = x^8 + x^7 + x^5 + x^3 + 1, all-ones seed."""
+whose mutants survived. Reference: CCSDS 131.0-B pseudo-randomizer, h(x) = x^8 + x^7 + x^5 + x^3 + 1, all-ones seed.
+Verifies: R2 (README)."""
 import pytest
 
 from star_telemetry import CCSDS_ASM, compute_crc16_ccitt, generate_ccsds_randomizer_sequence

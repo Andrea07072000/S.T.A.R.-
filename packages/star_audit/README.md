@@ -102,3 +102,55 @@ That these libraries are "wrong": they may be tuned for near-surface use; other 
 - First audit (2026-10-05, `run_packet_audit.py`): spacepackets, ccsdspy and star_telemetry 0.2.5 reject every length
   defect; spacepackets and ccsdspy accept version != 0 (40/40); star_telemetry rejects it since 0.2.4 (fix prompted by
   this audit).
+
+## Kepler-equation audit (`kepler_audit`)
+- R13 `audit(impls, cases)`: elliptic Kepler solvers M -> E. Probe validation: Vallado Example 2-1 (M = 235.4 deg,
+  e = 0.4 -> E = 220.512074767522 deg, tolerance 1e-9 rad). Truth: 8 eccentricities (0 to 0.9999) x 41 anomalies, the
+  exact inverse (40 digits, mpmath) of the double M sent to each library; circular error. A non-finite answer on a
+  regular case is a refusal. Hostile inputs (NaN, inf, e = 1, e > 1, e < 0, huge or negative M) are recorded as a
+  behaviour category per library. Corpus fingerprint pinned.
+- First audit (2026-10-05, `run_kepler_audit.py`): hapsira, Orekit and star_elements agree with the truth to <= 2.9e-12
+  rad on every case. Basilisk 2.12 `utilities.orbitalMotion.M2E` (pure Python Newton from E0 = M) returns -1.6e27 rad at
+  e = 0.9999, M = 0.228: after its iteration cap it prints a message and returns the unconverged value (max error 1.79
+  rad on the circle). hapsira and Orekit return a value for e >= 1 and e < 0 from their elliptic solvers; Basilisk and
+  star_elements raise. The same audit made star_elements refuse a solvable case (e = 0.99, M = 6.2776: plain Newton
+  stalled on rounding noise); fixed with a bracketed Newton.
+- Fifth lineage (same day): NAIF CSPICE `conics` (C translated from Fortran), E recovered from the perifocal state.
+  It agrees to <= 1.1e-13 rad up to e = 0.99, but reaches 3.1e-7 rad at e = 0.9999 just before periapsis
+  (E = 2 pi - 1e-4). Isolated by changing one variable: the same angle passed as M0 - 2 pi gives 8.6e-12. The loss comes
+  from propagating almost a full period from periapsis inside `conics`, not from the recovery formula (exact on the
+  exact state) - callers near e = 1 should pass M0 in (-pi, pi]. Reported as a usage note, not a defect.
+
+## Lambert-solver audit (`lambert_audit`)
+- R14 `audit(impls, cases)`: zero-revolution Lambert solvers, driver `lambert(r1, r2, tof, mu) -> v1` (prograde). Probe
+  validation: Curtis Example 5.2 (v1 = (-5.9925, 1.9254, 3.2456) km/s, tolerance 1e-4 km/s). Truth without any Lambert
+  solver: 315 cases built from known orbits (3 semi-major axes x 5 eccentricities up to 0.95 x 3 inclinations x 7
+  transfer angles from 10 to 330 deg); r1, r2 and the true v1 from the closed-form perifocal equations, time of flight
+  from the forward chain nu -> E -> M. A non-finite or wrong-length answer is a refusal. Hostile inputs (NaN, tof <= 0,
+  zero vector, 0 and 180 deg transfers) are recorded per library. Corpus fingerprint pinned.
+- First audit (2026-10-05, `run_lambert_audit.py`): hapsira `izzo`, Orekit `IodLambert` and star_lambert reproduce the
+  true v1 to <= 1.8e-10 km/s on all 315 cases; hapsira `vallado` to 3.3e-7 km/s (its rtol is 1e-8).
+- Finding (candidate, isolated by changing one variable): the direction flag does not mean the same thing everywhere.
+  In hapsira `izzo`, `prograde=True` is the direction of motion and is right for every transfer angle. In hapsira
+  `vallado` the parameter with the SAME name selects the short way, and Orekit `IodLambert`'s `posigrade` behaves the
+  same on prograde orbits: with the flag left at True both return the other solution on the 135 transfers beyond 180
+  deg (error up to 91 km/s, no exception); with the flag set from the geometry (short way iff cross(r1, r2).z >= 0)
+  they agree with the truth (3.3e-7 and 7.4e-13 km/s). The drivers here set the flag from the geometry; the raw-flag
+  drivers are kept (`LAM_*_RAWFLAG`) to reproduce the finding.
+- Hostile inputs: star_lambert raises ValueError on all 7; hapsira `izzo` raises (AssertionError / ValueError); hapsira
+  `vallado` returns a value for a 0-degree transfer; Orekit returns NaN for NaN/zero time of flight and for 0 and 180
+  degree transfers.
+
+## Two-body propagator audit (`propagation_audit`)
+- R15 `audit(impls, cases)`: Kepler propagators, driver `propagate(r0, v0, tof, mu) -> [x, y, z, vx, vy, vz]`. Probe
+  validation: Vallado Example 2-4 (1e-3 km, 1e-5 km/s; the constant was cross-checked with NAIF prop2b). Truth without
+  any propagator: 450 known orbits (3 semi-major axes x 5 eccentricities up to 0.95 x 3 inclinations x 5 transfer
+  angles x 0 or 10 whole revolutions), states from the closed-form perifocal equations. A non-finite or wrong-length
+  answer is a refusal. Each hostile input runs alone with a 120 s deadline; no answer is recorded as `error:Hang`.
+- First audit (2026-10-06, `run_propagation_audit.py`), maximum position error over the 450 cases: hapsira farnocchia
+  4.6e-7 km, Orekit KeplerianPropagator 5.0e-7 km, NAIF prop2b 5.1e-7 km, hapsira vallado 4.3e-5 km. The composition
+  of S.T.A.R. classical-element conversions refused the 90 circular cases (singular elements) and lost 4.4e-4 km on one
+  case: this is why `star_kepler` (universal variables, 4.7e-7 km, no refusal) was written the same day.
+- Hostile inputs: hapsira `vallado` never returns for a NaN time, a NaN position or a negative mu (deadline hit);
+  NAIF prop2b returns a value for a NaN time; hapsira farnocchia returns NaN for a NaN time and for a negative mu;
+  Orekit raises or returns NaN. Candidates, not reported upstream.

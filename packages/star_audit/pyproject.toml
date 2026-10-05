@@ -4,11 +4,11 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "star-audit"
-version = "0.10.0"
+version = "0.12.0"
 description = "S.T.A.R. Assurance: accuracy envelope of third-party ECEF to geodetic conversions against an exact reference, per altitude band."
 requires-python = ">=3.9"
-dependencies = ["star-geodesy>=0.1.0"]
+dependencies = ["star-geodesy>=0.1.0", "mpmath>=1.3"]
 license = {text = "Apache-2.0"}
 
 [tool.setuptools]
-py-modules = ["star_audit", "leapsec_audit", "sgp4_audit", "frame_audit", "frame_drivers", "ccsds_audit", "tdb_audit", "gmst_audit", "elements_audit", "tle_audit", "packet_audit", "corpus_fingerprint"]
+py-modules = ["star_audit", "leapsec_audit", "sgp4_audit", "frame_audit", "frame_drivers", "ccsds_audit", "tdb_audit", "gmst_audit", "elements_audit", "tle_audit", "packet_audit", "corpus_fingerprint", "audit_guard", "kepler_audit", "lambert_audit", "propagation_audit"]

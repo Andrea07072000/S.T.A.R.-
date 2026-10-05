@@ -33,9 +33,14 @@ def envelope(truth: Sequence[Tuple[float, float, float]], answers: Sequence[Tupl
     bands: Dict[float, Dict[str, float]] = {}
     for (la, lo, h), (la2, lo2, h2) in zip(truth, answers):
         x0 = geodetic_to_ecef(la, lo, h)
+        b = bands.setdefault(h, {"lat_err_deg": 0.0, "h_err_m": 0.0, "pos_err_m": 0.0, "non_finite": 0})
+        if not all(map(math.isfinite, (la2, lo2, h2))):
+            # 2026-10-05: max(0.0, nan) == 0.0 hid a NaN answer; a non-finite answer is an infinite error
+            b["non_finite"] += 1
+            b["lat_err_deg"] = b["h_err_m"] = b["pos_err_m"] = math.inf
+            continue
         x1 = geodetic_to_ecef(la2, lo2, h2)
         d3 = math.dist(x0, x1)
-        b = bands.setdefault(h, {"lat_err_deg": 0.0, "h_err_m": 0.0, "pos_err_m": 0.0})
         b["lat_err_deg"] = max(b["lat_err_deg"], abs(la2 - la))
         b["h_err_m"] = max(b["h_err_m"], abs(h2 - h))
         b["pos_err_m"] = max(b["pos_err_m"], d3)

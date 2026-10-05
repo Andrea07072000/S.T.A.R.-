@@ -1,7 +1,8 @@
 """Reference for the TCA refinement used by the screening: CCSDS 508.0-B-1 example 3.6.2 (official CDM) gives the two
 state vectors AT TCA (2010-03-13T22:37:52.618) with MISS_DISTANCE 715 m (the states themselves give 715.75 m).
 Starting the refinement 40 s before TCA with two-body motion, it must return TCA within 1 ms and the miss distance of
-the published states within 1 m. Propagation here is an independent RK4 two-body integrator (not SGP4)."""
+the published states within 1 m. Propagation here is an independent RK4 two-body integrator (not SGP4).
+Verifies: R3 (README)."""
 import math
 
 import numpy as np

@@ -2,6 +2,7 @@
 # Copyright 2026 S.T.A.R.
 """
 test_federation.py: Automated verification suite for star_orbit federated with star_timescales.
+Verifies: R1 (README).
 """
 
 import math

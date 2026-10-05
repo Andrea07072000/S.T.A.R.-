@@ -9,6 +9,7 @@ Acceptance criteria (Directive Block D-002):
 - Packet-by-packet equality table across all packets
 - Frame source with upstream URL + SHA256
 - Third-party decoder license recorded: ccsdspy (BSD-3-Clause)
+Verifies: R1, R2 (README).
 """
 
 import os

@@ -1,6 +1,7 @@
 """Official examples of CCSDS 508.0-B-1 sec. 3.6 (extracted verbatim from the public PDF into fixtures/) plus
 malformed messages. Findings in the standard itself are asserted, not hidden: example 3.6.3 writes 'TRACKS USED'
-(table 3-3 defines TRACKS_USED) and example 3.6.4 gives object states 55,000 km apart for a 104.92 m miss distance."""
+(table 3-3 defines TRACKS_USED) and example 3.6.4 gives object states 55,000 km apart for a 104.92 m miss distance.
+Verifies: R1, R2, R3 (README)."""
 import re
 from pathlib import Path
 

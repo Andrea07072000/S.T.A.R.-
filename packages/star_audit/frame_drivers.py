@@ -357,3 +357,155 @@ def teme_to_gcrs(utc, r):
     R = TEME.rotation_at(tt)
     return [sum(R[j][i] * r[j] for j in range(3)) for i in range(3)]
 '''
+
+
+# --- Kepler equation solvers (kepler_audit), driver contract: m_to_e(M, e) -> E [rad] ---
+KEP_HAPSIRA = '''
+from hapsira.core.angles import M_to_E
+def m_to_e(M, e):
+    return float(M_to_E(M, e))
+'''
+
+KEP_BASILISK = '''
+from Basilisk.utilities import orbitalMotion as _om
+def m_to_e(M, e):
+    return _om.M2E(M, e)
+'''
+
+KEP_OREKIT = '''
+import orekit_jpype
+orekit_jpype.initVM()
+from org.orekit.orbits import KeplerianAnomalyUtility as _K
+def m_to_e(M, e):
+    return _K.ellipticMeanToEccentric(float(e), float(M))
+'''
+
+KEP_STAR = '''
+from star_elements import mean_to_eccentric
+def m_to_e(M, e):
+    return mean_to_eccentric(M, e)
+'''
+
+# SPICE (NAIF CSPICE, C translated from Fortran): conics() solves Kepler's equation internally; E is recovered from the
+# perifocal position x = a (cos E - e), y = a sqrt(1 - e^2) sin E (rp = 1 - e, a = 1, mu = 1, M0 = M at t = t0)
+KEP_SPICE = '''
+import math
+import spiceypy as _sp
+def m_to_e(M, e):
+    if not 0.0 <= e < 1.0:
+        raise ValueError("elliptic driver: 0 <= e < 1")
+    rp = 1.0 - e
+    s = _sp.conics([rp, e, 0.0, 0.0, 0.0, M, 0.0, 1.0], 0.0)
+    return math.atan2(s[1] / math.sqrt(1.0 - e * e), s[0] + e) % (2.0 * math.pi)
+'''
+
+
+# --- Lambert solvers (lambert_audit), driver contract: lambert(r1, r2, tof, mu) -> v1 [km/s], prograde, 0 revolutions ---
+LAM_HAPSIRA_IZZO = '''
+import numpy as _np
+from hapsira.core.iod import izzo as _izzo
+def lambert(r1, r2, tof, mu):
+    return _izzo(mu, _np.array(r1, dtype=float), _np.array(r2, dtype=float), tof, 0, True, True, 35, 1e-8)[0]
+'''
+
+LAM_HAPSIRA_VALLADO = '''
+import numpy as _np
+from hapsira.core.iod import vallado as _vallado
+def lambert(r1, r2, tof, mu):
+    # in hapsira.core.iod.vallado the flag named `prograde` selects the SHORT way (measured 2026-10-05, DISC-LAMBERT-001):
+    # for a prograde orbit the short way is the one with cross(r1, r2).z >= 0
+    short = r1[0] * r2[1] - r1[1] * r2[0] >= 0
+    return _vallado(mu, _np.array(r1, dtype=float), _np.array(r2, dtype=float), tof, 0, bool(short), True, 100, 1e-8)[0]
+'''
+
+LAM_OREKIT = '''
+import orekit_jpype
+orekit_jpype.initVM()
+from orekit_jpype.pyhelpers import setup_orekit_data
+setup_orekit_data("/root/orekit-data.zip", from_pip_library=False)
+from org.orekit.estimation.iod import IodLambert
+from org.orekit.frames import FramesFactory
+from org.orekit.time import AbsoluteDate
+from org.hipparchus.geometry.euclidean.threed import Vector3D
+_f, _t0 = FramesFactory.getGCRF(), AbsoluteDate.J2000_EPOCH
+def lambert(r1, r2, tof, mu):
+    # IodLambert's `posigrade` behaves as a short-way flag on prograde orbits (measured 2026-10-05, DISC-LAMBERT-001)
+    short = r1[0] * r2[1] - r1[1] * r2[0] >= 0
+    o = IodLambert(mu * 1e9).estimate(_f, bool(short), 0, Vector3D(r1[0] * 1e3, r1[1] * 1e3, r1[2] * 1e3), _t0,
+                                      Vector3D(r2[0] * 1e3, r2[1] * 1e3, r2[2] * 1e3), _t0.shiftedBy(float(tof)))
+    v = o.getPVCoordinates().getVelocity()
+    return [v.getX() / 1e3, v.getY() / 1e3, v.getZ() / 1e3]
+'''
+
+LAM_STAR = '''
+from star_lambert import lambert as _l
+def lambert(r1, r2, tof, mu):
+    return _l(r1, r2, tof, mu)[0]
+'''
+
+# raw-flag variants kept to REPRODUCE the finding (flag always True): wrong by up to 91 km/s on transfers > 180 deg
+LAM_HAPSIRA_VALLADO_RAWFLAG = LAM_HAPSIRA_VALLADO.replace("bool(short), True, 100", "True, True, 100")
+LAM_OREKIT_RAWFLAG = LAM_OREKIT.replace("estimate(_f, bool(short), 0", "estimate(_f, True, 0")
+
+
+# --- two-body propagators (propagation_audit), driver contract: propagate(r0, v0, tof, mu) -> [x, y, z, vx, vy, vz] ---
+PROP_HAPSIRA_FARNOCCHIA = '''
+import numpy as _np
+from hapsira.core.propagation.farnocchia import farnocchia_rv as _f
+def propagate(r0, v0, tof, mu):
+    r, v = _f(mu, _np.array(r0, dtype=float), _np.array(v0, dtype=float), tof)
+    return list(r) + list(v)
+'''
+
+PROP_HAPSIRA_VALLADO = '''
+import numpy as _np
+from hapsira.core.propagation import vallado as _v
+def propagate(r0, v0, tof, mu):
+    r0a, v0a = _np.array(r0, dtype=float), _np.array(v0, dtype=float)
+    f, g, fdot, gdot = _v(mu, r0a, v0a, tof, 350)
+    return list(f * r0a + g * v0a) + list(fdot * r0a + gdot * v0a)
+'''
+
+PROP_SPICE = '''
+import spiceypy as _sp
+def propagate(r0, v0, tof, mu):
+    return list(_sp.prop2b(mu, list(r0) + list(v0), tof))
+'''
+
+PROP_OREKIT = '''
+import orekit_jpype
+orekit_jpype.initVM()
+from orekit_jpype.pyhelpers import setup_orekit_data
+setup_orekit_data("/root/orekit-data.zip", from_pip_library=False)
+from org.orekit.frames import FramesFactory
+from org.orekit.orbits import CartesianOrbit
+from org.orekit.propagation.analytical import KeplerianPropagator
+from org.orekit.time import AbsoluteDate
+from org.orekit.utils import PVCoordinates
+from org.hipparchus.geometry.euclidean.threed import Vector3D
+_fr, _t0 = FramesFactory.getGCRF(), AbsoluteDate.J2000_EPOCH
+def propagate(r0, v0, tof, mu):
+    pv = PVCoordinates(Vector3D(r0[0] * 1e3, r0[1] * 1e3, r0[2] * 1e3), Vector3D(v0[0] * 1e3, v0[1] * 1e3, v0[2] * 1e3))
+    st = KeplerianPropagator(CartesianOrbit(pv, _fr, _t0, mu * 1e9)).propagate(_t0.shiftedBy(float(tof)))
+    q = st.getPVCoordinates()
+    p, v = q.getPosition(), q.getVelocity()
+    return [p.getX() / 1e3, p.getY() / 1e3, p.getZ() / 1e3, v.getX() / 1e3, v.getY() / 1e3, v.getZ() / 1e3]
+'''
+
+PROP_STAR = '''
+import math
+from star_elements import rv_to_coe, coe_to_rv, true_to_eccentric, eccentric_to_mean, mean_to_eccentric, eccentric_to_true
+def propagate(r0, v0, tof, mu):
+    h, e, i, raan, argp, nu = rv_to_coe(r0, v0, mu)
+    a = h * h / mu / (1 - e * e)
+    M = eccentric_to_mean(true_to_eccentric(nu, e), e) + math.sqrt(mu / a ** 3) * tof
+    r, v = coe_to_rv(h, e, i, raan, argp, eccentric_to_true(mean_to_eccentric(M, e), e), mu)
+    return list(r) + list(v)
+'''
+
+PROP_STAR_KEPLER = '''
+from star_kepler import propagate as _p
+def propagate(r0, v0, tof, mu):
+    r, v = _p(r0, v0, tof, mu)
+    return list(r) + list(v)
+'''

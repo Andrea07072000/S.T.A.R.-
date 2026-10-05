@@ -18,7 +18,7 @@ being true, that workflow turns red in public.
 
 | Package | What it does | Notable evidence |
 |---|---|---|
-| `star_audit` | **Independent auditors of other space libraries**: geodesy, leap seconds, SGP4, TEME→GCRS frames, TDB−TT, GMST, orbital elements, CCSDS TM frames, CCSDS Space Packets, TLE ingestion | each auditor is first validated on a published value; it measures agreement, model families and what a library silently accepts |
+| `star_audit` | **Independent auditors of other space libraries**: geodesy, leap seconds, SGP4, TEME→GCRS frames, TDB−TT, GMST, orbital elements, Kepler's equation, Lambert solvers, CCSDS TM frames, CCSDS Space Packets, TLE ingestion | each auditor is first validated on a published value; it measures agreement, model families and what a library silently accepts |
 | `star_crosscheck` | Cross-check engine: runs the same computation through independent implementations and reports AGREE / DISAGREE / INSUFFICIENT / DEGRADED, never a silent pass | 13 campaigns (time scales, geodesy, SGP4, CCSDS, Lambert, elements, TDB, GMST...) with recorded evidence |
 | `star_telemetry_c` | The CCSDS AOS/TM frame check in C99 (no dynamic memory), for flight-like targets | field-equal to the Python reference on 305 frames (5 NASA F Prime frames + 300 corrupted); every truncation of every frame parsed under AddressSanitizer + UBSan; built with `-Werror` on x86_64 and, under qemu-user, aarch64 and riscv64 in this repository's CI |
 | `star_telemetry` | CCSDS AOS/TM transfer frames and Space Packets (Python) | field-exact against spacepackets and ccsdspy on 300 frames; real NASA Europa Clipper telemetry (ccsdspy test data) |
@@ -39,6 +39,17 @@ being true, that workflow turns red in public.
   orbits (zeroed angle, the Vallado sentinel 999999.1 rad, a computed value, a refusal).
 - **Space Packets**: three decoders reject every length defect; packets with Packet Version Number ≠ 0 are accepted by
   two of them.
+- **Kepler's equation** (5 solvers against a 40-digit truth, eccentricity up to 0.9999): hapsira, Orekit and our
+  solver agree to 3e-12 rad; one solver returns an unconverged value (about -1.6e27 rad) at e = 0.9999 after printing a
+  message; NAIF `conics` loses precision near e = 1 unless the mean anomaly is given in (-pi, pi] (a usage note).
+- **Lambert solvers** (4 solvers against the velocity of 315 known orbits): all agree to 1e-10 .. 3e-7 km/s - once the
+  direction flag is set from the geometry. The flag does not mean the same thing everywhere: in one solver it is the
+  direction of motion, in two others the same kind of flag selects the short way, and leaving it at `True` returns the
+  other solution on every transfer beyond 180 degrees (up to 91 km/s, no exception).
+- **Input validation** (found by probing every error requirement with NaN, infinity, zero and degenerate inputs): our
+  propagator looped forever on a zero step, our screening answered "no conjunction" for a NaN threshold, our
+  cross-check accepted an infinite tolerance, our CDM parser accepted `NaN` and `1_000` as numbers. All fixed, each
+  with a contract test.
 - Our own code was not spared: the same cross-checks found and fixed defects in our CCSDS randomizer, in our TM frame
   decoder (Python and C) and in our screening pipeline.
 

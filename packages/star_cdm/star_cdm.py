@@ -52,6 +52,11 @@ TABLE_KEYS = {  # extracted from the keyword tables of CCSDS 508.0-B-1 (sec. 3.2
 EXT_COV = re.compile(r"^C(DRG|SRP|THR)_(R|T|N|RDOT|TDOT|NDOT|DRG|SRP|THR)$")
 
 
+NUMBER = re.compile(r"^[+-]?(\d+\.?\d*|\.\d+)([eE][+-]?\d+)?$")
+# values that cannot exist: a distance or a speed below zero, a probability outside [0, 1]
+RANGES = {"MISS_DISTANCE": (0.0, math.inf), "RELATIVE_SPEED": (0.0, math.inf), "COLLISION_PROBABILITY": (0.0, 1.0)}
+
+
 def _known(key: str) -> bool:
     return key in TABLE_KEYS or key in STATE or key in COV or bool(EXT_COV.match(key))
 
@@ -107,10 +112,15 @@ def parse_cdm(text: str) -> Dict:
         elif key in TEXT or key.startswith("OPERATOR_"):
             target[key] = val
         else:
-            try:
-                target[key] = float(val)
-            except ValueError:
-                raise CdmFormatError(f"line {n}: {key} must be numeric, got {val!r}") from None
+            # 2026-10-05, probe of R2: float() also accepted 'NaN', 'inf', '1_000' and overflowed '1e400' to inf;
+            # none is a KVN number (CCSDS 502.0 / 508.0 decimal or exponential notation), so all are malformations
+            x = float(val) if NUMBER.match(val) else None
+            if x is None or not math.isfinite(x):
+                raise CdmFormatError(f"line {n}: {key} must be numeric (a finite decimal number), got {val!r}")
+            lo, hi = RANGES.get(key, (-math.inf, math.inf))
+            if not lo <= x <= hi:
+                raise CdmFormatError(f"line {n}: {key} = {val} outside its physical range [{lo}, {hi}]")
+            target[key] = x
     if len(objects) != 2:
         raise CdmFormatError(f"a CDM has exactly 2 objects, found {len(objects)}")
     miss = [k for k in HEADER_REQ + RELATIVE_REQ if k not in head]

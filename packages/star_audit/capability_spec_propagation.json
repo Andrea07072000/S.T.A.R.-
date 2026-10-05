@@ -1,0 +1,27 @@
+{
+ "id": "star.audit.propagation",
+ "name": "STAR Assurance \u2014 two-body propagator audit",
+ "domain": "assurance",
+ "summary": "Differential audit of Kepler propagators (hapsira farnocchia and vallado, Orekit KeplerianPropagator, NAIF prop2b, S.T.A.R.) against the closed-form state of 450 known orbits, including 10 whole revolutions, with probe validation on a published example and a deadline that records solvers which never answer.",
+ "package_dir": "08_PROTOTYPES/star_audit",
+ "module": "propagation_audit.py",
+ "xc": null,
+ "reference": "Vallado, Fundamentals of Astrodynamics and Applications, Example 2-4: r = (-4219.7527, 4363.0292, -3958.7666) km, v = (3.689866, -1.916735, -6.112511) km/s after 40 min; truth = closed-form state of a known orbit",
+ "reference_observed": "all 5 implementations reproduce the printed state within 4.8e-5 km; a synthetic propagator with a 1e-9 clock-rate error passes the probe and is exposed only after 10 revolutions",
+ "na": {
+  "G-02": "single-module tool",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R15",
+  "G-03": "case(), corpus(), run(), audit(), category()",
+  "G-04": "km, km/s, s, radians internally; km^3/s^2",
+  "G-06": "corpus generated in-repo from closed-form equations, fingerprint of the rounded corpus pinned",
+  "G-08": "subprocess only for the audited solver; inputs via stdin; runner names prefixed",
+  "G-13": "failed run raises with stderr tail; non-finite or wrong-length answer is a refusal; hostile inputs run alone with a deadline (error:Hang); a propagator failing the probe is not compared"
+ }
+}

@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "star-orbit"
-version = "0.2.1"
+version = "0.2.2"
 description = "S.T.A.R. Astrodynamics: Cowell high-fidelity numerical perturbation orbit propagator federated with star_timescales."
 requires-python = ">=3.9"
 dependencies = ["star-timescales>=0.2.0"]

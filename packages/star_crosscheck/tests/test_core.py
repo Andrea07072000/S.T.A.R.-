@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-"""Tests of the verification rules of star_crosscheck. Each test fails if its rule is removed from core.py."""
+"""Tests of the verification rules of star_crosscheck. Each test fails if its rule is removed from core.py.
+Verifies: R1, R2, R3, R4, R5 (README)."""
 import json
 import sys
 

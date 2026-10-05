@@ -17,6 +17,8 @@ import math
 import subprocess
 from typing import Dict, List
 
+from audit_guard import finite_rows  # a NaN must be a refusal, never vanish inside max() (2026-10-05)
+
 VALLADO_UTC = "2004-04-06T07:51:28.386009"
 VALLADO_TEME = [5094.18016210, 6127.64465950, 6380.34453270]
 VALLADO_GCRF = [5102.50895790, 6123.01140070, 6378.13692820]   # km, Vallado ex. 3-15 / teme2eci companion values
@@ -49,7 +51,7 @@ def run(command: List[str], driver: str, cases: List) -> List[Dict]:
 def audit(impls: Dict[str, Dict], cases: List | None = None) -> Dict:
     """impls = {name: {'command': [...], 'driver': code, 'lineage': str}}. Case 0 must be the Vallado case."""
     cases = cases or default_cases()
-    res = {n: run(i["command"], i["driver"], cases) for n, i in impls.items()}
+    res = {n: finite_rows(run(i["command"], i["driver"], cases), ["r"]) for n, i in impls.items()}
     validated = {}
     for n, rows in res.items():
         x = rows[0]

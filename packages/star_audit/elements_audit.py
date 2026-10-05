@@ -19,6 +19,8 @@ import random
 import subprocess
 from typing import Dict, List
 
+from audit_guard import finite_rows  # a NaN must be a refusal, never vanish inside max() (2026-10-05)
+
 MU = 398600.4418
 VALLADO_RV = ([6524.834, 6862.875, 6448.296], [4.901327, 5.533756, -1.976341])
 VALLADO_COE = {"p": 11067.790, "e": 0.832853, "i": 87.870, "raan": 227.898, "argp": 53.38, "nu": 92.335}
@@ -95,6 +97,9 @@ def audit(impls: Dict[str, Dict], cases: List[Dict] | None = None) -> Dict:
     cases = cases or corpus()
     payload = [list(VALLADO_RV)] + [[c["r"], c["v"]] for c in cases]
     res = {n: run(i["command"], i["driver"], payload, i.get("env")) for n, i in impls.items()}
+    guarded = {0} | {k for k, c in enumerate(cases, start=1) if c["kind"] == "regular"}
+    res = {n: [finite_rows([row], ["c"])[0] if k in guarded else row for k, row in enumerate(rows)]
+           for n, rows in res.items()}
     validation = {}
     for n, rows in res.items():
         x = rows[0]

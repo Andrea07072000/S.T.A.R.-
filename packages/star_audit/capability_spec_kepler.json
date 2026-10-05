@@ -1,0 +1,13 @@
+{
+ "id": "star.audit.kepler",
+ "name": "STAR Assurance — Kepler-equation solver audit",
+ "domain": "assurance",
+ "summary": "Differential audit of elliptic Kepler solvers M -> E (hapsira, Basilisk, Orekit, star_elements) against a 40-digit truth over 8 eccentricities up to 0.9999, with probe validation on a published example and a record of what each solver does with hostile inputs.",
+ "package_dir": "08_PROTOTYPES/star_audit",
+ "module": "kepler_audit.py",
+ "xc": null,
+ "reference": "Vallado, Fundamentals of Astrodynamics and Applications, Example 2-1: M = 235.4 deg, e = 0.4 -> E = 220.512074767522 deg; truth = exact inverse (mpmath, 40 digits) of the double M sent to each library",
+ "reference_observed": "the printed E maps forward to M = 235.4 deg within 9e-14 deg; all 4 implementations reproduce it within 1.4e-15 rad; a synthetic Newton-from-E0=M solver diverges at e = 0.9999 and is measured, not hidden",
+ "na": {"G-02": "single-module tool", "G-09": "no simulation component", "G-10": "not flight software", "G-11": "no hardware", "G-12": "no FDIR role", "G-14": "no performance requirement declared by any user"},
+ "review": {"G-01": "README R13", "G-03": "corpus(), run(), audit(), circ(), category()", "G-04": "radians; circular differences", "G-06": "corpus generated in-repo with mpmath, fingerprint of the rounded corpus pinned", "G-08": "subprocess only for the audited solver; inputs via stdin; runner names prefixed", "G-13": "failed run raises with stderr tail; a non-finite answer is a refusal (audit_guard); a solver failing the probe is not compared"}
+}

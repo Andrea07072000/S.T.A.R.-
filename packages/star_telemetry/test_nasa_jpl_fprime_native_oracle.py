@@ -12,6 +12,7 @@ Provenance:
 - Upstream: https://github.com/nasa/fprime (Apache-2.0)
 - Verified Frames Binary: 08_PROTOTYPES/star_telemetry/fprime_native_frames.bin
 - Ground Truth Metadata: 08_PROTOTYPES/star_telemetry/fprime_native_metadata.json
+Verifies: R1, R2 (README).
 """
 
 import json

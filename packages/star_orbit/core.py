@@ -241,9 +241,20 @@ def propagate_orbit(
     Propagates orbit from initial_state over duration_sec.
     Enforces star_timescales validation on start and end epochs.
     """
+    # 2026-10-05, probe with hostile inputs: step_sec <= 0 looped FOREVER, a negative duration silently returned only
+    # the initial state, NaN/inf position or velocity returned a trajectory of NaN, r = 0 raised ZeroDivisionError,
+    # NaN duration/step failed inside timedelta. All are invalid input: ValueError before any work.
+    if not (isinstance(step_sec, (int, float)) and math.isfinite(step_sec) and step_sec > 0):
+        raise ValueError(f"step_sec must be finite and > 0, got {step_sec!r}")
+    if not (isinstance(duration_sec, (int, float)) and math.isfinite(duration_sec) and duration_sec >= 0):
+        raise ValueError(f"duration_sec must be finite and >= 0 (backward propagation is not supported), got {duration_sec!r}")
+    if not all(math.isfinite(x) for x in (*initial_state.r, *initial_state.v)):
+        raise ValueError("initial position and velocity must be finite")
+    if initial_state.radius == 0.0:
+        raise ValueError("initial position is the Earth's centre")
     if props is None:
         props = SpacecraftProperties()
-        
+
     # Validation gate: throws NaiveDatetimeError or LeapSecondTableError if invalid
     _ = tt_minus_utc(initial_state.epoch)
     final_epoch = initial_state.epoch + timedelta(seconds=duration_sec)

@@ -1,0 +1,13 @@
+{
+ "id": "star.audit.lambert",
+ "name": "STAR Assurance — Lambert-solver audit",
+ "domain": "assurance",
+ "summary": "Differential audit of zero-revolution Lambert solvers (hapsira izzo and vallado, Orekit IodLambert, star_lambert) against the exact v1 of 315 known orbits, with probe validation on a published example and a record of hostile-input behaviour; exposes direction-flag conventions that silently return the other solution.",
+ "package_dir": "08_PROTOTYPES/star_audit",
+ "module": "lambert_audit.py",
+ "xc": null,
+ "reference": "Curtis, Orbital Mechanics for Engineering Students, Example 5.2: v1 = (-5.9925, 1.9254, 3.2456) km/s; truth = v1 of a known orbit, time of flight from the forward chain nu -> E -> M (no Lambert solver involved)",
+ "reference_observed": "all 4 implementations reproduce the printed v1 within 5.2e-5 km/s; a synthetic solver that always takes the short way passes the probe and is measured wrong by more than 10 km/s on transfers beyond 180 deg",
+ "na": {"G-02": "single-module tool", "G-09": "no simulation component", "G-10": "not flight software", "G-11": "no hardware", "G-12": "no FDIR role", "G-14": "no performance requirement declared by any user"},
+ "review": {"G-01": "README R14", "G-03": "case(), corpus(), run(), audit(), category()", "G-04": "km, km/s, s, radians internally; km^3/s^2", "G-06": "corpus generated in-repo from closed-form equations, fingerprint of the rounded corpus pinned", "G-08": "subprocess only for the audited solver; inputs via stdin; runner names prefixed", "G-13": "failed run raises with stderr tail; a non-finite or wrong-length answer is a refusal (audit_guard); a solver failing the probe is not compared"}
+}

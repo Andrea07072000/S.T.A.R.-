@@ -1,6 +1,7 @@
 """Tests written from mutation survivors (12_EVIDENCE/mutation/star_crosscheck_core_20261005.json, score 0.6136):
 the tolerance boundary, norm mode, isolated-runner parsing and error tails, timings, environment and hash
-canonicalisation were not pinned."""
+canonicalisation were not pinned.
+Verifies: R1, R4, R5 (README)."""
 import math
 import platform
 import sys

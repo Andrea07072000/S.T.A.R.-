@@ -207,6 +207,13 @@ class VirtualChannelReceiver:
 
 class CcsdsTransferFrameEngine:
     def __init__(self, frame_length: int = DEFAULT_FRAME_SIZE, has_fecf: bool = True):
+        # 2026-10-05 probe: frame_length 0, -5, NaN and 256.5 were accepted, and a 3-octet frame then failed with
+        # IndexError / struct.error inside parse_frame; has_fecf="no" was taken as True. Refuse at construction.
+        if not isinstance(has_fecf, bool):
+            raise TypeError(f"has_fecf must be a bool, got {has_fecf!r}")
+        minimum = 6 + (2 if has_fecf else 0)          # 6-octet primary header (TM and AOS) + FECF
+        if isinstance(frame_length, bool) or not isinstance(frame_length, int) or frame_length < minimum:
+            raise ValueError(f"frame_length must be an int >= {minimum} octets, got {frame_length!r}")
         self.frame_length = frame_length
         self.has_fecf = has_fecf
         self.virtual_channels: Dict[int, VirtualChannelReceiver] = {}
@@ -273,6 +280,9 @@ class CcsdsTransferFrameEngine:
         return header, data_field
 
     def process_raw_stream(self, stream_bytes: bytes) -> List[SpacePacket]:
+        if not isinstance(stream_bytes, (bytes, bytearray, memoryview)):
+            # a str never matches the ASM: it used to return [] silently, as if the link carried no frame
+            raise TypeError(f"stream must be bytes-like, got {type(stream_bytes).__name__}")
         all_packets = []
         pos = 0
         stream_len = len(stream_bytes)

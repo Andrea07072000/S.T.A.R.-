@@ -1,5 +1,6 @@
 """Tests written from mutation survivors (12_EVIDENCE/mutation/screen_20261004.json, score 0.433): the grid refinement
-path, 2-line TLE files, NORAD de-duplication, the default coarse radius and the event values were never exercised."""
+path, 2-line TLE files, NORAD de-duplication, the default coarse radius and the event values were never exercised.
+Verifies: R1 (README)."""
 from datetime import datetime, timezone
 from pathlib import Path
 

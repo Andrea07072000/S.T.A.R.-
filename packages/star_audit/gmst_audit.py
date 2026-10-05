@@ -16,6 +16,8 @@ import json
 import subprocess
 from typing import Dict, List
 
+from audit_guard import finite_rows  # a NaN must be a refusal, never vanish inside max() (2026-10-05)
+
 VALLADO_JD_UT1 = 2448855.009722222        # 1992-08-20 12:14:00 UT1
 VALLADO_GMST_DEG = 152.578787810           # Vallado, Fundamentals of Astrodynamics, Example 3-5 (IAU 1982)
 VALIDATION_TOL_ARCSEC = 0.1
@@ -48,7 +50,7 @@ def run(command: List[str], driver: str, epochs: List[float], env: Dict | None =
 def audit(impls: Dict[str, Dict], epochs: List[float] | None = None) -> Dict:
     epochs = epochs or default_epochs()
     cases = [VALLADO_JD_UT1] + epochs
-    res = {n: run(i["command"], i["driver"], cases, i.get("env")) for n, i in impls.items()}
+    res = {n: finite_rows(run(i["command"], i["driver"], cases, i.get("env")), ["v"]) for n, i in impls.items()}
     validation = {}
     for n, rows in res.items():
         x = rows[0]

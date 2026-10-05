@@ -9,6 +9,7 @@ Authorities / Standards:
 - CCSDS 301.0-B-4: Time Code Formats (Section 3.2: CCSDS Unsegmented Time Code)
 - Independent Reference 1: First-principles hand-computed mathematical derivation
 - Independent Reference 2: star_timescales public-verified reference implementation
+Verifies: R1 (README).
 """
 
 import struct

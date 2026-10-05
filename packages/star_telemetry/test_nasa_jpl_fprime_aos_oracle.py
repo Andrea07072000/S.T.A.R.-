@@ -11,6 +11,7 @@ External Authority & Upstream Provenance:
 - Upstream Commit: d5b74a3335d6c46e774db6d014862d25d9d0c5c47ec8e1eec70d8e92f2f880e1
 - Component Reference: Svc/Ccsds/AosDeframer/test/ut/AosDeframerTestSupport.cpp
 - Formal Specification: Svc/Ccsds/Types/Types.fpp (CCSDS 732.0-B-4 / 732.0-B-5)
+Verifies: R1, R2, R3 (README).
 """
 
 import struct

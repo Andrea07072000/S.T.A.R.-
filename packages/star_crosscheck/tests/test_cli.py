@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-"""The evidence bundle is tamper-evident: changing a recorded value must be detected by `star-xc verify-bundle`."""
+"""The evidence bundle is tamper-evident: changing a recorded value must be detected by `star-xc verify-bundle`.
+Verifies: R5 (README)."""
 import json
 
 from star_crosscheck import Engine, crosscheck

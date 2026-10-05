@@ -2,7 +2,8 @@
 """Regressione dello screening SGP4 (S.T.A.R., 2026-10-03). Fissa le proprieta' verificate in EXP-C01/EXP-003:
 (1) il rifinimento lineare e quello a griglia danno gli stessi eventi; (2) dimezzare il passo non cambia gli eventi
 (convergenza); (3) il dump e' completo (niente taglio top-N). Fixture: TLE reali Iridium-33 + Cosmos-2251 (sha256 nel
-manifest dei dati), finestra 2 h. Questi test FALLISCONO se il rifinimento o la ricerca grossolana regrediscono."""
+manifest dei dati), finestra 2 h. Questi test FALLISCONO se il rifinimento o la ricerca grossolana regrediscono.
+Verifies: R1, R2 (README)."""
 from datetime import datetime, timezone
 from pathlib import Path
 

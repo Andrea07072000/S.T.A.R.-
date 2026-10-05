@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "star-cdm"
-version = "0.2.0"
+version = "0.2.1"
 description = "S.T.A.R. SSA: strict CCSDS 508.0-B-1 Conjunction Data Message (KVN) parser with consistency report."
 requires-python = ">=3.9"
 dependencies = []

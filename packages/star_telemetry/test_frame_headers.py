@@ -2,7 +2,8 @@
 """Header fields of TM (CCSDS 132.0-B) and AOS (CCSDS 732.0-B) frames, each set to a distinct non-trivial value so that
 mask/shift mutants cannot survive. Found 2026-10-04: the TM path read the MASTER channel count (octet 2) as the VC count
 and the OCF flag as 'replay'. Oracles: frames packed by hand from the standard here, and by spacepackets (independent
-lineage) when it is importable."""
+lineage) when it is importable.
+Verifies: R1, R3 (README)."""
 import struct
 
 import pytest

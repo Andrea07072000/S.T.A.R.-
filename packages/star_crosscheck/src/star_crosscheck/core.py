@@ -84,10 +84,28 @@ def _run_isolated(python: str, code: str, inputs: Dict[str, Any], timeout_s: flo
     return out["value"], out["version"]
 
 
+def _number(x) -> float:
+    # 2026-10-05 probe: "1" (str) and True (bool) were accepted as numbers; NaN/inf compared as values
+    if isinstance(x, bool) or not isinstance(x, (int, float)):
+        raise TypeError(f"engine returned {type(x).__name__} {x!r}, not a number")
+    if not math.isfinite(x):
+        raise ValueError(f"engine returned a non-finite value {x!r}")
+    return float(x)
+
+
 def _as_list(v) -> List[float]:
-    if isinstance(v, (list, tuple)):
-        return [float(x) for x in v]
-    return [float(v)]
+    out = [_number(x) for x in v] if isinstance(v, (list, tuple)) else [_number(v)]
+    if not out:
+        raise ValueError("engine returned an empty vector")   # used to crash crosscheck() in max()
+    return out
+
+
+def _lineage_key(lineage: str) -> str:
+    # 'ERFA' and 'erfa', 'SOFA' and 'SOFA ' are ONE lineage (R2); they used to count as two independent witnesses
+    return " ".join(str(lineage).split()).casefold()
+
+
+DIFF_MODES = ("max_abs", "norm")
 
 
 def _diff(a: List[float], b: List[float], mode: str) -> float:
@@ -105,15 +123,33 @@ def crosscheck(quantity: str, inputs: Dict[str, Any], engines: Sequence[Engine],
     reference (optional): a published value {"value": ..., "source": "..."}; it is compared too, but it is reported
     separately and never counts as an engine lineage (a citation is not a computation).
     """
+    # 2026-10-05 probe: an infinite tolerance gave AGREE for 1 vs 1e9, a misspelt diff_mode silently fell back to
+    # max_abs (AGREE where 'norm' disagrees), an infinite reference tolerance hid a wrong published value, and an
+    # empty lineage name counted as a witness. A verification tool must refuse such a configuration.
+    if isinstance(tolerance, bool) or not isinstance(tolerance, (int, float)) or not math.isfinite(tolerance) \
+            or tolerance < 0:
+        raise ValueError(f"tolerance must be finite and >= 0, got {tolerance!r}")
+    if diff_mode not in DIFF_MODES:
+        raise ValueError(f"diff_mode must be one of {DIFF_MODES}, got {diff_mode!r}")
+    if reference is not None:
+        rt = reference.get("tolerance", 0.0)
+        if isinstance(rt, bool) or not isinstance(rt, (int, float)) or not math.isfinite(rt) or rt < 0:
+            raise ValueError(f"reference tolerance must be finite and >= 0, got {rt!r}")
+    if any(not _lineage_key(e.lineage) for e in engines):
+        raise ValueError("every engine needs a non-empty lineage")
     results = [e.run(inputs) for e in engines]
     ok = [r for r in results if r["state"] == "OK"]
     failed = [r for r in results if r["state"] != "OK"]
     pairs = []
     for a, b in itertools.combinations(ok, 2):
         d = _diff(a["value"], b["value"], diff_mode)
-        pairs.append({"a": a["engine"], "b": b["engine"], "same_lineage": a["lineage"] == b["lineage"],
+        pairs.append({"a": a["engine"], "b": b["engine"],
+                      "same_lineage": _lineage_key(a["lineage"]) == _lineage_key(b["lineage"]),
                       "diff": d, "within_tol": d <= tolerance})
-    lineages = sorted({r["lineage"] for r in ok})
+    first_name = {}                                         # one reported name per normalised lineage (bundle hashes
+    for r in ok:                                            # of existing campaigns stay identical)
+        first_name.setdefault(_lineage_key(r["lineage"]), r["lineage"])
+    lineages = sorted(first_name.values())
     cross = [p for p in pairs if not p["same_lineage"]]
     if any(not p["within_tol"] for p in cross):
         verdict = DISAGREE

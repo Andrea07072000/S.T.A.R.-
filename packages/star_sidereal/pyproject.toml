@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "star-sidereal"
-version = "0.1.1"
+version = "0.1.2"
 description = "S.T.A.R. Time: Greenwich mean sidereal time (IAU 1982), verified against Vallado and ERFA."
 requires-python = ">=3.9"
 dependencies = []
