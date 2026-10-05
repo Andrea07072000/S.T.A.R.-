@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""gmst_audit — cross-audit of Greenwich Mean Sidereal Time implementations, S.T.A.R., Claude Code, 2026-10-05.
+"""gmst_audit — cross-audit of Greenwich Mean Sidereal Time implementations, S.T.A.R., 2026-10-05.
 
 Each implementation runs in its own interpreter through a driver defining gmst_deg(jd_ut1) -> degrees in [0, 360).
 Where a model needs TT (IAU 2006), drivers use TT = UT1 + 69.184 s (the 2026 value of TT - UT1 within ~0.1 s; its

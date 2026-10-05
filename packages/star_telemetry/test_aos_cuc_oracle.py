@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: Apache-2.0
-# Copyright 2026 S.T.A.R. Aerospace & Phoenix Research
+# Copyright 2026 S.T.A.R.
 """
 test_aos_cuc_oracle.py: STAR-VERIFY-001b Independent Oracle Verification Suite
 for CCSDS AOS 732.0-B-4 Transfer Frames and CCSDS 301.0-B-4 CUC Timestamps.

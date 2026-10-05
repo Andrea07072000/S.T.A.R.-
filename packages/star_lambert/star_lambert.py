@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """star_lambert — Lambert's problem, zero revolutions, universal variables (Bate-Mueller-White / Curtis Alg. 5.2).
 
-S.T.A.R., Claude Code, 2026-10-03. Standard library only. Lineage: universal-variable formulation with Stumpff
+S.T.A.R., 2026-10-03. Standard library only. Lineage: universal-variable formulation with Stumpff
 functions and Newton iteration on z — a DIFFERENT lineage from Izzo's algorithm (hapsira/poliastro), which is the
 independent oracle used in the cross-check campaign XC-006.
 Contract: never return an unconverged result — RuntimeError instead (a degraded result must not look like success).

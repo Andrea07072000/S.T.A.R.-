@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""star_sidereal — Greenwich Mean Sidereal Time, IAU 1982 model (S.T.A.R., Claude Code, 2026-10-04). Standard library.
+"""star_sidereal — Greenwich Mean Sidereal Time, IAU 1982 model (S.T.A.R., 2026-10-04). Standard library.
 
 GMST(UT1) = 67310.54841 s + (876600 h + 8640184.812866 s) T + 0.093104 T^2 - 6.2e-6 T^3, T in Julian centuries of
 UT1 from J2000 (Vallado, Fundamentals of Astrodynamics, eq. 3-47; Aoki et al. 1982). Returns degrees in [0, 360).

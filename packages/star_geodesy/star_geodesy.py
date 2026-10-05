@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""star_geodesy — WGS-84 geodetic <-> ECEF (S.T.A.R., Claude Code, 2026-10-03). Standard library only.
+"""star_geodesy — WGS-84 geodetic <-> ECEF (S.T.A.R., 2026-10-03). Standard library only.
 Units: degrees, metres. Ellipsoid: WGS-84 (a = 6378137 m, 1/f = 298.257223563, NIMA TR8350.2).
 ECEF -> geodetic: fixed-point iteration on latitude (Vallado Algorithm 12 form) to 1e-14 rad; never returns an
 unconverged value (RuntimeError).

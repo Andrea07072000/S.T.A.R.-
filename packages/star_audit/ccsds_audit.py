@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """ccsds_audit — differential audit of CCSDS TM transfer-frame decoders (CCSDS 132.0-B) on valid and corrupted frames,
-S.T.A.R., Claude Code, 2026-10-04.
+S.T.A.R., 2026-10-04.
 
 Corpus (deterministic, seed given): TM frames built from the standard with every header option (OCF on/off, secondary
 header of 1..8 octets, VC counts 0..255, FHP values) plus copies with 1..4 bit flips in header, data or FECF. Each

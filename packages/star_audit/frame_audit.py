@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """frame_audit — independent cross-audit of TEME -> GCRS transformations (the step every SGP4 user needs to put a TLE
-state into an inertial frame), S.T.A.R., Claude Code, 2026-10-04.
+state into an inertial frame), S.T.A.R., 2026-10-04.
 
 Each implementation runs in its own interpreter through a driver defining teme_to_gcrs(utc_iso, r_km) -> [x, y, z] km.
 Probe validation (before any comparison is read): Vallado's published example (Fundamentals of Astrodynamics, 4th ed.,

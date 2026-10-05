@@ -13,14 +13,14 @@ SRC_ENV = dict(os.environ, PYTHONPATH=str(ROOT / "08_PROTOTYPES"))   # star_tele
 IMPLS = {
     "spacepackets": {"command": [str(V / "spacepackets/Scripts/python.exe"), "-c"], "driver": fd.TM_SPACEPACKETS,
                      "lineage": "spacepackets 0.32.0 (robamu, Python)"},
-    "star_telemetry": {"command": [str(V / "telemetry_tag_claude/Scripts/python.exe"), "-W", "ignore", "-c"],
+    "star_telemetry": {"command": [str(V / "telemetry_tag_ref/Scripts/python.exe"), "-W", "ignore", "-c"],
                        "driver": fd.TM_STAR_PY, "env": SRC_ENV, "lineage": "star_telemetry 0.2.3 (S.T.A.R., Python)"},
-    "star_aos_c": {"command": [str(V / "telemetry_tag_claude/Scripts/python.exe"), "-c"], "driver": fd.TM_STAR_C,
+    "star_aos_c": {"command": [str(V / "telemetry_tag_ref/Scripts/python.exe"), "-c"], "driver": fd.TM_STAR_C,
                    "env": dict(os.environ, STAR_AOS_SRC="/mnt/" + str(ROOT)[0].lower() + str(ROOT)[2:].replace(chr(92), "/")
                                + "/08_PROTOTYPES/star_telemetry_c/src"),
                    "lineage": "star_aos C (S.T.A.R., C99, host build in WSL)"},
     # superseded release kept as a control: the audit must catch its known TM defect (fixed in 0.2.3)
-    "star_telemetry_0_2_1": {"command": [str(V / "telemetry_clean2_claude/Scripts/python.exe"), "-W", "ignore", "-c"],
+    "star_telemetry_0_2_1": {"command": [str(V / "telemetry_clean2_ref/Scripts/python.exe"), "-W", "ignore", "-c"],
                              "driver": fd.TM_STAR_PY, "lineage": "star_telemetry 0.2.1 as installed (superseded control)"},
 }
 res = ca.audit(IMPLS)

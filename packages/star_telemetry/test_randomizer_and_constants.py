@@ -58,7 +58,7 @@ def test_stream_parser_exact_boundary_and_truncated_packet():
 
 
 def test_space_packet_and_virtual_channel_receiver_direct():
-    # rewritten 2026-10-05 by Claude (QC): the first version called an API that does not exist (version=, cuc_coarse=,
+    # rewritten 2026-10-05: the first version called an API that does not exist (version=, cuc_coarse=,
     # vc_id=, push_data) and failed; this one exercises the real exported classes
     from star_telemetry import SpacePacket, VirtualChannelReceiver
     p = SpacePacket(apid=42, packet_type=0, sec_hdr_flag=0, seq_flags=3, seq_count=101, length=13,

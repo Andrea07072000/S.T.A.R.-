@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: Apache-2.0
-# Copyright 2026 S.T.A.R. Aerospace & Phoenix Research
+# Copyright 2026 S.T.A.R.
 """
 test_federation.py: Automated verification suite for star_orbit federated with star_timescales.
 """

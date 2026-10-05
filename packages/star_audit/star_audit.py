@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-"""star_audit — accuracy envelope of third-party ECEF->geodetic conversions vs an exact reference (S.T.A.R., Claude
-Code, 2026-10-04). Standard library + star_geodesy (exact forward transform, iterative inverse to 1e-14 rad).
+"""star_audit — accuracy envelope of third-party ECEF->geodetic conversions vs an exact reference (S.T.A.R.,
+2026-10-04). Standard library + star_geodesy (exact forward transform, iterative inverse to 1e-14 rad).
 
 Method (the one that produced DISC-GEO-001): for each altitude band, generate points with KNOWN geodetic coordinates,
 convert them to ECEF with the exact forward transform, give the ECEF to the library under audit, and measure its errors

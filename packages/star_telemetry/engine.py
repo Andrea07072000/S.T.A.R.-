@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: Apache-2.0
-# Copyright 2026 S.T.A.R. Aerospace & Phoenix Research
+# Copyright 2026 S.T.A.R.
 """
 star_telemetry.engine: Production-grade CCSDS AOS/TM transfer frame deframer,
 LFSR descrambler, virtual channel demultiplexer, and Space Packet reassembler

@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: Apache-2.0
-# Copyright 2026 S.T.A.R. Aerospace & Phoenix Research
+# Copyright 2026 S.T.A.R.
 """
 test_nasa_jpl_fprime_native_oracle.py: STAR-VERIFY-001d
 Independent Oracle Verification of star_telemetry against binary frames produced

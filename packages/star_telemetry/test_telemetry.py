@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: Apache-2.0
-# Copyright 2026 S.T.A.R. Aerospace & Phoenix Research
+# Copyright 2026 S.T.A.R.
 """
 test_telemetry.py: Verification suite for star_telemetry engine federated with star_timescales CUC decoding.
 """

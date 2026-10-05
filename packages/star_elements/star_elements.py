@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """star_elements — classical orbital elements <-> Cartesian state (Curtis, Orbital Mechanics for Engineering Students,
-Algorithms 4.2 and 4.5). S.T.A.R., Claude Code, 2026-10-03. Standard library only. Units: km, km/s, km^3/s^2, radians.
+Algorithms 4.2 and 4.5). S.T.A.R., 2026-10-03. Standard library only. Units: km, km/s, km^3/s^2, radians.
 
 Contract: elements are (h, e, i, raan, argp, nu) with h the specific angular momentum. Singular cases are explicit:
 equatorial orbits (i = 0 or pi) have no RAAN and circular orbits no argument of periapsis; they raise ValueError

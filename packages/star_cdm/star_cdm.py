@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""star_cdm — CCSDS 508.0-B-1 Conjunction Data Message (KVN) parser (S.T.A.R., Claude Code, 2026-10-04).
+"""star_cdm — CCSDS 508.0-B-1 Conjunction Data Message (KVN) parser (S.T.A.R., 2026-10-04).
 
 Standard library only. The obligatory keyword set is the one of the standard's own example 3.6.2 ("only obligatory
 keywords"). Every malformation raises CdmFormatError; nothing is guessed. Typographic minus signs (U+2212, present

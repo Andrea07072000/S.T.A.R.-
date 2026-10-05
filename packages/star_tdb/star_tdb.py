@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""star_tdb — TDB - TT (S.T.A.R., Claude Code, 2026-10-04). Standard library only.
+"""star_tdb — TDB - TT (S.T.A.R., 2026-10-04). Standard library only.
 
 Model: the 7-term series of USNO Circular 179 (Kaplan 2005), eq. 2.6, stated accuracy ~10 microseconds over
 1600-2200 against the full Fairhead & Bretagnon (1990) series. This is an APPROXIMATION and is declared as such:

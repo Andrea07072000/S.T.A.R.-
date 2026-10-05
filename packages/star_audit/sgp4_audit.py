@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """sgp4_audit — independent accuracy audit of SGP4 implementations against Vallado's official SGP4-VER verification
-output (tcppver.out, AIAA 2006-6753 companion data), S.T.A.R., Claude Code, 2026-10-04.
+output (tcppver.out, AIAA 2006-6753 companion data), S.T.A.R., 2026-10-04.
 
 Reference: the 33 SGP4-VER test satellites and Vallado's C++ reference positions (TEME, km) at the listed tsince
 (minutes). Each implementation is driven in its own interpreter through a tiny driver defining

@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: Apache-2.0
-# Copyright 2026 S.T.A.R. Aerospace & Phoenix Research
+# Copyright 2026 S.T.A.R.
 """
 star_telemetry: High-speed CCSDS AOS/TM transfer frame deframer and space packet processor.
 """

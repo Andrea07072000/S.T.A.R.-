@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""leapsec_audit — how time libraries convert UTC to TAI across leap seconds (S.T.A.R., Claude Code, 2026-10-04).
+"""leapsec_audit — how time libraries convert UTC to TAI across leap seconds (S.T.A.R., 2026-10-04).
 
 Truth: TAI = UTC + DeltaAT from IERS Bulletin C, written out by hand for each probe (including instants INSIDE the
 leap second 23:59:60.x, where TAI = next day 00:00:(DeltaAT_old + x)). Each library is driven ONLY through its

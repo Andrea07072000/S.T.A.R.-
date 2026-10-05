@@ -14,7 +14,7 @@ SRC = dict(os.environ, PYTHONPATH=str(ROOT / "08_PROTOTYPES"))       # star_tele
 IMPLS = {
     "spacepackets": {"command": P("spacepackets"), "driver": fd.PKT_SPACEPACKETS, "lineage": "spacepackets 0.32 (robamu)"},
     "ccsdspy": {"command": P("ccsdspy"), "driver": fd.PKT_CCSDSPY, "lineage": "ccsdspy 2.0.1 (NASA/astropy community)"},
-    "star_telemetry": {"command": P("telemetry_tag_claude"), "driver": fd.PKT_STAR, "env": SRC, "lineage": "S.T.A.R. star_telemetry"},
+    "star_telemetry": {"command": P("telemetry_tag_ref"), "driver": fd.PKT_STAR, "env": SRC, "lineage": "S.T.A.R. star_telemetry"},
 }
 res = pa.audit(IMPLS)
 res["implementations"] = {k: v["lineage"] for k, v in IMPLS.items()}

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""tdb_audit — cross-audit of TDB - TT implementations (geocentric), S.T.A.R., Claude Code, 2026-10-05.
+"""tdb_audit — cross-audit of TDB - TT implementations (geocentric), S.T.A.R., 2026-10-05.
 
 Each implementation runs in its own interpreter through a driver defining tdb_minus_tt(jd_tt) -> seconds.
 Probe validation (before any comparison is read): every implementation must agree with the published low-precision

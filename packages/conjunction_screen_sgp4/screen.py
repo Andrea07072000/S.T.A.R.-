@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Screening di congiunzioni su TLE reali con SGP4 (CPU). Task T9 del ledger S.T.A.R. R&D, scritto da Claude Code.
+"""Screening di congiunzioni su TLE reali con SGP4 (CPU). Task T9 del ledger S.T.A.R. R&D.
 
 Metodo (dichiarato, cosi' si puo' criticare):
   1. TLE -> Satrec (sgp4 2.x, implementazione di Vallado): i TLE sono elementi MEDI SGP4, quindi si propagano con
@@ -14,7 +14,7 @@ Metodo (dichiarato, cosi' si puo' criticare):
 
 Limiti (NON nascosti): SGP4 su TLE ha errori di ~1 km all'epoca che crescono di km/giorno; una miss distance sotto
 ~1 km e' sotto la risoluzione del dato. Questo e' uno SCREENING (chi guardare), non una probabilita' di collisione.
-L'oracolo esterno per la validazione e' CelesTrak SOCRATES sugli stessi giorni: confronto da fare (task per Antigravity).
+L'oracolo esterno per la validazione e' CelesTrak SOCRATES sugli stessi giorni: confronto da fare (to do).
 """
 
 from __future__ import annotations
@@ -227,7 +227,7 @@ def screen(paths, start: datetime, hours: float, step: float, coarse_km, final_k
     t_total = time.perf_counter() - t0
     return {
         "experiment": "EXP-C01 SGP4 conjunction screening (CPU)",
-        "author": "Claude Code (S.T.A.R. R&D regia)",
+        "author": "S.T.A.R.",
         "run_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "code_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
         "inputs": prov,
@@ -248,7 +248,7 @@ def screen(paths, start: datetime, hours: float, step: float, coarse_km, final_k
         "formation_pairs_excluded": len(formation),
         "events_below_final_km": len(events),
         "runtime_s": {"load": round(t_load, 2), "coarse": round(t_coarse, 2), "total": round(t_total, 2)},
-        "events": events,                      # dump COMPLETO (Bionic T10b: con il solo top-200 il richiamo non si calcola)
+        "events": events,                      # dump COMPLETO (T10b: con il solo top-200 il richiamo non si calcola)
         "limits": "SGP4/TLE ~1 km all'epoca, cresce con l'eta' del TLE; screening, non probabilita' di collisione; "
                   "validazione esterna (SOCRATES) NON ancora fatta.",
     }

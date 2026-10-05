@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: Apache-2.0
-# Copyright 2026 S.T.A.R. Aerospace & Phoenix Research
+# Copyright 2026 S.T.A.R.
 """
 test_independent_oracle.py: STAR-VERIFY-001 Independent Oracle Test Suite
 Compares star_telemetry SpacePacket reassembly against third-party open-source ccsdspy decoder

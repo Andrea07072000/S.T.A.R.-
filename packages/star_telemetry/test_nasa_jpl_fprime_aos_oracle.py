@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: Apache-2.0
-# Copyright 2026 S.T.A.R. Aerospace & Phoenix Research
+# Copyright 2026 S.T.A.R.
 """
 test_nasa_jpl_fprime_aos_oracle.py: STAR-VERIFY-001c Independent Oracle Verification Suite
 Cross-validates star_telemetry.CcsdsTransferFrameEngine against NASA Jet Propulsion Laboratory
