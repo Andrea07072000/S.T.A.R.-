@@ -1,5 +1,6 @@
 """References: Vallado (4th ed.) Example 3-3 (ECEF -> geodetic, printed: 34.352496 deg, 46.4464 deg, 5085.22 km);
-WGS-84 defining constants (equator point = a, pole = b = 6356752.314245 m); round trips."""
+WGS-84 defining constants (equator point = a, pole = b = 6356752.314245 m); round trips.
+Verifies: R1, R2, R3 (README)."""
 import math
 import random
 

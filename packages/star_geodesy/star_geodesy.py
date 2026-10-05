@@ -16,6 +16,8 @@ B = A * (1 - F)
 
 
 def geodetic_to_ecef(lat_deg: float, lon_deg: float, h_m: float) -> Tuple[float, float, float]:
+    if not all(map(math.isfinite, (lat_deg, lon_deg, h_m))):
+        raise ValueError("geodetic coordinates must be finite")
     if not -90.0 <= lat_deg <= 90.0:
         raise ValueError("latitude must be within [-90, 90] deg")
     lat, lon = math.radians(lat_deg), math.radians(lon_deg)
@@ -25,6 +27,9 @@ def geodetic_to_ecef(lat_deg: float, lon_deg: float, h_m: float) -> Tuple[float,
 
 
 def ecef_to_geodetic(x: float, y: float, z: float, max_iter: int = 50) -> Tuple[float, float, float]:
+    # 2026-10-05: inf returned (0, 0, inf) and NaN was reported as "did not converge"; non-finite input is invalid input
+    if not all(map(math.isfinite, (x, y, z))):
+        raise ValueError("ECEF coordinates must be finite")
     p = math.hypot(x, y)
     if p == 0.0 and z == 0.0:
         raise ValueError("Earth's centre has no geodetic coordinates")
