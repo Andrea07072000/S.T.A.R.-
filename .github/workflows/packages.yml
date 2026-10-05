@@ -42,4 +42,14 @@ jobs:
           fi
       - name: Run the package tests
         working-directory: packages/${{ matrix.package }}
-        run: python -m pytest -q -rs -p no:cacheprovider
+        run: |
+          set -o pipefail
+          python -m pytest -q -rs -p no:cacheprovider | tee pytest.out
+          # public summary (visible without signing in): the result line and every skip with its reason
+          { echo "### ${{ matrix.package }} (Python ${{ matrix.python }})"; echo '```'; grep -E "^(SKIPPED|[0-9]+ (passed|failed))" pytest.out; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+      - name: The C library must really be built and checked here, not skipped
+        if: matrix.package == 'star_telemetry_c'
+        working-directory: packages/star_telemetry_c
+        run: |
+          python -m pytest -q -rs -p no:cacheprovider test_contract_sanitized.py "test_c_vs_python.py::test_c_matches_python_on_native_and_corrupted_frames[x86_64]" "test_c_vs_python.py::test_c_matches_python_on_native_and_corrupted_frames[aarch64]" "test_c_vs_python.py::test_c_matches_python_on_native_and_corrupted_frames[riscv64]" | tee c.out
+          grep -q "^7 passed" c.out || { echo "C checks were skipped or failed"; exit 1; }
