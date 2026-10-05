@@ -1,0 +1,13 @@
+{
+ "id": "star.audit.packets",
+ "name": "STAR Assurance \u2014 CCSDS Space Packet decoder audit",
+ "domain": "assurance",
+ "summary": "Differential audit of what CCSDS Space Packet decoders accept (spacepackets, ccsdspy, star_telemetry) on a pinned corpus of valid, idle and deliberately malformed packets; reference is the CCSDS 133.0-B packet rule.",
+ "package_dir": "08_PROTOTYPES/star_audit",
+ "module": "packet_audit.py",
+ "xc": null,
+ "reference": "CCSDS 133.0-B Space Packet Protocol: version '000', 11-bit APID, 14-bit sequence count, packet data length = data octets - 1",
+ "reference_observed": "a strict decoder written from the rule has 0 verdict errors; version-lenient, length-lenient and misreading decoders are scored exactly as constructed",
+ "na": {"G-02": "single-module tool", "G-09": "no simulation component", "G-10": "not flight software", "G-11": "no hardware", "G-12": "no FDIR role", "G-14": "no performance requirement declared by any user"},
+ "review": {"G-01": "README R12", "G-03": "packet(), corpus(), run(), audit()", "G-04": "octets; hex strings", "G-06": "corpus generated in-repo, fingerprint of the rounded corpus pinned", "G-08": "subprocess only for the audited decoder; buffers via stdin; runner names prefixed", "G-13": "failed run raises with stderr tail; a decoder that misreads a valid packet is not validated"}
+}
