@@ -3,9 +3,11 @@
 [![tests](https://github.com/Andrea07072000/S.T.A.R.-/actions/workflows/tests.yml/badge.svg)](https://github.com/Andrea07072000/S.T.A.R.-/actions/workflows/tests.yml)
 [![packages](https://github.com/Andrea07072000/S.T.A.R.-/actions/workflows/packages.yml/badge.svg)](https://github.com/Andrea07072000/S.T.A.R.-/actions/workflows/packages.yml)
 
-> **New (2026-10-05): 10 more packages in [`packages/`](packages/README.md)** — independent auditors of other space
-> libraries (SGP4, frames, time scales, orbital elements, CCSDS, TLE ingestion), CCSDS telemetry, conjunction screening,
-> CDM consistency. Each is re-tested by GitHub on every push, and its README says what it does *not* claim.
+> **Latest release: [S.T.A.R. packages 2026-10-05](https://github.com/Andrea07072000/S.T.A.R.-/releases/tag/packages-2026.10.05)**
+> — 12 packages in [`packages/`](packages/README.md), all Apache-2.0: independent auditors of other space libraries
+> (SGP4, frames, time scales, orbital elements, CCSDS, TLE ingestion), CCSDS telemetry in Python and C99, conjunction
+> screening, CDM consistency, cross-checking, orbit mechanics. Each is re-tested by GitHub on every push, and its README
+> says what it does *not* claim. Defects found and fixed while preparing the release are listed in the release notes.
 
 S.T.A.R. is an engineering platform for verification evidence: every requirement is linked to the tests
 that check it, and every result can be reproduced. This repository holds its open components. Each one ships
