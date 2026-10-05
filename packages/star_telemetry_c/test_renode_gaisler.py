@@ -2,7 +2,8 @@
 on Renode's model of that SoC: GR712RC (dual-core LEON3FT, flown on ESA missions) and GR716 (LEON3FT space
 microcontroller). Same oracle as test_renode_leon3: output must equal the Python reference on the 5 NASA F Prime frames
 and a bit-flipped frame must be rejected. Renode plays the boot loader (initial SP at the top of the RAM the BSP links
-to). Skips ONLY if BCC2 or Renode is absent; a build or run failure is a FAIL. No timing or radiation claim."""
+to). Skips ONLY if BCC2 or Renode is absent; a build or run failure is a FAIL. No timing or radiation claim.
+Verifies: R5 (README)."""
 import json
 import shutil
 import subprocess

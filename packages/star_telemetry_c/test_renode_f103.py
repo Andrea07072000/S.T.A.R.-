@@ -1,5 +1,6 @@
 """Cortex-M3 stage: unchanged star_aos.c bare-metal on a Renode-simulated STM32F103 (flash at 0x0, 20 KiB SRAM).
-Same checks as the STM32F4 test. Skips ONLY if Renode or arm-none-eabi-gcc is absent. No timing claimed."""
+Same checks as the STM32F4 test. Skips ONLY if Renode or arm-none-eabi-gcc is absent. No timing claimed.
+Verifies: R5 (README)."""
 import json
 import shutil
 import subprocess

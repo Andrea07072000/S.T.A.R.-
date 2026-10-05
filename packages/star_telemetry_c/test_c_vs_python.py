@@ -2,7 +2,8 @@
 """STAR-HW-HOST / STAR-HW-CROSS: the C port of the AOS/TM frame check must agree field-by-field with the Python
 reference (star_telemetry.engine) on the 5 NASA F Prime native frames AND on 300 deterministic fault-injected frames,
 on every target that is available: x86_64 host, aarch64 and armhf under qemu-user (WSL). A target that cannot be built
-or run is reported as SKIPPED with the reason, never as passed."""
+or run is reported as SKIPPED with the reason, never as passed.
+Verifies: R1, R2, R5 (README)."""
 import json
 import random
 import shutil

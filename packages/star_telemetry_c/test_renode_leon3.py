@@ -1,7 +1,8 @@
 """Space-processor stage: the unchanged star_aos.c built with Gaisler BCC2 for LEON3 (SPARC V8, big-endian, the ESA /
 Gaisler space processor family) and run on Renode's simulated leon3 board. Output must equal the Python reference on
 the 5 NASA F Prime frames and a bit-flipped frame must be rejected. Renode plays the boot loader (initial SP), as BCC2
-detects end-of-RAM from it (BCC manual sec. 2.10). Skips ONLY if BCC2 or Renode is absent. No timing is claimed."""
+detects end-of-RAM from it (BCC manual sec. 2.10). Skips ONLY if BCC2 or Renode is absent. No timing is claimed.
+Verifies: R5 (README)."""
 import json
 import shutil
 import subprocess

@@ -4,7 +4,8 @@ rv32imaf without C — a first build with compressed instructions trapped on the
 SoC (RV64 E51 + 4 U54 harts, architecture of the RT PolarFire SoC; hart 0 runs the check, the others are parked).
 The Ubuntu cross gcc defaults to PIE: without -fno-pie the start code loaded sp from a GOT in uncopied .data
 (sp = 0) -- the cause of the FE310 'stuck at reset' seen for two days. Same oracle as the other firmware stages. Hard timeout on Renode. Skips ONLY if Renode or the compiler is absent; a
-build or run failure is a FAIL. No timing or radiation claim."""
+build or run failure is a FAIL. No timing or radiation claim.
+Verifies: R5 (README)."""
 import json
 import shutil
 import subprocess

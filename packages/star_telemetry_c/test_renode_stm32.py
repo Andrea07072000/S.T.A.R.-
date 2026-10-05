@@ -1,7 +1,8 @@
 """Bare-metal stage: the unchanged star_aos.c is cross-compiled for STM32F407 (Cortex-M4, arm-none-eabi, -nostdlib)
 and executed on a SIMULATED STM32F4 Discovery in Renode; the USART2 output must equal the Python reference on the 5
 NASA F Prime frames, and a bit-flipped frame must be rejected. Skips ONLY if the toolchain/simulator is absent.
-Renode's platform does not model the DWT cycle counter, so no timing is claimed from this test."""
+Renode's platform does not model the DWT cycle counter, so no timing is claimed from this test.
+Verifies: R5 (README)."""
 import json
 import shutil
 import subprocess

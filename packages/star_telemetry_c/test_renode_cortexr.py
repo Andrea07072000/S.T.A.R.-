@@ -1,7 +1,8 @@
 """Arm stage (Cortex-R52, Cortex-R8, Zynq-7000 Cortex-A9, STM32F746 Cortex-M7): the unchanged star_aos.c built bare-metal (arm-none-eabi, -nostdlib) for Arm Cortex-R cores and
 run on Renode's models. Same oracle as the other firmware stages: output equals the Python reference on the 5 NASA
 F Prime frames and a bit-flipped frame is rejected. Hard timeout on Renode: an aborted machine is a FAIL in minutes.
-Skips ONLY if Renode or the compiler is absent. No timing or certification claim."""
+Skips ONLY if Renode or the compiler is absent. No timing or certification claim.
+Verifies: R5 (README)."""
 import json
 import shutil
 import subprocess
