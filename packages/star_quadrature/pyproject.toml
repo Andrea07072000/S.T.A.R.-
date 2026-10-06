@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "star-quadrature"
+version = "0.1.0"
+description = "S.T.A.R. Gauss-Legendre nodes and weights (1 to 32 points) correct to the last digit, fixed-rule integration and Legendre polynomials, with explicit refusals."
+requires-python = ">=3.9"
+dependencies = []
+license = {text = "Apache-2.0"}
+
+[tool.setuptools]
+py-modules = ["star_quadrature"]

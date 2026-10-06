@@ -1,0 +1,9 @@
+:name: STM32F4 SysTick timer interrupt test on Renode
+:description: loads timer_stm32.elf, logs USART2, runs for 2.5 s virtual time, verifies SysTick periodic interrupt
+
+mach create "stm32f4"
+machine LoadPlatformDescription @platforms/boards/stm32f4_discovery-kit.repl
+sysbus LoadELF $elf
+usart2 CreateFileBackend $out true
+emulation RunFor "2.5"
+quit

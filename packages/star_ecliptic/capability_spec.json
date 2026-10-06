@@ -1,0 +1,27 @@
+{
+ "id": "star.frames.ecliptic",
+ "name": "STAR Frames — mean obliquity and equatorial-ecliptic directions",
+ "domain": "frames",
+ "summary": "Mean obliquity of the ecliptic (IAU 2006 and IAU 1980) and conversion of directions between equatorial and ecliptic frames; agrees with ERFA, astropy and SPICE to 1.1e-13 deg and with ERFA and skyfield to 1.5e-11 arcsec on 600 cases, and refuses out-of-range input.",
+ "package_dir": "08_PROTOTYPES/star_ecliptic",
+ "module": "star_ecliptic.py",
+ "xc": null,
+ "reference": "Meeus, Astronomical Algorithms, Example 13.a: Pollux (116.328942, +28.026183) with obliquity 23.4392911 deg has ecliptic longitude 113.215630 and latitude 6.684170",
+ "reference_observed": "within 4.7e-7 deg of the printed values (printed to 1e-6)",
+ "na": {
+  "G-02": "single-module library",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R1-R4",
+  "G-03": "mean_obliquity_arcsec(), equatorial_to_ecliptic(), ecliptic_to_equatorial()",
+  "G-04": "obliquity in arcseconds, directions in degrees, date as TT Julian Date in two parts; output ranges stated",
+  "G-06": "no external data; cross-check corpus generated with a fixed seed",
+  "G-08": "pure functions, standard library only, no IO",
+  "G-13": "ValueError for every invalid input; longitude at a pole documented as undefined; no iteration"
+ }
+}

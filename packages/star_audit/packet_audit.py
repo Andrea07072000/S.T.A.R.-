@@ -18,6 +18,8 @@ import random
 import subprocess
 from typing import Dict, List
 
+from audit_guard import driver_rows  # one result row per case, or a declared error (2026-10-06)
+
 KINDS = ("valid", "idle", "version", "truncated", "trailing", "header_only")
 SHOULD_ACCEPT = {"valid": True, "idle": True}
 FIELDS = ("apid", "seq", "ptype", "sec", "data")
@@ -61,7 +63,7 @@ def run(command: List[str], driver: str, cases: List[str], env: Dict | None = No
                        capture_output=True, text=True, timeout=1800, env=env)
     if r.returncode != 0:
         raise RuntimeError(f"implementation run failed: {r.stderr[-300:]}")
-    return json.loads(r.stdout.strip().splitlines()[-1])
+    return driver_rows(r.stdout, len(cases))
 
 
 def audit(impls: Dict[str, Dict], cases: List[Dict] | None = None) -> Dict:

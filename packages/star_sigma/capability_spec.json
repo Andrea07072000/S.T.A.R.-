@@ -1,0 +1,27 @@
+{
+ "id": "star.statistics.sigma-coverage",
+ "name": "STAR Statistics — n-sigma coverage in 1, 2 and 3 dimensions",
+ "domain": "statistics",
+ "summary": "Coverage, tail probability and inverse of n sigma for a Gaussian error in one, two and three dimensions, and the normal distribution function and quantile; within 1.9e-13 relative of mpmath at 40 digits and 2.4e-13 of SciPy on 600 cases, tails included; reproduces the published normal and chi-square tables.",
+ "package_dir": "08_PROTOTYPES/star_sigma",
+ "module": "star_sigma.py",
+ "xc": null,
+ "reference": "Abramowitz and Stegun, table 26.1: coverage of 1, 2, 3 sigma = 0.6826895, 0.9544997, 0.9973002; Phi(1.959964) = 0.975000",
+ "reference_observed": "0.68268949, 0.95449974, 0.99730020; 0.97500000: within 1e-8 of the printed values",
+ "na": {
+  "G-02": "single-module library",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R1-R4",
+  "G-03": "normal_cdf(), normal_sf(), normal_quantile(), sigma_coverage(), sigma_tail(), sigma_for_coverage()",
+  "G-04": "probabilities in [0, 1]; n in units of sigma; the number of dimensions is an explicit argument",
+  "G-06": "no external data; cross-check corpus generated with a fixed seed",
+  "G-08": "pure functions, standard library only, no IO",
+  "G-13": "ValueError for every invalid input; bisection capped at 200 steps; the Gaussian assumption stated as a limit"
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "id": "star.frames.galactic",
+ "name": "STAR Frames — equatorial-galactic directions",
+ "domain": "frames",
+ "summary": "Galactic longitude and latitude from equatorial directions and back, in the Hipparcos (ICRS) and IAU 1958 (B1950) definitions; agrees with ERFA, astropy and SPICE to 1.1e-13 deg on 600 directions in both directions and refuses out-of-range input.",
+ "package_dir": "08_PROTOTYPES/star_galactic",
+ "module": "star_galactic.py",
+ "xc": null,
+ "reference": "Meeus, Astronomical Algorithms, Example 13.b: B1950 (267.248917, -14.718944) has galactic l = 12.9593, b = +6.0463",
+ "reference_observed": "(12.959251, 6.046298): within 4.9e-5 deg of the printed values (printed to 1e-4)",
+ "na": {
+  "G-02": "single-module library",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R1-R4",
+  "G-03": "equatorial_to_galactic(), galactic_to_equatorial()",
+  "G-04": "degrees in and out; the system (icrs or b1950) is an explicit argument; output ranges stated",
+  "G-06": "no external data; cross-check corpus generated with a fixed seed",
+  "G-08": "pure functions, standard library only, no IO",
+  "G-13": "ValueError for every invalid input; longitude at a pole documented as undefined; no iteration"
+ }
+}

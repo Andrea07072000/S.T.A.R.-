@@ -17,7 +17,7 @@ import subprocess
 from pathlib import Path
 from typing import Dict, List, Tuple
 
-from audit_guard import finite_rows  # a NaN must be a refusal, never vanish inside max() (2026-10-05)
+from audit_guard import driver_rows, finite_rows  # a NaN must be a refusal, never vanish inside max() (2026-10-05)
 
 
 def load_reference(tle_path: Path, out_path: Path) -> List[Dict]:
@@ -61,7 +61,7 @@ def audit(command: List[str], driver: str, cases: List[Dict]) -> Dict:
                        capture_output=True, text=True, timeout=1800)
     if r.returncode != 0:
         raise RuntimeError(f"implementation run failed: {r.stderr[-300:]}")
-    res = finite_rows(json.loads(r.stdout.strip().splitlines()[-1]), ["r"])
+    res = finite_rows(driver_rows(r.stdout, len(cases)), ["r"])
     per_sat, all_err, refused = {}, [], []
     for c, x in zip(cases, res):
         if "error" in x:

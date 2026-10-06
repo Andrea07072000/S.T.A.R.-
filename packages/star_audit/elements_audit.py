@@ -19,7 +19,7 @@ import random
 import subprocess
 from typing import Dict, List
 
-from audit_guard import finite_rows  # a NaN must be a refusal, never vanish inside max() (2026-10-05)
+from audit_guard import driver_rows, finite_rows  # a NaN must be a refusal, never vanish inside max() (2026-10-05)
 
 MU = 398600.4418
 VALLADO_RV = ([6524.834, 6862.875, 6448.296], [4.901327, 5.533756, -1.976341])
@@ -90,7 +90,7 @@ def run(command: List[str], driver: str, cases: List, env: Dict | None = None) -
                        capture_output=True, text=True, timeout=1800, env=env)
     if r.returncode != 0:
         raise RuntimeError(f"implementation run failed: {r.stderr[-300:]}")
-    return json.loads(r.stdout.strip().splitlines()[-1])
+    return driver_rows(r.stdout, len(cases))
 
 
 def audit(impls: Dict[str, Dict], cases: List[Dict] | None = None) -> Dict:

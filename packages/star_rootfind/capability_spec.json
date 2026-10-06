@@ -1,0 +1,27 @@
+{
+ "id": "star.numerics.bracketed-root",
+ "name": "STAR Numerics — bracketed roots to the last float",
+ "domain": "numerics",
+ "summary": "Root of a real function inside a bracket by bisection over the floats (no tolerance, at most 64 evaluations after the two ends, the result within one float of the change of sign) and a scan for every change of sign over equal pieces; 600 problems in six families, Kepler's equation included, agree with mpmath at 50 digits, SciPy brentq and fluids brenth within 2.1e-15 relative.",
+ "package_dir": "08_PROTOTYPES/star_rootfind",
+ "module": "star_rootfind.py",
+ "xc": null,
+ "reference": "the real root of x^3 - 2x - 5 = 0 (Wallis 1685, Newton's example): 2.0945514815423265",
+ "reference_observed": "find_root(lambda x: x**3 - 2*x - 5, 2, 3) = 2.0945514815423265",
+ "na": {
+  "G-02": "single-module library",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R1-R4",
+  "G-03": "find_root(), find_roots()",
+  "G-04": "a < b required; the result lies in [a, b]; find_roots returns a sorted tuple",
+  "G-06": "no external data; cross-check corpus generated with a fixed seed",
+  "G-08": "standard library only, no IO; the only side effects are those of the function supplied by the caller",
+  "G-13": "ValueError for every invalid input and for a non-finite value of f; termination guaranteed in at most 64 halvings; what a change of sign does and does not prove is stated in the README"
+ }
+}

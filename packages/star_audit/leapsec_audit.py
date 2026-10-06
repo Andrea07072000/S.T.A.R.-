@@ -14,6 +14,8 @@ import json
 import subprocess
 from typing import Dict
 
+from audit_guard import driver_rows  # one result row per case, or a declared error (2026-10-06)
+
 PROBES = [  # (UTC ISO, truth TAI ISO or None when the date is beyond any published leap table)
     ("2016-12-31T23:59:59.500", "2017-01-01T00:00:35.500"),
     ("2016-12-31T23:59:60.500", "2017-01-01T00:00:36.500"),
@@ -67,6 +69,6 @@ def audit(python_exe: str, driver: str) -> Dict:
                        capture_output=True, text=True, timeout=300)
     if r.returncode != 0:
         raise RuntimeError(f"library run failed: {r.stderr[-300:]}")
-    res = json.loads(r.stdout.strip().splitlines()[-1])
+    res = driver_rows(r.stdout, len(PROBES))
     rows = [{"utc": p, "truth": t, **x, "verdict": classify(t, x)} for (p, t), x in zip(PROBES, res)]
     return {"rows": rows, "summary": {v: sum(r["verdict"] == v for r in rows) for v in sorted({r["verdict"] for r in rows})}}

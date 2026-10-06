@@ -1,0 +1,27 @@
+{
+ "id": "star.propulsion.gasdynamics",
+ "name": "STAR Propulsion — isentropic flow and normal shock",
+ "domain": "propulsion",
+ "summary": "Isentropic flow ratios, Mach number from area ratio on either branch and normal-shock jump of a calorically perfect gas; within 1.2e-15 of scikit-aero and fluids on 600 cases for the relations they provide; reproduces the NACA Report 1135 tables; density, temperature and total-pressure ratios across the shock rest on the published table and the conservation laws only.",
+ "package_dir": "08_PROTOTYPES/star_gasdynamics",
+ "module": "star_gasdynamics.py",
+ "xc": null,
+ "reference": "NACA Report 1135, gamma = 1.4, Mach 2: T/T0 = 0.5556, p/p0 = 0.1278, rho/rho0 = 0.2300, A/A* = 1.688; normal shock M2 = 0.5774, p2/p1 = 4.500, rho2/rho1 = 2.667, T2/T1 = 1.687, p02/p01 = 0.7209",
+ "reference_observed": "0.55556, 0.12780, 0.23005, 1.68750; 0.57735, 4.50000, 2.66667, 1.68750, 0.72087: every value within the four printed figures",
+ "na": {
+  "G-02": "single-module library",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R1-R4",
+  "G-03": "isentropic(), mach_from_area_ratio(), normal_shock()",
+  "G-04": "dimensionless ratios; the order of each returned tuple is stated; gamma is an explicit argument",
+  "G-06": "no external data; cross-check corpus generated with a fixed seed",
+  "G-08": "pure functions, standard library only, no IO",
+  "G-13": "ValueError for every invalid input; bisection capped at 200 steps; the perfect-gas limit of validity stated"
+ }
+}

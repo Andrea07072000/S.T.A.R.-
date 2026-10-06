@@ -16,7 +16,7 @@ import json
 import subprocess
 from typing import Dict, List
 
-from audit_guard import finite_rows  # a NaN must be a refusal, never vanish inside max() (2026-10-05)
+from audit_guard import driver_rows, finite_rows  # a NaN must be a refusal, never vanish inside max() (2026-10-05)
 
 VALLADO_JD_UT1 = 2448855.009722222        # 1992-08-20 12:14:00 UT1
 VALLADO_GMST_DEG = 152.578787810           # Vallado, Fundamentals of Astrodynamics, Example 3-5 (IAU 1982)
@@ -44,7 +44,7 @@ def run(command: List[str], driver: str, epochs: List[float], env: Dict | None =
                        capture_output=True, text=True, timeout=1800, env=env)
     if r.returncode != 0:
         raise RuntimeError(f"implementation run failed: {r.stderr[-300:]}")
-    return json.loads(r.stdout.strip().splitlines()[-1])
+    return driver_rows(r.stdout, len(epochs))
 
 
 def audit(impls: Dict[str, Dict], epochs: List[float] | None = None) -> Dict:

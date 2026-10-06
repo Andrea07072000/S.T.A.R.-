@@ -16,6 +16,8 @@ import random
 import subprocess
 from typing import Dict, List
 
+from audit_guard import driver_rows  # one result row per case, or a declared error (2026-10-06)
+
 FIELDS = ("crc_ok", "scid", "vcid", "mc", "vc", "fhp", "ocf", "data")
 
 
@@ -80,7 +82,13 @@ def run(command: List[str], driver: str, frames: List[str], env: Dict | None = N
                        capture_output=True, text=True, timeout=1800, env=env)
     if r.returncode != 0:
         raise RuntimeError(f"implementation run failed: {r.stderr[-300:]}")
-    return json.loads(r.stdout.strip().splitlines()[-1])
+    return driver_rows(r.stdout, len(frames))
+
+
+def _accepted(x: Dict) -> bool:
+    """True when the implementation returned a decoded frame it does not flag as corrupt. A result that is not an
+    object (2026-10-06: a list or None crashed the audit with AttributeError) is not an accepted frame."""
+    return isinstance(x.get("r"), dict) and bool(x["r"].get("crc_ok", True))
 
 
 def audit(impls: Dict[str, Dict], cases: List[Dict] | None = None) -> Dict:
@@ -91,7 +99,7 @@ def audit(impls: Dict[str, Dict], cases: List[Dict] | None = None) -> Dict:
         s = {"valid_exact": 0, "valid_wrong_fields": [], "valid_rejected": [],
              "corrupt_rejected": 0, "corrupt_accepted_crc_bad": [], "corrupt_crc_collision_accepted": 0}
         for c, x in zip(cases, rows):
-            ok = "r" in x and x["r"].get("crc_ok", True)
+            ok = _accepted(x)
             if c["truth"] is not None:
                 if not ok:
                     s["valid_rejected"].append(c["id"])
@@ -114,7 +122,7 @@ def audit(impls: Dict[str, Dict], cases: List[Dict] | None = None) -> Dict:
     disagreements = []
     names = sorted(n for n in res if per_impl[n]["validated"])
     for k, c in enumerate(cases):
-        acc = {n: ("r" in res[n][k] and res[n][k]["r"].get("crc_ok", True)) for n in names}
+        acc = {n: _accepted(res[n][k]) for n in names}
         if len(set(acc.values())) > 1:
             disagreements.append({"id": c["id"], "accepts": acc})
     return {"frames": len(cases), "valid": sum(c["truth"] is not None for c in cases), "per_impl": per_impl,

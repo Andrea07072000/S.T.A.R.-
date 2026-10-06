@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "star-ecliptic"
+version = "0.1.0"
+description = "S.T.A.R. mean obliquity of the ecliptic (IAU 2006 and IAU 1980) and equatorial-ecliptic conversion of directions, with explicit refusals."
+requires-python = ">=3.9"
+dependencies = []
+license = {text = "Apache-2.0"}
+
+[tool.setuptools]
+py-modules = ["star_ecliptic"]

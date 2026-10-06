@@ -1,0 +1,27 @@
+{
+ "id": "star.units.angle-wrap",
+ "name": "STAR Units — angle reduction, difference and circular mean",
+ "domain": "units",
+ "summary": "Reduction of angles to [0, 360) and [-180, 180), shortest signed difference and circular mean; identical to astropy, within 2.4e-10 deg of ERFA and 6e-14 deg of SciPy on 600 angles and 600 samples, every result inside its range, undefined means refused.",
+ "package_dir": "08_PROTOTYPES/star_wrap",
+ "module": "star_wrap.py",
+ "xc": null,
+ "reference": "Meeus, Astronomical Algorithms, Example 25.a: L0 = -2318.19280 deg = 201.80720 deg; M = -2241.00603 deg = 278.99397 deg",
+ "reference_observed": "201.80720000000019 and 278.99396999999999: within 2e-13 deg of the printed values",
+ "na": {
+  "G-02": "single-module library",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R1-R4",
+  "G-03": "wrap360(), wrap180(), difference(), circular_mean()",
+  "G-04": "degrees in and out; output ranges stated; half a turn is -180",
+  "G-06": "no external data; cross-check corpus generated with a fixed seed",
+  "G-08": "pure functions, standard library only, no IO",
+  "G-13": "ValueError for every invalid input; an undefined mean is refused, not returned; exact remainder, no iteration"
+ }
+}

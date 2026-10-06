@@ -89,7 +89,8 @@ That these libraries are "wrong": they may be tuned for near-surface use; other 
 - R11 `audit(impls, cases)`: what TLE readers accept. Reference = the format rule (checksum mod 10 with '-' = 1, line
   numbers, equal satellite numbers, 69 columns). Corpus: the 29 well-formed SGP4-VER TLEs plus 6 derived kinds
   (field_digit, checksum, line_number, satnum_mismatch, truncated = must reject; resummed = well-formed, must accept),
-  sha256-pinned. Probe validation: every valid TLE accepted and its inclination read within 1e-4 deg.
+  sha256-pinned. Probe validation: every valid TLE accepted, its inclination read within 1e-4 deg and its catalogue
+  number read exactly (a NaN inclination or a wrong number is a misread: before 0.13.1 both were validated).
 - First audit (2026-10-05, `run_tle_audit.py`): python-sgp4 Satrec.twoline2rv and skyfield EarthSatellite accept
   145/145 malformed TLEs (tolerant by design: python-sgp4 offers sgp4.io.verify_checksum separately); pyorbital checks
   the checksum but accepts wrong line numbers and satellite-number mismatches (58/58); Orekit (isFormatOK) rejects all.
@@ -154,3 +155,8 @@ That these libraries are "wrong": they may be tuned for near-surface use; other 
 - Hostile inputs: hapsira `vallado` never returns for a NaN time, a NaN position or a negative mu (deadline hit);
   NAIF prop2b returns a value for a NaN time; hapsira farnocchia returns NaN for a NaN time and for a negative mu;
   Orekit raises or returns NaN. Candidates, not reported upstream.
+
+## Driver output (`audit_guard.driver_rows`)
+- R16 Every auditor reads the rows a driver printed through one guard: exactly one result per case, on the last output
+  line, otherwise `RuntimeError`. Found by a hostile probe (2026-10-06): a reader that answered 1 case out of 203 was
+  validated (the totals were counted on what came back), and an empty or non-JSON output raised undeclared exceptions.

@@ -3,12 +3,14 @@
 [![tests](https://github.com/Andrea07072000/S.T.A.R.-/actions/workflows/tests.yml/badge.svg)](https://github.com/Andrea07072000/S.T.A.R.-/actions/workflows/tests.yml)
 [![packages](https://github.com/Andrea07072000/S.T.A.R.-/actions/workflows/packages.yml/badge.svg)](https://github.com/Andrea07072000/S.T.A.R.-/actions/workflows/packages.yml)
 
-> **Update 2026-10-06 (second)** — 30 packages in [`packages/`](packages/README.md), all Apache-2.0. Seventeen new ones:
-> Kepler propagation, look angles, Sun vector and eclipse, geodesics, standard atmosphere, quaternions and Euler angles,
-> J2 rates, relative motion and rendezvous, orbit determination from three positions, a strict TLE reader, coverage
-> geometry, calendar and Julian day numbers, Earth rotation angle, precession, Moon position and the WGS-84 ellipsoid.
-> Each one is compared with two or three independent libraries, mutation-tested, re-tested by GitHub on every push,
-> and its README says what it does *not* claim.
+> **Update 2026-10-07** — 54 packages in [`packages/`](packages/README.md), all Apache-2.0. Twenty-four new ones:
+> map projections (transverse Mercator and UTM, Lambert conic, Albers, Mercator, polar stereographic), sky and
+> coordinate frames (ecliptic, galactic, horizon, epochs, sexagesimal angles, separations on the sphere, angle
+> reduction), isentropic flow and normal shocks, unit conversion with a dimension check, n-sigma coverage, two-body
+> quantities, 3-vectors and 3x3 matrices, and numerics that decide in exact arithmetic (real roots of quadratics and
+> cubics, Gauss-Legendre rules, bracketed roots to the last float, Lagrange interpolation, Chebyshev series).
+> Each one is compared with independent libraries wherever one exists (its README says where none does),
+> mutation-tested, re-tested by GitHub on every push, and its README says what it does *not* claim.
 
 S.T.A.R. is an engineering platform for verification evidence: every requirement is linked to the tests
 that check it, and every result can be reproduced. This repository holds its open components. Each one ships

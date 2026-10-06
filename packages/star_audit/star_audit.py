@@ -15,6 +15,8 @@ import math
 import subprocess
 from typing import Callable, Dict, List, Sequence, Tuple
 
+from audit_guard import driver_rows  # one result row per case, or a declared error (2026-10-06)
+
 from star_geodesy import geodetic_to_ecef
 
 ALTITUDES_M = (0.0, 1e3, 1e4, 1e5, 4e5, 1e6, 5e6, 2e7, 3.6e7)
@@ -63,5 +65,5 @@ def run_external(python_exe: str, code: str) -> Dict:
     r = subprocess.run([python_exe, "-c", driver], input=json.dumps(ecef), capture_output=True, text=True, timeout=600)
     if r.returncode != 0:
         raise RuntimeError(f"library run failed: {r.stderr[-300:]}")
-    answers = [tuple(a) for a in json.loads(r.stdout.strip().splitlines()[-1])]
+    answers = [tuple(a) for a in driver_rows(r.stdout, len(ecef), row=list)]
     return envelope(pts, answers)

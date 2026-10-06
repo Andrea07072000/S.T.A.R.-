@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "star-sigma"
+version = "0.1.0"
+description = "S.T.A.R. coverage, tail and inverse of n sigma in one, two and three dimensions, accurate in the tails, with explicit refusals."
+requires-python = ">=3.9"
+dependencies = []
+license = {text = "Apache-2.0"}
+
+[tool.setuptools]
+py-modules = ["star_sigma"]

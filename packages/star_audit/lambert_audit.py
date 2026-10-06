@@ -18,7 +18,7 @@ import math
 import subprocess
 from typing import Dict, List
 
-from audit_guard import finite_rows
+from audit_guard import driver_rows, finite_rows
 
 MU = 398600.4418
 CURTIS = {"r1": [5000.0, 10000.0, 2100.0], "r2": [-14600.0, 2500.0, 7000.0], "tof": 3600.0, "mu": 398600.0,
@@ -78,7 +78,7 @@ def run(command: List[str], driver: str, cases: List, env: Dict | None = None) -
                        capture_output=True, text=True, timeout=1800, env=env)
     if r.returncode != 0:
         raise RuntimeError(f"implementation run failed: {r.stderr[-300:]}")
-    return json.loads(r.stdout.strip().splitlines()[-1])
+    return driver_rows(r.stdout, len(cases))
 
 
 def category(row: Dict) -> str:

@@ -1,0 +1,27 @@
+{
+ "id": "star.units.sexagesimal",
+ "name": "STAR Units — sexagesimal angles",
+ "domain": "units",
+ "summary": "Degrees to and from degrees/minutes/seconds and hours/minutes/seconds with one rounding on the whole angle; rounded fields identical to ERFA on 1200 of 1200 cases, joined angles within 1.2e-13 deg of ERFA and astropy, and out-of-range input refused.",
+ "package_dir": "08_PROTOTYPES/star_sexagesimal",
+ "module": "star_sexagesimal.py",
+ "xc": null,
+ "reference": "IAU 1976 obliquity: 23 deg 26' 21.448\" = 23.4392911 deg (Meeus, Astronomical Algorithms, ch. 22)",
+ "reference_observed": "deg_to_dms(23.4392911, 3) = ('+', 23, 26, 21, 448); dms_to_deg('+', 23, 26, 21.448) = 23.43929111, within 1.2e-8 deg of the printed decimal (printed to 1e-7)",
+ "na": {
+  "G-02": "single-module library",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R1-R4",
+  "G-03": "deg_to_dms(), deg_to_hms(), dms_to_deg(), hms_to_deg()",
+  "G-04": "degrees in and out; fields as a sign and integers; the unit of the fraction is set by `decimals`",
+  "G-06": "no external data; cross-check corpus generated with a fixed seed",
+  "G-08": "pure functions, standard library only, no IO",
+  "G-13": "ValueError for every invalid input; integer arithmetic after one rounding; no iteration"
+ }
+}

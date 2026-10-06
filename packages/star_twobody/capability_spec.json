@@ -1,0 +1,27 @@
+{
+ "id": "star.orbit.twobody-quantities",
+ "name": "STAR Orbit — sizes and speeds of a Keplerian ellipse",
+ "domain": "orbit",
+ "summary": "Period, mean motion, circular and escape speed, apsis radii and speeds and specific energy of a two-body ellipse; within 4e-14 relative of SPICE for any gravitational parameter and 2.6e-14 of hapsira on 600 orbits; reproduces the geostationary orbit and refuses non-elliptic input.",
+ "package_dir": "08_PROTOTYPES/star_twobody",
+ "module": "star_twobody.py",
+ "xc": null,
+ "reference": "the geostationary orbit: period of one sidereal day, 86164.0905 s, at a radius of 42164.17 km with mu = 398600.4418 km3/s2 (Vallado, Fundamentals of Astrodynamics and Applications)",
+ "reference_observed": "period(42164.17) = 86164.0917 s: within 0.0012 s of the sidereal day",
+ "na": {
+  "G-02": "single-module library",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R1-R4",
+  "G-03": "period(), semi_major_axis_from_period(), mean_motion(), circular_speed(), escape_speed(), apsides(), elements_from_apsides(), apsis_speeds(), specific_energy()",
+  "G-04": "km, s, km3/s2 by default; any consistent set with an explicit mu",
+  "G-06": "no external data; the default mu is stated with its source",
+  "G-08": "pure functions, standard library only, no IO",
+  "G-13": "ValueError for every invalid input; ellipses only, stated; two-body limit stated"
+ }
+}

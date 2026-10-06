@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "star-aos-c"
-version = "0.1.2"
+version = "0.1.3"
 description = "S.T.A.R. CCSDS AOS/TM frame check in C99 (the library is src/*.c; Python is only the verification harness)"
 requires-python = ">=3.10"
 license = {text = "Apache-2.0"}

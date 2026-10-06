@@ -20,7 +20,7 @@ import math
 import subprocess
 from typing import Dict, List
 
-from audit_guard import finite_rows
+from audit_guard import driver_rows, finite_rows
 
 MU = 398600.4418
 VALLADO = {"r0": [1131.340, -2282.343, 6672.423], "v0": [-5.64305, 4.30333, 2.42879], "tof": 2400.0,
@@ -85,7 +85,54 @@ def run(command: List[str], driver: str, cases: List, env: Dict | None = None, t
                        capture_output=True, text=True, timeout=timeout, env=env)
     if r.returncode != 0:
         raise RuntimeError(f"implementation run failed: {r.stderr[-300:]}")
-    return json.loads(r.stdout.strip().splitlines()[-1])
+    return driver_rows(r.stdout, len(cases))
+
+
+WARMUP = [[7000.0, 0.0, 100.0], [0.0, 7.4, 1.0], 600.0, MU]            # an ordinary case: loads and compiles the solver
+HOSTILE_RUNNER = ("\nimport json as __pa_json, sys as __pa_sys\n"
+                  "propagate(*payload['warmup'])\n"
+                  "__pa_sys.stdout.write('@@READY\\n'); __pa_sys.stdout.flush()\n"
+                  "try:\n    __pa_r = {'s': [float(x) for x in propagate(*payload['case'])]}\n"
+                  "except Exception as __pa_x:\n    __pa_r = {'error': type(__pa_x).__name__ + ': ' + str(__pa_x)[:80]}\n"
+                  "__pa_sys.stdout.write('@@RESULT' + __pa_json.dumps(__pa_r) + '\\n'); __pa_sys.stdout.flush()\n")
+STARTUP_LIMIT_S = 900
+
+
+def run_hostile(command: List[str], driver: str, case: List, env: Dict | None = None) -> Dict:
+    """One hostile case in its own process. The solver is first warmed up on an ordinary case (process start, imports
+    and JIT compilation are NOT the solver's answer time: the first protocol timed the whole process, and on a loaded
+    machine the 'hang' label moved from one case to another between two runs - found by the reproducibility gate,
+    2026-10-06). Only after the '@@READY' marker does the HOSTILE_DEADLINE_S clock start."""
+    import threading
+    p = subprocess.Popen(command + [BOOT], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                         text=True, env=env)
+    lines: List[str] = []
+    ready, done = threading.Event(), threading.Event()
+
+    def reader():
+        for line in p.stdout:
+            lines.append(line)
+            if line.startswith("@@READY"):
+                ready.set()
+            if line.startswith("@@RESULT"):
+                done.set()
+        ready.set()
+        done.set()
+
+    threading.Thread(target=reader, daemon=True).start()
+    p.stdin.write(json.dumps({"code": driver + HOSTILE_RUNNER, "warmup": WARMUP, "case": case}))
+    p.stdin.close()
+    try:
+        if not ready.wait(STARTUP_LIMIT_S):
+            return {"error": f"StartupTimeout: solver not ready in {STARTUP_LIMIT_S} s"}
+        if not done.wait(HOSTILE_DEADLINE_S):
+            return {"error": f"Hang: no answer in {HOSTILE_DEADLINE_S} s after warm-up"}
+        res = [ln for ln in lines if ln.startswith("@@RESULT")]
+        if not res:
+            return {"error": "Crash: process ended without a result"}
+        return json.loads(res[-1][len("@@RESULT"):])
+    finally:
+        p.kill()
 
 
 def category(row: Dict) -> str:
@@ -103,10 +150,7 @@ def audit(impls: Dict[str, Dict], cases: List[Dict] | None = None) -> Dict:
         # each hostile case alone, with a deadline: the first audit hung for 30 min inside one library (2026-10-05);
         # a solver that never answers is a category ("hang"), not a reason to lose the whole audit
         for _, r, v, tof, mu in HOSTILE:
-            try:
-                rows += run(i["command"], i["driver"], [[r, v, tof, mu]], i.get("env"), timeout=HOSTILE_DEADLINE_S)
-            except subprocess.TimeoutExpired:
-                rows.append({"error": f"Hang: no answer in {HOSTILE_DEADLINE_S} s"})
+            rows.append(run_hostile(i["command"], i["driver"], [r, v, tof, mu], i.get("env")))
         raw[n] = rows
     n_reg = len(cases)
     reg = {n: finite_rows(rows[: 1 + n_reg], ["s"]) for n, rows in raw.items()}

@@ -18,7 +18,7 @@ import math
 import subprocess
 from typing import Dict, List
 
-from audit_guard import finite_rows  # a NaN must be a refusal, never vanish inside max()
+from audit_guard import driver_rows, finite_rows  # a NaN must be a refusal, never vanish inside max()
 
 VALLADO_M_DEG, VALLADO_ECC, VALLADO_E_DEG = 235.4, 0.4, 220.512074767522
 VALIDATION_TOL_RAD = 1e-9
@@ -62,7 +62,7 @@ def run(command: List[str], driver: str, cases: List, env: Dict | None = None) -
                        capture_output=True, text=True, timeout=1800, env=env)
     if r.returncode != 0:
         raise RuntimeError(f"implementation run failed: {r.stderr[-300:]}")
-    return json.loads(r.stdout.strip().splitlines()[-1])
+    return driver_rows(r.stdout, len(cases))
 
 
 def category(row: Dict) -> str:

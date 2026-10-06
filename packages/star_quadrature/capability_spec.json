@@ -1,0 +1,27 @@
+{
+ "id": "star.numerics.gauss-legendre",
+ "name": "STAR Numerics — Gauss-Legendre quadrature",
+ "domain": "numerics",
+ "summary": "Gauss-Legendre nodes and weights for 1 to 32 points, each node the float nearest to the true root (exact coefficients, exact-sign bisection) and each weight evaluated exactly and rounded once; fixed-rule integration and Legendre polynomials with derivative; all 528 nodes and weights equal SymPy's 40-digit values rounded to a float.",
+ "package_dir": "08_PROTOTYPES/star_quadrature",
+ "module": "star_quadrature.py",
+ "xc": null,
+ "reference": "Abramowitz & Stegun, Handbook of Mathematical Functions, table 25.4: n = 2 nodes +-0.577350269189626, weights 1; n = 3 nodes 0, +-0.774596669241483, weights 0.888888888888889, 0.555555555555556",
+ "reference_observed": "gauss_legendre(2) = ((-0.5773502691896257, 0.5773502691896257), (1.0, 1.0)); gauss_legendre(3) = ((-0.7745966692414834, 0.0, 0.7745966692414834), (0.5555555555555556, 0.8888888888888888, 0.5555555555555556))",
+ "na": {
+  "G-02": "single-module library",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R1-R4",
+  "G-03": "gauss_legendre(), integrate(), legendre()",
+  "G-04": "nodes increasing on [-1, 1]; integrate maps the rule to [a, b], reversed limits change the sign",
+  "G-06": "no external data; cross-check corpus generated with a fixed seed",
+  "G-08": "pure functions, standard library only, no IO; rules cached per process",
+  "G-13": "ValueError for every invalid input; bisection ends in at most 64 exact-sign steps; the rule is exact only up to degree 2n - 1 and no error bound is given, stated in the README"
+ }
+}

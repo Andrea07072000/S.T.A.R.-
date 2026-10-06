@@ -1,0 +1,10 @@
+:name: S.T.A.R. LEON3 GPTimer Interrupt Mode on Renode
+:description: loads timer_leon3.elf on Renode's leon3 board, logs APBUART to file, runs 2.5 s of virtual time
+
+mach create "leon3"
+machine LoadPlatformDescription @platforms/boards/leon3.repl
+sysbus LoadELF @/root/star_fw/timer_leon3.elf
+cpu SetRegister 14 0x41000000
+uart CreateFileBackend @/root/star_fw/leon3_timer_uart.txt true
+emulation RunFor "2.5"
+quit

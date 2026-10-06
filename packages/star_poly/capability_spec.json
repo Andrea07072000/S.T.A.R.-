@@ -1,0 +1,27 @@
+{
+ "id": "star.numerics.polynomial-roots",
+ "name": "STAR Numerics — real roots of quadratics and cubics",
+ "domain": "numerics",
+ "summary": "Distinct real roots of quadratics and cubics with the number of roots decided in exact arithmetic and each root isolated by exact-sign bisection, plus Horner evaluation; on 640 polynomials the count equals SymPy's exact count and every root equals the exact root rounded to a float; reproduces the classic cancellation example.",
+ "package_dir": "08_PROTOTYPES/star_poly",
+ "module": "star_poly.py",
+ "xc": null,
+ "reference": "Forsythe, Pitfalls in computation (1970) and Numerical Recipes 5.6: x^2 - 1e8 x + 1 has the roots 1e8 and 1e-8, and the textbook formula loses the small one",
+ "reference_observed": "quadratic_roots(1, -1e8, 1) = (1e-08, 99999999.99999999): both roots correct to the last digit",
+ "na": {
+  "G-02": "single-module library",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R1-R4",
+  "G-03": "quadratic_roots(), cubic_roots(), evaluate()",
+  "G-04": "coefficients highest power first; roots returned as a sorted tuple of distinct floats",
+  "G-06": "no external data; cross-check corpus generated with a fixed seed",
+  "G-08": "pure functions, standard library only, no IO",
+  "G-13": "ValueError for every invalid input; bisection over the floats ends in at most 64 exact-sign steps; what 'exact' does and does not mean stated"
+ }
+}

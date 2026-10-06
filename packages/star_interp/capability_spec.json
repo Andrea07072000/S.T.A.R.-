@@ -1,0 +1,27 @@
+{
+ "id": "star.numerics.lagrange-interpolation",
+ "name": "STAR Numerics — Lagrange interpolation of tabulated data",
+ "domain": "numerics",
+ "summary": "Value and first derivative of the interpolating polynomial through 2 to 20 tabulated points, in barycentric form; within 7e-15 of exact rational arithmetic on 600 tables, closer to the exact value than SciPy (1.2e-14) and NumPy (7e-11) on the same tables; extrapolation refused.",
+ "package_dir": "08_PROTOTYPES/star_interp",
+ "module": "star_interp.py",
+ "xc": null,
+ "reference": "Meeus, Astronomical Algorithms, Example 3.a: Mars at 0.884226, 0.877366, 0.870531 AU on 1992 November 7, 8, 9 (0h TD) is at 0.876125 AU on November 8 at 4h 21m",
+ "reference_observed": "0.8761253: within 3e-7 of the printed value (printed to 1e-6)",
+ "na": {
+  "G-02": "single-module library",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R1-R4",
+  "G-03": "lagrange(), lagrange_derivative(), lagrange_weights()",
+  "G-04": "the units are the caller's; nodes and values are parallel lists; the derivative is per unit of x",
+  "G-06": "no external data; cross-check corpus generated with a fixed seed",
+  "G-08": "pure functions, standard library only, no IO",
+  "G-13": "ValueError for every invalid input; extrapolation refused; the difference between evaluation accuracy and interpolation accuracy stated"
+ }
+}

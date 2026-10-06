@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "star-audit"
-version = "0.12.0"
+version = "0.13.1"
 description = "S.T.A.R. Assurance: accuracy envelope of third-party ECEF to geodetic conversions against an exact reference, per altitude band."
 requires-python = ">=3.9"
 dependencies = ["star-geodesy>=0.1.0", "mpmath>=1.3"]

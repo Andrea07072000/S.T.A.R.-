@@ -141,3 +141,17 @@ def test_identical_propagators_probe_boundary_and_categories():
     assert pa.audit({"x": impl(offv % 1.1e-5, "A")}, cases=CASES[:1])["validation"]["x"]["valid"] is False
     assert pa.category({"s": [1.0, float("nan")]}) == "nan" and pa.category({"s": [float("inf")]}) == "inf"
     assert pa.category({"s": [1.0] * 6}) == "value" and pa.category({"error": "Hang: no answer"}) == "error:Hang"
+
+
+def test_a_slow_start_is_not_a_hang_only_the_answer_time_counts(monkeypatch):
+    # process start, imports and JIT compilation are not the solver's answer time: the first protocol timed the whole
+    # process and, on a loaded machine, labelled a healthy solver "Hang" on a different case at each run
+    monkeypatch.setattr(pa, "HOSTILE_DEADLINE_S", 4)
+    slow_start = "import time\ntime.sleep(8)\n" + SAFE
+    row = pa.run_hostile(CMD, slow_start, [[7000.0, 0.0, 0.0], [0.0, 7.5, 0.0], 100.0, pa.MU])
+    assert pa.category(row) == "value" and len(row["s"]) == 6
+    assert pa.category(pa.run_hostile(CMD, slow_start, [[7000.0, 0.0, 0.0], [0.0, 7.5, 0.0], float("nan"), pa.MU])) == "error:ValueError"
+    assert pa.category(pa.run_hostile(CMD, HANGS, [[7000.0, 0.0, 0.0], [0.0, 7.5, 0.0], float("nan"), pa.MU])) == "error:Hang"
+    crash = "def propagate(r0, v0, tof, mu):\n    import os\n    if tof != 600.0: os._exit(3)\n    return [0.0] * 6\n"
+    assert pa.category(pa.run_hostile(CMD, crash, [[7000.0, 0.0, 0.0], [0.0, 7.5, 0.0], 100.0, pa.MU])) == "error:Crash"
+    assert pa.WARMUP == [[7000.0, 0.0, 100.0], [0.0, 7.4, 1.0], 600.0, 398600.4418] and pa.STARTUP_LIMIT_S == 900

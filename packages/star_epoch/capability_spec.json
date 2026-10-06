@@ -1,0 +1,27 @@
+{
+ "id": "star.time.epoch",
+ "name": "STAR Time — Julian and Besselian epochs",
+ "domain": "time",
+ "summary": "Julian and Besselian epochs to and from two-part Julian Dates; agrees with ERFA to 5e-13 yr, with skyfield and five SPICE constants to 3e-10 day on 600 dates and 600 epochs, and refuses out-of-range input.",
+ "package_dir": "08_PROTOTYPES/star_epoch",
+ "module": "star_epoch.py",
+ "xc": null,
+ "reference": "Lieske 1979 / Meeus, Astronomical Algorithms, ch. 21: B1950.0 = JD 2433282.4235",
+ "reference_observed": "JD 2433282.42345905, within 4.1e-5 day of the printed value (printed to 1e-4)",
+ "na": {
+  "G-02": "single-module library",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R1-R4",
+  "G-03": "julian_epoch(), besselian_epoch(), jd_from_julian_epoch(), jd_from_besselian_epoch()",
+  "G-04": "epochs in years, dates as two-part Julian Dates in days; output ranges stated",
+  "G-06": "no external data; cross-check corpus generated with a fixed seed",
+  "G-08": "pure functions, standard library only, no IO",
+  "G-13": "ValueError for every invalid input; no iteration"
+ }
+}

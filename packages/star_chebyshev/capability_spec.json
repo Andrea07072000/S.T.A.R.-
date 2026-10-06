@@ -1,0 +1,27 @@
+{
+ "id": "star.numerics.chebyshev-series",
+ "name": "STAR Numerics — Chebyshev series with derivative",
+ "domain": "numerics",
+ "summary": "Value and first derivative of a Chebyshev series by Clenshaw's recurrence, on [-1, 1] or on an interval given by midpoint and radius (the convention of ephemeris segments); 600 series agree with CSPICE chbval/chbder and NumPy within 1e-14 and with mpmath at 40 digits within 5e-14 of the natural scale of the sum; reproduces the NAIF documentation example.",
+ "package_dir": "08_PROTOTYPES/star_chebyshev",
+ "module": "star_chebyshev.py",
+ "xc": null,
+ "reference": "NAIF CSPICE documentation of chbval_c and chbder_c: coefficients (1, 3, 0.5, 1, 0.5, -1, 1), midpoint 0.5, radius 3, t = 1: value -0.340878, derivative 0.382716",
+ "reference_observed": "evaluate_on([1, 3, 0.5, 1, 0.5, -1, 1], 1, 0.5, 3) = (-0.34087791495198916, 0.3827160493827157)",
+ "na": {
+  "G-02": "single-module library",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R1-R4",
+  "G-03": "evaluate(), evaluate_on()",
+  "G-04": "coefficients c_0 first; interval as midpoint and radius; derivative with respect to t",
+  "G-06": "no external data; cross-check corpus generated with a fixed seed",
+  "G-08": "pure functions, standard library only, no IO",
+  "G-13": "ValueError for every invalid input; a point outside the interval is refused, never extrapolated; the limits make overflow impossible; the conditioning of cancelling sums is stated as not bounded"
+ }
+}

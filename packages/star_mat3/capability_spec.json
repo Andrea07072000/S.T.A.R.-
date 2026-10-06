@@ -1,0 +1,27 @@
+{
+ "id": "star.geometry.mat3",
+ "name": "STAR Geometry — 3x3 matrix operations",
+ "domain": "geometry",
+ "summary": "Transpose, exact determinant and inverse, products and a proper-rotation test for 3x3 matrices; determinant and inverse identical to exact rational arithmetic on 575 matrices including condition numbers up to 1e8 (where SPICE's inverse is off by 6e-6 and NumPy's by 9e-10); singular matrices refused.",
+ "package_dir": "08_PROTOTYPES/star_mat3",
+ "module": "star_mat3.py",
+ "xc": null,
+ "reference": "definitions of determinant and inverse (any text of linear algebra); exact case by hand: [[2, 0, 1], [1, 3, 2], [1, 0, 1]] has determinant 3 and inverse [[1, 0, -1], [1/3, 1/3, -1], [-1, 0, 2]]",
+ "reference_observed": "determinant 3.0 and the inverse exactly as the correctly rounded fractions",
+ "na": {
+  "G-02": "single-module library",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R1-R4",
+  "G-03": "transpose(), determinant(), inverse(), matmul(), matvec(), identity(), is_rotation()",
+  "G-04": "matrices as three rows of three numbers; the caller's units; the rotation test has an explicit tolerance",
+  "G-06": "no external data; cross-check corpus generated with a fixed seed",
+  "G-08": "pure functions, standard library only, no IO",
+  "G-13": "ValueError for every invalid input; singular and nearly singular matrices refused with a scale-free test; what 'exact' does and does not mean stated"
+ }
+}

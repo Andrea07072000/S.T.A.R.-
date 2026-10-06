@@ -1,0 +1,27 @@
+{
+ "id": "star.units.conversion",
+ "name": "STAR Units — conversion with exact definitions and a dimension check",
+ "domain": "units",
+ "summary": "Conversion between 64 units of ten dimensions and four temperature scales from exact definitions held as fractions; identical to SciPy within 4.5e-16 on all 416 ordered pairs and to astropy within 2.3e-16 on 328; a conversion between different dimensions (force and impulse, mass and force) is refused.",
+ "package_dir": "08_PROTOTYPES/star_units",
+ "module": "star_units.py",
+ "xc": null,
+ "reference": "NIST SP 811 and the SI Brochure: 1 lbf = 0.45359237 kg x 9.80665 m/s2 = 4.4482216152605 N exactly; 1 in = 0.0254 m; IAU 2012 B2: 1 au = 149597870700 m",
+ "reference_observed": "convert(1, 'lbf', 'N') = 4.4482216152605, convert(1, 'in', 'm') = 0.0254, convert(1, 'au', 'm') = 149597870700.0: identical",
+ "na": {
+  "G-02": "single-module library",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R1-R4",
+  "G-03": "convert(), convert_temperature(), dimension(), units()",
+  "G-04": "the whole purpose: every unit has a dimension, and mixing dimensions is an error; impulse is separate from force",
+  "G-06": "no external data: the factors are definitions written in the source as fractions",
+  "G-08": "pure functions, standard library only, no IO",
+  "G-13": "ValueError for every invalid input, for mismatched dimensions and for overflow; no iteration"
+ }
+}

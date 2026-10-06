@@ -1,0 +1,27 @@
+{
+ "id": "star.geometry.coords",
+ "name": "STAR Geometry — spherical and cylindrical to rectangular coordinates",
+ "domain": "geometry",
+ "summary": "Spherical and cylindrical coordinates to rectangular and back; agrees with ERFA, SPICE and astropy to 3e-16 relative and 6e-14 deg on 600 cases in both directions, close to the axis included, and refuses out-of-range input.",
+ "package_dir": "08_PROTOTYPES/star_coords",
+ "module": "star_coords.py",
+ "xc": null,
+ "reference": "definition x = r cos(lat) cos(lon), y = r cos(lat) sin(lon), z = r sin(lat) (Explanatory Supplement to the Astronomical Almanac); exact case by hand: lon 60 deg, lat 0, r 2 is (1, sqrt(3), 0)",
+ "reference_observed": "(1.0000000000000002, 1.7320508075688772, 0.0): within 3e-16 of the exact value",
+ "na": {
+  "G-02": "single-module library",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R1-R4",
+  "G-03": "spherical_to_xyz(), xyz_to_spherical(), cylindrical_to_xyz(), xyz_to_cylindrical()",
+  "G-04": "angles in degrees, lengths in the caller's unit; longitude from +x towards +y, latitude from the xy plane; output ranges stated",
+  "G-06": "no external data; cross-check corpus generated with a fixed seed",
+  "G-08": "pure functions, standard library only, no IO",
+  "G-13": "ValueError for every invalid input; undefined longitude on the axis returned as 0 and documented; no iteration"
+ }
+}

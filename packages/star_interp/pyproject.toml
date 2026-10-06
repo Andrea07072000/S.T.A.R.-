@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "star-interp"
+version = "0.1.0"
+description = "S.T.A.R. Lagrange interpolation and its derivative through tabulated points, in barycentric form, with explicit refusals and no extrapolation."
+requires-python = ">=3.9"
+dependencies = []
+license = {text = "Apache-2.0"}
+
+[tool.setuptools]
+py-modules = ["star_interp"]

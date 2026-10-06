@@ -1,0 +1,27 @@
+{
+ "id": "star.geodesy.polar-stereographic",
+ "name": "STAR Geodesy — polar stereographic and UPS",
+ "domain": "geodesy",
+ "summary": "Polar stereographic projection at either pole with any parallel of true scale, forward, inverse and scale factor, and the UPS grid; within 7e-8 m of PROJ and 5e-9 m of PyGeodesy on 600 cases; reproduces Snyder's published example and refuses out-of-range input.",
+ "package_dir": "08_PROTOTYPES/star_polar",
+ "module": "star_polar.py",
+ "xc": null,
+ "reference": "Snyder, Map Projections - A Working Manual (USGS PP 1395), p. 314: International ellipsoid, south polar aspect, true scale 71 S, central meridian 100 W, point 75 S 150 E: x = -1540033.6 m, y = -560526.4 m",
+ "reference_observed": "(-1540033.611, -560526.394): within 0.011 m of the printed values (printed to 0.1 m)",
+ "na": {
+  "G-02": "single-module library",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R1-R4",
+  "G-03": "ps_forward(), ps_inverse(), ps_scale(), ups_forward(), ups_inverse()",
+  "G-04": "degrees and metres; pole letter; axes orientation at each pole stated; false origins of UPS stated",
+  "G-06": "no external data; cross-check corpus generated with a fixed seed",
+  "G-08": "pure functions, standard library only, no IO",
+  "G-13": "ValueError for every invalid input; Newton iteration capped at 10 steps; the pole handled as an exact case"
+ }
+}

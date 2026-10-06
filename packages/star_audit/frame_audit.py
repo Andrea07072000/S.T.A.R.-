@@ -17,7 +17,7 @@ import math
 import subprocess
 from typing import Dict, List
 
-from audit_guard import finite_rows  # a NaN must be a refusal, never vanish inside max() (2026-10-05)
+from audit_guard import driver_rows, finite_rows  # a NaN must be a refusal, never vanish inside max() (2026-10-05)
 
 VALLADO_UTC = "2004-04-06T07:51:28.386009"
 VALLADO_TEME = [5094.18016210, 6127.64465950, 6380.34453270]
@@ -45,7 +45,7 @@ def run(command: List[str], driver: str, cases: List) -> List[Dict]:
                        capture_output=True, text=True, timeout=1800)
     if r.returncode != 0:
         raise RuntimeError(f"implementation run failed: {r.stderr[-300:]}")
-    return json.loads(r.stdout.strip().splitlines()[-1])
+    return driver_rows(r.stdout, len(cases))
 
 
 def audit(impls: Dict[str, Dict], cases: List | None = None) -> Dict:

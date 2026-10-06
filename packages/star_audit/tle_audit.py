@@ -21,6 +21,8 @@ import subprocess
 from pathlib import Path
 from typing import Dict, List
 
+from audit_guard import driver_rows  # one result row per case, or a declared error (2026-10-06)
+
 HERE = Path(__file__).resolve().parent
 KINDS = ("valid", "field_digit", "checksum", "line_number", "satnum_mismatch", "truncated", "resummed")
 SHOULD_ACCEPT = {"valid": True, "resummed": True}
@@ -99,7 +101,17 @@ def run(command: List[str], driver: str, cases: List, env: Dict | None = None) -
                        capture_output=True, text=True, timeout=1800, env=env)
     if r.returncode != 0:
         raise RuntimeError(f"implementation run failed: {r.stderr[-300:]}")
-    return json.loads(r.stdout.strip().splitlines()[-1])
+    return driver_rows(r.stdout, len(cases))
+
+
+def _read_ok(got, case: Dict) -> bool:
+    """True when the values read from a valid TLE are the ones printed in it (inclination to 1e-4 deg, catalogue number)."""
+    if not isinstance(got, dict):
+        return False
+    inc, sat = got.get("inc"), got.get("satnum")
+    if isinstance(inc, bool) or not isinstance(inc, (int, float)) or isinstance(sat, bool) or not isinstance(sat, int):
+        return False
+    return abs(inc - float(case["l2"][8:16])) <= 1e-4 and sat == int(case["l1"][2:7])
 
 
 def audit(impls: Dict[str, Dict], cases: List[Dict] | None = None) -> Dict:
@@ -114,7 +126,9 @@ def audit(impls: Dict[str, Dict], cases: List[Dict] | None = None) -> Dict:
             tot[c["kind"]] += 1
             if "ok" in x:
                 acc[c["kind"]] += 1
-                if c["kind"] == "valid" and abs(x["ok"]["inc"] - float(c["l2"][8:16])) > 1e-4:
+                # 2026-10-06: `abs(nan - inc) > 1e-4` is False, so a NaN inclination counted as a correct read, and the
+                # satellite number was collected but never compared
+                if c["kind"] == "valid" and not _read_ok(x["ok"], c):
                     bad_read.append(c["id"])
         validated = acc["valid"] == tot["valid"] and not bad_read
         wrong = {k: (acc[k] if not SHOULD_ACCEPT.get(k) else tot[k] - acc[k]) for k in KINDS}
