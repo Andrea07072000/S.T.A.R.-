@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "star-tle"
+version = "0.1.0"
+description = "S.T.A.R. strict reader of NORAD two-line element sets: every field as printed, malformed sets refused with a machine-readable reason."
+requires-python = ">=3.9"
+dependencies = []
+license = {text = "Apache-2.0"}
+
+[tool.setuptools]
+py-modules = ["star_tle"]

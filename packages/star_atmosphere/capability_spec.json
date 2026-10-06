@@ -1,0 +1,27 @@
+{
+ "id": "star.environment.atmosphere",
+ "name": "STAR Environment — U.S. Standard Atmosphere 1976 below 86 km",
+ "domain": "environment",
+ "summary": "Temperature, pressure, density and speed of sound of the 1976 U.S. Standard Atmosphere at geometric altitude from -5 km to 86 km; reproduces the published tables to the printed digits and refuses altitudes outside the model.",
+ "package_dir": "08_PROTOTYPES/star_atmosphere",
+ "module": "star_atmosphere.py",
+ "xc": null,
+ "reference": "U.S. Standard Atmosphere, 1976 (NOAA-S/T 76-1562): layer base pressures 22632.06, 5474.889, 868.0187, 110.9063, 66.93887, 3.956420 Pa and main-table rows at 0, 1, 5, 10, 20, 30, 50, 80 km",
+ "reference_observed": "base pressures within 2e-7 relative; table rows within 0.0005 K and one unit in the fifth printed digit of pressure and density",
+ "na": {
+  "G-02": "single-module library",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R1-R4",
+  "G-03": "ussa1976(), geopotential_m(), geometric_m()",
+  "G-04": "SI units; input is geometric altitude in metres, stated in docstring and README; constants of the 1976 standard pinned in the tests",
+  "G-06": "no external data; the layer table is in the module and pinned by a test",
+  "G-08": "pure functions, standard library only, no IO",
+  "G-13": "ValueError for invalid input and for altitudes outside the model; no iteration, no extrapolation"
+ }
+}

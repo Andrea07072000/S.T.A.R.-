@@ -3,10 +3,12 @@
 [![tests](https://github.com/Andrea07072000/S.T.A.R.-/actions/workflows/tests.yml/badge.svg)](https://github.com/Andrea07072000/S.T.A.R.-/actions/workflows/tests.yml)
 [![packages](https://github.com/Andrea07072000/S.T.A.R.-/actions/workflows/packages.yml/badge.svg)](https://github.com/Andrea07072000/S.T.A.R.-/actions/workflows/packages.yml)
 
-> **Update 2026-10-06** — 13 packages in [`packages/`](packages/README.md), all Apache-2.0. New: audits of Kepler-equation
-> and Lambert solvers across independent libraries, a hardened release of every package (each error requirement probed
-> with NaN, infinity, zero and degenerate inputs), and every requirement now linked to at least one test. Each package
-> is re-tested by GitHub on every push, and its README says what it does *not* claim.
+> **Update 2026-10-06 (second)** — 30 packages in [`packages/`](packages/README.md), all Apache-2.0. Seventeen new ones:
+> Kepler propagation, look angles, Sun vector and eclipse, geodesics, standard atmosphere, quaternions and Euler angles,
+> J2 rates, relative motion and rendezvous, orbit determination from three positions, a strict TLE reader, coverage
+> geometry, calendar and Julian day numbers, Earth rotation angle, precession, Moon position and the WGS-84 ellipsoid.
+> Each one is compared with two or three independent libraries, mutation-tested, re-tested by GitHub on every push,
+> and its README says what it does *not* claim.
 
 S.T.A.R. is an engineering platform for verification evidence: every requirement is linked to the tests
 that check it, and every result can be reproduced. This repository holds its open components. Each one ships

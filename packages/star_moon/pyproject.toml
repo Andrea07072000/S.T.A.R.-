@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "star-moon"
+version = "0.1.0"
+description = "S.T.A.R. low-precision geocentric Moon position (1950-2050) with its accuracy measured against JPL DE440, and explicit refusals."
+requires-python = ">=3.9"
+dependencies = []
+license = {text = "Apache-2.0"}
+
+[tool.setuptools]
+py-modules = ["star_moon"]

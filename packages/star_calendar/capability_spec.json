@@ -1,0 +1,27 @@
+{
+ "id": "star.time.calendar",
+ "name": "STAR Time — calendar dates and Julian day numbers (Julian, Gregorian, civil)",
+ "domain": "time",
+ "summary": "Exact integer conversion between calendar dates and Julian Day Numbers in the Julian, proleptic Gregorian and civil calendars from JDN 0 to year 9999; identical to ERFA, CPython datetime and NAIF SPICE on 9014 dates, and dates that do not exist are refused.",
+ "package_dir": "08_PROTOTYPES/star_calendar",
+ "module": "star_calendar.py",
+ "xc": null,
+ "reference": "Meeus, Astronomical Algorithms, chapter 7: -4712 January 1.5 = JD 0; 333 January 27.5 = JD 1842713.0; 1582 October 15.5 = JD 2299161.0; 1957 October 4.81 = JD 2436116.31; 2000 January 1.5 = JD 2451545.0",
+ "reference_observed": "all five reproduced exactly, in both directions",
+ "na": {
+  "G-02": "single-module library",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R1-R4",
+  "G-03": "jdn, calendar_date, julian_date, weekday, day_of_year, CALENDARS",
+  "G-04": "days; astronomical year numbering; Julian Date returned as (midnight JD, fraction of day)",
+  "G-06": "no external data; cross-check corpus generated with a fixed seed",
+  "G-08": "pure functions, standard library only, no IO",
+  "G-13": "ValueError for non-integers, dates that do not exist, unknown calendars and values outside the valid range; no iteration"
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "id": "star.attitude.quaternion",
+ "name": "STAR Attitude — unit quaternions and rotation matrices (one stated convention)",
+ "domain": "attitude",
+ "summary": "Unit quaternion algebra, rotation matrices and axis-angle with a fixed, tested convention (scalar first, Hamilton, active rotation); agrees with NAIF SPICE and SciPy to 9e-16 and refuses non-unit quaternions and non-rotation matrices instead of normalising them silently.",
+ "package_dir": "08_PROTOTYPES/star_quaternion",
+ "module": "star_quaternion.py",
+ "xc": null,
+ "reference": "NAIF SPICE Rotations Required Reading: the unit quaternion (cos(t/2), sin(t/2) u) is the rotation by t about u; rotation by +90 degrees about +Z takes +X to +Y, matrix [[0,-1,0],[1,0,0],[0,0,1]]",
+ "reference_observed": "quarter turns about the three axes, the matrix of the +Z quarter turn and the Hamilton relations reproduced to 1e-12; SPICE q2m, m2q, qxq agree on 411 cases to 9e-16",
+ "na": {
+  "G-02": "single-module library",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R1-R4",
+  "G-03": "normalize, conjugate, multiply, rotate, to_dcm, from_dcm, from_axis_angle, to_axis_angle, angle_between_deg",
+  "G-04": "degrees for angles; quaternion (w, x, y, z) scalar first, active rotation: stated in docstring and README and fixed by the tests",
+  "G-06": "no external data; cross-check corpus generated with a fixed seed",
+  "G-08": "pure functions, standard library only, no IO",
+  "G-13": "ValueError for every invalid input, including non-unit quaternions and non-rotation matrices; no iteration"
+ }
+}

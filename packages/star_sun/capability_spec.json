@@ -1,0 +1,27 @@
+{
+ "id": "star.orbit.sun",
+ "name": "STAR Orbit — Sun vector, beta angle and cylindrical eclipse",
+ "domain": "orbit",
+ "summary": "Low-precision geocentric Sun vector for 1950-2050 (measured within 0.0097 deg of JPL DE440 apparent), orbit beta angle and cylindrical shadow test; every function returns finite values or raises ValueError.",
+ "package_dir": "08_PROTOTYPES/star_sun",
+ "module": "star_sun.py",
+ "xc": null,
+ "reference": "Vallado, Fundamentals of Astrodynamics and Applications, Example 5-1 (Sun position vector): 2006 April 2, 0h UTC -> 0.9771945, 0.1924424, 0.0834308 AU (mean equator and equinox of date)",
+ "reference_observed": "each component within 1.2e-6 AU of the printed values; direction within 6.4e-5 deg",
+ "na": {
+  "G-02": "single-module library",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R1-R5",
+  "G-03": "sun_vector_au, sun_ra_dec_deg, beta_angle_deg, in_shadow",
+  "G-04": "astronomical units, degrees; r_sat and body radius in the caller's unit; frame = mean equator and equinox of date, stated in docstring and README",
+  "G-06": "no external data at run time; cross-check uses JPL DE440 (de440s.bsp) through SPICE, astropy and PyEphem",
+  "G-08": "pure functions, standard library only, no IO",
+  "G-13": "ValueError for every invalid input and for dates outside the stated validity; no iteration"
+ }
+}

@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "star-kepler"
+version = "0.1.0"
+description = "S.T.A.R. two-body (Kepler) propagation with universal variables: no orbit singularity, bounded iterations, explicit refusals."
+requires-python = ">=3.9"
+dependencies = []
+license = {text = "Apache-2.0"}
+
+[tool.setuptools]
+py-modules = ["star_kepler"]

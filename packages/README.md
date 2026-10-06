@@ -28,6 +28,23 @@ being true, that workflow turns red in public.
 | `star_maneuver` | Vis-viva, Hohmann, bi-elliptic, plane change, combined burn | published values (Vallado sec. 6.3 crossovers); invalid input (r > 2a, NaN, mu <= 0) raises instead of returning a number |
 | `star_elements`, `star_lambert` | State ↔ classical elements; Lambert problem | agree with Vallado, hapsira and skyfield to 1e-11; Lambert vs hapsira (Izzo) on 24 geometries |
 | `star_geodesy`, `star_sidereal`, `star_tdb` | ECEF ↔ geodetic, sidereal time, TDB−TT | published examples + independent libraries |
+| `star_kepler` | Two-body propagation with universal variables (no orbit singularity, bounded iterations) | 4.7e-7 km on 450 closed-form orbits, level with hapsira, Orekit and NAIF prop2b |
+| `star_topo` | Look angles from a ground site: ECEF to/from East-North-Up and azimuth/elevation/range | EPSG Guidance Note 7-2 example to 0.3 mm; pymap3d, PROJ and PyGeodesy within 18 nm |
+| `star_sun` | Low-precision Sun vector (1950-2050), orbit beta angle, cylindrical eclipse test | within 0.0097 deg of JPL DE440 (apparent) and astropy; states that the series includes aberration |
+| `star_geodesic` | Geodesic distance and azimuths on WGS-84, direct and inverse | Flinders Peak - Buninyong line to 0.14 mm; PROJ, GeographicLib and PyGeodesy within 0.08 mm on 840 problems |
+| `star_atmosphere` | U.S. Standard Atmosphere 1976 below 86 km | published layer pressures within 2e-7; fluids within 4e-15; refuses altitudes outside the model |
+| `star_quaternion` | Unit quaternions and rotation matrices with one stated convention | NAIF SPICE and SciPy within 9e-16; non-unit quaternions are refused, not silently normalised |
+| `star_euler` | Euler angles for the twelve axis sequences, gimbal lock reported | SciPy and NAIF SPICE within 6e-16 on all twelve sequences |
+| `star_j2` | Secular J2 rates, sun-synchronous and critical inclination | within 0.31 % of Orekit's Eckstein-Hechler theory and 0.38 % of a numerical integration |
+| `star_cw` | Relative motion near a circular orbit (Clohessy-Wiltshire) and two-impulse rendezvous | equal to the matrix exponential within 1.1e-13; distance from real two-body motion measured per separation |
+| `star_iod` | Initial orbit determination from three positions: Gibbs and Herrick-Gibbs | Vallado Example 7-3; Orekit IodGibbs within 8e-9; measured domain of each method on 240 known orbits |
+| `star_tle` | Strict reader of two-line element sets (Alpha-5 included) | fields equal to python-sgp4 and Orekit within 6e-14; refuses 147 of 174 malformed sets (Orekit 145, python-sgp4 0) |
+| `star_coverage` | Coverage geometry of a satellite over a spherical body | pymap3d and PROJ within 1e-13; precise from 1 mm of altitude to 1e12 km |
+| `star_calendar` | Calendar dates and Julian day numbers in exact integer arithmetic | identical to ERFA, CPython datetime and NAIF SPICE on 9014 dates, years B.C. and the 1582 switch included |
+| `star_ellipsoid` | WGS-84 ellipsoid: radii of curvature, auxiliary latitudes, meridian arc | pymap3d and PyGeodesy to rounding; meridian arc within 4e-9 m |
+| `star_era` | Earth Rotation Angle (IAU 2000) and Greenwich Mean Sidereal Time (IAU 2006) from two-part Julian Dates | SOFA validation values to 1e-13 rad; ERFA and Skyfield within 4e-8 arcsec |
+| `star_moon` | Low-precision geocentric Moon position (1950-2050) | Vallado Example 5-3 to 0.4 m; measured within 0.36 deg and 1200 km of JPL DE440 on 2002 dates |
+| `star_precession` | IAU 1976 precession between J2000 and the mean equator and equinox of date | SOFA validation values to 1e-15; ERFA within 1.2e-16; PyEphem within 0.21 arcsec |
 
 ## What the audits found (factual, reproducible)
 - **TLE ingestion**: python-sgp4 `Satrec.twoline2rv` and skyfield `EarthSatellite` accept every malformed TLE in our

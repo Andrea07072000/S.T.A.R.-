@@ -1,0 +1,27 @@
+{
+ "id": "star.geodesy.geodesic",
+ "name": "STAR Geodesy — geodesic distance and azimuth on WGS-84 (direct and inverse)",
+ "domain": "geodesy",
+ "summary": "Inverse and direct geodesic problems on WGS-84 with bounded iterations: measured within 0.08 mm of PROJ, GeographicLib and PyGeodesy; nearly antipodal points are refused, an unconverged value is never returned.",
+ "package_dir": "08_PROTOTYPES/star_geodesic",
+ "module": "star_geodesic.py",
+ "xc": null,
+ "reference": "Flinders Peak - Buninyong line (Geoscience Australia / ICSM GDA technical manual): 54972.271 m, forward azimuth 306 52 05.37, reverse azimuth 127 10 25.07",
+ "reference_observed": "distance within 1.4e-4 m, azimuths within 0.0032 arcsec; direct problem reaches Buninyong within 1.2e-4 arcsec",
+ "na": {
+  "G-02": "single-module library",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R1-R4",
+  "G-03": "inverse(), direct()",
+  "G-04": "degrees and metres; azimuth from North towards East in [0, 360); longitude out in [-180, 180); WGS-84 constants pinned in the tests",
+  "G-06": "no external data; cross-check corpus generated with a fixed seed",
+  "G-08": "pure functions, standard library only, no IO",
+  "G-13": "ValueError for invalid input, RuntimeError for antipodal or non-convergent cases, iterations bounded at 200"
+ }
+}

@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "star-cw"
+version = "0.1.0"
+description = "S.T.A.R. relative motion near a circular orbit (Clohessy-Wiltshire): closed-form transition matrix, free drift and two-impulse rendezvous, with singular transfer times refused."
+requires-python = ">=3.9"
+dependencies = []
+license = {text = "Apache-2.0"}
+
+[tool.setuptools]
+py-modules = ["star_cw"]

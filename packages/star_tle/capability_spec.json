@@ -1,0 +1,27 @@
+{
+ "id": "star.orbit.tle-reader",
+ "name": "STAR Orbit — strict reader of two-line element sets",
+ "domain": "orbit",
+ "summary": "Reads every field of a NORAD two-line element set as printed (Alpha-5 included) and refuses malformed sets with a machine-readable reason; fields equal to python-sgp4 and Orekit within 6e-14, and stricter than both on malformed input.",
+ "package_dir": "08_PROTOTYPES/star_tle",
+ "module": "star_tle.py",
+ "xc": null,
+ "reference": "The two-line element set format (NORAD / Space-Track) with its worked example: ISS (ZARYA), 1 25544U 98067A 08264.51782528 -.00002182 00000-0 -11606-4 0 2927 / 2 25544 51.6416 247.4627 0006703 130.5360 325.0288 15.72125391563537; SGP4 verification catalogue SGP4-VER.TLE (Vallado et al. 2006)",
+ "reference_observed": "every field and both checksums of the worked example reproduced exactly; 29/29 well-formed sets of the catalogue read with every field equal to the printed text",
+ "na": {
+  "G-02": "single-module library",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R1-R4",
+  "G-03": "parse(), checksum(), epoch_utc(), TleError",
+  "G-04": "units as printed in the TLE (degrees, revolutions per day, 1/earth radii), named in the keys",
+  "G-06": "fixtures/SGP4-VER.TLE from the SGP4 verification distribution; malformed corpus derived with a fixed seed",
+  "G-08": "pure functions, standard library only, no IO",
+  "G-13": "TleError with a reason for every malformed input; nothing is repaired; no iteration"
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "id": "star.geodesy.topocentric",
+ "name": "STAR Geodesy — look angles from a ground site (ENU, azimuth/elevation/range)",
+ "domain": "geodesy",
+ "summary": "ECEF to/from local East-North-Up and azimuth/elevation/range at a WGS-84 site: the geometry of ground-station visibility. Every function returns three finite floats or raises ValueError.",
+ "package_dir": "08_PROTOTYPES/star_topo",
+ "module": "star_topo.py",
+ "xc": null,
+ "reference": "EPSG Guidance Note 7-2, Geocentric/topocentric conversions (EPSG method 9836) example: origin 55 N, 5 E, h 200 m; X 3771793.968, Y 140253.342, Z 5124304.349 -> U -189013.869, V -128642.040, W -4220.171",
+ "reference_observed": "forward within 3.1e-4 m of the printed values (printed to 1 mm), reverse and origin ECEF within 1 mm",
+ "na": {
+  "G-02": "single-module library",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R1-R4",
+  "G-03": "ecef_to_enu, enu_to_ecef, enu_to_aer, aer_to_enu, ecef_to_aer, aer_to_ecef",
+  "G-04": "degrees and metres; azimuth from North towards East in [0, 360); elevation from the horizontal plane; WGS-84 constants pinned in the tests",
+  "G-06": "no external data; cross-check corpus generated with a fixed seed",
+  "G-08": "pure functions, standard library only, no IO",
+  "G-13": "ValueError for every invalid input and for overflow; no iteration, no unbounded loop"
+ }
+}

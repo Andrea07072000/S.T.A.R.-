@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "star-topo"
+version = "0.1.0"
+description = "S.T.A.R. look angles from a ground site: ECEF to/from local East-North-Up and azimuth/elevation/range on WGS-84, with explicit refusals."
+requires-python = ">=3.9"
+dependencies = []
+license = {text = "Apache-2.0"}
+
+[tool.setuptools]
+py-modules = ["star_topo"]

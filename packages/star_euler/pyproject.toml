@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "star-euler"
+version = "0.1.0"
+description = "S.T.A.R. Euler angles and rotation matrices for the twelve axis sequences with one stated convention (active, intrinsic), gimbal lock reported, checked against SciPy and NAIF SPICE."
+requires-python = ">=3.9"
+dependencies = []
+license = {text = "Apache-2.0"}
+
+[tool.setuptools]
+py-modules = ["star_euler"]

@@ -1,0 +1,27 @@
+{
+ "id": "star.attitude.euler",
+ "name": "STAR Attitude — Euler angles and rotation matrices for the twelve sequences",
+ "domain": "attitude",
+ "summary": "Rotation matrix from three Euler angles and back for the six Tait-Bryan and six proper sequences, with one stated convention (active, intrinsic), gimbal lock detected and reported; agrees with SciPy and NAIF SPICE to 6e-16 on all twelve sequences.",
+ "package_dir": "08_PROTOTYPES/star_euler",
+ "module": "star_euler.py",
+ "xc": null,
+ "reference": "Aerospace yaw-pitch-roll (3-2-1) direction cosine matrix as printed in flight-dynamics texts: first row (cy cp, cy sp sr - sy cr, cy sp cr + sy sr), second row (sy cp, sy sp sr + cy cr, sy sp cr - cy sr), third row (-sp, cp sr, cp cr)",
+ "reference_observed": "the printed matrix reproduced to 1e-15 for yaw 30, pitch 20, roll 10 degrees and the angles recovered to 1e-12; NAIF eul2m bit-identical after transposition on 744 cases",
+ "na": {
+  "G-02": "single-module library",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R1-R4",
+  "G-03": "SEQUENCES, to_dcm(), from_dcm(), is_singular()",
+  "G-04": "degrees; active intrinsic rotations, stated in docstring and README and fixed by the tests; output ranges stated",
+  "G-06": "no external data; cross-check corpus generated with a fixed seed",
+  "G-08": "pure functions, standard library only, no IO",
+  "G-13": "ValueError for unknown sequences, invalid input and non-rotation matrices; gimbal lock reported, not hidden"
+ }
+}

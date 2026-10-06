@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "star-calendar"
+version = "0.1.0"
+description = "S.T.A.R. calendar dates and Julian day numbers in exact integer arithmetic: Julian, Gregorian and civil calendars, with dates that do not exist refused."
+requires-python = ">=3.9"
+dependencies = []
+license = {text = "Apache-2.0"}
+
+[tool.setuptools]
+py-modules = ["star_calendar"]

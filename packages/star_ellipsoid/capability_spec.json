@@ -1,0 +1,27 @@
+{
+ "id": "star.geodesy.ellipsoid",
+ "name": "STAR Geodesy — WGS-84 ellipsoid: radii of curvature, auxiliary latitudes, meridian arc",
+ "domain": "geodesy",
+ "summary": "Radii of curvature, geocentric radius, geocentric / parametric / rectifying latitude and meridian arc on WGS-84 at a geodetic latitude; agrees with pymap3d and PyGeodesy to rounding (arc within 4e-9 m) and refuses latitudes outside [-90, 90].",
+ "package_dir": "08_PROTOTYPES/star_ellipsoid",
+ "module": "star_ellipsoid.py",
+ "xc": null,
+ "reference": "NIMA TR8350.2 (WGS-84): a = 6378137 m, 1/f = 298.257223563, b = 6356752.3142 m, e^2 = 0.00669437999014, polar radius of curvature 6399593.6258 m, meridian quadrant 10001965.729 m",
+ "reference_observed": "b, e^2, polar radius of curvature and meridian quadrant reproduced to the printed digits",
+ "na": {
+  "G-02": "single-module library",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R1-R4",
+  "G-03": "meridian_radius, prime_vertical_radius, gaussian_radius, geocentric_radius, geocentric_latitude, parametric_latitude, meridian_arc, rectifying_latitude",
+  "G-04": "geodetic latitude in degrees in; metres and degrees out; WGS-84 constants pinned in the tests",
+  "G-06": "no external data; cross-check corpus generated with a fixed seed",
+  "G-08": "pure functions, standard library only, no IO",
+  "G-13": "ValueError for every invalid input; latitudes outside the range are not wrapped; no iteration"
+ }
+}

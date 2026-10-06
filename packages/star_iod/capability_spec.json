@@ -1,0 +1,27 @@
+{
+ "id": "star.orbit.iod-gibbs",
+ "name": "STAR Orbit — initial orbit determination from three positions (Gibbs, Herrick-Gibbs)",
+ "domain": "orbit",
+ "summary": "Velocity at the middle of three position vectors by Gibbs' method (cancellation-free form) and Herrick-Gibbs, with the measured domain of each (crossover near 0.4 degrees), agreement with Orekit IodGibbs within 8e-9 and explicit refusal of non-coplanar, collinear or impossible geometry.",
+ "package_dir": "08_PROTOTYPES/star_iod",
+ "module": "star_iod.py",
+ "xc": null,
+ "reference": "Vallado, Fundamentals of Astrodynamics and Applications, Example 7-3 (Gibbs): r1 = (0, 0, 6378.137), r2 = (0, -4464.696, -5102.509), r3 = (0, 5740.323, 3189.068) km -> v2 = (0, 5.531148, -5.191806) km/s",
+ "reference_observed": "all three components within 2.2e-7 km/s of the printed values; Example 7-4 (Herrick-Gibbs) first two components within 1e-6 km/s, third component not asserted",
+ "na": {
+  "G-02": "single-module library",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R1-R4",
+  "G-03": "gibbs(), herrick_gibbs(), separation_deg()",
+  "G-04": "km, km/s, s by default; any consistent set with the matching mu (tested in metres)",
+  "G-06": "no external data; cross-check corpus generated with a fixed seed",
+  "G-08": "pure functions, standard library only, no IO",
+  "G-13": "ValueError for invalid input and for geometry that defines no orbit; no iteration"
+ }
+}

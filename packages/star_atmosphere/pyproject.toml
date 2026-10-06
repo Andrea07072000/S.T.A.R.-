@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "star-atmosphere"
+version = "0.1.0"
+description = "S.T.A.R. U.S. Standard Atmosphere 1976 below 86 km: temperature, pressure, density and speed of sound at geometric altitude, with explicit refusals outside the model."
+requires-python = ">=3.9"
+dependencies = []
+license = {text = "Apache-2.0"}
+
+[tool.setuptools]
+py-modules = ["star_atmosphere"]
