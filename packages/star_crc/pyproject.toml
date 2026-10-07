@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "star-crc"
+version = "0.1.0"
+description = "S.T.A.R. the CCSDS frame CRC-16, CRC-16/XMODEM, CRC-32, CRC-32C and any Rocksoft-model CRC of 8 to 64 bits, bit by bit, with explicit refusals."
+requires-python = ">=3.9"
+dependencies = []
+license = {text = "Apache-2.0"}
+
+[tool.setuptools]
+py-modules = ["star_crc"]

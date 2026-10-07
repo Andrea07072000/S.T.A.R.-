@@ -3,6 +3,15 @@
 [![tests](https://github.com/Andrea07072000/S.T.A.R.-/actions/workflows/tests.yml/badge.svg)](https://github.com/Andrea07072000/S.T.A.R.-/actions/workflows/tests.yml)
 [![packages](https://github.com/Andrea07072000/S.T.A.R.-/actions/workflows/packages.yml/badge.svg)](https://github.com/Andrea07072000/S.T.A.R.-/actions/workflows/packages.yml)
 
+> **Correction 2026-10-07 (second update)** — `star_lambert` 0.1.2 accepted some pairs of positions exactly opposite
+> each other (a 180-degree transfer, whose plane is not defined) and returned meaningless velocities; 0.1.3 always
+> refuses them. If you used 0.1.2 near 180 degrees, update. We found it ourselves after correcting our mutation-testing
+> tool, which had been skipping the inner operator of nested expressions; 59 modules have been re-measured so far (the
+> rest are being done), `star_era` 0.1.1 adds the tests that the corrected measurement asked for, and `star_elements`
+> 0.2.4 no longer returns an angle of exactly 2 pi where 0 was meant. Nine more packages: CCSDS ASCII time
+> codes, CRCs of space data links, exact summary statistics, line fit, quantiles and tabulated integrals, attitude
+> interpolation, inertial-to-rotating frame, range rate and Doppler. 63 packages in all.
+>
 > **Update 2026-10-07** — 54 packages in [`packages/`](packages/README.md), all Apache-2.0. Twenty-four new ones:
 > map projections (transverse Mercator and UTM, Lambert conic, Albers, Mercator, polar stereographic), sky and
 > coordinate frames (ecliptic, galactic, horizon, epochs, sexagesimal angles, separations on the sphere, angle

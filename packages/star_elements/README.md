@@ -18,3 +18,8 @@ trips up to e = 0.999, XC-010 vs hapsira 21/21 AGREE.
 
 ## Not supported / not claimed
 Hyperbolic/parabolic anomalies, equinoctial or other non-singular element sets (needed for equatorial/circular orbits), mean elements, any flight use.
+
+## Changes
+- 0.2.4 (2026-10-07): `rv_to_coe` could return an angle of exactly 2 pi (the same direction as 0) for a state at an apsis or with the periapsis on the
+  line of nodes; angles are now always in [0, 2 pi). Guard tests added after a corrected mutation measurement (0.82 on 0.2.3). Near 0 and 180 degrees the
+  angles come from an inverse cosine and are accurate to about 1.5e-8 rad, not to full precision: stated here, not changed.

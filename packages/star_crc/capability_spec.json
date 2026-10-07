@@ -1,0 +1,27 @@
+{
+ "id": "star.telemetry.crc",
+ "name": "STAR Telemetry — cyclic redundancy checks, bit by bit",
+ "domain": "telemetry",
+ "summary": "The CRC-16 of CCSDS transfer frames, CRC-16/XMODEM, CRC-32, CRC-32C and any Rocksoft-model CRC of 8 to 64 bits computed through the defining shift register; on 499 messages and nine variants identical to fastcrc (4491 values), to CPython binascii and zlib (1497) and to a polynomial division over GF(2) in SymPy (1611); reproduces the nine catalogue check values.",
+ "package_dir": "08_PROTOTYPES/star_crc",
+ "module": "star_crc.py",
+ "xc": null,
+ "reference": "reveng catalogue of parametrised CRC algorithms, check values for 123456789: CRC-16/IBM-3740 0x29B1, CRC-16/XMODEM 0x31C3, CRC-32/ISO-HDLC 0xCBF43926, CRC-32/ISCSI 0xE3069283",
+ "reference_observed": "crc16_ccsds = 0x29B1, crc16_xmodem = 0x31C3, crc32 = 0xCBF43926, crc32c = 0xE3069283",
+ "na": {
+  "G-02": "single-module library",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R1-R4",
+  "G-03": "crc(), crc16_ccsds(), crc16_xmodem(), crc32(), crc32c()",
+  "G-04": "bytes in, int out; the six Rocksoft parameters in their usual order",
+  "G-06": "no external data; cross-check corpus generated with a fixed seed",
+  "G-08": "pure functions, standard library only, no IO",
+  "G-13": "ValueError for every invalid input; stated that a CRC detects and does not authenticate or correct, and that this is a reference implementation, not a link-rate one"
+ }
+}

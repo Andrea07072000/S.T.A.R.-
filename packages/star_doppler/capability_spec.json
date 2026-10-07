@@ -1,0 +1,27 @@
+{
+ "id": "star.link.doppler",
+ "name": "STAR Link — range, range rate and one-way Doppler shift",
+ "domain": "link",
+ "summary": "Range and range rate between two states and the frequency received over that link, by the longitudinal relativistic formula or the first-order one; on 600 pairs of states and range rates up to 0.9 c the results agree with NAIF SPICE (vnorm, dvnorm), astropy's Doppler equivalencies, NumPy and mpmath at 40 digits within 8.3e-16 of their natural scale.",
+ "package_dir": "08_PROTOTYPES/star_doppler",
+ "module": "star_doppler.py",
+ "xc": null,
+ "reference": "speed of light 299792.458 km/s (SI definition); by hand: a source receding at 0.6 c is received at sqrt(0.4/1.6) = 0.5 of its frequency",
+ "reference_observed": "received_frequency(1000.0, 0.6 * C_KM_S) = 500.0; range_and_rate((0,0,0), (0,0,0), (3,4,0), (1,0,0)) = (5.0, 0.6)",
+ "na": {
+  "G-02": "single-module library",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R1-R4",
+  "G-03": "range_and_rate(), received_frequency(), C_KM_S",
+  "G-04": "range rate positive when the two move apart; a positive range rate lowers the received frequency; km and km/s with C_KM_S",
+  "G-06": "one constant (the SI speed of light); cross-check corpus generated with a fixed seed",
+  "G-08": "pure functions, standard library only, no IO",
+  "G-13": "ValueError for every invalid input, for coincident positions and for a range rate at or beyond the speed of light; the omissions (light time, two-way, transverse term, media) are stated with their order of magnitude"
+ }
+}

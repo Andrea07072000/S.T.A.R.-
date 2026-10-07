@@ -17,8 +17,10 @@ def _exact_c(z):
 
 def _exact_s(z):
     if z > 0:
-        s = math.sqrt(z); return (s - math.sin(s)) / s ** 3
-    s = math.sqrt(-z); return (math.sinh(s) - s) / s ** 3
+        s = math.sqrt(z)
+        return (s - math.sin(s)) / s ** 3
+    s = math.sqrt(-z)
+    return (math.sinh(s) - s) / s ** 3
 
 
 @pytest.mark.parametrize("z", [-50.0, -5.0, -1e-3, -2e-8, 2e-8, 1e-3, 5.0, 30.0])

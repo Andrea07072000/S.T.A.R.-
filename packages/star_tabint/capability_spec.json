@@ -1,0 +1,27 @@
+{
+ "id": "star.numerics.tabulated-integral",
+ "name": "STAR Numerics — integrals of tabulated data, correctly rounded",
+ "domain": "numerics",
+ "summary": "Trapezoid rule on any strictly increasing grid, its running integral and the composite Simpson rule for equally spaced samples, each evaluated exactly in rational arithmetic and rounded once; on 500 tables (1750 values) every value is identical to the exact rational value from SymPy, and NumPy and SciPy agree within 3.3e-16 of the sum of the absolute panel areas.",
+ "package_dir": "08_PROTOTYPES/star_tabint",
+ "module": "star_tabint.py",
+ "xc": null,
+ "reference": "by hand, exact: Simpson's rule with four intervals for 1/x on [1, 2] is 1747/2520 = 0.693253968253968...; the trapezoid rule for x^2 at 0, 1, 2 is 3",
+ "reference_observed": "simpson([1, 0.8, 2/3, 4/7, 0.5], 0.25) = 0.6932539682539682; trapezoid([0, 1, 2], [0, 1, 4]) = 3.0",
+ "na": {
+  "G-02": "single-module library",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R1-R4",
+  "G-03": "trapezoid(), cumulative(), simpson()",
+  "G-04": "tables as (xs, ys) with xs strictly increasing; Simpson takes the values and the step",
+  "G-06": "no external data; cross-check corpus generated with a fixed seed",
+  "G-08": "pure functions, standard library only, no IO",
+  "G-13": "ValueError for every invalid input; stated that the result is the value of the rule on the samples and that the error of the rule is not estimated"
+ }
+}

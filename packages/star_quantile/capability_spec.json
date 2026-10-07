@@ -1,0 +1,27 @@
+{
+ "id": "star.statistics.quantiles",
+ "name": "STAR Statistics — median, quantiles, IQR and MAD, correctly rounded",
+ "domain": "statistics",
+ "summary": "Median, Hyndman-Fan type 7 quantile, interquartile range and median absolute deviation computed exactly in rational arithmetic and rounded once; on 500 datasets (2000 values) every value is identical to the exact rational value from SymPy, and NumPy, SciPy and CPython statistics agree within 7e-16 of the largest value.",
+ "package_dir": "08_PROTOTYPES/star_quantile",
+ "module": "star_quantile.py",
+ "xc": null,
+ "reference": "worked example of the median absolute deviation, data (1, 1, 2, 2, 4, 6, 9): median 2, MAD 1; Hyndman and Fan (1996) definition 7: quartiles of 1..5 are 2 and 4",
+ "reference_observed": "median = 2.0, mad = 1.0; quantile([1, 2, 3, 4, 5], 0.25) = 2.0, quantile(..., 0.75) = 4.0",
+ "na": {
+  "G-02": "single-module library",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R1-R4",
+  "G-03": "median(), quantile(), iqr(), mad()",
+  "G-04": "q in [0, 1]; quantile definition 7 of Hyndman and Fan; MAD not scaled",
+  "G-06": "no external data; cross-check corpus generated with a fixed seed",
+  "G-08": "pure functions, standard library only, no IO",
+  "G-13": "ValueError for every invalid input; stated that other packages may default to another of the nine quantile definitions and that the MAD is unscaled"
+ }
+}

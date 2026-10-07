@@ -39,7 +39,7 @@ while len(cases) < 24:
         continue
     cases.append({"r1": r1, "r2": r2, "tof": tof, "prograde": prograde,
                   "v1": [float(x) for x in v1.to_value(u.km / u.s)], "v2": [float(x) for x in v2.to_value(u.km / u.s)]})
-import hapsira
+import hapsira  # noqa: E402
 out = {"source": f"hapsira {hapsira.__version__} iod.izzo.lambert, M=0", "mu": MU, "cases": cases}
 Path(__file__).with_name("hapsira_reference.json").write_text(json.dumps(out, indent=1), encoding="utf-8")
 print(len(cases), out["source"])

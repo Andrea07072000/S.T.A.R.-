@@ -13,6 +13,7 @@ import math
 from typing import Sequence, Tuple
 
 MU_EARTH = 398600.4418  # km^3/s^2
+DEGENERATE_SINE = 1e-8     # positions within 1e-8 rad of the same or of opposite directions: the transfer plane is not defined
 
 
 def _stumpff_c(z: float) -> float:
@@ -71,16 +72,18 @@ def lambert(r1: Sequence[float], r2: Sequence[float], tof: float, mu: float = MU
     r1n, r2n = _norm(r1), _norm(r2)
     if r1n == 0 or r2n == 0:
         raise ValueError("position vectors must be non-zero")
-    cz = r1[0] * r2[1] - r1[1] * r2[0]
-    cos_dnu = max(-1.0, min(1.0, sum(a * b for a, b in zip(r1, r2)) / (r1n * r2n)))
-    dnu = math.acos(cos_dnu)
+    cross = (r1[1] * r2[2] - r1[2] * r2[1], r1[2] * r2[0] - r1[0] * r2[2], r1[0] * r2[1] - r1[1] * r2[0])
+    cz = cross[2]
+    # 2026-10-07 (version 0.1.3): the transfer angle comes from the cross AND the dot product. With acos of the dot product
+    # alone, positions exactly opposite each other could come out 1.5e-8 rad away from 180 degrees by rounding, pass the
+    # degeneracy check and return velocities in a plane chosen by rounding noise (85 of 399 opposite pairs in the test).
+    sin_dnu = _norm(cross) / (r1n * r2n)
+    if sin_dnu < DEGENERATE_SINE:
+        raise ValueError("degenerate geometry (transfer angle 0 or 180 deg)")
+    dnu = math.atan2(sin_dnu, sum(a * b for a, b in zip(r1, r2)) / (r1n * r2n))
     if (prograde and cz < 0) or (not prograde and cz >= 0):
         dnu = 2 * math.pi - dnu
-    if 1 - math.cos(dnu) < 1e-15:
-        raise ValueError("degenerate geometry (transfer angle 0 or 180 deg)")
     A = math.sin(dnu) * math.sqrt(r1n * r2n / (1 - math.cos(dnu)))
-    if abs(A) < 1e-12:
-        raise ValueError("degenerate geometry (transfer angle 0 or 180 deg)")
 
     y, F, dF = _universal_functions(r1n, r2n, A, mu, tof)
 

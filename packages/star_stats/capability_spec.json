@@ -1,0 +1,27 @@
+{
+ "id": "star.statistics.exact-summary",
+ "name": "STAR Statistics — summary statistics, correctly rounded",
+ "domain": "statistics",
+ "summary": "Mean, sample and population variance and standard deviation, root mean square and weighted mean computed exactly in rational arithmetic and rounded once, independent of the order of the values; on 500 datasets all seven statistics are identical to mpmath at 400 digits rounded once and to CPython's statistics module where it has them; reproduces the NIST NumAcc1 and NumAcc2 reference datasets.",
+ "package_dir": "08_PROTOTYPES/star_stats",
+ "module": "star_stats.py",
+ "xc": null,
+ "reference": "NIST Statistical Reference Datasets, NumAcc2 (1.2 followed by 500 pairs 1.1, 1.3): certified mean 1.2, sample standard deviation 0.1; NumAcc1 (10000001, 10000003, 10000002): mean 10000002, standard deviation 1",
+ "reference_observed": "mean = 1.2 and stdev = 0.09999999999999998 (the exact statistic of the floats 1.1, 1.2, 1.3); mean = 10000002.0 and stdev = 1.0",
+ "na": {
+  "G-02": "single-module library",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R1-R4",
+  "G-03": "mean(), variance(), stdev(), rms(), weighted_mean()",
+  "G-04": "sample statistics by default (divisor n - 1), population with sample=False",
+  "G-06": "no external data; cross-check corpus generated with a fixed seed",
+  "G-08": "pure functions, standard library only, no IO",
+  "G-13": "ValueError for every invalid input; what 'exact' means for floats that stand for decimals is stated; the overlap with the standard statistics module is stated"
+ }
+}

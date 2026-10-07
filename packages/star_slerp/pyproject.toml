@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "star-slerp"
+version = "0.1.0"
+description = "S.T.A.R. spherical linear interpolation of unit quaternions along the shorter rotation, and interpolation in a table of attitudes, with explicit refusals."
+requires-python = ">=3.9"
+dependencies = []
+license = {text = "Apache-2.0"}
+
+[tool.setuptools]
+py-modules = ["star_slerp"]

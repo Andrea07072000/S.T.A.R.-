@@ -18,13 +18,14 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        package: [conjunction_screen_sgp4, star_albers, star_atmosphere, star_audit, star_calendar, star_cdm, star_chebyshev, star_coords,
-                  star_coverage, star_crosscheck, star_cw, star_ecliptic, star_elements, star_ellipsoid, star_epoch, star_era,
-                  star_euler, star_galactic, star_gasdynamics, star_geodesic, star_geodesy, star_horizon, star_interp, star_iod,
-                  star_j2, star_kepler, star_lambert, star_lcc, star_maneuver, star_mat3, star_mercator, star_moon, star_orbit,
-                  star_polar, star_poly, star_precession, star_quadrature, star_quaternion, star_rootfind, star_sexagesimal,
-                  star_sidereal, star_sigma, star_sphere, star_sun, star_tdb, star_telemetry, star_telemetry_c, star_tle, star_topo,
-                  star_twobody, star_units, star_utm, star_vec3, star_wrap]
+        package: [conjunction_screen_sgp4, star_albers, star_atmosphere, star_audit, star_calendar, star_cdm, star_chebyshev,
+                  star_coords, star_coverage, star_crc, star_crosscheck, star_cw, star_doppler, star_ecliptic, star_elements,
+                  star_ellipsoid, star_epoch, star_era, star_euler, star_galactic, star_gasdynamics, star_geodesic, star_geodesy,
+                  star_horizon, star_interp, star_iod, star_j2, star_kepler, star_lambert, star_lcc, star_linefit, star_maneuver,
+                  star_mat3, star_mercator, star_moon, star_orbit, star_polar, star_poly, star_precession, star_quadrature,
+                  star_quantile, star_quaternion, star_rootfind, star_rotframe, star_sexagesimal, star_sidereal, star_sigma,
+                  star_slerp, star_sphere, star_stats, star_sun, star_tabint, star_tdb, star_telemetry, star_telemetry_c,
+                  star_timecode, star_tle, star_topo, star_twobody, star_units, star_utm, star_vec3, star_wrap]
         python: ["3.11", "3.12"]
     steps:
       - uses: actions/checkout@v5

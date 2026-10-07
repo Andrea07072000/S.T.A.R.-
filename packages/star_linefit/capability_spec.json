@@ -1,0 +1,27 @@
+{
+ "id": "star.statistics.line-fit",
+ "name": "STAR Statistics — least-squares line and correlation, correctly rounded",
+ "domain": "statistics",
+ "summary": "Least-squares straight line, standard errors of slope and intercept, residual standard deviation and Pearson correlation computed exactly in rational arithmetic and rounded once; on 500 datasets all six results are identical to the exact rational value from SymPy; reproduces the five certified values of the NIST Norris dataset to 1e-13 relative.",
+ "package_dir": "08_PROTOTYPES/star_linefit",
+ "module": "star_linefit.py",
+ "xc": null,
+ "reference": "NIST StRD linear regression, dataset Norris: slope 1.00211681802045, intercept -0.262323073774029, standard errors 0.429796848199937E-03 and 0.232818234301152, residual standard deviation 0.884796396144373",
+ "reference_observed": "1.0021168180204545, -0.26232307377402675, 0.0004297968481999412, 0.2328182343011548, 0.8847963961443813",
+ "na": {
+  "G-02": "single-module library",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R1-R4",
+  "G-03": "fit(), fit_errors(), correlation()",
+  "G-04": "arguments (xs, ys); errors with n - 2 degrees of freedom",
+  "G-06": "the NIST Norris data are written in the cross-check driver and in FACTS.md; the rest of the corpus is generated with a fixed seed",
+  "G-08": "pure functions, standard library only, no IO",
+  "G-13": "ValueError for every invalid input and for a degenerate fit; the assumptions behind the standard errors are stated as not checked"
+ }
+}

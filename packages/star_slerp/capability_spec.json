@@ -1,0 +1,27 @@
+{
+ "id": "star.attitude.slerp",
+ "name": "STAR Attitude — interpolation of attitudes along the shortest arc",
+ "domain": "attitude",
+ "summary": "Spherical linear interpolation between unit quaternions along the shorter rotation, and interpolation in a table of attitudes at given times; on 600 pairs of attitudes the largest component difference is 4.4e-16 from SciPy Slerp and 3.3e-16 from a route through NAIF SPICE rotation matrices, axis and angle.",
+ "package_dir": "08_PROTOTYPES/star_slerp",
+ "module": "star_slerp.py",
+ "xc": null,
+ "reference": "by hand from the definition of spherical linear interpolation (Shoemake 1985): half-way from the identity to 90 degrees about z is 45 degrees about z, (0.923879532511287, 0, 0, 0.382683432365090)",
+ "reference_observed": "slerp((1, 0, 0, 0), (cos 45 deg, 0, 0, sin 45 deg), 0.5) = (0.9238795325112866, 0.0, 0.0, 0.3826834323650897)",
+ "na": {
+  "G-02": "single-module library",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R1-R4",
+  "G-03": "slerp(), interpolate()",
+  "G-04": "quaternions (w, x, y, z), scalar first, Hamilton product, unit length; the convention of star_quaternion and NAIF SPICE",
+  "G-06": "no external data; cross-check corpus generated with a fixed seed",
+  "G-08": "pure functions, standard library only, no IO",
+  "G-13": "ValueError for every invalid input; a non-unit quaternion is refused, never normalised silently; no extrapolation outside the table; the 180-degree ambiguity is stated"
+ }
+}

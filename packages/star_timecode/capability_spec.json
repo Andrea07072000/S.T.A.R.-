@@ -1,0 +1,27 @@
+{
+ "id": "star.time.ccsds-ascii-timecode",
+ "name": "STAR Time — CCSDS ASCII time codes A and B",
+ "domain": "time",
+ "summary": "Strict reader and writer of the CCSDS 301.0-B-4 ASCII time codes A (calendar) and B (day of year), with the fraction kept as its digits; fields equal to CPython datetime and numpy.datetime64 on 600 instants and to astropy on the 331 between 1900 and 2100; refuses all 40 malformed or out-of-range texts of the corpus, of which the ISO parsers of those libraries accept 10 to 14.",
+ "package_dir": "08_PROTOTYPES/star_timecode",
+ "module": "star_timecode.py",
+ "xc": null,
+ "reference": "CCSDS 301.0-B-4, section 3.5.1: 1988-01-18T17:20:43.123456Z (code A) and 1988-018T17:20:43.123456Z (code B) are the same instant",
+ "reference_observed": "parse of both texts = (1988, 1, 18, 17, 20, 43, '123456'); format_b of those fields = '1988-018T17:20:43.123456Z'",
+ "na": {
+  "G-02": "single-module library",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R1-R4",
+  "G-03": "parse(), format_a(), format_b(), day_of_year(), month_day()",
+  "G-04": "fields (year, month, day, hour, minute, second, fraction digits); UTC only; terminator Z optional on input, always written",
+  "G-06": "no external data; cross-check corpus generated with a fixed seed; the list of malformed texts is in the driver",
+  "G-08": "pure functions, standard library only, no IO",
+  "G-13": "ValueError for every text that is not exactly a code A or B and for every impossible date or time; second 60 only at 23:59, with the stated limit that the leap-second table is not consulted"
+ }
+}

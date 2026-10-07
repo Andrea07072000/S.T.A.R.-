@@ -53,13 +53,13 @@ def rv_to_coe(r: Sequence[float], v: Sequence[float], mu: float = MU_EARTH) -> T
         raise ValueError("circular orbit: argument of periapsis undefined")
     raan = math.acos(max(-1.0, min(1.0, nv[0] / n)))
     if nv[1] < 0:
-        raan = 2 * math.pi - raan
+        raan = _wrap(2 * math.pi - raan)                # never exactly 2 pi (0.2.4: it was, at an apsis or a node)
     argp = math.acos(max(-1.0, min(1.0, _dot(nv, ev) / (n * e))))
     if ev[2] < 0:
-        argp = 2 * math.pi - argp
+        argp = _wrap(2 * math.pi - argp)                # never exactly 2 pi (0.2.4: it was, at an apsis or a node)
     nu = math.acos(max(-1.0, min(1.0, _dot(ev, r) / (e * R))))
     if vr < 0:
-        nu = 2 * math.pi - nu
+        nu = _wrap(2 * math.pi - nu)                # never exactly 2 pi (0.2.4: it was, at an apsis or a node)
     return h, e, i, raan, argp, nu
 
 

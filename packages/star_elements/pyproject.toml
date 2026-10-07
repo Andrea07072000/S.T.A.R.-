@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "star-elements"
-version = "0.2.3"
+version = "0.2.4"
 description = "S.T.A.R. Astrodynamics: classical orbital elements to and from Cartesian state (Curtis Algorithms 4.2 / 4.5)."
 requires-python = ">=3.9"
 dependencies = []

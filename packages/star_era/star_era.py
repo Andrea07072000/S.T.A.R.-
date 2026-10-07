@@ -17,7 +17,7 @@ import numbers
 from typing import Tuple
 
 __all__ = ["era_deg", "gmst06_deg"]
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 J2000 = 2451545.0
 JD_MIN, JD_MAX = 2378496.5, 2524593.5              # 1800-01-01 and 2200-01-01
 ERA0 = 0.7790572732640                             # turns at J2000.0 UT1
@@ -48,10 +48,16 @@ def _era_turns(day: float, frac: float) -> float:
     return (f + ERA0 + ERA_RATE * t) % 1.0
 
 
+def _wrap360(angle: float) -> float:
+    """Reduction to [0, 360). Python's % returns 360.0 itself for a tiny negative number (-1e-20 % 360.0 == 360.0): that
+    value is the same direction as 0 and is returned as 0.0, so the result is never 360."""
+    reduced = angle % 360.0
+    return 0.0 if reduced >= 360.0 else reduced
+
+
 def era_deg(ut1_day: float, ut1_frac: float = 0.0) -> float:
     day, frac = _pair(ut1_day, ut1_frac, "UT1 date")
-    angle = 360.0 * _era_turns(day, frac)
-    return 0.0 if angle >= 360.0 else angle
+    return _wrap360(360.0 * _era_turns(day, frac))
 
 
 def gmst06_deg(ut1_day: float, ut1_frac: float, tt_day: float, tt_frac: float) -> float:
@@ -61,5 +67,4 @@ def gmst06_deg(ut1_day: float, ut1_frac: float, tt_day: float, tt_frac: float) -
     poly = 0.0
     for c in reversed(GMST_POLY):
         poly = poly * t + c
-    angle = (360.0 * _era_turns(day, frac) + poly / 3600.0) % 360.0
-    return 0.0 if angle >= 360.0 else angle
+    return _wrap360(360.0 * _era_turns(day, frac) + poly / 3600.0)

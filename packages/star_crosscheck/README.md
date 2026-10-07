@@ -26,3 +26,8 @@ Verdicts: AGREE · DISAGREE · INSUFFICIENT_INDEPENDENCE · DEGRADED (a failed e
 ## Adding an engine
 `Engine(name, lineage, python=<venv python>, code="VERSION=...\ndef compute(inputs): ...")` — see
 `campaign_moon_distance.py`.
+
+## Changes
+- 0.1.3 (2026-10-07): tests only. A corrected mutation measurement showed that no test would have failed on a wrong sign in the Euclidean
+  distance of the 'norm' mode (the code was right; it was not pinned). Six guard tests added: the distance by hand, the verdict at the distance,
+  zero tolerance, the default tolerance of a reference, the length of a recorded error, the rounding of the elapsed time.
