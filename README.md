@@ -11,8 +11,10 @@
 > 0.1.1 is right to the last digits. We found both ourselves, the second one after noticing that some of our tests
 > compared small numbers with a tolerance that let anything through; three test files were corrected (`star_era`
 > 0.1.2, `star_units` 0.1.1, `star_sphere` 0.1.1); the other comparisons of that kind were re-run with a strict
-> tolerance and pass, but are still written the loose way in this repository. Four more packages: anomalies
-> and Kepler's equation, CCSDS Space Packets, exact least-squares polynomials and small linear systems. 67 packages.
+> tolerance and pass, but are still written the loose way in this repository. Seven more packages: anomalies
+> and Kepler's equation, CCSDS Space Packets, exact least-squares polynomials, small linear systems, attitude from
+> vector observations (TRIAD and Wahba's problem), natural cubic splines and modified Rodrigues parameters.
+> 70 packages.
 >
 > **Correction 2026-10-07 (second update)** — `star_lambert` 0.1.2 accepted some pairs of positions exactly opposite
 > each other (a 180-degree transfer, whose plane is not defined) and returned meaningless velocities; 0.1.3 always

@@ -1,0 +1,27 @@
+{
+ "id": "star.attitude.wahba",
+ "name": "STAR Attitude — TRIAD and Davenport's q-method",
+ "domain": "attitude",
+ "summary": "Attitude from vector observations: TRIAD for two directions and Davenport's q-method (Wahba's problem) for 2 to 1000 weighted directions, with the eigenproblem solved by Jacobi rotations in the standard library; conversion to the attitude matrix and the Wahba loss; within 7e-15 of SciPy's SVD solution and 5e-16 of ahrs TRIAD on 401 attitudes.",
+ "package_dir": "08_PROTOTYPES/star_wahba",
+ "module": "star_wahba.py",
+ "xc": null,
+ "reference": "By hand (no published numerical example cited): a body frame turned by +90 degrees about z has the attitude matrix ((0, 1, 0), (-1, 0, 0), (0, 0, 1)) and the quaternion (cos 45, 0, 0, sin 45); method of Wahba (1965), Black (1964), Davenport (1968)",
+ "reference_observed": "triad((1,0,0), (0,1,0), (0,-1,0), (1,0,0)) = ((0.0, 1.0, 0.0), (-1.0, 0.0, 0.0), (0.0, 0.0, 1.0)); q_method of the same = (0.7071067811865476, 0.0, 0.0, 0.7071067811865476)",
+ "na": {
+  "G-02": "single-module library",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R1-R4",
+  "G-03": "triad(), q_method(), rotation_matrix(), wahba_loss()",
+  "G-04": "b = A r, reference to body; quaternion (w, x, y, z) scalar first with w >= 0; matrices as tuples of rows",
+  "G-06": "no external data; cross-check corpus generated with a fixed seed",
+  "G-08": "pure functions, standard library only, no IO, no state",
+  "G-13": "ValueError for every invalid input and for observations that do not fix an attitude; sensitivity of nearly parallel observations stated in the README"
+ }
+}

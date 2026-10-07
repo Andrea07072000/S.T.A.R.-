@@ -1,0 +1,27 @@
+{
+ "id": "star.numerics.cubic-spline",
+ "name": "STAR Numerics — natural cubic spline",
+ "domain": "numerics",
+ "summary": "Natural cubic spline through 2 to 300 tabulated points: values, first derivative, second derivatives at the knots and integral, with the tridiagonal system solved in exact rational arithmetic and every result rounded once; within 8e-15 of SciPy and Hipparchus on 151 unevenly spaced tables.",
+ "package_dir": "08_PROTOTYPES/star_spline",
+ "module": "star_spline.py",
+ "xc": null,
+ "reference": "Burden and Faires, Numerical Analysis, natural cubic spline through (1, 2), (2, 3), (3, 5): S(1.5) = 2.40625, S(2.5) = 3.90625, second derivative 1.5 at the middle knot",
+ "reference_observed": "values([1, 2, 3], [2, 3, 5], [1.5, 2.5]) = (2.40625, 3.90625); second_derivatives = (0.0, 1.5, 0.0)",
+ "na": {
+  "G-02": "single-module library",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R1-R4",
+  "G-03": "second_derivatives(), values(), derivatives(), integral()",
+  "G-04": "xs strictly increasing; points inside the table; tuples returned",
+  "G-06": "no external data; cross-check corpus generated with a fixed seed",
+  "G-08": "pure functions, standard library only, no IO, no state",
+  "G-13": "ValueError for every invalid input and for a point outside the table; overshoot between knots and the cost of exact arithmetic stated in the README"
+ }
+}

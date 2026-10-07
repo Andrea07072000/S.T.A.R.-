@@ -1,0 +1,27 @@
+{
+ "id": "star.attitude.mrp",
+ "name": "STAR Attitude — modified Rodrigues parameters",
+ "domain": "attitude",
+ "summary": "Modified Rodrigues parameters: conversion with quaternions, direction cosine matrices and rotation vectors, shadow set and switching, composition of rotations through quaternions (no division by zero at a full turn) and the kinematic equation; within 6e-16 of Basilisk and 2e-15 of SciPy on 601 pairs with norms from 1e-8 to 5.",
+ "package_dir": "08_PROTOTYPES/star_mrp",
+ "module": "star_mrp.py",
+ "xc": null,
+ "reference": "By hand from the definition sigma = e tan(phi / 4) (Schaub and Junkins, Analytical Mechanics of Space Systems): the quaternion (1/2, 1/2, 1/2, 1/2), 120 degrees about (1, 1, 1), has sigma = (1/3, 1/3, 1/3); a half turn about z has sigma = (0, 0, 1)",
+ "reference_observed": "mrp_from_quaternion((0.5, 0.5, 0.5, 0.5)) = (0.3333333333333333, 0.3333333333333333, 0.3333333333333333); quaternion_from_mrp((0, 0, 1)) = (0.0, 0.0, 0.0, 1.0)",
+ "na": {
+  "G-02": "single-module library",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R1-R4",
+  "G-03": "mrp_from_quaternion(), quaternion_from_mrp(), shadow(), switch(), compose(), dcm_from_mrp(), rotation_vector_from_mrp(), mrp_from_rotation_vector(), mrp_rate()",
+  "G-04": "quaternions scalar first; matrix reference to body; compose(first, second) = C(second) C(first); radians and rad/s",
+  "G-06": "no external data; cross-check corpus generated with a fixed seed",
+  "G-08": "pure functions, standard library only, no IO, no state",
+  "G-13": "ValueError for every invalid input; at exactly half a turn either MRP of norm 1 may be returned, stated in the README"
+ }
+}
