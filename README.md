@@ -3,6 +3,17 @@
 [![tests](https://github.com/Andrea07072000/S.T.A.R.-/actions/workflows/tests.yml/badge.svg)](https://github.com/Andrea07072000/S.T.A.R.-/actions/workflows/tests.yml)
 [![packages](https://github.com/Andrea07072000/S.T.A.R.-/actions/workflows/packages.yml/badge.svg)](https://github.com/Andrea07072000/S.T.A.R.-/actions/workflows/packages.yml)
 
+> **Correction 2026-10-08** — `star_telemetry` up to 0.2.6 could lose or invent a Space Packet when packets span
+> frames: a packet ending exactly at the end of a frame with no packet start was lost; after a lost frame, leftover
+> data could be delivered as a packet that was never sent; an unfinished packet could be joined to bytes of a later
+> frame. 0.2.7 fixes the three (frame header decoding was not affected). If you reassemble packets across frames,
+> update. `star_sphere` 0.1.0 was wrong in the sixth digit for separations of 1e-9 degree (and worse below);
+> 0.1.1 is right to the last digits. We found both ourselves, the second one after noticing that some of our tests
+> compared small numbers with a tolerance that let anything through; three test files were corrected (`star_era`
+> 0.1.2, `star_units` 0.1.1, `star_sphere` 0.1.1); the other comparisons of that kind were re-run with a strict
+> tolerance and pass, but are still written the loose way in this repository. Four more packages: anomalies
+> and Kepler's equation, CCSDS Space Packets, exact least-squares polynomials and small linear systems. 67 packages.
+>
 > **Correction 2026-10-07 (second update)** — `star_lambert` 0.1.2 accepted some pairs of positions exactly opposite
 > each other (a 180-degree transfer, whose plane is not defined) and returned meaningless velocities; 0.1.3 always
 > refuses them. If you used 0.1.2 near 180 degrees, update. We found it ourselves after correcting our mutation-testing

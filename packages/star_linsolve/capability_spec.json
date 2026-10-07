@@ -1,0 +1,27 @@
+{
+ "id": "star.numerics.linsolve",
+ "name": "STAR Numerics — small linear systems",
+ "domain": "numerics",
+ "summary": "Determinant, solution and inverse of a square matrix of order 1 to 20 by elimination in exact rational arithmetic, each result rounded once: conditioning costs no digit and singularity is decided exactly; equal to SymPy's exact results on all 151 systems of the cross-check, Hilbert matrices of order 6 to 12 included.",
+ "package_dir": "08_PROTOTYPES/star_linsolve",
+ "module": "star_linsolve.py",
+ "xc": null,
+ "reference": "Hilbert matrix of order 3 (MathWorld, Hilbert Matrix): determinant 1/2160, inverse ((9, -36, 30), (-36, 192, -180), (30, -180, 180)); scaled by 60 it has integer entries, determinant 100 and that inverse divided by 60",
+ "reference_observed": "det(((60, 30, 20), (30, 20, 15), (20, 15, 12))) = 100.0; inverse = ((0.15, -0.6, 0.5), (-0.6, 3.2, -3.0), (0.5, -3.0, 3.0))",
+ "na": {
+  "G-02": "single-module library",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R1-R4",
+  "G-03": "det(), solve(), inverse()",
+  "G-04": "a is a list or tuple of rows; b a list or tuple; results are tuples",
+  "G-06": "no external data; cross-check corpus generated with a fixed seed",
+  "G-08": "pure functions, standard library only, no IO, no state",
+  "G-13": "ValueError for every invalid input and for a singular matrix; a determinant of 0.0 can be an underflow, stated in the README"
+ }
+}

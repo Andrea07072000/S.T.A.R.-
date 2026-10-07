@@ -13,21 +13,13 @@ Standards implemented:
 """
 
 import struct
-from datetime import datetime, timezone
-from dataclasses import dataclass, field
-from typing import List, Dict, Tuple, Optional, Generator
+from datetime import datetime
+from dataclasses import dataclass
+from typing import List, Dict, Tuple, Optional
 
 # star_timescales is a declared dependency (pyproject); no sys.path manipulation (fail.telemetry-hidden-path-dependency)
 try:
-    from star_timescales import (
-        cuc_to_utc,
-        decode_cuc,
-        encode_cuc,
-        cuc_p_field,
-        CucFormatError,
-        LeapSecondTableError,
-        NaiveDatetimeError,
-    )
+    from star_timescales import cuc_to_utc
 except ImportError as err:
     raise ImportError(f"Cannot federate star_timescales into star_telemetry: {err}")
 
@@ -118,20 +110,21 @@ class VirtualChannelReceiver:
         self.last_vcfc = vcfc
         self.frames_received += 1
 
-        if fhp == 2047:  # No packet starts in this frame
-            self.assembly_buffer.extend(data_field)
+        if fhp == 2046:  # Only idle data: a pending packet, if any, goes on in a later frame
             return packets_extracted
 
-        if fhp == 2046:  # Only idle data
-            return packets_extracted
-
-        # 1. Complete pending packet if buffer has content
-        if len(self.assembly_buffer) > 0 and fhp > 0:
-            self.assembly_buffer.extend(data_field[:fhp])
-            pkt = self._parse_single_packet(bytes(self.assembly_buffer))
+        # 1. Octets before the first header pointer belong to the pending packet, and only to it: with nothing pending
+        #    (first frame, or the frames before were lost) they are the end of a packet whose start was never seen.
+        #    Fixed 2026-10-07: they were kept and later read as if they began with a packet header.
+        if self.assembly_buffer:
+            self.assembly_buffer.extend(data_field if fhp == 2047 else data_field[:fhp])
+            pkt = self._take_pending(more_may_follow=(fhp == 2047))
             if pkt:
                 packets_extracted.append(pkt)
-            self.assembly_buffer.clear()
+
+        if fhp == 2047:  # No packet starts in this frame
+            self.reassembled_packets.extend(packets_extracted)
+            return packets_extracted
 
         # 2. Extract packets starting at fhp and forward
         idx = fhp
@@ -163,6 +156,19 @@ class VirtualChannelReceiver:
 
         self.reassembled_packets.extend(packets_extracted)
         return packets_extracted
+
+    def _take_pending(self, more_may_follow: bool) -> Optional[SpacePacket]:
+        """The pending packet if the buffer now holds exactly the octets it declares; the buffer is emptied unless the
+        packet is still short and more of it may follow. A packet is delivered in the frame that completes it (fixed
+        2026-10-07: one ending exactly at the end of a frame with no packet start was lost), and a buffer whose size
+        disagrees with the declared length is dropped, never cut to size."""
+        have = len(self.assembly_buffer)
+        declared = struct.unpack(">H", self.assembly_buffer[4:6])[0] + 7 if have >= 6 else None
+        if more_may_follow and (declared is None or have < declared):
+            return None
+        pkt = self._parse_single_packet(bytes(self.assembly_buffer)) if have == declared else None
+        self.assembly_buffer.clear()
+        return pkt
 
     def _parse_single_packet(self, data: bytes) -> Optional[SpacePacket]:
         if len(data) < 6:
@@ -316,11 +322,8 @@ def parse_space_packets(data: bytes) -> List[SpacePacket]:
     while idx + 6 <= len(data):
         w1, w2, pkt_len_field = struct.unpack(">HHH", data[idx:idx+6])
         total_len = pkt_len_field + 7
-        if idx + total_len <= len(data):
-            pkt = vc._parse_single_packet(data[idx:idx+total_len])
-            if pkt:
-                packets.append(pkt)
-            idx += total_len
-        else:
-            break
+        pkt = vc._parse_single_packet(data[idx:idx+total_len])      # None for a packet cut short by the end of the data
+        if pkt:
+            packets.append(pkt)
+        idx += total_len
     return packets

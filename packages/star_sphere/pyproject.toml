@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "star-sphere"
-version = "0.1.0"
+version = "0.1.1"
 description = "S.T.A.R. angles on the sphere: separation, position angle and offset point, accurate from micro-degrees to the antipode, with explicit refusals."
 requires-python = ">=3.9"
 dependencies = []

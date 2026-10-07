@@ -14,7 +14,7 @@ D = 2460000.5
 
 
 def test_the_hostile_set_and_the_constants_are_pinned():
-    assert len(BAD) == 14 and s.__all__ == ["era_deg", "gmst06_deg"] and s.__version__ == "0.1.1"
+    assert len(BAD) == 14 and s.__all__ == ["era_deg", "gmst06_deg"] and s.__version__ == "0.1.2"
     assert (s.JD_MIN, s.JD_MAX) == (2378496.5, 2524593.5) and len(s.GMST_POLY) == 6
 
 

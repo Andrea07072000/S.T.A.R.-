@@ -17,7 +17,7 @@ import numbers
 from typing import Tuple
 
 __all__ = ["era_deg", "gmst06_deg"]
-__version__ = "0.1.1"
+__version__ = "0.1.2"
 J2000 = 2451545.0
 JD_MIN, JD_MAX = 2378496.5, 2524593.5              # 1800-01-01 and 2200-01-01
 ERA0 = 0.7790572732640                             # turns at J2000.0 UT1

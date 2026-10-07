@@ -1,0 +1,27 @@
+{
+ "id": "star.ccsds.space-packet",
+ "name": "STAR CCSDS — Space Packet build, read and split",
+ "domain": "telemetry",
+ "summary": "CCSDS Space Packet primary header and packet boundary (CCSDS 133.0-B-2): encode and decode the six header fields, build and read whole packets, split a stream, advance the sequence count; every field checked, nothing masked, a truncated packet refused with the octet where the stream breaks; identical to spacepackets and ccsdspy on 1483 cases.",
+ "package_dir": "08_PROTOTYPES/star_spacepacket",
+ "module": "star_spacepacket.py",
+ "xc": null,
+ "reference": "CCSDS 133.0-B-2, section 4.1.3, written out by hand: telemetry, secondary header, APID 0x123, unsegmented, count 42, two data octets -> 09 23 C0 2A 00 01; idle packet of one octet -> 07 FF C0 00 00 00",
+ "reference_observed": "encode_header(0x123, 42, 1, secondary_header=True) = 0923c02a0001; encode_header(2047, 0, 0) = 07ffc0000000",
+ "na": {
+  "G-02": "single-module library",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R1-R4",
+  "G-03": "encode_header(), decode_header(), encode_packet(), decode_packet(), split_packets(), next_count()",
+  "G-04": "octets most significant bit first; the length field is the number of data octets minus one",
+  "G-06": "no external data; cross-check corpus generated with a fixed seed",
+  "G-08": "pure functions, standard library only, no IO, no state",
+  "G-13": "ValueError for every invalid input; a stream with a damaged length field is refused, not resynchronised, stated in the README"
+ }
+}

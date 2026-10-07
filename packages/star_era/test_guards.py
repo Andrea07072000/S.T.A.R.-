@@ -45,4 +45,4 @@ def test_the_two_parts_of_a_date_may_be_given_in_either_order_or_split():
 
 
 def test_version_and_exports():
-    assert s.__version__ == "0.1.1" and s.__all__ == ["era_deg", "gmst06_deg"]
+    assert s.__version__ == "0.1.2" and s.__all__ == ["era_deg", "gmst06_deg"]

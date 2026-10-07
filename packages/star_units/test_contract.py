@@ -44,7 +44,7 @@ NAMES = {
 
 
 def test_public_inventory_and_pinned_names():
-    assert su.__version__ == "0.1.0"
+    assert su.__version__ == "0.1.1"
     assert su.__all__ == ["convert", "convert_temperature", "dimension", "units"]
     assert su.units() == sorted(name for group in NAMES.values() for name in group)
     assert len(su.units()) == 68

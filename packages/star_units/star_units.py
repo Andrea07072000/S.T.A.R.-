@@ -22,7 +22,7 @@ from fractions import Fraction as F
 from typing import Dict, List, Optional, Tuple, Union
 
 __all__ = ["convert", "convert_temperature", "dimension", "units"]
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 INCH, POUND, G0 = F(254, 10000), F(45359237, 100000000), F(980665, 100000)     # m, kg, m/s2: exact by definition
 FOOT, MILE, NMI, AU = 12 * INCH, 63360 * INCH, F(1852), F(149597870700)

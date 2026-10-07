@@ -32,7 +32,8 @@ def test_separations_and_position_angles_by_hand(p1, p2, sep, pa):
 def test_small_and_nearly_antipodal_separations_keep_their_digits():
     # the arc-cosine formula returns 0 for directions closer than 1e-6 deg and loses digits near 180 deg
     for d in (1e-3, 1e-6, 1e-9, 1e-12):
-        assert s.separation_deg(40.0, 0.0, 40.0 + d, 0.0) == pytest.approx(d, rel=1e-6)
+        moved = (40.0 + d) - 40.0                # what the float 40 + d really adds (2026-10-07: compared with d itself, and without abs=0, this line tested nothing below 1e-9)
+        assert s.separation_deg(40.0, 0.0, 40.0 + d, 0.0) == pytest.approx(moved, rel=1e-6, abs=0)
         assert s.separation_deg(40.0, 30.0, 40.0, 30.0 + d) == pytest.approx(d, rel=1e-3 if d < 1e-10 else 1e-6)
         assert 180.0 - s.separation_deg(40.0, 0.0, 220.0 + d, 0.0) == pytest.approx(d, rel=1e-3 if d < 1e-10 else 1e-6)
     lon, lat = 200.0, 55.0
@@ -68,3 +69,24 @@ def test_offsets_by_hand():
     lon, lat = s.offset(10.0, 20.0, 123.0, 180.0)
     assert (lon, lat) == pytest.approx((190.0, -20.0), abs=1e-9)                           # the antipode, whatever the direction
     assert s.offset(-10.0, 0.0, -90.0, 5.0) == pytest.approx((345.0, 0.0), abs=1e-12)      # negative longitude and angle accepted
+
+
+def test_tiny_separations_are_right_to_the_last_digits_in_every_direction():
+    """Added in 0.1.1. Two directions a hair apart, in longitude, in latitude and diagonally, away from the origin of both
+    coordinates. Expected: the difference the two floats really have (taken in degrees, where the subtraction is exact),
+    scaled by cos(latitude) for a step in longitude. Before 0.1.1 the step in longitude at 1e-9 deg was wrong by 2e-6
+    of itself and the test that should have seen it compared against the default absolute tolerance of approx."""
+    for d in (1e-3, 1e-6, 1e-9, 1e-12):
+        east = (40.0 + d) - 40.0
+        north = (10.0 + d) - 10.0
+        assert s.separation_deg(40.0, 0.0, 40.0 + d, 0.0) == pytest.approx(east, rel=1e-13, abs=0)
+        assert s.separation_deg(40.0, 10.0, 40.0, 10.0 + d) == pytest.approx(north, rel=1e-13, abs=0)
+        assert s.separation_deg(40.0, 60.0, 40.0 + d, 60.0) == pytest.approx(east * math.cos(math.radians(60.0)), rel=1e-6 if d == 1e-3 else 1e-9, abs=0)
+        diagonal = math.hypot(east * math.cos(math.radians(10.0)), north)
+        assert s.separation_deg(40.0, 10.0, 40.0 + d, 10.0 + d) == pytest.approx(diagonal, rel=1e-4 if d == 1e-3 else 1e-7, abs=0)
+        # position angle of a step due north is 0, due east 90 (within the convergence of the meridians, d / 2 * tan(lat))
+        assert s.position_angle_deg(40.0, 10.0, 40.0, 10.0 + d) == 0.0
+        assert s.position_angle_deg(40.0, 0.0, 40.0 + d, 0.0) == pytest.approx(90.0, abs=1e-12)
+        assert s.position_angle_deg(40.0, 10.0, 40.0 + d, 10.0 + d) == pytest.approx(math.degrees(math.atan2(east * math.cos(math.radians(10.0)), north)), abs=1e-3 if d == 1e-3 else 1e-6)
+    assert s.separation_deg(40.0, 10.0, 40.0, 10.0) == 0.0 and s.separation_deg(0.0, 0.0, 180.0, 0.0) == pytest.approx(180.0, abs=1e-13)
+    assert s.separation_deg(350.0, 0.0, 10.0, 0.0) == pytest.approx(20.0, rel=1e-14, abs=0) and s.separation_deg(-170.0, 0.0, 170.0, 0.0) == pytest.approx(20.0, rel=1e-14, abs=0)

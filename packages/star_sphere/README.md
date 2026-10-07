@@ -13,11 +13,13 @@ ss.offset(10.0, 20.0, 45.0, 2.5)                             # the point 2.5 deg
 
 ## Requirements
 - R1 `separation_deg` in [0, 180] with the arc-tangent formula: nearby directions (1e-12 deg) and nearly antipodal
-  ones keep their digits. Reproduces Meeus Example 17.a (32.7930 deg).
+  ones keep their digits. Reproduces Meeus Example 17.a (32.7930 deg). Since 0.1.1 the differences of longitude and
+  latitude are taken in degrees before any conversion, so a separation of 1e-12 deg is right to the last digits
+  (0.1.0 was wrong in the sixth digit at 1e-9 deg and in the third at 1e-12 deg: update if you measure tiny angles).
 - R2 `position_angle_deg` in [0, 360), from North through East; `offset(lon, lat, position_angle, distance)` returns
   (longitude in [0, 360), latitude) and is the inverse of the two.
 - R3 Measured on 600 pairs (300 random, 150 down to 1e-6 deg apart, 150 down to 1e-6 deg from the antipode):
-  separation within 3e-14 deg of ERFA and astropy, position angle within 1e-15 rad of displacement, offset points
+  separation within 6e-14 deg of ERFA and astropy, position angle within 1e-15 rad of displacement, offset points
   within 4e-13 deg of astropy.
 - R4 Every function returns finite floats in those ranges or raises `ValueError`: non-numeric, boolean, NaN or
   infinite input, latitude outside [-90, 90], longitude or position angle outside [-360, 360], distance outside

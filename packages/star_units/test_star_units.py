@@ -147,7 +147,7 @@ def test_linear_conversions_self_inverses_and_composition():
                 )
                 assert su.convert(0, source, target) == 0
                 assert forward * su.convert(1, target, source) == pytest.approx(
-                    1, rel=2e-16
+                    1, rel=4e-16, abs=0      # two roundings: one unit in the last place each (2026-10-07)
                 )
         # Route through the SI unit: the two factor ratios multiply to the
         # direct factor ratio, with at most the stated floating-point error.

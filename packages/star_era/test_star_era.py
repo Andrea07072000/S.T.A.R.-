@@ -46,7 +46,7 @@ def test_any_split_of_the_date_gives_the_same_angle():
 
 def test_a_nanosecond_of_ut1_is_visible_in_the_pair_form():
     a, b = s.era_deg(2460000.5, 0.5), s.era_deg(2460000.5, 0.5 + 1e-9 / 86400)
-    assert (b - a) % 360 == pytest.approx(360 * 1.00273781191135448 * 1e-9 / 86400, rel=0.05)     # 1 ns = 1.5e-8 arcsec
+    assert (b - a) % 360 == pytest.approx(360 * 1.00273781191135448 * 1e-9 / 86400, rel=0.15, abs=0)     # 1 ns = 1.5e-8 arcsec; a few units in the last place of an angle near 100 deg are 10% of it (2026-10-07: the 5% asked before held only through the default absolute tolerance of approx)
 
 
 def test_gmst_minus_era_is_the_iau_2006_polynomial():

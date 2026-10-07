@@ -1,0 +1,27 @@
+{
+ "id": "star.orbit.anomalies",
+ "name": "STAR Orbit — anomalies and Kepler's equation",
+ "domain": "astrodynamics",
+ "summary": "Kepler's equation and the conversions between mean, eccentric, hyperbolic and true anomaly for closed and open orbits: a bracketed Newton solver that cannot diverge, a residual that does not cancel near the periapsis of nearly parabolic orbits, the revolution kept; within 1e-14 rad of 50-digit arithmetic on 1120 orbits.",
+ "package_dir": "08_PROTOTYPES/star_anomaly",
+ "module": "star_anomaly.py",
+ "xc": null,
+ "reference": "Vallado, Fundamentals of Astrodynamics and Applications, worked examples of Kepler's equation: M = 235.4 deg, e = 0.4 -> E = 220.512074767522 deg; M = 235.4 deg, e = 2.4 -> H = 1.6013761449 rad",
+ "reference_observed": "degrees(eccentric_from_mean(radians(235.4), 0.4)) = 220.51207476752208; hyperbolic_from_mean(radians(235.4), 2.4) = 1.6013761449325081",
+ "na": {
+  "G-02": "single-module library",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R1-R4",
+  "G-03": "eccentric_from_mean(), mean_from_eccentric(), true_from_eccentric(), eccentric_from_true(), true_from_mean(), mean_from_true(), hyperbolic_from_mean(), mean_from_hyperbolic(), true_from_hyperbolic(), hyperbolic_from_true()",
+  "G-04": "radians; (anomaly, eccentricity) in that order; closed-orbit functions keep the revolution",
+  "G-06": "no external data; cross-check corpus generated with a fixed seed",
+  "G-08": "pure functions, standard library only, no IO, no state",
+  "G-13": "ValueError for every invalid input; the parabola is not covered and some inverse conversions are badly conditioned by nature, stated in the README"
+ }
+}

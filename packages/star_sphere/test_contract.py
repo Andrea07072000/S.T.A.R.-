@@ -14,7 +14,7 @@ G = (10.0, 20.0, 30.0, 40.0)
 
 
 def test_the_hostile_set_is_pinned():
-    assert len(BAD) == 14 and s.__all__ == ["separation_deg", "position_angle_deg", "offset"] and s.__version__ == "0.1.0"
+    assert len(BAD) == 14 and s.__all__ == ["separation_deg", "position_angle_deg", "offset"] and s.__version__ == "0.1.1"
 
 
 @pytest.mark.parametrize("f", [s.separation_deg, s.position_angle_deg, s.offset], ids=lambda f: f.__name__)

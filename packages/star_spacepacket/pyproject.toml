@@ -3,12 +3,12 @@ requires = ["setuptools>=61"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "star-units"
+name = "star-spacepacket"
 version = "0.1.1"
-description = "S.T.A.R. unit conversion with exact definitions and a dimension check: a conversion between different dimensions is an error, not a number."
+description = "S.T.A.R. CCSDS Space Packets: build, read and split with every field checked and explicit refusals."
 requires-python = ">=3.9"
 dependencies = []
 license = {text = "Apache-2.0"}
 
 [tool.setuptools]
-py-modules = ["star_units"]
+py-modules = ["star_spacepacket"]

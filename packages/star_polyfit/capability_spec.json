@@ -1,0 +1,27 @@
+{
+ "id": "star.numerics.polyfit",
+ "name": "STAR Numerics — least-squares polynomial fit",
+ "domain": "numerics",
+ "summary": "Least-squares polynomial of degree 0 to 10, weighted or not: the normal equations are formed and solved in exact rational arithmetic and each coefficient is rounded once, so conditioning costs no digit; exact evaluation and exact residual sum of squares; NIST Wampler1 reproduced exactly; every coefficient of 161 problems equal to SymPy's exact solution.",
+ "package_dir": "08_PROTOTYPES/star_polyfit",
+ "module": "star_polyfit.py",
+ "xc": null,
+ "reference": "NIST Statistical Reference Datasets, Wampler1 (x = 0..20, y = 1 + x + x^2 + x^3 + x^4 + x^5): certified coefficients of the degree-5 fit all 1.00000000000000, residual standard deviation 0",
+ "reference_observed": "polyfit(range 0..20, y, 5) = (1.0, 1.0, 1.0, 1.0, 1.0, 1.0); residual_sum = 0.0",
+ "na": {
+  "G-02": "single-module library",
+  "G-09": "no simulation component",
+  "G-10": "not flight software",
+  "G-11": "no hardware",
+  "G-12": "no FDIR role",
+  "G-14": "no performance requirement declared by any user"
+ },
+ "review": {
+  "G-01": "README R1-R4",
+  "G-03": "polyfit(), polyval(), residual_sum()",
+  "G-04": "coefficients lowest power first; weights multiply the squared residuals",
+  "G-06": "no external data; cross-check corpus generated with a fixed seed",
+  "G-08": "pure functions, standard library only, no IO, no state",
+  "G-13": "ValueError for every invalid input and for a fit that is not unique; exact coefficients do not make a badly conditioned model a good one, stated in the README"
+ }
+}
