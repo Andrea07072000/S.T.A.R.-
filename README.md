@@ -3,6 +3,14 @@
 [![tests](https://github.com/Andrea07072000/S.T.A.R.-/actions/workflows/tests.yml/badge.svg)](https://github.com/Andrea07072000/S.T.A.R.-/actions/workflows/tests.yml)
 [![packages](https://github.com/Andrea07072000/S.T.A.R.-/actions/workflows/packages.yml/badge.svg)](https://github.com/Andrea07072000/S.T.A.R.-/actions/workflows/packages.yml)
 
+> **Correction 2026-10-08 (second)** — `star_kepler` 0.1.0 failed with `OverflowError` on hyperbolic orbits
+> propagated for long times (first seen: a 20 km/s flyby after 1e6 s); 0.1.1 propagates them (energy conserved to
+> 1e-11 up to 1e9 s) and gives the same numbers where 0.1.0 worked. `star_cdm` 0.2.1 `rtn_axes` divided by zero when
+> position and velocity are parallel or zero; 0.2.2 refuses with `ValueError`. `star_maneuver` 0.2.1 raised
+> `OverflowError` or `TypeError` for inputs beyond 1e100 or that are not numbers; 0.2.2 refuses with `ValueError`.
+> Found by calling all 317 public functions of the 70 packages with hostile values; the 57 most recent packages
+> showed no leak. Older packages still answer a wrong *type* (for example `None`) with `TypeError`.
+>
 > **Correction 2026-10-08** — `star_telemetry` up to 0.2.6 could lose or invent a Space Packet when packets span
 > frames: a packet ending exactly at the end of a frame with no packet start was lost; after a lost frame, leftover
 > data could be delivered as a packet that was never sent; an unfinished packet could be joined to bytes of a later

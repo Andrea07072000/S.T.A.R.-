@@ -177,6 +177,8 @@ def _cross(a, b):
 
 def _unit(a):
     n = math.sqrt(_dot(a, a))
+    if not n > 0.0 or not math.isfinite(n):    # 2026-10-08 hostile sweep: a zero vector gave ZeroDivisionError
+        raise ValueError("the RTN frame is undefined: position is zero, or position and velocity are parallel, or not finite")
     return [x / n for x in a]
 
 

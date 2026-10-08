@@ -5,9 +5,18 @@ import math
 # NaN/inf propagated silently. All are invalid input and now raise ValueError.
 
 
+LIMIT = 1e100          # km, km/s, rad, km^3/s^2: beyond this the squares and cubes below overflow
+
+
 def _finite(*xs):
-    if not all(map(math.isfinite, xs)):
-        raise ValueError("inputs must be finite")
+    # 2026-10-08 hostile sweep: 1.7e308 gave OverflowError, None gave TypeError; both are invalid input (R3)
+    for x in xs:
+        if isinstance(x, bool) or not isinstance(x, (int, float)):
+            raise ValueError("inputs must be real numbers")
+        if not math.isfinite(x):
+            raise ValueError("inputs must be finite")
+        if abs(x) > LIMIT:
+            raise ValueError("inputs must be within 1e100 in magnitude")
 
 
 def _positive_mu(mu):

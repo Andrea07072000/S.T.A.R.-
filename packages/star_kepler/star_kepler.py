@@ -21,11 +21,19 @@ from typing import Sequence, Tuple
 MU_EARTH = 398600.4418
 Vec = Tuple[float, float, float]
 __all__ = ["propagate", "stumpff", "MU_EARTH"]
-__version__ = "0.1.0"
+__version__ = "0.1.1"
+
+
+STUMPFF_MIN_Z = -4.9e5      # sqrt(4.9e5) = 700: cosh(700) is 5e303, the last order of magnitude before overflow
 
 
 def stumpff(z: float) -> Tuple[float, float]:
     """Stumpff functions (C(z), S(z)); a series near z = 0 avoids the 0/0 of the closed forms."""
+    # 2026-10-08 hostile sweep: z = -1.7e308 gave OverflowError (cosh), nan gave (nan, nan)
+    if isinstance(z, bool) or not isinstance(z, (int, float)) or not math.isfinite(z):
+        raise ValueError("z must be a finite real number")
+    if z < STUMPFF_MIN_Z:
+        raise ValueError("z below -4.9e5: the hyperbolic functions overflow")
     if z > 1e-6:
         s = math.sqrt(z)
         return (1.0 - math.cos(s)) / z, (s - math.sin(s)) / (s * s * s)
@@ -67,10 +75,17 @@ def propagate(r0: Sequence[float], v0: Sequence[float], tof: float, mu: float = 
 
     sign = 1.0 if dt > 0 else -1.0
     lo, hi = 0.0, sign * max(1.0, sm * abs(dt) / R)    # F(0) = -sm dt; F is strictly increasing in x
+    # 2026-10-08: on a hyperbola x grows like log(dt), and the guess above put alpha x^2 where cosh overflows
+    # (OverflowError after 11 days on a 20 km/s flyby). The bracket never needs to go beyond alpha x^2 = -1e5,
+    # where F is of order 1e129 x^3.
+    cap = math.sqrt(1e5 / -alpha) if alpha < 0.0 else math.inf
+    hi = sign * min(abs(hi), cap)
     for _ in range(200):
         if F(hi) * sign >= 0.0:
             break
-        hi *= 2.0          # lo stays at 0: on a circular orbit the first guess IS the root, and a root sitting on
+        if abs(hi) >= cap:
+            raise RuntimeError("universal anomaly could not be bracketed")
+        hi = sign * min(2.0 * abs(hi), cap)          # lo stays at 0: on a circular orbit the first guess IS the root, and a root sitting on
         #                    the bracket edge made every Newton step be rejected (43 iterations, 2026-10-06)
     else:
         raise RuntimeError("universal anomaly could not be bracketed")
