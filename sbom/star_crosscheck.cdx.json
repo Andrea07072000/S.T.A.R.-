@@ -1,0 +1,61 @@
+{
+ "bomFormat": "CycloneDX",
+ "specVersion": "1.5",
+ "serialNumber": "urn:uuid:99deaa98-8d3c-5327-913b-e7162bef6f85",
+ "version": 1,
+ "metadata": {
+  "timestamp": "2026-10-15T00:00:00Z",
+  "authors": [
+   {
+    "name": "Andrea Cavazzini"
+   }
+  ],
+  "component": {
+   "type": "library",
+   "bom-ref": "star-crosscheck",
+   "name": "star-crosscheck",
+   "version": "0.1.3",
+   "description": "Runs engines of declared lineage (each optionally in its own venv) on the same inputs; AGREE only with >= 2 distinct lineages within tolerance, failed engines never count, published references compared; tamper-evident sha256 evidence bundles.",
+   "licenses": [
+    {
+     "license": {
+      "id": "Apache-2.0"
+     }
+    }
+   ],
+   "purl": "pkg:generic/star-crosscheck@0.1.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%4094fcf7c%23packages%2Fstar_crosscheck",
+   "author": "Andrea Cavazzini",
+   "externalReferences": [
+    {
+     "type": "vcs",
+     "url": "https://github.com/Andrea07072000/S.T.A.R.-/tree/main/packages/star_crosscheck"
+    },
+    {
+     "type": "website",
+     "url": "https://andrea07072000.github.io/S.T.A.R.-/software/star_crosscheck/"
+    }
+   ],
+   "hashes": [
+    {
+     "alg": "SHA-256",
+     "content": "0e411564bf6da56276c51b29cd6df58025e0eac11cd7475dd722ead128ce1216"
+    }
+   ]
+  },
+  "tools": {
+   "components": [
+    {
+     "type": "application",
+     "name": "star-site-gen"
+    }
+   ]
+  }
+ },
+ "components": [],
+ "dependencies": [
+  {
+   "ref": "star-crosscheck",
+   "dependsOn": []
+  }
+ ]
+}

@@ -1,0 +1,49 @@
+{
+ "spdxVersion": "SPDX-2.3",
+ "dataLicense": "CC0-1.0",
+ "SPDXID": "SPDXRef-DOCUMENT",
+ "name": "star-iod-0.1.0",
+ "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_iod-0.1.0-94fcf7c",
+ "creationInfo": {
+  "created": "2026-10-15T00:00:00Z",
+  "creators": [
+   "Person: Andrea Cavazzini",
+   "Tool: star-site-gen"
+  ]
+ },
+ "packages": [
+  {
+   "SPDXID": "SPDXRef-Package-star-iod",
+   "name": "star-iod",
+   "versionInfo": "0.1.0",
+   "downloadLocation": "git+https://github.com/Andrea07072000/S.T.A.R.-@94fcf7c#packages/star_iod",
+   "homepage": "https://andrea07072000.github.io/S.T.A.R.-/software/star_iod/",
+   "filesAnalyzed": false,
+   "licenseConcluded": "Apache-2.0",
+   "licenseDeclared": "Apache-2.0",
+   "copyrightText": "Copyright 2026 Andrea Cavazzini",
+   "supplier": "Person: Andrea Cavazzini",
+   "summary": "Velocity at the middle of three position vectors by Gibbs' method (cancellation-free form) and Herrick-Gibbs, with the measured domain of each (crossover near 0.4 degrees), agreement with Orekit IodGibbs within 8e-9 and explicit refusal of non-coplanar, collinear or impossible geometry.",
+   "externalRefs": [
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:generic/star-iod@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%4094fcf7c%23packages%2Fstar_iod"
+    }
+   ],
+   "checksums": [
+    {
+     "algorithm": "SHA256",
+     "checksumValue": "aa4cf7056e95a013a28d5a4270f713ee800f68cf6778bdc5e0563794adedc983"
+    }
+   ]
+  }
+ ],
+ "relationships": [
+  {
+   "spdxElementId": "SPDXRef-DOCUMENT",
+   "relationshipType": "DESCRIBES",
+   "relatedSpdxElement": "SPDXRef-Package-star-iod"
+  }
+ ]
+}

@@ -13,10 +13,17 @@
 <meta property="og:title" content="S.T.A.R. — Engineering Intelligence. Built to be Verified.">
 <meta property="og:description" content="S.T.A.R. costruisce software ingegneristico indipendente, lo confronta con altre implementazioni e trasforma i risultati di calcolo in evidenze riproducibili — a partire da orbite, tempo, sistemi di riferimento e telemetria di bordo.">
 <meta property="og:image" content="https://andrea07072000.github.io/S.T.A.R.-/assets/images/star_logo_dark_transparent.png">
-  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-Dx8lu5GH.js"></script>
-  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-CJ2BHFzs.css">
+<meta property="og:url" content="https://andrea07072000.github.io/S.T.A.R.-/it/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="S.T.A.R.">
+<meta property="og:locale" content="it_IT">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebSite", "name": "S.T.A.R.", "url": "https://andrea07072000.github.io/S.T.A.R.-/", "inLanguage": "it", "description": "S.T.A.R. costruisce software ingegneristico indipendente, lo confronta con altre implementazioni e trasforma i risultati di calcolo in evidenze riproducibili — a partire da orbite, tempo, sistemi di riferimento e telemetria di bordo.", "publisher": {"@type": "Person", "name": "Andrea Cavazzini"}}]</script>
+
+  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-CCzNtdfL.js"></script>
+  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-DCHVB_Yt.css">
 </head>
-<body data-page="home">
+<body data-page="home" data-lang="it" data-search="/S.T.A.R.-/search-it.json">
 <a class="skip" href="#main">Vai al contenuto</a>
 <header class="site-header">
  <div class="wrap">
@@ -28,6 +35,7 @@
     <a href="/S.T.A.R.-/" lang="en" hreflang="en">EN</a>
     <span aria-current="true">IT</span>
    </div>
+   <button class="btn small search-open" type="button" aria-haspopup="dialog" aria-keyshortcuts="Control+K Meta+K" title="Cerca nel sito">Cerca <kbd>Ctrl K</kbd></button>
    <a class="btn small primary" href="/S.T.A.R.-/it/assessment/#request">Richiedi una valutazione</a>
    <img class="header-logo" src="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" alt="S.T.A.R. logo" width="40" height="40">
   </div>
@@ -53,7 +61,7 @@
  <p class="note">Dipendenze comuni: S.T.A.R. e SciPy integrano la stessa formula della forza J2; hapsira (poliastro) fornisce un modello di forza indipendente. Le differenze sono distanze 3-D fra le posizioni dopo un&#x27;orbita. <a href="https://github.com/Andrea07072000/S.T.A.R.-/blob/main/packages/star_crosscheck/evidence/XC-008_orbit_propagation_evidence.json">JSON</a></p>
 </section>
 </section>
-<div class="proof"><a href="/S.T.A.R.-/it/evidence/#status"><b>90</b><span>Capacità rilasciate</span><small>installate, provate, confrontate, mutazione ≥ 0,85</small></a><a href="/S.T.A.R.-/it/software/"><b>70</b><span>Pacchetti open source</span><small>Apache-2.0, su GitHub</small></a><a href="/S.T.A.R.-/it/evidence/#install"><b>4 388</b><span>Test superati su installazione pulita</span><small>ogni pacchetto pubblico, ambiente Linux nuovo</small></a><a href="/S.T.A.R.-/it/evidence/#campaigns"><b>13</b><span>Campagne di confronto</span><small>accordo misurato fra librerie indipendenti</small></a></div><p class="snapshot">Generato dal registro il 2026-10-15 · commit di ingegneria c54092b · commit pubblico 94fcf7c</p>
+<div class="proof"><a href="/S.T.A.R.-/it/evidence/#status"><b>90</b><span>Capacità rilasciate</span><small>installate, provate, confrontate, mutazione ≥ 0,85</small></a><a href="/S.T.A.R.-/it/software/"><b>70</b><span>Pacchetti open source</span><small>Apache-2.0, su GitHub</small></a><a href="/S.T.A.R.-/it/evidence/#install"><b>4 388</b><span>Test superati su installazione pulita</span><small>ogni pacchetto pubblico, ambiente Linux nuovo</small></a><a href="/S.T.A.R.-/it/evidence/#campaigns"><b>13</b><span>Campagne di confronto</span><small>accordo misurato fra librerie indipendenti</small></a></div><p class="snapshot">Generato dal registro il 2026-10-15 · commit di ingegneria 173e61f · commit pubblico 94fcf7c</p>
 </div>
 <section class="section"><div class="wrap">
  <span class="eyebrow">Il problema</span><h2>Hai un risultato di ingegneria di cui devi fidarti?</h2><p class="lead">Un passo di propagazione, una conversione di scale di tempo, un decodificatore di telemetria, una routine d&#x27;assetto: S.T.A.R. controlla un calcolo definito entro un ambito concordato — confrontandolo con implementazioni indipendenti, valori pubblicati e dati ostili — e riferisce che cosa concorda, che cosa no e che cosa non è stato provato.</p>
@@ -62,7 +70,7 @@
 </div></section>
 <section class="section"><div class="wrap">
  <h2>Software installabile oggi</h2><p class="lead">Ogni pacchetto è open source, senza dipendenze salvo dove indicato, installato da una versione fissa e provato su una macchina pulita.</p>
- <div class="grid-3" style="margin-top:32px"><div class="card"><span class="tag">Orbite e astrodinamica</span><h3 class="mono">star-kepler <span class="muted small">0.1.1</span></h3><p>Two-body propagation with universal variables</p><a href="/S.T.A.R.-/it/software/star_kepler/">Apri la pagina →</a></div><div class="card"><span class="tag">Orbite e astrodinamica</span><h3 class="mono">star-elements <span class="muted small">0.2.4</span></h3><p>Classical orbital elements to and from Cartesian state (Curtis Algorithms 4.2 / 4.5)</p><a href="/S.T.A.R.-/it/software/star_elements/">Apri la pagina →</a></div><div class="card"><span class="tag">Orbite e astrodinamica</span><h3 class="mono">star-lambert <span class="muted small">0.1.3</span></h3><p>Universal-variable Lambert orbital boundary value problem solver</p><a href="/S.T.A.R.-/it/software/star_lambert/">Apri la pagina →</a></div><div class="card"><span class="tag">Telemetria e collegamenti</span><h3 class="mono">star-telemetry <span class="muted small">0.2.7</span></h3><p>CCSDS AOS/TM transfer frame deframer and Space Packet reassembler</p><a href="/S.T.A.R.-/it/software/star_telemetry/">Apri la pagina →</a></div><div class="card"><span class="tag">Assetto</span><h3 class="mono">star-mrp <span class="muted small">0.1.0</span></h3><p>Modified Rodrigues parameters</p><a href="/S.T.A.R.-/it/software/star_mrp/">Apri la pagina →</a></div><div class="card"><span class="tag">Riferimenti e geometria</span><h3 class="mono">star-sphere <span class="muted small">0.1.1</span></h3><p>Angles between directions on the sphere</p><a href="/S.T.A.R.-/it/software/star_sphere/">Apri la pagina →</a></div></div>
+ <div class="grid-3" style="margin-top:32px"><div class="card"><span class="tag">Orbite e astrodinamica</span><h3 class="mono">star-kepler <span class="muted small">0.1.1</span></h3><p>Propagazione a due corpi con variabili universali</p><a href="/S.T.A.R.-/it/software/star_kepler/">Apri la pagina →</a></div><div class="card"><span class="tag">Orbite e astrodinamica</span><h3 class="mono">star-elements <span class="muted small">0.2.4</span></h3><p>Elementi orbitali classici da e verso lo stato cartesiano (algoritmi 4.2 / 4.5 di Curtis)</p><a href="/S.T.A.R.-/it/software/star_elements/">Apri la pagina →</a></div><div class="card"><span class="tag">Orbite e astrodinamica</span><h3 class="mono">star-lambert <span class="muted small">0.1.3</span></h3><p>Risolutore del problema di Lambert con variabili universali</p><a href="/S.T.A.R.-/it/software/star_lambert/">Apri la pagina →</a></div><div class="card"><span class="tag">Telemetria e collegamenti</span><h3 class="mono">star-telemetry <span class="muted small">0.2.7</span></h3><p>Estrattore di transfer frame CCSDS AOS/TM e ricompositore di Space Packet</p><a href="/S.T.A.R.-/it/software/star_telemetry/">Apri la pagina →</a></div><div class="card"><span class="tag">Assetto</span><h3 class="mono">star-mrp <span class="muted small">0.1.0</span></h3><p>Parametri di Rodrigues modificati</p><a href="/S.T.A.R.-/it/software/star_mrp/">Apri la pagina →</a></div><div class="card"><span class="tag">Riferimenti e geometria</span><h3 class="mono">star-sphere <span class="muted small">0.1.1</span></h3><p>Angoli tra direzioni sulla sfera</p><a href="/S.T.A.R.-/it/software/star_sphere/">Apri la pagina →</a></div></div>
  <p style="margin-top:24px"><a href="/S.T.A.R.-/it/software/">Tutti i 70 pacchetti →</a></p>
 </div></section>
 <section class="section"><div class="wrap grid-2">
@@ -91,9 +99,10 @@
    <div><h2>Contatti</h2><ul><li><a href="mailto:Info.and.News.S.T.A.R@proton.me">Info.and.News.S.T.A.R@proton.me</a></li>
     <li><a href="/S.T.A.R.-/it/assessment/#request">Richiedi una valutazione</a></li></ul></div>
   </div>
-  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generato dal registro il 2026-10-15 · commit di ingegneria c54092b · commit pubblico 94fcf7c</span>
+  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generato dal registro il 2026-10-15 · commit di ingegneria 173e61f · commit pubblico 94fcf7c</span>
    <a href="/S.T.A.R.-/" lang="en">English</a></div>
  </div>
 </footer>
+<dialog class="search-dlg" aria-label="Cerca nel sito"><form method="dialog" class="search-box"><label class="visually-hidden" for="site-q">Cerca nel sito</label><input id="site-q" type="search" autocomplete="off" placeholder="Pacchetti, documenti legali, pagine…"><button class="btn small" value="close">Esc</button></form><ul class="search-res" role="listbox"></ul><p class="small muted search-none" hidden>Nessun risultato. Prova una parola più corta.</p></dialog>
 </body>
 </html>

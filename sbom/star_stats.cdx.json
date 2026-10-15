@@ -1,0 +1,61 @@
+{
+ "bomFormat": "CycloneDX",
+ "specVersion": "1.5",
+ "serialNumber": "urn:uuid:8acbe5af-468e-587c-ba0b-093ae4005deb",
+ "version": 1,
+ "metadata": {
+  "timestamp": "2026-10-15T00:00:00Z",
+  "authors": [
+   {
+    "name": "Andrea Cavazzini"
+   }
+  ],
+  "component": {
+   "type": "library",
+   "bom-ref": "star-stats",
+   "name": "star-stats",
+   "version": "0.1.0",
+   "description": "Mean, sample and population variance and standard deviation, root mean square and weighted mean computed exactly in rational arithmetic and rounded once, independent of the order of the values; on 500 datasets all seven statistics are identical to mpmath at 400 digits rounded once and to CPython's statistics module where it has them; reproduces the NIST NumAcc1 and NumAcc2 reference datasets.",
+   "licenses": [
+    {
+     "license": {
+      "id": "Apache-2.0"
+     }
+    }
+   ],
+   "purl": "pkg:generic/star-stats@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%4094fcf7c%23packages%2Fstar_stats",
+   "author": "Andrea Cavazzini",
+   "externalReferences": [
+    {
+     "type": "vcs",
+     "url": "https://github.com/Andrea07072000/S.T.A.R.-/tree/main/packages/star_stats"
+    },
+    {
+     "type": "website",
+     "url": "https://andrea07072000.github.io/S.T.A.R.-/software/star_stats/"
+    }
+   ],
+   "hashes": [
+    {
+     "alg": "SHA-256",
+     "content": "47225878d6eb31cf6e678d88322b7c1362e20046915a8b5300d0ce8ac98761c9"
+    }
+   ]
+  },
+  "tools": {
+   "components": [
+    {
+     "type": "application",
+     "name": "star-site-gen"
+    }
+   ]
+  }
+ },
+ "components": [],
+ "dependencies": [
+  {
+   "ref": "star-stats",
+   "dependsOn": []
+  }
+ ]
+}

@@ -1,0 +1,61 @@
+{
+ "bomFormat": "CycloneDX",
+ "specVersion": "1.5",
+ "serialNumber": "urn:uuid:69549910-bdfc-59b4-a469-5cfd52d7938d",
+ "version": 1,
+ "metadata": {
+  "timestamp": "2026-10-15T00:00:00Z",
+  "authors": [
+   {
+    "name": "Andrea Cavazzini"
+   }
+  ],
+  "component": {
+   "type": "library",
+   "bom-ref": "star-timecode",
+   "name": "star-timecode",
+   "version": "0.1.0",
+   "description": "Strict reader and writer of the CCSDS 301.0-B-4 ASCII time codes A (calendar) and B (day of year), with the fraction kept as its digits; fields equal to CPython datetime and numpy.datetime64 on 600 instants and to astropy on the 331 between 1900 and 2100; refuses all 40 malformed or out-of-range texts of the corpus, of which the ISO parsers of those libraries accept 10 to 14.",
+   "licenses": [
+    {
+     "license": {
+      "id": "Apache-2.0"
+     }
+    }
+   ],
+   "purl": "pkg:generic/star-timecode@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%4094fcf7c%23packages%2Fstar_timecode",
+   "author": "Andrea Cavazzini",
+   "externalReferences": [
+    {
+     "type": "vcs",
+     "url": "https://github.com/Andrea07072000/S.T.A.R.-/tree/main/packages/star_timecode"
+    },
+    {
+     "type": "website",
+     "url": "https://andrea07072000.github.io/S.T.A.R.-/software/star_timecode/"
+    }
+   ],
+   "hashes": [
+    {
+     "alg": "SHA-256",
+     "content": "35d96f1e37114b29112bb65054a1460d4a1e6c4879e2db8254a295c6c4793d49"
+    }
+   ]
+  },
+  "tools": {
+   "components": [
+    {
+     "type": "application",
+     "name": "star-site-gen"
+    }
+   ]
+  }
+ },
+ "components": [],
+ "dependencies": [
+  {
+   "ref": "star-timecode",
+   "dependsOn": []
+  }
+ ]
+}

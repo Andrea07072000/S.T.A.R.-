@@ -1,0 +1,61 @@
+{
+ "bomFormat": "CycloneDX",
+ "specVersion": "1.5",
+ "serialNumber": "urn:uuid:ad8b931d-41b9-5b76-9408-7ebc7bcaa8e2",
+ "version": 1,
+ "metadata": {
+  "timestamp": "2026-10-15T00:00:00Z",
+  "authors": [
+   {
+    "name": "Andrea Cavazzini"
+   }
+  ],
+  "component": {
+   "type": "library",
+   "bom-ref": "star-quadrature",
+   "name": "star-quadrature",
+   "version": "0.1.0",
+   "description": "Gauss-Legendre nodes and weights for 1 to 32 points, each node the float nearest to the true root (exact coefficients, exact-sign bisection) and each weight evaluated exactly and rounded once; fixed-rule integration and Legendre polynomials with derivative; all 528 nodes and weights equal SymPy's 40-digit values rounded to a float.",
+   "licenses": [
+    {
+     "license": {
+      "id": "Apache-2.0"
+     }
+    }
+   ],
+   "purl": "pkg:generic/star-quadrature@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%4094fcf7c%23packages%2Fstar_quadrature",
+   "author": "Andrea Cavazzini",
+   "externalReferences": [
+    {
+     "type": "vcs",
+     "url": "https://github.com/Andrea07072000/S.T.A.R.-/tree/main/packages/star_quadrature"
+    },
+    {
+     "type": "website",
+     "url": "https://andrea07072000.github.io/S.T.A.R.-/software/star_quadrature/"
+    }
+   ],
+   "hashes": [
+    {
+     "alg": "SHA-256",
+     "content": "eb6c88fd255a5726498be9663bc1f11b57091e307ef50bce41e593627697d415"
+    }
+   ]
+  },
+  "tools": {
+   "components": [
+    {
+     "type": "application",
+     "name": "star-site-gen"
+    }
+   ]
+  }
+ },
+ "components": [],
+ "dependencies": [
+  {
+   "ref": "star-quadrature",
+   "dependsOn": []
+  }
+ ]
+}

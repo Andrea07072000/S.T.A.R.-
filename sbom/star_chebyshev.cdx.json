@@ -1,0 +1,61 @@
+{
+ "bomFormat": "CycloneDX",
+ "specVersion": "1.5",
+ "serialNumber": "urn:uuid:c72c2f90-9be1-5e55-92b3-fc2ce91313da",
+ "version": 1,
+ "metadata": {
+  "timestamp": "2026-10-15T00:00:00Z",
+  "authors": [
+   {
+    "name": "Andrea Cavazzini"
+   }
+  ],
+  "component": {
+   "type": "library",
+   "bom-ref": "star-chebyshev",
+   "name": "star-chebyshev",
+   "version": "0.1.0",
+   "description": "Value and first derivative of a Chebyshev series by Clenshaw's recurrence, on [-1, 1] or on an interval given by midpoint and radius (the convention of ephemeris segments); 600 series agree with CSPICE chbval/chbder and NumPy within 1e-14 and with mpmath at 40 digits within 5e-14 of the natural scale of the sum; reproduces the NAIF documentation example.",
+   "licenses": [
+    {
+     "license": {
+      "id": "Apache-2.0"
+     }
+    }
+   ],
+   "purl": "pkg:generic/star-chebyshev@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%4094fcf7c%23packages%2Fstar_chebyshev",
+   "author": "Andrea Cavazzini",
+   "externalReferences": [
+    {
+     "type": "vcs",
+     "url": "https://github.com/Andrea07072000/S.T.A.R.-/tree/main/packages/star_chebyshev"
+    },
+    {
+     "type": "website",
+     "url": "https://andrea07072000.github.io/S.T.A.R.-/software/star_chebyshev/"
+    }
+   ],
+   "hashes": [
+    {
+     "alg": "SHA-256",
+     "content": "8d545448565d8135ee8f82586601095093f4d04c9100df7649781fc9d0e73aff"
+    }
+   ]
+  },
+  "tools": {
+   "components": [
+    {
+     "type": "application",
+     "name": "star-site-gen"
+    }
+   ]
+  }
+ },
+ "components": [],
+ "dependencies": [
+  {
+   "ref": "star-chebyshev",
+   "dependsOn": []
+  }
+ ]
+}

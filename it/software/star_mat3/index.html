@@ -3,20 +3,27 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pacchetto star-mat3 — The 3×3 matrix operations of frame and attitude code · S.T.A.R.</title>
-<meta name="description" content="Transpose, exact determinant and inverse, products and a proper-rotation test for 3x3 matrices; determinant and inverse identical to exact rational arithmetic on 575 matrices including condition numbe">
+<title>Pacchetto star-mat3 — Le operazioni sulle matrici 3×3 del codice di sistemi di riferimento e assetto · S.T.A.R.</title>
+<meta name="description" content="Trasposta, determinante e inversa esatti, prodotti e test di rotazione propria per matrici 3x3; determinante e inversa identici all&#x27;aritmetica razionale esatta su 575 matrici, con numeri di condiziona">
 <link rel="icon" href="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" type="image/png">
 <link rel="canonical" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_mat3/">
 <link rel="alternate" hreflang="en" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_mat3/">
 <link rel="alternate" hreflang="it" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_mat3/">
 <link rel="alternate" hreflang="x-default" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_mat3/">
-<meta property="og:title" content="Pacchetto star-mat3 — The 3×3 matrix operations of frame and attitude code · S.T.A.R.">
-<meta property="og:description" content="Transpose, exact determinant and inverse, products and a proper-rotation test for 3x3 matrices; determinant and inverse identical to exact rational arithmetic on 575 matrices including condition numbe">
+<meta property="og:title" content="Pacchetto star-mat3 — Le operazioni sulle matrici 3×3 del codice di sistemi di riferimento e assetto · S.T.A.R.">
+<meta property="og:description" content="Trasposta, determinante e inversa esatti, prodotti e test di rotazione propria per matrici 3x3; determinante e inversa identici all&#x27;aritmetica razionale esatta su 575 matrici, con numeri di condiziona">
 <meta property="og:image" content="https://andrea07072000.github.io/S.T.A.R.-/assets/images/star_logo_dark_transparent.png">
-  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-Dx8lu5GH.js"></script>
-  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-CJ2BHFzs.css">
+<meta property="og:url" content="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_mat3/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="S.T.A.R.">
+<meta property="og:locale" content="it_IT">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "star-mat3", "version": "0.1.0", "description": "Trasposta, determinante e inversa esatti, prodotti e test di rotazione propria per matrici 3x3; determinante e inversa identici all'aritmetica razionale esatta su 575 matrici, con numeri di condizionamento fino a 1e8 (dove l'inversa di SPICE sbaglia di 6e-6 e quella di NumPy di 9e-10); matrici singolari rifiutate.", "url": "https://andrea07072000.github.io/S.T.A.R.-/it/software/star_mat3/", "codeRepository": "https://github.com/Andrea07072000/S.T.A.R.-", "programmingLanguage": "Python", "license": "https://www.apache.org/licenses/LICENSE-2.0", "author": {"@type": "Person", "name": "Andrea Cavazzini"}, "inLanguage": "it", "runtimePlatform": "Python >=3.9"}]</script>
+
+  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-CCzNtdfL.js"></script>
+  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-DCHVB_Yt.css">
 </head>
-<body data-page="software">
+<body data-page="software" data-lang="it" data-search="/S.T.A.R.-/search-it.json">
 <a class="skip" href="#main">Vai al contenuto</a>
 <header class="site-header">
  <div class="wrap">
@@ -28,6 +35,7 @@
     <a href="/S.T.A.R.-/software/star_mat3/" lang="en" hreflang="en">EN</a>
     <span aria-current="true">IT</span>
    </div>
+   <button class="btn small search-open" type="button" aria-haspopup="dialog" aria-keyshortcuts="Control+K Meta+K" title="Cerca nel sito">Cerca <kbd>Ctrl K</kbd></button>
    <a class="btn small primary" href="/S.T.A.R.-/it/assessment/#request">Richiedi una valutazione</a>
    <img class="header-logo" src="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" alt="S.T.A.R. logo" width="40" height="40">
   </div>
@@ -37,10 +45,10 @@
 <div class="wrap"><div class="page-head">
 <p><a href="/S.T.A.R.-/it/software/">← Tutti i pacchetti</a></p>
 <span class="eyebrow">Riferimenti e geometria</span><h1 class="mono pkg-title">star-mat3 <span class="muted">0.1.0</span></h1>
-<p class="lead">The 3×3 matrix operations of frame and attitude code</p>
+<p class="lead">Le operazioni sulle matrici 3×3 del codice di sistemi di riferimento e assetto</p>
 <p><span class="status ok">Apache-2.0</span> <span class="status ok">RELEASED</span> <span class="status soon">file singolo</span></p>
-<p class="small muted">La documentazione tecnica del pacchetto è in inglese, come il suo codice.</p></div>
-<section class="section tight"><h2>In parole semplici</h2><p class="lead">Transpose, exact determinant and inverse, products and a proper-rotation test for 3x3 matrices; determinant and inverse identical to exact rational arithmetic on 575 matrices including condition numbers up to 1e8 (where SPICE&#x27;s inverse is off by 6e-6 and NumPy&#x27;s by 9e-10); singular matrices refused.</p></section>
+</div>
+<section class="section tight"><h2>In parole semplici</h2><p class="lead">Trasposta, determinante e inversa esatti, prodotti e test di rotazione propria per matrici 3x3; determinante e inversa identici all&#x27;aritmetica razionale esatta su 575 matrici, con numeri di condizionamento fino a 1e8 (dove l&#x27;inversa di SPICE sbaglia di 6e-6 e quella di NumPy di 9e-10); matrici singolari rifiutate.</p></section>
 <section class="section tight" id="try"><h2>Provalo qui</h2><p>Modifica il codice e premi Esegui (o Ctrl+Invio). Python gira nel tuo browser con il codice pubblicato di questo pacchetto. La prima volta scarica Python una sola volta (circa 12 MB).</p><div class="runner" data-wheels='[&quot;star_mat3-0.1.0-py3-none-any.whl&quot;]'><label class="visually-hidden" for="code-star_mat3">Python</label><textarea id="code-star_mat3" spellcheck="false" rows="8">import star_mat3 as m3
 A = [[2, 0, 1], [1, 3, 2], [1, 0, 1]]
 print(m3.determinant(A))  # 3.0
@@ -50,11 +58,20 @@ print(m3.is_rotation(m3.identity()))  # True; a reflection or a scaled matrix is
 <section class="section tight" id="use"><h2>Usalo sul tuo computer</h2><p>Non servono account né GitHub. Scarica, poi installa con un comando:</p>
 <ul class="files"><li><a class="btn small" href="/S.T.A.R.-/downloads/wheels/star_mat3-0.1.0-py3-none-any.whl" download>File di installazione · star_mat3-0.1.0-py3-none-any.whl</a> <span class="muted small">3 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/modules/star_mat3.py" download>File singolo — basta copiarlo accanto al tuo codice · star_mat3.py</a> <span class="muted small">5 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/source/star_mat3-0.1.0-source.zip" download>Codice sorgente (.zip)</a> <span class="muted small">20 kB</span></li></ul><pre class="cmd"><code>python -m pip install star_mat3-0.1.0-py3-none-any.whl</code></pre>
 <p class="small"><a href="/S.T.A.R.-/it/start/">Come iniziare →</a></p></section>
+<section class="section tight" id="cite"><h2>Citarlo, e la sua distinta dei componenti</h2><p>Per un articolo, una relazione o un fascicolo fornitore: la citazione in due formati e la distinta dei componenti software (SBOM) nei due formati standard, con l&#x27;impronta del wheel.</p><pre class="cmd"><code>@software{cavazzini_star_mat3_0_1_0,
+  author  = {Cavazzini, Andrea},
+  title   = {{star-mat3}: Le operazioni sulle matrici 3×3 del codice di sistemi di riferimento e assetto},
+  version = {0.1.0},
+  year    = {2026},
+  url     = {https://andrea07072000.github.io/S.T.A.R.-/software/star_mat3/},
+  note    = {Apache-2.0. Source: https://github.com/Andrea07072000/S.T.A.R.-, commit 94fcf7c}
+}
+</code></pre><ul class="inline-links"><li><a href="/S.T.A.R.-/cite/star_mat3.cff" download>CITATION.cff</a></li><li><a href="/S.T.A.R.-/cite/star_mat3.bib" download>BibTeX</a></li><li><a href="/S.T.A.R.-/sbom/star_mat3.cdx.json" download>SBOM CycloneDX 1.5</a></li><li><a href="/S.T.A.R.-/sbom/star_mat3.spdx.json" download>SBOM SPDX 2.3</a></li></ul></section>
 <section class="section tight" id="dev"><h2>Per sviluppatori</h2><p>Installa direttamente dal repository pubblico:</p><pre class="cmd"><code>python -m pip install &quot;star-mat3 @ git+https://github.com/Andrea07072000/S.T.A.R.-.git#subdirectory=packages/star_mat3&quot;</code></pre>
 <p class="small"><a href="https://github.com/Andrea07072000/S.T.A.R.-/tree/main/packages/star_mat3">README · tests · evidence (GitHub)</a></p></section>
 <section class="section tight" id="tech"><h2>Scheda tecnica</h2><dl class="meta"><dt>Pacchetto</dt><dd class='mono'>star-mat3</dd><dt>Versione</dt><dd class='mono'>0.1.0</dd><dt>Licenza</dt><dd class='mono'>Apache-2.0</dd><dt>Python</dt><dd class='mono'>&gt;=3.9</dd><dt>Dipendenze</dt><dd class='mono'>nessuna (solo libreria standard)</dd><dt>Capacità</dt><dd class='mono'>star.geometry.mat3</dd><dt>Maturità</dt><dd class='mono'>RELEASED</dd><dt>Commit pubblicato</dt><dd class='mono'>94fcf7c</dd></dl>
-<h3>Requisiti</h3><ul class="reqs"><li><b class='mono'>R1</b> <code>determinant</code> and <code>inverse</code> in exact rational arithmetic (a float is an exact fraction), rounded once: correct to the last digit whatever the conditioning. <code>inverse</code> refuses singular and nearly singular matrices, with a test that does not depend on the scale of the entries.</li><li><b class='mono'>R2</b> <code>transpose</code>, <code>matmul</code>, <code>matvec</code>, <code>identity</code>; <code>is_rotation(m, tol)</code> is True only for an orthonormal matrix with determinant +1 within the tolerance.</li><li><b class='mono'>R3</b> Measured on 575 matrices (300 general, 150 rotations, 125 with condition numbers up to 1e8) against EXACT arithmetic (SymPy): determinant and inverse identical to the exact value rounded; products within 4e-15. On the ill-conditioned matrices SPICE&#x27;s inverse differs from the exact one by up to 6e-6 of its largest entry and NumPy&#x27;s by 9e-10. <code>is_rotation</code> agrees with SPICE on every matrix.</li><li><b class='mono'>R4</b> Every function returns floats (or a bool) or raises <code>ValueError</code>: wrong shape or type, an entry that is not a finite real number within ±1e60 (booleans refused), a singular or nearly singular matrix, an inverse that overflows, a tolerance outside (0, 1].</li></ul>
-<h3>Limiti (che cosa non si afferma)</h3><p>3×3 only; no eigenvalues, no decompositions, no orthonormalisation of a drifting rotation. The exact arithmetic makes <code>inverse</code> slower than a floating-point one (tens of microseconds): it is for correctness, not for inner loops. &quot;Exact&quot; means the exact inverse of the floats given: if those floats are themselves rounded measurements of an ill-conditioned matrix, the inverse amplifies their error by the condition number, and nothing here can prevent that. The products are compensated sums of rounded products, accurate to a few units in the last place, not exact.</p>
+<h3>Requisiti</h3><ul class="reqs"><li><b class='mono'>R1</b> <code>determinant</code> e <code>inverse</code> in aritmetica razionale esatta (un float è una frazione esatta), arrotondati una volta: corretti all&#x27;ultima cifra qualunque sia il condizionamento. <code>inverse</code> rifiuta matrici singolari e quasi singolari, con un test che non dipende dalla scala degli elementi.</li><li><b class='mono'>R2</b> <code>transpose</code>, <code>matmul</code>, <code>matvec</code>, <code>identity</code>; <code>is_rotation(m, tol)</code> è True solo per una matrice ortonormale con determinante +1 entro la tolleranza.</li><li><b class='mono'>R3</b> Misurato su 575 matrici (300 generiche, 150 rotazioni, 125 con numeri di condizionamento fino a 1e8) contro l&#x27;aritmetica ESATTA (SymPy): determinante e inversa identici al valore esatto arrotondato; prodotti entro 4e-15. Sulle matrici mal condizionate l&#x27;inversa di SPICE differisce da quella esatta fino a 6e-6 del suo elemento più grande e quella di NumPy di 9e-10. <code>is_rotation</code> concorda con SPICE su ogni matrice.</li><li><b class='mono'>R4</b> Ogni funzione restituisce float (o un booleano) o solleva <code>ValueError</code>: forma o tipo sbagliati, un elemento che non è un numero reale finito entro ±1e60 (booleani rifiutati), una matrice singolare o quasi singolare, un&#x27;inversa che va in overflow, una tolleranza fuori da (0, 1].</li></ul>
+<h3>Limiti (che cosa non si afferma)</h3><p>Solo 3×3; niente autovalori, niente decomposizioni, nessuna riortonormalizzazione di una rotazione che deriva. L&#x27;aritmetica esatta rende <code>inverse</code> più lenta di una in virgola mobile (decine di microsecondi): serve per la correttezza, non per cicli interni. «Esatta» significa l&#x27;inversa esatta dei float dati: se quei float sono a loro volta misure arrotondate di una matrice mal condizionata, l&#x27;inversa amplifica il loro errore del numero di condizionamento, e nulla qui può impedirlo. I prodotti sono somme compensate di prodotti arrotondati, accurate a poche unità nell&#x27;ultima cifra, non esatte.</p>
 <h3>Evidenze nel registro</h3><div class="table-scroll"><table class="data"><thead><tr><th>Controllo</th><th>Stato</th><th>Registrato</th><th>Che cosa è stato osservato</th></tr></thead><tbody><tr><td>Clean install from the release tag</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>pytest outside the tree: 22 passed in 0.11s</td></tr><tr><td>Unit tests</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>22 passed in 0.35s</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>Requirements, interface, units, data provenance, dependency surface and failure behaviour reviewed</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>Re-running the cross-check gives a byte-identical evidence file</td></tr><tr><td>Reference value</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>determinant 3.0 and the inverse exactly as the correctly rounded fractions (suite: 22 passed in 0.35s)</td></tr><tr><td>Cross-check with independent libraries</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>star_mat3 computes determinant, inverse and products of 3x3 matrices to the accuracy double precision allows, as measured against exact arithmetic, and recognises rotations as SPICE does</td></tr><tr><td>Benchmark</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>inverse of ill-conditioned matrices against the exact one: star_mat3 0.0e+00; and star_mat3 against SPICE 6.3e-06, NumPy 8.7e-10</td></tr></tbody></table></div>
 <h3>Impronte (SHA-256)</h3><div class="table-scroll"><table class="data"><tbody><tr><td class='mono small'>star_mat3-0.1.0-py3-none-any.whl</td><td class='mono small hash'>d5a0688a0f8aa4960a8fe4647e683c8e55085b12c7339671253e20aebd2fdd31</td></tr><tr><td class='mono small'>star_mat3.py</td><td class='mono small hash'>40456aa4d4da89cd6b1aaeca81e93b57e971b8cf672d9b34c005a5eb5b5ee343</td></tr><tr><td class='mono small'>star_mat3-0.1.0-source.zip</td><td class='mono small hash'>5e4c4cd46e0cac7000da0ec164631aa8fb6a8285fad091cd7622ffe08feade27</td></tr></tbody></table></div>
 </section></div>
@@ -70,9 +87,10 @@ print(m3.is_rotation(m3.identity()))  # True; a reflection or a scaled matrix is
    <div><h2>Contatti</h2><ul><li><a href="mailto:Info.and.News.S.T.A.R@proton.me">Info.and.News.S.T.A.R@proton.me</a></li>
     <li><a href="/S.T.A.R.-/it/assessment/#request">Richiedi una valutazione</a></li></ul></div>
   </div>
-  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generato dal registro il 2026-10-15 · commit di ingegneria c54092b · commit pubblico 94fcf7c</span>
+  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generato dal registro il 2026-10-15 · commit di ingegneria 173e61f · commit pubblico 94fcf7c</span>
    <a href="/S.T.A.R.-/software/star_mat3/" lang="en">English</a></div>
  </div>
 </footer>
+<dialog class="search-dlg" aria-label="Cerca nel sito"><form method="dialog" class="search-box"><label class="visually-hidden" for="site-q">Cerca nel sito</label><input id="site-q" type="search" autocomplete="off" placeholder="Pacchetti, documenti legali, pagine…"><button class="btn small" value="close">Esc</button></form><ul class="search-res" role="listbox"></ul><p class="small muted search-none" hidden>Nessun risultato. Prova una parola più corta.</p></dialog>
 </body>
 </html>

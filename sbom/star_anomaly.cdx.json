@@ -1,0 +1,61 @@
+{
+ "bomFormat": "CycloneDX",
+ "specVersion": "1.5",
+ "serialNumber": "urn:uuid:5045b554-7227-57e8-abb0-51aee18731c0",
+ "version": 1,
+ "metadata": {
+  "timestamp": "2026-10-15T00:00:00Z",
+  "authors": [
+   {
+    "name": "Andrea Cavazzini"
+   }
+  ],
+  "component": {
+   "type": "library",
+   "bom-ref": "star-anomaly",
+   "name": "star-anomaly",
+   "version": "0.1.0",
+   "description": "Kepler's equation and the conversions between mean, eccentric, hyperbolic and true anomaly for closed and open orbits: a bracketed Newton solver that cannot diverge, a residual that does not cancel near the periapsis of nearly parabolic orbits, the revolution kept; within 1e-14 rad of 50-digit arithmetic on 1120 orbits.",
+   "licenses": [
+    {
+     "license": {
+      "id": "Apache-2.0"
+     }
+    }
+   ],
+   "purl": "pkg:generic/star-anomaly@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%4094fcf7c%23packages%2Fstar_anomaly",
+   "author": "Andrea Cavazzini",
+   "externalReferences": [
+    {
+     "type": "vcs",
+     "url": "https://github.com/Andrea07072000/S.T.A.R.-/tree/main/packages/star_anomaly"
+    },
+    {
+     "type": "website",
+     "url": "https://andrea07072000.github.io/S.T.A.R.-/software/star_anomaly/"
+    }
+   ],
+   "hashes": [
+    {
+     "alg": "SHA-256",
+     "content": "8aba738e1fe4b0aefe0b6841288ea2fb06c28829341675b4218e4c5f0e982620"
+    }
+   ]
+  },
+  "tools": {
+   "components": [
+    {
+     "type": "application",
+     "name": "star-site-gen"
+    }
+   ]
+  }
+ },
+ "components": [],
+ "dependencies": [
+  {
+   "ref": "star-anomaly",
+   "dependsOn": []
+  }
+ ]
+}

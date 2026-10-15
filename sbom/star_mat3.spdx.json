@@ -1,0 +1,49 @@
+{
+ "spdxVersion": "SPDX-2.3",
+ "dataLicense": "CC0-1.0",
+ "SPDXID": "SPDXRef-DOCUMENT",
+ "name": "star-mat3-0.1.0",
+ "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_mat3-0.1.0-94fcf7c",
+ "creationInfo": {
+  "created": "2026-10-15T00:00:00Z",
+  "creators": [
+   "Person: Andrea Cavazzini",
+   "Tool: star-site-gen"
+  ]
+ },
+ "packages": [
+  {
+   "SPDXID": "SPDXRef-Package-star-mat3",
+   "name": "star-mat3",
+   "versionInfo": "0.1.0",
+   "downloadLocation": "git+https://github.com/Andrea07072000/S.T.A.R.-@94fcf7c#packages/star_mat3",
+   "homepage": "https://andrea07072000.github.io/S.T.A.R.-/software/star_mat3/",
+   "filesAnalyzed": false,
+   "licenseConcluded": "Apache-2.0",
+   "licenseDeclared": "Apache-2.0",
+   "copyrightText": "Copyright 2026 Andrea Cavazzini",
+   "supplier": "Person: Andrea Cavazzini",
+   "summary": "Transpose, exact determinant and inverse, products and a proper-rotation test for 3x3 matrices; determinant and inverse identical to exact rational arithmetic on 575 matrices including condition numbers up to 1e8 (where SPICE's inverse is off by 6e-6 and NumPy's by 9e-10); singular matrices refused.",
+   "externalRefs": [
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:generic/star-mat3@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%4094fcf7c%23packages%2Fstar_mat3"
+    }
+   ],
+   "checksums": [
+    {
+     "algorithm": "SHA256",
+     "checksumValue": "d5a0688a0f8aa4960a8fe4647e683c8e55085b12c7339671253e20aebd2fdd31"
+    }
+   ]
+  }
+ ],
+ "relationships": [
+  {
+   "spdxElementId": "SPDXRef-DOCUMENT",
+   "relationshipType": "DESCRIBES",
+   "relatedSpdxElement": "SPDXRef-Package-star-mat3"
+  }
+ ]
+}

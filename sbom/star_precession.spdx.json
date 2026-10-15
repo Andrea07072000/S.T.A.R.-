@@ -1,0 +1,49 @@
+{
+ "spdxVersion": "SPDX-2.3",
+ "dataLicense": "CC0-1.0",
+ "SPDXID": "SPDXRef-DOCUMENT",
+ "name": "star-precession-0.1.0",
+ "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_precession-0.1.0-94fcf7c",
+ "creationInfo": {
+  "created": "2026-10-15T00:00:00Z",
+  "creators": [
+   "Person: Andrea Cavazzini",
+   "Tool: star-site-gen"
+  ]
+ },
+ "packages": [
+  {
+   "SPDXID": "SPDXRef-Package-star-precession",
+   "name": "star-precession",
+   "versionInfo": "0.1.0",
+   "downloadLocation": "git+https://github.com/Andrea07072000/S.T.A.R.-@94fcf7c#packages/star_precession",
+   "homepage": "https://andrea07072000.github.io/S.T.A.R.-/software/star_precession/",
+   "filesAnalyzed": false,
+   "licenseConcluded": "Apache-2.0",
+   "licenseDeclared": "Apache-2.0",
+   "copyrightText": "Copyright 2026 Andrea Cavazzini",
+   "supplier": "Person: Andrea Cavazzini",
+   "summary": "IAU 1976 precession matrix and vector rotations between J2000 and the mean equator and equinox of date over 1800-2200; equal to ERFA pmat76 to 1.2e-16 and within 0.21 arcsec of PyEphem's own precession.",
+   "externalRefs": [
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:generic/star-precession@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%4094fcf7c%23packages%2Fstar_precession"
+    }
+   ],
+   "checksums": [
+    {
+     "algorithm": "SHA256",
+     "checksumValue": "461606b45b709e7d491e50960d0cca319d0f882da7f2a0052c05535da884953c"
+    }
+   ]
+  }
+ ],
+ "relationships": [
+  {
+   "spdxElementId": "SPDXRef-DOCUMENT",
+   "relationshipType": "DESCRIBES",
+   "relatedSpdxElement": "SPDXRef-Package-star-precession"
+  }
+ ]
+}

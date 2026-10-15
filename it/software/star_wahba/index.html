@@ -3,20 +3,27 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pacchetto star-wahba — Attitude from vector observations · S.T.A.R.</title>
-<meta name="description" content="Attitude from vector observations: TRIAD for two directions and Davenport&#x27;s q-method (Wahba&#x27;s problem) for 2 to 1000 weighted directions, with the eigenproblem solved by Jacobi rotations in the standa">
+<title>Pacchetto star-wahba — Assetto da osservazioni vettoriali · S.T.A.R.</title>
+<meta name="description" content="Assetto da osservazioni vettoriali: TRIAD per due direzioni e metodo q di Davenport (problema di Wahba) per 2-1000 direzioni pesate, con il problema agli autovalori risolto con rotazioni di Jacobi nel">
 <link rel="icon" href="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" type="image/png">
 <link rel="canonical" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_wahba/">
 <link rel="alternate" hreflang="en" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_wahba/">
 <link rel="alternate" hreflang="it" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_wahba/">
 <link rel="alternate" hreflang="x-default" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_wahba/">
-<meta property="og:title" content="Pacchetto star-wahba — Attitude from vector observations · S.T.A.R.">
-<meta property="og:description" content="Attitude from vector observations: TRIAD for two directions and Davenport&#x27;s q-method (Wahba&#x27;s problem) for 2 to 1000 weighted directions, with the eigenproblem solved by Jacobi rotations in the standa">
+<meta property="og:title" content="Pacchetto star-wahba — Assetto da osservazioni vettoriali · S.T.A.R.">
+<meta property="og:description" content="Assetto da osservazioni vettoriali: TRIAD per due direzioni e metodo q di Davenport (problema di Wahba) per 2-1000 direzioni pesate, con il problema agli autovalori risolto con rotazioni di Jacobi nel">
 <meta property="og:image" content="https://andrea07072000.github.io/S.T.A.R.-/assets/images/star_logo_dark_transparent.png">
-  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-Dx8lu5GH.js"></script>
-  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-CJ2BHFzs.css">
+<meta property="og:url" content="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_wahba/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="S.T.A.R.">
+<meta property="og:locale" content="it_IT">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "star-wahba", "version": "0.1.0", "description": "Assetto da osservazioni vettoriali: TRIAD per due direzioni e metodo q di Davenport (problema di Wahba) per 2-1000 direzioni pesate, con il problema agli autovalori risolto con rotazioni di Jacobi nella libreria standard; conversione nella matrice d'assetto e perdita di Wahba; entro 7e-15 dalla soluzione SVD di SciPy e 5e-16 dal TRIAD di ahrs su 401 assetti.", "url": "https://andrea07072000.github.io/S.T.A.R.-/it/software/star_wahba/", "codeRepository": "https://github.com/Andrea07072000/S.T.A.R.-", "programmingLanguage": "Python", "license": "https://www.apache.org/licenses/LICENSE-2.0", "author": {"@type": "Person", "name": "Andrea Cavazzini"}, "inLanguage": "it", "runtimePlatform": "Python >=3.9"}]</script>
+
+  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-CCzNtdfL.js"></script>
+  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-DCHVB_Yt.css">
 </head>
-<body data-page="software">
+<body data-page="software" data-lang="it" data-search="/S.T.A.R.-/search-it.json">
 <a class="skip" href="#main">Vai al contenuto</a>
 <header class="site-header">
  <div class="wrap">
@@ -28,6 +35,7 @@
     <a href="/S.T.A.R.-/software/star_wahba/" lang="en" hreflang="en">EN</a>
     <span aria-current="true">IT</span>
    </div>
+   <button class="btn small search-open" type="button" aria-haspopup="dialog" aria-keyshortcuts="Control+K Meta+K" title="Cerca nel sito">Cerca <kbd>Ctrl K</kbd></button>
    <a class="btn small primary" href="/S.T.A.R.-/it/assessment/#request">Richiedi una valutazione</a>
    <img class="header-logo" src="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" alt="S.T.A.R. logo" width="40" height="40">
   </div>
@@ -37,10 +45,10 @@
 <div class="wrap"><div class="page-head">
 <p><a href="/S.T.A.R.-/it/software/">← Tutti i pacchetti</a></p>
 <span class="eyebrow">Assetto</span><h1 class="mono pkg-title">star-wahba <span class="muted">0.1.0</span></h1>
-<p class="lead">Attitude from vector observations</p>
+<p class="lead">Assetto da osservazioni vettoriali</p>
 <p><span class="status ok">Apache-2.0</span> <span class="status ok">RELEASED</span> <span class="status soon">file singolo</span></p>
-<p class="small muted">La documentazione tecnica del pacchetto è in inglese, come il suo codice.</p></div>
-<section class="section tight"><h2>In parole semplici</h2><p class="lead">Attitude from vector observations: TRIAD for two directions and Davenport&#x27;s q-method (Wahba&#x27;s problem) for 2 to 1000 weighted directions, with the eigenproblem solved by Jacobi rotations in the standard library; conversion to the attitude matrix and the Wahba loss; within 7e-15 of SciPy&#x27;s SVD solution and 5e-16 of ahrs TRIAD on 401 attitudes.</p></section>
+</div>
+<section class="section tight"><h2>In parole semplici</h2><p class="lead">Assetto da osservazioni vettoriali: TRIAD per due direzioni e metodo q di Davenport (problema di Wahba) per 2-1000 direzioni pesate, con il problema agli autovalori risolto con rotazioni di Jacobi nella libreria standard; conversione nella matrice d&#x27;assetto e perdita di Wahba; entro 7e-15 dalla soluzione SVD di SciPy e 5e-16 dal TRIAD di ahrs su 401 assetti.</p></section>
 <section class="section tight" id="try"><h2>Provalo qui</h2><p>Modifica il codice e premi Esegui (o Ctrl+Invio). Python gira nel tuo browser con il codice pubblicato di questo pacchetto. La prima volta scarica Python una sola volta (circa 12 MB).</p><div class="runner" data-wheels='[&quot;star_wahba-0.1.0-py3-none-any.whl&quot;]'><label class="visually-hidden" for="code-star_wahba">Python</label><textarea id="code-star_wahba" spellcheck="false" rows="9">import star_wahba as sw
 refs = [(1, 0, 0), (0, 1, 0)]                  # known in the reference frame
 bodies = [(0, -1, 0), (1, 0, 0)]               # measured in the body frame
@@ -51,11 +59,20 @@ print(sw.wahba_loss(q, refs, bodies))  # 0.0: the data are consistent</textarea>
 <section class="section tight" id="use"><h2>Usalo sul tuo computer</h2><p>Non servono account né GitHub. Scarica, poi installa con un comando:</p>
 <ul class="files"><li><a class="btn small" href="/S.T.A.R.-/downloads/wheels/star_wahba-0.1.0-py3-none-any.whl" download>File di installazione · star_wahba-0.1.0-py3-none-any.whl</a> <span class="muted small">4 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/modules/star_wahba.py" download>File singolo — basta copiarlo accanto al tuo codice · star_wahba.py</a> <span class="muted small">9 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/source/star_wahba-0.1.0-source.zip" download>Codice sorgente (.zip)</a> <span class="muted small">26 kB</span></li></ul><pre class="cmd"><code>python -m pip install star_wahba-0.1.0-py3-none-any.whl</code></pre>
 <p class="small"><a href="/S.T.A.R.-/it/start/">Come iniziare →</a></p></section>
+<section class="section tight" id="cite"><h2>Citarlo, e la sua distinta dei componenti</h2><p>Per un articolo, una relazione o un fascicolo fornitore: la citazione in due formati e la distinta dei componenti software (SBOM) nei due formati standard, con l&#x27;impronta del wheel.</p><pre class="cmd"><code>@software{cavazzini_star_wahba_0_1_0,
+  author  = {Cavazzini, Andrea},
+  title   = {{star-wahba}: Assetto da osservazioni vettoriali},
+  version = {0.1.0},
+  year    = {2026},
+  url     = {https://andrea07072000.github.io/S.T.A.R.-/software/star_wahba/},
+  note    = {Apache-2.0. Source: https://github.com/Andrea07072000/S.T.A.R.-, commit 94fcf7c}
+}
+</code></pre><ul class="inline-links"><li><a href="/S.T.A.R.-/cite/star_wahba.cff" download>CITATION.cff</a></li><li><a href="/S.T.A.R.-/cite/star_wahba.bib" download>BibTeX</a></li><li><a href="/S.T.A.R.-/sbom/star_wahba.cdx.json" download>SBOM CycloneDX 1.5</a></li><li><a href="/S.T.A.R.-/sbom/star_wahba.spdx.json" download>SBOM SPDX 2.3</a></li></ul></section>
 <section class="section tight" id="dev"><h2>Per sviluppatori</h2><p>Installa direttamente dal repository pubblico:</p><pre class="cmd"><code>python -m pip install &quot;star-wahba @ git+https://github.com/Andrea07072000/S.T.A.R.-.git#subdirectory=packages/star_wahba&quot;</code></pre>
 <p class="small"><a href="https://github.com/Andrea07072000/S.T.A.R.-/tree/main/packages/star_wahba">README · tests · evidence (GitHub)</a></p></section>
 <section class="section tight" id="tech"><h2>Scheda tecnica</h2><dl class="meta"><dt>Pacchetto</dt><dd class='mono'>star-wahba</dd><dt>Versione</dt><dd class='mono'>0.1.0</dd><dt>Licenza</dt><dd class='mono'>Apache-2.0</dd><dt>Python</dt><dd class='mono'>&gt;=3.9</dd><dt>Dipendenze</dt><dd class='mono'>nessuna (solo libreria standard)</dd><dt>Capacità</dt><dd class='mono'>star.attitude.wahba</dd><dt>Maturità</dt><dd class='mono'>RELEASED</dd><dt>Commit pubblicato</dt><dd class='mono'>94fcf7c</dd></dl>
-<h3>Requisiti</h3><ul class="reqs"><li><b class='mono'>R1</b> <code>triad(r1, r2, b1, b2)</code> returns the attitude matrix A (reference to body, b = A r) that matches the first pair exactly; <code>q_method(refs, bodies, weights)</code> returns the unit quaternion (w, x, y, z), w &gt;= 0, that minimises Wahba&#x27;s loss; <code>rotation_matrix(q)</code> converts it to A; <code>wahba_loss</code> evaluates 0.5 Σ w |b - A r|² with the weights normalised to sum 1.</li><li><b class='mono'>R2</b> TRIAD by two orthonormal triads; the q-method by the eigenvector of the largest eigenvalue of Davenport&#x27;s K matrix, found with Jacobi rotations. Vectors need not be unit: only their directions are used.</li><li><b class='mono'>R3</b> Measured on 401 attitudes with 2 to 8 weighted directions, half of them with 0.01 rad of noise: the q-method agrees with the singular-value solution of SciPy within 7e-15 in every element of the matrix, TRIAD with the TRIAD of ahrs within 5e-16.</li><li><b class='mono'>R4</b> Every function returns floats or raises <code>ValueError</code>: vectors that are not three finite numbers or are zero, fewer than 2 or more than 1000 pairs, weights that are not positive, directions that do not fix an attitude (parallel), a zero quaternion.</li></ul>
-<h3>Limiti (che cosa non si afferma)</h3><p>A single-frame estimate: no filtering over time, no gyro, no covariance of the estimate, no bias estimation, no QUEST or ESOQ variants (they solve the same problem faster; this one favours robustness over speed). TRIAD and the q-method give different answers on noisy data by design: TRIAD trusts the first observation entirely. Nearly parallel observations are accepted down to 1e-12 and give an attitude that is very sensitive to noise about their common direction: the functions do not warn about it. No published numerical example is reproduced: the references (Wahba 1965, Black 1964, Davenport 1968, Markley and Crassidis) are cited for the method.</p>
+<h3>Requisiti</h3><ul class="reqs"><li><b class='mono'>R1</b> <code>triad(r1, r2, b1, b2)</code> restituisce la matrice d&#x27;assetto A (dal riferimento al corpo, b = A r) che fa coincidere esattamente la prima coppia; <code>q_method(refs, bodies, weights)</code> restituisce il quaternione unitario (w, x, y, z), w &gt;= 0, che minimizza la perdita di Wahba; <code>rotation_matrix(q)</code> lo converte in A; <code>wahba_loss</code> valuta 0,5 Σ w |b - A r|² con i pesi normalizzati a somma 1.</li><li><b class='mono'>R2</b> TRIAD tramite due terne ortonormali; il metodo q tramite l&#x27;autovettore del massimo autovalore della matrice K di Davenport, trovato con rotazioni di Jacobi. I vettori non devono essere unitari: se ne usa solo la direzione.</li><li><b class='mono'>R3</b> Misurato su 401 assetti con da 2 a 8 direzioni pesate, metà con 0,01 rad di rumore: il metodo q concorda con la soluzione ai valori singolari di SciPy entro 7e-15 in ogni elemento della matrice, TRIAD con il TRIAD di ahrs entro 5e-16.</li><li><b class='mono'>R4</b> Ogni funzione restituisce float o solleva <code>ValueError</code>: vettori che non sono tre numeri finiti o sono nulli, meno di 2 o più di 1000 coppie, pesi non positivi, direzioni che non fissano un assetto (parallele), un quaternione nullo.</li></ul>
+<h3>Limiti (che cosa non si afferma)</h3><p>Una stima su un singolo istante: nessun filtraggio nel tempo, nessun giroscopio, nessuna covarianza della stima, nessuna stima di bias, niente varianti QUEST o ESOQ (risolvono lo stesso problema più in fretta; questo privilegia la robustezza sulla velocità). TRIAD e metodo q danno per costruzione risposte diverse su dati rumorosi: TRIAD si fida interamente della prima osservazione. Osservazioni quasi parallele sono accettate fino a 1e-12 e danno un assetto molto sensibile al rumore attorno alla loro direzione comune: le funzioni non lo segnalano. Nessun esempio numerico pubblicato è riprodotto: i riferimenti (Wahba 1965, Black 1964, Davenport 1968, Markley e Crassidis) sono citati per il metodo.</p>
 <h3>Evidenze nel registro</h3><div class="table-scroll"><table class="data"><thead><tr><th>Controllo</th><th>Stato</th><th>Registrato</th><th>Che cosa è stato osservato</th></tr></thead><tbody><tr><td>Clean install from the release tag</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>pytest outside the tree: 31 passed in 1.86s</td></tr><tr><td>Unit tests</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>31 passed in 2.06s</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>Requirements, interface, units, data provenance, dependency surface and failure behaviour reviewed</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>Re-running the cross-check gives a byte-identical evidence file</td></tr><tr><td>Reference value</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>triad((1,0,0), (0,1,0), (0,-1,0), (1,0,0)) = ((0.0, 1.0, 0.0), (-1.0, 0.0, 0.0), (0.0, 0.0, 1.0)); q_method of the same = (0.7071067811865476, 0.0, 0.0, 0.7071067811865476) (suite: 31 passed in 2.06s)</td></tr><tr><td>Cross-check with independent libraries</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>star_wahba returns the same attitude as an SVD solution of Wahba&#x27;s problem (q-method) and as an independent TRIAD, with and without measurement noise</td></tr><tr><td>Benchmark</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>largest element difference from SciPy: 6.1e-15; from ahrs: 4.4e-16</td></tr></tbody></table></div>
 <h3>Impronte (SHA-256)</h3><div class="table-scroll"><table class="data"><tbody><tr><td class='mono small'>star_wahba-0.1.0-py3-none-any.whl</td><td class='mono small hash'>7bb53412034284d4b2ab0fa959fb7b0edc4a2445b61f915f91d7e3562e1cdc4c</td></tr><tr><td class='mono small'>star_wahba.py</td><td class='mono small hash'>57b35fe5a36575980d5786d657acbbf2c919dff6f7ed5034b7875fd530c2533b</td></tr><tr><td class='mono small'>star_wahba-0.1.0-source.zip</td><td class='mono small hash'>b504d3eb68d5414d3cb6a48cfa00786b8942268a599f12b4174b8440e9347387</td></tr></tbody></table></div>
 </section></div>
@@ -71,9 +88,10 @@ print(sw.wahba_loss(q, refs, bodies))  # 0.0: the data are consistent</textarea>
    <div><h2>Contatti</h2><ul><li><a href="mailto:Info.and.News.S.T.A.R@proton.me">Info.and.News.S.T.A.R@proton.me</a></li>
     <li><a href="/S.T.A.R.-/it/assessment/#request">Richiedi una valutazione</a></li></ul></div>
   </div>
-  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generato dal registro il 2026-10-15 · commit di ingegneria c54092b · commit pubblico 94fcf7c</span>
+  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generato dal registro il 2026-10-15 · commit di ingegneria 173e61f · commit pubblico 94fcf7c</span>
    <a href="/S.T.A.R.-/software/star_wahba/" lang="en">English</a></div>
  </div>
 </footer>
+<dialog class="search-dlg" aria-label="Cerca nel sito"><form method="dialog" class="search-box"><label class="visually-hidden" for="site-q">Cerca nel sito</label><input id="site-q" type="search" autocomplete="off" placeholder="Pacchetti, documenti legali, pagine…"><button class="btn small" value="close">Esc</button></form><ul class="search-res" role="listbox"></ul><p class="small muted search-none" hidden>Nessun risultato. Prova una parola più corta.</p></dialog>
 </body>
 </html>

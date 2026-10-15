@@ -1,0 +1,106 @@
+{
+ "bomFormat": "CycloneDX",
+ "specVersion": "1.5",
+ "serialNumber": "urn:uuid:a47514d5-1b9a-51a1-9aac-c6e28081e550",
+ "version": 1,
+ "metadata": {
+  "timestamp": "2026-10-15T00:00:00Z",
+  "authors": [
+   {
+    "name": "Andrea Cavazzini"
+   }
+  ],
+  "component": {
+   "type": "library",
+   "bom-ref": "star-audit",
+   "name": "star-audit",
+   "version": "0.13.1",
+   "description": "Measures the accuracy envelope (per altitude band, 0-36,000 km) of any ECEF->geodetic library against an exact reference.",
+   "licenses": [
+    {
+     "license": {
+      "id": "Apache-2.0"
+     }
+    }
+   ],
+   "purl": "pkg:generic/star-audit@0.13.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%4094fcf7c%23packages%2Fstar_audit",
+   "author": "Andrea Cavazzini",
+   "externalReferences": [
+    {
+     "type": "vcs",
+     "url": "https://github.com/Andrea07072000/S.T.A.R.-/tree/main/packages/star_audit"
+    },
+    {
+     "type": "website",
+     "url": "https://andrea07072000.github.io/S.T.A.R.-/software/star_audit/"
+    }
+   ],
+   "hashes": [
+    {
+     "alg": "SHA-256",
+     "content": "b314ed7456aae2a85e1bc96e71d515ffa0bbf80b4abc27344fb6624fff1ec47b"
+    }
+   ]
+  },
+  "tools": {
+   "components": [
+    {
+     "type": "application",
+     "name": "star-site-gen"
+    }
+   ]
+  }
+ },
+ "components": [
+  {
+   "type": "library",
+   "bom-ref": "star-geodesy",
+   "name": "star-geodesy",
+   "version": "0.1.1",
+   "licenses": [
+    {
+     "license": {
+      "id": "Apache-2.0"
+     }
+    }
+   ],
+   "purl": "pkg:generic/star-geodesy@0.1.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%4094fcf7c%23packages%2Fstar_geodesy"
+  },
+  {
+   "type": "library",
+   "bom-ref": "mpmath",
+   "name": "mpmath",
+   "purl": "pkg:pypi/mpmath",
+   "externalReferences": [
+    {
+     "type": "website",
+     "url": "https://mpmath.org/"
+    }
+   ],
+   "licenses": [
+    {
+     "license": {
+      "id": "BSD-3-Clause"
+     }
+    }
+   ]
+  }
+ ],
+ "dependencies": [
+  {
+   "ref": "star-audit",
+   "dependsOn": [
+    "star-geodesy",
+    "mpmath"
+   ]
+  },
+  {
+   "ref": "star-geodesy",
+   "dependsOn": []
+  },
+  {
+   "ref": "mpmath",
+   "dependsOn": []
+  }
+ ]
+}

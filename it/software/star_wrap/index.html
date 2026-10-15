@@ -3,20 +3,27 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pacchetto star-wrap — Reducing, differencing and averaging angles · S.T.A.R.</title>
-<meta name="description" content="Reduction of angles to [0, 360) and [-180, 180), shortest signed difference and circular mean; identical to astropy, within 2.4e-10 deg of ERFA and 6e-14 deg of SciPy on 600 angles and 600 samples, ev">
+<title>Pacchetto star-wrap — Ridurre, sottrarre e mediare angoli · S.T.A.R.</title>
+<meta name="description" content="Riduzione degli angoli in [0, 360) e [-180, 180), differenza con segno più breve e media circolare; identico ad astropy, entro 2,4e-10 gradi da ERFA e 6e-14 gradi da SciPy su 600 angoli e 600 campioni">
 <link rel="icon" href="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" type="image/png">
 <link rel="canonical" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_wrap/">
 <link rel="alternate" hreflang="en" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_wrap/">
 <link rel="alternate" hreflang="it" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_wrap/">
 <link rel="alternate" hreflang="x-default" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_wrap/">
-<meta property="og:title" content="Pacchetto star-wrap — Reducing, differencing and averaging angles · S.T.A.R.">
-<meta property="og:description" content="Reduction of angles to [0, 360) and [-180, 180), shortest signed difference and circular mean; identical to astropy, within 2.4e-10 deg of ERFA and 6e-14 deg of SciPy on 600 angles and 600 samples, ev">
+<meta property="og:title" content="Pacchetto star-wrap — Ridurre, sottrarre e mediare angoli · S.T.A.R.">
+<meta property="og:description" content="Riduzione degli angoli in [0, 360) e [-180, 180), differenza con segno più breve e media circolare; identico ad astropy, entro 2,4e-10 gradi da ERFA e 6e-14 gradi da SciPy su 600 angoli e 600 campioni">
 <meta property="og:image" content="https://andrea07072000.github.io/S.T.A.R.-/assets/images/star_logo_dark_transparent.png">
-  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-Dx8lu5GH.js"></script>
-  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-CJ2BHFzs.css">
+<meta property="og:url" content="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_wrap/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="S.T.A.R.">
+<meta property="og:locale" content="it_IT">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "star-wrap", "version": "0.1.0", "description": "Riduzione degli angoli in [0, 360) e [-180, 180), differenza con segno più breve e media circolare; identico ad astropy, entro 2,4e-10 gradi da ERFA e 6e-14 gradi da SciPy su 600 angoli e 600 campioni, ogni risultato nel suo intervallo, medie non definite rifiutate.", "url": "https://andrea07072000.github.io/S.T.A.R.-/it/software/star_wrap/", "codeRepository": "https://github.com/Andrea07072000/S.T.A.R.-", "programmingLanguage": "Python", "license": "https://www.apache.org/licenses/LICENSE-2.0", "author": {"@type": "Person", "name": "Andrea Cavazzini"}, "inLanguage": "it", "runtimePlatform": "Python >=3.9"}]</script>
+
+  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-CCzNtdfL.js"></script>
+  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-DCHVB_Yt.css">
 </head>
-<body data-page="software">
+<body data-page="software" data-lang="it" data-search="/S.T.A.R.-/search-it.json">
 <a class="skip" href="#main">Vai al contenuto</a>
 <header class="site-header">
  <div class="wrap">
@@ -28,6 +35,7 @@
     <a href="/S.T.A.R.-/software/star_wrap/" lang="en" hreflang="en">EN</a>
     <span aria-current="true">IT</span>
    </div>
+   <button class="btn small search-open" type="button" aria-haspopup="dialog" aria-keyshortcuts="Control+K Meta+K" title="Cerca nel sito">Cerca <kbd>Ctrl K</kbd></button>
    <a class="btn small primary" href="/S.T.A.R.-/it/assessment/#request">Richiedi una valutazione</a>
    <img class="header-logo" src="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" alt="S.T.A.R. logo" width="40" height="40">
   </div>
@@ -37,10 +45,10 @@
 <div class="wrap"><div class="page-head">
 <p><a href="/S.T.A.R.-/it/software/">← Tutti i pacchetti</a></p>
 <span class="eyebrow">Calcolo numerico e statistica</span><h1 class="mono pkg-title">star-wrap <span class="muted">0.1.0</span></h1>
-<p class="lead">Reducing, differencing and averaging angles</p>
+<p class="lead">Ridurre, sottrarre e mediare angoli</p>
 <p><span class="status ok">Apache-2.0</span> <span class="status ok">RELEASED</span> <span class="status soon">file singolo</span></p>
-<p class="small muted">La documentazione tecnica del pacchetto è in inglese, come il suo codice.</p></div>
-<section class="section tight"><h2>In parole semplici</h2><p class="lead">Reduction of angles to [0, 360) and [-180, 180), shortest signed difference and circular mean; identical to astropy, within 2.4e-10 deg of ERFA and 6e-14 deg of SciPy on 600 angles and 600 samples, every result inside its range, undefined means refused.</p></section>
+</div>
+<section class="section tight"><h2>In parole semplici</h2><p class="lead">Riduzione degli angoli in [0, 360) e [-180, 180), differenza con segno più breve e media circolare; identico ad astropy, entro 2,4e-10 gradi da ERFA e 6e-14 gradi da SciPy su 600 angoli e 600 campioni, ogni risultato nel suo intervallo, medie non definite rifiutate.</p></section>
 <section class="section tight" id="try"><h2>Provalo qui</h2><p>Modifica il codice e premi Esegui (o Ctrl+Invio). Python gira nel tuo browser con il codice pubblicato di questo pacchetto. La prima volta scarica Python una sola volta (circa 12 MB).</p><div class="runner" data-wheels='[&quot;star_wrap-0.1.0-py3-none-any.whl&quot;]'><label class="visually-hidden" for="code-star_wrap">Python</label><textarea id="code-star_wrap" spellcheck="false" rows="7">import star_wrap as sw
 print(sw.wrap360(-2318.19280))  # 201.80720: Meeus Example 25.a
 print(sw.wrap180(190.0))  # -170.0
@@ -49,11 +57,20 @@ print(sw.circular_mean([350.0, 10.0]))  # 0.0, not 180</textarea><div class="run
 <section class="section tight" id="use"><h2>Usalo sul tuo computer</h2><p>Non servono account né GitHub. Scarica, poi installa con un comando:</p>
 <ul class="files"><li><a class="btn small" href="/S.T.A.R.-/downloads/wheels/star_wrap-0.1.0-py3-none-any.whl" download>File di installazione · star_wrap-0.1.0-py3-none-any.whl</a> <span class="muted small">2 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/modules/star_wrap.py" download>File singolo — basta copiarlo accanto al tuo codice · star_wrap.py</a> <span class="muted small">3 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/source/star_wrap-0.1.0-source.zip" download>Codice sorgente (.zip)</a> <span class="muted small">18 kB</span></li></ul><pre class="cmd"><code>python -m pip install star_wrap-0.1.0-py3-none-any.whl</code></pre>
 <p class="small"><a href="/S.T.A.R.-/it/start/">Come iniziare →</a></p></section>
+<section class="section tight" id="cite"><h2>Citarlo, e la sua distinta dei componenti</h2><p>Per un articolo, una relazione o un fascicolo fornitore: la citazione in due formati e la distinta dei componenti software (SBOM) nei due formati standard, con l&#x27;impronta del wheel.</p><pre class="cmd"><code>@software{cavazzini_star_wrap_0_1_0,
+  author  = {Cavazzini, Andrea},
+  title   = {{star-wrap}: Ridurre, sottrarre e mediare angoli},
+  version = {0.1.0},
+  year    = {2026},
+  url     = {https://andrea07072000.github.io/S.T.A.R.-/software/star_wrap/},
+  note    = {Apache-2.0. Source: https://github.com/Andrea07072000/S.T.A.R.-, commit 94fcf7c}
+}
+</code></pre><ul class="inline-links"><li><a href="/S.T.A.R.-/cite/star_wrap.cff" download>CITATION.cff</a></li><li><a href="/S.T.A.R.-/cite/star_wrap.bib" download>BibTeX</a></li><li><a href="/S.T.A.R.-/sbom/star_wrap.cdx.json" download>SBOM CycloneDX 1.5</a></li><li><a href="/S.T.A.R.-/sbom/star_wrap.spdx.json" download>SBOM SPDX 2.3</a></li></ul></section>
 <section class="section tight" id="dev"><h2>Per sviluppatori</h2><p>Installa direttamente dal repository pubblico:</p><pre class="cmd"><code>python -m pip install &quot;star-wrap @ git+https://github.com/Andrea07072000/S.T.A.R.-.git#subdirectory=packages/star_wrap&quot;</code></pre>
 <p class="small"><a href="https://github.com/Andrea07072000/S.T.A.R.-/tree/main/packages/star_wrap">README · tests · evidence (GitHub)</a></p></section>
 <section class="section tight" id="tech"><h2>Scheda tecnica</h2><dl class="meta"><dt>Pacchetto</dt><dd class='mono'>star-wrap</dd><dt>Versione</dt><dd class='mono'>0.1.0</dd><dt>Licenza</dt><dd class='mono'>Apache-2.0</dd><dt>Python</dt><dd class='mono'>&gt;=3.9</dd><dt>Dipendenze</dt><dd class='mono'>nessuna (solo libreria standard)</dd><dt>Capacità</dt><dd class='mono'>star.units.angle-wrap</dd><dt>Maturità</dt><dd class='mono'>RELEASED</dd><dt>Commit pubblicato</dt><dd class='mono'>94fcf7c</dd></dl>
-<h3>Requisiti</h3><ul class="reqs"><li><b class='mono'>R1</b> <code>wrap360</code> returns [0, 360) and <code>wrap180</code> returns [-180, 180), with the exact floating-point remainder: an angle of 1e9 deg loses nothing in the reduction. Reproduces the reductions of Meeus Example 25.a.</li><li><b class='mono'>R2</b> <code>difference(a, b)</code> is a − b as the shortest signed rotation in [-180, 180); <code>circular_mean(angles)</code> is the direction of the mean unit vector in [0, 360), and is refused when the vectors cancel.</li><li><b class='mono'>R3</b> Measured on 600 angles up to 1e6 deg (100 within 1e-9 deg of a multiple of 180) and 600 samples: identical to astropy, within 2.4e-10 deg of ERFA (which rounds through radians), circular means within 6e-14 deg of SciPy; every result inside its range.</li><li><b class='mono'>R4</b> Every function returns a finite float in its range or raises <code>ValueError</code>: non-numeric, boolean, NaN or infinite input, an angle beyond 1e12 deg, an empty or non-list/tuple collection or one longer than 1,000,000, a mean resultant length below 1e-9.</li></ul>
-<h3>Limiti (che cosa non si afferma)</h3><p>Half a turn is −180, not +180: callers who need (−180, 180] must map it themselves. The circular mean is not a weighted mean and gives no dispersion. An angle is a float: 1e12 deg still reduces exactly, but its own last digit is already 1e-4 deg.</p>
+<h3>Requisiti</h3><ul class="reqs"><li><b class='mono'>R1</b> <code>wrap360</code> restituisce [0, 360) e <code>wrap180</code> restituisce [-180, 180), con il resto esatto in virgola mobile: un angolo di 1e9 gradi non perde nulla nella riduzione. Riproduce le riduzioni dell&#x27;esempio 25.a di Meeus.</li><li><b class='mono'>R2</b> <code>difference(a, b)</code> è a − b come rotazione con segno più breve in [-180, 180); <code>circular_mean(angles)</code> è la direzione del versore medio in [0, 360), ed è rifiutata quando i vettori si annullano.</li><li><b class='mono'>R3</b> Misurato su 600 angoli fino a 1e6 gradi (100 entro 1e-9 gradi da un multiplo di 180) e 600 campioni: identico ad astropy, entro 2,4e-10 gradi da ERFA (che arrotonda passando per i radianti), medie circolari entro 6e-14 gradi da SciPy; ogni risultato nel suo intervallo.</li><li><b class='mono'>R4</b> Ogni funzione restituisce un float finito nel suo intervallo o solleva <code>ValueError</code>: ingressi non numerici, booleani, NaN o infiniti, un angolo oltre 1e12 gradi, una collezione vuota, non lista/tupla o più lunga di 1.000.000 elementi, una lunghezza del risultante medio sotto 1e-9.</li></ul>
+<h3>Limiti (che cosa non si afferma)</h3><p>Mezzo giro è −180, non +180: chi ha bisogno di (−180, 180] deve convertirlo da sé. La media circolare non è una media pesata e non dà la dispersione. Un angolo è un float: 1e12 gradi si riduce ancora esattamente, ma la sua ultima cifra vale già 1e-4 gradi.</p>
 <h3>Evidenze nel registro</h3><div class="table-scroll"><table class="data"><thead><tr><th>Controllo</th><th>Stato</th><th>Registrato</th><th>Che cosa è stato osservato</th></tr></thead><tbody><tr><td>Clean install from the release tag</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>pytest outside the tree: 17 passed in 1.61s</td></tr><tr><td>Unit tests</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>17 passed in 1.85s</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>Requirements, interface, units, data provenance, dependency surface and failure behaviour reviewed</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>Re-running the cross-check gives a byte-identical evidence file</td></tr><tr><td>Reference value</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>201.80720000000019 and 278.99396999999999: within 2e-13 deg of the printed values (suite: 17 passed in 1.85s)</td></tr><tr><td>Cross-check with independent libraries</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>star_wrap reduces, differences and averages angles as three independent libraries do, and always returns values inside the stated ranges</td></tr><tr><td>Benchmark</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>largest differences: astropy 0.0e+00 deg, ERFA 2.4e-10 deg, SciPy mean 5.7e-14 deg</td></tr></tbody></table></div>
 <h3>Impronte (SHA-256)</h3><div class="table-scroll"><table class="data"><tbody><tr><td class='mono small'>star_wrap-0.1.0-py3-none-any.whl</td><td class='mono small hash'>385e1904f0c8edd6cf4b98f16a19fa3407a727e798c113a9c18c29e8b15f4219</td></tr><tr><td class='mono small'>star_wrap.py</td><td class='mono small hash'>b3719bf9bb565f0541ce464de9884f4caa718e1348f1486902b9866d7f003515</td></tr><tr><td class='mono small'>star_wrap-0.1.0-source.zip</td><td class='mono small hash'>e4c41f189f72f94441f54397ebfe1dbbaf8a5cd41d0160c0545b58aec7334f0b</td></tr></tbody></table></div>
 </section></div>
@@ -69,9 +86,10 @@ print(sw.circular_mean([350.0, 10.0]))  # 0.0, not 180</textarea><div class="run
    <div><h2>Contatti</h2><ul><li><a href="mailto:Info.and.News.S.T.A.R@proton.me">Info.and.News.S.T.A.R@proton.me</a></li>
     <li><a href="/S.T.A.R.-/it/assessment/#request">Richiedi una valutazione</a></li></ul></div>
   </div>
-  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generato dal registro il 2026-10-15 · commit di ingegneria c54092b · commit pubblico 94fcf7c</span>
+  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generato dal registro il 2026-10-15 · commit di ingegneria 173e61f · commit pubblico 94fcf7c</span>
    <a href="/S.T.A.R.-/software/star_wrap/" lang="en">English</a></div>
  </div>
 </footer>
+<dialog class="search-dlg" aria-label="Cerca nel sito"><form method="dialog" class="search-box"><label class="visually-hidden" for="site-q">Cerca nel sito</label><input id="site-q" type="search" autocomplete="off" placeholder="Pacchetti, documenti legali, pagine…"><button class="btn small" value="close">Esc</button></form><ul class="search-res" role="listbox"></ul><p class="small muted search-none" hidden>Nessun risultato. Prova una parola più corta.</p></dialog>
 </body>
 </html>

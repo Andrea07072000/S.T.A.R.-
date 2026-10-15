@@ -1,0 +1,49 @@
+{
+ "spdxVersion": "SPDX-2.3",
+ "dataLicense": "CC0-1.0",
+ "SPDXID": "SPDXRef-DOCUMENT",
+ "name": "star-coverage-0.1.0",
+ "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_coverage-0.1.0-94fcf7c",
+ "creationInfo": {
+  "created": "2026-10-15T00:00:00Z",
+  "creators": [
+   "Person: Andrea Cavazzini",
+   "Tool: star-site-gen"
+  ]
+ },
+ "packages": [
+  {
+   "SPDXID": "SPDXRef-Package-star-coverage",
+   "name": "star-coverage",
+   "versionInfo": "0.1.0",
+   "downloadLocation": "git+https://github.com/Andrea07072000/S.T.A.R.-@94fcf7c#packages/star_coverage",
+   "homepage": "https://andrea07072000.github.io/S.T.A.R.-/software/star_coverage/",
+   "filesAnalyzed": false,
+   "licenseConcluded": "Apache-2.0",
+   "licenseDeclared": "Apache-2.0",
+   "copyrightText": "Copyright 2026 Andrea Cavazzini",
+   "supplier": "Person: Andrea Cavazzini",
+   "summary": "Earth-central angle, nadir angle, slant range, covered fraction, footprint area and elevation for a satellite at a given altitude and minimum elevation; agrees with pymap3d and PROJ on a sphere to 1e-13 and keeps precision from 1 mm of altitude to 1e12 km.",
+   "externalRefs": [
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:generic/star-coverage@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%4094fcf7c%23packages%2Fstar_coverage"
+    }
+   ],
+   "checksums": [
+    {
+     "algorithm": "SHA256",
+     "checksumValue": "02ff06cc0df97f82b731d029629513f1884ee2f72676d74f46221d4a0045784a"
+    }
+   ]
+  }
+ ],
+ "relationships": [
+  {
+   "spdxElementId": "SPDXRef-DOCUMENT",
+   "relationshipType": "DESCRIBES",
+   "relatedSpdxElement": "SPDXRef-Package-star-coverage"
+  }
+ ]
+}

@@ -3,20 +3,27 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pacchetto star-coords — Spherical and cylindrical ⇄ rectangular coordinates · S.T.A.R.</title>
-<meta name="description" content="Spherical and cylindrical coordinates to rectangular and back; agrees with ERFA, SPICE and astropy to 3e-16 relative and 6e-14 deg on 600 cases in both directions, close to the axis included, and refu">
+<title>Pacchetto star-coords — Coordinate sferiche e cilindriche ⇄ rettangolari · S.T.A.R.</title>
+<meta name="description" content="Coordinate sferiche e cilindriche verso rettangolari e ritorno; concorda con ERFA, SPICE e astropy entro 3e-16 relativo e 6e-14 gradi su 600 casi in entrambe le direzioni, anche vicino all&#x27;asse, e rif">
 <link rel="icon" href="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" type="image/png">
 <link rel="canonical" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_coords/">
 <link rel="alternate" hreflang="en" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_coords/">
 <link rel="alternate" hreflang="it" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_coords/">
 <link rel="alternate" hreflang="x-default" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_coords/">
-<meta property="og:title" content="Pacchetto star-coords — Spherical and cylindrical ⇄ rectangular coordinates · S.T.A.R.">
-<meta property="og:description" content="Spherical and cylindrical coordinates to rectangular and back; agrees with ERFA, SPICE and astropy to 3e-16 relative and 6e-14 deg on 600 cases in both directions, close to the axis included, and refu">
+<meta property="og:title" content="Pacchetto star-coords — Coordinate sferiche e cilindriche ⇄ rettangolari · S.T.A.R.">
+<meta property="og:description" content="Coordinate sferiche e cilindriche verso rettangolari e ritorno; concorda con ERFA, SPICE e astropy entro 3e-16 relativo e 6e-14 gradi su 600 casi in entrambe le direzioni, anche vicino all&#x27;asse, e rif">
 <meta property="og:image" content="https://andrea07072000.github.io/S.T.A.R.-/assets/images/star_logo_dark_transparent.png">
-  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-Dx8lu5GH.js"></script>
-  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-CJ2BHFzs.css">
+<meta property="og:url" content="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_coords/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="S.T.A.R.">
+<meta property="og:locale" content="it_IT">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "star-coords", "version": "0.1.0", "description": "Coordinate sferiche e cilindriche verso rettangolari e ritorno; concorda con ERFA, SPICE e astropy entro 3e-16 relativo e 6e-14 gradi su 600 casi in entrambe le direzioni, anche vicino all'asse, e rifiuta gli ingressi fuori intervallo.", "url": "https://andrea07072000.github.io/S.T.A.R.-/it/software/star_coords/", "codeRepository": "https://github.com/Andrea07072000/S.T.A.R.-", "programmingLanguage": "Python", "license": "https://www.apache.org/licenses/LICENSE-2.0", "author": {"@type": "Person", "name": "Andrea Cavazzini"}, "inLanguage": "it", "runtimePlatform": "Python >=3.9"}]</script>
+
+  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-CCzNtdfL.js"></script>
+  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-DCHVB_Yt.css">
 </head>
-<body data-page="software">
+<body data-page="software" data-lang="it" data-search="/S.T.A.R.-/search-it.json">
 <a class="skip" href="#main">Vai al contenuto</a>
 <header class="site-header">
  <div class="wrap">
@@ -28,6 +35,7 @@
     <a href="/S.T.A.R.-/software/star_coords/" lang="en" hreflang="en">EN</a>
     <span aria-current="true">IT</span>
    </div>
+   <button class="btn small search-open" type="button" aria-haspopup="dialog" aria-keyshortcuts="Control+K Meta+K" title="Cerca nel sito">Cerca <kbd>Ctrl K</kbd></button>
    <a class="btn small primary" href="/S.T.A.R.-/it/assessment/#request">Richiedi una valutazione</a>
    <img class="header-logo" src="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" alt="S.T.A.R. logo" width="40" height="40">
   </div>
@@ -37,10 +45,10 @@
 <div class="wrap"><div class="page-head">
 <p><a href="/S.T.A.R.-/it/software/">← Tutti i pacchetti</a></p>
 <span class="eyebrow">Riferimenti e geometria</span><h1 class="mono pkg-title">star-coords <span class="muted">0.1.0</span></h1>
-<p class="lead">Spherical and cylindrical ⇄ rectangular coordinates</p>
+<p class="lead">Coordinate sferiche e cilindriche ⇄ rettangolari</p>
 <p><span class="status ok">Apache-2.0</span> <span class="status ok">RELEASED</span> <span class="status soon">file singolo</span></p>
-<p class="small muted">La documentazione tecnica del pacchetto è in inglese, come il suo codice.</p></div>
-<section class="section tight"><h2>In parole semplici</h2><p class="lead">Spherical and cylindrical coordinates to rectangular and back; agrees with ERFA, SPICE and astropy to 3e-16 relative and 6e-14 deg on 600 cases in both directions, close to the axis included, and refuses out-of-range input.</p></section>
+</div>
+<section class="section tight"><h2>In parole semplici</h2><p class="lead">Coordinate sferiche e cilindriche verso rettangolari e ritorno; concorda con ERFA, SPICE e astropy entro 3e-16 relativo e 6e-14 gradi su 600 casi in entrambe le direzioni, anche vicino all&#x27;asse, e rifiuta gli ingressi fuori intervallo.</p></section>
 <section class="section tight" id="try"><h2>Provalo qui</h2><p>Modifica il codice e premi Esegui (o Ctrl+Invio). Python gira nel tuo browser con il codice pubblicato di questo pacchetto. La prima volta scarica Python una sola volta (circa 12 MB).</p><div class="runner" data-wheels='[&quot;star_coords-0.1.0-py3-none-any.whl&quot;]'><label class="visually-hidden" for="code-star_coords">Python</label><textarea id="code-star_coords" spellcheck="false" rows="7">import star_coords as sc
 print(sc.spherical_to_xyz(60.0, 0.0, 2.0))  # (1.0, 1.732..., 0.0)
 print(sc.xyz_to_spherical(1.0, 1.0, 1.0))  # (45.0, 35.264..., 1.732...)
@@ -49,11 +57,20 @@ print(sc.xyz_to_cylindrical(3.0, 4.0, -1.0))  # (5.0, 53.130..., -1.0)</textarea
 <section class="section tight" id="use"><h2>Usalo sul tuo computer</h2><p>Non servono account né GitHub. Scarica, poi installa con un comando:</p>
 <ul class="files"><li><a class="btn small" href="/S.T.A.R.-/downloads/wheels/star_coords-0.1.0-py3-none-any.whl" download>File di installazione · star_coords-0.1.0-py3-none-any.whl</a> <span class="muted small">2 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/modules/star_coords.py" download>File singolo — basta copiarlo accanto al tuo codice · star_coords.py</a> <span class="muted small">3 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/source/star_coords-0.1.0-source.zip" download>Codice sorgente (.zip)</a> <span class="muted small">17 kB</span></li></ul><pre class="cmd"><code>python -m pip install star_coords-0.1.0-py3-none-any.whl</code></pre>
 <p class="small"><a href="/S.T.A.R.-/it/start/">Come iniziare →</a></p></section>
+<section class="section tight" id="cite"><h2>Citarlo, e la sua distinta dei componenti</h2><p>Per un articolo, una relazione o un fascicolo fornitore: la citazione in due formati e la distinta dei componenti software (SBOM) nei due formati standard, con l&#x27;impronta del wheel.</p><pre class="cmd"><code>@software{cavazzini_star_coords_0_1_0,
+  author  = {Cavazzini, Andrea},
+  title   = {{star-coords}: Coordinate sferiche e cilindriche ⇄ rettangolari},
+  version = {0.1.0},
+  year    = {2026},
+  url     = {https://andrea07072000.github.io/S.T.A.R.-/software/star_coords/},
+  note    = {Apache-2.0. Source: https://github.com/Andrea07072000/S.T.A.R.-, commit 94fcf7c}
+}
+</code></pre><ul class="inline-links"><li><a href="/S.T.A.R.-/cite/star_coords.cff" download>CITATION.cff</a></li><li><a href="/S.T.A.R.-/cite/star_coords.bib" download>BibTeX</a></li><li><a href="/S.T.A.R.-/sbom/star_coords.cdx.json" download>SBOM CycloneDX 1.5</a></li><li><a href="/S.T.A.R.-/sbom/star_coords.spdx.json" download>SBOM SPDX 2.3</a></li></ul></section>
 <section class="section tight" id="dev"><h2>Per sviluppatori</h2><p>Installa direttamente dal repository pubblico:</p><pre class="cmd"><code>python -m pip install &quot;star-coords @ git+https://github.com/Andrea07072000/S.T.A.R.-.git#subdirectory=packages/star_coords&quot;</code></pre>
 <p class="small"><a href="https://github.com/Andrea07072000/S.T.A.R.-/tree/main/packages/star_coords">README · tests · evidence (GitHub)</a></p></section>
 <section class="section tight" id="tech"><h2>Scheda tecnica</h2><dl class="meta"><dt>Pacchetto</dt><dd class='mono'>star-coords</dd><dt>Versione</dt><dd class='mono'>0.1.0</dd><dt>Licenza</dt><dd class='mono'>Apache-2.0</dd><dt>Python</dt><dd class='mono'>&gt;=3.9</dd><dt>Dipendenze</dt><dd class='mono'>nessuna (solo libreria standard)</dd><dt>Capacità</dt><dd class='mono'>star.geometry.coords</dd><dt>Maturità</dt><dd class='mono'>RELEASED</dd><dt>Commit pubblicato</dt><dd class='mono'>94fcf7c</dd></dl>
-<h3>Requisiti</h3><ul class="reqs"><li><b class='mono'>R1</b> <code>spherical_to_xyz(lon, lat, r)</code> and <code>xyz_to_spherical(x, y, z)</code> follow x = r cos(lat) cos(lon), y = r cos(lat) sin(lon), z = r sin(lat); longitude out in [0, 360), latitude from the arc-tangent (accurate at the poles), length without intermediate overflow or underflow.</li><li><b class='mono'>R2</b> <code>cylindrical_to_xyz(rho, lon, z)</code> and <code>xyz_to_cylindrical(x, y, z)</code>: x = rho cos(lon), y = rho sin(lon).</li><li><b class='mono'>R3</b> Measured on 600 cases (100 directions down to 1e-9 deg from the z axis, lengths from 1e-3 to 1e9), in both directions: components and lengths within 3e-16 relative and angles within 6e-14 deg of displacement of ERFA, SPICE and astropy (spherical) and of SPICE and astropy (cylindrical).</li><li><b class='mono'>R4</b> Every function returns finite floats or raises <code>ValueError</code>: non-numeric, boolean, NaN or infinite input, longitude outside [-360, 360], latitude outside [-90, 90], a negative radius, a length or component above 1e300. On the z axis the longitude is undefined and returned as 0.</li></ul>
-<h3>Limiti (che cosa non si afferma)</h3><p>Geocentric (spherical) latitude, not geodetic: for the ellipsoid use <code>star_geodesy</code>. No velocities. Colatitude conventions (physics spherical coordinates) are not offered: latitude is from the xy plane.</p>
+<h3>Requisiti</h3><ul class="reqs"><li><b class='mono'>R1</b> <code>spherical_to_xyz(lon, lat, r)</code> e <code>xyz_to_spherical(x, y, z)</code> seguono x = r cos(lat) cos(lon), y = r cos(lat) sin(lon), z = r sin(lat); longitudine in uscita in [0, 360), latitudine dall&#x27;arcotangente (accurata ai poli), lunghezza senza overflow o underflow intermedi.</li><li><b class='mono'>R2</b> <code>cylindrical_to_xyz(rho, lon, z)</code> e <code>xyz_to_cylindrical(x, y, z)</code>: x = rho cos(lon), y = rho sin(lon).</li><li><b class='mono'>R3</b> Misurato su 600 casi (100 direzioni fino a 1e-9 gradi dall&#x27;asse z, lunghezze da 1e-3 a 1e9), in entrambe le direzioni: componenti e lunghezze entro 3e-16 relativo e angoli entro 6e-14 gradi di spostamento da ERFA, SPICE e astropy (sferiche) e da SPICE e astropy (cilindriche).</li><li><b class='mono'>R4</b> Ogni funzione restituisce float finiti o solleva <code>ValueError</code>: ingressi non numerici, booleani, NaN o infiniti, longitudine fuori da [-360, 360], latitudine fuori da [-90, 90], raggio negativo, lunghezza o componente oltre 1e300. Sull&#x27;asse z la longitudine non è definita e viene restituita come 0.</li></ul>
+<h3>Limiti (che cosa non si afferma)</h3><p>Latitudine geocentrica (sferica), non geodetica: per l&#x27;ellissoide usare <code>star_geodesy</code>. Niente velocità. Le convenzioni con colatitudine (coordinate sferiche della fisica) non sono offerte: la latitudine si misura dal piano xy.</p>
 <h3>Evidenze nel registro</h3><div class="table-scroll"><table class="data"><thead><tr><th>Controllo</th><th>Stato</th><th>Registrato</th><th>Che cosa è stato osservato</th></tr></thead><tbody><tr><td>Unit tests</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>48 passed in 0.41s</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>Requirements, interface, units, data provenance, dependency surface and failure behaviour reviewed</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>Re-running the cross-check gives a byte-identical evidence file</td></tr><tr><td>Reference value</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>(1.0000000000000002, 1.7320508075688772, 0.0): within 3e-16 of the exact value (suite: 48 passed in 0.41s)</td></tr><tr><td>Cross-check with independent libraries</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>star_coords converts spherical and cylindrical coordinates to rectangular and back as three independent libraries do, close to the axis included</td></tr><tr><td>Benchmark</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>largest difference by lineage: erfa: 1.4e-14; spice: 5.6e-14; astropy: 5.6e-14</td></tr><tr><td>Clean install from the release tag</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>pytest outside the tree: 48 passed in 0.28s</td></tr></tbody></table></div>
 <h3>Impronte (SHA-256)</h3><div class="table-scroll"><table class="data"><tbody><tr><td class='mono small'>star_coords-0.1.0-py3-none-any.whl</td><td class='mono small hash'>231f8862e99211c55be7d7290aafdd896baddafc944802d8aa9ff6dad5034b2c</td></tr><tr><td class='mono small'>star_coords.py</td><td class='mono small hash'>80c6c016a17f7b4d2066eb5eba4708ccae6f151333e346a052f990b1249b80d0</td></tr><tr><td class='mono small'>star_coords-0.1.0-source.zip</td><td class='mono small hash'>18c1f5c7dc3d2c132d3fdb624317ea4ca1a386aa83207f0f3dbe3832d251582e</td></tr></tbody></table></div>
 </section></div>
@@ -69,9 +86,10 @@ print(sc.xyz_to_cylindrical(3.0, 4.0, -1.0))  # (5.0, 53.130..., -1.0)</textarea
    <div><h2>Contatti</h2><ul><li><a href="mailto:Info.and.News.S.T.A.R@proton.me">Info.and.News.S.T.A.R@proton.me</a></li>
     <li><a href="/S.T.A.R.-/it/assessment/#request">Richiedi una valutazione</a></li></ul></div>
   </div>
-  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generato dal registro il 2026-10-15 · commit di ingegneria c54092b · commit pubblico 94fcf7c</span>
+  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generato dal registro il 2026-10-15 · commit di ingegneria 173e61f · commit pubblico 94fcf7c</span>
    <a href="/S.T.A.R.-/software/star_coords/" lang="en">English</a></div>
  </div>
 </footer>
+<dialog class="search-dlg" aria-label="Cerca nel sito"><form method="dialog" class="search-box"><label class="visually-hidden" for="site-q">Cerca nel sito</label><input id="site-q" type="search" autocomplete="off" placeholder="Pacchetti, documenti legali, pagine…"><button class="btn small" value="close">Esc</button></form><ul class="search-res" role="listbox"></ul><p class="small muted search-none" hidden>Nessun risultato. Prova una parola più corta.</p></dialog>
 </body>
 </html>

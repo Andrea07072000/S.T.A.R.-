@@ -1,0 +1,49 @@
+{
+ "spdxVersion": "SPDX-2.3",
+ "dataLicense": "CC0-1.0",
+ "SPDXID": "SPDXRef-DOCUMENT",
+ "name": "star-galactic-0.1.0",
+ "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_galactic-0.1.0-94fcf7c",
+ "creationInfo": {
+  "created": "2026-10-15T00:00:00Z",
+  "creators": [
+   "Person: Andrea Cavazzini",
+   "Tool: star-site-gen"
+  ]
+ },
+ "packages": [
+  {
+   "SPDXID": "SPDXRef-Package-star-galactic",
+   "name": "star-galactic",
+   "versionInfo": "0.1.0",
+   "downloadLocation": "git+https://github.com/Andrea07072000/S.T.A.R.-@94fcf7c#packages/star_galactic",
+   "homepage": "https://andrea07072000.github.io/S.T.A.R.-/software/star_galactic/",
+   "filesAnalyzed": false,
+   "licenseConcluded": "Apache-2.0",
+   "licenseDeclared": "Apache-2.0",
+   "copyrightText": "Copyright 2026 Andrea Cavazzini",
+   "supplier": "Person: Andrea Cavazzini",
+   "summary": "Galactic longitude and latitude from equatorial directions and back, in the Hipparcos (ICRS) and IAU 1958 (B1950) definitions; agrees with ERFA, astropy and SPICE to 1.1e-13 deg on 600 directions in both directions and refuses out-of-range input.",
+   "externalRefs": [
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:generic/star-galactic@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%4094fcf7c%23packages%2Fstar_galactic"
+    }
+   ],
+   "checksums": [
+    {
+     "algorithm": "SHA256",
+     "checksumValue": "cae79c25ab3bb4a24ed4aede65e8152c25ecdb230b0358321d2417fc3f8b69ea"
+    }
+   ]
+  }
+ ],
+ "relationships": [
+  {
+   "spdxElementId": "SPDXRef-DOCUMENT",
+   "relationshipType": "DESCRIBES",
+   "relatedSpdxElement": "SPDXRef-Package-star-galactic"
+  }
+ ]
+}

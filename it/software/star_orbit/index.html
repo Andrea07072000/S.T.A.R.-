@@ -3,20 +3,27 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pacchetto star-orbit — Cowell high-fidelity numerical perturbation orbit propagator federated with star_timescales · S.T.A.R.</title>
-<meta name="description" content="Cowell numerical orbit propagation (fixed-step RK4) with two-body + J2 gravity, federated with star-timescales for epochs.">
+<title>Pacchetto star-orbit — Propagatore orbitale numerico di Cowell con perturbazioni, collegato a star_timescales · S.T.A.R.</title>
+<meta name="description" content="Propagazione orbitale numerica di Cowell (RK4 a passo fisso) con gravità a due corpi + J2, collegata a star-timescales per le epoche.">
 <link rel="icon" href="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" type="image/png">
 <link rel="canonical" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_orbit/">
 <link rel="alternate" hreflang="en" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_orbit/">
 <link rel="alternate" hreflang="it" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_orbit/">
 <link rel="alternate" hreflang="x-default" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_orbit/">
-<meta property="og:title" content="Pacchetto star-orbit — Cowell high-fidelity numerical perturbation orbit propagator federated with star_timescales · S.T.A.R.">
-<meta property="og:description" content="Cowell numerical orbit propagation (fixed-step RK4) with two-body + J2 gravity, federated with star-timescales for epochs.">
+<meta property="og:title" content="Pacchetto star-orbit — Propagatore orbitale numerico di Cowell con perturbazioni, collegato a star_timescales · S.T.A.R.">
+<meta property="og:description" content="Propagazione orbitale numerica di Cowell (RK4 a passo fisso) con gravità a due corpi + J2, collegata a star-timescales per le epoche.">
 <meta property="og:image" content="https://andrea07072000.github.io/S.T.A.R.-/assets/images/star_logo_dark_transparent.png">
-  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-Dx8lu5GH.js"></script>
-  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-CJ2BHFzs.css">
+<meta property="og:url" content="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_orbit/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="S.T.A.R.">
+<meta property="og:locale" content="it_IT">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "star-orbit", "version": "0.2.2", "description": "Propagazione orbitale numerica di Cowell (RK4 a passo fisso) con gravità a due corpi + J2, collegata a star-timescales per le epoche.", "url": "https://andrea07072000.github.io/S.T.A.R.-/it/software/star_orbit/", "codeRepository": "https://github.com/Andrea07072000/S.T.A.R.-", "programmingLanguage": "Python", "license": "https://www.apache.org/licenses/LICENSE-2.0", "author": {"@type": "Person", "name": "Andrea Cavazzini"}, "inLanguage": "it", "runtimePlatform": "Python >=3.9"}]</script>
+
+  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-CCzNtdfL.js"></script>
+  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-DCHVB_Yt.css">
 </head>
-<body data-page="software">
+<body data-page="software" data-lang="it" data-search="/S.T.A.R.-/search-it.json">
 <a class="skip" href="#main">Vai al contenuto</a>
 <header class="site-header">
  <div class="wrap">
@@ -28,6 +35,7 @@
     <a href="/S.T.A.R.-/software/star_orbit/" lang="en" hreflang="en">EN</a>
     <span aria-current="true">IT</span>
    </div>
+   <button class="btn small search-open" type="button" aria-haspopup="dialog" aria-keyshortcuts="Control+K Meta+K" title="Cerca nel sito">Cerca <kbd>Ctrl K</kbd></button>
    <a class="btn small primary" href="/S.T.A.R.-/it/assessment/#request">Richiedi una valutazione</a>
    <img class="header-logo" src="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" alt="S.T.A.R. logo" width="40" height="40">
   </div>
@@ -37,10 +45,10 @@
 <div class="wrap"><div class="page-head">
 <p><a href="/S.T.A.R.-/it/software/">← Tutti i pacchetti</a></p>
 <span class="eyebrow">Orbite e astrodinamica</span><h1 class="mono pkg-title">star-orbit <span class="muted">0.2.2</span></h1>
-<p class="lead">Cowell high-fidelity numerical perturbation orbit propagator federated with star_timescales</p>
+<p class="lead">Propagatore orbitale numerico di Cowell con perturbazioni, collegato a star_timescales</p>
 <p><span class="status ok">Apache-2.0</span> <span class="status ok">RELEASED</span> </p>
-<p class="small muted">La documentazione tecnica del pacchetto è in inglese, come il suo codice.</p></div>
-<section class="section tight"><h2>In parole semplici</h2><p class="lead">Cowell numerical orbit propagation (fixed-step RK4) with two-body + J2 gravity, federated with star-timescales for epochs.</p></section>
+</div>
+<section class="section tight"><h2>In parole semplici</h2><p class="lead">Propagazione orbitale numerica di Cowell (RK4 a passo fisso) con gravità a due corpi + J2, collegata a star-timescales per le epoche.</p></section>
 <section class="section tight" id="try"><h2>Provalo qui</h2><p>Modifica il codice e premi Esegui (o Ctrl+Invio). Python gira nel tuo browser con il codice pubblicato di questo pacchetto. La prima volta scarica Python una sola volta (circa 12 MB).</p><div class="runner" data-wheels='[&quot;star_timescales-0.2.0-py3-none-any.whl&quot;, &quot;star_orbit-0.2.2-py3-none-any.whl&quot;]'><label class="visually-hidden" for="code-star_orbit">Python</label><textarea id="code-star_orbit" spellcheck="false" rows="7">import star_orbit
 
 # what this package offers
@@ -49,10 +57,19 @@ print(star_orbit.__doc__)</textarea><div class="runner-bar"><button class="btn p
 <section class="section tight" id="use"><h2>Usalo sul tuo computer</h2><p>Non servono account né GitHub. Scarica, poi installa con un comando:</p>
 <ul class="files"><li><a class="btn small" href="/S.T.A.R.-/downloads/wheels/star_orbit-0.2.2-py3-none-any.whl" download>File di installazione · star_orbit-0.2.2-py3-none-any.whl</a> <span class="muted small">11 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/source/star_orbit-0.2.2-source.zip" download>Codice sorgente (.zip)</a> <span class="muted small">28 kB</span></li></ul><p class="small">Scarica anche: star-timescales (installali insieme).</p><pre class="cmd"><code>python -m pip install star_timescales-0.2.0-py3-none-any.whl star_orbit-0.2.2-py3-none-any.whl</code></pre>
 <p class="small"><a href="/S.T.A.R.-/it/start/">Come iniziare →</a></p></section>
+<section class="section tight" id="cite"><h2>Citarlo, e la sua distinta dei componenti</h2><p>Per un articolo, una relazione o un fascicolo fornitore: la citazione in due formati e la distinta dei componenti software (SBOM) nei due formati standard, con l&#x27;impronta del wheel.</p><pre class="cmd"><code>@software{cavazzini_star_orbit_0_2_2,
+  author  = {Cavazzini, Andrea},
+  title   = {{star-orbit}: Propagatore orbitale numerico di Cowell con perturbazioni, collegato a star_timescales},
+  version = {0.2.2},
+  year    = {2026},
+  url     = {https://andrea07072000.github.io/S.T.A.R.-/software/star_orbit/},
+  note    = {Apache-2.0. Source: https://github.com/Andrea07072000/S.T.A.R.-, commit 94fcf7c}
+}
+</code></pre><ul class="inline-links"><li><a href="/S.T.A.R.-/cite/star_orbit.cff" download>CITATION.cff</a></li><li><a href="/S.T.A.R.-/cite/star_orbit.bib" download>BibTeX</a></li><li><a href="/S.T.A.R.-/sbom/star_orbit.cdx.json" download>SBOM CycloneDX 1.5</a></li><li><a href="/S.T.A.R.-/sbom/star_orbit.spdx.json" download>SBOM SPDX 2.3</a></li></ul></section>
 <section class="section tight" id="dev"><h2>Per sviluppatori</h2><p>Installa direttamente dal repository pubblico:</p><pre class="cmd"><code>python -m pip install &quot;star-timescales @ git+https://github.com/Andrea07072000/S.T.A.R.-.git&quot; &quot;star-orbit @ git+https://github.com/Andrea07072000/S.T.A.R.-.git#subdirectory=packages/star_orbit&quot;</code></pre>
 <p class="small"><a href="https://github.com/Andrea07072000/S.T.A.R.-/tree/main/packages/star_orbit">README · tests · evidence (GitHub)</a></p></section>
 <section class="section tight" id="tech"><h2>Scheda tecnica</h2><dl class="meta"><dt>Pacchetto</dt><dd class='mono'>star-orbit</dd><dt>Versione</dt><dd class='mono'>0.2.2</dd><dt>Licenza</dt><dd class='mono'>Apache-2.0</dd><dt>Python</dt><dd class='mono'>&gt;=3.9</dd><dt>Dipendenze</dt><dd class='mono'>star-timescales</dd><dt>Capacità</dt><dd class='mono'>star.orbit.propagation</dd><dt>Maturità</dt><dd class='mono'>RELEASED</dd><dt>Commit pubblicato</dt><dd class='mono'>94fcf7c</dd></dl>
-<h3>Requisiti</h3><ul class="reqs"><li><b class='mono'>R1</b> <code>propagate_orbit(OrbitState, duration_sec, step_sec, include_j2=True, ...) -&gt; list[OrbitState]</code>, SI units (m, s, m/s), mu = 3.986004418e14 m^3/s^2, Re = 6378137 m, J2 = 1.08262668e-3 (WGS-84 / EGM96).</li><li><b class='mono'>R2</b> Requesting a force that is not available (drag/SRP without star-weather) raises <code>RuntimeError</code>; a force is never silently dropped.</li></ul>
+<h3>Requisiti</h3><ul class="reqs"><li><b class='mono'>R1</b> <code>propagate_orbit(OrbitState, duration_sec, step_sec, include_j2=True, ...) -&gt; list[OrbitState]</code>, unità SI (m, s, m/s), mu = 3,986004418e14 m^3/s^2, Re = 6378137 m, J2 = 1,08262668e-3 (WGS-84 / EGM96).</li><li><b class='mono'>R2</b> Richiedere una forza non disponibile (resistenza/pressione di radiazione senza star-weather) solleva <code>RuntimeError</code>; una forza non viene mai omessa in silenzio.</li></ul>
 
 <h3>Evidenze nel registro</h3><div class="table-scroll"><table class="data"><thead><tr><th>Controllo</th><th>Stato</th><th>Registrato</th><th>Che cosa è stato osservato</th></tr></thead><tbody><tr><td>Clean install from the release tag</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-05</td><td class='small'>pytest outside the tree: 40 passed, 1 skipped in 0.44s</td></tr><tr><td>Mutation testing</td><td><span class='status warn'>PARTIAL</span></td><td class='num'>2026-10-04</td><td class='small'>375/399 = 0.94</td></tr><tr><td>Mutation testing</td><td><span class='status warn'>PARTIAL</span></td><td class='num'>2026-10-04</td><td class='small'>160/250 = 0.64</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-03</td><td class='small'>Re-execution of bench.xc-008 reproduces the committed evidence bundles</td></tr><tr><td>Cross-check with independent libraries</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-03</td><td class='small'>Cowell J2 orbit propagation across star_orbit and scipy DOP853 agree to &lt; 0.02 m over 1 full orbit</td></tr><tr><td>Unit tests</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-03</td><td class='small'>6/6</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-03</td><td class='small'>Requirements R1-R2, documented API, SI units, WGS-84/EGM96 constants, declared dependency, no IO</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-03</td><td class='small'>A requested but unavailable force raises instead of being dropped</td></tr><tr><td>Benchmark</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-03</td><td class='small'>{&#x27;relative_error&#x27;: 0.0028, &#x27;delta_omega_measured_rad&#x27;: -0.061214, &#x27;delta_omega_theory_rad&#x27;: -0.061386}</td></tr><tr><td>Reference value</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-03</td><td class='small'>{&#x27;relative_error&#x27;: 0.0028, &#x27;unit_tests_passing&#x27;: 6}</td></tr><tr><td>Clean install from the release tag</td><td><span class='status warn'>FAILED</span></td><td class='num'>2026-10-03</td><td class='small'>energy_rel_error &lt; 1e-7, J2 nodal precession error = 0.28%, 6/6 tests pass</td></tr></tbody></table></div>
 <h3>Impronte (SHA-256)</h3><div class="table-scroll"><table class="data"><tbody><tr><td class='mono small'>star_orbit-0.2.2-py3-none-any.whl</td><td class='mono small hash'>12c1c188db0be4948b53f5efad4380aec8dd0c8d7b0074b3401f1dd1fcaf5913</td></tr><tr><td class='mono small'>star_orbit-0.2.2-source.zip</td><td class='mono small hash'>c857a787886c69b746fad8260b226ce975f03a64a5e79e596f4856b2b3f6a90c</td></tr></tbody></table></div>
@@ -69,9 +86,10 @@ print(star_orbit.__doc__)</textarea><div class="runner-bar"><button class="btn p
    <div><h2>Contatti</h2><ul><li><a href="mailto:Info.and.News.S.T.A.R@proton.me">Info.and.News.S.T.A.R@proton.me</a></li>
     <li><a href="/S.T.A.R.-/it/assessment/#request">Richiedi una valutazione</a></li></ul></div>
   </div>
-  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generato dal registro il 2026-10-15 · commit di ingegneria c54092b · commit pubblico 94fcf7c</span>
+  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generato dal registro il 2026-10-15 · commit di ingegneria 173e61f · commit pubblico 94fcf7c</span>
    <a href="/S.T.A.R.-/software/star_orbit/" lang="en">English</a></div>
  </div>
 </footer>
+<dialog class="search-dlg" aria-label="Cerca nel sito"><form method="dialog" class="search-box"><label class="visually-hidden" for="site-q">Cerca nel sito</label><input id="site-q" type="search" autocomplete="off" placeholder="Pacchetti, documenti legali, pagine…"><button class="btn small" value="close">Esc</button></form><ul class="search-res" role="listbox"></ul><p class="small muted search-none" hidden>Nessun risultato. Prova una parola più corta.</p></dialog>
 </body>
 </html>

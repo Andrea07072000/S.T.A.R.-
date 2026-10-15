@@ -1,0 +1,49 @@
+{
+ "spdxVersion": "SPDX-2.3",
+ "dataLicense": "CC0-1.0",
+ "SPDXID": "SPDXRef-DOCUMENT",
+ "name": "star-aos-c-0.1.3",
+ "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_telemetry_c-0.1.3-94fcf7c",
+ "creationInfo": {
+  "created": "2026-10-15T00:00:00Z",
+  "creators": [
+   "Person: Andrea Cavazzini",
+   "Tool: star-site-gen"
+  ]
+ },
+ "packages": [
+  {
+   "SPDXID": "SPDXRef-Package-star-aos-c",
+   "name": "star-aos-c",
+   "versionInfo": "0.1.3",
+   "downloadLocation": "git+https://github.com/Andrea07072000/S.T.A.R.-@94fcf7c#packages/star_telemetry_c",
+   "homepage": "https://andrea07072000.github.io/S.T.A.R.-/software/star_telemetry_c/",
+   "filesAnalyzed": false,
+   "licenseConcluded": "Apache-2.0",
+   "licenseDeclared": "Apache-2.0",
+   "copyrightText": "Copyright 2026 Andrea Cavazzini",
+   "supplier": "Person: Andrea Cavazzini",
+   "summary": "CCSDS AOS v2 / TM v1 primary header decode and FECF CRC-16 check in C99, verified identical on 18 emulated ISAs and 12 simulated MCUs / space processors, cross-checked with spacepackets, fuzzed and mutation-tested.",
+   "externalRefs": [
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:generic/star-aos-c@0.1.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%4094fcf7c%23packages%2Fstar_telemetry_c"
+    }
+   ],
+   "checksums": [
+    {
+     "algorithm": "SHA256",
+     "checksumValue": "192d0b6eac36ed5cb6984bd606957901d3be024b3c94a60823ac01acb3ff1089"
+    }
+   ]
+  }
+ ],
+ "relationships": [
+  {
+   "spdxElementId": "SPDXRef-DOCUMENT",
+   "relationshipType": "DESCRIBES",
+   "relatedSpdxElement": "SPDXRef-Package-star-aos-c"
+  }
+ ]
+}

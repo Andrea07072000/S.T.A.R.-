@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "star-cdm: Strict CCSDS 508.0-B-1 Conjunction Data Message (KVN) parser with consistency report"
+version: "0.2.2"
+authors:
+  - family-names: Cavazzini
+    given-names: Andrea
+license: Apache-2.0
+repository-code: "https://github.com/Andrea07072000/S.T.A.R.-"
+url: "https://andrea07072000.github.io/S.T.A.R.-/software/star_cdm/"
+commit: "94fcf7c"

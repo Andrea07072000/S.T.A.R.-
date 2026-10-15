@@ -1,0 +1,135 @@
+{
+ "bomFormat": "CycloneDX",
+ "specVersion": "1.5",
+ "serialNumber": "urn:uuid:b71e7a65-3b7d-50a6-b7a9-9d613d7c795a",
+ "version": 1,
+ "metadata": {
+  "timestamp": "2026-10-15T00:00:00Z",
+  "authors": [
+   {
+    "name": "Andrea Cavazzini"
+   }
+  ],
+  "component": {
+   "type": "library",
+   "bom-ref": "conjunction-screen-sgp4",
+   "name": "conjunction-screen-sgp4",
+   "version": "0.2.1",
+   "description": "Screening of close approaches between objects of TLE catalogues (who to look at), NOT a collision-probability tool.",
+   "licenses": [
+    {
+     "license": {
+      "id": "Apache-2.0"
+     }
+    }
+   ],
+   "purl": "pkg:generic/conjunction-screen-sgp4@0.2.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%4094fcf7c%23packages%2Fconjunction_screen_sgp4",
+   "author": "Andrea Cavazzini",
+   "externalReferences": [
+    {
+     "type": "vcs",
+     "url": "https://github.com/Andrea07072000/S.T.A.R.-/tree/main/packages/conjunction_screen_sgp4"
+    },
+    {
+     "type": "website",
+     "url": "https://andrea07072000.github.io/S.T.A.R.-/software/conjunction_screen_sgp4/"
+    }
+   ],
+   "hashes": [
+    {
+     "alg": "SHA-256",
+     "content": "04d5e0965645bdac104be9202995eaf6fefe640651b1da8f853499c0ff4e2d65"
+    }
+   ]
+  },
+  "tools": {
+   "components": [
+    {
+     "type": "application",
+     "name": "star-site-gen"
+    }
+   ]
+  }
+ },
+ "components": [
+  {
+   "type": "library",
+   "bom-ref": "numpy",
+   "name": "numpy",
+   "purl": "pkg:pypi/numpy",
+   "externalReferences": [
+    {
+     "type": "website",
+     "url": "https://numpy.org/"
+    }
+   ],
+   "licenses": [
+    {
+     "license": {
+      "id": "BSD-3-Clause"
+     }
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "bom-ref": "scipy",
+   "name": "scipy",
+   "purl": "pkg:pypi/scipy",
+   "externalReferences": [
+    {
+     "type": "website",
+     "url": "https://scipy.org/"
+    }
+   ],
+   "licenses": [
+    {
+     "license": {
+      "id": "BSD-3-Clause"
+     }
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "bom-ref": "sgp4",
+   "name": "sgp4",
+   "purl": "pkg:pypi/sgp4",
+   "externalReferences": [
+    {
+     "type": "website",
+     "url": "https://pypi.org/project/sgp4/"
+    }
+   ],
+   "licenses": [
+    {
+     "license": {
+      "id": "MIT"
+     }
+    }
+   ]
+  }
+ ],
+ "dependencies": [
+  {
+   "ref": "conjunction-screen-sgp4",
+   "dependsOn": [
+    "numpy",
+    "scipy",
+    "sgp4"
+   ]
+  },
+  {
+   "ref": "numpy",
+   "dependsOn": []
+  },
+  {
+   "ref": "scipy",
+   "dependsOn": []
+  },
+  {
+   "ref": "sgp4",
+   "dependsOn": []
+  }
+ ]
+}

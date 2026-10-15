@@ -3,20 +3,27 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pacchetto star-j2 — What the Earth&#x27;s oblateness does to an orbit, on average · S.T.A.R.</title>
-<meta name="description" content="First-order secular effect of J2 on mean elements: node regression, perigee rotation, mean-anomaly rate, nodal period, sun-synchronous inclination; measured within 0.4 % of Orekit&#x27;s Eckstein-Hechler t">
+<title>Pacchetto star-j2 — Che cosa fa in media lo schiacciamento terrestre a un&#x27;orbita · S.T.A.R.</title>
+<meta name="description" content="Effetto secolare al primo ordine di J2 sugli elementi medi: regressione del nodo, rotazione del perigeo, variazione dell&#x27;anomalia media, periodo nodale, inclinazione eliosincrona; misurato entro lo 0,">
 <link rel="icon" href="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" type="image/png">
 <link rel="canonical" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_j2/">
 <link rel="alternate" hreflang="en" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_j2/">
 <link rel="alternate" hreflang="it" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_j2/">
 <link rel="alternate" hreflang="x-default" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_j2/">
-<meta property="og:title" content="Pacchetto star-j2 — What the Earth&#x27;s oblateness does to an orbit, on average · S.T.A.R.">
-<meta property="og:description" content="First-order secular effect of J2 on mean elements: node regression, perigee rotation, mean-anomaly rate, nodal period, sun-synchronous inclination; measured within 0.4 % of Orekit&#x27;s Eckstein-Hechler t">
+<meta property="og:title" content="Pacchetto star-j2 — Che cosa fa in media lo schiacciamento terrestre a un&#x27;orbita · S.T.A.R.">
+<meta property="og:description" content="Effetto secolare al primo ordine di J2 sugli elementi medi: regressione del nodo, rotazione del perigeo, variazione dell&#x27;anomalia media, periodo nodale, inclinazione eliosincrona; misurato entro lo 0,">
 <meta property="og:image" content="https://andrea07072000.github.io/S.T.A.R.-/assets/images/star_logo_dark_transparent.png">
-  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-Dx8lu5GH.js"></script>
-  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-CJ2BHFzs.css">
+<meta property="og:url" content="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_j2/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="S.T.A.R.">
+<meta property="og:locale" content="it_IT">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "star-j2", "version": "0.1.0", "description": "Effetto secolare al primo ordine di J2 sugli elementi medi: regressione del nodo, rotazione del perigeo, variazione dell'anomalia media, periodo nodale, inclinazione eliosincrona; misurato entro lo 0,4 % dalla teoria di Eckstein-Hechler di Orekit e da un'integrazione numerica.", "url": "https://andrea07072000.github.io/S.T.A.R.-/it/software/star_j2/", "codeRepository": "https://github.com/Andrea07072000/S.T.A.R.-", "programmingLanguage": "Python", "license": "https://www.apache.org/licenses/LICENSE-2.0", "author": {"@type": "Person", "name": "Andrea Cavazzini"}, "inLanguage": "it", "runtimePlatform": "Python >=3.9"}]</script>
+
+  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-CCzNtdfL.js"></script>
+  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-DCHVB_Yt.css">
 </head>
-<body data-page="software">
+<body data-page="software" data-lang="it" data-search="/S.T.A.R.-/search-it.json">
 <a class="skip" href="#main">Vai al contenuto</a>
 <header class="site-header">
  <div class="wrap">
@@ -28,6 +35,7 @@
     <a href="/S.T.A.R.-/software/star_j2/" lang="en" hreflang="en">EN</a>
     <span aria-current="true">IT</span>
    </div>
+   <button class="btn small search-open" type="button" aria-haspopup="dialog" aria-keyshortcuts="Control+K Meta+K" title="Cerca nel sito">Cerca <kbd>Ctrl K</kbd></button>
    <a class="btn small primary" href="/S.T.A.R.-/it/assessment/#request">Richiedi una valutazione</a>
    <img class="header-logo" src="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" alt="S.T.A.R. logo" width="40" height="40">
   </div>
@@ -37,21 +45,30 @@
 <div class="wrap"><div class="page-head">
 <p><a href="/S.T.A.R.-/it/software/">← Tutti i pacchetti</a></p>
 <span class="eyebrow">Orbite e astrodinamica</span><h1 class="mono pkg-title">star-j2 <span class="muted">0.1.0</span></h1>
-<p class="lead">What the Earth&#x27;s oblateness does to an orbit, on average</p>
+<p class="lead">Che cosa fa in media lo schiacciamento terrestre a un&#x27;orbita</p>
 <p><span class="status ok">Apache-2.0</span> <span class="status ok">RELEASED</span> <span class="status soon">file singolo</span></p>
-<p class="small muted">La documentazione tecnica del pacchetto è in inglese, come il suo codice.</p></div>
-<section class="section tight"><h2>In parole semplici</h2><p class="lead">First-order secular effect of J2 on mean elements: node regression, perigee rotation, mean-anomaly rate, nodal period, sun-synchronous inclination; measured within 0.4 % of Orekit&#x27;s Eckstein-Hechler theory and of a numerical integration.</p></section>
+</div>
+<section class="section tight"><h2>In parole semplici</h2><p class="lead">Effetto secolare al primo ordine di J2 sugli elementi medi: regressione del nodo, rotazione del perigeo, variazione dell&#x27;anomalia media, periodo nodale, inclinazione eliosincrona; misurato entro lo 0,4 % dalla teoria di Eckstein-Hechler di Orekit e da un&#x27;integrazione numerica.</p></section>
 <section class="section tight" id="try"><h2>Provalo qui</h2><p>Modifica il codice e premi Esegui (o Ctrl+Invio). Python gira nel tuo browser con il codice pubblicato di questo pacchetto. La prima volta scarica Python una sola volta (circa 12 MB).</p><div class="runner" data-wheels='[&quot;star_j2-0.1.0-py3-none-any.whl&quot;]'><label class="visually-hidden" for="code-star_j2">Python</label><textarea id="code-star_j2" spellcheck="false" rows="5">import star_j2
 print(star_j2.raan_rate_deg_day(6778.137, 0.0, 51.6))  # about -5.0 deg/day (ISS-like orbit)
 print(star_j2.sun_synchronous_inclination_deg(6378.137 + 800))  # about 98.6 deg</textarea><div class="runner-bar"><button class="btn primary run" type="button">Esegui</button><button class="btn reset" type="button">Ripristina</button></div><output aria-live="polite"></output></div></section>
 <section class="section tight" id="use"><h2>Usalo sul tuo computer</h2><p>Non servono account né GitHub. Scarica, poi installa con un comando:</p>
 <ul class="files"><li><a class="btn small" href="/S.T.A.R.-/downloads/wheels/star_j2-0.1.0-py3-none-any.whl" download>File di installazione · star_j2-0.1.0-py3-none-any.whl</a> <span class="muted small">3 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/modules/star_j2.py" download>File singolo — basta copiarlo accanto al tuo codice · star_j2.py</a> <span class="muted small">5 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/source/star_j2-0.1.0-source.zip" download>Codice sorgente (.zip)</a> <span class="muted small">18 kB</span></li></ul><pre class="cmd"><code>python -m pip install star_j2-0.1.0-py3-none-any.whl</code></pre>
 <p class="small"><a href="/S.T.A.R.-/it/start/">Come iniziare →</a></p></section>
+<section class="section tight" id="cite"><h2>Citarlo, e la sua distinta dei componenti</h2><p>Per un articolo, una relazione o un fascicolo fornitore: la citazione in due formati e la distinta dei componenti software (SBOM) nei due formati standard, con l&#x27;impronta del wheel.</p><pre class="cmd"><code>@software{cavazzini_star_j2_0_1_0,
+  author  = {Cavazzini, Andrea},
+  title   = {{star-j2}: Che cosa fa in media lo schiacciamento terrestre a un&#x27;orbita},
+  version = {0.1.0},
+  year    = {2026},
+  url     = {https://andrea07072000.github.io/S.T.A.R.-/software/star_j2/},
+  note    = {Apache-2.0. Source: https://github.com/Andrea07072000/S.T.A.R.-, commit 94fcf7c}
+}
+</code></pre><ul class="inline-links"><li><a href="/S.T.A.R.-/cite/star_j2.cff" download>CITATION.cff</a></li><li><a href="/S.T.A.R.-/cite/star_j2.bib" download>BibTeX</a></li><li><a href="/S.T.A.R.-/sbom/star_j2.cdx.json" download>SBOM CycloneDX 1.5</a></li><li><a href="/S.T.A.R.-/sbom/star_j2.spdx.json" download>SBOM SPDX 2.3</a></li></ul></section>
 <section class="section tight" id="dev"><h2>Per sviluppatori</h2><p>Installa direttamente dal repository pubblico:</p><pre class="cmd"><code>python -m pip install &quot;star-j2 @ git+https://github.com/Andrea07072000/S.T.A.R.-.git#subdirectory=packages/star_j2&quot;</code></pre>
 <p class="small"><a href="https://github.com/Andrea07072000/S.T.A.R.-/tree/main/packages/star_j2">README · tests · evidence (GitHub)</a></p></section>
 <section class="section tight" id="tech"><h2>Scheda tecnica</h2><dl class="meta"><dt>Pacchetto</dt><dd class='mono'>star-j2</dd><dt>Versione</dt><dd class='mono'>0.1.0</dd><dt>Licenza</dt><dd class='mono'>Apache-2.0</dd><dt>Python</dt><dd class='mono'>&gt;=3.9</dd><dt>Dipendenze</dt><dd class='mono'>nessuna (solo libreria standard)</dd><dt>Capacità</dt><dd class='mono'>star.orbit.j2-secular</dd><dt>Maturità</dt><dd class='mono'>RELEASED</dd><dt>Commit pubblicato</dt><dd class='mono'>94fcf7c</dd></dl>
-<h3>Requisiti</h3><ul class="reqs"><li><b class='mono'>R1</b> <code>raan_rate_deg_day</code>, <code>argp_rate_deg_day</code>, <code>mean_anomaly_rate_deg_day</code>, <code>nodal_period_s</code> for mean elements (a in km, e, inclination in degrees), EGM96/WGS-84 constants by default, overridable by keyword.</li><li><b class='mono'>R2</b> <code>sun_synchronous_inclination_deg(a_km, e=0)</code>: the inclination whose node advances 360 degrees per tropical year; <code>CRITICAL_INCLINATION_DEG</code> = 63.4349...: the perigee does not rotate.</li><li><b class='mono'>R3</b> Accuracy, measured on 51 orbits: node rate within 0.31 % of Orekit&#x27;s Eckstein-Hechler theory (J2 only, mean elements) and within 0.38 % of a numerical integration of the equations of motion with J2; perigee rate within 0.013 deg/day of the numerical integration. The formulas are first order in J2: differences of this size are the model, not a rounding error.</li><li><b class='mono'>R4</b> Every function returns a finite float or raises <code>ValueError</code>: non-numeric, boolean, NaN or infinite input; a &lt;= 0; e outside [0, 1); inclination outside [0, 180]; perigee inside the Earth; non-positive mu, re or j2; an orbit too high to be sun-synchronous (above about 12 350 km semi-major axis for a circular orbit).</li></ul>
-<h3>Limiti (che cosa non si afferma)</h3><p>Mean rates only: no short-period terms, no J2-squared, J3 or higher harmonics, no drag, no third bodies. Not a propagator. For mission design at the 0.5 % level; a station-keeping budget needs a full theory or an integration.</p>
+<h3>Requisiti</h3><ul class="reqs"><li><b class='mono'>R1</b> <code>raan_rate_deg_day</code>, <code>argp_rate_deg_day</code>, <code>mean_anomaly_rate_deg_day</code>, <code>nodal_period_s</code> per elementi medi (a in km, e, inclinazione in gradi), costanti EGM96/WGS-84 predefinite, modificabili con parametri a parola chiave.</li><li><b class='mono'>R2</b> <code>sun_synchronous_inclination_deg(a_km, e=0)</code>: l&#x27;inclinazione il cui nodo avanza di 360 gradi per anno tropico; <code>CRITICAL_INCLINATION_DEG</code> = 63,4349...: il perigeo non ruota.</li><li><b class='mono'>R3</b> Accuratezza, misurata su 51 orbite: variazione del nodo entro lo 0,31 % dalla teoria di Eckstein-Hechler di Orekit (solo J2, elementi medi) ed entro lo 0,38 % da un&#x27;integrazione numerica delle equazioni del moto con J2; variazione del perigeo entro 0,013 gradi/giorno dall&#x27;integrazione numerica. Le formule sono al primo ordine in J2: differenze di questa entità sono il modello, non un errore di arrotondamento.</li><li><b class='mono'>R4</b> Ogni funzione restituisce un float finito o solleva <code>ValueError</code>: ingressi non numerici, booleani, NaN o infiniti; a &lt;= 0; e fuori da [0, 1); inclinazione fuori da [0, 180]; perigeo dentro la Terra; mu, re o j2 non positivi; un&#x27;orbita troppo alta per essere eliosincrona (oltre circa 12 350 km di semiasse maggiore per un&#x27;orbita circolare).</li></ul>
+<h3>Limiti (che cosa non si afferma)</h3><p>Solo variazioni medie: niente termini a breve periodo, niente J2 al quadrato, J3 o armoniche superiori, niente resistenza, niente terzi corpi. Non è un propagatore. Per il progetto di missione al livello dello 0,5 %; un bilancio di mantenimento in orbita richiede una teoria completa o un&#x27;integrazione.</p>
 <h3>Evidenze nel registro</h3><div class="table-scroll"><table class="data"><thead><tr><th>Controllo</th><th>Stato</th><th>Registrato</th><th>Che cosa è stato osservato</th></tr></thead><tbody><tr><td>Unit tests</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>28 passed in 1.16s</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>Requirements, interface, units, data provenance, dependency surface and failure behaviour reviewed</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>Re-running the cross-check gives a byte-identical evidence file</td></tr><tr><td>Reference value</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>critical inclination 63.43494882 deg; ISS-like orbit -5.0023 deg/day; 98.603 deg at 800 km; 97.402 deg at 500 km (suite: 28 passed in 1.16s)</td></tr><tr><td>Cross-check with independent libraries</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>star_j2 secular rates agree with an analytical theory and with a numerical integration within the order of the model</td></tr><tr><td>Benchmark</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>largest absolute node-rate difference: Orekit 0.024 deg/day, numerical 0.029 deg/day; ISS-like probe: Orekit -5.0063, numerical -5.0209 deg/day</td></tr><tr><td>Clean install from the release tag</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>pytest outside the tree: 28 passed in 0.67s</td></tr></tbody></table></div>
 <h3>Impronte (SHA-256)</h3><div class="table-scroll"><table class="data"><tbody><tr><td class='mono small'>star_j2-0.1.0-py3-none-any.whl</td><td class='mono small hash'>3304813347d0e74e84b67052047c589f32208b37903ec5e663e87bc14445e9cf</td></tr><tr><td class='mono small'>star_j2.py</td><td class='mono small hash'>e97f9628cbc4ebb6cbfcf5c74143e1bc5a7dce2ba68e3192b2a4c259b82d460f</td></tr><tr><td class='mono small'>star_j2-0.1.0-source.zip</td><td class='mono small hash'>59707a979b4dff33934e35f81c06f8373466812329ce7b9fd094db1914d9ac81</td></tr></tbody></table></div>
 </section></div>
@@ -67,9 +84,10 @@ print(star_j2.sun_synchronous_inclination_deg(6378.137 + 800))  # about 98.6 deg
    <div><h2>Contatti</h2><ul><li><a href="mailto:Info.and.News.S.T.A.R@proton.me">Info.and.News.S.T.A.R@proton.me</a></li>
     <li><a href="/S.T.A.R.-/it/assessment/#request">Richiedi una valutazione</a></li></ul></div>
   </div>
-  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generato dal registro il 2026-10-15 · commit di ingegneria c54092b · commit pubblico 94fcf7c</span>
+  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generato dal registro il 2026-10-15 · commit di ingegneria 173e61f · commit pubblico 94fcf7c</span>
    <a href="/S.T.A.R.-/software/star_j2/" lang="en">English</a></div>
  </div>
 </footer>
+<dialog class="search-dlg" aria-label="Cerca nel sito"><form method="dialog" class="search-box"><label class="visually-hidden" for="site-q">Cerca nel sito</label><input id="site-q" type="search" autocomplete="off" placeholder="Pacchetti, documenti legali, pagine…"><button class="btn small" value="close">Esc</button></form><ul class="search-res" role="listbox"></ul><p class="small muted search-none" hidden>Nessun risultato. Prova una parola più corta.</p></dialog>
 </body>
 </html>

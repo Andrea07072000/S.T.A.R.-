@@ -3,20 +3,27 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pacchetto star-tabint — Integrals of tabulated data, correctly rounded · S.T.A.R.</title>
-<meta name="description" content="Trapezoid rule on any strictly increasing grid, its running integral and the composite Simpson rule for equally spaced samples, each evaluated exactly in rational arithmetic and rounded once; on 500 t">
+<title>Pacchetto star-tabint — Integrali di dati tabulati, arrotondati correttamente · S.T.A.R.</title>
+<meta name="description" content="Regola dei trapezi su qualunque griglia strettamente crescente, il suo integrale cumulativo e la regola di Simpson composta per campioni equispaziati, ciascuno valutato esattamente in aritmetica razio">
 <link rel="icon" href="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" type="image/png">
 <link rel="canonical" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_tabint/">
 <link rel="alternate" hreflang="en" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_tabint/">
 <link rel="alternate" hreflang="it" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_tabint/">
 <link rel="alternate" hreflang="x-default" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_tabint/">
-<meta property="og:title" content="Pacchetto star-tabint — Integrals of tabulated data, correctly rounded · S.T.A.R.">
-<meta property="og:description" content="Trapezoid rule on any strictly increasing grid, its running integral and the composite Simpson rule for equally spaced samples, each evaluated exactly in rational arithmetic and rounded once; on 500 t">
+<meta property="og:title" content="Pacchetto star-tabint — Integrali di dati tabulati, arrotondati correttamente · S.T.A.R.">
+<meta property="og:description" content="Regola dei trapezi su qualunque griglia strettamente crescente, il suo integrale cumulativo e la regola di Simpson composta per campioni equispaziati, ciascuno valutato esattamente in aritmetica razio">
 <meta property="og:image" content="https://andrea07072000.github.io/S.T.A.R.-/assets/images/star_logo_dark_transparent.png">
-  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-Dx8lu5GH.js"></script>
-  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-CJ2BHFzs.css">
+<meta property="og:url" content="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_tabint/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="S.T.A.R.">
+<meta property="og:locale" content="it_IT">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "star-tabint", "version": "0.1.0", "description": "Regola dei trapezi su qualunque griglia strettamente crescente, il suo integrale cumulativo e la regola di Simpson composta per campioni equispaziati, ciascuno valutato esattamente in aritmetica razionale e arrotondato una volta; su 500 tabelle (1750 valori) ogni valore è identico al valore razionale esatto di SymPy, e NumPy e SciPy concordano entro 3,3e-16 della somma delle aree assolute dei pannelli.", "url": "https://andrea07072000.github.io/S.T.A.R.-/it/software/star_tabint/", "codeRepository": "https://github.com/Andrea07072000/S.T.A.R.-", "programmingLanguage": "Python", "license": "https://www.apache.org/licenses/LICENSE-2.0", "author": {"@type": "Person", "name": "Andrea Cavazzini"}, "inLanguage": "it", "runtimePlatform": "Python >=3.9"}]</script>
+
+  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-CCzNtdfL.js"></script>
+  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-DCHVB_Yt.css">
 </head>
-<body data-page="software">
+<body data-page="software" data-lang="it" data-search="/S.T.A.R.-/search-it.json">
 <a class="skip" href="#main">Vai al contenuto</a>
 <header class="site-header">
  <div class="wrap">
@@ -28,6 +35,7 @@
     <a href="/S.T.A.R.-/software/star_tabint/" lang="en" hreflang="en">EN</a>
     <span aria-current="true">IT</span>
    </div>
+   <button class="btn small search-open" type="button" aria-haspopup="dialog" aria-keyshortcuts="Control+K Meta+K" title="Cerca nel sito">Cerca <kbd>Ctrl K</kbd></button>
    <a class="btn small primary" href="/S.T.A.R.-/it/assessment/#request">Richiedi una valutazione</a>
    <img class="header-logo" src="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" alt="S.T.A.R. logo" width="40" height="40">
   </div>
@@ -37,10 +45,10 @@
 <div class="wrap"><div class="page-head">
 <p><a href="/S.T.A.R.-/it/software/">← Tutti i pacchetti</a></p>
 <span class="eyebrow">Calcolo numerico e statistica</span><h1 class="mono pkg-title">star-tabint <span class="muted">0.1.0</span></h1>
-<p class="lead">Integrals of tabulated data, correctly rounded</p>
+<p class="lead">Integrali di dati tabulati, arrotondati correttamente</p>
 <p><span class="status ok">Apache-2.0</span> <span class="status ok">RELEASED</span> <span class="status soon">file singolo</span></p>
-<p class="small muted">La documentazione tecnica del pacchetto è in inglese, come il suo codice.</p></div>
-<section class="section tight"><h2>In parole semplici</h2><p class="lead">Trapezoid rule on any strictly increasing grid, its running integral and the composite Simpson rule for equally spaced samples, each evaluated exactly in rational arithmetic and rounded once; on 500 tables (1750 values) every value is identical to the exact rational value from SymPy, and NumPy and SciPy agree within 3.3e-16 of the sum of the absolute panel areas.</p></section>
+</div>
+<section class="section tight"><h2>In parole semplici</h2><p class="lead">Regola dei trapezi su qualunque griglia strettamente crescente, il suo integrale cumulativo e la regola di Simpson composta per campioni equispaziati, ciascuno valutato esattamente in aritmetica razionale e arrotondato una volta; su 500 tabelle (1750 valori) ogni valore è identico al valore razionale esatto di SymPy, e NumPy e SciPy concordano entro 3,3e-16 della somma delle aree assolute dei pannelli.</p></section>
 <section class="section tight" id="try"><h2>Provalo qui</h2><p>Modifica il codice e premi Esegui (o Ctrl+Invio). Python gira nel tuo browser con il codice pubblicato di questo pacchetto. La prima volta scarica Python una sola volta (circa 12 MB).</p><div class="runner" data-wheels='[&quot;star_tabint-0.1.0-py3-none-any.whl&quot;]'><label class="visually-hidden" for="code-star_tabint">Python</label><textarea id="code-star_tabint" spellcheck="false" rows="7">import star_tabint as ti
 print(ti.trapezoid([0, 1, 2], [0, 1, 4]))  # 3.0
 print(ti.cumulative([0, 1, 3], [0, 2, 2]))  # (0.0, 1.0, 5.0)
@@ -49,11 +57,20 @@ print(ti.trapezoid([0, 1, 2], [1e16, 1.0, -1e16]))  # 1.0 (a floating-point sum 
 <section class="section tight" id="use"><h2>Usalo sul tuo computer</h2><p>Non servono account né GitHub. Scarica, poi installa con un comando:</p>
 <ul class="files"><li><a class="btn small" href="/S.T.A.R.-/downloads/wheels/star_tabint-0.1.0-py3-none-any.whl" download>File di installazione · star_tabint-0.1.0-py3-none-any.whl</a> <span class="muted small">3 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/modules/star_tabint.py" download>File singolo — basta copiarlo accanto al tuo codice · star_tabint.py</a> <span class="muted small">4 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/source/star_tabint-0.1.0-source.zip" download>Codice sorgente (.zip)</a> <span class="muted small">20 kB</span></li></ul><pre class="cmd"><code>python -m pip install star_tabint-0.1.0-py3-none-any.whl</code></pre>
 <p class="small"><a href="/S.T.A.R.-/it/start/">Come iniziare →</a></p></section>
+<section class="section tight" id="cite"><h2>Citarlo, e la sua distinta dei componenti</h2><p>Per un articolo, una relazione o un fascicolo fornitore: la citazione in due formati e la distinta dei componenti software (SBOM) nei due formati standard, con l&#x27;impronta del wheel.</p><pre class="cmd"><code>@software{cavazzini_star_tabint_0_1_0,
+  author  = {Cavazzini, Andrea},
+  title   = {{star-tabint}: Integrali di dati tabulati, arrotondati correttamente},
+  version = {0.1.0},
+  year    = {2026},
+  url     = {https://andrea07072000.github.io/S.T.A.R.-/software/star_tabint/},
+  note    = {Apache-2.0. Source: https://github.com/Andrea07072000/S.T.A.R.-, commit 94fcf7c}
+}
+</code></pre><ul class="inline-links"><li><a href="/S.T.A.R.-/cite/star_tabint.cff" download>CITATION.cff</a></li><li><a href="/S.T.A.R.-/cite/star_tabint.bib" download>BibTeX</a></li><li><a href="/S.T.A.R.-/sbom/star_tabint.cdx.json" download>SBOM CycloneDX 1.5</a></li><li><a href="/S.T.A.R.-/sbom/star_tabint.spdx.json" download>SBOM SPDX 2.3</a></li></ul></section>
 <section class="section tight" id="dev"><h2>Per sviluppatori</h2><p>Installa direttamente dal repository pubblico:</p><pre class="cmd"><code>python -m pip install &quot;star-tabint @ git+https://github.com/Andrea07072000/S.T.A.R.-.git#subdirectory=packages/star_tabint&quot;</code></pre>
 <p class="small"><a href="https://github.com/Andrea07072000/S.T.A.R.-/tree/main/packages/star_tabint">README · tests · evidence (GitHub)</a></p></section>
 <section class="section tight" id="tech"><h2>Scheda tecnica</h2><dl class="meta"><dt>Pacchetto</dt><dd class='mono'>star-tabint</dd><dt>Versione</dt><dd class='mono'>0.1.0</dd><dt>Licenza</dt><dd class='mono'>Apache-2.0</dd><dt>Python</dt><dd class='mono'>&gt;=3.9</dd><dt>Dipendenze</dt><dd class='mono'>nessuna (solo libreria standard)</dd><dt>Capacità</dt><dd class='mono'>star.numerics.tabulated-integral</dd><dt>Maturità</dt><dd class='mono'>RELEASED</dd><dt>Commit pubblicato</dt><dd class='mono'>94fcf7c</dd></dl>
-<h3>Requisiti</h3><ul class="reqs"><li><b class='mono'>R1</b> <code>trapezoid(xs, ys)</code> integrates the piecewise-linear curve through the points (xs strictly increasing, any spacing); <code>cumulative</code> returns the integral from the first point up to each point; <code>simpson(ys, step)</code> applies the composite Simpson rule to an odd number of equally spaced values.</li><li><b class='mono'>R2</b> Each result is the float nearest to the exact value of the rule on the numbers given: lobes that cancel lose nothing, and every element of <code>cumulative</code> is rounded from its own exact partial sum.</li><li><b class='mono'>R3</b> Measured on 500 tables of 2 to 60 points (1750 values): every value identical to the exact rational value (SymPy) rounded once; NumPy and SciPy within 3.3e-16 of the sum of the absolute panel areas.</li><li><b class='mono'>R4</b> Every function returns floats or raises <code>ValueError</code>: tables that are not lists or tuples of 2 to 100000 finite numbers within 1e100, different lengths, abscissas not strictly increasing, an even number of values or an invalid step for Simpson.</li></ul>
-<h3>Limiti (che cosa non si afferma)</h3><p>The value of a quadrature RULE on the samples, not the integral of the underlying function: the error of the rule (of order h² for the trapezoid, h⁴ for Simpson on smooth data) is not estimated, and noisy or sparse samples give a correspondingly poor integral. No Simpson rule for unequal spacing or an even number of points, no higher-order rules, no extrapolation. &quot;Exact&quot; refers to the floats supplied. Exact arithmetic is slower than floating point.</p>
+<h3>Requisiti</h3><ul class="reqs"><li><b class='mono'>R1</b> <code>trapezoid(xs, ys)</code> integra la spezzata per i punti (xs strettamente crescenti, passo qualunque); <code>cumulative</code> restituisce l&#x27;integrale dal primo punto fino a ogni punto; <code>simpson(ys, step)</code> applica la regola di Simpson composta a un numero dispari di valori equispaziati.</li><li><b class='mono'>R2</b> Ogni risultato è il float più vicino al valore esatto della regola sui numeri dati: lobi che si compensano non perdono nulla, e ogni elemento di <code>cumulative</code> è arrotondato dalla propria somma parziale esatta.</li><li><b class='mono'>R3</b> Misurato su 500 tabelle da 2 a 60 punti (1750 valori): ogni valore identico al valore razionale esatto (SymPy) arrotondato una volta; NumPy e SciPy entro 3,3e-16 della somma delle aree assolute dei pannelli.</li><li><b class='mono'>R4</b> Ogni funzione restituisce float o solleva <code>ValueError</code>: tabelle che non sono liste o tuple da 2 a 100000 numeri finiti entro 1e100, lunghezze diverse, ascisse non strettamente crescenti, un numero pari di valori o un passo non valido per Simpson.</li></ul>
+<h3>Limiti (che cosa non si afferma)</h3><p>Il valore di una REGOLA di quadratura sui campioni, non l&#x27;integrale della funzione sottostante: l&#x27;errore della regola (dell&#x27;ordine di h² per i trapezi, h⁴ per Simpson su dati regolari) non è stimato, e campioni rumorosi o radi danno un integrale altrettanto scarso. Nessuna regola di Simpson per passo non uniforme o numero pari di punti, nessuna regola di ordine superiore, nessuna estrapolazione. «Esatto» si riferisce ai float forniti. L&#x27;aritmetica esatta è più lenta della virgola mobile.</p>
 <h3>Evidenze nel registro</h3><div class="table-scroll"><table class="data"><thead><tr><th>Controllo</th><th>Stato</th><th>Registrato</th><th>Che cosa è stato osservato</th></tr></thead><tbody><tr><td>Clean install from the release tag</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>pytest outside the tree: 54 passed in 0.21s</td></tr><tr><td>Unit tests</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>54 passed in 0.45s</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>Requirements, interface, units, data provenance, dependency surface and failure behaviour reviewed</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>Re-running the cross-check gives a byte-identical evidence file</td></tr><tr><td>Reference value</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>simpson([1, 0.8, 2/3, 4/7, 0.5], 0.25) = 0.6932539682539682; trapezoid([0, 1, 2], [0, 1, 4]) = 3.0 (suite: 54 passed in 0.45s)</td></tr><tr><td>Cross-check with independent libraries</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>star_tabint returns the trapezoid rule, its running integral and the composite Simpson rule of a table as the exact value of the rule rounded once</td></tr><tr><td>Benchmark</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>values not identical to the exact one: 0 of 1750</td></tr></tbody></table></div>
 <h3>Impronte (SHA-256)</h3><div class="table-scroll"><table class="data"><tbody><tr><td class='mono small'>star_tabint-0.1.0-py3-none-any.whl</td><td class='mono small hash'>c99b48884258460c9e7822a247e52e1e5cd8b4dc49d95e65785945dd1587c06b</td></tr><tr><td class='mono small'>star_tabint.py</td><td class='mono small hash'>55b09f2a14330272da5dac0e7159e5ca39158ea4462778a39897e50a3bc5ab44</td></tr><tr><td class='mono small'>star_tabint-0.1.0-source.zip</td><td class='mono small hash'>5ba2ebdea6b8b97adfecdfb6a4fbda7262ae1b64b8671b14d4fa6ce9473f203f</td></tr></tbody></table></div>
 </section></div>
@@ -69,9 +86,10 @@ print(ti.trapezoid([0, 1, 2], [1e16, 1.0, -1e16]))  # 1.0 (a floating-point sum 
    <div><h2>Contatti</h2><ul><li><a href="mailto:Info.and.News.S.T.A.R@proton.me">Info.and.News.S.T.A.R@proton.me</a></li>
     <li><a href="/S.T.A.R.-/it/assessment/#request">Richiedi una valutazione</a></li></ul></div>
   </div>
-  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generato dal registro il 2026-10-15 · commit di ingegneria c54092b · commit pubblico 94fcf7c</span>
+  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generato dal registro il 2026-10-15 · commit di ingegneria 173e61f · commit pubblico 94fcf7c</span>
    <a href="/S.T.A.R.-/software/star_tabint/" lang="en">English</a></div>
  </div>
 </footer>
+<dialog class="search-dlg" aria-label="Cerca nel sito"><form method="dialog" class="search-box"><label class="visually-hidden" for="site-q">Cerca nel sito</label><input id="site-q" type="search" autocomplete="off" placeholder="Pacchetti, documenti legali, pagine…"><button class="btn small" value="close">Esc</button></form><ul class="search-res" role="listbox"></ul><p class="small muted search-none" hidden>Nessun risultato. Prova una parola più corta.</p></dialog>
 </body>
 </html>

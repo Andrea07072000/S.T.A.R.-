@@ -13,10 +13,17 @@
 <meta property="og:title" content="star-poly — Real roots of quadratics and cubics · S.T.A.R.">
 <meta property="og:description" content="Distinct real roots of quadratics and cubics with the number of roots decided in exact arithmetic and each root isolated by exact-sign bisection, plus Horner evaluation; on 640 polynomials the count e">
 <meta property="og:image" content="https://andrea07072000.github.io/S.T.A.R.-/assets/images/star_logo_dark_transparent.png">
-  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-Dx8lu5GH.js"></script>
-  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-CJ2BHFzs.css">
+<meta property="og:url" content="https://andrea07072000.github.io/S.T.A.R.-/software/star_poly/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="S.T.A.R.">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "star-poly", "version": "0.1.0", "description": "Distinct real roots of quadratics and cubics with the number of roots decided in exact arithmetic and each root isolated by exact-sign bisection, plus Horner evaluation; on 640 polynomials the count equals SymPy's exact count and every root equals the exact root rounded to a float; reproduces the classic cancellation example.", "url": "https://andrea07072000.github.io/S.T.A.R.-/software/star_poly/", "codeRepository": "https://github.com/Andrea07072000/S.T.A.R.-", "programmingLanguage": "Python", "license": "https://www.apache.org/licenses/LICENSE-2.0", "author": {"@type": "Person", "name": "Andrea Cavazzini"}, "inLanguage": "en", "runtimePlatform": "Python >=3.9"}]</script>
+
+  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-CCzNtdfL.js"></script>
+  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-DCHVB_Yt.css">
 </head>
-<body data-page="software">
+<body data-page="software" data-lang="en" data-search="/S.T.A.R.-/search-en.json">
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
  <div class="wrap">
@@ -28,6 +35,7 @@
     <span aria-current="true">EN</span>
     <a href="/S.T.A.R.-/it/software/star_poly/" lang="it" hreflang="it">IT</a>
    </div>
+   <button class="btn small search-open" type="button" aria-haspopup="dialog" aria-keyshortcuts="Control+K Meta+K" title="Search the site">Search <kbd>Ctrl K</kbd></button>
    <a class="btn small primary" href="/S.T.A.R.-/assessment/#request">Request an assessment</a>
    <img class="header-logo" src="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" alt="S.T.A.R. logo" width="40" height="40">
   </div>
@@ -50,6 +58,15 @@ print(sp.evaluate([1, -6, 11, -6], 2.0))  # (0.0, -1.0): value and derivative</t
 <section class="section tight" id="use"><h2>Use it on your computer</h2><p>No account and no GitHub needed. Download, then install with one command:</p>
 <ul class="files"><li><a class="btn small" href="/S.T.A.R.-/downloads/wheels/star_poly-0.1.0-py3-none-any.whl" download>Install file · star_poly-0.1.0-py3-none-any.whl</a> <span class="muted small">4 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/modules/star_poly.py" download>Single file — just copy it next to your code · star_poly.py</a> <span class="muted small">7 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/source/star_poly-0.1.0-source.zip" download>Source code (.zip)</a> <span class="muted small">24 kB</span></li></ul><pre class="cmd"><code>python -m pip install star_poly-0.1.0-py3-none-any.whl</code></pre>
 <p class="small"><a href="/S.T.A.R.-/start/">Get started →</a></p></section>
+<section class="section tight" id="cite"><h2>Cite it, and its bill of materials</h2><p>For a paper, a report or a supplier file: the citation in two formats, and the software bill of materials (SBOM) in the two standard formats, with the fingerprint of the wheel.</p><pre class="cmd"><code>@software{cavazzini_star_poly_0_1_0,
+  author  = {Cavazzini, Andrea},
+  title   = {{star-poly}: Real roots of quadratics and cubics},
+  version = {0.1.0},
+  year    = {2026},
+  url     = {https://andrea07072000.github.io/S.T.A.R.-/software/star_poly/},
+  note    = {Apache-2.0. Source: https://github.com/Andrea07072000/S.T.A.R.-, commit 94fcf7c}
+}
+</code></pre><ul class="inline-links"><li><a href="/S.T.A.R.-/cite/star_poly.cff" download>CITATION.cff</a></li><li><a href="/S.T.A.R.-/cite/star_poly.bib" download>BibTeX</a></li><li><a href="/S.T.A.R.-/sbom/star_poly.cdx.json" download>SBOM CycloneDX 1.5</a></li><li><a href="/S.T.A.R.-/sbom/star_poly.spdx.json" download>SBOM SPDX 2.3</a></li></ul></section>
 <section class="section tight" id="dev"><h2>For developers</h2><p>Install directly from the public repository:</p><pre class="cmd"><code>python -m pip install &quot;star-poly @ git+https://github.com/Andrea07072000/S.T.A.R.-.git#subdirectory=packages/star_poly&quot;</code></pre>
 <p class="small"><a href="https://github.com/Andrea07072000/S.T.A.R.-/tree/main/packages/star_poly">README · tests · evidence (GitHub)</a></p></section>
 <section class="section tight" id="tech"><h2>Technical sheet</h2><dl class="meta"><dt>Package</dt><dd class='mono'>star-poly</dd><dt>Version</dt><dd class='mono'>0.1.0</dd><dt>Licence</dt><dd class='mono'>Apache-2.0</dd><dt>Python</dt><dd class='mono'>&gt;=3.9</dd><dt>Dependencies</dt><dd class='mono'>none (standard library only)</dd><dt>Capability</dt><dd class='mono'>star.numerics.polynomial-roots</dd><dt>Maturity</dt><dd class='mono'>RELEASED</dd><dt>Published commit</dt><dd class='mono'>94fcf7c</dd></dl>
@@ -70,9 +87,10 @@ print(sp.evaluate([1, -6, 11, -6], 2.0))  # (0.0, -1.0): value and derivative</t
    <div><h2>Contact</h2><ul><li><a href="mailto:Info.and.News.S.T.A.R@proton.me">Info.and.News.S.T.A.R@proton.me</a></li>
     <li><a href="/S.T.A.R.-/assessment/#request">Request an assessment</a></li></ul></div>
   </div>
-  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generated from the registry on 2026-10-15 · engineering commit c54092b · public commit 94fcf7c</span>
+  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generated from the registry on 2026-10-15 · engineering commit 173e61f · public commit 94fcf7c</span>
    <a href="/S.T.A.R.-/it/software/star_poly/" lang="it">Italiano</a></div>
  </div>
 </footer>
+<dialog class="search-dlg" aria-label="Search the site"><form method="dialog" class="search-box"><label class="visually-hidden" for="site-q">Search the site</label><input id="site-q" type="search" autocomplete="off" placeholder="Packages, legal documents, pages…"><button class="btn small" value="close">Esc</button></form><ul class="search-res" role="listbox"></ul><p class="small muted search-none" hidden>Nothing found. Try a shorter word.</p></dialog>
 </body>
 </html>

@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "star-epoch: Julian and Besselian epochs"
+version: "0.1.0"
+authors:
+  - family-names: Cavazzini
+    given-names: Andrea
+license: Apache-2.0
+repository-code: "https://github.com/Andrea07072000/S.T.A.R.-"
+url: "https://andrea07072000.github.io/S.T.A.R.-/software/star_epoch/"
+commit: "94fcf7c"

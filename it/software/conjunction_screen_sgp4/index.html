@@ -3,20 +3,27 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pacchetto conjunction-screen-sgp4 — Conjunction screening of TLE catalogues with SGP4, KD-tree coarse pass and closed-form TCA refinement · S.T.A.R.</title>
-<meta name="description" content="Screening of close approaches between objects of TLE catalogues (who to look at), NOT a collision-probability tool.">
+<title>Pacchetto conjunction-screen-sgp4 — Screening delle congiunzioni su cataloghi TLE con SGP4, passaggio grossolano con KD-tree e raffinamento del TCA in forma chiusa · S.T.A.R.</title>
+<meta name="description" content="Screening degli avvicinamenti ravvicinati tra oggetti di cataloghi TLE (quali oggetti guardare), NON uno strumento per la probabilità di collisione.">
 <link rel="icon" href="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" type="image/png">
 <link rel="canonical" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/conjunction_screen_sgp4/">
 <link rel="alternate" hreflang="en" href="https://andrea07072000.github.io/S.T.A.R.-/software/conjunction_screen_sgp4/">
 <link rel="alternate" hreflang="it" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/conjunction_screen_sgp4/">
 <link rel="alternate" hreflang="x-default" href="https://andrea07072000.github.io/S.T.A.R.-/software/conjunction_screen_sgp4/">
-<meta property="og:title" content="Pacchetto conjunction-screen-sgp4 — Conjunction screening of TLE catalogues with SGP4, KD-tree coarse pass and closed-form TCA refinement · S.T.A.R.">
-<meta property="og:description" content="Screening of close approaches between objects of TLE catalogues (who to look at), NOT a collision-probability tool.">
+<meta property="og:title" content="Pacchetto conjunction-screen-sgp4 — Screening delle congiunzioni su cataloghi TLE con SGP4, passaggio grossolano con KD-tree e raffinamento del TCA in forma chiusa · S.T.A.R.">
+<meta property="og:description" content="Screening degli avvicinamenti ravvicinati tra oggetti di cataloghi TLE (quali oggetti guardare), NON uno strumento per la probabilità di collisione.">
 <meta property="og:image" content="https://andrea07072000.github.io/S.T.A.R.-/assets/images/star_logo_dark_transparent.png">
-  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-Dx8lu5GH.js"></script>
-  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-CJ2BHFzs.css">
+<meta property="og:url" content="https://andrea07072000.github.io/S.T.A.R.-/it/software/conjunction_screen_sgp4/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="S.T.A.R.">
+<meta property="og:locale" content="it_IT">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "conjunction-screen-sgp4", "version": "0.2.1", "description": "Screening degli avvicinamenti ravvicinati tra oggetti di cataloghi TLE (quali oggetti guardare), NON uno strumento per la probabilità di collisione.", "url": "https://andrea07072000.github.io/S.T.A.R.-/it/software/conjunction_screen_sgp4/", "codeRepository": "https://github.com/Andrea07072000/S.T.A.R.-", "programmingLanguage": "Python", "license": "https://www.apache.org/licenses/LICENSE-2.0", "author": {"@type": "Person", "name": "Andrea Cavazzini"}, "inLanguage": "it", "runtimePlatform": "Python >=3.9"}]</script>
+
+  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-CCzNtdfL.js"></script>
+  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-DCHVB_Yt.css">
 </head>
-<body data-page="software">
+<body data-page="software" data-lang="it" data-search="/S.T.A.R.-/search-it.json">
 <a class="skip" href="#main">Vai al contenuto</a>
 <header class="site-header">
  <div class="wrap">
@@ -28,6 +35,7 @@
     <a href="/S.T.A.R.-/software/conjunction_screen_sgp4/" lang="en" hreflang="en">EN</a>
     <span aria-current="true">IT</span>
    </div>
+   <button class="btn small search-open" type="button" aria-haspopup="dialog" aria-keyshortcuts="Control+K Meta+K" title="Cerca nel sito">Cerca <kbd>Ctrl K</kbd></button>
    <a class="btn small primary" href="/S.T.A.R.-/it/assessment/#request">Richiedi una valutazione</a>
    <img class="header-logo" src="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" alt="S.T.A.R. logo" width="40" height="40">
   </div>
@@ -37,18 +45,27 @@
 <div class="wrap"><div class="page-head">
 <p><a href="/S.T.A.R.-/it/software/">← Tutti i pacchetti</a></p>
 <span class="eyebrow">Sicurezza nello spazio</span><h1 class="mono pkg-title">conjunction-screen-sgp4 <span class="muted">0.2.1</span></h1>
-<p class="lead">Conjunction screening of TLE catalogues with SGP4, KD-tree coarse pass and closed-form TCA refinement</p>
+<p class="lead">Screening delle congiunzioni su cataloghi TLE con SGP4, passaggio grossolano con KD-tree e raffinamento del TCA in forma chiusa</p>
 <p><span class="status ok">Apache-2.0</span> <span class="status ok">RELEASED</span> </p>
-<p class="small muted">La documentazione tecnica del pacchetto è in inglese, come il suo codice.</p></div>
-<section class="section tight"><h2>In parole semplici</h2><p class="lead">Screening of close approaches between objects of TLE catalogues (who to look at), NOT a collision-probability tool.</p></section>
+</div>
+<section class="section tight"><h2>In parole semplici</h2><p class="lead">Screening degli avvicinamenti ravvicinati tra oggetti di cataloghi TLE (quali oggetti guardare), NON uno strumento per la probabilità di collisione.</p></section>
 <section class="section tight" id="try"><h2>Provalo qui</h2><p>Modifica il codice e premi Esegui (o Ctrl+Invio). Python gira nel tuo browser con il codice pubblicato di questo pacchetto. La prima volta scarica Python una sola volta (circa 12 MB).</p><p class="notice">Questo pacchetto richiede numpy, scipy, sgp4, che qui non è disponibile nel browser. Usalo sul tuo computer.</p></section>
 <section class="section tight" id="use"><h2>Usalo sul tuo computer</h2><p>Non servono account né GitHub. Scarica, poi installa con un comando:</p>
 <ul class="files"><li><a class="btn small" href="/S.T.A.R.-/downloads/wheels/conjunction_screen_sgp4-0.2.1-py3-none-any.whl" download>File di installazione · conjunction_screen_sgp4-0.2.1-py3-none-any.whl</a> <span class="muted small">7 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/source/conjunction_screen_sgp4-0.2.1-source.zip" download>Codice sorgente (.zip)</a> <span class="muted small">70 kB</span></li></ul><pre class="cmd"><code>python -m pip install conjunction_screen_sgp4-0.2.1-py3-none-any.whl      # numpy, scipy, sgp4 from the internet</code></pre>
 <p class="small"><a href="/S.T.A.R.-/it/start/">Come iniziare →</a></p></section>
+<section class="section tight" id="cite"><h2>Citarlo, e la sua distinta dei componenti</h2><p>Per un articolo, una relazione o un fascicolo fornitore: la citazione in due formati e la distinta dei componenti software (SBOM) nei due formati standard, con l&#x27;impronta del wheel.</p><pre class="cmd"><code>@software{cavazzini_conjunction_screen_sgp4_0_2_1,
+  author  = {Cavazzini, Andrea},
+  title   = {{conjunction-screen-sgp4}: Screening delle congiunzioni su cataloghi TLE con SGP4, passaggio grossolano con KD-tree e raffinamento del TCA in forma chiusa},
+  version = {0.2.1},
+  year    = {2026},
+  url     = {https://andrea07072000.github.io/S.T.A.R.-/software/conjunction_screen_sgp4/},
+  note    = {Apache-2.0. Source: https://github.com/Andrea07072000/S.T.A.R.-, commit 94fcf7c}
+}
+</code></pre><ul class="inline-links"><li><a href="/S.T.A.R.-/cite/conjunction_screen_sgp4.cff" download>CITATION.cff</a></li><li><a href="/S.T.A.R.-/cite/conjunction_screen_sgp4.bib" download>BibTeX</a></li><li><a href="/S.T.A.R.-/sbom/conjunction_screen_sgp4.cdx.json" download>SBOM CycloneDX 1.5</a></li><li><a href="/S.T.A.R.-/sbom/conjunction_screen_sgp4.spdx.json" download>SBOM SPDX 2.3</a></li></ul></section>
 <section class="section tight" id="dev"><h2>Per sviluppatori</h2><p>Installa direttamente dal repository pubblico:</p><pre class="cmd"><code>python -m pip install &quot;conjunction-screen-sgp4 @ git+https://github.com/Andrea07072000/S.T.A.R.-.git#subdirectory=packages/conjunction_screen_sgp4&quot;</code></pre>
 <p class="small"><a href="https://github.com/Andrea07072000/S.T.A.R.-/tree/main/packages/conjunction_screen_sgp4">README · tests · evidence (GitHub)</a></p></section>
 <section class="section tight" id="tech"><h2>Scheda tecnica</h2><dl class="meta"><dt>Pacchetto</dt><dd class='mono'>conjunction-screen-sgp4</dd><dt>Versione</dt><dd class='mono'>0.2.1</dd><dt>Licenza</dt><dd class='mono'>Apache-2.0</dd><dt>Python</dt><dd class='mono'>&gt;=3.9</dd><dt>Dipendenze</dt><dd class='mono'>numpy, scipy, sgp4</dd><dt>Capacità</dt><dd class='mono'>star.conjunction.screen</dd><dt>Maturità</dt><dd class='mono'>RELEASED</dd><dt>Commit pubblicato</dt><dd class='mono'>94fcf7c</dd></dl>
-<h3>Requisiti</h3><ul class="reqs"><li><b class='mono'>R1</b> <code>screen(tle_paths, start, hours, step, coarse_km, final_km, cross_only, refine)</code> returns encounters (TCA in UTC, miss distance km, age of the older TLE) below <code>final_km</code>, excluding pairs that stay close (formations).</li><li><b class='mono'>R2</b> TLEs are propagated with SGP4 only (mean elements); propagation errors are reported, never replaced.</li><li><b class='mono'>R3</b> <code>refine_tca(state_at, step)</code>: closed-form TCA from relative motion, shared by screening and tests.</li></ul>
+<h3>Requisiti</h3><ul class="reqs"><li><b class='mono'>R1</b> <code>screen(tle_paths, start, hours, step, coarse_km, final_km, cross_only, refine)</code> restituisce gli incontri (TCA in UTC, distanza minima in km, età del TLE più vecchio) sotto <code>final_km</code>, escludendo le coppie che restano vicine (formazioni).</li><li><b class='mono'>R2</b> I TLE sono propagati solo con SGP4 (elementi medi); gli errori di propagazione sono riportati, mai sostituiti.</li><li><b class='mono'>R3</b> <code>refine_tca(state_at, step)</code>: TCA in forma chiusa dal moto relativo, condiviso da screening e test.</li></ul>
 
 <h3>Evidenze nel registro</h3><div class="table-scroll"><table class="data"><thead><tr><th>Controllo</th><th>Stato</th><th>Registrato</th><th>Che cosa è stato osservato</th></tr></thead><tbody><tr><td>Mutation testing</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-05</td><td class='small'>236/282 = 0.8369</td></tr><tr><td>Mutation testing</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-05</td><td class='small'>194/242 = 0.8057</td></tr><tr><td>Mutation testing</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-05</td><td class='small'>190/242 = 0.7895</td></tr><tr><td>Clean install from the release tag</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-05</td><td class='small'>pytest outside the tree: 50 passed in 27.31s</td></tr><tr><td>Clean install from the release tag</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-05</td><td class='small'>pytest outside the tree: 37 passed in 39.12s</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-04</td><td class='small'>Requirements, interface, units, data provenance, dependency surface, explicit failure reporting, determinism and regression suite for conjunction-screen-sgp4 0.1.1</td></tr><tr><td>Mutation testing</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-04</td><td class='small'>172/242 = 0.7166</td></tr><tr><td>Mutation testing</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-04</td><td class='small'>160/242 = 0.668</td></tr><tr><td>Mutation testing</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-04</td><td class='small'>143/242 = 0.5992</td></tr><tr><td>Mutation testing</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-04</td><td class='small'>before 107/247 = 0.4332; after 124/247 = 0.502</td></tr><tr><td>Reference value</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-04</td><td class='small'>TCA offset 3.6e-05 s from the published TCA; miss 715.747 m (states: 715.75 m; printed MISS_DISTANCE 715 m)</td></tr><tr><td>Clean install from the release tag</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-04</td><td class='small'>pytest outside the tree: 7 passed in 17.52s</td></tr><tr><td>Clean install from the release tag</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-04</td><td class='small'>pytest outside the tree: 4 passed in 17.49s</td></tr><tr><td>Reference value</td><td><span class='status warn'>PARTIAL</span></td><td class='num'>2026-10-03</td><td class='small'>34/55 = 61.8 % (formation excluded)</td></tr><tr><td>Unit tests</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-03</td><td class='small'>3/3</td></tr><tr><td>Benchmark</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-03</td><td class='small'>189 = 189, diff 0.0 km</td></tr><tr><td>Cross-check with independent libraries</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-03</td><td class='small'>independent re-implementation agrees (24 h full catalogue)</td></tr></tbody></table></div>
 <h3>Impronte (SHA-256)</h3><div class="table-scroll"><table class="data"><tbody><tr><td class='mono small'>conjunction_screen_sgp4-0.2.1-py3-none-any.whl</td><td class='mono small hash'>04d5e0965645bdac104be9202995eaf6fefe640651b1da8f853499c0ff4e2d65</td></tr><tr><td class='mono small'>conjunction_screen_sgp4-0.2.1-source.zip</td><td class='mono small hash'>883bbc4727726bf6030c0e43980c24af2a74537d888ffc7329b246fc5a4545ab</td></tr></tbody></table></div>
@@ -65,9 +82,10 @@
    <div><h2>Contatti</h2><ul><li><a href="mailto:Info.and.News.S.T.A.R@proton.me">Info.and.News.S.T.A.R@proton.me</a></li>
     <li><a href="/S.T.A.R.-/it/assessment/#request">Richiedi una valutazione</a></li></ul></div>
   </div>
-  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generato dal registro il 2026-10-15 · commit di ingegneria c54092b · commit pubblico 94fcf7c</span>
+  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generato dal registro il 2026-10-15 · commit di ingegneria 173e61f · commit pubblico 94fcf7c</span>
    <a href="/S.T.A.R.-/software/conjunction_screen_sgp4/" lang="en">English</a></div>
  </div>
 </footer>
+<dialog class="search-dlg" aria-label="Cerca nel sito"><form method="dialog" class="search-box"><label class="visually-hidden" for="site-q">Cerca nel sito</label><input id="site-q" type="search" autocomplete="off" placeholder="Pacchetti, documenti legali, pagine…"><button class="btn small" value="close">Esc</button></form><ul class="search-res" role="listbox"></ul><p class="small muted search-none" hidden>Nessun risultato. Prova una parola più corta.</p></dialog>
 </body>
 </html>

@@ -3,20 +3,27 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pacchetto star-rootfind — Bracketed roots to the last float · S.T.A.R.</title>
-<meta name="description" content="Root of a real function inside a bracket by bisection over the floats (no tolerance, at most 64 evaluations after the two ends, the result within one float of the change of sign) and a scan for every ">
+<title>Pacchetto star-rootfind — Radici in un intervallo, fino all&#x27;ultimo float · S.T.A.R.</title>
+<meta name="description" content="Radice di una funzione reale dentro un intervallo per bisezione sui float (nessuna tolleranza, al massimo 64 valutazioni dopo i due estremi, il risultato entro un float dal cambio di segno) e una scan">
 <link rel="icon" href="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" type="image/png">
 <link rel="canonical" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_rootfind/">
 <link rel="alternate" hreflang="en" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_rootfind/">
 <link rel="alternate" hreflang="it" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_rootfind/">
 <link rel="alternate" hreflang="x-default" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_rootfind/">
-<meta property="og:title" content="Pacchetto star-rootfind — Bracketed roots to the last float · S.T.A.R.">
-<meta property="og:description" content="Root of a real function inside a bracket by bisection over the floats (no tolerance, at most 64 evaluations after the two ends, the result within one float of the change of sign) and a scan for every ">
+<meta property="og:title" content="Pacchetto star-rootfind — Radici in un intervallo, fino all&#x27;ultimo float · S.T.A.R.">
+<meta property="og:description" content="Radice di una funzione reale dentro un intervallo per bisezione sui float (nessuna tolleranza, al massimo 64 valutazioni dopo i due estremi, il risultato entro un float dal cambio di segno) e una scan">
 <meta property="og:image" content="https://andrea07072000.github.io/S.T.A.R.-/assets/images/star_logo_dark_transparent.png">
-  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-Dx8lu5GH.js"></script>
-  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-CJ2BHFzs.css">
+<meta property="og:url" content="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_rootfind/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="S.T.A.R.">
+<meta property="og:locale" content="it_IT">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "star-rootfind", "version": "0.1.0", "description": "Radice di una funzione reale dentro un intervallo per bisezione sui float (nessuna tolleranza, al massimo 64 valutazioni dopo i due estremi, il risultato entro un float dal cambio di segno) e una scansione di ogni cambio di segno su parti uguali; 600 problemi in sei famiglie, inclusa l'equazione di Keplero, concordano con mpmath a 50 cifre, brentq di SciPy e brenth di fluids entro 2,1e-15 relativo.", "url": "https://andrea07072000.github.io/S.T.A.R.-/it/software/star_rootfind/", "codeRepository": "https://github.com/Andrea07072000/S.T.A.R.-", "programmingLanguage": "Python", "license": "https://www.apache.org/licenses/LICENSE-2.0", "author": {"@type": "Person", "name": "Andrea Cavazzini"}, "inLanguage": "it", "runtimePlatform": "Python >=3.9"}]</script>
+
+  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-CCzNtdfL.js"></script>
+  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-DCHVB_Yt.css">
 </head>
-<body data-page="software">
+<body data-page="software" data-lang="it" data-search="/S.T.A.R.-/search-it.json">
 <a class="skip" href="#main">Vai al contenuto</a>
 <header class="site-header">
  <div class="wrap">
@@ -28,6 +35,7 @@
     <a href="/S.T.A.R.-/software/star_rootfind/" lang="en" hreflang="en">EN</a>
     <span aria-current="true">IT</span>
    </div>
+   <button class="btn small search-open" type="button" aria-haspopup="dialog" aria-keyshortcuts="Control+K Meta+K" title="Cerca nel sito">Cerca <kbd>Ctrl K</kbd></button>
    <a class="btn small primary" href="/S.T.A.R.-/it/assessment/#request">Richiedi una valutazione</a>
    <img class="header-logo" src="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" alt="S.T.A.R. logo" width="40" height="40">
   </div>
@@ -37,10 +45,10 @@
 <div class="wrap"><div class="page-head">
 <p><a href="/S.T.A.R.-/it/software/">← Tutti i pacchetti</a></p>
 <span class="eyebrow">Calcolo numerico e statistica</span><h1 class="mono pkg-title">star-rootfind <span class="muted">0.1.0</span></h1>
-<p class="lead">Bracketed roots to the last float</p>
+<p class="lead">Radici in un intervallo, fino all&#x27;ultimo float</p>
 <p><span class="status ok">Apache-2.0</span> <span class="status ok">RELEASED</span> <span class="status soon">file singolo</span></p>
-<p class="small muted">La documentazione tecnica del pacchetto è in inglese, come il suo codice.</p></div>
-<section class="section tight"><h2>In parole semplici</h2><p class="lead">Root of a real function inside a bracket by bisection over the floats (no tolerance, at most 64 evaluations after the two ends, the result within one float of the change of sign) and a scan for every change of sign over equal pieces; 600 problems in six families, Kepler&#x27;s equation included, agree with mpmath at 50 digits, SciPy brentq and fluids brenth within 2.1e-15 relative.</p></section>
+</div>
+<section class="section tight"><h2>In parole semplici</h2><p class="lead">Radice di una funzione reale dentro un intervallo per bisezione sui float (nessuna tolleranza, al massimo 64 valutazioni dopo i due estremi, il risultato entro un float dal cambio di segno) e una scansione di ogni cambio di segno su parti uguali; 600 problemi in sei famiglie, inclusa l&#x27;equazione di Keplero, concordano con mpmath a 50 cifre, brentq di SciPy e brenth di fluids entro 2,1e-15 relativo.</p></section>
 <section class="section tight" id="try"><h2>Provalo qui</h2><p>Modifica il codice e premi Esegui (o Ctrl+Invio). Python gira nel tuo browser con il codice pubblicato di questo pacchetto. La prima volta scarica Python una sola volta (circa 12 MB).</p><div class="runner" data-wheels='[&quot;star_rootfind-0.1.0-py3-none-any.whl&quot;]'><label class="visually-hidden" for="code-star_rootfind">Python</label><textarea id="code-star_rootfind" spellcheck="false" rows="7">import math
 import star_rootfind as sr
 print(sr.find_root(lambda x: x**3 - 2*x - 5, 2, 3))  # 2.0945514815423265
@@ -49,11 +57,20 @@ print(sr.find_roots(math.sin, -0.5, 10, 50))  # (0.0, 3.141592653589793, 6.28318
 <section class="section tight" id="use"><h2>Usalo sul tuo computer</h2><p>Non servono account né GitHub. Scarica, poi installa con un comando:</p>
 <ul class="files"><li><a class="btn small" href="/S.T.A.R.-/downloads/wheels/star_rootfind-0.1.0-py3-none-any.whl" download>File di installazione · star_rootfind-0.1.0-py3-none-any.whl</a> <span class="muted small">3 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/modules/star_rootfind.py" download>File singolo — basta copiarlo accanto al tuo codice · star_rootfind.py</a> <span class="muted small">5 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/source/star_rootfind-0.1.0-source.zip" download>Codice sorgente (.zip)</a> <span class="muted small">22 kB</span></li></ul><pre class="cmd"><code>python -m pip install star_rootfind-0.1.0-py3-none-any.whl</code></pre>
 <p class="small"><a href="/S.T.A.R.-/it/start/">Come iniziare →</a></p></section>
+<section class="section tight" id="cite"><h2>Citarlo, e la sua distinta dei componenti</h2><p>Per un articolo, una relazione o un fascicolo fornitore: la citazione in due formati e la distinta dei componenti software (SBOM) nei due formati standard, con l&#x27;impronta del wheel.</p><pre class="cmd"><code>@software{cavazzini_star_rootfind_0_1_0,
+  author  = {Cavazzini, Andrea},
+  title   = {{star-rootfind}: Radici in un intervallo, fino all&#x27;ultimo float},
+  version = {0.1.0},
+  year    = {2026},
+  url     = {https://andrea07072000.github.io/S.T.A.R.-/software/star_rootfind/},
+  note    = {Apache-2.0. Source: https://github.com/Andrea07072000/S.T.A.R.-, commit 94fcf7c}
+}
+</code></pre><ul class="inline-links"><li><a href="/S.T.A.R.-/cite/star_rootfind.cff" download>CITATION.cff</a></li><li><a href="/S.T.A.R.-/cite/star_rootfind.bib" download>BibTeX</a></li><li><a href="/S.T.A.R.-/sbom/star_rootfind.cdx.json" download>SBOM CycloneDX 1.5</a></li><li><a href="/S.T.A.R.-/sbom/star_rootfind.spdx.json" download>SBOM SPDX 2.3</a></li></ul></section>
 <section class="section tight" id="dev"><h2>Per sviluppatori</h2><p>Installa direttamente dal repository pubblico:</p><pre class="cmd"><code>python -m pip install &quot;star-rootfind @ git+https://github.com/Andrea07072000/S.T.A.R.-.git#subdirectory=packages/star_rootfind&quot;</code></pre>
 <p class="small"><a href="https://github.com/Andrea07072000/S.T.A.R.-/tree/main/packages/star_rootfind">README · tests · evidence (GitHub)</a></p></section>
 <section class="section tight" id="tech"><h2>Scheda tecnica</h2><dl class="meta"><dt>Pacchetto</dt><dd class='mono'>star-rootfind</dd><dt>Versione</dt><dd class='mono'>0.1.0</dd><dt>Licenza</dt><dd class='mono'>Apache-2.0</dd><dt>Python</dt><dd class='mono'>&gt;=3.9</dd><dt>Dipendenze</dt><dd class='mono'>nessuna (solo libreria standard)</dd><dt>Capacità</dt><dd class='mono'>star.numerics.bracketed-root</dd><dt>Maturità</dt><dd class='mono'>RELEASED</dd><dt>Commit pubblicato</dt><dd class='mono'>94fcf7c</dd></dl>
-<h3>Requisiti</h3><ul class="reqs"><li><b class='mono'>R1</b> <code>find_root(f, a, b)</code>, a &lt; b, with f(a) and f(b) of opposite sign (or one of them zero), returns a float of [a, b] such that f changes sign between it and a neighbouring float, or f is exactly zero there.</li><li><b class='mono'>R2</b> The interval is halved in the number of floats it contains: f is evaluated at a, at b, and then at most 64 times, whatever the width of the bracket. <code>find_roots(f, a, b, pieces)</code> splits [a, b] into equal pieces and returns, sorted, one root for each piece with a change of sign and every piece edge where f is zero.</li><li><b class='mono'>R3</b> Measured on 600 bracketed problems in six families (cube root, exponential, cosine, Kepler&#x27;s equation up to e = 0.95, tanh, logarithm): the result agrees with mpmath at 50 digits, SciPy <code>brentq</code> and fluids <code>brenth</code> within 2.1e-15 relative.</li><li><b class='mono'>R4</b> Every function returns floats or raises <code>ValueError</code>: f not callable, limits that are not finite numbers within 1e300 or not in increasing order, no change of sign, a value of f that is not a finite real number, an invalid number of pieces. An exception raised by f itself is not caught.</li></ul>
-<h3>Limiti (che cosa non si afferma)</h3><p>A change of sign is found, not proved to be a root: for a discontinuous function the result is the jump. The result is exact for f as computed; its distance from the true root is the rounding error of f divided by its slope, which this module cannot know (x*x − 2 on [0, 2] returns the float below sqrt(2) rounded). Roots without a change of sign (double roots) are not found, and <code>find_roots</code> misses two roots that fall in the same piece: it is a scan, not a guarantee of completeness. Bisection uses up to 64 evaluations where Brent&#x27;s method often needs ten: this is for certainty of termination and of the last digit, not for speed. One dimension only.</p>
+<h3>Requisiti</h3><ul class="reqs"><li><b class='mono'>R1</b> <code>find_root(f, a, b)</code>, a &lt; b, con f(a) e f(b) di segno opposto (o una delle due nulla), restituisce un float di [a, b] tale che f cambia segno tra esso e un float vicino, o f lì vale esattamente zero.</li><li><b class='mono'>R2</b> L&#x27;intervallo è dimezzato nel numero di float che contiene: f è valutata in a, in b, e poi al massimo 64 volte, qualunque sia l&#x27;ampiezza dell&#x27;intervallo. <code>find_roots(f, a, b, pieces)</code> divide [a, b] in parti uguali e restituisce, ordinate, una radice per ogni parte con un cambio di segno e ogni estremo di parte dove f vale zero.</li><li><b class='mono'>R3</b> Misurato su 600 problemi con intervallo in sei famiglie (radice cubica, esponenziale, coseno, equazione di Keplero fino a e = 0,95, tanh, logaritmo): il risultato concorda con mpmath a 50 cifre, <code>brentq</code> di SciPy e <code>brenth</code> di fluids entro 2,1e-15 relativo.</li><li><b class='mono'>R4</b> Ogni funzione restituisce float o solleva <code>ValueError</code>: f non richiamabile, estremi che non sono numeri finiti entro 1e300 o non in ordine crescente, nessun cambio di segno, un valore di f che non è un numero reale finito, un numero di parti non valido. Un&#x27;eccezione sollevata da f stessa non viene intercettata.</li></ul>
+<h3>Limiti (che cosa non si afferma)</h3><p>Viene trovato un cambio di segno, non dimostrata una radice: per una funzione discontinua il risultato è il salto. Il risultato è esatto per f come calcolata; la sua distanza dalla radice vera è l&#x27;errore di arrotondamento di f diviso per la sua pendenza, che questo modulo non può conoscere (x*x − 2 su [0, 2] restituisce il float sotto sqrt(2) arrotondato). Le radici senza cambio di segno (radici doppie) non vengono trovate, e <code>find_roots</code> perde due radici che cadono nella stessa parte: è una scansione, non una garanzia di completezza. La bisezione usa fino a 64 valutazioni dove il metodo di Brent spesso ne richiede dieci: serve per la certezza della terminazione e dell&#x27;ultima cifra, non per la velocità. Solo una dimensione.</p>
 <h3>Evidenze nel registro</h3><div class="table-scroll"><table class="data"><thead><tr><th>Controllo</th><th>Stato</th><th>Registrato</th><th>Che cosa è stato osservato</th></tr></thead><tbody><tr><td>Clean install from the release tag</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>pytest outside the tree: 47 passed in 0.68s</td></tr><tr><td>Unit tests</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>47 passed in 0.88s</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>Requirements, interface, units, data provenance, dependency surface and failure behaviour reviewed</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>Re-running the cross-check gives a byte-identical evidence file</td></tr><tr><td>Reference value</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>find_root(lambda x: x**3 - 2*x - 5, 2, 3) = 2.0945514815423265 (suite: 47 passed in 0.88s)</td></tr><tr><td>Cross-check with independent libraries</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>star_rootfind.find_root returns the point where the computed function changes sign, to the last float, with no tolerance and at most 64 evaluations after the two ends</td></tr><tr><td>Benchmark</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>largest relative difference from mpmath at 50 digits: 1.5e-15</td></tr></tbody></table></div>
 <h3>Impronte (SHA-256)</h3><div class="table-scroll"><table class="data"><tbody><tr><td class='mono small'>star_rootfind-0.1.0-py3-none-any.whl</td><td class='mono small hash'>20d24468ad695a7edcea515741498515ec6868d895e232a6d56510f57de8602a</td></tr><tr><td class='mono small'>star_rootfind.py</td><td class='mono small hash'>14bd52ede61ac2bc042e09e05ad72f76716eb232a3f5a276958074206fca360b</td></tr><tr><td class='mono small'>star_rootfind-0.1.0-source.zip</td><td class='mono small hash'>410b82b0a7ca25ee067930b5a212004d1d7d733337b825e028bb229e76db9f45</td></tr></tbody></table></div>
 </section></div>
@@ -69,9 +86,10 @@ print(sr.find_roots(math.sin, -0.5, 10, 50))  # (0.0, 3.141592653589793, 6.28318
    <div><h2>Contatti</h2><ul><li><a href="mailto:Info.and.News.S.T.A.R@proton.me">Info.and.News.S.T.A.R@proton.me</a></li>
     <li><a href="/S.T.A.R.-/it/assessment/#request">Richiedi una valutazione</a></li></ul></div>
   </div>
-  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generato dal registro il 2026-10-15 · commit di ingegneria c54092b · commit pubblico 94fcf7c</span>
+  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generato dal registro il 2026-10-15 · commit di ingegneria 173e61f · commit pubblico 94fcf7c</span>
    <a href="/S.T.A.R.-/software/star_rootfind/" lang="en">English</a></div>
  </div>
 </footer>
+<dialog class="search-dlg" aria-label="Cerca nel sito"><form method="dialog" class="search-box"><label class="visually-hidden" for="site-q">Cerca nel sito</label><input id="site-q" type="search" autocomplete="off" placeholder="Pacchetti, documenti legali, pagine…"><button class="btn small" value="close">Esc</button></form><ul class="search-res" role="listbox"></ul><p class="small muted search-none" hidden>Nessun risultato. Prova una parola più corta.</p></dialog>
 </body>
 </html>

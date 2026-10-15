@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "conjunction-screen-sgp4: Conjunction screening of TLE catalogues with SGP4, KD-tree coarse pass and closed-form TCA refinement"
+version: "0.2.1"
+authors:
+  - family-names: Cavazzini
+    given-names: Andrea
+license: Apache-2.0
+repository-code: "https://github.com/Andrea07072000/S.T.A.R.-"
+url: "https://andrea07072000.github.io/S.T.A.R.-/software/conjunction_screen_sgp4/"
+commit: "94fcf7c"

@@ -1,0 +1,61 @@
+{
+ "bomFormat": "CycloneDX",
+ "specVersion": "1.5",
+ "serialNumber": "urn:uuid:fa7e3f5f-620e-5a86-ac92-62b838302741",
+ "version": 1,
+ "metadata": {
+  "timestamp": "2026-10-15T00:00:00Z",
+  "authors": [
+   {
+    "name": "Andrea Cavazzini"
+   }
+  ],
+  "component": {
+   "type": "library",
+   "bom-ref": "star-crc",
+   "name": "star-crc",
+   "version": "0.1.0",
+   "description": "The CRC-16 of CCSDS transfer frames, CRC-16/XMODEM, CRC-32, CRC-32C and any Rocksoft-model CRC of 8 to 64 bits computed through the defining shift register; on 499 messages and nine variants identical to fastcrc (4491 values), to CPython binascii and zlib (1497) and to a polynomial division over GF(2) in SymPy (1611); reproduces the nine catalogue check values.",
+   "licenses": [
+    {
+     "license": {
+      "id": "Apache-2.0"
+     }
+    }
+   ],
+   "purl": "pkg:generic/star-crc@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%4094fcf7c%23packages%2Fstar_crc",
+   "author": "Andrea Cavazzini",
+   "externalReferences": [
+    {
+     "type": "vcs",
+     "url": "https://github.com/Andrea07072000/S.T.A.R.-/tree/main/packages/star_crc"
+    },
+    {
+     "type": "website",
+     "url": "https://andrea07072000.github.io/S.T.A.R.-/software/star_crc/"
+    }
+   ],
+   "hashes": [
+    {
+     "alg": "SHA-256",
+     "content": "b52c6955951a3fe8f9ff1f5778bdbf245ee64ea92da0aba0c42f63592c26b0e5"
+    }
+   ]
+  },
+  "tools": {
+   "components": [
+    {
+     "type": "application",
+     "name": "star-site-gen"
+    }
+   ]
+  }
+ },
+ "components": [],
+ "dependencies": [
+  {
+   "ref": "star-crc",
+   "dependsOn": []
+  }
+ ]
+}

@@ -3,20 +3,27 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pacchetto star-quantile — Median, quantiles, IQR and MAD, correctly rounded · S.T.A.R.</title>
-<meta name="description" content="Median, Hyndman-Fan type 7 quantile, interquartile range and median absolute deviation computed exactly in rational arithmetic and rounded once; on 500 datasets (2000 values) every value is identical ">
+<title>Pacchetto star-quantile — Mediana, quantili, IQR e MAD, arrotondati correttamente · S.T.A.R.</title>
+<meta name="description" content="Mediana, quantile di tipo 7 di Hyndman-Fan, scarto interquartile e deviazione assoluta mediana calcolati esattamente in aritmetica razionale e arrotondati una volta; su 500 insiemi di dati (2000 valor">
 <link rel="icon" href="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" type="image/png">
 <link rel="canonical" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_quantile/">
 <link rel="alternate" hreflang="en" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_quantile/">
 <link rel="alternate" hreflang="it" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_quantile/">
 <link rel="alternate" hreflang="x-default" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_quantile/">
-<meta property="og:title" content="Pacchetto star-quantile — Median, quantiles, IQR and MAD, correctly rounded · S.T.A.R.">
-<meta property="og:description" content="Median, Hyndman-Fan type 7 quantile, interquartile range and median absolute deviation computed exactly in rational arithmetic and rounded once; on 500 datasets (2000 values) every value is identical ">
+<meta property="og:title" content="Pacchetto star-quantile — Mediana, quantili, IQR e MAD, arrotondati correttamente · S.T.A.R.">
+<meta property="og:description" content="Mediana, quantile di tipo 7 di Hyndman-Fan, scarto interquartile e deviazione assoluta mediana calcolati esattamente in aritmetica razionale e arrotondati una volta; su 500 insiemi di dati (2000 valor">
 <meta property="og:image" content="https://andrea07072000.github.io/S.T.A.R.-/assets/images/star_logo_dark_transparent.png">
-  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-Dx8lu5GH.js"></script>
-  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-CJ2BHFzs.css">
+<meta property="og:url" content="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_quantile/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="S.T.A.R.">
+<meta property="og:locale" content="it_IT">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "star-quantile", "version": "0.1.0", "description": "Mediana, quantile di tipo 7 di Hyndman-Fan, scarto interquartile e deviazione assoluta mediana calcolati esattamente in aritmetica razionale e arrotondati una volta; su 500 insiemi di dati (2000 valori) ogni valore è identico al valore razionale esatto di SymPy, e NumPy, SciPy e statistics di CPython concordano entro 7e-16 del valore più grande.", "url": "https://andrea07072000.github.io/S.T.A.R.-/it/software/star_quantile/", "codeRepository": "https://github.com/Andrea07072000/S.T.A.R.-", "programmingLanguage": "Python", "license": "https://www.apache.org/licenses/LICENSE-2.0", "author": {"@type": "Person", "name": "Andrea Cavazzini"}, "inLanguage": "it", "runtimePlatform": "Python >=3.9"}]</script>
+
+  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-CCzNtdfL.js"></script>
+  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-DCHVB_Yt.css">
 </head>
-<body data-page="software">
+<body data-page="software" data-lang="it" data-search="/S.T.A.R.-/search-it.json">
 <a class="skip" href="#main">Vai al contenuto</a>
 <header class="site-header">
  <div class="wrap">
@@ -28,6 +35,7 @@
     <a href="/S.T.A.R.-/software/star_quantile/" lang="en" hreflang="en">EN</a>
     <span aria-current="true">IT</span>
    </div>
+   <button class="btn small search-open" type="button" aria-haspopup="dialog" aria-keyshortcuts="Control+K Meta+K" title="Cerca nel sito">Cerca <kbd>Ctrl K</kbd></button>
    <a class="btn small primary" href="/S.T.A.R.-/it/assessment/#request">Richiedi una valutazione</a>
    <img class="header-logo" src="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" alt="S.T.A.R. logo" width="40" height="40">
   </div>
@@ -37,10 +45,10 @@
 <div class="wrap"><div class="page-head">
 <p><a href="/S.T.A.R.-/it/software/">← Tutti i pacchetti</a></p>
 <span class="eyebrow">Calcolo numerico e statistica</span><h1 class="mono pkg-title">star-quantile <span class="muted">0.1.0</span></h1>
-<p class="lead">Median, quantiles, IQR and MAD, correctly rounded</p>
+<p class="lead">Mediana, quantili, IQR e MAD, arrotondati correttamente</p>
 <p><span class="status ok">Apache-2.0</span> <span class="status ok">RELEASED</span> <span class="status soon">file singolo</span></p>
-<p class="small muted">La documentazione tecnica del pacchetto è in inglese, come il suo codice.</p></div>
-<section class="section tight"><h2>In parole semplici</h2><p class="lead">Median, Hyndman-Fan type 7 quantile, interquartile range and median absolute deviation computed exactly in rational arithmetic and rounded once; on 500 datasets (2000 values) every value is identical to the exact rational value from SymPy, and NumPy, SciPy and CPython statistics agree within 7e-16 of the largest value.</p></section>
+</div>
+<section class="section tight"><h2>In parole semplici</h2><p class="lead">Mediana, quantile di tipo 7 di Hyndman-Fan, scarto interquartile e deviazione assoluta mediana calcolati esattamente in aritmetica razionale e arrotondati una volta; su 500 insiemi di dati (2000 valori) ogni valore è identico al valore razionale esatto di SymPy, e NumPy, SciPy e statistics di CPython concordano entro 7e-16 del valore più grande.</p></section>
 <section class="section tight" id="try"><h2>Provalo qui</h2><p>Modifica il codice e premi Esegui (o Ctrl+Invio). Python gira nel tuo browser con il codice pubblicato di questo pacchetto. La prima volta scarica Python una sola volta (circa 12 MB).</p><div class="runner" data-wheels='[&quot;star_quantile-0.1.0-py3-none-any.whl&quot;]'><label class="visually-hidden" for="code-star_quantile">Python</label><textarea id="code-star_quantile" spellcheck="false" rows="7">import star_quantile as sq
 print(sq.median([1, 2, 3, 4, 100]))  # 3.0: the outlier does not move it
 print(sq.quantile([1, 2, 3, 4], 0.25))  # 1.75
@@ -49,11 +57,20 @@ print(sq.mad([1, 1, 2, 2, 4, 6, 9]))  # 1.0</textarea><div class="runner-bar"><b
 <section class="section tight" id="use"><h2>Usalo sul tuo computer</h2><p>Non servono account né GitHub. Scarica, poi installa con un comando:</p>
 <ul class="files"><li><a class="btn small" href="/S.T.A.R.-/downloads/wheels/star_quantile-0.1.0-py3-none-any.whl" download>File di installazione · star_quantile-0.1.0-py3-none-any.whl</a> <span class="muted small">3 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/modules/star_quantile.py" download>File singolo — basta copiarlo accanto al tuo codice · star_quantile.py</a> <span class="muted small">3 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/source/star_quantile-0.1.0-source.zip" download>Codice sorgente (.zip)</a> <span class="muted small">19 kB</span></li></ul><pre class="cmd"><code>python -m pip install star_quantile-0.1.0-py3-none-any.whl</code></pre>
 <p class="small"><a href="/S.T.A.R.-/it/start/">Come iniziare →</a></p></section>
+<section class="section tight" id="cite"><h2>Citarlo, e la sua distinta dei componenti</h2><p>Per un articolo, una relazione o un fascicolo fornitore: la citazione in due formati e la distinta dei componenti software (SBOM) nei due formati standard, con l&#x27;impronta del wheel.</p><pre class="cmd"><code>@software{cavazzini_star_quantile_0_1_0,
+  author  = {Cavazzini, Andrea},
+  title   = {{star-quantile}: Mediana, quantili, IQR e MAD, arrotondati correttamente},
+  version = {0.1.0},
+  year    = {2026},
+  url     = {https://andrea07072000.github.io/S.T.A.R.-/software/star_quantile/},
+  note    = {Apache-2.0. Source: https://github.com/Andrea07072000/S.T.A.R.-, commit 94fcf7c}
+}
+</code></pre><ul class="inline-links"><li><a href="/S.T.A.R.-/cite/star_quantile.cff" download>CITATION.cff</a></li><li><a href="/S.T.A.R.-/cite/star_quantile.bib" download>BibTeX</a></li><li><a href="/S.T.A.R.-/sbom/star_quantile.cdx.json" download>SBOM CycloneDX 1.5</a></li><li><a href="/S.T.A.R.-/sbom/star_quantile.spdx.json" download>SBOM SPDX 2.3</a></li></ul></section>
 <section class="section tight" id="dev"><h2>Per sviluppatori</h2><p>Installa direttamente dal repository pubblico:</p><pre class="cmd"><code>python -m pip install &quot;star-quantile @ git+https://github.com/Andrea07072000/S.T.A.R.-.git#subdirectory=packages/star_quantile&quot;</code></pre>
 <p class="small"><a href="https://github.com/Andrea07072000/S.T.A.R.-/tree/main/packages/star_quantile">README · tests · evidence (GitHub)</a></p></section>
 <section class="section tight" id="tech"><h2>Scheda tecnica</h2><dl class="meta"><dt>Pacchetto</dt><dd class='mono'>star-quantile</dd><dt>Versione</dt><dd class='mono'>0.1.0</dd><dt>Licenza</dt><dd class='mono'>Apache-2.0</dd><dt>Python</dt><dd class='mono'>&gt;=3.9</dd><dt>Dipendenze</dt><dd class='mono'>nessuna (solo libreria standard)</dd><dt>Capacità</dt><dd class='mono'>star.statistics.quantiles</dd><dt>Maturità</dt><dd class='mono'>RELEASED</dd><dt>Commit pubblicato</dt><dd class='mono'>94fcf7c</dd></dl>
-<h3>Requisiti</h3><ul class="reqs"><li><b class='mono'>R1</b> <code>quantile(values, q)</code> is definition 7 of Hyndman and Fan (linear interpolation between order statistics at position (n - 1) q), the default of R and NumPy; <code>median</code> is the 0.5 quantile; <code>iqr</code> is the 0.75 quantile minus the 0.25 quantile; <code>mad</code> is the median of the absolute deviations from the median, not scaled.</li><li><b class='mono'>R2</b> Each result is the float nearest to the exact value of its definition on the numbers given (q included, as the exact value of its float); the order of the values does not matter.</li><li><b class='mono'>R3</b> Measured on 500 datasets of 1 to 60 values (2000 values): every value identical to the exact rational value (SymPy) rounded once; NumPy, SciPy and CPython&#x27;s <code>statistics</code> within 7e-16 of the largest |value|.</li><li><b class='mono'>R4</b> Every function returns a float or raises <code>ValueError</code>: data that are not a list or tuple of 1 to 100000 finite numbers within 1e150 (booleans refused), q outside [0, 1] or not a finite number.</li></ul>
-<h3>Limiti (che cosa non si afferma)</h3><p>One quantile definition out of the nine in use: results differ from packages that default to another one, and the module does not offer the others. The MAD is returned unscaled (multiply by 1.4826 to estimate a Gaussian standard deviation: that factor is an assumption about the data, not applied here). No weighted quantiles, no confidence intervals, no streaming estimate. &quot;Exact&quot; refers to the floats supplied.</p>
+<h3>Requisiti</h3><ul class="reqs"><li><b class='mono'>R1</b> <code>quantile(values, q)</code> è la definizione 7 di Hyndman e Fan (interpolazione lineare tra statistiche d&#x27;ordine nella posizione (n - 1) q), la predefinita di R e NumPy; <code>median</code> è il quantile 0,5; <code>iqr</code> è il quantile 0,75 meno il quantile 0,25; <code>mad</code> è la mediana delle deviazioni assolute dalla mediana, non scalata.</li><li><b class='mono'>R2</b> Ogni risultato è il float più vicino al valore esatto della sua definizione sui numeri dati (q compreso, come valore esatto del suo float); l&#x27;ordine dei valori non conta.</li><li><b class='mono'>R3</b> Misurato su 500 insiemi di dati da 1 a 60 valori (2000 valori): ogni valore identico al valore razionale esatto (SymPy) arrotondato una volta; NumPy, SciPy e <code>statistics</code> di CPython entro 7e-16 del |valore| più grande.</li><li><b class='mono'>R4</b> Ogni funzione restituisce un float o solleva <code>ValueError</code>: dati che non sono una lista o tupla di 1-100000 numeri finiti entro 1e150 (booleani rifiutati), q fuori da [0, 1] o non finito.</li></ul>
+<h3>Limiti (che cosa non si afferma)</h3><p>Una sola definizione di quantile tra le nove in uso: i risultati differiscono da pacchetti che ne usano un&#x27;altra per impostazione predefinita, e il modulo non offre le altre. La MAD è restituita non scalata (moltiplicare per 1,4826 per stimare una deviazione standard gaussiana: quel fattore è un&#x27;ipotesi sui dati, qui non applicata). Niente quantili pesati, niente intervalli di confidenza, nessuna stima in streaming. «Esatto» si riferisce ai float forniti.</p>
 <h3>Evidenze nel registro</h3><div class="table-scroll"><table class="data"><thead><tr><th>Controllo</th><th>Stato</th><th>Registrato</th><th>Che cosa è stato osservato</th></tr></thead><tbody><tr><td>Unit tests</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>52 passed in 0.79s</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>Requirements, interface, units, data provenance, dependency surface and failure behaviour reviewed</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>Re-running the cross-check gives a byte-identical evidence file</td></tr><tr><td>Reference value</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>median = 2.0, mad = 1.0; quantile([1, 2, 3, 4, 5], 0.25) = 2.0, quantile(..., 0.75) = 4.0 (suite: 52 passed in 0.79s)</td></tr><tr><td>Cross-check with independent libraries</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>star_quantile returns the median, the type 7 quantile, the interquartile range and the median absolute deviation as the exact value of the definition rounded once</td></tr><tr><td>Benchmark</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>values not identical to the exact one: 0 of 2000</td></tr><tr><td>Clean install from the release tag</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>pytest outside the tree: 52 passed in 0.54s</td></tr></tbody></table></div>
 <h3>Impronte (SHA-256)</h3><div class="table-scroll"><table class="data"><tbody><tr><td class='mono small'>star_quantile-0.1.0-py3-none-any.whl</td><td class='mono small hash'>5d22574e4f51f4d2833115c890fdf9e45b42535726ca86cc6f88c44c6efb56dd</td></tr><tr><td class='mono small'>star_quantile.py</td><td class='mono small hash'>641b34712e9e935080c7bfa12e6618dacd740a18ad2bad9c080b830da6c0ea13</td></tr><tr><td class='mono small'>star_quantile-0.1.0-source.zip</td><td class='mono small hash'>81f7b59602ae579e240c86f1190d33e4095d771f817144203c39d1d32b008111</td></tr></tbody></table></div>
 </section></div>
@@ -69,9 +86,10 @@ print(sq.mad([1, 1, 2, 2, 4, 6, 9]))  # 1.0</textarea><div class="runner-bar"><b
    <div><h2>Contatti</h2><ul><li><a href="mailto:Info.and.News.S.T.A.R@proton.me">Info.and.News.S.T.A.R@proton.me</a></li>
     <li><a href="/S.T.A.R.-/it/assessment/#request">Richiedi una valutazione</a></li></ul></div>
   </div>
-  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generato dal registro il 2026-10-15 · commit di ingegneria c54092b · commit pubblico 94fcf7c</span>
+  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generato dal registro il 2026-10-15 · commit di ingegneria 173e61f · commit pubblico 94fcf7c</span>
    <a href="/S.T.A.R.-/software/star_quantile/" lang="en">English</a></div>
  </div>
 </footer>
+<dialog class="search-dlg" aria-label="Cerca nel sito"><form method="dialog" class="search-box"><label class="visually-hidden" for="site-q">Cerca nel sito</label><input id="site-q" type="search" autocomplete="off" placeholder="Pacchetti, documenti legali, pagine…"><button class="btn small" value="close">Esc</button></form><ul class="search-res" role="listbox"></ul><p class="small muted search-none" hidden>Nessun risultato. Prova una parola più corta.</p></dialog>
 </body>
 </html>

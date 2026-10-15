@@ -1,0 +1,61 @@
+{
+ "bomFormat": "CycloneDX",
+ "specVersion": "1.5",
+ "serialNumber": "urn:uuid:b9348137-0cf0-517b-8b9e-fba0aaa2f504",
+ "version": 1,
+ "metadata": {
+  "timestamp": "2026-10-15T00:00:00Z",
+  "authors": [
+   {
+    "name": "Andrea Cavazzini"
+   }
+  ],
+  "component": {
+   "type": "library",
+   "bom-ref": "star-polyfit",
+   "name": "star-polyfit",
+   "version": "0.1.0",
+   "description": "Least-squares polynomial of degree 0 to 10, weighted or not: the normal equations are formed and solved in exact rational arithmetic and each coefficient is rounded once, so conditioning costs no digit; exact evaluation and exact residual sum of squares; NIST Wampler1 reproduced exactly; every coefficient of 161 problems equal to SymPy's exact solution.",
+   "licenses": [
+    {
+     "license": {
+      "id": "Apache-2.0"
+     }
+    }
+   ],
+   "purl": "pkg:generic/star-polyfit@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%4094fcf7c%23packages%2Fstar_polyfit",
+   "author": "Andrea Cavazzini",
+   "externalReferences": [
+    {
+     "type": "vcs",
+     "url": "https://github.com/Andrea07072000/S.T.A.R.-/tree/main/packages/star_polyfit"
+    },
+    {
+     "type": "website",
+     "url": "https://andrea07072000.github.io/S.T.A.R.-/software/star_polyfit/"
+    }
+   ],
+   "hashes": [
+    {
+     "alg": "SHA-256",
+     "content": "5d7ff5d6108b09447e904f2788ad829dd717ee049265eec017db00b907ef2a7a"
+    }
+   ]
+  },
+  "tools": {
+   "components": [
+    {
+     "type": "application",
+     "name": "star-site-gen"
+    }
+   ]
+  }
+ },
+ "components": [],
+ "dependencies": [
+  {
+   "ref": "star-polyfit",
+   "dependsOn": []
+  }
+ ]
+}

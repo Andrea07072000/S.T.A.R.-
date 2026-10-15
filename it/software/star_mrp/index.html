@@ -3,20 +3,27 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pacchetto star-mrp — Modified Rodrigues parameters · S.T.A.R.</title>
-<meta name="description" content="Modified Rodrigues parameters: conversion with quaternions, direction cosine matrices and rotation vectors, shadow set and switching, composition of rotations through quaternions (no division by zero ">
+<title>Pacchetto star-mrp — Parametri di Rodrigues modificati · S.T.A.R.</title>
+<meta name="description" content="Parametri di Rodrigues modificati (MRP): conversione con quaternioni, matrici dei coseni direttori e vettori di rotazione, insieme ombra e commutazione, composizione di rotazioni tramite quaternioni (">
 <link rel="icon" href="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" type="image/png">
 <link rel="canonical" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_mrp/">
 <link rel="alternate" hreflang="en" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_mrp/">
 <link rel="alternate" hreflang="it" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_mrp/">
 <link rel="alternate" hreflang="x-default" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_mrp/">
-<meta property="og:title" content="Pacchetto star-mrp — Modified Rodrigues parameters · S.T.A.R.">
-<meta property="og:description" content="Modified Rodrigues parameters: conversion with quaternions, direction cosine matrices and rotation vectors, shadow set and switching, composition of rotations through quaternions (no division by zero ">
+<meta property="og:title" content="Pacchetto star-mrp — Parametri di Rodrigues modificati · S.T.A.R.">
+<meta property="og:description" content="Parametri di Rodrigues modificati (MRP): conversione con quaternioni, matrici dei coseni direttori e vettori di rotazione, insieme ombra e commutazione, composizione di rotazioni tramite quaternioni (">
 <meta property="og:image" content="https://andrea07072000.github.io/S.T.A.R.-/assets/images/star_logo_dark_transparent.png">
-  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-Dx8lu5GH.js"></script>
-  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-CJ2BHFzs.css">
+<meta property="og:url" content="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_mrp/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="S.T.A.R.">
+<meta property="og:locale" content="it_IT">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "star-mrp", "version": "0.1.0", "description": "Parametri di Rodrigues modificati (MRP): conversione con quaternioni, matrici dei coseni direttori e vettori di rotazione, insieme ombra e commutazione, composizione di rotazioni tramite quaternioni (nessuna divisione per zero a un giro completo) ed equazione cinematica; entro 6e-16 da Basilisk e 2e-15 da SciPy su 601 coppie con norme da 1e-8 a 5.", "url": "https://andrea07072000.github.io/S.T.A.R.-/it/software/star_mrp/", "codeRepository": "https://github.com/Andrea07072000/S.T.A.R.-", "programmingLanguage": "Python", "license": "https://www.apache.org/licenses/LICENSE-2.0", "author": {"@type": "Person", "name": "Andrea Cavazzini"}, "inLanguage": "it", "runtimePlatform": "Python >=3.9"}]</script>
+
+  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-CCzNtdfL.js"></script>
+  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-DCHVB_Yt.css">
 </head>
-<body data-page="software">
+<body data-page="software" data-lang="it" data-search="/S.T.A.R.-/search-it.json">
 <a class="skip" href="#main">Vai al contenuto</a>
 <header class="site-header">
  <div class="wrap">
@@ -28,6 +35,7 @@
     <a href="/S.T.A.R.-/software/star_mrp/" lang="en" hreflang="en">EN</a>
     <span aria-current="true">IT</span>
    </div>
+   <button class="btn small search-open" type="button" aria-haspopup="dialog" aria-keyshortcuts="Control+K Meta+K" title="Cerca nel sito">Cerca <kbd>Ctrl K</kbd></button>
    <a class="btn small primary" href="/S.T.A.R.-/it/assessment/#request">Richiedi una valutazione</a>
    <img class="header-logo" src="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" alt="S.T.A.R. logo" width="40" height="40">
   </div>
@@ -37,10 +45,10 @@
 <div class="wrap"><div class="page-head">
 <p><a href="/S.T.A.R.-/it/software/">← Tutti i pacchetti</a></p>
 <span class="eyebrow">Assetto</span><h1 class="mono pkg-title">star-mrp <span class="muted">0.1.0</span></h1>
-<p class="lead">Modified Rodrigues parameters</p>
+<p class="lead">Parametri di Rodrigues modificati</p>
 <p><span class="status ok">Apache-2.0</span> <span class="status ok">RELEASED</span> <span class="status soon">file singolo</span></p>
-<p class="small muted">La documentazione tecnica del pacchetto è in inglese, come il suo codice.</p></div>
-<section class="section tight"><h2>In parole semplici</h2><p class="lead">Modified Rodrigues parameters: conversion with quaternions, direction cosine matrices and rotation vectors, shadow set and switching, composition of rotations through quaternions (no division by zero at a full turn) and the kinematic equation; within 6e-16 of Basilisk and 2e-15 of SciPy on 601 pairs with norms from 1e-8 to 5.</p></section>
+</div>
+<section class="section tight"><h2>In parole semplici</h2><p class="lead">Parametri di Rodrigues modificati (MRP): conversione con quaternioni, matrici dei coseni direttori e vettori di rotazione, insieme ombra e commutazione, composizione di rotazioni tramite quaternioni (nessuna divisione per zero a un giro completo) ed equazione cinematica; entro 6e-16 da Basilisk e 2e-15 da SciPy su 601 coppie con norme da 1e-8 a 5.</p></section>
 <section class="section tight" id="try"><h2>Provalo qui</h2><p>Modifica il codice e premi Esegui (o Ctrl+Invio). Python gira nel tuo browser con il codice pubblicato di questo pacchetto. La prima volta scarica Python una sola volta (circa 12 MB).</p><div class="runner" data-wheels='[&quot;star_mrp-0.1.0-py3-none-any.whl&quot;]'><label class="visually-hidden" for="code-star_mrp">Python</label><textarea id="code-star_mrp" spellcheck="false" rows="8">import star_mrp as sm
 print(sm.mrp_from_quaternion((0.5, 0.5, 0.5, 0.5)))  # (0.333..., 0.333..., 0.333...): 120 degrees about (1, 1, 1)
 print(sm.quaternion_from_mrp((0, 0, 1)))  # (0.0, 0.0, 0.0, 1.0): a half turn about z
@@ -50,11 +58,20 @@ print(sm.mrp_rate((0.5, 0, 0), (0, 0.4, 0)))  # (0, 0.075, 0.1): d(sigma)/dt for
 <section class="section tight" id="use"><h2>Usalo sul tuo computer</h2><p>Non servono account né GitHub. Scarica, poi installa con un comando:</p>
 <ul class="files"><li><a class="btn small" href="/S.T.A.R.-/downloads/wheels/star_mrp-0.1.0-py3-none-any.whl" download>File di installazione · star_mrp-0.1.0-py3-none-any.whl</a> <span class="muted small">4 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/modules/star_mrp.py" download>File singolo — basta copiarlo accanto al tuo codice · star_mrp.py</a> <span class="muted small">6 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/source/star_mrp-0.1.0-source.zip" download>Codice sorgente (.zip)</a> <span class="muted small">25 kB</span></li></ul><pre class="cmd"><code>python -m pip install star_mrp-0.1.0-py3-none-any.whl</code></pre>
 <p class="small"><a href="/S.T.A.R.-/it/start/">Come iniziare →</a></p></section>
+<section class="section tight" id="cite"><h2>Citarlo, e la sua distinta dei componenti</h2><p>Per un articolo, una relazione o un fascicolo fornitore: la citazione in due formati e la distinta dei componenti software (SBOM) nei due formati standard, con l&#x27;impronta del wheel.</p><pre class="cmd"><code>@software{cavazzini_star_mrp_0_1_0,
+  author  = {Cavazzini, Andrea},
+  title   = {{star-mrp}: Parametri di Rodrigues modificati},
+  version = {0.1.0},
+  year    = {2026},
+  url     = {https://andrea07072000.github.io/S.T.A.R.-/software/star_mrp/},
+  note    = {Apache-2.0. Source: https://github.com/Andrea07072000/S.T.A.R.-, commit 94fcf7c}
+}
+</code></pre><ul class="inline-links"><li><a href="/S.T.A.R.-/cite/star_mrp.cff" download>CITATION.cff</a></li><li><a href="/S.T.A.R.-/cite/star_mrp.bib" download>BibTeX</a></li><li><a href="/S.T.A.R.-/sbom/star_mrp.cdx.json" download>SBOM CycloneDX 1.5</a></li><li><a href="/S.T.A.R.-/sbom/star_mrp.spdx.json" download>SBOM SPDX 2.3</a></li></ul></section>
 <section class="section tight" id="dev"><h2>Per sviluppatori</h2><p>Installa direttamente dal repository pubblico:</p><pre class="cmd"><code>python -m pip install &quot;star-mrp @ git+https://github.com/Andrea07072000/S.T.A.R.-.git#subdirectory=packages/star_mrp&quot;</code></pre>
 <p class="small"><a href="https://github.com/Andrea07072000/S.T.A.R.-/tree/main/packages/star_mrp">README · tests · evidence (GitHub)</a></p></section>
 <section class="section tight" id="tech"><h2>Scheda tecnica</h2><dl class="meta"><dt>Pacchetto</dt><dd class='mono'>star-mrp</dd><dt>Versione</dt><dd class='mono'>0.1.0</dd><dt>Licenza</dt><dd class='mono'>Apache-2.0</dd><dt>Python</dt><dd class='mono'>&gt;=3.9</dd><dt>Dipendenze</dt><dd class='mono'>nessuna (solo libreria standard)</dd><dt>Capacità</dt><dd class='mono'>star.attitude.mrp</dd><dt>Maturità</dt><dd class='mono'>RELEASED</dd><dt>Commit pubblicato</dt><dd class='mono'>94fcf7c</dd></dl>
-<h3>Requisiti</h3><ul class="reqs"><li><b class='mono'>R1</b> <code>mrp_from_quaternion</code>, <code>quaternion_from_mrp</code>, <code>dcm_from_mrp</code>, <code>rotation_vector_from_mrp</code>, <code>mrp_from_rotation_vector</code> convert between sigma = e tan(phi/4) and the other representations; <code>shadow</code> and <code>switch</code> give the other MRP of the same attitude; <code>compose(first, second)</code> chains two rotations; <code>mrp_rate(s, omega)</code> is the kinematic equation.</li><li><b class='mono'>R2</b> Quaternions are scalar first; the matrix takes reference to body; results of conversions and of <code>compose</code> are on the short rotation (|sigma| &lt;= 1, quaternion with w &gt;= 0, angle in [0, pi]). <code>compose</code> goes through quaternions, so two rotations that add up to a full turn give zero and not a division by zero.</li><li><b class='mono'>R3</b> Measured on 601 pairs of MRPs with norms from 1e-8 to 5 (a third beyond 1): eight operations agree with Basilisk within 6e-16 and seven with SciPy within 2e-15.</li><li><b class='mono'>R4</b> Every function returns floats or raises <code>ValueError</code>: vectors that are not three (or four) finite real numbers within 1e150, a zero quaternion, the shadow of the zero MRP, a threshold that is not positive.</li></ul>
-<h3>Limiti (che cosa non si afferma)</h3><p>Kinematics only: no dynamics, no control law, no integrator (<code>mrp_rate</code> is the right-hand side; integrating it and switching to the shadow set is left to the caller). At exactly half a turn the two MRPs of norm 1 are equally short and either may be returned. No Gibbs vector (classical Rodrigues parameters), no Euler angles (see star_euler). No published numerical table is reproduced: the references are cited for the formulas.</p>
+<h3>Requisiti</h3><ul class="reqs"><li><b class='mono'>R1</b> <code>mrp_from_quaternion</code>, <code>quaternion_from_mrp</code>, <code>dcm_from_mrp</code>, <code>rotation_vector_from_mrp</code>, <code>mrp_from_rotation_vector</code> convertono tra sigma = e tan(phi/4) e le altre rappresentazioni; <code>shadow</code> e <code>switch</code> danno l&#x27;altro MRP dello stesso assetto; <code>compose(first, second)</code> concatena due rotazioni; <code>mrp_rate(s, omega)</code> è l&#x27;equazione cinematica.</li><li><b class='mono'>R2</b> I quaternioni hanno lo scalare per primo; la matrice porta dal riferimento al corpo; i risultati delle conversioni e di <code>compose</code> sono sulla rotazione breve (|sigma| &lt;= 1, quaternione con w &gt;= 0, angolo in [0, pi]). <code>compose</code> passa per i quaternioni, quindi due rotazioni che sommano a un giro completo danno zero e non una divisione per zero.</li><li><b class='mono'>R3</b> Misurato su 601 coppie di MRP con norme da 1e-8 a 5 (un terzo oltre 1): otto operazioni concordano con Basilisk entro 6e-16 e sette con SciPy entro 2e-15.</li><li><b class='mono'>R4</b> Ogni funzione restituisce float o solleva <code>ValueError</code>: vettori che non sono tre (o quattro) numeri reali finiti entro 1e150, un quaternione nullo, l&#x27;insieme ombra dell&#x27;MRP nullo, una soglia non positiva.</li></ul>
+<h3>Limiti (che cosa non si afferma)</h3><p>Solo cinematica: niente dinamica, nessuna legge di controllo, nessun integratore (<code>mrp_rate</code> è il secondo membro; integrarlo e passare all&#x27;insieme ombra spetta a chi chiama). A esattamente mezzo giro i due MRP di norma 1 sono ugualmente brevi e può essere restituito l&#x27;uno o l&#x27;altro. Niente vettore di Gibbs (parametri di Rodrigues classici), niente angoli di Eulero (vedi star_euler). Non viene riprodotta alcuna tabella numerica pubblicata: i riferimenti sono citati per le formule.</p>
 <h3>Evidenze nel registro</h3><div class="table-scroll"><table class="data"><thead><tr><th>Controllo</th><th>Stato</th><th>Registrato</th><th>Che cosa è stato osservato</th></tr></thead><tbody><tr><td>Clean install from the release tag</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>pytest outside the tree: 383 passed in 0.94s</td></tr><tr><td>Unit tests</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>383 passed in 3.52s</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>Requirements, interface, units, data provenance, dependency surface and failure behaviour reviewed</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>Re-running the cross-check gives a byte-identical evidence file</td></tr><tr><td>Reference value</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>mrp_from_quaternion((0.5, 0.5, 0.5, 0.5)) = (0.3333333333333333, 0.3333333333333333, 0.3333333333333333); quaternion_from_mrp((0, 0, 1)) = (0.0, 0.0, 0.0, 1.0) (suite: 383 passed in 3.52s)</td></tr><tr><td>Cross-check with independent libraries</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>star_mrp converts, composes and differentiates modified Rodrigues parameters as two independent implementations do, the shadow set included</td></tr><tr><td>Benchmark</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>largest difference from Basilisk: 5.6e-16; from SciPy: 1.3e-15</td></tr></tbody></table></div>
 <h3>Impronte (SHA-256)</h3><div class="table-scroll"><table class="data"><tbody><tr><td class='mono small'>star_mrp-0.1.0-py3-none-any.whl</td><td class='mono small hash'>e94f7a9856393cb1dc2f43a23ad7ad1a5914d944df478a52e13b97425a19c1f9</td></tr><tr><td class='mono small'>star_mrp.py</td><td class='mono small hash'>dd6d256d9a3a171e89e377271cc6e8d48ecb22661109db2db20453cefd25af04</td></tr><tr><td class='mono small'>star_mrp-0.1.0-source.zip</td><td class='mono small hash'>f81ac04252da4bf209f5391757acf513c09bf4959b5843f78f1252edf523fd59</td></tr></tbody></table></div>
 </section></div>
@@ -70,9 +87,10 @@ print(sm.mrp_rate((0.5, 0, 0), (0, 0.4, 0)))  # (0, 0.075, 0.1): d(sigma)/dt for
    <div><h2>Contatti</h2><ul><li><a href="mailto:Info.and.News.S.T.A.R@proton.me">Info.and.News.S.T.A.R@proton.me</a></li>
     <li><a href="/S.T.A.R.-/it/assessment/#request">Richiedi una valutazione</a></li></ul></div>
   </div>
-  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generato dal registro il 2026-10-15 · commit di ingegneria c54092b · commit pubblico 94fcf7c</span>
+  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generato dal registro il 2026-10-15 · commit di ingegneria 173e61f · commit pubblico 94fcf7c</span>
    <a href="/S.T.A.R.-/software/star_mrp/" lang="en">English</a></div>
  </div>
 </footer>
+<dialog class="search-dlg" aria-label="Cerca nel sito"><form method="dialog" class="search-box"><label class="visually-hidden" for="site-q">Cerca nel sito</label><input id="site-q" type="search" autocomplete="off" placeholder="Pacchetti, documenti legali, pagine…"><button class="btn small" value="close">Esc</button></form><ul class="search-res" role="listbox"></ul><p class="small muted search-none" hidden>Nessun risultato. Prova una parola più corta.</p></dialog>
 </body>
 </html>
