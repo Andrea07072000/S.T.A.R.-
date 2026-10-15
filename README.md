@@ -3,6 +3,8 @@
 [![tests](https://github.com/Andrea07072000/S.T.A.R.-/actions/workflows/tests.yml/badge.svg)](https://github.com/Andrea07072000/S.T.A.R.-/actions/workflows/tests.yml)
 [![packages](https://github.com/Andrea07072000/S.T.A.R.-/actions/workflows/packages.yml/badge.svg)](https://github.com/Andrea07072000/S.T.A.R.-/actions/workflows/packages.yml)
 
+**Website:** [andrea07072000.github.io/S.T.A.R.-](https://andrea07072000.github.io/S.T.A.R.-/) — the packages, the evidence and how to request an engineering assessment.
+
 > **Correction 2026-10-08 (second)** — `star_kepler` 0.1.0 failed with `OverflowError` on hyperbolic orbits
 > propagated for long times (first seen: a 20 km/s flyby after 1e6 s); 0.1.1 propagates them (energy conserved to
 > 1e-11 up to 1e9 s) and gives the same numbers where 0.1.0 worked. `star_cdm` 0.2.1 `rtn_axes` divided by zero when
