@@ -2,6 +2,8 @@
 <html lang="en" data-base="/S.T.A.R.-/">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>star-chebyshev — Chebyshev series with their derivative · S.T.A.R.</title>
 <meta name="description" content="Value and first derivative of a Chebyshev series by Clenshaw&#x27;s recurrence, on [-1, 1] or on an interval given by midpoint and radius (the convention of ephemeris segments); 600 series agree with CSPIC">
@@ -20,8 +22,8 @@
 <meta name="twitter:card" content="summary">
 <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "star-chebyshev", "version": "0.1.0", "description": "Value and first derivative of a Chebyshev series by Clenshaw's recurrence, on [-1, 1] or on an interval given by midpoint and radius (the convention of ephemeris segments); 600 series agree with CSPICE chbval/chbder and NumPy within 1e-14 and with mpmath at 40 digits within 5e-14 of the natural scale of the sum; reproduces the NAIF documentation example.", "url": "https://andrea07072000.github.io/S.T.A.R.-/software/star_chebyshev/", "codeRepository": "https://github.com/Andrea07072000/S.T.A.R.-", "programmingLanguage": "Python", "license": "https://www.apache.org/licenses/LICENSE-2.0", "author": {"@type": "Person", "name": "Andrea Cavazzini"}, "inLanguage": "en", "runtimePlatform": "Python >=3.9"}]</script>
 
-  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-CCzNtdfL.js"></script>
-  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-DCHVB_Yt.css">
+  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-CNEomOuj.js"></script>
+  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-DqwyaoOm.css">
 </head>
 <body data-page="software" data-lang="en" data-search="/S.T.A.R.-/search-en.json">
 <a class="skip" href="#main">Skip to content</a>
@@ -29,7 +31,7 @@
  <div class="wrap">
   <a class="wordmark" href="/S.T.A.R.-/">S.T.A.R.</a>
   <button class="btn small menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
-  <nav class="main-nav" id="main-nav" aria-label="Main"><a href="/S.T.A.R.-/start/">Get started</a><a href="/S.T.A.R.-/software/" aria-current="page">Software</a><a href="/S.T.A.R.-/evidence/">Evidence</a><a href="/S.T.A.R.-/assessment/">Assessment</a><a href="/S.T.A.R.-/about/">About</a></nav>
+  <nav class="main-nav" id="main-nav" aria-label="Main"><a href="/S.T.A.R.-/start/">Get started</a><a href="/S.T.A.R.-/software/" aria-current="page">Software</a><a href="/S.T.A.R.-/evidence/">Evidence</a><a href="/S.T.A.R.-/assessment/">Assessment</a><a href="/S.T.A.R.-/about/">About</a><button class="search-open nav-search" type="button" aria-haspopup="dialog">Search the site</button></nav>
   <div class="header-right">
    <div class="lang" role="group" aria-label="Language">
     <span aria-current="true">EN</span>
@@ -84,7 +86,7 @@ print(sc.evaluate_on([1, 3, 0.5, 1, 0.5, -1, 1], 1, 0.5, 3))  # (-0.3408779..., 
    <div><h2>Contact</h2><ul><li><a href="mailto:Info.and.News.S.T.A.R@proton.me">Info.and.News.S.T.A.R@proton.me</a></li>
     <li><a href="/S.T.A.R.-/assessment/#request">Request an assessment</a></li></ul></div>
   </div>
-  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generated from the registry on 2026-10-15 · engineering commit 173e61f · public commit 94fcf7c</span>
+  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generated from the registry on 2026-10-15 · engineering commit 3b5be48 · public commit 94fcf7c</span>
    <a href="/S.T.A.R.-/it/software/star_chebyshev/" lang="it">Italiano</a></div>
  </div>
 </footer>
