@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="it" data-base="/S.T.A.R.-/">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pacchetto star-iod — Velocity from three positions (Gibbs, Herrick-Gibbs) · S.T.A.R.</title>
+<meta name="description" content="Velocity at the middle of three position vectors by Gibbs&#x27; method (cancellation-free form) and Herrick-Gibbs, with the measured domain of each (crossover near 0.4 degrees), agreement with Orekit IodGi">
+<link rel="icon" href="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" type="image/png">
+<link rel="canonical" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_iod/">
+<link rel="alternate" hreflang="en" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_iod/">
+<link rel="alternate" hreflang="it" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_iod/">
+<link rel="alternate" hreflang="x-default" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_iod/">
+<meta property="og:title" content="Pacchetto star-iod — Velocity from three positions (Gibbs, Herrick-Gibbs) · S.T.A.R.">
+<meta property="og:description" content="Velocity at the middle of three position vectors by Gibbs&#x27; method (cancellation-free form) and Herrick-Gibbs, with the measured domain of each (crossover near 0.4 degrees), agreement with Orekit IodGi">
+<meta property="og:image" content="https://andrea07072000.github.io/S.T.A.R.-/assets/images/star_logo_dark_transparent.png">
+  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-Dx8lu5GH.js"></script>
+  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-CJ2BHFzs.css">
+</head>
+<body data-page="software">
+<a class="skip" href="#main">Vai al contenuto</a>
+<header class="site-header">
+ <div class="wrap">
+  <a class="wordmark" href="/S.T.A.R.-/it/">S.T.A.R.</a>
+  <button class="btn small menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+  <nav class="main-nav" id="main-nav" aria-label="Main"><a href="/S.T.A.R.-/it/start/">Come iniziare</a><a href="/S.T.A.R.-/it/software/" aria-current="page">Software</a><a href="/S.T.A.R.-/it/evidence/">Evidenze</a><a href="/S.T.A.R.-/it/assessment/">Valutazione</a><a href="/S.T.A.R.-/it/about/">Chi siamo</a></nav>
+  <div class="header-right">
+   <div class="lang" role="group" aria-label="Language">
+    <a href="/S.T.A.R.-/software/star_iod/" lang="en" hreflang="en">EN</a>
+    <span aria-current="true">IT</span>
+   </div>
+   <a class="btn small primary" href="/S.T.A.R.-/it/assessment/#request">Richiedi una valutazione</a>
+   <img class="header-logo" src="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" alt="S.T.A.R. logo" width="40" height="40">
+  </div>
+ </div>
+</header>
+<main id="main">
+<div class="wrap"><div class="page-head">
+<p><a href="/S.T.A.R.-/it/software/">← Tutti i pacchetti</a></p>
+<span class="eyebrow">Orbite e astrodinamica</span><h1 class="mono pkg-title">star-iod <span class="muted">0.1.0</span></h1>
+<p class="lead">Velocity from three positions (Gibbs, Herrick-Gibbs)</p>
+<p><span class="status ok">Apache-2.0</span> <span class="status ok">RELEASED</span> <span class="status soon">file singolo</span></p>
+<p class="small muted">La documentazione tecnica del pacchetto è in inglese, come il suo codice.</p></div>
+<section class="section tight"><h2>In parole semplici</h2><p class="lead">Velocity at the middle of three position vectors by Gibbs&#x27; method (cancellation-free form) and Herrick-Gibbs, with the measured domain of each (crossover near 0.4 degrees), agreement with Orekit IodGibbs within 8e-9 and explicit refusal of non-coplanar, collinear or impossible geometry.</p></section>
+<section class="section tight" id="try"><h2>Provalo qui</h2><p>Modifica il codice e premi Esegui (o Ctrl+Invio). Python gira nel tuo browser con il codice pubblicato di questo pacchetto. La prima volta scarica Python una sola volta (circa 12 MB).</p><div class="runner" data-wheels='[&quot;star_iod-0.1.0-py3-none-any.whl&quot;]'><label class="visually-hidden" for="code-star_iod">Python</label><textarea id="code-star_iod" spellcheck="false" rows="6">import star_iod
+v2 = star_iod.gibbs(r1, r2, r3)                                  # km -&gt; km/s, positions more than ~0.4 deg apart
+v2 = star_iod.herrick_gibbs(r1, r2, r3, t1, t2, t3)              # closely spaced positions with their times (s)
+print(star_iod.separation_deg(r1, r2, r3))  # to choose between the two</textarea><div class="runner-bar"><button class="btn primary run" type="button">Esegui</button><button class="btn reset" type="button">Ripristina</button></div><output aria-live="polite"></output></div></section>
+<section class="section tight" id="use"><h2>Usalo sul tuo computer</h2><p>Non servono account né GitHub. Scarica, poi installa con un comando:</p>
+<ul class="files"><li><a class="btn small" href="/S.T.A.R.-/downloads/wheels/star_iod-0.1.0-py3-none-any.whl" download>File di installazione · star_iod-0.1.0-py3-none-any.whl</a> <span class="muted small">3 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/modules/star_iod.py" download>File singolo — basta copiarlo accanto al tuo codice · star_iod.py</a> <span class="muted small">6 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/source/star_iod-0.1.0-source.zip" download>Codice sorgente (.zip)</a> <span class="muted small">20 kB</span></li></ul><pre class="cmd"><code>python -m pip install star_iod-0.1.0-py3-none-any.whl</code></pre>
+<p class="small"><a href="/S.T.A.R.-/it/start/">Come iniziare →</a></p></section>
+<section class="section tight" id="dev"><h2>Per sviluppatori</h2><p>Installa direttamente dal repository pubblico:</p><pre class="cmd"><code>python -m pip install &quot;star-iod @ git+https://github.com/Andrea07072000/S.T.A.R.-.git#subdirectory=packages/star_iod&quot;</code></pre>
+<p class="small"><a href="https://github.com/Andrea07072000/S.T.A.R.-/tree/main/packages/star_iod">README · tests · evidence (GitHub)</a></p></section>
+<section class="section tight" id="tech"><h2>Scheda tecnica</h2><dl class="meta"><dt>Pacchetto</dt><dd class='mono'>star-iod</dd><dt>Versione</dt><dd class='mono'>0.1.0</dd><dt>Licenza</dt><dd class='mono'>Apache-2.0</dd><dt>Python</dt><dd class='mono'>&gt;=3.9</dd><dt>Dipendenze</dt><dd class='mono'>nessuna (solo libreria standard)</dd><dt>Capacità</dt><dd class='mono'>star.orbit.iod-gibbs</dd><dt>Maturità</dt><dd class='mono'>RELEASED</dd><dt>Commit pubblicato</dt><dd class='mono'>94fcf7c</dd></dl>
+<h3>Requisiti</h3><ul class="reqs"><li><b class='mono'>R1</b> <code>gibbs(r1, r2, r3, mu, coplanar_tol_deg=3)</code>: Vallado Algorithm 54. Reproduces Example 7-3 within 5e-7 km/s. The direction of motion is the order r1, r2, r3. The sums of the textbook form are written with differences of neighbouring vectors: at 0.02 degrees of spacing the error is 2e-8 relative instead of 1.5e-5.</li><li><b class='mono'>R2</b> <code>herrick_gibbs(r1, r2, r3, t1, t2, t3, mu, coplanar_tol_deg=3)</code>: Vallado Algorithm 55, for closely spaced positions; <code>separation_deg</code> returns the two angles.</li><li><b class='mono'>R3</b> Measured domains (240 known orbits, largest relative velocity error by spacing in mean anomaly):</li><li><b class='mono'>R4</b> Every function returns three finite floats or raises <code>ValueError</code>: wrong shapes, non-numeric, boolean, NaN or infinite input; a zero position; mu &lt;= 0; positions further than <code>coplanar_tol_deg</code> from a common plane; collinear or coincident positions; positions through which no orbit about the centre passes (Gibbs); times not strictly increasing (Herrick-Gibbs).</li></ul>
+<h3>Limiti (che cosa non si afferma)</h3><p>Perfect positions in, velocity out: no measurement noise model, no covariance, no angles-only methods (Gauss, Laplace, Gooding), no differential correction. With noisy fixes the error of either method is dominated by the noise divided by the arc length, not by the figures above.</p>
+<h3>Evidenze nel registro</h3><div class="table-scroll"><table class="data"><thead><tr><th>Controllo</th><th>Stato</th><th>Registrato</th><th>Che cosa è stato osservato</th></tr></thead><tbody><tr><td>Unit tests</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>39 passed in 0.38s</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>Requirements, interface, units, data provenance, dependency surface and failure behaviour reviewed</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>Re-running the cross-check gives a byte-identical evidence file</td></tr><tr><td>Reference value</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>all three components within 2.2e-7 km/s of the printed values; Example 7-4 (Herrick-Gibbs) first two components within 1e-6 km/s, third component not asserted (suite: 39 passed in 0.38s)</td></tr><tr><td>Cross-check with independent libraries</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>star_iod recovers the true velocity of known orbits and agrees with an independent implementation of Gibbs&#x27; method</td></tr><tr><td>Benchmark</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>largest relative velocity error by spacing (Gibbs / Herrick-Gibbs): 0.02 deg 2.2e-08 / 6.7e-12, 0.1 deg 1.1e-09 / 2.0e-11, 0.5 deg 4.1e-11 / 1.1e-07, 2.0 deg 2.6e-12 / 1.6e-05, 10.0 deg 1.2e-13 / 6.0e-02, 40.0 deg 1.2e-14 / 5.1e-01</td></tr><tr><td>Clean install from the release tag</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>pytest outside the tree: 39 passed in 0.23s</td></tr></tbody></table></div>
+<h3>Impronte (SHA-256)</h3><div class="table-scroll"><table class="data"><tbody><tr><td class='mono small'>star_iod-0.1.0-py3-none-any.whl</td><td class='mono small hash'>aa4cf7056e95a013a28d5a4270f713ee800f68cf6778bdc5e0563794adedc983</td></tr><tr><td class='mono small'>star_iod.py</td><td class='mono small hash'>6a2072071e695d5209723ff1f667502faff9e7f3c5683732a9765f1e4878d01e</td></tr><tr><td class='mono small'>star_iod-0.1.0-source.zip</td><td class='mono small hash'>bdd4a1594fc7591bab2b901ae8f59e56b4d9d580b2c4501af24b9498790b665b</td></tr></tbody></table></div>
+</section></div>
+</main>
+<footer class="site-footer">
+ <div class="wrap">
+  <div class="foot-grid">
+   <div><div class="foot-brand"><img src="/S.T.A.R.-/assets/images/star_logo_white_transparent.png" alt="" width="36" height="36">S.T.A.R.</div>
+    <p>Engineering Intelligence. Built to be Verified.</p><p class="small">Un progetto indipendente di Andrea Cavazzini, Italia. Non è una società.<br>Maturità di prototipo (TRL ≤ 6). Non qualificato per il volo. Nessuna certificazione.</p></div>
+   <div><h2>Esplora</h2><ul><li><a href="/S.T.A.R.-/it/start/">Come iniziare</a></li><li><a href="/S.T.A.R.-/it/software/">Software</a></li><li><a href="/S.T.A.R.-/it/evidence/">Evidenze</a></li><li><a href="/S.T.A.R.-/it/assessment/">Valutazione</a></li><li><a href="/S.T.A.R.-/it/about/">Chi siamo</a></li>
+    <li><a href="/S.T.A.R.-/it/downloads/">Download</a></li><li><a href="https://github.com/Andrea07072000/S.T.A.R.-">GitHub</a></li></ul></div>
+   <div><h2>Fiducia e documenti legali</h2><ul><li><a href="/S.T.A.R.-/it/legal/notice/">Note legali</a></li><li><a href="/S.T.A.R.-/it/legal/terms/">Termini d&#x27;uso del sito</a></li><li><a href="/S.T.A.R.-/it/legal/privacy/">Informativa sulla privacy</a></li><li><a href="/S.T.A.R.-/it/legal/cookies/">Informativa sui cookie</a></li><li><a href="/S.T.A.R.-/it/legal/disclaimer/">Avvertenza su evidenze e verifiche</a></li><li><a href="/S.T.A.R.-/it/legal/licences/">Licenze</a></li><li><a href="/S.T.A.R.-/it/legal/permissions/">Che cosa puoi fare con il software S.T.A.R.</a></li><li><a href="/S.T.A.R.-/it/legal/">Tutti i documenti legali</a></li></ul></div>
+   <div><h2>Contatti</h2><ul><li><a href="mailto:Info.and.News.S.T.A.R@proton.me">Info.and.News.S.T.A.R@proton.me</a></li>
+    <li><a href="/S.T.A.R.-/it/assessment/#request">Richiedi una valutazione</a></li></ul></div>
+  </div>
+  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generato dal registro il 2026-10-15 · commit di ingegneria c54092b · commit pubblico 94fcf7c</span>
+   <a href="/S.T.A.R.-/software/star_iod/" lang="en">English</a></div>
+ </div>
+</footer>
+</body>
+</html>

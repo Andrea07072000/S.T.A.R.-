@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="it" data-base="/S.T.A.R.-/">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pacchetto star-tdb — TDB - TT with the USNO Circular 179 series, verified against ERFA full series within 10 microseconds · S.T.A.R.</title>
+<meta name="description" content="TDB - TT for a TT Julian date, geocentre. Standard library only.">
+<link rel="icon" href="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" type="image/png">
+<link rel="canonical" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_tdb/">
+<link rel="alternate" hreflang="en" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_tdb/">
+<link rel="alternate" hreflang="it" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_tdb/">
+<link rel="alternate" hreflang="x-default" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_tdb/">
+<meta property="og:title" content="Pacchetto star-tdb — TDB - TT with the USNO Circular 179 series, verified against ERFA full series within 10 microseconds · S.T.A.R.">
+<meta property="og:description" content="TDB - TT for a TT Julian date, geocentre. Standard library only.">
+<meta property="og:image" content="https://andrea07072000.github.io/S.T.A.R.-/assets/images/star_logo_dark_transparent.png">
+  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-Dx8lu5GH.js"></script>
+  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-CJ2BHFzs.css">
+</head>
+<body data-page="software">
+<a class="skip" href="#main">Vai al contenuto</a>
+<header class="site-header">
+ <div class="wrap">
+  <a class="wordmark" href="/S.T.A.R.-/it/">S.T.A.R.</a>
+  <button class="btn small menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+  <nav class="main-nav" id="main-nav" aria-label="Main"><a href="/S.T.A.R.-/it/start/">Come iniziare</a><a href="/S.T.A.R.-/it/software/" aria-current="page">Software</a><a href="/S.T.A.R.-/it/evidence/">Evidenze</a><a href="/S.T.A.R.-/it/assessment/">Valutazione</a><a href="/S.T.A.R.-/it/about/">Chi siamo</a></nav>
+  <div class="header-right">
+   <div class="lang" role="group" aria-label="Language">
+    <a href="/S.T.A.R.-/software/star_tdb/" lang="en" hreflang="en">EN</a>
+    <span aria-current="true">IT</span>
+   </div>
+   <a class="btn small primary" href="/S.T.A.R.-/it/assessment/#request">Richiedi una valutazione</a>
+   <img class="header-logo" src="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" alt="S.T.A.R. logo" width="40" height="40">
+  </div>
+ </div>
+</header>
+<main id="main">
+<div class="wrap"><div class="page-head">
+<p><a href="/S.T.A.R.-/it/software/">← Tutti i pacchetti</a></p>
+<span class="eyebrow">Tempo e rotazione terrestre</span><h1 class="mono pkg-title">star-tdb <span class="muted">0.1.1</span></h1>
+<p class="lead">TDB - TT with the USNO Circular 179 series, verified against ERFA full series within 10 microseconds</p>
+<p><span class="status ok">Apache-2.0</span> <span class="status ok">RELEASED</span> <span class="status soon">file singolo</span></p>
+<p class="small muted">La documentazione tecnica del pacchetto è in inglese, come il suo codice.</p></div>
+<section class="section tight"><h2>In parole semplici</h2><p class="lead">TDB - TT for a TT Julian date, geocentre. Standard library only.</p></section>
+<section class="section tight" id="try"><h2>Provalo qui</h2><p>Modifica il codice e premi Esegui (o Ctrl+Invio). Python gira nel tuo browser con il codice pubblicato di questo pacchetto. La prima volta scarica Python una sola volta (circa 12 MB).</p><div class="runner" data-wheels='[&quot;star_tdb-0.1.1-py3-none-any.whl&quot;]'><label class="visually-hidden" for="code-star_tdb">Python</label><textarea id="code-star_tdb" spellcheck="false" rows="7">import star_tdb
+
+# what this package offers
+print([name for name in dir(star_tdb) if not name.startswith(&#x27;_&#x27;)])
+print(star_tdb.__doc__)</textarea><div class="runner-bar"><button class="btn primary run" type="button">Esegui</button><button class="btn reset" type="button">Ripristina</button></div><output aria-live="polite"></output></div></section>
+<section class="section tight" id="use"><h2>Usalo sul tuo computer</h2><p>Non servono account né GitHub. Scarica, poi installa con un comando:</p>
+<ul class="files"><li><a class="btn small" href="/S.T.A.R.-/downloads/wheels/star_tdb-0.1.1-py3-none-any.whl" download>File di installazione · star_tdb-0.1.1-py3-none-any.whl</a> <span class="muted small">2 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/modules/star_tdb.py" download>File singolo — basta copiarlo accanto al tuo codice · star_tdb.py</a> <span class="muted small">1 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/source/star_tdb-0.1.1-source.zip" download>Codice sorgente (.zip)</a> <span class="muted small">11 kB</span></li></ul><pre class="cmd"><code>python -m pip install star_tdb-0.1.1-py3-none-any.whl</code></pre>
+<p class="small"><a href="/S.T.A.R.-/it/start/">Come iniziare →</a></p></section>
+<section class="section tight" id="dev"><h2>Per sviluppatori</h2><p>Installa direttamente dal repository pubblico:</p><pre class="cmd"><code>python -m pip install &quot;star-tdb @ git+https://github.com/Andrea07072000/S.T.A.R.-.git#subdirectory=packages/star_tdb&quot;</code></pre>
+<p class="small"><a href="https://github.com/Andrea07072000/S.T.A.R.-/tree/main/packages/star_tdb">README · tests · evidence (GitHub)</a></p></section>
+<section class="section tight" id="tech"><h2>Scheda tecnica</h2><dl class="meta"><dt>Pacchetto</dt><dd class='mono'>star-tdb</dd><dt>Versione</dt><dd class='mono'>0.1.1</dd><dt>Licenza</dt><dd class='mono'>Apache-2.0</dd><dt>Python</dt><dd class='mono'>&gt;=3.9</dd><dt>Dipendenze</dt><dd class='mono'>nessuna (solo libreria standard)</dd><dt>Capacità</dt><dd class='mono'>star.time.tdb</dd><dt>Maturità</dt><dd class='mono'>RELEASED</dd><dt>Commit pubblicato</dt><dd class='mono'>94fcf7c</dd></dl>
+<h3>Requisiti</h3><ul class="reqs"><li><b class='mono'>R1</b> <code>tdb_minus_tt(jd_tt) -&gt; seconds</code>, USNO Circular 179 (Kaplan 2005) eq. 2.6, 7 terms.</li><li><b class='mono'>R2</b> Accuracy within 10 microseconds of the full Fairhead &amp; Bretagnon series over 1600-2200.</li><li><b class='mono'>R3</b> Outside 1600-2200 raises <code>ValueError</code> (no extrapolation beyond stated validity).</li></ul>
+
+<h3>Evidenze nel registro</h3><div class="table-scroll"><table class="data"><thead><tr><th>Controllo</th><th>Stato</th><th>Registrato</th><th>Che cosa è stato osservato</th></tr></thead><tbody><tr><td>Clean install from the release tag</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-05</td><td class='small'>pytest outside the tree: 13 passed in 0.08s</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-04</td><td class='small'>Re-execution of bench.xc-012 reproduces the committed evidence bundles</td></tr><tr><td>Cross-check with independent libraries</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-04</td><td class='small'>star_tdb (7-term series) and ERFA dtdb (full series) agree within 10 us</td></tr><tr><td>Benchmark</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-04</td><td class='small'>13/13 AGREE</td></tr><tr><td>Unit tests</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-04</td><td class='small'>3/3 pass</td></tr><tr><td>Mutation testing</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-04</td><td class='small'>before 56/72 = 0.7778; after 70/72 = 0.9722</td></tr><tr><td>Reference value</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-04</td><td class='small'>max |difference| 8.996 us (scan every 37 days, 5919 dates; JD 2459959.5)</td></tr></tbody></table></div>
+<h3>Impronte (SHA-256)</h3><div class="table-scroll"><table class="data"><tbody><tr><td class='mono small'>star_tdb-0.1.1-py3-none-any.whl</td><td class='mono small hash'>ba9a7ae408d7aa74829bb51916ebebeb0abadab27b6835cc7a25b258a85beb75</td></tr><tr><td class='mono small'>star_tdb.py</td><td class='mono small hash'>126fafbabc0d9fd6e288042c8abbb282516c5ac9859485d09a12688d4d642e35</td></tr><tr><td class='mono small'>star_tdb-0.1.1-source.zip</td><td class='mono small hash'>2809584bcdd284c2f77ab695d0343998b8a9563022cb1e62aa40021db3528e0e</td></tr></tbody></table></div>
+</section></div>
+</main>
+<footer class="site-footer">
+ <div class="wrap">
+  <div class="foot-grid">
+   <div><div class="foot-brand"><img src="/S.T.A.R.-/assets/images/star_logo_white_transparent.png" alt="" width="36" height="36">S.T.A.R.</div>
+    <p>Engineering Intelligence. Built to be Verified.</p><p class="small">Un progetto indipendente di Andrea Cavazzini, Italia. Non è una società.<br>Maturità di prototipo (TRL ≤ 6). Non qualificato per il volo. Nessuna certificazione.</p></div>
+   <div><h2>Esplora</h2><ul><li><a href="/S.T.A.R.-/it/start/">Come iniziare</a></li><li><a href="/S.T.A.R.-/it/software/">Software</a></li><li><a href="/S.T.A.R.-/it/evidence/">Evidenze</a></li><li><a href="/S.T.A.R.-/it/assessment/">Valutazione</a></li><li><a href="/S.T.A.R.-/it/about/">Chi siamo</a></li>
+    <li><a href="/S.T.A.R.-/it/downloads/">Download</a></li><li><a href="https://github.com/Andrea07072000/S.T.A.R.-">GitHub</a></li></ul></div>
+   <div><h2>Fiducia e documenti legali</h2><ul><li><a href="/S.T.A.R.-/it/legal/notice/">Note legali</a></li><li><a href="/S.T.A.R.-/it/legal/terms/">Termini d&#x27;uso del sito</a></li><li><a href="/S.T.A.R.-/it/legal/privacy/">Informativa sulla privacy</a></li><li><a href="/S.T.A.R.-/it/legal/cookies/">Informativa sui cookie</a></li><li><a href="/S.T.A.R.-/it/legal/disclaimer/">Avvertenza su evidenze e verifiche</a></li><li><a href="/S.T.A.R.-/it/legal/licences/">Licenze</a></li><li><a href="/S.T.A.R.-/it/legal/permissions/">Che cosa puoi fare con il software S.T.A.R.</a></li><li><a href="/S.T.A.R.-/it/legal/">Tutti i documenti legali</a></li></ul></div>
+   <div><h2>Contatti</h2><ul><li><a href="mailto:Info.and.News.S.T.A.R@proton.me">Info.and.News.S.T.A.R@proton.me</a></li>
+    <li><a href="/S.T.A.R.-/it/assessment/#request">Richiedi una valutazione</a></li></ul></div>
+  </div>
+  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generato dal registro il 2026-10-15 · commit di ingegneria c54092b · commit pubblico 94fcf7c</span>
+   <a href="/S.T.A.R.-/software/star_tdb/" lang="en">English</a></div>
+ </div>
+</footer>
+</body>
+</html>

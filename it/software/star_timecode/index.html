@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="it" data-base="/S.T.A.R.-/">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pacchetto star-timecode — CCSDS ASCII time codes A and B, strict · S.T.A.R.</title>
+<meta name="description" content="Strict reader and writer of the CCSDS 301.0-B-4 ASCII time codes A (calendar) and B (day of year), with the fraction kept as its digits; fields equal to CPython datetime and numpy.datetime64 on 600 in">
+<link rel="icon" href="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" type="image/png">
+<link rel="canonical" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_timecode/">
+<link rel="alternate" hreflang="en" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_timecode/">
+<link rel="alternate" hreflang="it" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_timecode/">
+<link rel="alternate" hreflang="x-default" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_timecode/">
+<meta property="og:title" content="Pacchetto star-timecode — CCSDS ASCII time codes A and B, strict · S.T.A.R.">
+<meta property="og:description" content="Strict reader and writer of the CCSDS 301.0-B-4 ASCII time codes A (calendar) and B (day of year), with the fraction kept as its digits; fields equal to CPython datetime and numpy.datetime64 on 600 in">
+<meta property="og:image" content="https://andrea07072000.github.io/S.T.A.R.-/assets/images/star_logo_dark_transparent.png">
+  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-Dx8lu5GH.js"></script>
+  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-CJ2BHFzs.css">
+</head>
+<body data-page="software">
+<a class="skip" href="#main">Vai al contenuto</a>
+<header class="site-header">
+ <div class="wrap">
+  <a class="wordmark" href="/S.T.A.R.-/it/">S.T.A.R.</a>
+  <button class="btn small menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+  <nav class="main-nav" id="main-nav" aria-label="Main"><a href="/S.T.A.R.-/it/start/">Come iniziare</a><a href="/S.T.A.R.-/it/software/" aria-current="page">Software</a><a href="/S.T.A.R.-/it/evidence/">Evidenze</a><a href="/S.T.A.R.-/it/assessment/">Valutazione</a><a href="/S.T.A.R.-/it/about/">Chi siamo</a></nav>
+  <div class="header-right">
+   <div class="lang" role="group" aria-label="Language">
+    <a href="/S.T.A.R.-/software/star_timecode/" lang="en" hreflang="en">EN</a>
+    <span aria-current="true">IT</span>
+   </div>
+   <a class="btn small primary" href="/S.T.A.R.-/it/assessment/#request">Richiedi una valutazione</a>
+   <img class="header-logo" src="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" alt="S.T.A.R. logo" width="40" height="40">
+  </div>
+ </div>
+</header>
+<main id="main">
+<div class="wrap"><div class="page-head">
+<p><a href="/S.T.A.R.-/it/software/">← Tutti i pacchetti</a></p>
+<span class="eyebrow">Tempo e rotazione terrestre</span><h1 class="mono pkg-title">star-timecode <span class="muted">0.1.0</span></h1>
+<p class="lead">CCSDS ASCII time codes A and B, strict</p>
+<p><span class="status ok">Apache-2.0</span> <span class="status ok">RELEASED</span> <span class="status soon">file singolo</span></p>
+<p class="small muted">La documentazione tecnica del pacchetto è in inglese, come il suo codice.</p></div>
+<section class="section tight"><h2>In parole semplici</h2><p class="lead">Strict reader and writer of the CCSDS 301.0-B-4 ASCII time codes A (calendar) and B (day of year), with the fraction kept as its digits; fields equal to CPython datetime and numpy.datetime64 on 600 instants and to astropy on the 331 between 1900 and 2100; refuses all 40 malformed or out-of-range texts of the corpus, of which the ISO parsers of those libraries accept 10 to 14.</p></section>
+<section class="section tight" id="try"><h2>Provalo qui</h2><p>Modifica il codice e premi Esegui (o Ctrl+Invio). Python gira nel tuo browser con il codice pubblicato di questo pacchetto. La prima volta scarica Python una sola volta (circa 12 MB).</p><div class="runner" data-wheels='[&quot;star_timecode-0.1.0-py3-none-any.whl&quot;]'><label class="visually-hidden" for="code-star_timecode">Python</label><textarea id="code-star_timecode" spellcheck="false" rows="7">import star_timecode as tc
+print(tc.parse(&quot;1988-01-18T17:20:43.123456Z&quot;))  # (1988, 1, 18, 17, 20, 43, &#x27;123456&#x27;)
+print(tc.parse(&quot;1988-018T17:20:43.123456Z&quot;))  # the same fields, from the day-of-year form
+print(tc.format_b(2026, 10, 7, 2, 45, 10))  # &#x27;2026-280T02:45:10Z&#x27;
+print(tc.parse(&quot;2026-10-07 02:45:10&quot;))  # ValueError: a space is not the letter T</textarea><div class="runner-bar"><button class="btn primary run" type="button">Esegui</button><button class="btn reset" type="button">Ripristina</button></div><output aria-live="polite"></output></div></section>
+<section class="section tight" id="use"><h2>Usalo sul tuo computer</h2><p>Non servono account né GitHub. Scarica, poi installa con un comando:</p>
+<ul class="files"><li><a class="btn small" href="/S.T.A.R.-/downloads/wheels/star_timecode-0.1.0-py3-none-any.whl" download>File di installazione · star_timecode-0.1.0-py3-none-any.whl</a> <span class="muted small">3 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/modules/star_timecode.py" download>File singolo — basta copiarlo accanto al tuo codice · star_timecode.py</a> <span class="muted small">5 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/source/star_timecode-0.1.0-source.zip" download>Codice sorgente (.zip)</a> <span class="muted small">23 kB</span></li></ul><pre class="cmd"><code>python -m pip install star_timecode-0.1.0-py3-none-any.whl</code></pre>
+<p class="small"><a href="/S.T.A.R.-/it/start/">Come iniziare →</a></p></section>
+<section class="section tight" id="dev"><h2>Per sviluppatori</h2><p>Installa direttamente dal repository pubblico:</p><pre class="cmd"><code>python -m pip install &quot;star-timecode @ git+https://github.com/Andrea07072000/S.T.A.R.-.git#subdirectory=packages/star_timecode&quot;</code></pre>
+<p class="small"><a href="https://github.com/Andrea07072000/S.T.A.R.-/tree/main/packages/star_timecode">README · tests · evidence (GitHub)</a></p></section>
+<section class="section tight" id="tech"><h2>Scheda tecnica</h2><dl class="meta"><dt>Pacchetto</dt><dd class='mono'>star-timecode</dd><dt>Versione</dt><dd class='mono'>0.1.0</dd><dt>Licenza</dt><dd class='mono'>Apache-2.0</dd><dt>Python</dt><dd class='mono'>&gt;=3.9</dd><dt>Dipendenze</dt><dd class='mono'>nessuna (solo libreria standard)</dd><dt>Capacità</dt><dd class='mono'>star.time.ccsds-ascii-timecode</dd><dt>Maturità</dt><dd class='mono'>RELEASED</dd><dt>Commit pubblicato</dt><dd class='mono'>94fcf7c</dd></dl>
+<h3>Requisiti</h3><ul class="reqs"><li><b class='mono'>R1</b> <code>parse(text)</code> accepts code A <code>YYYY-MM-DDThh:mm:ss[.d...][Z]</code> and code B <code>YYYY-DDDThh:mm:ss[.d...][Z]</code> and returns (year, month, day, hour, minute, second, fraction). The fraction is returned as its string of digits (up to 12): nothing passes through a float, and a code read and written again is the same text.</li><li><b class='mono'>R2</b> <code>format_a</code> and <code>format_b</code> write the two codes from the same fields; <code>day_of_year</code> and <code>month_day</code> convert between the two date forms with the Gregorian leap-year rule, years 0001 to 9999.</li><li><b class='mono'>R3</b> Measured on 600 instants written in both codes: calendar fields, microseconds and day of year equal to CPython <code>datetime</code> and <code>numpy.datetime64</code> on all 600 and to astropy on the 331 between 1900 and 2100. Of 40 malformed or out-of-range texts, all 40 are refused.</li><li><b class='mono'>R4</b> Every function returns its result or raises <code>ValueError</code>: wrong shape (widths, separators, case, spaces, signs, offsets, non-ASCII digits), a date or time that does not exist, second 60 anywhere but 23:59, arguments of the wrong type.</li></ul>
+<h3>Limiti (che cosa non si afferma)</h3><p>Syntax and calendar only. Second 60 is accepted at 23:59 of any date: whether a leap second really occurred there is a question for a leap-second table (see <code>star_timescales</code> in this repository), not for this module. No time zones or offsets (the codes are UTC), no truncated forms (date only, no seconds), no conversion to seconds, Julian dates or other time scales, no years before 0001 or after 9999. The limit of 12 fraction digits is this module&#x27;s, not the standard&#x27;s.</p>
+<h3>Evidenze nel registro</h3><div class="table-scroll"><table class="data"><thead><tr><th>Controllo</th><th>Stato</th><th>Registrato</th><th>Che cosa è stato osservato</th></tr></thead><tbody><tr><td>Clean install from the release tag</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>pytest outside the tree: 86 passed in 0.52s</td></tr><tr><td>Unit tests</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>86 passed in 0.87s</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>Requirements, interface, units, data provenance, dependency surface and failure behaviour reviewed</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>Re-running the cross-check gives a byte-identical evidence file</td></tr><tr><td>Reference value</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>parse of both texts = (1988, 1, 18, 17, 20, 43, &#x27;123456&#x27;); format_b of those fields = &#x27;1988-018T17:20:43.123456Z&#x27; (suite: 86 passed in 0.87s)</td></tr><tr><td>Cross-check with independent libraries</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>star_timecode reads and writes CCSDS ASCII time codes A and B with exact fields and refuses every text that is not one</td></tr><tr><td>Benchmark</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>field mismatches: 0; malformed texts refused: 40 of 40</td></tr></tbody></table></div>
+<h3>Impronte (SHA-256)</h3><div class="table-scroll"><table class="data"><tbody><tr><td class='mono small'>star_timecode-0.1.0-py3-none-any.whl</td><td class='mono small hash'>35d96f1e37114b29112bb65054a1460d4a1e6c4879e2db8254a295c6c4793d49</td></tr><tr><td class='mono small'>star_timecode.py</td><td class='mono small hash'>f19c8b3847601f8c18582d864cfdf47af255186e70e0ebd52533146350271c50</td></tr><tr><td class='mono small'>star_timecode-0.1.0-source.zip</td><td class='mono small hash'>6e58da74b60815ce31f4c6721c993687e85b6579f864ef9a06693384ec3a7947</td></tr></tbody></table></div>
+</section></div>
+</main>
+<footer class="site-footer">
+ <div class="wrap">
+  <div class="foot-grid">
+   <div><div class="foot-brand"><img src="/S.T.A.R.-/assets/images/star_logo_white_transparent.png" alt="" width="36" height="36">S.T.A.R.</div>
+    <p>Engineering Intelligence. Built to be Verified.</p><p class="small">Un progetto indipendente di Andrea Cavazzini, Italia. Non è una società.<br>Maturità di prototipo (TRL ≤ 6). Non qualificato per il volo. Nessuna certificazione.</p></div>
+   <div><h2>Esplora</h2><ul><li><a href="/S.T.A.R.-/it/start/">Come iniziare</a></li><li><a href="/S.T.A.R.-/it/software/">Software</a></li><li><a href="/S.T.A.R.-/it/evidence/">Evidenze</a></li><li><a href="/S.T.A.R.-/it/assessment/">Valutazione</a></li><li><a href="/S.T.A.R.-/it/about/">Chi siamo</a></li>
+    <li><a href="/S.T.A.R.-/it/downloads/">Download</a></li><li><a href="https://github.com/Andrea07072000/S.T.A.R.-">GitHub</a></li></ul></div>
+   <div><h2>Fiducia e documenti legali</h2><ul><li><a href="/S.T.A.R.-/it/legal/notice/">Note legali</a></li><li><a href="/S.T.A.R.-/it/legal/terms/">Termini d&#x27;uso del sito</a></li><li><a href="/S.T.A.R.-/it/legal/privacy/">Informativa sulla privacy</a></li><li><a href="/S.T.A.R.-/it/legal/cookies/">Informativa sui cookie</a></li><li><a href="/S.T.A.R.-/it/legal/disclaimer/">Avvertenza su evidenze e verifiche</a></li><li><a href="/S.T.A.R.-/it/legal/licences/">Licenze</a></li><li><a href="/S.T.A.R.-/it/legal/permissions/">Che cosa puoi fare con il software S.T.A.R.</a></li><li><a href="/S.T.A.R.-/it/legal/">Tutti i documenti legali</a></li></ul></div>
+   <div><h2>Contatti</h2><ul><li><a href="mailto:Info.and.News.S.T.A.R@proton.me">Info.and.News.S.T.A.R@proton.me</a></li>
+    <li><a href="/S.T.A.R.-/it/assessment/#request">Richiedi una valutazione</a></li></ul></div>
+  </div>
+  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generato dal registro il 2026-10-15 · commit di ingegneria c54092b · commit pubblico 94fcf7c</span>
+   <a href="/S.T.A.R.-/software/star_timecode/" lang="en">English</a></div>
+ </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en" data-base="/S.T.A.R.-/">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>star-precession — Between J2000 and the mean equator of date (IAU 1976) · S.T.A.R.</title>
+<meta name="description" content="IAU 1976 precession matrix and vector rotations between J2000 and the mean equator and equinox of date over 1800-2200; equal to ERFA pmat76 to 1.2e-16 and within 0.21 arcsec of PyEphem&#x27;s own precessio">
+<link rel="icon" href="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" type="image/png">
+<link rel="canonical" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_precession/">
+<link rel="alternate" hreflang="en" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_precession/">
+<link rel="alternate" hreflang="it" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_precession/">
+<link rel="alternate" hreflang="x-default" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_precession/">
+<meta property="og:title" content="star-precession — Between J2000 and the mean equator of date (IAU 1976) · S.T.A.R.">
+<meta property="og:description" content="IAU 1976 precession matrix and vector rotations between J2000 and the mean equator and equinox of date over 1800-2200; equal to ERFA pmat76 to 1.2e-16 and within 0.21 arcsec of PyEphem&#x27;s own precessio">
+<meta property="og:image" content="https://andrea07072000.github.io/S.T.A.R.-/assets/images/star_logo_dark_transparent.png">
+  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-Dx8lu5GH.js"></script>
+  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-CJ2BHFzs.css">
+</head>
+<body data-page="software">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+ <div class="wrap">
+  <a class="wordmark" href="/S.T.A.R.-/">S.T.A.R.</a>
+  <button class="btn small menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+  <nav class="main-nav" id="main-nav" aria-label="Main"><a href="/S.T.A.R.-/start/">Get started</a><a href="/S.T.A.R.-/software/" aria-current="page">Software</a><a href="/S.T.A.R.-/evidence/">Evidence</a><a href="/S.T.A.R.-/assessment/">Assessment</a><a href="/S.T.A.R.-/about/">About</a></nav>
+  <div class="header-right">
+   <div class="lang" role="group" aria-label="Language">
+    <span aria-current="true">EN</span>
+    <a href="/S.T.A.R.-/it/software/star_precession/" lang="it" hreflang="it">IT</a>
+   </div>
+   <a class="btn small primary" href="/S.T.A.R.-/assessment/#request">Request an assessment</a>
+   <img class="header-logo" src="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" alt="S.T.A.R. logo" width="40" height="40">
+  </div>
+ </div>
+</header>
+<main id="main">
+<div class="wrap"><div class="page-head">
+<p><a href="/S.T.A.R.-/software/">← All packages</a></p>
+<span class="eyebrow">Frames &amp; geometry</span><h1 class="mono pkg-title">star-precession <span class="muted">0.1.0</span></h1>
+<p class="lead">Between J2000 and the mean equator of date (IAU 1976)</p>
+<p><span class="status ok">Apache-2.0</span> <span class="status ok">RELEASED</span> <span class="status soon">single file</span></p>
+</div>
+<section class="section tight"><h2>In plain words</h2><p class="lead">IAU 1976 precession matrix and vector rotations between J2000 and the mean equator and equinox of date over 1800-2200; equal to ERFA pmat76 to 1.2e-16 and within 0.21 arcsec of PyEphem&#x27;s own precession.</p></section>
+<section class="section tight" id="try"><h2>Try it here</h2><p>Edit the code and press Run (or Ctrl+Enter). Python runs in your browser with this package&#x27;s published code. The first run downloads Python once (about 12 MB).</p><div class="runner" data-wheels='[&quot;star_precession-0.1.0-py3-none-any.whl&quot;]'><label class="visually-hidden" for="code-star_precession">Python</label><textarea id="code-star_precession" spellcheck="false" rows="5">import star_precession as sp
+r_j2000 = sp.j2000_from_mod(r_mod, 2460589.5)          # e.g. a Sun or Moon vector of date, into J2000
+P = sp.precession_matrix(2460589.5)                    # r_mod = P r_j2000</textarea><div class="runner-bar"><button class="btn primary run" type="button">Run</button><button class="btn reset" type="button">Reset</button></div><output aria-live="polite"></output></div></section>
+<section class="section tight" id="use"><h2>Use it on your computer</h2><p>No account and no GitHub needed. Download, then install with one command:</p>
+<ul class="files"><li><a class="btn small" href="/S.T.A.R.-/downloads/wheels/star_precession-0.1.0-py3-none-any.whl" download>Install file · star_precession-0.1.0-py3-none-any.whl</a> <span class="muted small">3 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/modules/star_precession.py" download>Single file — just copy it next to your code · star_precession.py</a> <span class="muted small">4 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/source/star_precession-0.1.0-source.zip" download>Source code (.zip)</a> <span class="muted small">16 kB</span></li></ul><pre class="cmd"><code>python -m pip install star_precession-0.1.0-py3-none-any.whl</code></pre>
+<p class="small"><a href="/S.T.A.R.-/start/">Get started →</a></p></section>
+<section class="section tight" id="dev"><h2>For developers</h2><p>Install directly from the public repository:</p><pre class="cmd"><code>python -m pip install &quot;star-precession @ git+https://github.com/Andrea07072000/S.T.A.R.-.git#subdirectory=packages/star_precession&quot;</code></pre>
+<p class="small"><a href="https://github.com/Andrea07072000/S.T.A.R.-/tree/main/packages/star_precession">README · tests · evidence (GitHub)</a></p></section>
+<section class="section tight" id="tech"><h2>Technical sheet</h2><dl class="meta"><dt>Package</dt><dd class='mono'>star-precession</dd><dt>Version</dt><dd class='mono'>0.1.0</dd><dt>Licence</dt><dd class='mono'>Apache-2.0</dd><dt>Python</dt><dd class='mono'>&gt;=3.9</dd><dt>Dependencies</dt><dd class='mono'>none (standard library only)</dd><dt>Capability</dt><dd class='mono'>star.frames.precession-iau76</dd><dt>Maturity</dt><dd class='mono'>RELEASED</dd><dt>Published commit</dt><dd class='mono'>94fcf7c</dd></dl>
+<h3>Requirements</h3><ul class="reqs"><li><b class='mono'>R1</b> <code>precession_matrix(jd_day, jd_frac=0)</code>: P = R3(-z) R2(theta) R3(-zeta) with the Lieske (1979) angles; identity at J2000.0. Reproduces the SOFA validation values of <code>pmat76</code> to 1e-15.</li><li><b class='mono'>R2</b> <code>mod_from_j2000(r, ...)</code>, <code>j2000_from_mod(r, ...)</code> (the transpose) and <code>precession_angles_arcsec</code>.</li><li><b class='mono'>R3</b> Measured on 500 dates over 1800-2200: every matrix element within 1.2e-16 of ERFA; 1500 directions within 0.21 arcsec of PyEphem, which carries its own precession code.</li><li><b class='mono'>R4</b> Every function returns finite floats or raises <code>ValueError</code>: non-numeric, boolean, NaN or infinite input, a vector that is not three finite numbers, a date outside 1800-01-01 to 2200-01-01.</li></ul>
+<h3>Limits (what is not claimed)</h3><p>IAU 1976 only: not the IAU 2006 precession (they differ by about 0.3 arcsec per century), no nutation (up to 17 arcsec), no frame bias between J2000 and GCRF (17 milliarcseconds). Enough for vectors known to a hundredth of a degree; not for arcsecond astrometry.</p>
+<h3>Evidence in the registry</h3><div class="table-scroll"><table class="data"><thead><tr><th>Check</th><th>Status</th><th>Recorded</th><th>What was observed</th></tr></thead><tbody><tr><td>Clean install from the release tag</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>pytest outside the tree: 32 passed in 0.16s</td></tr><tr><td>Unit tests</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>32 passed in 0.46s</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>Requirements, interface, units, data provenance, dependency surface and failure behaviour reviewed</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>Re-running the cross-check gives a byte-identical evidence file</td></tr><tr><td>Reference value</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>the three published elements and element [2][2] reproduced within 1e-15 (suite: 32 passed in 0.46s)</td></tr><tr><td>Cross-check with independent libraries</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>star_precession reproduces the IAU 1976 precession of two independent implementations over 1800-2200</td></tr><tr><td>Benchmark</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>ERFA: max element difference 1.1e-16; PyEphem: max direction difference 2.05e-01 arcsec</td></tr></tbody></table></div>
+<h3>Fingerprints (SHA-256)</h3><div class="table-scroll"><table class="data"><tbody><tr><td class='mono small'>star_precession-0.1.0-py3-none-any.whl</td><td class='mono small hash'>461606b45b709e7d491e50960d0cca319d0f882da7f2a0052c05535da884953c</td></tr><tr><td class='mono small'>star_precession.py</td><td class='mono small hash'>5ed6d2722b7804a546434851509529d0197698a6a5cd04da6fdb4d94b650c938</td></tr><tr><td class='mono small'>star_precession-0.1.0-source.zip</td><td class='mono small hash'>07e43a5a52c2388e5bea7e8381dca91f4fd4205b528380f262abee8bbf152463</td></tr></tbody></table></div>
+</section></div>
+</main>
+<footer class="site-footer">
+ <div class="wrap">
+  <div class="foot-grid">
+   <div><div class="foot-brand"><img src="/S.T.A.R.-/assets/images/star_logo_white_transparent.png" alt="" width="36" height="36">S.T.A.R.</div>
+    <p>Engineering Intelligence. Built to be Verified.</p><p class="small">An independent project by Andrea Cavazzini, Italy. Not a company.<br>Prototype maturity (TRL ≤ 6). Not flight-qualified. No certification.</p></div>
+   <div><h2>Explore</h2><ul><li><a href="/S.T.A.R.-/start/">Get started</a></li><li><a href="/S.T.A.R.-/software/">Software</a></li><li><a href="/S.T.A.R.-/evidence/">Evidence</a></li><li><a href="/S.T.A.R.-/assessment/">Assessment</a></li><li><a href="/S.T.A.R.-/about/">About</a></li>
+    <li><a href="/S.T.A.R.-/downloads/">Downloads</a></li><li><a href="https://github.com/Andrea07072000/S.T.A.R.-">GitHub</a></li></ul></div>
+   <div><h2>Trust &amp; legal</h2><ul><li><a href="/S.T.A.R.-/legal/notice/">Legal notice</a></li><li><a href="/S.T.A.R.-/legal/terms/">Website terms of use</a></li><li><a href="/S.T.A.R.-/legal/privacy/">Privacy notice</a></li><li><a href="/S.T.A.R.-/legal/cookies/">Cookie notice</a></li><li><a href="/S.T.A.R.-/legal/disclaimer/">Evidence and verification disclaimer</a></li><li><a href="/S.T.A.R.-/legal/licences/">Licences</a></li><li><a href="/S.T.A.R.-/legal/permissions/">What you may do with S.T.A.R. software</a></li><li><a href="/S.T.A.R.-/legal/">All legal documents</a></li></ul></div>
+   <div><h2>Contact</h2><ul><li><a href="mailto:Info.and.News.S.T.A.R@proton.me">Info.and.News.S.T.A.R@proton.me</a></li>
+    <li><a href="/S.T.A.R.-/assessment/#request">Request an assessment</a></li></ul></div>
+  </div>
+  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generated from the registry on 2026-10-15 · engineering commit c54092b · public commit 94fcf7c</span>
+   <a href="/S.T.A.R.-/it/software/star_precession/" lang="it">Italiano</a></div>
+ </div>
+</footer>
+</body>
+</html>

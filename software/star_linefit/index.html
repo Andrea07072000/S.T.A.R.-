@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en" data-base="/S.T.A.R.-/">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>star-linefit — Least-squares line and correlation, correctly rounded · S.T.A.R.</title>
+<meta name="description" content="Least-squares straight line, standard errors of slope and intercept, residual standard deviation and Pearson correlation computed exactly in rational arithmetic and rounded once; on 500 datasets all s">
+<link rel="icon" href="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" type="image/png">
+<link rel="canonical" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_linefit/">
+<link rel="alternate" hreflang="en" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_linefit/">
+<link rel="alternate" hreflang="it" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_linefit/">
+<link rel="alternate" hreflang="x-default" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_linefit/">
+<meta property="og:title" content="star-linefit — Least-squares line and correlation, correctly rounded · S.T.A.R.">
+<meta property="og:description" content="Least-squares straight line, standard errors of slope and intercept, residual standard deviation and Pearson correlation computed exactly in rational arithmetic and rounded once; on 500 datasets all s">
+<meta property="og:image" content="https://andrea07072000.github.io/S.T.A.R.-/assets/images/star_logo_dark_transparent.png">
+  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-Dx8lu5GH.js"></script>
+  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-CJ2BHFzs.css">
+</head>
+<body data-page="software">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+ <div class="wrap">
+  <a class="wordmark" href="/S.T.A.R.-/">S.T.A.R.</a>
+  <button class="btn small menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+  <nav class="main-nav" id="main-nav" aria-label="Main"><a href="/S.T.A.R.-/start/">Get started</a><a href="/S.T.A.R.-/software/" aria-current="page">Software</a><a href="/S.T.A.R.-/evidence/">Evidence</a><a href="/S.T.A.R.-/assessment/">Assessment</a><a href="/S.T.A.R.-/about/">About</a></nav>
+  <div class="header-right">
+   <div class="lang" role="group" aria-label="Language">
+    <span aria-current="true">EN</span>
+    <a href="/S.T.A.R.-/it/software/star_linefit/" lang="it" hreflang="it">IT</a>
+   </div>
+   <a class="btn small primary" href="/S.T.A.R.-/assessment/#request">Request an assessment</a>
+   <img class="header-logo" src="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" alt="S.T.A.R. logo" width="40" height="40">
+  </div>
+ </div>
+</header>
+<main id="main">
+<div class="wrap"><div class="page-head">
+<p><a href="/S.T.A.R.-/software/">← All packages</a></p>
+<span class="eyebrow">Numerics &amp; statistics</span><h1 class="mono pkg-title">star-linefit <span class="muted">0.1.0</span></h1>
+<p class="lead">Least-squares line and correlation, correctly rounded</p>
+<p><span class="status ok">Apache-2.0</span> <span class="status ok">RELEASED</span> <span class="status soon">single file</span></p>
+</div>
+<section class="section tight"><h2>In plain words</h2><p class="lead">Least-squares straight line, standard errors of slope and intercept, residual standard deviation and Pearson correlation computed exactly in rational arithmetic and rounded once; on 500 datasets all six results are identical to the exact rational value from SymPy; reproduces the five certified values of the NIST Norris dataset to 1e-13 relative.</p></section>
+<section class="section tight" id="try"><h2>Try it here</h2><p>Edit the code and press Run (or Ctrl+Enter). Python runs in your browser with this package&#x27;s published code. The first run downloads Python once (about 12 MB).</p><div class="runner" data-wheels='[&quot;star_linefit-0.1.0-py3-none-any.whl&quot;]'><label class="visually-hidden" for="code-star_linefit">Python</label><textarea id="code-star_linefit" spellcheck="false" rows="7">import star_linefit as lf
+print(lf.fit([0, 1, 2, 3], [0, 1, 1, 2]))  # (0.6, 0.1)
+print(lf.fit_errors([0, 1, 2, 3], [0, 1, 1, 2]))  # (0.1414..., 0.2645..., 0.3162...)
+print(lf.correlation([1, 2, 3, 4], [1, 3, 2, 4]))  # 0.8
+print(lf.fit([1e9, 1e9 + 1, 1e9 + 2], [5, 7, 9]))  # (2.0, -1999999995.0): a far origin loses nothing</textarea><div class="runner-bar"><button class="btn primary run" type="button">Run</button><button class="btn reset" type="button">Reset</button></div><output aria-live="polite"></output></div></section>
+<section class="section tight" id="use"><h2>Use it on your computer</h2><p>No account and no GitHub needed. Download, then install with one command:</p>
+<ul class="files"><li><a class="btn small" href="/S.T.A.R.-/downloads/wheels/star_linefit-0.1.0-py3-none-any.whl" download>Install file · star_linefit-0.1.0-py3-none-any.whl</a> <span class="muted small">3 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/modules/star_linefit.py" download>Single file — just copy it next to your code · star_linefit.py</a> <span class="muted small">4 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/source/star_linefit-0.1.0-source.zip" download>Source code (.zip)</a> <span class="muted small">22 kB</span></li></ul><pre class="cmd"><code>python -m pip install star_linefit-0.1.0-py3-none-any.whl</code></pre>
+<p class="small"><a href="/S.T.A.R.-/start/">Get started →</a></p></section>
+<section class="section tight" id="dev"><h2>For developers</h2><p>Install directly from the public repository:</p><pre class="cmd"><code>python -m pip install &quot;star-linefit @ git+https://github.com/Andrea07072000/S.T.A.R.-.git#subdirectory=packages/star_linefit&quot;</code></pre>
+<p class="small"><a href="https://github.com/Andrea07072000/S.T.A.R.-/tree/main/packages/star_linefit">README · tests · evidence (GitHub)</a></p></section>
+<section class="section tight" id="tech"><h2>Technical sheet</h2><dl class="meta"><dt>Package</dt><dd class='mono'>star-linefit</dd><dt>Version</dt><dd class='mono'>0.1.0</dd><dt>Licence</dt><dd class='mono'>Apache-2.0</dd><dt>Python</dt><dd class='mono'>&gt;=3.9</dd><dt>Dependencies</dt><dd class='mono'>none (standard library only)</dd><dt>Capability</dt><dd class='mono'>star.statistics.line-fit</dd><dt>Maturity</dt><dd class='mono'>RELEASED</dd><dt>Published commit</dt><dd class='mono'>94fcf7c</dd></dl>
+<h3>Requirements</h3><ul class="reqs"><li><b class='mono'>R1</b> <code>fit(xs, ys)</code> returns (slope, intercept) of the line that minimises the sum of squared vertical residuals; <code>fit_errors</code> returns the standard errors of the two and the residual standard deviation (n - 2 degrees of freedom); <code>correlation</code> returns Pearson&#x27;s r.</li><li><b class='mono'>R2</b> Every result is the float nearest to the exact value of its formula applied to the numbers given, square roots included; it does not depend on the order of the points, and r is exactly ±1 only for points exactly on a line.</li><li><b class='mono'>R3</b> Measured on 500 datasets of 3 to 40 points: all six results identical to the exact rational value (SymPy) rounded once. SciPy, NumPy and CPython&#x27;s <code>statistics</code> agree within 1e-7 of the natural scale on the half of the corpus with x within ±10; on the half with x near 1e6 to 1e9 their own rounding reaches 4e-7. The NIST reference dataset Norris is reproduced to 1e-13 relative on its five certified values.</li><li><b class='mono'>R4</b> Every function returns floats or raises <code>ValueError</code>: data that are not lists or tuples of 2 to 100000 finite numbers within 1e100, different lengths, all x equal, all y equal (correlation), fewer than 3 points (errors), a result too large for a float.</li></ul>
+<h3>Limits (what is not claimed)</h3><p>An ordinary least-squares line with errors only in y, equal weights and no intercept constraint: no weighted fit, no errors in x, no polynomial or robust fit, no confidence intervals or tests. The standard errors assume independent residuals of equal variance, which this module cannot check. &quot;Exact&quot; refers to the floats supplied. Exact arithmetic is slower than floating point: it is for results that must not depend on rounding, not for large arrays.</p>
+<h3>Evidence in the registry</h3><div class="table-scroll"><table class="data"><thead><tr><th>Check</th><th>Status</th><th>Recorded</th><th>What was observed</th></tr></thead><tbody><tr><td>Unit tests</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>28 passed in 0.44s</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>Requirements, interface, units, data provenance, dependency surface and failure behaviour reviewed</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>Re-running the cross-check gives a byte-identical evidence file</td></tr><tr><td>Reference value</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>1.0021168180204545, -0.26232307377402675, 0.0004297968481999412, 0.2328182343011548, 0.8847963961443813 (suite: 28 passed in 0.44s)</td></tr><tr><td>Cross-check with independent libraries</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>star_linefit returns the least-squares line, its standard errors and the correlation as the exact value of each formula rounded once</td></tr><tr><td>Benchmark</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>results not identical to the exact value: 0; NIST Norris certified values reproduced to 1e-13 relative: True</td></tr><tr><td>Clean install from the release tag</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>pytest outside the tree: 28 passed in 0.27s</td></tr></tbody></table></div>
+<h3>Fingerprints (SHA-256)</h3><div class="table-scroll"><table class="data"><tbody><tr><td class='mono small'>star_linefit-0.1.0-py3-none-any.whl</td><td class='mono small hash'>4b2af0716805083dee0032449186ee79f475816593ebd3d91add93f5f7f023b3</td></tr><tr><td class='mono small'>star_linefit.py</td><td class='mono small hash'>74f3ffaddda01a38aec122396ea21385fdba4e451abb7a51e9a27d7df6da6533</td></tr><tr><td class='mono small'>star_linefit-0.1.0-source.zip</td><td class='mono small hash'>04f4be0cf2e8e42cc4a339295c24d499d432357e8d83fffd235207b9edc5b555</td></tr></tbody></table></div>
+</section></div>
+</main>
+<footer class="site-footer">
+ <div class="wrap">
+  <div class="foot-grid">
+   <div><div class="foot-brand"><img src="/S.T.A.R.-/assets/images/star_logo_white_transparent.png" alt="" width="36" height="36">S.T.A.R.</div>
+    <p>Engineering Intelligence. Built to be Verified.</p><p class="small">An independent project by Andrea Cavazzini, Italy. Not a company.<br>Prototype maturity (TRL ≤ 6). Not flight-qualified. No certification.</p></div>
+   <div><h2>Explore</h2><ul><li><a href="/S.T.A.R.-/start/">Get started</a></li><li><a href="/S.T.A.R.-/software/">Software</a></li><li><a href="/S.T.A.R.-/evidence/">Evidence</a></li><li><a href="/S.T.A.R.-/assessment/">Assessment</a></li><li><a href="/S.T.A.R.-/about/">About</a></li>
+    <li><a href="/S.T.A.R.-/downloads/">Downloads</a></li><li><a href="https://github.com/Andrea07072000/S.T.A.R.-">GitHub</a></li></ul></div>
+   <div><h2>Trust &amp; legal</h2><ul><li><a href="/S.T.A.R.-/legal/notice/">Legal notice</a></li><li><a href="/S.T.A.R.-/legal/terms/">Website terms of use</a></li><li><a href="/S.T.A.R.-/legal/privacy/">Privacy notice</a></li><li><a href="/S.T.A.R.-/legal/cookies/">Cookie notice</a></li><li><a href="/S.T.A.R.-/legal/disclaimer/">Evidence and verification disclaimer</a></li><li><a href="/S.T.A.R.-/legal/licences/">Licences</a></li><li><a href="/S.T.A.R.-/legal/permissions/">What you may do with S.T.A.R. software</a></li><li><a href="/S.T.A.R.-/legal/">All legal documents</a></li></ul></div>
+   <div><h2>Contact</h2><ul><li><a href="mailto:Info.and.News.S.T.A.R@proton.me">Info.and.News.S.T.A.R@proton.me</a></li>
+    <li><a href="/S.T.A.R.-/assessment/#request">Request an assessment</a></li></ul></div>
+  </div>
+  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generated from the registry on 2026-10-15 · engineering commit c54092b · public commit 94fcf7c</span>
+   <a href="/S.T.A.R.-/it/software/star_linefit/" lang="it">Italiano</a></div>
+ </div>
+</footer>
+</body>
+</html>

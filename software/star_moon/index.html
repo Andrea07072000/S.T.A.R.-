@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en" data-base="/S.T.A.R.-/">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>star-moon — Where the Moon is, to a third of a degree · S.T.A.R.</title>
+<meta name="description" content="Geocentric Moon position for 1950-2050 from the Astronomical Almanac series; measured within 0.36 deg and 1200 km of JPL DE440 over 2002 dates, with the same envelope against astropy and PyEphem.">
+<link rel="icon" href="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" type="image/png">
+<link rel="canonical" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_moon/">
+<link rel="alternate" hreflang="en" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_moon/">
+<link rel="alternate" hreflang="it" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_moon/">
+<link rel="alternate" hreflang="x-default" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_moon/">
+<meta property="og:title" content="star-moon — Where the Moon is, to a third of a degree · S.T.A.R.">
+<meta property="og:description" content="Geocentric Moon position for 1950-2050 from the Astronomical Almanac series; measured within 0.36 deg and 1200 km of JPL DE440 over 2002 dates, with the same envelope against astropy and PyEphem.">
+<meta property="og:image" content="https://andrea07072000.github.io/S.T.A.R.-/assets/images/star_logo_dark_transparent.png">
+  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-Dx8lu5GH.js"></script>
+  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-CJ2BHFzs.css">
+</head>
+<body data-page="software">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+ <div class="wrap">
+  <a class="wordmark" href="/S.T.A.R.-/">S.T.A.R.</a>
+  <button class="btn small menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+  <nav class="main-nav" id="main-nav" aria-label="Main"><a href="/S.T.A.R.-/start/">Get started</a><a href="/S.T.A.R.-/software/" aria-current="page">Software</a><a href="/S.T.A.R.-/evidence/">Evidence</a><a href="/S.T.A.R.-/assessment/">Assessment</a><a href="/S.T.A.R.-/about/">About</a></nav>
+  <div class="header-right">
+   <div class="lang" role="group" aria-label="Language">
+    <span aria-current="true">EN</span>
+    <a href="/S.T.A.R.-/it/software/star_moon/" lang="it" hreflang="it">IT</a>
+   </div>
+   <a class="btn small primary" href="/S.T.A.R.-/assessment/#request">Request an assessment</a>
+   <img class="header-logo" src="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" alt="S.T.A.R. logo" width="40" height="40">
+  </div>
+ </div>
+</header>
+<main id="main">
+<div class="wrap"><div class="page-head">
+<p><a href="/S.T.A.R.-/software/">← All packages</a></p>
+<span class="eyebrow">Orbits &amp; astrodynamics</span><h1 class="mono pkg-title">star-moon <span class="muted">0.1.0</span></h1>
+<p class="lead">Where the Moon is, to a third of a degree</p>
+<p><span class="status ok">Apache-2.0</span> <span class="status ok">RELEASED</span> <span class="status soon">single file</span></p>
+</div>
+<section class="section tight"><h2>In plain words</h2><p class="lead">Geocentric Moon position for 1950-2050 from the Astronomical Almanac series; measured within 0.36 deg and 1200 km of JPL DE440 over 2002 dates, with the same envelope against astropy and PyEphem.</p></section>
+<section class="section tight" id="try"><h2>Try it here</h2><p>Edit the code and press Run (or Ctrl+Enter). Python runs in your browser with this package&#x27;s published code. The first run downloads Python once (about 12 MB).</p><div class="runner" data-wheels='[&quot;star_moon-0.1.0-py3-none-any.whl&quot;]'><label class="visually-hidden" for="code-star_moon">Python</label><textarea id="code-star_moon" spellcheck="false" rows="5">import star_moon
+x, y, z = star_moon.moon_vector_km(2460589.5)         # km, mean equator and equinox of date
+ra, dec = star_moon.moon_ra_dec_deg(2460589.5)</textarea><div class="runner-bar"><button class="btn primary run" type="button">Run</button><button class="btn reset" type="button">Reset</button></div><output aria-live="polite"></output></div></section>
+<section class="section tight" id="use"><h2>Use it on your computer</h2><p>No account and no GitHub needed. Download, then install with one command:</p>
+<ul class="files"><li><a class="btn small" href="/S.T.A.R.-/downloads/wheels/star_moon-0.1.0-py3-none-any.whl" download>Install file · star_moon-0.1.0-py3-none-any.whl</a> <span class="muted small">3 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/modules/star_moon.py" download>Single file — just copy it next to your code · star_moon.py</a> <span class="muted small">4 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/source/star_moon-0.1.0-source.zip" download>Source code (.zip)</a> <span class="muted small">17 kB</span></li></ul><pre class="cmd"><code>python -m pip install star_moon-0.1.0-py3-none-any.whl</code></pre>
+<p class="small"><a href="/S.T.A.R.-/start/">Get started →</a></p></section>
+<section class="section tight" id="dev"><h2>For developers</h2><p>Install directly from the public repository:</p><pre class="cmd"><code>python -m pip install &quot;star-moon @ git+https://github.com/Andrea07072000/S.T.A.R.-.git#subdirectory=packages/star_moon&quot;</code></pre>
+<p class="small"><a href="https://github.com/Andrea07072000/S.T.A.R.-/tree/main/packages/star_moon">README · tests · evidence (GitHub)</a></p></section>
+<section class="section tight" id="tech"><h2>Technical sheet</h2><dl class="meta"><dt>Package</dt><dd class='mono'>star-moon</dd><dt>Version</dt><dd class='mono'>0.1.0</dd><dt>Licence</dt><dd class='mono'>Apache-2.0</dd><dt>Python</dt><dd class='mono'>&gt;=3.9</dd><dt>Dependencies</dt><dd class='mono'>none (standard library only)</dd><dt>Capability</dt><dd class='mono'>star.orbit.moon</dd><dt>Maturity</dt><dd class='mono'>RELEASED</dd><dt>Published commit</dt><dd class='mono'>94fcf7c</dd></dl>
+<h3>Requirements</h3><ul class="reqs"><li><b class='mono'>R1</b> <code>moon_vector_km(jd_day, jd_frac=0)</code>, <code>moon_ra_dec_deg</code>, <code>moon_distance_km</code> for Julian dates (TDB) from 1950-01-01 to 2050-01-01; outside, <code>ValueError</code>. Reproduces Vallado Example 5-3 within 0.4 m.</li><li><b class='mono'>R2</b> Measured accuracy of the series (2002 dates, three ephemerides): direction within 0.36 deg of JPL DE440 (95 % of the dates within 0.20 deg), distance within 1200 km (288 km on average). astropy and PyEphem give the same envelope.</li><li><b class='mono'>R3</b> Frame: mean equator and equinox of DATE, like <code>star_sun</code>; rotate before mixing with J2000/GCRF vectors.</li><li><b class='mono'>R4</b> Every function returns finite floats or raises <code>ValueError</code>: non-numeric, boolean, NaN or infinite input, a date outside 1950-2050.</li></ul>
+<h3>Limits (what is not claimed)</h3><p>Not an ephemeris: 0.36 deg is about 2300 km at the Moon&#x27;s distance. Good for eclipse and illumination geometry, third-body direction and visibility planning; not for navigation, occultation timing or tide-accurate work.</p>
+<h3>Evidence in the registry</h3><div class="table-scroll"><table class="data"><thead><tr><th>Check</th><th>Status</th><th>Recorded</th><th>What was observed</th></tr></thead><tbody><tr><td>Unit tests</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>14 passed in 1.00s</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>Requirements, interface, units, data provenance, dependency surface and failure behaviour reviewed</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>Re-running the cross-check gives a byte-identical evidence file</td></tr><tr><td>Reference value</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>each component within 3.6e-4 km of the printed values (suite: 14 passed in 1.00s)</td></tr><tr><td>Cross-check with independent libraries</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>star_moon stays within the accuracy stated for the Almanac series against three independent ephemerides, 1950-2050</td></tr><tr><td>Benchmark</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>measured accuracy of the series by ephemeris: spice_de440: max 0.359 deg, 95 % within 0.196 deg, distance max 1194 km, mean 288 km; astropy: max 0.361 deg, 95 % within 0.196 deg, distance max 1232 km, mean 288 km; ephem: max 0.350 deg, 95 % within 0.199 deg, distance max 1200 km, mean 288 km</td></tr><tr><td>Clean install from the release tag</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>pytest outside the tree: 14 passed in 0.73s</td></tr></tbody></table></div>
+<h3>Fingerprints (SHA-256)</h3><div class="table-scroll"><table class="data"><tbody><tr><td class='mono small'>star_moon-0.1.0-py3-none-any.whl</td><td class='mono small hash'>a50cb2e2e106001163cd963b32cfdf612904dbf06417c388f081dd2f520e222d</td></tr><tr><td class='mono small'>star_moon.py</td><td class='mono small hash'>ce41f15b68f4841d07880ec30babf3cb98a4e8c80bdb0ec867b6f6a0872cd769</td></tr><tr><td class='mono small'>star_moon-0.1.0-source.zip</td><td class='mono small hash'>8d4319952b295c78dc288a8e37acf8664d62df20eb4f6e29f261c588b489b582</td></tr></tbody></table></div>
+</section></div>
+</main>
+<footer class="site-footer">
+ <div class="wrap">
+  <div class="foot-grid">
+   <div><div class="foot-brand"><img src="/S.T.A.R.-/assets/images/star_logo_white_transparent.png" alt="" width="36" height="36">S.T.A.R.</div>
+    <p>Engineering Intelligence. Built to be Verified.</p><p class="small">An independent project by Andrea Cavazzini, Italy. Not a company.<br>Prototype maturity (TRL ≤ 6). Not flight-qualified. No certification.</p></div>
+   <div><h2>Explore</h2><ul><li><a href="/S.T.A.R.-/start/">Get started</a></li><li><a href="/S.T.A.R.-/software/">Software</a></li><li><a href="/S.T.A.R.-/evidence/">Evidence</a></li><li><a href="/S.T.A.R.-/assessment/">Assessment</a></li><li><a href="/S.T.A.R.-/about/">About</a></li>
+    <li><a href="/S.T.A.R.-/downloads/">Downloads</a></li><li><a href="https://github.com/Andrea07072000/S.T.A.R.-">GitHub</a></li></ul></div>
+   <div><h2>Trust &amp; legal</h2><ul><li><a href="/S.T.A.R.-/legal/notice/">Legal notice</a></li><li><a href="/S.T.A.R.-/legal/terms/">Website terms of use</a></li><li><a href="/S.T.A.R.-/legal/privacy/">Privacy notice</a></li><li><a href="/S.T.A.R.-/legal/cookies/">Cookie notice</a></li><li><a href="/S.T.A.R.-/legal/disclaimer/">Evidence and verification disclaimer</a></li><li><a href="/S.T.A.R.-/legal/licences/">Licences</a></li><li><a href="/S.T.A.R.-/legal/permissions/">What you may do with S.T.A.R. software</a></li><li><a href="/S.T.A.R.-/legal/">All legal documents</a></li></ul></div>
+   <div><h2>Contact</h2><ul><li><a href="mailto:Info.and.News.S.T.A.R@proton.me">Info.and.News.S.T.A.R@proton.me</a></li>
+    <li><a href="/S.T.A.R.-/assessment/#request">Request an assessment</a></li></ul></div>
+  </div>
+  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generated from the registry on 2026-10-15 · engineering commit c54092b · public commit 94fcf7c</span>
+   <a href="/S.T.A.R.-/it/software/star_moon/" lang="it">Italiano</a></div>
+ </div>
+</footer>
+</body>
+</html>

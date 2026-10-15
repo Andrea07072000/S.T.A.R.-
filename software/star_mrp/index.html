@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en" data-base="/S.T.A.R.-/">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>star-mrp — Modified Rodrigues parameters · S.T.A.R.</title>
+<meta name="description" content="Modified Rodrigues parameters: conversion with quaternions, direction cosine matrices and rotation vectors, shadow set and switching, composition of rotations through quaternions (no division by zero ">
+<link rel="icon" href="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" type="image/png">
+<link rel="canonical" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_mrp/">
+<link rel="alternate" hreflang="en" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_mrp/">
+<link rel="alternate" hreflang="it" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_mrp/">
+<link rel="alternate" hreflang="x-default" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_mrp/">
+<meta property="og:title" content="star-mrp — Modified Rodrigues parameters · S.T.A.R.">
+<meta property="og:description" content="Modified Rodrigues parameters: conversion with quaternions, direction cosine matrices and rotation vectors, shadow set and switching, composition of rotations through quaternions (no division by zero ">
+<meta property="og:image" content="https://andrea07072000.github.io/S.T.A.R.-/assets/images/star_logo_dark_transparent.png">
+  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-Dx8lu5GH.js"></script>
+  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-CJ2BHFzs.css">
+</head>
+<body data-page="software">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+ <div class="wrap">
+  <a class="wordmark" href="/S.T.A.R.-/">S.T.A.R.</a>
+  <button class="btn small menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+  <nav class="main-nav" id="main-nav" aria-label="Main"><a href="/S.T.A.R.-/start/">Get started</a><a href="/S.T.A.R.-/software/" aria-current="page">Software</a><a href="/S.T.A.R.-/evidence/">Evidence</a><a href="/S.T.A.R.-/assessment/">Assessment</a><a href="/S.T.A.R.-/about/">About</a></nav>
+  <div class="header-right">
+   <div class="lang" role="group" aria-label="Language">
+    <span aria-current="true">EN</span>
+    <a href="/S.T.A.R.-/it/software/star_mrp/" lang="it" hreflang="it">IT</a>
+   </div>
+   <a class="btn small primary" href="/S.T.A.R.-/assessment/#request">Request an assessment</a>
+   <img class="header-logo" src="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" alt="S.T.A.R. logo" width="40" height="40">
+  </div>
+ </div>
+</header>
+<main id="main">
+<div class="wrap"><div class="page-head">
+<p><a href="/S.T.A.R.-/software/">← All packages</a></p>
+<span class="eyebrow">Attitude</span><h1 class="mono pkg-title">star-mrp <span class="muted">0.1.0</span></h1>
+<p class="lead">Modified Rodrigues parameters</p>
+<p><span class="status ok">Apache-2.0</span> <span class="status ok">RELEASED</span> <span class="status soon">single file</span></p>
+</div>
+<section class="section tight"><h2>In plain words</h2><p class="lead">Modified Rodrigues parameters: conversion with quaternions, direction cosine matrices and rotation vectors, shadow set and switching, composition of rotations through quaternions (no division by zero at a full turn) and the kinematic equation; within 6e-16 of Basilisk and 2e-15 of SciPy on 601 pairs with norms from 1e-8 to 5.</p></section>
+<section class="section tight" id="try"><h2>Try it here</h2><p>Edit the code and press Run (or Ctrl+Enter). Python runs in your browser with this package&#x27;s published code. The first run downloads Python once (about 12 MB).</p><div class="runner" data-wheels='[&quot;star_mrp-0.1.0-py3-none-any.whl&quot;]'><label class="visually-hidden" for="code-star_mrp">Python</label><textarea id="code-star_mrp" spellcheck="false" rows="8">import star_mrp as sm
+print(sm.mrp_from_quaternion((0.5, 0.5, 0.5, 0.5)))  # (0.333..., 0.333..., 0.333...): 120 degrees about (1, 1, 1)
+print(sm.quaternion_from_mrp((0, 0, 1)))  # (0.0, 0.0, 0.0, 1.0): a half turn about z
+print(sm.shadow((0, 0, 3)))  # (0, 0, -0.333...): the same attitude, the shorter way
+print(sm.compose((0, 0, 0.41421356237309503), (0, 0, 0.41421356237309503)))  # (0, 0, 1): two quarter turns
+print(sm.mrp_rate((0.5, 0, 0), (0, 0.4, 0)))  # (0, 0.075, 0.1): d(sigma)/dt for a body rate in rad/s</textarea><div class="runner-bar"><button class="btn primary run" type="button">Run</button><button class="btn reset" type="button">Reset</button></div><output aria-live="polite"></output></div></section>
+<section class="section tight" id="use"><h2>Use it on your computer</h2><p>No account and no GitHub needed. Download, then install with one command:</p>
+<ul class="files"><li><a class="btn small" href="/S.T.A.R.-/downloads/wheels/star_mrp-0.1.0-py3-none-any.whl" download>Install file · star_mrp-0.1.0-py3-none-any.whl</a> <span class="muted small">4 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/modules/star_mrp.py" download>Single file — just copy it next to your code · star_mrp.py</a> <span class="muted small">6 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/source/star_mrp-0.1.0-source.zip" download>Source code (.zip)</a> <span class="muted small">25 kB</span></li></ul><pre class="cmd"><code>python -m pip install star_mrp-0.1.0-py3-none-any.whl</code></pre>
+<p class="small"><a href="/S.T.A.R.-/start/">Get started →</a></p></section>
+<section class="section tight" id="dev"><h2>For developers</h2><p>Install directly from the public repository:</p><pre class="cmd"><code>python -m pip install &quot;star-mrp @ git+https://github.com/Andrea07072000/S.T.A.R.-.git#subdirectory=packages/star_mrp&quot;</code></pre>
+<p class="small"><a href="https://github.com/Andrea07072000/S.T.A.R.-/tree/main/packages/star_mrp">README · tests · evidence (GitHub)</a></p></section>
+<section class="section tight" id="tech"><h2>Technical sheet</h2><dl class="meta"><dt>Package</dt><dd class='mono'>star-mrp</dd><dt>Version</dt><dd class='mono'>0.1.0</dd><dt>Licence</dt><dd class='mono'>Apache-2.0</dd><dt>Python</dt><dd class='mono'>&gt;=3.9</dd><dt>Dependencies</dt><dd class='mono'>none (standard library only)</dd><dt>Capability</dt><dd class='mono'>star.attitude.mrp</dd><dt>Maturity</dt><dd class='mono'>RELEASED</dd><dt>Published commit</dt><dd class='mono'>94fcf7c</dd></dl>
+<h3>Requirements</h3><ul class="reqs"><li><b class='mono'>R1</b> <code>mrp_from_quaternion</code>, <code>quaternion_from_mrp</code>, <code>dcm_from_mrp</code>, <code>rotation_vector_from_mrp</code>, <code>mrp_from_rotation_vector</code> convert between sigma = e tan(phi/4) and the other representations; <code>shadow</code> and <code>switch</code> give the other MRP of the same attitude; <code>compose(first, second)</code> chains two rotations; <code>mrp_rate(s, omega)</code> is the kinematic equation.</li><li><b class='mono'>R2</b> Quaternions are scalar first; the matrix takes reference to body; results of conversions and of <code>compose</code> are on the short rotation (|sigma| &lt;= 1, quaternion with w &gt;= 0, angle in [0, pi]). <code>compose</code> goes through quaternions, so two rotations that add up to a full turn give zero and not a division by zero.</li><li><b class='mono'>R3</b> Measured on 601 pairs of MRPs with norms from 1e-8 to 5 (a third beyond 1): eight operations agree with Basilisk within 6e-16 and seven with SciPy within 2e-15.</li><li><b class='mono'>R4</b> Every function returns floats or raises <code>ValueError</code>: vectors that are not three (or four) finite real numbers within 1e150, a zero quaternion, the shadow of the zero MRP, a threshold that is not positive.</li></ul>
+<h3>Limits (what is not claimed)</h3><p>Kinematics only: no dynamics, no control law, no integrator (<code>mrp_rate</code> is the right-hand side; integrating it and switching to the shadow set is left to the caller). At exactly half a turn the two MRPs of norm 1 are equally short and either may be returned. No Gibbs vector (classical Rodrigues parameters), no Euler angles (see star_euler). No published numerical table is reproduced: the references are cited for the formulas.</p>
+<h3>Evidence in the registry</h3><div class="table-scroll"><table class="data"><thead><tr><th>Check</th><th>Status</th><th>Recorded</th><th>What was observed</th></tr></thead><tbody><tr><td>Clean install from the release tag</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>pytest outside the tree: 383 passed in 0.94s</td></tr><tr><td>Unit tests</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>383 passed in 3.52s</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>Requirements, interface, units, data provenance, dependency surface and failure behaviour reviewed</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>Re-running the cross-check gives a byte-identical evidence file</td></tr><tr><td>Reference value</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>mrp_from_quaternion((0.5, 0.5, 0.5, 0.5)) = (0.3333333333333333, 0.3333333333333333, 0.3333333333333333); quaternion_from_mrp((0, 0, 1)) = (0.0, 0.0, 0.0, 1.0) (suite: 383 passed in 3.52s)</td></tr><tr><td>Cross-check with independent libraries</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>star_mrp converts, composes and differentiates modified Rodrigues parameters as two independent implementations do, the shadow set included</td></tr><tr><td>Benchmark</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>largest difference from Basilisk: 5.6e-16; from SciPy: 1.3e-15</td></tr></tbody></table></div>
+<h3>Fingerprints (SHA-256)</h3><div class="table-scroll"><table class="data"><tbody><tr><td class='mono small'>star_mrp-0.1.0-py3-none-any.whl</td><td class='mono small hash'>e94f7a9856393cb1dc2f43a23ad7ad1a5914d944df478a52e13b97425a19c1f9</td></tr><tr><td class='mono small'>star_mrp.py</td><td class='mono small hash'>dd6d256d9a3a171e89e377271cc6e8d48ecb22661109db2db20453cefd25af04</td></tr><tr><td class='mono small'>star_mrp-0.1.0-source.zip</td><td class='mono small hash'>f81ac04252da4bf209f5391757acf513c09bf4959b5843f78f1252edf523fd59</td></tr></tbody></table></div>
+</section></div>
+</main>
+<footer class="site-footer">
+ <div class="wrap">
+  <div class="foot-grid">
+   <div><div class="foot-brand"><img src="/S.T.A.R.-/assets/images/star_logo_white_transparent.png" alt="" width="36" height="36">S.T.A.R.</div>
+    <p>Engineering Intelligence. Built to be Verified.</p><p class="small">An independent project by Andrea Cavazzini, Italy. Not a company.<br>Prototype maturity (TRL ≤ 6). Not flight-qualified. No certification.</p></div>
+   <div><h2>Explore</h2><ul><li><a href="/S.T.A.R.-/start/">Get started</a></li><li><a href="/S.T.A.R.-/software/">Software</a></li><li><a href="/S.T.A.R.-/evidence/">Evidence</a></li><li><a href="/S.T.A.R.-/assessment/">Assessment</a></li><li><a href="/S.T.A.R.-/about/">About</a></li>
+    <li><a href="/S.T.A.R.-/downloads/">Downloads</a></li><li><a href="https://github.com/Andrea07072000/S.T.A.R.-">GitHub</a></li></ul></div>
+   <div><h2>Trust &amp; legal</h2><ul><li><a href="/S.T.A.R.-/legal/notice/">Legal notice</a></li><li><a href="/S.T.A.R.-/legal/terms/">Website terms of use</a></li><li><a href="/S.T.A.R.-/legal/privacy/">Privacy notice</a></li><li><a href="/S.T.A.R.-/legal/cookies/">Cookie notice</a></li><li><a href="/S.T.A.R.-/legal/disclaimer/">Evidence and verification disclaimer</a></li><li><a href="/S.T.A.R.-/legal/licences/">Licences</a></li><li><a href="/S.T.A.R.-/legal/permissions/">What you may do with S.T.A.R. software</a></li><li><a href="/S.T.A.R.-/legal/">All legal documents</a></li></ul></div>
+   <div><h2>Contact</h2><ul><li><a href="mailto:Info.and.News.S.T.A.R@proton.me">Info.and.News.S.T.A.R@proton.me</a></li>
+    <li><a href="/S.T.A.R.-/assessment/#request">Request an assessment</a></li></ul></div>
+  </div>
+  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generated from the registry on 2026-10-15 · engineering commit c54092b · public commit 94fcf7c</span>
+   <a href="/S.T.A.R.-/it/software/star_mrp/" lang="it">Italiano</a></div>
+ </div>
+</footer>
+</body>
+</html>

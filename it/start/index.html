@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="it" data-base="/S.T.A.R.-/">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Come iniziare · S.T.A.R.</title>
+<meta name="description" content="Tre modi per usare il software S.T.A.R. Scegli quello adatto a te; nessuno richiede un account, e solo il terzo richiede GitHub.">
+<link rel="icon" href="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" type="image/png">
+<link rel="canonical" href="https://andrea07072000.github.io/S.T.A.R.-/it/start/">
+<link rel="alternate" hreflang="en" href="https://andrea07072000.github.io/S.T.A.R.-/start/">
+<link rel="alternate" hreflang="it" href="https://andrea07072000.github.io/S.T.A.R.-/it/start/">
+<link rel="alternate" hreflang="x-default" href="https://andrea07072000.github.io/S.T.A.R.-/start/">
+<meta property="og:title" content="Come iniziare · S.T.A.R.">
+<meta property="og:description" content="Tre modi per usare il software S.T.A.R. Scegli quello adatto a te; nessuno richiede un account, e solo il terzo richiede GitHub.">
+<meta property="og:image" content="https://andrea07072000.github.io/S.T.A.R.-/assets/images/star_logo_dark_transparent.png">
+  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-Dx8lu5GH.js"></script>
+  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-CJ2BHFzs.css">
+</head>
+<body data-page="start">
+<a class="skip" href="#main">Vai al contenuto</a>
+<header class="site-header">
+ <div class="wrap">
+  <a class="wordmark" href="/S.T.A.R.-/it/">S.T.A.R.</a>
+  <button class="btn small menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+  <nav class="main-nav" id="main-nav" aria-label="Main"><a href="/S.T.A.R.-/it/start/" aria-current="page">Come iniziare</a><a href="/S.T.A.R.-/it/software/">Software</a><a href="/S.T.A.R.-/it/evidence/">Evidenze</a><a href="/S.T.A.R.-/it/assessment/">Valutazione</a><a href="/S.T.A.R.-/it/about/">Chi siamo</a></nav>
+  <div class="header-right">
+   <div class="lang" role="group" aria-label="Language">
+    <a href="/S.T.A.R.-/start/" lang="en" hreflang="en">EN</a>
+    <span aria-current="true">IT</span>
+   </div>
+   <a class="btn small primary" href="/S.T.A.R.-/it/assessment/#request">Richiedi una valutazione</a>
+   <img class="header-logo" src="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" alt="S.T.A.R. logo" width="40" height="40">
+  </div>
+ </div>
+</header>
+<main id="main">
+<div class="wrap"><div class="page-head"><h1>Come iniziare</h1><p class="lead">Tre modi per usare il software S.T.A.R. Scegli quello adatto a te; nessuno richiede un account, e solo il terzo richiede GitHub.</p></div>
+<div class="grid-3 paths"><div class="card"><span class="tag">1</span><h3>Provalo qui, nel browser</h3><p>Apri la pagina di un pacchetto e premi Esegui. Un vero Python gira nel tuo browser con il codice pubblicato del pacchetto: niente da installare, nulla inviato altrove.</p><a class="btn primary" href="/S.T.A.R.-/it/software/">Scegli un pacchetto</a></div><div class="card"><span class="tag">2</span><h3>Usalo sul tuo computer</h3><p>Scarica il pacchetto e installalo con un comando, anche senza internet. Funziona su Windows, macOS e Linux con Python 3.9 o successivo. I pacchetti di un solo file si possono semplicemente copiare accanto al tuo codice.</p><a class="btn" href="/S.T.A.R.-/it/downloads/">Download</a></div><div class="card"><span class="tag">3</span><h3>Per sviluppatori</h3><p>Installa direttamente dal repository pubblico con pip, leggi sorgente, test ed evidenze e riproduci le campagne.</p><a class="btn" href="https://github.com/Andrea07072000/S.T.A.R.-">Repository pubblico</a></div></div>
+<section class="section tight"><h2>Usarlo sul tuo computer, passo per passo</h2><ol class="howto"><li><b>Installa Python</b><br>Se non ce l&#x27;hai: scarica Python 3.9 o successivo da python.org (su Windows spunta «Add python.exe to PATH» durante l&#x27;installazione). macOS e la maggior parte dei sistemi Linux lo hanno già.</li><li><b>Scarica il pacchetto</b><br>Nella pagina del pacchetto, in «Usalo sul tuo computer», scarica il file .whl (oppure l&#x27;intera raccolta da Download).</li><li><b>Apri un terminale nella cartella dei download</b><br>Windows: nella cartella scrivi cmd nella barra dell&#x27;indirizzo e premi Invio. macOS: clic destro sulla cartella → Nuovo terminale nella cartella. Linux: clic destro → Apri nel terminale.</li><li><b>Installa</b><br>Scrivi: python -m pip install &lt;il file scaricato&gt;.whl  — per esempio python -m pip install star_kepler-0.1.1-py3-none-any.whl</li><li><b>Usalo</b><br>Avvia python e importa il pacchetto, come nell&#x27;esempio della sua pagina.</li></ol></section>
+<section class="section tight grid-2"><div><h2>Senza installare nulla</h2><p>I pacchetti fatti di un solo file e senza dipendenze (indicati come «file singolo») si usano scaricando quel file .py e mettendolo nella stessa cartella del tuo programma. Funziona poi con import, come ogni tuo file.</p></div>
+<div><h2>Altre macchine e ambienti di compilazione</h2><p>I file .whl sono Python puro (py3-none-any): lo stesso file si installa su qualunque sistema operativo e processore. Per una macchina senza rete copia l&#x27;archivio della raccolta e installa con --no-index. Per un tuo sistema di compilazione o di pacchettizzazione usa il sorgente .zip di ciascun pacchetto. Ogni file ha un&#x27;impronta SHA-256 pubblicata.</p></div></section></div>
+</main>
+<footer class="site-footer">
+ <div class="wrap">
+  <div class="foot-grid">
+   <div><div class="foot-brand"><img src="/S.T.A.R.-/assets/images/star_logo_white_transparent.png" alt="" width="36" height="36">S.T.A.R.</div>
+    <p>Engineering Intelligence. Built to be Verified.</p><p class="small">Un progetto indipendente di Andrea Cavazzini, Italia. Non è una società.<br>Maturità di prototipo (TRL ≤ 6). Non qualificato per il volo. Nessuna certificazione.</p></div>
+   <div><h2>Esplora</h2><ul><li><a href="/S.T.A.R.-/it/start/">Come iniziare</a></li><li><a href="/S.T.A.R.-/it/software/">Software</a></li><li><a href="/S.T.A.R.-/it/evidence/">Evidenze</a></li><li><a href="/S.T.A.R.-/it/assessment/">Valutazione</a></li><li><a href="/S.T.A.R.-/it/about/">Chi siamo</a></li>
+    <li><a href="/S.T.A.R.-/it/downloads/">Download</a></li><li><a href="https://github.com/Andrea07072000/S.T.A.R.-">GitHub</a></li></ul></div>
+   <div><h2>Fiducia e documenti legali</h2><ul><li><a href="/S.T.A.R.-/it/legal/notice/">Note legali</a></li><li><a href="/S.T.A.R.-/it/legal/terms/">Termini d&#x27;uso del sito</a></li><li><a href="/S.T.A.R.-/it/legal/privacy/">Informativa sulla privacy</a></li><li><a href="/S.T.A.R.-/it/legal/cookies/">Informativa sui cookie</a></li><li><a href="/S.T.A.R.-/it/legal/disclaimer/">Avvertenza su evidenze e verifiche</a></li><li><a href="/S.T.A.R.-/it/legal/licences/">Licenze</a></li><li><a href="/S.T.A.R.-/it/legal/permissions/">Che cosa puoi fare con il software S.T.A.R.</a></li><li><a href="/S.T.A.R.-/it/legal/">Tutti i documenti legali</a></li></ul></div>
+   <div><h2>Contatti</h2><ul><li><a href="mailto:Info.and.News.S.T.A.R@proton.me">Info.and.News.S.T.A.R@proton.me</a></li>
+    <li><a href="/S.T.A.R.-/it/assessment/#request">Richiedi una valutazione</a></li></ul></div>
+  </div>
+  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generato dal registro il 2026-10-15 · commit di ingegneria c54092b · commit pubblico 94fcf7c</span>
+   <a href="/S.T.A.R.-/start/" lang="en">English</a></div>
+ </div>
+</footer>
+</body>
+</html>

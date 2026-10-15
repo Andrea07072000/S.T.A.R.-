@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="it" data-base="/S.T.A.R.-/">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pacchetto star-telemetry — CCSDS AOS/TM transfer frame deframer and Space Packet reassembler · S.T.A.R.</title>
+<meta name="description" content="CCSDS AOS v2 / TM v1 transfer-frame deframer and Space Packet reassembler, with CUC time decoding via star-timescales.">
+<link rel="icon" href="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" type="image/png">
+<link rel="canonical" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_telemetry/">
+<link rel="alternate" hreflang="en" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_telemetry/">
+<link rel="alternate" hreflang="it" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_telemetry/">
+<link rel="alternate" hreflang="x-default" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_telemetry/">
+<meta property="og:title" content="Pacchetto star-telemetry — CCSDS AOS/TM transfer frame deframer and Space Packet reassembler · S.T.A.R.">
+<meta property="og:description" content="CCSDS AOS v2 / TM v1 transfer-frame deframer and Space Packet reassembler, with CUC time decoding via star-timescales.">
+<meta property="og:image" content="https://andrea07072000.github.io/S.T.A.R.-/assets/images/star_logo_dark_transparent.png">
+  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-Dx8lu5GH.js"></script>
+  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-CJ2BHFzs.css">
+</head>
+<body data-page="software">
+<a class="skip" href="#main">Vai al contenuto</a>
+<header class="site-header">
+ <div class="wrap">
+  <a class="wordmark" href="/S.T.A.R.-/it/">S.T.A.R.</a>
+  <button class="btn small menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+  <nav class="main-nav" id="main-nav" aria-label="Main"><a href="/S.T.A.R.-/it/start/">Come iniziare</a><a href="/S.T.A.R.-/it/software/" aria-current="page">Software</a><a href="/S.T.A.R.-/it/evidence/">Evidenze</a><a href="/S.T.A.R.-/it/assessment/">Valutazione</a><a href="/S.T.A.R.-/it/about/">Chi siamo</a></nav>
+  <div class="header-right">
+   <div class="lang" role="group" aria-label="Language">
+    <a href="/S.T.A.R.-/software/star_telemetry/" lang="en" hreflang="en">EN</a>
+    <span aria-current="true">IT</span>
+   </div>
+   <a class="btn small primary" href="/S.T.A.R.-/it/assessment/#request">Richiedi una valutazione</a>
+   <img class="header-logo" src="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" alt="S.T.A.R. logo" width="40" height="40">
+  </div>
+ </div>
+</header>
+<main id="main">
+<div class="wrap"><div class="page-head">
+<p><a href="/S.T.A.R.-/it/software/">← Tutti i pacchetti</a></p>
+<span class="eyebrow">Telemetria e collegamenti</span><h1 class="mono pkg-title">star-telemetry <span class="muted">0.2.7</span></h1>
+<p class="lead">CCSDS AOS/TM transfer frame deframer and Space Packet reassembler</p>
+<p><span class="status ok">Apache-2.0</span> <span class="status ok">RELEASED</span> </p>
+<p class="small muted">La documentazione tecnica del pacchetto è in inglese, come il suo codice.</p></div>
+<section class="section tight"><h2>In parole semplici</h2><p class="lead">CCSDS AOS v2 / TM v1 transfer-frame deframer and Space Packet reassembler, with CUC time decoding via star-timescales.</p></section>
+<section class="section tight" id="try"><h2>Provalo qui</h2><p>Modifica il codice e premi Esegui (o Ctrl+Invio). Python gira nel tuo browser con il codice pubblicato di questo pacchetto. La prima volta scarica Python una sola volta (circa 12 MB).</p><div class="runner" data-wheels='[&quot;star_timescales-0.2.0-py3-none-any.whl&quot;, &quot;star_telemetry-0.2.7-py3-none-any.whl&quot;]'><label class="visually-hidden" for="code-star_telemetry">Python</label><textarea id="code-star_telemetry" spellcheck="false" rows="7">import star_telemetry
+
+# what this package offers
+print([name for name in dir(star_telemetry) if not name.startswith(&#x27;_&#x27;)])
+print(star_telemetry.__doc__)</textarea><div class="runner-bar"><button class="btn primary run" type="button">Esegui</button><button class="btn reset" type="button">Ripristina</button></div><output aria-live="polite"></output></div></section>
+<section class="section tight" id="use"><h2>Usalo sul tuo computer</h2><p>Non servono account né GitHub. Scarica, poi installa con un comando:</p>
+<ul class="files"><li><a class="btn small" href="/S.T.A.R.-/downloads/wheels/star_telemetry-0.2.7-py3-none-any.whl" download>File di installazione · star_telemetry-0.2.7-py3-none-any.whl</a> <span class="muted small">30 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/source/star_telemetry-0.2.7-source.zip" download>Codice sorgente (.zip)</a> <span class="muted small">144 kB</span></li></ul><p class="small">Scarica anche: star-timescales (installali insieme).</p><pre class="cmd"><code>python -m pip install star_timescales-0.2.0-py3-none-any.whl star_telemetry-0.2.7-py3-none-any.whl</code></pre>
+<p class="small"><a href="/S.T.A.R.-/it/start/">Come iniziare →</a></p></section>
+<section class="section tight" id="dev"><h2>Per sviluppatori</h2><p>Installa direttamente dal repository pubblico:</p><pre class="cmd"><code>python -m pip install &quot;star-timescales @ git+https://github.com/Andrea07072000/S.T.A.R.-.git&quot; &quot;star-telemetry @ git+https://github.com/Andrea07072000/S.T.A.R.-.git#subdirectory=packages/star_telemetry&quot;</code></pre>
+<p class="small"><a href="https://github.com/Andrea07072000/S.T.A.R.-/tree/main/packages/star_telemetry">README · tests · evidence (GitHub)</a></p></section>
+<section class="section tight" id="tech"><h2>Scheda tecnica</h2><dl class="meta"><dt>Pacchetto</dt><dd class='mono'>star-telemetry</dd><dt>Versione</dt><dd class='mono'>0.2.7</dd><dt>Licenza</dt><dd class='mono'>Apache-2.0</dd><dt>Python</dt><dd class='mono'>&gt;=3.9</dd><dt>Dipendenze</dt><dd class='mono'>star-timescales</dd><dt>Capacità</dt><dd class='mono'>star.telemetry.packets</dd><dt>Maturità</dt><dd class='mono'>RELEASED</dd><dt>Commit pubblicato</dt><dd class='mono'>94fcf7c</dd></dl>
+<h3>Requisiti</h3><ul class="reqs"><li><b class='mono'>R1</b> <code>CcsdsTransferFrameEngine(frame_length, has_fecf).parse_frame(bytes) -&gt; (header, data_field)</code>: TFVN, SCID, VCID, VC frame count, replay flag, first header pointer, FECF (CRC-16, poly 0x1021, init 0xFFFF) validity.</li><li><b class='mono'>R2</b> <code>process_raw_stream(bytes)</code> reassembles Space Packets across frames per virtual channel, including spanning packets. A packet is delivered in the frame that completes it. After a lost frame, the rest of the interrupted packet is discarded up to the next first header pointer. A pending packet whose size disagrees with its declared length is dropped, never cut to size.</li><li><b class='mono'>R3</b> A frame of the wrong length is rejected with <code>ValueError</code>; a corrupted frame is reported (<code>fecf_valid = False</code>), never silently accepted.</li></ul>
+
+<h3>Evidenze nel registro</h3><div class="table-scroll"><table class="data"><thead><tr><th>Controllo</th><th>Stato</th><th>Registrato</th><th>Che cosa è stato osservato</th></tr></thead><tbody><tr><td>Clean install from the release tag</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>pytest outside the tree: 95 passed in 1.85s</td></tr><tr><td>Clean install from the release tag</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-05</td><td class='small'>pytest outside the tree: 61 passed in 1.62s</td></tr><tr><td>Clean install from the release tag</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-05</td><td class='small'>pytest outside the tree: 44 passed, 1 skipped in 1.52s</td></tr><tr><td>Clean install from the release tag</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-05</td><td class='small'>pytest outside the tree: 44 passed, 1 skipped in 0.91s</td></tr><tr><td>Mutation testing</td><td><span class='status warn'>PARTIAL</span></td><td class='num'>2026-10-05</td><td class='small'>244/295 = 0.8283</td></tr><tr><td>Benchmark</td><td><span class='status warn'>PARTIAL</span></td><td class='num'>2026-10-04</td><td class='small'>1718 frames/s for parse_frame</td></tr><tr><td>Clean install from the release tag</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-04</td><td class='small'>pytest outside the tree: 36 passed, 1 skipped in 0.99s</td></tr><tr><td>Clean install from the release tag</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-04</td><td class='small'>pytest outside the tree: 28 passed in 1.20s</td></tr><tr><td>Mutation testing</td><td><span class='status warn'>PARTIAL</span></td><td class='num'>2026-10-04</td><td class='small'>234/289 = 0.811</td></tr><tr><td>Mutation testing</td><td><span class='status warn'>PARTIAL</span></td><td class='num'>2026-10-04</td><td class='small'>176/257 = 0.6873</td></tr><tr><td>Mutation testing</td><td><span class='status warn'>PARTIAL</span></td><td class='num'>2026-10-04</td><td class='small'>125/250 = 0.5</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-03</td><td class='small'>Re-execution of bench.xc-005 reproduces the committed evidence bundles</td></tr><tr><td>Cross-check with independent libraries</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-03</td><td class='small'>CCSDS Space Packet primary header parsing across star_telemetry, spacepackets, ccsdspy agree exactly on canonical and Europa Clipper packets</td></tr><tr><td>Unit tests</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-03</td><td class='small'>pass</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-03</td><td class='small'>Requirements R1-R3, documented API, CUC time via declared dependency, oracle frames reproducible from upstream F Prime</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-03</td><td class='small'>Malformed frames rejected</td></tr><tr><td>Reference value</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-03</td><td class='small'>5/5 native C++ frames decoded bit-exact (scid=68 [ComCfg::SpacecraftId], vcid=7/0/2, frame_size=256/254, spanning packet reconstructed across 2 frames, CRC-16 CCITT verified)</td></tr><tr><td>Unit tests</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-03</td><td class='small'>237/237 changed FECF-protected frames rejected; field decoding identical to an independent C implementation on all 305 frames</td></tr><tr><td>Benchmark</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-03</td><td class='small'>1030</td></tr><tr><td>Clean install from the release tag</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-03</td><td class='small'>without star-timescales: pip refuses (no matching distribution) = dependency is real and declared; with it: 19/19 tests pass in a temp dir (incl. ccsdspy oracle and F Prime native frames)</td></tr><tr><td>Cross-check with independent libraries</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-03</td><td class='small'>packet-by-packet identical to ccsdspy</td></tr><tr><td>Reference value</td><td><span class='status warn'>PARTIAL</span></td><td class='num'>2026-10-03</td><td class='small'>self-consistency only (encoder and decoder by the same author)</td></tr></tbody></table></div>
+<h3>Impronte (SHA-256)</h3><div class="table-scroll"><table class="data"><tbody><tr><td class='mono small'>star_telemetry-0.2.7-py3-none-any.whl</td><td class='mono small hash'>8292839466293b2f49a5400378b3e320602c9fc1f3814baf2b77b4eaabf19560</td></tr><tr><td class='mono small'>star_telemetry-0.2.7-source.zip</td><td class='mono small hash'>c866c5353a396b6adf8f1e7c0da08be090722cd4ba10a9c9eec74c2fbadbd4fa</td></tr></tbody></table></div>
+</section></div>
+</main>
+<footer class="site-footer">
+ <div class="wrap">
+  <div class="foot-grid">
+   <div><div class="foot-brand"><img src="/S.T.A.R.-/assets/images/star_logo_white_transparent.png" alt="" width="36" height="36">S.T.A.R.</div>
+    <p>Engineering Intelligence. Built to be Verified.</p><p class="small">Un progetto indipendente di Andrea Cavazzini, Italia. Non è una società.<br>Maturità di prototipo (TRL ≤ 6). Non qualificato per il volo. Nessuna certificazione.</p></div>
+   <div><h2>Esplora</h2><ul><li><a href="/S.T.A.R.-/it/start/">Come iniziare</a></li><li><a href="/S.T.A.R.-/it/software/">Software</a></li><li><a href="/S.T.A.R.-/it/evidence/">Evidenze</a></li><li><a href="/S.T.A.R.-/it/assessment/">Valutazione</a></li><li><a href="/S.T.A.R.-/it/about/">Chi siamo</a></li>
+    <li><a href="/S.T.A.R.-/it/downloads/">Download</a></li><li><a href="https://github.com/Andrea07072000/S.T.A.R.-">GitHub</a></li></ul></div>
+   <div><h2>Fiducia e documenti legali</h2><ul><li><a href="/S.T.A.R.-/it/legal/notice/">Note legali</a></li><li><a href="/S.T.A.R.-/it/legal/terms/">Termini d&#x27;uso del sito</a></li><li><a href="/S.T.A.R.-/it/legal/privacy/">Informativa sulla privacy</a></li><li><a href="/S.T.A.R.-/it/legal/cookies/">Informativa sui cookie</a></li><li><a href="/S.T.A.R.-/it/legal/disclaimer/">Avvertenza su evidenze e verifiche</a></li><li><a href="/S.T.A.R.-/it/legal/licences/">Licenze</a></li><li><a href="/S.T.A.R.-/it/legal/permissions/">Che cosa puoi fare con il software S.T.A.R.</a></li><li><a href="/S.T.A.R.-/it/legal/">Tutti i documenti legali</a></li></ul></div>
+   <div><h2>Contatti</h2><ul><li><a href="mailto:Info.and.News.S.T.A.R@proton.me">Info.and.News.S.T.A.R@proton.me</a></li>
+    <li><a href="/S.T.A.R.-/it/assessment/#request">Richiedi una valutazione</a></li></ul></div>
+  </div>
+  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generato dal registro il 2026-10-15 · commit di ingegneria c54092b · commit pubblico 94fcf7c</span>
+   <a href="/S.T.A.R.-/software/star_telemetry/" lang="en">English</a></div>
+ </div>
+</footer>
+</body>
+</html>

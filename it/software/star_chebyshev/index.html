@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="it" data-base="/S.T.A.R.-/">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pacchetto star-chebyshev — Chebyshev series with their derivative · S.T.A.R.</title>
+<meta name="description" content="Value and first derivative of a Chebyshev series by Clenshaw&#x27;s recurrence, on [-1, 1] or on an interval given by midpoint and radius (the convention of ephemeris segments); 600 series agree with CSPIC">
+<link rel="icon" href="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" type="image/png">
+<link rel="canonical" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_chebyshev/">
+<link rel="alternate" hreflang="en" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_chebyshev/">
+<link rel="alternate" hreflang="it" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_chebyshev/">
+<link rel="alternate" hreflang="x-default" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_chebyshev/">
+<meta property="og:title" content="Pacchetto star-chebyshev — Chebyshev series with their derivative · S.T.A.R.">
+<meta property="og:description" content="Value and first derivative of a Chebyshev series by Clenshaw&#x27;s recurrence, on [-1, 1] or on an interval given by midpoint and radius (the convention of ephemeris segments); 600 series agree with CSPIC">
+<meta property="og:image" content="https://andrea07072000.github.io/S.T.A.R.-/assets/images/star_logo_dark_transparent.png">
+  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-Dx8lu5GH.js"></script>
+  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-CJ2BHFzs.css">
+</head>
+<body data-page="software">
+<a class="skip" href="#main">Vai al contenuto</a>
+<header class="site-header">
+ <div class="wrap">
+  <a class="wordmark" href="/S.T.A.R.-/it/">S.T.A.R.</a>
+  <button class="btn small menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+  <nav class="main-nav" id="main-nav" aria-label="Main"><a href="/S.T.A.R.-/it/start/">Come iniziare</a><a href="/S.T.A.R.-/it/software/" aria-current="page">Software</a><a href="/S.T.A.R.-/it/evidence/">Evidenze</a><a href="/S.T.A.R.-/it/assessment/">Valutazione</a><a href="/S.T.A.R.-/it/about/">Chi siamo</a></nav>
+  <div class="header-right">
+   <div class="lang" role="group" aria-label="Language">
+    <a href="/S.T.A.R.-/software/star_chebyshev/" lang="en" hreflang="en">EN</a>
+    <span aria-current="true">IT</span>
+   </div>
+   <a class="btn small primary" href="/S.T.A.R.-/it/assessment/#request">Richiedi una valutazione</a>
+   <img class="header-logo" src="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" alt="S.T.A.R. logo" width="40" height="40">
+  </div>
+ </div>
+</header>
+<main id="main">
+<div class="wrap"><div class="page-head">
+<p><a href="/S.T.A.R.-/it/software/">← Tutti i pacchetti</a></p>
+<span class="eyebrow">Calcolo numerico e statistica</span><h1 class="mono pkg-title">star-chebyshev <span class="muted">0.1.0</span></h1>
+<p class="lead">Chebyshev series with their derivative</p>
+<p><span class="status ok">Apache-2.0</span> <span class="status ok">RELEASED</span> <span class="status soon">file singolo</span></p>
+<p class="small muted">La documentazione tecnica del pacchetto è in inglese, come il suo codice.</p></div>
+<section class="section tight"><h2>In parole semplici</h2><p class="lead">Value and first derivative of a Chebyshev series by Clenshaw&#x27;s recurrence, on [-1, 1] or on an interval given by midpoint and radius (the convention of ephemeris segments); 600 series agree with CSPICE chbval/chbder and NumPy within 1e-14 and with mpmath at 40 digits within 5e-14 of the natural scale of the sum; reproduces the NAIF documentation example.</p></section>
+<section class="section tight" id="try"><h2>Provalo qui</h2><p>Modifica il codice e premi Esegui (o Ctrl+Invio). Python gira nel tuo browser con il codice pubblicato di questo pacchetto. La prima volta scarica Python una sola volta (circa 12 MB).</p><div class="runner" data-wheels='[&quot;star_chebyshev-0.1.0-py3-none-any.whl&quot;]'><label class="visually-hidden" for="code-star_chebyshev">Python</label><textarea id="code-star_chebyshev" spellcheck="false" rows="5">import star_chebyshev as sc
+print(sc.evaluate([1, 2, 3], 0.5))  # (0.5, 8.0): 1 + 2 T_1 + 3 T_2 and its derivative
+print(sc.evaluate_on([1, 3, 0.5, 1, 0.5, -1, 1], 1, 0.5, 3))  # (-0.3408779..., 0.3827160...): the NAIF example</textarea><div class="runner-bar"><button class="btn primary run" type="button">Esegui</button><button class="btn reset" type="button">Ripristina</button></div><output aria-live="polite"></output></div></section>
+<section class="section tight" id="use"><h2>Usalo sul tuo computer</h2><p>Non servono account né GitHub. Scarica, poi installa con un comando:</p>
+<ul class="files"><li><a class="btn small" href="/S.T.A.R.-/downloads/wheels/star_chebyshev-0.1.0-py3-none-any.whl" download>File di installazione · star_chebyshev-0.1.0-py3-none-any.whl</a> <span class="muted small">3 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/modules/star_chebyshev.py" download>File singolo — basta copiarlo accanto al tuo codice · star_chebyshev.py</a> <span class="muted small">3 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/source/star_chebyshev-0.1.0-source.zip" download>Codice sorgente (.zip)</a> <span class="muted small">20 kB</span></li></ul><pre class="cmd"><code>python -m pip install star_chebyshev-0.1.0-py3-none-any.whl</code></pre>
+<p class="small"><a href="/S.T.A.R.-/it/start/">Come iniziare →</a></p></section>
+<section class="section tight" id="dev"><h2>Per sviluppatori</h2><p>Installa direttamente dal repository pubblico:</p><pre class="cmd"><code>python -m pip install &quot;star-chebyshev @ git+https://github.com/Andrea07072000/S.T.A.R.-.git#subdirectory=packages/star_chebyshev&quot;</code></pre>
+<p class="small"><a href="https://github.com/Andrea07072000/S.T.A.R.-/tree/main/packages/star_chebyshev">README · tests · evidence (GitHub)</a></p></section>
+<section class="section tight" id="tech"><h2>Scheda tecnica</h2><dl class="meta"><dt>Pacchetto</dt><dd class='mono'>star-chebyshev</dd><dt>Versione</dt><dd class='mono'>0.1.0</dd><dt>Licenza</dt><dd class='mono'>Apache-2.0</dd><dt>Python</dt><dd class='mono'>&gt;=3.9</dd><dt>Dipendenze</dt><dd class='mono'>nessuna (solo libreria standard)</dd><dt>Capacità</dt><dd class='mono'>star.numerics.chebyshev-series</dd><dt>Maturità</dt><dd class='mono'>RELEASED</dd><dt>Commit pubblicato</dt><dd class='mono'>94fcf7c</dd></dl>
+<h3>Requisiti</h3><ul class="reqs"><li><b class='mono'>R1</b> <code>evaluate(coefficients, x)</code> returns the sum of c_k T_k(x) and its derivative for x in [-1, 1], c_0 first, by Clenshaw&#x27;s recurrence (the polynomials T_k are never formed).</li><li><b class='mono'>R2</b> <code>evaluate_on(coefficients, t, mid, radius)</code> evaluates the same series at x = (t - mid) / radius and returns the derivative with respect to t. A t outside the interval is refused; one that leaves it by rounding alone (at most two units in the last place) is taken as the end.</li><li><b class='mono'>R3</b> Measured on 600 series of 1 to 40 terms at points of random intervals, ends included: value and derivative agree with CSPICE <code>chbval</code>/<code>chbder</code> and NumPy within 1e-14, and with mpmath at 40 digits within 5e-14, of the natural scale of the sum (sum of |c_k|; sum of k² |c_k| / radius).</li><li><b class='mono'>R4</b> Every function returns two floats or raises <code>ValueError</code>: a malformed coefficient list (1 to 200 finite numbers within 1e100, booleans refused), x outside [-1, 1], t outside the interval, a midpoint or radius out of range.</li></ul>
+<h3>Limiti (che cosa non si afferma)</h3><p>Evaluation only: no fitting of coefficients, no reading of ephemeris files, no second or higher derivatives, no integration of the series. The error of the result is that of Clenshaw&#x27;s recurrence in double precision, about 1e-15 of the sum of |c_k| (more for the derivative, by the factor k²): when the terms cancel, the relative error of a small result is larger and is not bounded here. For an ephemeris, the accuracy of a position is that of its coefficients, which this module cannot judge.</p>
+<h3>Evidenze nel registro</h3><div class="table-scroll"><table class="data"><thead><tr><th>Controllo</th><th>Stato</th><th>Registrato</th><th>Che cosa è stato osservato</th></tr></thead><tbody><tr><td>Unit tests</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>133 passed in 0.81s</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>Requirements, interface, units, data provenance, dependency surface and failure behaviour reviewed</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>Re-running the cross-check gives a byte-identical evidence file</td></tr><tr><td>Reference value</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>evaluate_on([1, 3, 0.5, 1, 0.5, -1, 1], 1, 0.5, 3) = (-0.34087791495198916, 0.3827160493827157) (suite: 133 passed in 0.81s)</td></tr><tr><td>Cross-check with independent libraries</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>star_chebyshev evaluates a Chebyshev series and its first derivative on an interval given by midpoint and radius, the convention of SPK ephemeris segments</td></tr><tr><td>Benchmark</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>largest scaled difference from mpmath at 40 digits: value 1.6e-14, derivative 1.5e-14</td></tr><tr><td>Clean install from the release tag</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>pytest outside the tree: 133 passed in 0.52s</td></tr></tbody></table></div>
+<h3>Impronte (SHA-256)</h3><div class="table-scroll"><table class="data"><tbody><tr><td class='mono small'>star_chebyshev-0.1.0-py3-none-any.whl</td><td class='mono small hash'>8d545448565d8135ee8f82586601095093f4d04c9100df7649781fc9d0e73aff</td></tr><tr><td class='mono small'>star_chebyshev.py</td><td class='mono small hash'>b44ad7ed248449ddc2181d573022dc3662b405db5b239a898fde155790f494db</td></tr><tr><td class='mono small'>star_chebyshev-0.1.0-source.zip</td><td class='mono small hash'>546fe37c0c972a62fd662cb93a891db96cbdb2cac3be825ed4c89c9e6b0c0ca7</td></tr></tbody></table></div>
+</section></div>
+</main>
+<footer class="site-footer">
+ <div class="wrap">
+  <div class="foot-grid">
+   <div><div class="foot-brand"><img src="/S.T.A.R.-/assets/images/star_logo_white_transparent.png" alt="" width="36" height="36">S.T.A.R.</div>
+    <p>Engineering Intelligence. Built to be Verified.</p><p class="small">Un progetto indipendente di Andrea Cavazzini, Italia. Non è una società.<br>Maturità di prototipo (TRL ≤ 6). Non qualificato per il volo. Nessuna certificazione.</p></div>
+   <div><h2>Esplora</h2><ul><li><a href="/S.T.A.R.-/it/start/">Come iniziare</a></li><li><a href="/S.T.A.R.-/it/software/">Software</a></li><li><a href="/S.T.A.R.-/it/evidence/">Evidenze</a></li><li><a href="/S.T.A.R.-/it/assessment/">Valutazione</a></li><li><a href="/S.T.A.R.-/it/about/">Chi siamo</a></li>
+    <li><a href="/S.T.A.R.-/it/downloads/">Download</a></li><li><a href="https://github.com/Andrea07072000/S.T.A.R.-">GitHub</a></li></ul></div>
+   <div><h2>Fiducia e documenti legali</h2><ul><li><a href="/S.T.A.R.-/it/legal/notice/">Note legali</a></li><li><a href="/S.T.A.R.-/it/legal/terms/">Termini d&#x27;uso del sito</a></li><li><a href="/S.T.A.R.-/it/legal/privacy/">Informativa sulla privacy</a></li><li><a href="/S.T.A.R.-/it/legal/cookies/">Informativa sui cookie</a></li><li><a href="/S.T.A.R.-/it/legal/disclaimer/">Avvertenza su evidenze e verifiche</a></li><li><a href="/S.T.A.R.-/it/legal/licences/">Licenze</a></li><li><a href="/S.T.A.R.-/it/legal/permissions/">Che cosa puoi fare con il software S.T.A.R.</a></li><li><a href="/S.T.A.R.-/it/legal/">Tutti i documenti legali</a></li></ul></div>
+   <div><h2>Contatti</h2><ul><li><a href="mailto:Info.and.News.S.T.A.R@proton.me">Info.and.News.S.T.A.R@proton.me</a></li>
+    <li><a href="/S.T.A.R.-/it/assessment/#request">Richiedi una valutazione</a></li></ul></div>
+  </div>
+  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generato dal registro il 2026-10-15 · commit di ingegneria c54092b · commit pubblico 94fcf7c</span>
+   <a href="/S.T.A.R.-/software/star_chebyshev/" lang="en">English</a></div>
+ </div>
+</footer>
+</body>
+</html>

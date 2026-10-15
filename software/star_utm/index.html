@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en" data-base="/S.T.A.R.-/">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>star-utm — Transverse Mercator and UTM coordinates · S.T.A.R.</title>
+<meta name="description" content="Transverse Mercator and UTM coordinates, forward and inverse, by Krueger&#x27;s series; within 2e-7 m of PROJ and PyGeodesy on 600 points in their zone and 2.5e-7 m of PROJ up to 12 deg from the central me">
+<link rel="icon" href="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" type="image/png">
+<link rel="canonical" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_utm/">
+<link rel="alternate" hreflang="en" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_utm/">
+<link rel="alternate" hreflang="it" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_utm/">
+<link rel="alternate" hreflang="x-default" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_utm/">
+<meta property="og:title" content="star-utm — Transverse Mercator and UTM coordinates · S.T.A.R.">
+<meta property="og:description" content="Transverse Mercator and UTM coordinates, forward and inverse, by Krueger&#x27;s series; within 2e-7 m of PROJ and PyGeodesy on 600 points in their zone and 2.5e-7 m of PROJ up to 12 deg from the central me">
+<meta property="og:image" content="https://andrea07072000.github.io/S.T.A.R.-/assets/images/star_logo_dark_transparent.png">
+  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-Dx8lu5GH.js"></script>
+  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-CJ2BHFzs.css">
+</head>
+<body data-page="software">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+ <div class="wrap">
+  <a class="wordmark" href="/S.T.A.R.-/">S.T.A.R.</a>
+  <button class="btn small menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+  <nav class="main-nav" id="main-nav" aria-label="Main"><a href="/S.T.A.R.-/start/">Get started</a><a href="/S.T.A.R.-/software/" aria-current="page">Software</a><a href="/S.T.A.R.-/evidence/">Evidence</a><a href="/S.T.A.R.-/assessment/">Assessment</a><a href="/S.T.A.R.-/about/">About</a></nav>
+  <div class="header-right">
+   <div class="lang" role="group" aria-label="Language">
+    <span aria-current="true">EN</span>
+    <a href="/S.T.A.R.-/it/software/star_utm/" lang="it" hreflang="it">IT</a>
+   </div>
+   <a class="btn small primary" href="/S.T.A.R.-/assessment/#request">Request an assessment</a>
+   <img class="header-logo" src="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" alt="S.T.A.R. logo" width="40" height="40">
+  </div>
+ </div>
+</header>
+<main id="main">
+<div class="wrap"><div class="page-head">
+<p><a href="/S.T.A.R.-/software/">← All packages</a></p>
+<span class="eyebrow">Geodesy &amp; maps</span><h1 class="mono pkg-title">star-utm <span class="muted">0.1.0</span></h1>
+<p class="lead">Transverse Mercator and UTM coordinates</p>
+<p><span class="status ok">Apache-2.0</span> <span class="status ok">RELEASED</span> <span class="status soon">single file</span></p>
+</div>
+<section class="section tight"><h2>In plain words</h2><p class="lead">Transverse Mercator and UTM coordinates, forward and inverse, by Krueger&#x27;s series; within 2e-7 m of PROJ and PyGeodesy on 600 points in their zone and 2.5e-7 m of PROJ up to 12 deg from the central meridian; reproduces Snyder&#x27;s published example and refuses out-of-range input.</p></section>
+<section class="section tight" id="try"><h2>Try it here</h2><p>Edit the code and press Run (or Ctrl+Enter). Python runs in your browser with this package&#x27;s published code. The first run downloads Python once (about 12 MB).</p><div class="runner" data-wheels='[&quot;star_utm-0.1.0-py3-none-any.whl&quot;]'><label class="visually-hidden" for="code-star_utm">Python</label><textarea id="code-star_utm" spellcheck="false" rows="6">import star_utm as su
+print(su.utm_forward(48.8582, 2.2945))  # (31, &#x27;N&#x27;, 448251.795, 5411932.678)
+print(su.utm_inverse(31, &#x27;N&#x27;, 448251.795, 5411932.678))  # (48.8582, 2.2945)
+print(su.tm_forward(40.5, -73.5, -75.0, 6378206.4, 1 / 294.978698214))  # (127106.47, 4484124.43): Snyder&#x27;s example</textarea><div class="runner-bar"><button class="btn primary run" type="button">Run</button><button class="btn reset" type="button">Reset</button></div><output aria-live="polite"></output></div></section>
+<section class="section tight" id="use"><h2>Use it on your computer</h2><p>No account and no GitHub needed. Download, then install with one command:</p>
+<ul class="files"><li><a class="btn small" href="/S.T.A.R.-/downloads/wheels/star_utm-0.1.0-py3-none-any.whl" download>Install file · star_utm-0.1.0-py3-none-any.whl</a> <span class="muted small">4 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/modules/star_utm.py" download>Single file — just copy it next to your code · star_utm.py</a> <span class="muted small">7 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/source/star_utm-0.1.0-source.zip" download>Source code (.zip)</a> <span class="muted small">27 kB</span></li></ul><pre class="cmd"><code>python -m pip install star_utm-0.1.0-py3-none-any.whl</code></pre>
+<p class="small"><a href="/S.T.A.R.-/start/">Get started →</a></p></section>
+<section class="section tight" id="dev"><h2>For developers</h2><p>Install directly from the public repository:</p><pre class="cmd"><code>python -m pip install &quot;star-utm @ git+https://github.com/Andrea07072000/S.T.A.R.-.git#subdirectory=packages/star_utm&quot;</code></pre>
+<p class="small"><a href="https://github.com/Andrea07072000/S.T.A.R.-/tree/main/packages/star_utm">README · tests · evidence (GitHub)</a></p></section>
+<section class="section tight" id="tech"><h2>Technical sheet</h2><dl class="meta"><dt>Package</dt><dd class='mono'>star-utm</dd><dt>Version</dt><dd class='mono'>0.1.0</dd><dt>Licence</dt><dd class='mono'>Apache-2.0</dd><dt>Python</dt><dd class='mono'>&gt;=3.9</dd><dt>Dependencies</dt><dd class='mono'>none (standard library only)</dd><dt>Capability</dt><dd class='mono'>star.geodesy.utm</dd><dt>Maturity</dt><dd class='mono'>RELEASED</dd><dt>Published commit</dt><dd class='mono'>94fcf7c</dd></dl>
+<h3>Requirements</h3><ul class="reqs"><li><b class='mono'>R1</b> <code>tm_forward</code> and <code>tm_inverse</code>: Krueger&#x27;s series to n^4 (Karney 2011) about a central meridian, with scale k0 and no false origin, for any ellipsoid with flattening up to 0.1. Reproduces Snyder&#x27;s numerical example (USGS PP 1395, p. 269) to the printed 0.1 m.</li><li><b class='mono'>R2</b> <code>utm_zone</code>, <code>utm_forward</code>, <code>utm_inverse</code>: WGS-84, k0 = 0.9996, false easting 500000 m, false northing 10000000 m in the South, 6-degree zones from 180 W; a zone can be forced.</li><li><b class='mono'>R3</b> Measured: 600 points in their zone within 2e-7 m (forward) and 6e-8 m (inverse) of PROJ and PyGeodesy; 300 points 3 to 12 deg from the central meridian within 2.5e-7 m of PROJ.</li><li><b class='mono'>R4</b> Every function returns its result or raises <code>ValueError</code>: non-numeric, boolean, NaN or infinite input, latitude outside [-90, 90] (UTM: [-80, 84]), longitude outside [-180, 180], a point more than 12 deg from the central meridian, an ellipsoid or scale outside the stated ranges, a zone not an integer in 1…60, a hemisphere other than &#x27;N&#x27; or &#x27;S&#x27;, coordinates beyond the pole of the projection.</li></ul>
+<h3>Limits (what is not claimed)</h3><p>The Norway and Svalbard exceptions of the MGRS grid are NOT applied: <code>utm_zone</code> is the plain 6-degree rule (one of 600 random points fell in an exception zone and was compared in the other library&#x27;s zone). No MGRS letters, no UPS for the polar caps, no datum transformation. Beyond 12 deg from the central meridian the functions refuse: the accuracy there was not measured. The accuracy stated is agreement with two libraries, not with a survey.</p>
+<h3>Evidence in the registry</h3><div class="table-scroll"><table class="data"><thead><tr><th>Check</th><th>Status</th><th>Recorded</th><th>What was observed</th></tr></thead><tbody><tr><td>Clean install from the release tag</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>pytest outside the tree: 344 passed in 1.19s</td></tr><tr><td>Unit tests</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>344 passed in 1.10s</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>Requirements, interface, units, data provenance, dependency surface and failure behaviour reviewed</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>Re-running the cross-check gives a byte-identical evidence file</td></tr><tr><td>Reference value</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>(127106.467, 4484124.434): within 0.034 m of the printed values (printed to 0.1 m) (suite: 344 passed in 1.10s)</td></tr><tr><td>Cross-check with independent libraries</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>star_utm reproduces the transverse Mercator of two independent libraries to well below a micrometre inside a UTM zone</td></tr><tr><td>Benchmark</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>in zone: PROJ 1.9e-07 m, PyGeodesy 1.9e-07 m; up to 12 deg: 2.4e-07 m</td></tr></tbody></table></div>
+<h3>Fingerprints (SHA-256)</h3><div class="table-scroll"><table class="data"><tbody><tr><td class='mono small'>star_utm-0.1.0-py3-none-any.whl</td><td class='mono small hash'>ec48f2d1ee918e163f4bed7ab125ab45cd099e000dcbc2475fa9a2a8920f6e9c</td></tr><tr><td class='mono small'>star_utm.py</td><td class='mono small hash'>16cf6380d92088abb7f06f108e086cef9fc783a63ad1e5e534105fcb4c0bc346</td></tr><tr><td class='mono small'>star_utm-0.1.0-source.zip</td><td class='mono small hash'>a4887696870a45ba5d1730eb76534ff8287c17ca10f48c9eafca72641ff370b6</td></tr></tbody></table></div>
+</section></div>
+</main>
+<footer class="site-footer">
+ <div class="wrap">
+  <div class="foot-grid">
+   <div><div class="foot-brand"><img src="/S.T.A.R.-/assets/images/star_logo_white_transparent.png" alt="" width="36" height="36">S.T.A.R.</div>
+    <p>Engineering Intelligence. Built to be Verified.</p><p class="small">An independent project by Andrea Cavazzini, Italy. Not a company.<br>Prototype maturity (TRL ≤ 6). Not flight-qualified. No certification.</p></div>
+   <div><h2>Explore</h2><ul><li><a href="/S.T.A.R.-/start/">Get started</a></li><li><a href="/S.T.A.R.-/software/">Software</a></li><li><a href="/S.T.A.R.-/evidence/">Evidence</a></li><li><a href="/S.T.A.R.-/assessment/">Assessment</a></li><li><a href="/S.T.A.R.-/about/">About</a></li>
+    <li><a href="/S.T.A.R.-/downloads/">Downloads</a></li><li><a href="https://github.com/Andrea07072000/S.T.A.R.-">GitHub</a></li></ul></div>
+   <div><h2>Trust &amp; legal</h2><ul><li><a href="/S.T.A.R.-/legal/notice/">Legal notice</a></li><li><a href="/S.T.A.R.-/legal/terms/">Website terms of use</a></li><li><a href="/S.T.A.R.-/legal/privacy/">Privacy notice</a></li><li><a href="/S.T.A.R.-/legal/cookies/">Cookie notice</a></li><li><a href="/S.T.A.R.-/legal/disclaimer/">Evidence and verification disclaimer</a></li><li><a href="/S.T.A.R.-/legal/licences/">Licences</a></li><li><a href="/S.T.A.R.-/legal/permissions/">What you may do with S.T.A.R. software</a></li><li><a href="/S.T.A.R.-/legal/">All legal documents</a></li></ul></div>
+   <div><h2>Contact</h2><ul><li><a href="mailto:Info.and.News.S.T.A.R@proton.me">Info.and.News.S.T.A.R@proton.me</a></li>
+    <li><a href="/S.T.A.R.-/assessment/#request">Request an assessment</a></li></ul></div>
+  </div>
+  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generated from the registry on 2026-10-15 · engineering commit c54092b · public commit 94fcf7c</span>
+   <a href="/S.T.A.R.-/it/software/star_utm/" lang="it">Italiano</a></div>
+ </div>
+</footer>
+</body>
+</html>

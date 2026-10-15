@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="it" data-base="/S.T.A.R.-/">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pacchetto star-topo — Look angles from a ground site · S.T.A.R.</title>
+<meta name="description" content="ECEF to/from local East-North-Up and azimuth/elevation/range at a WGS-84 site: the geometry of ground-station visibility. Every function returns three finite floats or raises ValueError.">
+<link rel="icon" href="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" type="image/png">
+<link rel="canonical" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_topo/">
+<link rel="alternate" hreflang="en" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_topo/">
+<link rel="alternate" hreflang="it" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_topo/">
+<link rel="alternate" hreflang="x-default" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_topo/">
+<meta property="og:title" content="Pacchetto star-topo — Look angles from a ground site · S.T.A.R.">
+<meta property="og:description" content="ECEF to/from local East-North-Up and azimuth/elevation/range at a WGS-84 site: the geometry of ground-station visibility. Every function returns three finite floats or raises ValueError.">
+<meta property="og:image" content="https://andrea07072000.github.io/S.T.A.R.-/assets/images/star_logo_dark_transparent.png">
+  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-Dx8lu5GH.js"></script>
+  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-CJ2BHFzs.css">
+</head>
+<body data-page="software">
+<a class="skip" href="#main">Vai al contenuto</a>
+<header class="site-header">
+ <div class="wrap">
+  <a class="wordmark" href="/S.T.A.R.-/it/">S.T.A.R.</a>
+  <button class="btn small menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+  <nav class="main-nav" id="main-nav" aria-label="Main"><a href="/S.T.A.R.-/it/start/">Come iniziare</a><a href="/S.T.A.R.-/it/software/" aria-current="page">Software</a><a href="/S.T.A.R.-/it/evidence/">Evidenze</a><a href="/S.T.A.R.-/it/assessment/">Valutazione</a><a href="/S.T.A.R.-/it/about/">Chi siamo</a></nav>
+  <div class="header-right">
+   <div class="lang" role="group" aria-label="Language">
+    <a href="/S.T.A.R.-/software/star_topo/" lang="en" hreflang="en">EN</a>
+    <span aria-current="true">IT</span>
+   </div>
+   <a class="btn small primary" href="/S.T.A.R.-/it/assessment/#request">Richiedi una valutazione</a>
+   <img class="header-logo" src="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" alt="S.T.A.R. logo" width="40" height="40">
+  </div>
+ </div>
+</header>
+<main id="main">
+<div class="wrap"><div class="page-head">
+<p><a href="/S.T.A.R.-/it/software/">← Tutti i pacchetti</a></p>
+<span class="eyebrow">Geodesia e mappe</span><h1 class="mono pkg-title">star-topo <span class="muted">0.1.0</span></h1>
+<p class="lead">Look angles from a ground site</p>
+<p><span class="status ok">Apache-2.0</span> <span class="status ok">RELEASED</span> <span class="status soon">file singolo</span></p>
+<p class="small muted">La documentazione tecnica del pacchetto è in inglese, come il suo codice.</p></div>
+<section class="section tight"><h2>In parole semplici</h2><p class="lead">ECEF to/from local East-North-Up and azimuth/elevation/range at a WGS-84 site: the geometry of ground-station visibility. Every function returns three finite floats or raises ValueError.</p></section>
+<section class="section tight" id="try"><h2>Provalo qui</h2><p>Modifica il codice e premi Esegui (o Ctrl+Invio). Python gira nel tuo browser con il codice pubblicato di questo pacchetto. La prima volta scarica Python una sola volta (circa 12 MB).</p><div class="runner" data-wheels='[&quot;star_topo-0.1.0-py3-none-any.whl&quot;]'><label class="visually-hidden" for="code-star_topo">Python</label><textarea id="code-star_topo" spellcheck="false" rows="5">import star_topo
+az, el, rng = star_topo.ecef_to_aer(x, y, z, site_lat_deg, site_lon_deg, site_h_m)   # deg, deg, m
+x, y, z = star_topo.aer_to_ecef(az, el, rng, site_lat_deg, site_lon_deg, site_h_m)</textarea><div class="runner-bar"><button class="btn primary run" type="button">Esegui</button><button class="btn reset" type="button">Ripristina</button></div><output aria-live="polite"></output></div></section>
+<section class="section tight" id="use"><h2>Usalo sul tuo computer</h2><p>Non servono account né GitHub. Scarica, poi installa con un comando:</p>
+<ul class="files"><li><a class="btn small" href="/S.T.A.R.-/downloads/wheels/star_topo-0.1.0-py3-none-any.whl" download>File di installazione · star_topo-0.1.0-py3-none-any.whl</a> <span class="muted small">3 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/modules/star_topo.py" download>File singolo — basta copiarlo accanto al tuo codice · star_topo.py</a> <span class="muted small">5 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/source/star_topo-0.1.0-source.zip" download>Codice sorgente (.zip)</a> <span class="muted small">17 kB</span></li></ul><pre class="cmd"><code>python -m pip install star_topo-0.1.0-py3-none-any.whl</code></pre>
+<p class="small"><a href="/S.T.A.R.-/it/start/">Come iniziare →</a></p></section>
+<section class="section tight" id="dev"><h2>Per sviluppatori</h2><p>Installa direttamente dal repository pubblico:</p><pre class="cmd"><code>python -m pip install &quot;star-topo @ git+https://github.com/Andrea07072000/S.T.A.R.-.git#subdirectory=packages/star_topo&quot;</code></pre>
+<p class="small"><a href="https://github.com/Andrea07072000/S.T.A.R.-/tree/main/packages/star_topo">README · tests · evidence (GitHub)</a></p></section>
+<section class="section tight" id="tech"><h2>Scheda tecnica</h2><dl class="meta"><dt>Pacchetto</dt><dd class='mono'>star-topo</dd><dt>Versione</dt><dd class='mono'>0.1.0</dd><dt>Licenza</dt><dd class='mono'>Apache-2.0</dd><dt>Python</dt><dd class='mono'>&gt;=3.9</dd><dt>Dipendenze</dt><dd class='mono'>nessuna (solo libreria standard)</dd><dt>Capacità</dt><dd class='mono'>star.geodesy.topocentric</dd><dt>Maturità</dt><dd class='mono'>RELEASED</dd><dt>Commit pubblicato</dt><dd class='mono'>94fcf7c</dd></dl>
+<h3>Requisiti</h3><ul class="reqs"><li><b class='mono'>R1</b> <code>ecef_to_enu</code> / <code>enu_to_ecef</code>: East, North, Up in metres at a site given by geodetic latitude, longitude (deg) and ellipsoidal height (m) on WGS-84; &quot;up&quot; is the ellipsoid normal. Reproduces the EPSG Guidance Note 7-2 example (method 9836) to the printed millimetre.</li><li><b class='mono'>R2</b> <code>enu_to_aer</code> / <code>aer_to_enu</code>: azimuth from North towards East in [0, 360), elevation from the horizontal plane in [-90, 90], range in metres. At the zenith or nadir the azimuth is returned as 0.0.</li><li><b class='mono'>R3</b> <code>ecef_to_aer</code> / <code>aer_to_ecef</code> compose the two; a round trip returns the starting point and the range equals the ECEF distance between site and target.</li><li><b class='mono'>R4</b> Every function returns three finite floats or raises <code>ValueError</code>: non-numeric, boolean, NaN, infinite or |value| &gt;= 1e300 input; latitude or elevation outside [-90, 90]; longitude or azimuth outside [-360, 360]; site height at or below -b (the Earth&#x27;s centre under the poles); zero or negative range; target on the site; overflow.</li></ul>
+<h3>Limiti (che cosa non si afferma)</h3><p>Geometry only: no atmospheric refraction, no light-time, no Earth rotation during signal travel, no terrain mask. The target must already be in the same Earth-fixed frame as the site.</p>
+<h3>Evidenze nel registro</h3><div class="table-scroll"><table class="data"><thead><tr><th>Controllo</th><th>Stato</th><th>Registrato</th><th>Che cosa è stato osservato</th></tr></thead><tbody><tr><td>Clean install from the release tag</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>pytest outside the tree: 41 passed in 0.24s</td></tr><tr><td>Unit tests</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>41 passed in 0.39s</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>Requirements, interface, units, data provenance, dependency surface and failure behaviour reviewed</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>Re-running the cross-check gives a byte-identical evidence file</td></tr><tr><td>Reference value</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>forward within 3.1e-4 m of the printed values (printed to 1 mm), reverse and origin ECEF within 1 mm (suite: 41 passed in 0.39s)</td></tr><tr><td>Mutation testing</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>114/117 = 0.9744</td></tr><tr><td>Cross-check with independent libraries</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>star_topo agrees with three independent libraries on site/target pairs over the whole globe</td></tr><tr><td>Benchmark</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>1 m: pygeodesy 3.0e-09 m, pymap3d 1.9e-09 m, pyproj 2.2e-16 m; 1 km: pygeodesy 4.0e-09 m, pymap3d 1.9e-09 m, pyproj 2.3e-13 m; 400 km: pygeodesy 3.4e-09 m, pymap3d 1.9e-09 m, pyproj 5.8e-11 m; 40000 km: pygeodesy 1.8e-08 m, pymap3d 7.5e-09 m, pyproj 1.5e-08 m; 401 cases</td></tr></tbody></table></div>
+<h3>Impronte (SHA-256)</h3><div class="table-scroll"><table class="data"><tbody><tr><td class='mono small'>star_topo-0.1.0-py3-none-any.whl</td><td class='mono small hash'>a5f9f3ea0ff73cdb4aef0847fb74e373fdab45c6467672a9396ed5ef5ac8ee36</td></tr><tr><td class='mono small'>star_topo.py</td><td class='mono small hash'>be903fb27e97c2d5af06ab735e80b304d7065ef77237584e1fddcb667ebdc6b3</td></tr><tr><td class='mono small'>star_topo-0.1.0-source.zip</td><td class='mono small hash'>e26128482f89a8c95f5cd6092fcccb3d4047cd0efc58164d95ff6ddb5a4b2116</td></tr></tbody></table></div>
+</section></div>
+</main>
+<footer class="site-footer">
+ <div class="wrap">
+  <div class="foot-grid">
+   <div><div class="foot-brand"><img src="/S.T.A.R.-/assets/images/star_logo_white_transparent.png" alt="" width="36" height="36">S.T.A.R.</div>
+    <p>Engineering Intelligence. Built to be Verified.</p><p class="small">Un progetto indipendente di Andrea Cavazzini, Italia. Non è una società.<br>Maturità di prototipo (TRL ≤ 6). Non qualificato per il volo. Nessuna certificazione.</p></div>
+   <div><h2>Esplora</h2><ul><li><a href="/S.T.A.R.-/it/start/">Come iniziare</a></li><li><a href="/S.T.A.R.-/it/software/">Software</a></li><li><a href="/S.T.A.R.-/it/evidence/">Evidenze</a></li><li><a href="/S.T.A.R.-/it/assessment/">Valutazione</a></li><li><a href="/S.T.A.R.-/it/about/">Chi siamo</a></li>
+    <li><a href="/S.T.A.R.-/it/downloads/">Download</a></li><li><a href="https://github.com/Andrea07072000/S.T.A.R.-">GitHub</a></li></ul></div>
+   <div><h2>Fiducia e documenti legali</h2><ul><li><a href="/S.T.A.R.-/it/legal/notice/">Note legali</a></li><li><a href="/S.T.A.R.-/it/legal/terms/">Termini d&#x27;uso del sito</a></li><li><a href="/S.T.A.R.-/it/legal/privacy/">Informativa sulla privacy</a></li><li><a href="/S.T.A.R.-/it/legal/cookies/">Informativa sui cookie</a></li><li><a href="/S.T.A.R.-/it/legal/disclaimer/">Avvertenza su evidenze e verifiche</a></li><li><a href="/S.T.A.R.-/it/legal/licences/">Licenze</a></li><li><a href="/S.T.A.R.-/it/legal/permissions/">Che cosa puoi fare con il software S.T.A.R.</a></li><li><a href="/S.T.A.R.-/it/legal/">Tutti i documenti legali</a></li></ul></div>
+   <div><h2>Contatti</h2><ul><li><a href="mailto:Info.and.News.S.T.A.R@proton.me">Info.and.News.S.T.A.R@proton.me</a></li>
+    <li><a href="/S.T.A.R.-/it/assessment/#request">Richiedi una valutazione</a></li></ul></div>
+  </div>
+  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generato dal registro il 2026-10-15 · commit di ingegneria c54092b · commit pubblico 94fcf7c</span>
+   <a href="/S.T.A.R.-/software/star_topo/" lang="en">English</a></div>
+ </div>
+</footer>
+</body>
+</html>

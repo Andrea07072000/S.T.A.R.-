@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en" data-base="/S.T.A.R.-/">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>star-lambert — Universal-variable Lambert orbital boundary value problem solver · S.T.A.R.</title>
+<meta name="description" content="Zero-revolution solver for Lambert&#x27;s problem (universal variables, Stumpff functions, Newton on z; Bate-Mueller-White / Curtis Algorithm 5.2). Standard library only.">
+<link rel="icon" href="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" type="image/png">
+<link rel="canonical" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_lambert/">
+<link rel="alternate" hreflang="en" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_lambert/">
+<link rel="alternate" hreflang="it" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_lambert/">
+<link rel="alternate" hreflang="x-default" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_lambert/">
+<meta property="og:title" content="star-lambert — Universal-variable Lambert orbital boundary value problem solver · S.T.A.R.">
+<meta property="og:description" content="Zero-revolution solver for Lambert&#x27;s problem (universal variables, Stumpff functions, Newton on z; Bate-Mueller-White / Curtis Algorithm 5.2). Standard library only.">
+<meta property="og:image" content="https://andrea07072000.github.io/S.T.A.R.-/assets/images/star_logo_dark_transparent.png">
+  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-Dx8lu5GH.js"></script>
+  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-CJ2BHFzs.css">
+</head>
+<body data-page="software">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+ <div class="wrap">
+  <a class="wordmark" href="/S.T.A.R.-/">S.T.A.R.</a>
+  <button class="btn small menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+  <nav class="main-nav" id="main-nav" aria-label="Main"><a href="/S.T.A.R.-/start/">Get started</a><a href="/S.T.A.R.-/software/" aria-current="page">Software</a><a href="/S.T.A.R.-/evidence/">Evidence</a><a href="/S.T.A.R.-/assessment/">Assessment</a><a href="/S.T.A.R.-/about/">About</a></nav>
+  <div class="header-right">
+   <div class="lang" role="group" aria-label="Language">
+    <span aria-current="true">EN</span>
+    <a href="/S.T.A.R.-/it/software/star_lambert/" lang="it" hreflang="it">IT</a>
+   </div>
+   <a class="btn small primary" href="/S.T.A.R.-/assessment/#request">Request an assessment</a>
+   <img class="header-logo" src="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" alt="S.T.A.R. logo" width="40" height="40">
+  </div>
+ </div>
+</header>
+<main id="main">
+<div class="wrap"><div class="page-head">
+<p><a href="/S.T.A.R.-/software/">← All packages</a></p>
+<span class="eyebrow">Orbits &amp; astrodynamics</span><h1 class="mono pkg-title">star-lambert <span class="muted">0.1.3</span></h1>
+<p class="lead">Universal-variable Lambert orbital boundary value problem solver</p>
+<p><span class="status ok">Apache-2.0</span> <span class="status ok">RELEASED</span> <span class="status soon">single file</span></p>
+</div>
+<section class="section tight"><h2>In plain words</h2><p class="lead">Zero-revolution solver for Lambert&#x27;s problem (universal variables, Stumpff functions, Newton on z; Bate-Mueller-White / Curtis Algorithm 5.2). Standard library only.</p></section>
+<section class="section tight" id="try"><h2>Try it here</h2><p>Edit the code and press Run (or Ctrl+Enter). Python runs in your browser with this package&#x27;s published code. The first run downloads Python once (about 12 MB).</p><div class="runner" data-wheels='[&quot;star_lambert-0.1.3-py3-none-any.whl&quot;]'><label class="visually-hidden" for="code-star_lambert">Python</label><textarea id="code-star_lambert" spellcheck="false" rows="7">import star_lambert
+
+# what this package offers
+print([name for name in dir(star_lambert) if not name.startswith(&#x27;_&#x27;)])
+print(star_lambert.__doc__)</textarea><div class="runner-bar"><button class="btn primary run" type="button">Run</button><button class="btn reset" type="button">Reset</button></div><output aria-live="polite"></output></div></section>
+<section class="section tight" id="use"><h2>Use it on your computer</h2><p>No account and no GitHub needed. Download, then install with one command:</p>
+<ul class="files"><li><a class="btn small" href="/S.T.A.R.-/downloads/wheels/star_lambert-0.1.3-py3-none-any.whl" download>Install file · star_lambert-0.1.3-py3-none-any.whl</a> <span class="muted small">3 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/modules/star_lambert.py" download>Single file — just copy it next to your code · star_lambert.py</a> <span class="muted small">5 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/source/star_lambert-0.1.3-source.zip" download>Source code (.zip)</a> <span class="muted small">23 kB</span></li></ul><pre class="cmd"><code>python -m pip install star_lambert-0.1.3-py3-none-any.whl</code></pre>
+<p class="small"><a href="/S.T.A.R.-/start/">Get started →</a></p></section>
+<section class="section tight" id="dev"><h2>For developers</h2><p>Install directly from the public repository:</p><pre class="cmd"><code>python -m pip install &quot;star-lambert @ git+https://github.com/Andrea07072000/S.T.A.R.-.git#subdirectory=packages/star_lambert&quot;</code></pre>
+<p class="small"><a href="https://github.com/Andrea07072000/S.T.A.R.-/tree/main/packages/star_lambert">README · tests · evidence (GitHub)</a></p></section>
+<section class="section tight" id="tech"><h2>Technical sheet</h2><dl class="meta"><dt>Package</dt><dd class='mono'>star-lambert</dd><dt>Version</dt><dd class='mono'>0.1.3</dd><dt>Licence</dt><dd class='mono'>Apache-2.0</dd><dt>Python</dt><dd class='mono'>&gt;=3.9</dd><dt>Dependencies</dt><dd class='mono'>none (standard library only)</dd><dt>Capability</dt><dd class='mono'>star.orbit.lambert</dd><dt>Maturity</dt><dd class='mono'>RELEASED</dd><dt>Published commit</dt><dd class='mono'>94fcf7c</dd></dl>
+<h3>Requirements</h3><ul class="reqs"><li><b class='mono'>R1</b> <code>lambert(r1, r2, tof, mu=398600.4418, prograde=True) -&gt; (v1, v2)</code>: velocities at r1 and r2 for a transfer of duration <code>tof</code>. Units: km, s, km/s, km^3/s^2.</li><li><b class='mono'>R2</b> Never return an unconverged result: <code>RuntimeError</code> instead.</li><li><b class='mono'>R3</b> Invalid input fails explicitly: <code>ValueError</code> for tof &lt;= 0, zero position vectors, degenerate geometry (0 or 180 deg).</li></ul>
+
+<h3>Evidence in the registry</h3><div class="table-scroll"><table class="data"><thead><tr><th>Check</th><th>Status</th><th>Recorded</th><th>What was observed</th></tr></thead><tbody><tr><td>Clean install from the release tag</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>pytest outside the tree: 118 passed in 0.80s</td></tr><tr><td>Clean install from the release tag</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-05</td><td class='small'>pytest outside the tree: 67 passed in 0.56s</td></tr><tr><td>Clean install from the release tag</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-04</td><td class='small'>pytest outside the tree: 22 passed in 0.43s</td></tr><tr><td>Mutation testing</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-04</td><td class='small'>177/213 = 0.8318</td></tr><tr><td>Mutation testing</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-04</td><td class='small'>100/214 = 0.4673 -&gt; 164/214 = 0.7664 after survivor-driven tests</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-03</td><td class='small'>Re-execution of bench.xc-006 reproduces the committed evidence bundles</td></tr><tr><td>Cross-check with independent libraries</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-03</td><td class='small'>universal variables vs Izzo agree to 1.3e-14 km/s</td></tr><tr><td>Benchmark</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-03</td><td class='small'>21/21 AGREE</td></tr><tr><td>Unit tests</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-03</td><td class='small'>3/3</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-03</td><td class='small'>No runtime dependencies; imports only math and typing; no IO, network, subprocess or eval</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-03</td><td class='small'>Requirements R1-R3, single documented public function, explicit units, standard GM default</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-03</td><td class='small'>Invalid input and non-convergence fail explicitly</td></tr><tr><td>Unit tests</td><td><span class='status warn'>FAILED</span></td><td class='num'>2026-10-03</td><td class='small'>returns None, 0/3</td></tr><tr><td>Reference value</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-03</td><td class='small'>[-5.9925, 1.9254, 3.2456]</td></tr><tr><td>Clean install from the release tag</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-03</td><td class='small'>v1, v2 = ((-5.992495, 1.925366, 3.245638), (-3.312458, -4.196619, -0.385289)), 3/3 tests pass</td></tr></tbody></table></div>
+<h3>Fingerprints (SHA-256)</h3><div class="table-scroll"><table class="data"><tbody><tr><td class='mono small'>star_lambert-0.1.3-py3-none-any.whl</td><td class='mono small hash'>68adb79d04bdbcf1b6f4e3fdb9f455a754e6def2dd82c2df7d926d13b69ed805</td></tr><tr><td class='mono small'>star_lambert.py</td><td class='mono small hash'>4ba3d54d17e13b3267d6b010e064ef286298fa181ba23af5111c3531b93fac76</td></tr><tr><td class='mono small'>star_lambert-0.1.3-source.zip</td><td class='mono small hash'>aa47c8fb7138c39664a4d80b9e83ac6e029d5a09a7222b91a7eca42bef3581e9</td></tr></tbody></table></div>
+</section></div>
+</main>
+<footer class="site-footer">
+ <div class="wrap">
+  <div class="foot-grid">
+   <div><div class="foot-brand"><img src="/S.T.A.R.-/assets/images/star_logo_white_transparent.png" alt="" width="36" height="36">S.T.A.R.</div>
+    <p>Engineering Intelligence. Built to be Verified.</p><p class="small">An independent project by Andrea Cavazzini, Italy. Not a company.<br>Prototype maturity (TRL ≤ 6). Not flight-qualified. No certification.</p></div>
+   <div><h2>Explore</h2><ul><li><a href="/S.T.A.R.-/start/">Get started</a></li><li><a href="/S.T.A.R.-/software/">Software</a></li><li><a href="/S.T.A.R.-/evidence/">Evidence</a></li><li><a href="/S.T.A.R.-/assessment/">Assessment</a></li><li><a href="/S.T.A.R.-/about/">About</a></li>
+    <li><a href="/S.T.A.R.-/downloads/">Downloads</a></li><li><a href="https://github.com/Andrea07072000/S.T.A.R.-">GitHub</a></li></ul></div>
+   <div><h2>Trust &amp; legal</h2><ul><li><a href="/S.T.A.R.-/legal/notice/">Legal notice</a></li><li><a href="/S.T.A.R.-/legal/terms/">Website terms of use</a></li><li><a href="/S.T.A.R.-/legal/privacy/">Privacy notice</a></li><li><a href="/S.T.A.R.-/legal/cookies/">Cookie notice</a></li><li><a href="/S.T.A.R.-/legal/disclaimer/">Evidence and verification disclaimer</a></li><li><a href="/S.T.A.R.-/legal/licences/">Licences</a></li><li><a href="/S.T.A.R.-/legal/permissions/">What you may do with S.T.A.R. software</a></li><li><a href="/S.T.A.R.-/legal/">All legal documents</a></li></ul></div>
+   <div><h2>Contact</h2><ul><li><a href="mailto:Info.and.News.S.T.A.R@proton.me">Info.and.News.S.T.A.R@proton.me</a></li>
+    <li><a href="/S.T.A.R.-/assessment/#request">Request an assessment</a></li></ul></div>
+  </div>
+  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generated from the registry on 2026-10-15 · engineering commit c54092b · public commit 94fcf7c</span>
+   <a href="/S.T.A.R.-/it/software/star_lambert/" lang="it">Italiano</a></div>
+ </div>
+</footer>
+</body>
+</html>

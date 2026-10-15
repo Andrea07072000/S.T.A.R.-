@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en" data-base="/S.T.A.R.-/">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>star-sigma — What &quot;n sigma&quot; means in one, two and three dimensions · S.T.A.R.</title>
+<meta name="description" content="Coverage, tail probability and inverse of n sigma for a Gaussian error in one, two and three dimensions, and the normal distribution function and quantile; within 1.9e-13 relative of mpmath at 40 digi">
+<link rel="icon" href="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" type="image/png">
+<link rel="canonical" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_sigma/">
+<link rel="alternate" hreflang="en" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_sigma/">
+<link rel="alternate" hreflang="it" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_sigma/">
+<link rel="alternate" hreflang="x-default" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_sigma/">
+<meta property="og:title" content="star-sigma — What &quot;n sigma&quot; means in one, two and three dimensions · S.T.A.R.">
+<meta property="og:description" content="Coverage, tail probability and inverse of n sigma for a Gaussian error in one, two and three dimensions, and the normal distribution function and quantile; within 1.9e-13 relative of mpmath at 40 digi">
+<meta property="og:image" content="https://andrea07072000.github.io/S.T.A.R.-/assets/images/star_logo_dark_transparent.png">
+  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-Dx8lu5GH.js"></script>
+  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-CJ2BHFzs.css">
+</head>
+<body data-page="software">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+ <div class="wrap">
+  <a class="wordmark" href="/S.T.A.R.-/">S.T.A.R.</a>
+  <button class="btn small menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+  <nav class="main-nav" id="main-nav" aria-label="Main"><a href="/S.T.A.R.-/start/">Get started</a><a href="/S.T.A.R.-/software/" aria-current="page">Software</a><a href="/S.T.A.R.-/evidence/">Evidence</a><a href="/S.T.A.R.-/assessment/">Assessment</a><a href="/S.T.A.R.-/about/">About</a></nav>
+  <div class="header-right">
+   <div class="lang" role="group" aria-label="Language">
+    <span aria-current="true">EN</span>
+    <a href="/S.T.A.R.-/it/software/star_sigma/" lang="it" hreflang="it">IT</a>
+   </div>
+   <a class="btn small primary" href="/S.T.A.R.-/assessment/#request">Request an assessment</a>
+   <img class="header-logo" src="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" alt="S.T.A.R. logo" width="40" height="40">
+  </div>
+ </div>
+</header>
+<main id="main">
+<div class="wrap"><div class="page-head">
+<p><a href="/S.T.A.R.-/software/">← All packages</a></p>
+<span class="eyebrow">Numerics &amp; statistics</span><h1 class="mono pkg-title">star-sigma <span class="muted">0.1.0</span></h1>
+<p class="lead">What &quot;n sigma&quot; means in one, two and three dimensions</p>
+<p><span class="status ok">Apache-2.0</span> <span class="status ok">RELEASED</span> <span class="status soon">single file</span></p>
+</div>
+<section class="section tight"><h2>In plain words</h2><p class="lead">Coverage, tail probability and inverse of n sigma for a Gaussian error in one, two and three dimensions, and the normal distribution function and quantile; within 1.9e-13 relative of mpmath at 40 digits and 2.4e-13 of SciPy on 600 cases, tails included; reproduces the published normal and chi-square tables.</p></section>
+<section class="section tight" id="try"><h2>Try it here</h2><p>Edit the code and press Run (or Ctrl+Enter). Python runs in your browser with this package&#x27;s published code. The first run downloads Python once (about 12 MB).</p><div class="runner" data-wheels='[&quot;star_sigma-0.1.0-py3-none-any.whl&quot;]'><label class="visually-hidden" for="code-star_sigma">Python</label><textarea id="code-star_sigma" spellcheck="false" rows="8">import star_sigma as ss
+print(ss.sigma_coverage(3.0, 1))  # 0.9973: the usual &quot;3 sigma&quot;
+print(ss.sigma_coverage(3.0, 2))  # 0.9889: inside the 3-sigma ellipse
+print(ss.sigma_coverage(3.0, 3))  # 0.9707: inside the 3-sigma ellipsoid
+print(ss.sigma_for_coverage(0.99, 3))  # 3.368: the ellipsoid that holds 99 %
+print(ss.sigma_tail(5.0, 1))  # 5.73e-07, computed directly</textarea><div class="runner-bar"><button class="btn primary run" type="button">Run</button><button class="btn reset" type="button">Reset</button></div><output aria-live="polite"></output></div></section>
+<section class="section tight" id="use"><h2>Use it on your computer</h2><p>No account and no GitHub needed. Download, then install with one command:</p>
+<ul class="files"><li><a class="btn small" href="/S.T.A.R.-/downloads/wheels/star_sigma-0.1.0-py3-none-any.whl" download>Install file · star_sigma-0.1.0-py3-none-any.whl</a> <span class="muted small">3 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/modules/star_sigma.py" download>Single file — just copy it next to your code · star_sigma.py</a> <span class="muted small">5 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/source/star_sigma-0.1.0-source.zip" download>Source code (.zip)</a> <span class="muted small">19 kB</span></li></ul><pre class="cmd"><code>python -m pip install star_sigma-0.1.0-py3-none-any.whl</code></pre>
+<p class="small"><a href="/S.T.A.R.-/start/">Get started →</a></p></section>
+<section class="section tight" id="dev"><h2>For developers</h2><p>Install directly from the public repository:</p><pre class="cmd"><code>python -m pip install &quot;star-sigma @ git+https://github.com/Andrea07072000/S.T.A.R.-.git#subdirectory=packages/star_sigma&quot;</code></pre>
+<p class="small"><a href="https://github.com/Andrea07072000/S.T.A.R.-/tree/main/packages/star_sigma">README · tests · evidence (GitHub)</a></p></section>
+<section class="section tight" id="tech"><h2>Technical sheet</h2><dl class="meta"><dt>Package</dt><dd class='mono'>star-sigma</dd><dt>Version</dt><dd class='mono'>0.1.0</dd><dt>Licence</dt><dd class='mono'>Apache-2.0</dd><dt>Python</dt><dd class='mono'>&gt;=3.9</dd><dt>Dependencies</dt><dd class='mono'>none (standard library only)</dd><dt>Capability</dt><dd class='mono'>star.statistics.sigma-coverage</dd><dt>Maturity</dt><dd class='mono'>RELEASED</dd><dt>Published commit</dt><dd class='mono'>94fcf7c</dd></dl>
+<h3>Requirements</h3><ul class="reqs"><li><b class='mono'>R1</b> <code>normal_cdf</code>, <code>normal_sf</code>, <code>normal_quantile</code> for the standard normal distribution, accurate in both tails. Reproduce the published table values Φ(1), Φ(1.959964), Φ(2.575829).</li><li><b class='mono'>R2</b> <code>sigma_coverage(n, dims)</code> and <code>sigma_tail(n, dims)</code> for dims 1, 2, 3 (the chi-square law of the squared Mahalanobis distance), each computed directly so that neither loses digits; <code>sigma_for_coverage(p, dims)</code> is the inverse. Reproduce the 68-95-99.7 rule and the published chi-square percentage points for 1, 2 and 3 degrees of freedom.</li><li><b class='mono'>R3</b> Measured on 600 cases (z to ±37, n from 1e-4 to 12, probabilities from 1e-12 to 1 − 1e-12), as RELATIVE differences: distribution functions and tails within 1.9e-13 of mpmath at 40 digits and 2.4e-13 of SciPy; coverage within 8e-16 of mpmath; the inverses reproduce the requested tail probability within 1.3e-14.</li><li><b class='mono'>R4</b> Every function returns a finite float or raises <code>ValueError</code>: non-numeric, boolean, NaN or infinite input, z beyond ±38, n outside [0, 38], a probability outside the open or half-open interval stated, dims not 1, 2 or 3.</li></ul>
+<h3>Limits (what is not claimed)</h3><p>A Gaussian error with a known covariance: real orbit-determination errors are often not Gaussian and the covariance is often optimistic, so these probabilities are those of the model, not of the truth. No collision probability: that needs the geometry of the encounter. Dimensions 1, 2 and 3 only. The 1.9e-13 relative error in the far tails comes from the platform&#x27;s erfc. A coverage given as 1 − 1e-17 cannot be distinguished from 1: use the tail.</p>
+<h3>Evidence in the registry</h3><div class="table-scroll"><table class="data"><thead><tr><th>Check</th><th>Status</th><th>Recorded</th><th>What was observed</th></tr></thead><tbody><tr><td>Unit tests</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>12 passed in 0.33s</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>Requirements, interface, units, data provenance, dependency surface and failure behaviour reviewed</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>Re-running the cross-check gives a byte-identical evidence file</td></tr><tr><td>Reference value</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>0.68268949, 0.95449974, 0.99730020; 0.97500000: within 1e-8 of the printed values (suite: 12 passed in 0.33s)</td></tr><tr><td>Cross-check with independent libraries</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>star_sigma gives the coverage and the tail of n sigma in 1, 2 and 3 dimensions, and their inverses, to the accuracy of double precision, tails included</td></tr><tr><td>Benchmark</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>mpmath: direct 1.8e-13, inverse residual 1.3e-14</td></tr><tr><td>Clean install from the release tag</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>pytest outside the tree: 12 passed in 0.18s</td></tr></tbody></table></div>
+<h3>Fingerprints (SHA-256)</h3><div class="table-scroll"><table class="data"><tbody><tr><td class='mono small'>star_sigma-0.1.0-py3-none-any.whl</td><td class='mono small hash'>50ca611d02e14cb056e324fcab23fc4c77c32eb7d95b1beac9724f046799beee</td></tr><tr><td class='mono small'>star_sigma.py</td><td class='mono small hash'>84ed2154cc1d8d7a7df7f4075731af5eff78ed90034aeb5906540a7550a7e748</td></tr><tr><td class='mono small'>star_sigma-0.1.0-source.zip</td><td class='mono small hash'>1f93dfe5be9cb156a710ed33b287a5d5c1774c5ef5ea6075baff667b7e0ee867</td></tr></tbody></table></div>
+</section></div>
+</main>
+<footer class="site-footer">
+ <div class="wrap">
+  <div class="foot-grid">
+   <div><div class="foot-brand"><img src="/S.T.A.R.-/assets/images/star_logo_white_transparent.png" alt="" width="36" height="36">S.T.A.R.</div>
+    <p>Engineering Intelligence. Built to be Verified.</p><p class="small">An independent project by Andrea Cavazzini, Italy. Not a company.<br>Prototype maturity (TRL ≤ 6). Not flight-qualified. No certification.</p></div>
+   <div><h2>Explore</h2><ul><li><a href="/S.T.A.R.-/start/">Get started</a></li><li><a href="/S.T.A.R.-/software/">Software</a></li><li><a href="/S.T.A.R.-/evidence/">Evidence</a></li><li><a href="/S.T.A.R.-/assessment/">Assessment</a></li><li><a href="/S.T.A.R.-/about/">About</a></li>
+    <li><a href="/S.T.A.R.-/downloads/">Downloads</a></li><li><a href="https://github.com/Andrea07072000/S.T.A.R.-">GitHub</a></li></ul></div>
+   <div><h2>Trust &amp; legal</h2><ul><li><a href="/S.T.A.R.-/legal/notice/">Legal notice</a></li><li><a href="/S.T.A.R.-/legal/terms/">Website terms of use</a></li><li><a href="/S.T.A.R.-/legal/privacy/">Privacy notice</a></li><li><a href="/S.T.A.R.-/legal/cookies/">Cookie notice</a></li><li><a href="/S.T.A.R.-/legal/disclaimer/">Evidence and verification disclaimer</a></li><li><a href="/S.T.A.R.-/legal/licences/">Licences</a></li><li><a href="/S.T.A.R.-/legal/permissions/">What you may do with S.T.A.R. software</a></li><li><a href="/S.T.A.R.-/legal/">All legal documents</a></li></ul></div>
+   <div><h2>Contact</h2><ul><li><a href="mailto:Info.and.News.S.T.A.R@proton.me">Info.and.News.S.T.A.R@proton.me</a></li>
+    <li><a href="/S.T.A.R.-/assessment/#request">Request an assessment</a></li></ul></div>
+  </div>
+  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generated from the registry on 2026-10-15 · engineering commit c54092b · public commit 94fcf7c</span>
+   <a href="/S.T.A.R.-/it/software/star_sigma/" lang="it">Italiano</a></div>
+ </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en" data-base="/S.T.A.R.-/">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>star-sun — Sun direction, beta angle and eclipse test · S.T.A.R.</title>
+<meta name="description" content="Low-precision geocentric Sun vector for 1950-2050 (measured within 0.0097 deg of JPL DE440 apparent), orbit beta angle and cylindrical shadow test; every function returns finite values or raises Value">
+<link rel="icon" href="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" type="image/png">
+<link rel="canonical" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_sun/">
+<link rel="alternate" hreflang="en" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_sun/">
+<link rel="alternate" hreflang="it" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_sun/">
+<link rel="alternate" hreflang="x-default" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_sun/">
+<meta property="og:title" content="star-sun — Sun direction, beta angle and eclipse test · S.T.A.R.">
+<meta property="og:description" content="Low-precision geocentric Sun vector for 1950-2050 (measured within 0.0097 deg of JPL DE440 apparent), orbit beta angle and cylindrical shadow test; every function returns finite values or raises Value">
+<meta property="og:image" content="https://andrea07072000.github.io/S.T.A.R.-/assets/images/star_logo_dark_transparent.png">
+  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-Dx8lu5GH.js"></script>
+  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-CJ2BHFzs.css">
+</head>
+<body data-page="software">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+ <div class="wrap">
+  <a class="wordmark" href="/S.T.A.R.-/">S.T.A.R.</a>
+  <button class="btn small menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+  <nav class="main-nav" id="main-nav" aria-label="Main"><a href="/S.T.A.R.-/start/">Get started</a><a href="/S.T.A.R.-/software/" aria-current="page">Software</a><a href="/S.T.A.R.-/evidence/">Evidence</a><a href="/S.T.A.R.-/assessment/">Assessment</a><a href="/S.T.A.R.-/about/">About</a></nav>
+  <div class="header-right">
+   <div class="lang" role="group" aria-label="Language">
+    <span aria-current="true">EN</span>
+    <a href="/S.T.A.R.-/it/software/star_sun/" lang="it" hreflang="it">IT</a>
+   </div>
+   <a class="btn small primary" href="/S.T.A.R.-/assessment/#request">Request an assessment</a>
+   <img class="header-logo" src="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" alt="S.T.A.R. logo" width="40" height="40">
+  </div>
+ </div>
+</header>
+<main id="main">
+<div class="wrap"><div class="page-head">
+<p><a href="/S.T.A.R.-/software/">← All packages</a></p>
+<span class="eyebrow">Orbits &amp; astrodynamics</span><h1 class="mono pkg-title">star-sun <span class="muted">0.1.0</span></h1>
+<p class="lead">Sun direction, beta angle and eclipse test</p>
+<p><span class="status ok">Apache-2.0</span> <span class="status ok">RELEASED</span> <span class="status soon">single file</span></p>
+</div>
+<section class="section tight"><h2>In plain words</h2><p class="lead">Low-precision geocentric Sun vector for 1950-2050 (measured within 0.0097 deg of JPL DE440 apparent), orbit beta angle and cylindrical shadow test; every function returns finite values or raises ValueError.</p></section>
+<section class="section tight" id="try"><h2>Try it here</h2><p>Edit the code and press Run (or Ctrl+Enter). Python runs in your browser with this package&#x27;s published code. The first run downloads Python once (about 12 MB).</p><div class="runner" data-wheels='[&quot;star_sun-0.1.0-py3-none-any.whl&quot;]'><label class="visually-hidden" for="code-star_sun">Python</label><textarea id="code-star_sun" spellcheck="false" rows="6">import star_sun
+sun = star_sun.sun_vector_au(2460589.5)                 # AU, mean equator and equinox of date
+beta = star_sun.beta_angle_deg(sun, inc_deg=97.8, raan_deg=250.0)
+dark = star_sun.in_shadow(r_sat_km, sun)                # True inside the Earth&#x27;s cylindrical shadow</textarea><div class="runner-bar"><button class="btn primary run" type="button">Run</button><button class="btn reset" type="button">Reset</button></div><output aria-live="polite"></output></div></section>
+<section class="section tight" id="use"><h2>Use it on your computer</h2><p>No account and no GitHub needed. Download, then install with one command:</p>
+<ul class="files"><li><a class="btn small" href="/S.T.A.R.-/downloads/wheels/star_sun-0.1.0-py3-none-any.whl" download>Install file · star_sun-0.1.0-py3-none-any.whl</a> <span class="muted small">3 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/modules/star_sun.py" download>Single file — just copy it next to your code · star_sun.py</a> <span class="muted small">6 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/source/star_sun-0.1.0-source.zip" download>Source code (.zip)</a> <span class="muted small">19 kB</span></li></ul><pre class="cmd"><code>python -m pip install star_sun-0.1.0-py3-none-any.whl</code></pre>
+<p class="small"><a href="/S.T.A.R.-/start/">Get started →</a></p></section>
+<section class="section tight" id="dev"><h2>For developers</h2><p>Install directly from the public repository:</p><pre class="cmd"><code>python -m pip install &quot;star-sun @ git+https://github.com/Andrea07072000/S.T.A.R.-.git#subdirectory=packages/star_sun&quot;</code></pre>
+<p class="small"><a href="https://github.com/Andrea07072000/S.T.A.R.-/tree/main/packages/star_sun">README · tests · evidence (GitHub)</a></p></section>
+<section class="section tight" id="tech"><h2>Technical sheet</h2><dl class="meta"><dt>Package</dt><dd class='mono'>star-sun</dd><dt>Version</dt><dd class='mono'>0.1.0</dd><dt>Licence</dt><dd class='mono'>Apache-2.0</dd><dt>Python</dt><dd class='mono'>&gt;=3.9</dd><dt>Dependencies</dt><dd class='mono'>none (standard library only)</dd><dt>Capability</dt><dd class='mono'>star.orbit.sun</dd><dt>Maturity</dt><dd class='mono'>RELEASED</dd><dt>Published commit</dt><dd class='mono'>94fcf7c</dd></dl>
+<h3>Requirements</h3><ul class="reqs"><li><b class='mono'>R1</b> <code>sun_vector_au(jd_day, jd_frac=0.0)</code> and <code>sun_ra_dec_deg</code>: geocentric Sun in AU, mean equator and equinox of date, for UT1 Julian dates from 1950-01-01 to 2050-01-01 (inclusive); outside, <code>ValueError</code>. Reproduces Vallado Example 5-1 within 1.2e-6 AU.</li><li><b class='mono'>R2</b> Measured accuracy (402 dates): direction within 0.0097 deg of JPL DE440 *apparent* and of astropy, distance within 7e-5 AU. The series includes aberration: against *geometric* positions the difference reaches 0.014 deg.</li><li><b class='mono'>R3</b> <code>beta_angle_deg(sun, inc_deg, raan_deg)</code>: angle between the Sun direction and the orbit plane, in [-90, 90], positive on the side of the angular momentum; only the direction of <code>sun</code> is used.</li><li><b class='mono'>R4</b> <code>in_shadow(r_sat, sun, body_radius=6378.137)</code>: True when the satellite is behind the body and closer than one body radius to the Sun-body axis (cylinder, parallel rays, no penumbra); <code>r_sat</code> and <code>body_radius</code> in the same unit.</li><li><b class='mono'>R5</b> Every function returns finite values or raises <code>ValueError</code>: non-numeric, boolean, NaN, infinite or |value| &gt;= 1e300 input; a vector that is not three numbers; a zero Sun vector; a satellite inside the body; a non-positive body radius; inclination outside [0, 180]; node outside [-360, 360]; a date outside 1950-2050.</li></ul>
+<h3>Limits (what is not claimed)</h3><p>Not an ephemeris: 0.01 deg is about 36 arcseconds. No nutation (mean equator of date, about 0.7 deg from J2000 in 2050: rotate before mixing with J2000/GCRF vectors). The shadow is a cylinder: no penumbra, no oblateness, no atmosphere; near the shadow edge the answer can differ from a conical model by tens of seconds of orbit.</p>
+<h3>Evidence in the registry</h3><div class="table-scroll"><table class="data"><thead><tr><th>Check</th><th>Status</th><th>Recorded</th><th>What was observed</th></tr></thead><tbody><tr><td>Clean install from the release tag</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>pytest outside the tree: 73 passed in 0.21s</td></tr><tr><td>Unit tests</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>73 passed in 0.44s</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>Requirements, interface, units, data provenance, dependency surface and failure behaviour reviewed</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>Re-running the cross-check gives a byte-identical evidence file</td></tr><tr><td>Reference value</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>each component within 1.2e-6 AU of the printed values; direction within 6.4e-5 deg (suite: 73 passed in 0.44s)</td></tr><tr><td>Mutation testing</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>153/164 = 0.9329</td></tr><tr><td>Cross-check with independent libraries</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>star_sun agrees with three independent ephemerides within the accuracy stated for the series, 1950-2050</td></tr><tr><td>Benchmark</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>max angle deg by decade against JPL DE440 apparent: 1950s 0.0055, 1960s 0.0084, 1970s 0.0070, 1980s 0.0074, 1990s 0.0056, 2000s 0.0074, 2010s 0.0060, 2020s 0.0088, 2030s 0.0052, 2040s 0.0097; overall max: astropy 0.0097 deg / 6.8e-05 AU, ephem 0.0140 deg / 6.9e-05 AU, spice_de440_apparent 0.0097 deg / 6.8e-05 AU, spice_de440_geometric 0.0141 deg / 6.8e-05 AU; 402 dates</td></tr></tbody></table></div>
+<h3>Fingerprints (SHA-256)</h3><div class="table-scroll"><table class="data"><tbody><tr><td class='mono small'>star_sun-0.1.0-py3-none-any.whl</td><td class='mono small hash'>efe79a6c0bc738b3ecf83c90e2e34c67a53b7d6eff223b175c5da48d5d45942e</td></tr><tr><td class='mono small'>star_sun.py</td><td class='mono small hash'>9c1a0f1b89694b7cadd6d21fc0c13a2af1ef4533a24740c8eda6fc9fe461aaa7</td></tr><tr><td class='mono small'>star_sun-0.1.0-source.zip</td><td class='mono small hash'>9c7264b8b2753975aeebc0e416f9c45f82954528174f8e32f9301de1c1947e72</td></tr></tbody></table></div>
+</section></div>
+</main>
+<footer class="site-footer">
+ <div class="wrap">
+  <div class="foot-grid">
+   <div><div class="foot-brand"><img src="/S.T.A.R.-/assets/images/star_logo_white_transparent.png" alt="" width="36" height="36">S.T.A.R.</div>
+    <p>Engineering Intelligence. Built to be Verified.</p><p class="small">An independent project by Andrea Cavazzini, Italy. Not a company.<br>Prototype maturity (TRL ≤ 6). Not flight-qualified. No certification.</p></div>
+   <div><h2>Explore</h2><ul><li><a href="/S.T.A.R.-/start/">Get started</a></li><li><a href="/S.T.A.R.-/software/">Software</a></li><li><a href="/S.T.A.R.-/evidence/">Evidence</a></li><li><a href="/S.T.A.R.-/assessment/">Assessment</a></li><li><a href="/S.T.A.R.-/about/">About</a></li>
+    <li><a href="/S.T.A.R.-/downloads/">Downloads</a></li><li><a href="https://github.com/Andrea07072000/S.T.A.R.-">GitHub</a></li></ul></div>
+   <div><h2>Trust &amp; legal</h2><ul><li><a href="/S.T.A.R.-/legal/notice/">Legal notice</a></li><li><a href="/S.T.A.R.-/legal/terms/">Website terms of use</a></li><li><a href="/S.T.A.R.-/legal/privacy/">Privacy notice</a></li><li><a href="/S.T.A.R.-/legal/cookies/">Cookie notice</a></li><li><a href="/S.T.A.R.-/legal/disclaimer/">Evidence and verification disclaimer</a></li><li><a href="/S.T.A.R.-/legal/licences/">Licences</a></li><li><a href="/S.T.A.R.-/legal/permissions/">What you may do with S.T.A.R. software</a></li><li><a href="/S.T.A.R.-/legal/">All legal documents</a></li></ul></div>
+   <div><h2>Contact</h2><ul><li><a href="mailto:Info.and.News.S.T.A.R@proton.me">Info.and.News.S.T.A.R@proton.me</a></li>
+    <li><a href="/S.T.A.R.-/assessment/#request">Request an assessment</a></li></ul></div>
+  </div>
+  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generated from the registry on 2026-10-15 · engineering commit c54092b · public commit 94fcf7c</span>
+   <a href="/S.T.A.R.-/it/software/star_sun/" lang="it">Italiano</a></div>
+ </div>
+</footer>
+</body>
+</html>

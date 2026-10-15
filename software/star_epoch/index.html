@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en" data-base="/S.T.A.R.-/">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>star-epoch — Julian and Besselian epochs · S.T.A.R.</title>
+<meta name="description" content="Julian and Besselian epochs to and from two-part Julian Dates; agrees with ERFA to 5e-13 yr, with skyfield and five SPICE constants to 3e-10 day on 600 dates and 600 epochs, and refuses out-of-range i">
+<link rel="icon" href="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" type="image/png">
+<link rel="canonical" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_epoch/">
+<link rel="alternate" hreflang="en" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_epoch/">
+<link rel="alternate" hreflang="it" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_epoch/">
+<link rel="alternate" hreflang="x-default" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_epoch/">
+<meta property="og:title" content="star-epoch — Julian and Besselian epochs · S.T.A.R.">
+<meta property="og:description" content="Julian and Besselian epochs to and from two-part Julian Dates; agrees with ERFA to 5e-13 yr, with skyfield and five SPICE constants to 3e-10 day on 600 dates and 600 epochs, and refuses out-of-range i">
+<meta property="og:image" content="https://andrea07072000.github.io/S.T.A.R.-/assets/images/star_logo_dark_transparent.png">
+  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-Dx8lu5GH.js"></script>
+  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-CJ2BHFzs.css">
+</head>
+<body data-page="software">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+ <div class="wrap">
+  <a class="wordmark" href="/S.T.A.R.-/">S.T.A.R.</a>
+  <button class="btn small menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+  <nav class="main-nav" id="main-nav" aria-label="Main"><a href="/S.T.A.R.-/start/">Get started</a><a href="/S.T.A.R.-/software/" aria-current="page">Software</a><a href="/S.T.A.R.-/evidence/">Evidence</a><a href="/S.T.A.R.-/assessment/">Assessment</a><a href="/S.T.A.R.-/about/">About</a></nav>
+  <div class="header-right">
+   <div class="lang" role="group" aria-label="Language">
+    <span aria-current="true">EN</span>
+    <a href="/S.T.A.R.-/it/software/star_epoch/" lang="it" hreflang="it">IT</a>
+   </div>
+   <a class="btn small primary" href="/S.T.A.R.-/assessment/#request">Request an assessment</a>
+   <img class="header-logo" src="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" alt="S.T.A.R. logo" width="40" height="40">
+  </div>
+ </div>
+</header>
+<main id="main">
+<div class="wrap"><div class="page-head">
+<p><a href="/S.T.A.R.-/software/">← All packages</a></p>
+<span class="eyebrow">Time &amp; Earth rotation</span><h1 class="mono pkg-title">star-epoch <span class="muted">0.1.0</span></h1>
+<p class="lead">Julian and Besselian epochs</p>
+<p><span class="status ok">Apache-2.0</span> <span class="status ok">RELEASED</span> <span class="status soon">single file</span></p>
+</div>
+<section class="section tight"><h2>In plain words</h2><p class="lead">Julian and Besselian epochs to and from two-part Julian Dates; agrees with ERFA to 5e-13 yr, with skyfield and five SPICE constants to 3e-10 day on 600 dates and 600 epochs, and refuses out-of-range input.</p></section>
+<section class="section tight" id="try"><h2>Try it here</h2><p>Edit the code and press Run (or Ctrl+Enter). Python runs in your browser with this package&#x27;s published code. The first run downloads Python once (about 12 MB).</p><div class="runner" data-wheels='[&quot;star_epoch-0.1.0-py3-none-any.whl&quot;]'><label class="visually-hidden" for="code-star_epoch">Python</label><textarea id="code-star_epoch" spellcheck="false" rows="7">import star_epoch as ep
+print(ep.jd_from_julian_epoch(2000.0))  # (2451544.5, 0.5): J2000.0 = JD 2451545.0
+print(ep.jd_from_besselian_epoch(1950.0))  # (2433281.5, 0.92345905): B1950.0 = JD 2433282.4235
+print(ep.julian_epoch(2433282.5))  # 1950.0
+print(ep.besselian_epoch(2451545.0))  # 2000.0012775...: J2000.0 as a Besselian epoch</textarea><div class="runner-bar"><button class="btn primary run" type="button">Run</button><button class="btn reset" type="button">Reset</button></div><output aria-live="polite"></output></div></section>
+<section class="section tight" id="use"><h2>Use it on your computer</h2><p>No account and no GitHub needed. Download, then install with one command:</p>
+<ul class="files"><li><a class="btn small" href="/S.T.A.R.-/downloads/wheels/star_epoch-0.1.0-py3-none-any.whl" download>Install file · star_epoch-0.1.0-py3-none-any.whl</a> <span class="muted small">2 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/modules/star_epoch.py" download>Single file — just copy it next to your code · star_epoch.py</a> <span class="muted small">3 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/source/star_epoch-0.1.0-source.zip" download>Source code (.zip)</a> <span class="muted small">15 kB</span></li></ul><pre class="cmd"><code>python -m pip install star_epoch-0.1.0-py3-none-any.whl</code></pre>
+<p class="small"><a href="/S.T.A.R.-/start/">Get started →</a></p></section>
+<section class="section tight" id="dev"><h2>For developers</h2><p>Install directly from the public repository:</p><pre class="cmd"><code>python -m pip install &quot;star-epoch @ git+https://github.com/Andrea07072000/S.T.A.R.-.git#subdirectory=packages/star_epoch&quot;</code></pre>
+<p class="small"><a href="https://github.com/Andrea07072000/S.T.A.R.-/tree/main/packages/star_epoch">README · tests · evidence (GitHub)</a></p></section>
+<section class="section tight" id="tech"><h2>Technical sheet</h2><dl class="meta"><dt>Package</dt><dd class='mono'>star-epoch</dd><dt>Version</dt><dd class='mono'>0.1.0</dd><dt>Licence</dt><dd class='mono'>Apache-2.0</dd><dt>Python</dt><dd class='mono'>&gt;=3.9</dd><dt>Dependencies</dt><dd class='mono'>none (standard library only)</dd><dt>Capability</dt><dd class='mono'>star.time.epoch</dd><dt>Maturity</dt><dd class='mono'>RELEASED</dd><dt>Published commit</dt><dd class='mono'>94fcf7c</dd></dl>
+<h3>Requirements</h3><ul class="reqs"><li><b class='mono'>R1</b> <code>julian_epoch</code> and <code>jd_from_julian_epoch</code>: J2000.0 = JD 2451545.0 and a Julian year of 365.25 days. Reproduce J1900.0, J1950.0, J2000.0 and J2100.0 exactly.</li><li><b class='mono'>R2</b> <code>besselian_epoch</code> and <code>jd_from_besselian_epoch</code>: B1900.0 = JD 2415020.31352 and a tropical year of 365.242198781 days (Lieske 1979). Reproduce B1950.0 = JD 2433282.4235 and J2000.0 = B2000.0012775.</li><li><b class='mono'>R3</b> Dates are Julian Dates in two parts; the inverse functions return a day ending in .5 and a fraction in [0, 1). Measured on 600 dates and 600 epochs over 1600–2400: epochs within 5e-13 yr of ERFA, Julian epochs within 5e-13 yr of skyfield, dates identical to ERFA and within 3e-10 day of skyfield and of five SPICE constants.</li><li><b class='mono'>R4</b> Every function returns finite floats or raises <code>ValueError</code>: non-numeric, boolean, NaN or infinite input, a date outside JD 2086302.5 … 2816787.5, a fraction outside [-1, 1], an epoch outside [1000, 3000].</li></ul>
+<h3>Limits (what is not claimed)</h3><p>No time-scale conversion: the epoch is in the scale of the date passed (TT for catalogue epochs). Besselian epochs are compared with one full library (ERFA) and two SPICE constants, not two full libraries. An epoch held in one float resolves about 17 microseconds near the year 2000; use the two-part date when that matters. The agreement with ERFA is exact because the arithmetic is the same: it shows the same convention, not an independent derivation of the constants, which come from the publications above.</p>
+<h3>Evidence in the registry</h3><div class="table-scroll"><table class="data"><thead><tr><th>Check</th><th>Status</th><th>Recorded</th><th>What was observed</th></tr></thead><tbody><tr><td>Unit tests</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>15 passed in 0.33s</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>Requirements, interface, units, data provenance, dependency surface and failure behaviour reviewed</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>Re-running the cross-check gives a byte-identical evidence file</td></tr><tr><td>Reference value</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>JD 2433282.42345905, within 4.1e-5 day of the printed value (printed to 1e-4) (suite: 15 passed in 0.33s)</td></tr><tr><td>Cross-check with independent libraries</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>star_epoch converts Julian and Besselian epochs to and from Julian Dates as three independent libraries do</td></tr><tr><td>Benchmark</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>Besselian epochs have one full library lineage (ERFA) plus two SPICE fixed points; Julian epochs have two (ERFA, skyfield) plus three SPICE fixed points</td></tr><tr><td>Clean install from the release tag</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-06</td><td class='small'>pytest outside the tree: 15 passed in 0.10s</td></tr></tbody></table></div>
+<h3>Fingerprints (SHA-256)</h3><div class="table-scroll"><table class="data"><tbody><tr><td class='mono small'>star_epoch-0.1.0-py3-none-any.whl</td><td class='mono small hash'>95ada744c06b31a74d26a9442ff584e984987de2b3fc490cab5bf55876ec2d6e</td></tr><tr><td class='mono small'>star_epoch.py</td><td class='mono small hash'>305bee05dfcb9153cc06397813e6897c8f84412fdccd86d8b326f5380103d5b3</td></tr><tr><td class='mono small'>star_epoch-0.1.0-source.zip</td><td class='mono small hash'>a589319fcb6cdb87a4af05cd6831c37628d11b79f1641ee93f6cac008e58f192</td></tr></tbody></table></div>
+</section></div>
+</main>
+<footer class="site-footer">
+ <div class="wrap">
+  <div class="foot-grid">
+   <div><div class="foot-brand"><img src="/S.T.A.R.-/assets/images/star_logo_white_transparent.png" alt="" width="36" height="36">S.T.A.R.</div>
+    <p>Engineering Intelligence. Built to be Verified.</p><p class="small">An independent project by Andrea Cavazzini, Italy. Not a company.<br>Prototype maturity (TRL ≤ 6). Not flight-qualified. No certification.</p></div>
+   <div><h2>Explore</h2><ul><li><a href="/S.T.A.R.-/start/">Get started</a></li><li><a href="/S.T.A.R.-/software/">Software</a></li><li><a href="/S.T.A.R.-/evidence/">Evidence</a></li><li><a href="/S.T.A.R.-/assessment/">Assessment</a></li><li><a href="/S.T.A.R.-/about/">About</a></li>
+    <li><a href="/S.T.A.R.-/downloads/">Downloads</a></li><li><a href="https://github.com/Andrea07072000/S.T.A.R.-">GitHub</a></li></ul></div>
+   <div><h2>Trust &amp; legal</h2><ul><li><a href="/S.T.A.R.-/legal/notice/">Legal notice</a></li><li><a href="/S.T.A.R.-/legal/terms/">Website terms of use</a></li><li><a href="/S.T.A.R.-/legal/privacy/">Privacy notice</a></li><li><a href="/S.T.A.R.-/legal/cookies/">Cookie notice</a></li><li><a href="/S.T.A.R.-/legal/disclaimer/">Evidence and verification disclaimer</a></li><li><a href="/S.T.A.R.-/legal/licences/">Licences</a></li><li><a href="/S.T.A.R.-/legal/permissions/">What you may do with S.T.A.R. software</a></li><li><a href="/S.T.A.R.-/legal/">All legal documents</a></li></ul></div>
+   <div><h2>Contact</h2><ul><li><a href="mailto:Info.and.News.S.T.A.R@proton.me">Info.and.News.S.T.A.R@proton.me</a></li>
+    <li><a href="/S.T.A.R.-/assessment/#request">Request an assessment</a></li></ul></div>
+  </div>
+  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generated from the registry on 2026-10-15 · engineering commit c54092b · public commit 94fcf7c</span>
+   <a href="/S.T.A.R.-/it/software/star_epoch/" lang="it">Italiano</a></div>
+ </div>
+</footer>
+</body>
+</html>

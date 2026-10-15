@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en" data-base="/S.T.A.R.-/">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>star-polyfit — Least-squares polynomial, correctly rounded · S.T.A.R.</title>
+<meta name="description" content="Least-squares polynomial of degree 0 to 10, weighted or not: the normal equations are formed and solved in exact rational arithmetic and each coefficient is rounded once, so conditioning costs no digi">
+<link rel="icon" href="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" type="image/png">
+<link rel="canonical" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_polyfit/">
+<link rel="alternate" hreflang="en" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_polyfit/">
+<link rel="alternate" hreflang="it" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_polyfit/">
+<link rel="alternate" hreflang="x-default" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_polyfit/">
+<meta property="og:title" content="star-polyfit — Least-squares polynomial, correctly rounded · S.T.A.R.">
+<meta property="og:description" content="Least-squares polynomial of degree 0 to 10, weighted or not: the normal equations are formed and solved in exact rational arithmetic and each coefficient is rounded once, so conditioning costs no digi">
+<meta property="og:image" content="https://andrea07072000.github.io/S.T.A.R.-/assets/images/star_logo_dark_transparent.png">
+  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-Dx8lu5GH.js"></script>
+  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-CJ2BHFzs.css">
+</head>
+<body data-page="software">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+ <div class="wrap">
+  <a class="wordmark" href="/S.T.A.R.-/">S.T.A.R.</a>
+  <button class="btn small menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+  <nav class="main-nav" id="main-nav" aria-label="Main"><a href="/S.T.A.R.-/start/">Get started</a><a href="/S.T.A.R.-/software/" aria-current="page">Software</a><a href="/S.T.A.R.-/evidence/">Evidence</a><a href="/S.T.A.R.-/assessment/">Assessment</a><a href="/S.T.A.R.-/about/">About</a></nav>
+  <div class="header-right">
+   <div class="lang" role="group" aria-label="Language">
+    <span aria-current="true">EN</span>
+    <a href="/S.T.A.R.-/it/software/star_polyfit/" lang="it" hreflang="it">IT</a>
+   </div>
+   <a class="btn small primary" href="/S.T.A.R.-/assessment/#request">Request an assessment</a>
+   <img class="header-logo" src="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" alt="S.T.A.R. logo" width="40" height="40">
+  </div>
+ </div>
+</header>
+<main id="main">
+<div class="wrap"><div class="page-head">
+<p><a href="/S.T.A.R.-/software/">← All packages</a></p>
+<span class="eyebrow">Numerics &amp; statistics</span><h1 class="mono pkg-title">star-polyfit <span class="muted">0.1.0</span></h1>
+<p class="lead">Least-squares polynomial, correctly rounded</p>
+<p><span class="status ok">Apache-2.0</span> <span class="status ok">RELEASED</span> <span class="status soon">single file</span></p>
+</div>
+<section class="section tight"><h2>In plain words</h2><p class="lead">Least-squares polynomial of degree 0 to 10, weighted or not: the normal equations are formed and solved in exact rational arithmetic and each coefficient is rounded once, so conditioning costs no digit; exact evaluation and exact residual sum of squares; NIST Wampler1 reproduced exactly; every coefficient of 161 problems equal to SymPy&#x27;s exact solution.</p></section>
+<section class="section tight" id="try"><h2>Try it here</h2><p>Edit the code and press Run (or Ctrl+Enter). Python runs in your browser with this package&#x27;s published code. The first run downloads Python once (about 12 MB).</p><div class="runner" data-wheels='[&quot;star_polyfit-0.1.0-py3-none-any.whl&quot;]'><label class="visually-hidden" for="code-star_polyfit">Python</label><textarea id="code-star_polyfit" spellcheck="false" rows="7">import star_polyfit as sp
+print(sp.polyfit([0, 1, 2, 3], [0, 1, 0, 1], 1))  # (0.2, 0.2): intercept first, then slope
+print(sp.polyfit([1e9 + k for k in range(8)], [k * k for k in range(8)], 2))  # (1e+18, -2000000000.0, 1.0), exactly
+print(sp.polyval((1, 2, 3), 2))  # 17.0
+print(sp.residual_sum([0, 1, 2, 3], [0, 1, 0, 1], (0.2, 0.2)))  # 0.8</textarea><div class="runner-bar"><button class="btn primary run" type="button">Run</button><button class="btn reset" type="button">Reset</button></div><output aria-live="polite"></output></div></section>
+<section class="section tight" id="use"><h2>Use it on your computer</h2><p>No account and no GitHub needed. Download, then install with one command:</p>
+<ul class="files"><li><a class="btn small" href="/S.T.A.R.-/downloads/wheels/star_polyfit-0.1.0-py3-none-any.whl" download>Install file · star_polyfit-0.1.0-py3-none-any.whl</a> <span class="muted small">3 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/modules/star_polyfit.py" download>Single file — just copy it next to your code · star_polyfit.py</a> <span class="muted small">5 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/source/star_polyfit-0.1.0-source.zip" download>Source code (.zip)</a> <span class="muted small">23 kB</span></li></ul><pre class="cmd"><code>python -m pip install star_polyfit-0.1.0-py3-none-any.whl</code></pre>
+<p class="small"><a href="/S.T.A.R.-/start/">Get started →</a></p></section>
+<section class="section tight" id="dev"><h2>For developers</h2><p>Install directly from the public repository:</p><pre class="cmd"><code>python -m pip install &quot;star-polyfit @ git+https://github.com/Andrea07072000/S.T.A.R.-.git#subdirectory=packages/star_polyfit&quot;</code></pre>
+<p class="small"><a href="https://github.com/Andrea07072000/S.T.A.R.-/tree/main/packages/star_polyfit">README · tests · evidence (GitHub)</a></p></section>
+<section class="section tight" id="tech"><h2>Technical sheet</h2><dl class="meta"><dt>Package</dt><dd class='mono'>star-polyfit</dd><dt>Version</dt><dd class='mono'>0.1.0</dd><dt>Licence</dt><dd class='mono'>Apache-2.0</dd><dt>Python</dt><dd class='mono'>&gt;=3.9</dd><dt>Dependencies</dt><dd class='mono'>none (standard library only)</dd><dt>Capability</dt><dd class='mono'>star.numerics.polyfit</dd><dt>Maturity</dt><dd class='mono'>RELEASED</dd><dt>Published commit</dt><dd class='mono'>94fcf7c</dd></dl>
+<h3>Requirements</h3><ul class="reqs"><li><b class='mono'>R1</b> <code>polyfit(xs, ys, degree, weights=None)</code> returns the coefficients, lowest power first, of the polynomial that minimises the sum of w (y - p(x))². <code>polyval(coefficients, x)</code> evaluates a polynomial; <code>residual_sum(xs, ys, coefficients, weights=None)</code> returns the weighted sum of squared residuals.</li><li><b class='mono'>R2</b> The normal equations are formed and solved in exact rational arithmetic on the floats given, and each result is rounded once: the conditioning of the problem costs no digit. <code>polyval</code> and <code>residual_sum</code> are exact sums rounded once as well.</li><li><b class='mono'>R3</b> Measured on 161 problems (120 well conditioned, 40 badly conditioned, and the NIST dataset Wampler1): every coefficient equals the exact rational solution of SymPy rounded to a float and the QR solution of mpmath at 120 digits. NumPy agrees within 1e-9 on the well-conditioned problems; on the badly conditioned ones (x in [1000, 1001], x = 1e6 + k) its coefficients share no digit with the exact ones (the numbers are in the evidence file).</li><li><b class='mono'>R4</b> Every function returns floats or raises <code>ValueError</code>: a degree that is not an integer from 0 to 10, data that are not lists or tuples of finite real numbers within 1e100 (booleans refused), different lengths, negative weights, fewer distinct x with a positive weight than degree + 1, a result too large for a float.</li></ul>
+<h3>Limits (what is not claimed)</h3><p>Exact coefficients are not a good model: a high-degree fit of noisy data oscillates, and the exact coefficients of a badly conditioned problem change a lot when the data change a little; the float nearest to each coefficient is still only a float, and evaluating the fitted polynomial in ordinary float arithmetic far from the origin can lose every digit (use <code>polyval</code>, or centre the data). No standard errors, no covariance matrix, no orthogonal polynomials, no automatic choice of the degree, no robust fitting. Exact arithmetic is slow: about a second for 2000 points at degree 10 on a laptop. &quot;Nearest float&quot; refers to the floats passed in, not to the decimal numbers you may have meant.</p>
+<h3>Evidence in the registry</h3><div class="table-scroll"><table class="data"><thead><tr><th>Check</th><th>Status</th><th>Recorded</th><th>What was observed</th></tr></thead><tbody><tr><td>Clean install from the release tag</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>pytest outside the tree: 43 passed in 0.42s</td></tr><tr><td>Unit tests</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>43 passed in 0.60s</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>Requirements, interface, units, data provenance, dependency surface and failure behaviour reviewed</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>Re-running the cross-check gives a byte-identical evidence file</td></tr><tr><td>Reference value</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>polyfit(range 0..20, y, 5) = (1.0, 1.0, 1.0, 1.0, 1.0, 1.0); residual_sum = 0.0 (suite: 43 passed in 0.60s)</td></tr><tr><td>Cross-check with independent libraries</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>star_polyfit returns the float nearest to each exact least-squares coefficient of the data as given, for degree 0 to 10, weighted or not, whatever the conditioning</td></tr><tr><td>Benchmark</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>largest difference from the exact solution: 0.0; NumPy on problems with x in [1000, 1001] or x = 1e6 + k: up to 1.0e+00 relative</td></tr></tbody></table></div>
+<h3>Fingerprints (SHA-256)</h3><div class="table-scroll"><table class="data"><tbody><tr><td class='mono small'>star_polyfit-0.1.0-py3-none-any.whl</td><td class='mono small hash'>5d7ff5d6108b09447e904f2788ad829dd717ee049265eec017db00b907ef2a7a</td></tr><tr><td class='mono small'>star_polyfit.py</td><td class='mono small hash'>06546fdd6df439b32b38da7c47bacd00216407af317f25f0d0e1784605f0f566</td></tr><tr><td class='mono small'>star_polyfit-0.1.0-source.zip</td><td class='mono small hash'>f262c6cfa396a69a84c79475b36fb97c370b46768cda0d052101a5ce334c5043</td></tr></tbody></table></div>
+</section></div>
+</main>
+<footer class="site-footer">
+ <div class="wrap">
+  <div class="foot-grid">
+   <div><div class="foot-brand"><img src="/S.T.A.R.-/assets/images/star_logo_white_transparent.png" alt="" width="36" height="36">S.T.A.R.</div>
+    <p>Engineering Intelligence. Built to be Verified.</p><p class="small">An independent project by Andrea Cavazzini, Italy. Not a company.<br>Prototype maturity (TRL ≤ 6). Not flight-qualified. No certification.</p></div>
+   <div><h2>Explore</h2><ul><li><a href="/S.T.A.R.-/start/">Get started</a></li><li><a href="/S.T.A.R.-/software/">Software</a></li><li><a href="/S.T.A.R.-/evidence/">Evidence</a></li><li><a href="/S.T.A.R.-/assessment/">Assessment</a></li><li><a href="/S.T.A.R.-/about/">About</a></li>
+    <li><a href="/S.T.A.R.-/downloads/">Downloads</a></li><li><a href="https://github.com/Andrea07072000/S.T.A.R.-">GitHub</a></li></ul></div>
+   <div><h2>Trust &amp; legal</h2><ul><li><a href="/S.T.A.R.-/legal/notice/">Legal notice</a></li><li><a href="/S.T.A.R.-/legal/terms/">Website terms of use</a></li><li><a href="/S.T.A.R.-/legal/privacy/">Privacy notice</a></li><li><a href="/S.T.A.R.-/legal/cookies/">Cookie notice</a></li><li><a href="/S.T.A.R.-/legal/disclaimer/">Evidence and verification disclaimer</a></li><li><a href="/S.T.A.R.-/legal/licences/">Licences</a></li><li><a href="/S.T.A.R.-/legal/permissions/">What you may do with S.T.A.R. software</a></li><li><a href="/S.T.A.R.-/legal/">All legal documents</a></li></ul></div>
+   <div><h2>Contact</h2><ul><li><a href="mailto:Info.and.News.S.T.A.R@proton.me">Info.and.News.S.T.A.R@proton.me</a></li>
+    <li><a href="/S.T.A.R.-/assessment/#request">Request an assessment</a></li></ul></div>
+  </div>
+  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generated from the registry on 2026-10-15 · engineering commit c54092b · public commit 94fcf7c</span>
+   <a href="/S.T.A.R.-/it/software/star_polyfit/" lang="it">Italiano</a></div>
+ </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="it" data-base="/S.T.A.R.-/">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pacchetto star-quadrature — Gauss-Legendre quadrature · S.T.A.R.</title>
+<meta name="description" content="Gauss-Legendre nodes and weights for 1 to 32 points, each node the float nearest to the true root (exact coefficients, exact-sign bisection) and each weight evaluated exactly and rounded once; fixed-r">
+<link rel="icon" href="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" type="image/png">
+<link rel="canonical" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_quadrature/">
+<link rel="alternate" hreflang="en" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_quadrature/">
+<link rel="alternate" hreflang="it" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_quadrature/">
+<link rel="alternate" hreflang="x-default" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_quadrature/">
+<meta property="og:title" content="Pacchetto star-quadrature — Gauss-Legendre quadrature · S.T.A.R.">
+<meta property="og:description" content="Gauss-Legendre nodes and weights for 1 to 32 points, each node the float nearest to the true root (exact coefficients, exact-sign bisection) and each weight evaluated exactly and rounded once; fixed-r">
+<meta property="og:image" content="https://andrea07072000.github.io/S.T.A.R.-/assets/images/star_logo_dark_transparent.png">
+  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-Dx8lu5GH.js"></script>
+  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-CJ2BHFzs.css">
+</head>
+<body data-page="software">
+<a class="skip" href="#main">Vai al contenuto</a>
+<header class="site-header">
+ <div class="wrap">
+  <a class="wordmark" href="/S.T.A.R.-/it/">S.T.A.R.</a>
+  <button class="btn small menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+  <nav class="main-nav" id="main-nav" aria-label="Main"><a href="/S.T.A.R.-/it/start/">Come iniziare</a><a href="/S.T.A.R.-/it/software/" aria-current="page">Software</a><a href="/S.T.A.R.-/it/evidence/">Evidenze</a><a href="/S.T.A.R.-/it/assessment/">Valutazione</a><a href="/S.T.A.R.-/it/about/">Chi siamo</a></nav>
+  <div class="header-right">
+   <div class="lang" role="group" aria-label="Language">
+    <a href="/S.T.A.R.-/software/star_quadrature/" lang="en" hreflang="en">EN</a>
+    <span aria-current="true">IT</span>
+   </div>
+   <a class="btn small primary" href="/S.T.A.R.-/it/assessment/#request">Richiedi una valutazione</a>
+   <img class="header-logo" src="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" alt="S.T.A.R. logo" width="40" height="40">
+  </div>
+ </div>
+</header>
+<main id="main">
+<div class="wrap"><div class="page-head">
+<p><a href="/S.T.A.R.-/it/software/">← Tutti i pacchetti</a></p>
+<span class="eyebrow">Calcolo numerico e statistica</span><h1 class="mono pkg-title">star-quadrature <span class="muted">0.1.0</span></h1>
+<p class="lead">Gauss-Legendre quadrature</p>
+<p><span class="status ok">Apache-2.0</span> <span class="status ok">RELEASED</span> <span class="status soon">file singolo</span></p>
+<p class="small muted">La documentazione tecnica del pacchetto è in inglese, come il suo codice.</p></div>
+<section class="section tight"><h2>In parole semplici</h2><p class="lead">Gauss-Legendre nodes and weights for 1 to 32 points, each node the float nearest to the true root (exact coefficients, exact-sign bisection) and each weight evaluated exactly and rounded once; fixed-rule integration and Legendre polynomials with derivative; all 528 nodes and weights equal SymPy&#x27;s 40-digit values rounded to a float.</p></section>
+<section class="section tight" id="try"><h2>Provalo qui</h2><p>Modifica il codice e premi Esegui (o Ctrl+Invio). Python gira nel tuo browser con il codice pubblicato di questo pacchetto. La prima volta scarica Python una sola volta (circa 12 MB).</p><div class="runner" data-wheels='[&quot;star_quadrature-0.1.0-py3-none-any.whl&quot;]'><label class="visually-hidden" for="code-star_quadrature">Python</label><textarea id="code-star_quadrature" spellcheck="false" rows="8">import math
+import star_quadrature as sq
+print(sq.gauss_legendre(2))  # ((-0.5773502691896257, 0.5773502691896257), (1.0, 1.0))
+print(sq.integrate(math.sin, 0, math.pi, 10))  # 2.0 (to the last digits)
+print(sq.integrate(lambda t: t**5, 0, 2, 3))  # 10.666...: exact for polynomials up to degree 2n - 1
+print(sq.legendre(2, 0.5))  # (-0.125, 1.5): P_2 and its derivative</textarea><div class="runner-bar"><button class="btn primary run" type="button">Esegui</button><button class="btn reset" type="button">Ripristina</button></div><output aria-live="polite"></output></div></section>
+<section class="section tight" id="use"><h2>Usalo sul tuo computer</h2><p>Non servono account né GitHub. Scarica, poi installa con un comando:</p>
+<ul class="files"><li><a class="btn small" href="/S.T.A.R.-/downloads/wheels/star_quadrature-0.1.0-py3-none-any.whl" download>File di installazione · star_quadrature-0.1.0-py3-none-any.whl</a> <span class="muted small">4 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/modules/star_quadrature.py" download>File singolo — basta copiarlo accanto al tuo codice · star_quadrature.py</a> <span class="muted small">7 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/source/star_quadrature-0.1.0-source.zip" download>Codice sorgente (.zip)</a> <span class="muted small">25 kB</span></li></ul><pre class="cmd"><code>python -m pip install star_quadrature-0.1.0-py3-none-any.whl</code></pre>
+<p class="small"><a href="/S.T.A.R.-/it/start/">Come iniziare →</a></p></section>
+<section class="section tight" id="dev"><h2>Per sviluppatori</h2><p>Installa direttamente dal repository pubblico:</p><pre class="cmd"><code>python -m pip install &quot;star-quadrature @ git+https://github.com/Andrea07072000/S.T.A.R.-.git#subdirectory=packages/star_quadrature&quot;</code></pre>
+<p class="small"><a href="https://github.com/Andrea07072000/S.T.A.R.-/tree/main/packages/star_quadrature">README · tests · evidence (GitHub)</a></p></section>
+<section class="section tight" id="tech"><h2>Scheda tecnica</h2><dl class="meta"><dt>Pacchetto</dt><dd class='mono'>star-quadrature</dd><dt>Versione</dt><dd class='mono'>0.1.0</dd><dt>Licenza</dt><dd class='mono'>Apache-2.0</dd><dt>Python</dt><dd class='mono'>&gt;=3.9</dd><dt>Dipendenze</dt><dd class='mono'>nessuna (solo libreria standard)</dd><dt>Capacità</dt><dd class='mono'>star.numerics.gauss-legendre</dd><dt>Maturità</dt><dd class='mono'>RELEASED</dd><dt>Commit pubblicato</dt><dd class='mono'>94fcf7c</dd></dl>
+<h3>Requisiti</h3><ul class="reqs"><li><b class='mono'>R1</b> <code>gauss_legendre(n)</code> returns the n nodes (increasing) and the n weights of the rule on [-1, 1], for n from 1 to 32. Each node is the float nearest to the true root of P_n: the polynomial is built with exact coefficients and the root is found by bisection over the floats with the exact sign. Each weight is evaluated in exact arithmetic and rounded once. Nodes are exactly antisymmetric and weights exactly symmetric.</li><li><b class='mono'>R2</b> <code>integrate(f, a, b, n)</code> applies the n-point rule to [a, b]; <code>legendre(n, x)</code> returns P_n(x) and P_n&#x27;(x) for x in [-1, 1] by the three-term recurrences (no division by 1 - x²).</li><li><b class='mono'>R3</b> Measured on all 32 rules (528 nodes and weights): every node and every weight equals SymPy&#x27;s 40-digit value rounded to a float. 400 Legendre values with derivatives and 120 exact integrals of monomials agree with SymPy within 1e-14 relative; NumPy and SciPy agree within their own accuracy.</li><li><b class='mono'>R4</b> Every function returns floats or raises <code>ValueError</code>: n that is not an integer in range (booleans and floats refused), x outside [-1, 1], limits that are not finite numbers within 1e150, f that is not callable or returns something that is not a finite real number, an overflowing result.</li></ul>
+<h3>Limiti (che cosa non si afferma)</h3><p>Fixed rules only: no adaptive integration, no error estimate, no other weight functions (Gauss-Lobatto, Laguerre, Hermite, Kronrod), no rule beyond 32 points. The rule is exact only for polynomials up to degree 2n - 1; for any other function the result is an approximation whose error this module does not bound: singular, discontinuous or strongly oscillating integrands need more than a fixed rule. The first call for a given n builds the rule in exact arithmetic (about two seconds for all rules up to 32 points on a laptop); later calls are cached. <code>legendre</code> is double-precision recurrence, accurate to about 1e-14 relative to the size of the value.</p>
+<h3>Evidenze nel registro</h3><div class="table-scroll"><table class="data"><thead><tr><th>Controllo</th><th>Stato</th><th>Registrato</th><th>Che cosa è stato osservato</th></tr></thead><tbody><tr><td>Clean install from the release tag</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>pytest outside the tree: 81 passed in 9.51s</td></tr><tr><td>Unit tests</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>81 passed in 9.69s</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>Requirements, interface, units, data provenance, dependency surface and failure behaviour reviewed</td></tr><tr><td>Review</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>Re-running the cross-check gives a byte-identical evidence file</td></tr><tr><td>Reference value</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>gauss_legendre(2) = ((-0.5773502691896257, 0.5773502691896257), (1.0, 1.0)); gauss_legendre(3) = ((-0.7745966692414834, 0.0, 0.7745966692414834), (0.5555555555555556, 0.8888888888888888, 0.5555555555555556)) (suite: 81 passed in 9.69s)</td></tr><tr><td>Cross-check with independent libraries</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>star_quadrature returns Gauss-Legendre nodes that are the floats nearest to the true roots and weights correct to the last digit, for 1 to 32 points</td></tr><tr><td>Benchmark</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-07</td><td class='small'>largest relative difference of a weight from SymPy at 40 digits: 0.0e+00; of a node: 0.0</td></tr></tbody></table></div>
+<h3>Impronte (SHA-256)</h3><div class="table-scroll"><table class="data"><tbody><tr><td class='mono small'>star_quadrature-0.1.0-py3-none-any.whl</td><td class='mono small hash'>eb6c88fd255a5726498be9663bc1f11b57091e307ef50bce41e593627697d415</td></tr><tr><td class='mono small'>star_quadrature.py</td><td class='mono small hash'>2253aaa903aa2f21955c9bf0472ee17e596f642969e47b1daf702c5c31b8aa33</td></tr><tr><td class='mono small'>star_quadrature-0.1.0-source.zip</td><td class='mono small hash'>a41f4a4cb66fb397306d22d9eecc656c01d4a2eeba48995f9627fbec4c6f3d58</td></tr></tbody></table></div>
+</section></div>
+</main>
+<footer class="site-footer">
+ <div class="wrap">
+  <div class="foot-grid">
+   <div><div class="foot-brand"><img src="/S.T.A.R.-/assets/images/star_logo_white_transparent.png" alt="" width="36" height="36">S.T.A.R.</div>
+    <p>Engineering Intelligence. Built to be Verified.</p><p class="small">Un progetto indipendente di Andrea Cavazzini, Italia. Non è una società.<br>Maturità di prototipo (TRL ≤ 6). Non qualificato per il volo. Nessuna certificazione.</p></div>
+   <div><h2>Esplora</h2><ul><li><a href="/S.T.A.R.-/it/start/">Come iniziare</a></li><li><a href="/S.T.A.R.-/it/software/">Software</a></li><li><a href="/S.T.A.R.-/it/evidence/">Evidenze</a></li><li><a href="/S.T.A.R.-/it/assessment/">Valutazione</a></li><li><a href="/S.T.A.R.-/it/about/">Chi siamo</a></li>
+    <li><a href="/S.T.A.R.-/it/downloads/">Download</a></li><li><a href="https://github.com/Andrea07072000/S.T.A.R.-">GitHub</a></li></ul></div>
+   <div><h2>Fiducia e documenti legali</h2><ul><li><a href="/S.T.A.R.-/it/legal/notice/">Note legali</a></li><li><a href="/S.T.A.R.-/it/legal/terms/">Termini d&#x27;uso del sito</a></li><li><a href="/S.T.A.R.-/it/legal/privacy/">Informativa sulla privacy</a></li><li><a href="/S.T.A.R.-/it/legal/cookies/">Informativa sui cookie</a></li><li><a href="/S.T.A.R.-/it/legal/disclaimer/">Avvertenza su evidenze e verifiche</a></li><li><a href="/S.T.A.R.-/it/legal/licences/">Licenze</a></li><li><a href="/S.T.A.R.-/it/legal/permissions/">Che cosa puoi fare con il software S.T.A.R.</a></li><li><a href="/S.T.A.R.-/it/legal/">Tutti i documenti legali</a></li></ul></div>
+   <div><h2>Contatti</h2><ul><li><a href="mailto:Info.and.News.S.T.A.R@proton.me">Info.and.News.S.T.A.R@proton.me</a></li>
+    <li><a href="/S.T.A.R.-/it/assessment/#request">Richiedi una valutazione</a></li></ul></div>
+  </div>
+  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generato dal registro il 2026-10-15 · commit di ingegneria c54092b · commit pubblico 94fcf7c</span>
+   <a href="/S.T.A.R.-/software/star_quadrature/" lang="en">English</a></div>
+ </div>
+</footer>
+</body>
+</html>
