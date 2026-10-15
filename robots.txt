@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://andrea07072000.github.io/S.T.A.R.-/sitemap.xml
