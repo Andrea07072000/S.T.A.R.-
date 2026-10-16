@@ -17,7 +17,7 @@
 <meta property="og:image" content="https://andrea07072000.github.io/S.T.A.R.-/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="The Earth with the four XC-008 test orbits; three independent implementations agree within 5 cm.">
+<meta property="og:image:alt" content="The Earth with the four XC-008 test orbits; three implementations by different teams agree within 5 cm.">
 <meta property="og:url" content="https://andrea07072000.github.io/S.T.A.R.-/software/star_cdm/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="S.T.A.R.">
@@ -25,8 +25,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "star-cdm", "version": "0.2.2", "description": "Strict parser for CCSDS 508.0-B-1 Conjunction Data Messages in KVN. Standard library only.", "url": "https://andrea07072000.github.io/S.T.A.R.-/software/star_cdm/", "codeRepository": "https://github.com/Andrea07072000/S.T.A.R.-", "programmingLanguage": "Python", "license": "https://www.apache.org/licenses/LICENSE-2.0", "author": {"@type": "Person", "name": "Andrea Cavazzini"}, "inLanguage": "en", "runtimePlatform": "Python >=3.9"}]</script>
 
-  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-DF5BlnHX.js"></script>
-  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-CawSUGgz.css">
+  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-Bqu7lyyD.js"></script>
+  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-pT8Ub9sW.css">
 </head>
 <body data-page="software" data-lang="en" data-search="/S.T.A.R.-/search-en.json">
 <a class="skip" href="#main">Skip to content</a>
@@ -51,7 +51,7 @@
 <p><a href="/S.T.A.R.-/software/">← All packages</a></p>
 <span class="eyebrow">Space safety</span><h1 class="mono pkg-title">star-cdm <span class="muted">0.2.2</span></h1>
 <p class="lead">Strict CCSDS 508.0-B-1 Conjunction Data Message (KVN) parser with consistency report</p>
-<p><span class="status ok">Apache-2.0</span> <span class="status ok">RELEASED</span> <span class="status soon">single file</span></p>
+<p><span class="status ok">Apache-2.0</span> <span class="status ok">VERIFIED</span> <span class="status soon">single file</span></p>
 </div>
 <section class="section tight"><h2>In plain words</h2><p class="lead">Strict parser for CCSDS 508.0-B-1 Conjunction Data Messages in KVN. Standard library only.</p></section>
 <section class="section tight" id="try"><h2>Try it here</h2><p>Edit the code and press Run (or Ctrl+Enter). Python runs in your browser with this package&#x27;s published code. The first run downloads Python once (about 12 MB).</p><div class="runner" data-wheels='[&quot;star_cdm-0.2.2-py3-none-any.whl&quot;]'><label class="visually-hidden" for="code-star_cdm">Python</label><textarea id="code-star_cdm" spellcheck="false" rows="7">import star_cdm
@@ -73,7 +73,7 @@ print(star_cdm.__doc__)</textarea><div class="runner-bar"><button class="btn pri
 </code></pre><ul class="inline-links"><li><a href="/S.T.A.R.-/cite/star_cdm.cff" download>CITATION.cff</a></li><li><a href="/S.T.A.R.-/cite/star_cdm.bib" download>BibTeX</a></li><li><a href="/S.T.A.R.-/sbom/star_cdm.cdx.json" download>SBOM CycloneDX 1.5</a></li><li><a href="/S.T.A.R.-/sbom/star_cdm.spdx.json" download>SBOM SPDX 2.3</a></li></ul></section>
 <section class="section tight" id="dev"><h2>For developers</h2><p>Install directly from the public repository:</p><pre class="cmd"><code>python -m pip install &quot;star-cdm @ git+https://github.com/Andrea07072000/S.T.A.R.-.git@94fcf7c1ccc8c27dd780e665d696564eb872f08b#subdirectory=packages/star_cdm&quot;</code></pre>
 <p class="small"><a href="https://github.com/Andrea07072000/S.T.A.R.-/tree/main/packages/star_cdm">README · tests · evidence (GitHub)</a></p></section>
-<section class="section tight" id="tech"><h2>Technical sheet</h2><dl class="meta"><dt>Package</dt><dd class='mono'>star-cdm</dd><dt>Version</dt><dd class='mono'>0.2.2</dd><dt>Licence</dt><dd class='mono'>Apache-2.0</dd><dt>Python</dt><dd class='mono'>&gt;=3.9</dd><dt>Dependencies</dt><dd class='mono'>none (standard library only)</dd><dt>Capability</dt><dd class='mono'>star.ssa.cdm</dd><dt>Maturity</dt><dd class='mono'>RELEASED</dd><dt>Published commit</dt><dd class='mono'>94fcf7c</dd></dl>
+<section class="section tight" id="tech"><h2>Technical sheet</h2><dl class="meta"><dt>Package</dt><dd class='mono'>star-cdm</dd><dt>Version</dt><dd class='mono'>0.2.2</dd><dt>Licence</dt><dd class='mono'>Apache-2.0</dd><dt>Python</dt><dd class='mono'>&gt;=3.9</dd><dt>Dependencies</dt><dd class='mono'>none (standard library only)</dd><dt>Capability</dt><dd class='mono'>star.ssa.cdm</dd><dt>Maturity</dt><dd class='mono'>VERIFIED</dd><dt>Published commit</dt><dd class='mono'>94fcf7c</dd></dl>
 <h3>Requirements</h3><ul class="reqs"><li><b class='mono'>R1</b> <code>parse_cdm(text) -&gt; {&quot;header&quot;, &quot;object1&quot;, &quot;object2&quot;, &quot;warnings&quot;}</code>: dates as datetimes (CCSDS 502.0 formats only), numbers as floats, units checked against the standard, exactly OBJECT1 then OBJECT2, all obligatory keywords (the set of the standard&#x27;s example 3.6.2).</li><li><b class='mono'>R2</b> Every malformation raises <code>CdmFormatError</code> (unknown keyword, missing obligatory keyword, wrong unit, duplicate, non-numeric, malformed date, wrong object count). Typographic minus signs (U+2212) are normalised and REPORTED.</li><li><b class='mono'>R3</b> <code>covariance_rtn(obj)</code> -&gt; symmetric 6x6; <code>consistency_report(cdm)</code> compares MISS_DISTANCE with the state vectors and RELATIVE_POSITION_R/T/N and flags inconsistencies without editing values.</li></ul>
 
 <h3>Evidence in the registry</h3><div class="table-scroll"><table class="data"><thead><tr><th>Check</th><th>Status</th><th>Recorded</th><th>What was observed</th></tr></thead><tbody><tr><td>Clean install from the release tag</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-08</td><td class='small'>pytest outside the tree: 60 passed in 5.78s</td></tr><tr><td>Clean install from the release tag</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-05</td><td class='small'>pytest outside the tree: 50 passed in 6.44s</td></tr><tr><td>Clean install from the release tag</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-05</td><td class='small'>pytest outside the tree: 29 passed in 15.44s</td></tr><tr><td>Mutation testing</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-05</td><td class='small'>149/174 = 0.8563</td></tr><tr><td>Unit tests</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-04</td><td class='small'>13/13 tests pass</td></tr><tr><td>Clean install from the release tag</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-04</td><td class='small'>pytest outside the tree: 20 passed in 5.72s</td></tr><tr><td>Cross-check with independent libraries</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-04</td><td class='small'>star_cdm and Orekit 13.1 CdmParser (Java, CS GROUP lineage) extract identical values from the three CCSDS 508.0 examples (after the 3 documented corrections)</td></tr><tr><td>Benchmark</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-04</td><td class='small'>1/1 benchmark test pass (3 examples x 6 fields identical); runtime WSL OpenJDK 17 + orekit-jpype</td></tr><tr><td>Reference value</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-04</td><td class='small'>MISS_DISTANCE 715 m (states give 715.75 m), 104.92 m (RTN gives 104.92 m); covariance and state values as printed</td></tr><tr><td>Mutation testing</td><td><span class='status ok'>VERIFIED</span></td><td class='num'>2026-10-04</td><td class='small'>before 49/69 = 0.7101; after 56/61 = 0.918 (dead code removed: fewer mutants)</td></tr></tbody></table></div>
@@ -86,12 +86,12 @@ print(star_cdm.__doc__)</textarea><div class="runner-bar"><button class="btn pri
    <div><div class="foot-brand"><img src="/S.T.A.R.-/assets/images/star_logo_white_transparent.png" alt="" width="36" height="36">S.T.A.R.</div>
     <p>Engineering Intelligence. Built to be Verified.</p><p class="small">An independent project by Andrea Cavazzini, Italy. Not a company.<br>Prototype maturity (TRL ≤ 6). Not flight-qualified. No certification.</p></div>
    <div><h2>Explore</h2><ul><li><a href="/S.T.A.R.-/start/">Get started</a></li><li><a href="/S.T.A.R.-/software/">Software</a></li><li><a href="/S.T.A.R.-/evidence/">Evidence</a></li><li><a href="/S.T.A.R.-/assessment/">Assessment</a></li><li><a href="/S.T.A.R.-/about/">About</a></li>
-    <li><a href="/S.T.A.R.-/downloads/">Downloads</a></li><li><a href="https://github.com/Andrea07072000/S.T.A.R.-">GitHub</a></li></ul></div>
+    <li><a href="/S.T.A.R.-/downloads/">Downloads</a></li><li><a href="/S.T.A.R.-/updates/">What&#x27;s new</a></li><li><a href="https://github.com/Andrea07072000/S.T.A.R.-">GitHub</a></li></ul></div>
    <div><h2>Trust &amp; legal</h2><ul><li><a href="/S.T.A.R.-/legal/notice/">Legal notice</a></li><li><a href="/S.T.A.R.-/legal/terms/">Website terms of use</a></li><li><a href="/S.T.A.R.-/legal/privacy/">Privacy notice</a></li><li><a href="/S.T.A.R.-/legal/cookies/">Cookie notice</a></li><li><a href="/S.T.A.R.-/legal/disclaimer/">Evidence and verification disclaimer</a></li><li><a href="/S.T.A.R.-/legal/licences/">Licences</a></li><li><a href="/S.T.A.R.-/legal/permissions/">What you may do with S.T.A.R. software</a></li><li><a href="/S.T.A.R.-/legal/">All legal documents</a></li></ul></div>
    <div><h2>Contact</h2><ul><li><a href="mailto:Info.and.News.S.T.A.R@proton.me">Info.and.News.S.T.A.R@proton.me</a></li>
     <li><a href="/S.T.A.R.-/assessment/#request">Request an assessment</a></li></ul></div>
   </div>
-  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generated from the registry on 2026-10-16 · engineering commit 26586a2 · public commit 94fcf7c</span>
+  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generated from the registry on 2026-10-16 · engineering commit 6dd5c1b · public commit 94fcf7c</span>
    <a href="/S.T.A.R.-/it/software/star_cdm/" lang="it">Italiano</a></div>
  </div>
 </footer>

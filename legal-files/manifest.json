@@ -17,7 +17,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 1,
-   "sha256": "f2e179e288707bbbb24c0e2838feea63e6b70bc6640146dea152d036524bbaae"
+   "sha256": "0909e38ed803fd62b0bcb02b0954628ffb27b69298072bfce75c26a7aae55b56"
   },
   {
    "file": "pdf/STAR-LEGAL-TERMS-EN.pdf",
@@ -29,7 +29,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 2,
-   "sha256": "d2aceb4f250dccdd1787b944c040d81071b7b8774baddefdfe35d1601121e90f"
+   "sha256": "2f34c8d22c712114cf62a699deea4fd061355885ed4f65272a3ced7f4a063a34"
   },
   {
    "file": "pdf/STAR-LEGAL-PRIVACY-EN.pdf",
@@ -41,7 +41,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "e5852953b1bfb75de5f90ff08e6edb293367e3e757d0d45397ffb08dc863599e"
+   "sha256": "c097616b1b5ccd4246781449b9bd64e9d0214b9b87b519239cba3ce16f7b2748"
   },
   {
    "file": "pdf/STAR-LEGAL-COOKIES-EN.pdf",
@@ -53,7 +53,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 1,
-   "sha256": "dfaa341908cac13f791ff6e2cf95707893a36dbd184095175a951f9ed37180bb"
+   "sha256": "0457a6327073944eebd5b4fb7b7ffc227b4364a967d98c0ba78fdff77a3d81f7"
   },
   {
    "file": "pdf/STAR-LEGAL-EVIDENCE-EN.pdf",
@@ -65,7 +65,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 2,
-   "sha256": "30ec13976979b0b68507bfc3b4b418d1d040473d8d09e616dd61e5527bc69d95"
+   "sha256": "f632c87ae185b02c080d789083103421650e2c9735cdefc9cf8adc784fd2cf9f"
   },
   {
    "file": "pdf/STAR-LEGAL-SECURITY-EN.pdf",
@@ -77,7 +77,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 1,
-   "sha256": "880537d6da96dea2f59f32df745e05b9e7129ca35d40294e2e110d57581235a6"
+   "sha256": "a9b3dcc8acc497875f712ea7a343d610aa7c2b3085771afee51889789ea28f90"
   },
   {
    "file": "pdf/STAR-LEGAL-LICENSING-EN.pdf",
@@ -89,7 +89,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 2,
-   "sha256": "d687726b2969ac67e7956e78084db56bec3b63ab18c323809ee4d20a29dcd84b"
+   "sha256": "9f69c4836928e2446aa59ae75e0160f4b19cfe2c336d70eacb4878cc205f5b81"
   },
   {
    "file": "pdf/STAR-LEGAL-MARKS-EN.pdf",
@@ -101,7 +101,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 1,
-   "sha256": "a5943890c10dbf1ae8734cadc9b55221565ec0ee97a22d48cbdd5a1152bb9921"
+   "sha256": "cbd7ea7ae10d3e422a8cec08bdec504971b5493547b0bb497d5f4b95b1b9d98e"
   },
   {
    "file": "pdf/STAR-LEGAL-A11Y-EN.pdf",
@@ -113,7 +113,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 1,
-   "sha256": "cfb35fbc77a01cf9ae41460f7d8a13f56fb5617bc7065bb97890555bed7fd34f"
+   "sha256": "25eb2c96c73cfe66ecb53309dbed1f1bc97595beecc44ba71da3272d82a407b9"
   },
   {
    "file": "pdf/STAR-LEGAL-INFRA-EN.pdf",
@@ -125,7 +125,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 1,
-   "sha256": "18925c30f3e4fb892f41536195e0c9d3831dec22887ca966f5a5d937e96e754a"
+   "sha256": "d241969e0049a1a0eb45474af2a577dc1e706f532c32daa2094f5a57c2bf1a6f"
   },
   {
    "file": "pdf/STAR-LEGAL-AI-EN.pdf",
@@ -137,7 +137,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 1,
-   "sha256": "942b0a871d21a36e43688686d49dcd9032ed4cc0334a336ff6465fc8c19807e1"
+   "sha256": "7c80da3ba631ee052104aaa97f1681bff1a8f14956ac26e8204f678235dae21d"
   },
   {
    "file": "pdf/STAR-LEGAL-SPACE-EN.pdf",
@@ -149,7 +149,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 1,
-   "sha256": "ba2879d88f47c699237eea09b000bd04b9caff8d542af2cfb97833fdabfe35f1"
+   "sha256": "7a2477713fc83cb39cdf1cf77aa8e9b8c44bf0a54fab5fd2c288fc451db213aa"
   },
   {
    "file": "pdf/STAR-LEGAL-CONTRIB-EN.pdf",
@@ -161,7 +161,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 1,
-   "sha256": "3ea0bd757382e9122522b4833a1106d294317eda74fca8e7edfc729d2f7ec3b8"
+   "sha256": "94689076dcba30984e057a2e4d5278fc19ae1c876e4cbc4a56e5d5a57ec3d3ac"
   },
   {
    "file": "pdf/STAR-LEGAL-AUP-EN.pdf",
@@ -173,7 +173,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 2,
-   "sha256": "2607447a7de453d9bb454e38a5a71fedf5dc02bd29dab37b03f0e2ca208e7099"
+   "sha256": "d7f282415287556e6e01294644d7a479d1d3abe3d83fbeefac1e6c90911624b8"
   },
   {
    "file": "pdf/STAR-LEGAL-MINORS-EN.pdf",
@@ -185,7 +185,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 2,
-   "sha256": "64ecffb04104c36d605b60c14e8610e4828d30cb06d5188fedfd647063042e3c"
+   "sha256": "312d1dd8bcbd6a48c2addc02b8156da4066fad606fe5c90714231a5c91ba5ed0"
   },
   {
    "file": "pdf/STAR-LEGAL-BILLING-EN.pdf",
@@ -197,7 +197,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 2,
-   "sha256": "ed53620058dea01256d70f0511814e18c6cef7f70f4095ebb863c93f3ff8b9a5"
+   "sha256": "67416fb3625a1addb170e66a3fc4290582b161becfb67c4627c97ac5a065bc26"
   },
   {
    "file": "pdf/STAR-LEGAL-CONSUMERS-EN.pdf",
@@ -209,7 +209,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 2,
-   "sha256": "7d774a574ca109169233037fb3f095db9f9069c0240bff907c51110b93f3c2f4"
+   "sha256": "3b20eb813b77d443402113add0874fa38d1a7708b694ced434fc374875e809d9"
   },
   {
    "file": "pdf/STAR-LEGAL-REQUESTS-EN.pdf",
@@ -221,7 +221,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 2,
-   "sha256": "c77c5269d8e95ffbd995420eb1c2eae4a473356e244b81b1fe171b606f9ea69c"
+   "sha256": "144a973c15b9a3e1bac552a0802e1df7e732ca37abb7995c1bf5bbcb0676f7a0"
   },
   {
    "file": "pdf/STAR-LEGAL-BREACH-EN.pdf",
@@ -233,7 +233,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 2,
-   "sha256": "a002420e555e42ebac2496191604994adf04523f38d58cde0dff3b41f7c5ad63"
+   "sha256": "3d6520516f802c5c9ff1ff91f0d22bf5e3a3fcc5f2f7c15ae7cc7db7d0b45d3a"
   },
   {
    "file": "pdf/STAR-LEGAL-RECORD-EN.pdf",
@@ -245,7 +245,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 2,
-   "sha256": "8ba2ff00a7948b645d27f691d4587deafb4fc5463408c8dbcbbe658550092af3"
+   "sha256": "cba4dbadcc6206c6cf6efbaf3c9469921a4ce6d8ee026aab61bd26cbf07d6b49"
   },
   {
    "file": "pdf/STAR-LEGAL-LICENCES-EN.pdf",
@@ -257,7 +257,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 1,
-   "sha256": "bf6a88891d94bbefa81519d0e8de824ef5295c8ee65f18c7d83aaff23350b5a6"
+   "sha256": "dfe226fc3aa0d3a9bf57559659b68fe9bbf5640613358d8e7a097466a11aea14"
   },
   {
    "file": "pdf/STAR-LEGAL-PERMISSIONS-EN.pdf",
@@ -269,7 +269,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 1,
-   "sha256": "49ba6abef7cdbfa704081b2b182239fcedb2cc4f0a2d8608a58339782b9e378c"
+   "sha256": "bd149e2e75d70b5892621e9ff8289d3b05bf0f01410dc4d15768662c69f6718f"
   },
   {
    "file": "pdf/STAR-LEGAL-HISTORY-EN.pdf",
@@ -281,7 +281,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 2,
-   "sha256": "1f79c990a1c2ca99354c1dc3b4b763f19c9267865fa1567608c2b2b6f9d6bcc4"
+   "sha256": "06a11baedcae6388d6acff47d3df34eaf7efdcb2c142d7f4e305bb84ec0534fb"
   },
   {
    "file": "pdf/STAR-LEGAL-MATRIX-EN.pdf",
@@ -293,7 +293,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 9,
-   "sha256": "dcadcca774aa2d53acff968aee7f2f2e57ec9d4a2878464f8eec0635b8bcae23"
+   "sha256": "f524f57a337c2b6291b80edf7c222b59113b05ad32f9acbfe6580c913831be5b"
   },
   {
    "file": "pdf/STAR-LEGAL-FORMS-EN.pdf",
@@ -305,7 +305,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 10,
-   "sha256": "48719d36a1398bd88017edf9b5a1459928143381569fdf810cbd3955c1815ee4"
+   "sha256": "20c3e6ddda53152c8c9e5d97177a10852d5866cb6475d3f8a75c507a36c22f41"
   },
   {
    "file": "pdf/STAR-LEGAL-PACKAGES-EN.pdf",
@@ -317,7 +317,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 5,
-   "sha256": "9ff8f80200b5f2cc967cf6978d1078c0535a464df6bfd61b55b6bb2c01491896"
+   "sha256": "626083f565ce348cad681ff8c0bbaeb2a525c72025988c770ac1817aabb223e0"
   },
   {
    "file": "pdf/packages/STAR-PKG-CONJUNCTION-SCREEN-SGP4-EN.pdf",
@@ -329,7 +329,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "02fb04a55abba22cc3d5465da274d65f131ec7c3e612d26af861e4cf1a5a0dba"
+   "sha256": "4378cf2c85e42173f154b239eb66bf16cda7110480e2cd424e3282de7732ab95"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-ALBERS-EN.pdf",
@@ -341,7 +341,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "a40993b0110e81a987a909a140641aec82dab3d68775707b5e87fb33c83c9138"
+   "sha256": "835a5c4e96c33be3b147b8844aef1d6d2fc125f94bb41dddc0aab1ac0faaf524"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-ANOMALY-EN.pdf",
@@ -353,7 +353,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "09f285b7d238c6a2616858274ae19ef98dc67994d9801adab81feebc4aef7095"
+   "sha256": "63e2eaa94b5488545280ab35eb47cb14397abcc4fb2cbb1bf5439adb96fc7a41"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-ATMOSPHERE-EN.pdf",
@@ -365,7 +365,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "3ed2ae89374796db732806543d01b9157657f3b0ec8218080620147cb0cbee33"
+   "sha256": "a38ec31f1dbbce8d54299b6653ba09b946c5e7c5eb55e25f1c2159470dd8c4ac"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-AUDIT-EN.pdf",
@@ -377,7 +377,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 5,
-   "sha256": "846d5fd81fa9978f20d4013d5fa78630476ddd7ebcb3e33656d6f9d31963a730"
+   "sha256": "327f52622919331b69371601876d926379d42870280d95aeb1f3af629c5ba487"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-CALENDAR-EN.pdf",
@@ -389,7 +389,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "a7abdb8220632d2ab7ae8afa8da1f519a67a93cc97e8260dae007dfa507c4b15"
+   "sha256": "537454bd2064b24b8dada730edfd39640f11c460ef9cadd506460f0dd70fa839"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-CDM-EN.pdf",
@@ -401,7 +401,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "a46eecb20d0d1da27fe1538d5355838b55a21f35b0027a656c52fd3ee8615a04"
+   "sha256": "0ce9fce2a617eff4307ef8b6dcf2036233ace03855f0d8e2c33c69b7957c0f39"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-CHEBYSHEV-EN.pdf",
@@ -413,7 +413,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "65badf0d73397f2e6754869629fdf9c552bb409d785e649ba9739e3f2507ea60"
+   "sha256": "259bf1ac89c1d487a5893dbc74f91011272baf1c422bc1776b3e8a557ebdf5a8"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-COORDS-EN.pdf",
@@ -425,7 +425,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "8a8f6e145dc7f65b20f057befdcd115929c7d21c054c9f4425b11770cbe76b90"
+   "sha256": "d0232796637c99f1169b97c2a71234ddb022fe59d3cae99764a31225e76ae5b7"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-COVERAGE-EN.pdf",
@@ -437,7 +437,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "4a77a404038fd6907a0e00cbf8eb4434f4c9b40ccfdfdb956ddb060aa26856be"
+   "sha256": "437835f52a64f57a749ceefe04dc3e2967c74b3fa8fac44955773b1c7dd52cdc"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-CRC-EN.pdf",
@@ -449,7 +449,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "b40ee0aff49a7ecdab954e91387adf14bdfd32e2ebc4ce869df8030ff5918258"
+   "sha256": "83fe3f6777bc36bbdc91643d5477ec39edfbe6e1b20f4dea0744391f54c04b56"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-CROSSCHECK-EN.pdf",
@@ -461,7 +461,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "034d704b3f3fbc24565cc0fbf95fc4fe32f89129602eaeaa736f4f04a5e0b9ac"
+   "sha256": "fa59e974252813bf8251b7ab42f322482408d06e83c9bc91ab19089601f2d205"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-CW-EN.pdf",
@@ -473,7 +473,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "937f98e01ffe898352c49d7a04be2216daa0f17ad63320a45367c3334c51d01a"
+   "sha256": "1a1240be09d416eea0c2555745f268073869f6b6341ad4b0fa81c7a1c5ad621c"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-DOPPLER-EN.pdf",
@@ -485,7 +485,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "bac300a2fb10b6bf55055d5ebbd7eb4b085a0d80ab296c37bfcd2e4d9b13193d"
+   "sha256": "80cbe8b6bdf2a25f4092ebf91b500eceb7b7434d5e062117331265d133b69a25"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-ECLIPTIC-EN.pdf",
@@ -497,7 +497,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "55fb043a64e86533dddf255e5ece4570337c1cddb74232fe110e78c2a617f103"
+   "sha256": "059b37aa396a97ad9b2a2bc2e7487282d0ae638952fbd346024d7fd2d4de9b92"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-ELEMENTS-EN.pdf",
@@ -509,7 +509,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "92b1f72347942b39fa8d2196a2e295b772cf1ed428d4113d2feb53221ded9a70"
+   "sha256": "709c435019b8e4459f67a9b8d24ddacaeb98bfa11cad08e8987671f396981ee3"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-ELLIPSOID-EN.pdf",
@@ -521,7 +521,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "83cb948232bfaf8ee465c07b8076353d05b0edc1991b58f7fa52111b941f4af5"
+   "sha256": "2ec604da52559c9e495fe0b9ce4d4830fe28631d2d88f25bfcb9419a002599e2"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-EPOCH-EN.pdf",
@@ -533,7 +533,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "a889d60bbaa064969c71a08608cacffca5b50b257b74f19602092ff372828368"
+   "sha256": "6a3c124acefdc162471cf4fc6427c189ca740c72ceb06ce9215f5e944cc6038b"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-ERA-EN.pdf",
@@ -545,7 +545,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "be4bb2c8f948117fb9656f81e0aa562794387829d7709c4c52c9ef49ef2d7a1d"
+   "sha256": "2b894e97ba0892826fa8cd2041da8940b6dad63876d9fd839baa923fe22f6b35"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-EULER-EN.pdf",
@@ -557,7 +557,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "ab3227608a548e3c3bfbf3b04cf0ea65e736f8d9eba70e4e659b2606f3941f8b"
+   "sha256": "46fae9510f5a3d3df67ae1a988595f2b0699b7f95c9ac131ed679c06e12e81b3"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-GALACTIC-EN.pdf",
@@ -569,7 +569,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "f1d5d3850629bfdfdabd84adb4eaafe8a07a7b8308b91ca84d69529e14af4e76"
+   "sha256": "00e7390f996589dd7ddd9a6148a15e20020d45f4508ec41b0fbf15ae6810885f"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-GASDYNAMICS-EN.pdf",
@@ -581,7 +581,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "da31b04aa78e054128bff8f88458e6799fb19784d625f3aff521905efb69afc4"
+   "sha256": "3f47a4485e0f67866fbcb756b4649284a2b5ef40f818bdad282e71af45a05307"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-GEODESIC-EN.pdf",
@@ -593,7 +593,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "b2839fb835f98e613b1dfcae7a4bbcdf11233ee38fddca36de180e814b7213fe"
+   "sha256": "343249e8b9500aae2f7038d2f71f3832bd20cd825ea71001969cb9f8da514ec9"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-GEODESY-EN.pdf",
@@ -605,7 +605,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "be6d15e9203a08958bdbcbc51e24d66362279ec82814e60f1b53c5e738094475"
+   "sha256": "f5f0715fd43d94ae408272af4e125a28b67cae87fb30c17b09268b16877d35e7"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-HORIZON-EN.pdf",
@@ -617,7 +617,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "4373d894cba215c6efb2f0c386a30c896ac352d8382cf01ebc6fef0f2b3ff2c2"
+   "sha256": "3614717c6ec3b1eb9440416122e6c3707dab1b893cd1ff4a1ee5df2c3088b332"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-INTERP-EN.pdf",
@@ -629,7 +629,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "416793b66a7aec2734aa98ead360529c8c161130007948ac33a55ec891b169a4"
+   "sha256": "4a00855ff892b5db89ac31aa76400d9aee8d59f78362351ed0daad6bc5263b9a"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-IOD-EN.pdf",
@@ -641,7 +641,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "8af56e7cf5e7f0109bc0a37d1a814eb18ab5d8b7ea3d1632101dd560ff424230"
+   "sha256": "ef85a5d9e2167bd0bec1116263f81c03252fd9cb356940725d8867d959c72502"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-J2-EN.pdf",
@@ -653,7 +653,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "1481d84fb0b6b632aa955bd0849bdeb617ddf25a9244494a522c554f35d1a802"
+   "sha256": "aea7e43fd3638a43652658de64978a88ec14faca3fbfbc43f3f435ac586e48eb"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-KEPLER-EN.pdf",
@@ -665,7 +665,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "97275d804f457df2b7849918bf43429cc81cac0a2e3cf4ce5c09aa9a295ec6ee"
+   "sha256": "cf1e479e8edddac4288c4bdaff29f9dc72cb44f75680704908f715c909d430d2"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-LAMBERT-EN.pdf",
@@ -677,7 +677,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "db40f35811b61698057678a683c0a4d8bdd2b43f0520445253e3ca4acb5d3603"
+   "sha256": "43d6307ad56fea358e45d531d7feee5493c07dfc2463f88cd624f7d587f37aff"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-LCC-EN.pdf",
@@ -689,7 +689,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "44a6beac65de9ce48aebd9cf21638e093e2f5b886c54371b10aa391ca8c16299"
+   "sha256": "ec144515faeda4cbd5215c02354928f8e135b36b1e8691f2bedd8b676101b3b6"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-LINEFIT-EN.pdf",
@@ -701,7 +701,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "92ab7013604d6664c77e6dafc24dd74ea8b86b91c893189664dfc372331a1369"
+   "sha256": "1f8a7d1c3ad1a78fe706e4d3f57e6445ce59d5a246eead3ab7b8954fd2d336c2"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-LINSOLVE-EN.pdf",
@@ -713,7 +713,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "b7a3ff12837463dfc336b082266f6849e53fdc1814ba2d9d09ab57272e735a5a"
+   "sha256": "64058dd8741a33bcc9dfdc52c6e5048c1cb012a2fc3e8267c354c3a69b4f7f30"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-MANEUVER-EN.pdf",
@@ -725,7 +725,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "d64a226262945f8fe2a57a202929ecc401b2163a67cfa5db20ecfab028ca49a0"
+   "sha256": "e77bcde8b25480eb59dc2a801f335fe62ff8115a7cfe3f6506e9d622af274101"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-MAT3-EN.pdf",
@@ -737,7 +737,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "8be21064f257e45b05f23119f1892fedc227c6de13c3892bd37a826dfa505040"
+   "sha256": "31f218ee57d6d27e9371fe27f68b02f297f5ae6fa545edaaf4999176599550cc"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-MERCATOR-EN.pdf",
@@ -749,7 +749,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "89878886a561b5793db9720c9d5ad940d522536c46b3192201f6cfb576f394da"
+   "sha256": "d7c4e3b961749d303287d7b148eb72d22d20879bc7c2325bb48ba79ecf87c386"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-MOON-EN.pdf",
@@ -761,7 +761,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "4d6d438ce1303998c735cde6820cc3f9f687e94c445f5c8f8f2c95c04e948ad4"
+   "sha256": "d8a01e57db304594bf7c352145698c8bb0d1e6400a669a8497a1616c816e4517"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-MRP-EN.pdf",
@@ -773,7 +773,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "e97eafe81b1a94bde380893bab16100c32233276ec42de369283a5b5353a8866"
+   "sha256": "c29b65ef589d82a80a3e68133558fac9c255dc261a74d5e7df479ba1246bf795"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-ORBIT-EN.pdf",
@@ -785,7 +785,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "1d1cf5e390b9479cc223014a1e1d586c2a17539de680f446a0db867c8b5bf9d6"
+   "sha256": "ff5b6a8acfe3acffc8ccdd17809bd2eb7b05666b1e0acf37e5073c68c0dfb514"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-POLAR-EN.pdf",
@@ -797,7 +797,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "d7f371640e5df32091eac773cb56f8457e3d12831734606dd9fb3eb13c27d627"
+   "sha256": "fcc63f932f158945596d91093c39b560637cd29a4c1716a790517af8256c2bea"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-POLY-EN.pdf",
@@ -809,7 +809,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "ce0026d59dab2c741ece08599b60c63a58ffc362cd646be0d2f1011373bafaf1"
+   "sha256": "d341cec8d19a303e26597bd626f19b49cf55d955b495cf8603171cdbbcdd9790"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-POLYFIT-EN.pdf",
@@ -821,7 +821,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "0dad842932221cc61df0ed1298e017f29708469e5ef62f7dacd7b44b56bca0d7"
+   "sha256": "f1ed178a8c837da4bb99e2450a626216cef61c5434670502816e0e057be3ea0b"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-PRECESSION-EN.pdf",
@@ -833,7 +833,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "8e76e28e3a1ed6f9261666adea6cb2b12e99bd049cd8643cfa1c5aa52b8be0a5"
+   "sha256": "6412394709549e9ede5ff8632f1534b28b998788a7ac89ea45ba64773ecef7af"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-QUADRATURE-EN.pdf",
@@ -845,7 +845,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "1a1dc65d83a163ce61c40bbac7a5a38b791cbb747fdab38f5e2aaeadee358cce"
+   "sha256": "b4f3d0eeae0322e60c597644dc1fb3dab6d03f699fa53541ae8fb45085534b21"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-QUANTILE-EN.pdf",
@@ -857,7 +857,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "ec73c29d43f23f64beb62be00483ac522b9d01e0b7002d5d19c28377cffcccdf"
+   "sha256": "3c6dac959a12aa848a4c6a33031d40d9e5f70ce9da058fded36fd89c369bb86b"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-QUATERNION-EN.pdf",
@@ -869,7 +869,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "9ba3525e46e5648383f32659b30236dabfaeaddfdfc5f67176f4d25052505bd1"
+   "sha256": "41837b299db7824b608980ba65a1e1456ed5563753aaaafe7a758ce46f97af47"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-ROOTFIND-EN.pdf",
@@ -881,7 +881,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "137c5518faf01f6adf16d9c63e2b675a93d5202fbdc0a1f3d782c6d782f10d7a"
+   "sha256": "819fa1d5a02f4e945c07dc8c567de3902d0c67950b9018f555153a230fbc0ab2"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-ROTFRAME-EN.pdf",
@@ -893,7 +893,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "aa2dc907c7c7c9fbc83321d3c26deead88a3154d872f72b309730f51a099b4a2"
+   "sha256": "d71f7045d2326adac159443fb3c80379bdff6e6b3cbd32e0e36f2798474cdf2b"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-SEXAGESIMAL-EN.pdf",
@@ -905,7 +905,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "131caccc6edea23ad4ab79b16c6ca63e7acb7e97807e06d84a7a902aad362950"
+   "sha256": "66ddb8194ad2a80c1f047b47ae7021b414f9776e3e06c54f8c18cf346ddd5a8f"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-SIDEREAL-EN.pdf",
@@ -917,7 +917,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "5dab69a9903e56a55acfe453d97453619fab1903fca7cc31aceca942c71ab961"
+   "sha256": "5b3be6200533b46f39ad68da491beae1da801433ba6eed4ae09f7b0bd7f1e486"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-SIGMA-EN.pdf",
@@ -929,7 +929,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "f8a3428e795fcf5a029b3445676018936e0dd8895bb03c461dd3c627a96e5efb"
+   "sha256": "536b1cd4f38cd4f5579430a8d0aa64931048476ba092c1b2d7613d5a02ee70ad"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-SLERP-EN.pdf",
@@ -941,7 +941,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "80e05c54f5b17e443b11b6379948c9b771aa7c87be10825f49ce977c06f4f177"
+   "sha256": "7d8468c3d46df7a5c372b822950053e603465ff5dfd174455fdde88137df6f98"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-SPACEPACKET-EN.pdf",
@@ -953,7 +953,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "3ce2dfa1f2eb38291944235dad3c083b9c97665203a0d072dab0fcaef9f76aa3"
+   "sha256": "068968abfff806a77df60bd24148c7bfd0ce8848c5c65c92c4df20c7433adc6d"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-SPHERE-EN.pdf",
@@ -965,7 +965,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "c4f833489d1e334b23a86e1b3a1b7aed62ff3e46262109575f2826e03b179d90"
+   "sha256": "d3484bd6789b49563268ef64ee6ed068b46e8178f0885155de584ef819d37f4f"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-SPLINE-EN.pdf",
@@ -977,7 +977,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "50926e6aac16b3642393994a84db2645149880742edfe23cc00fbbb4e0a92f1f"
+   "sha256": "db1b32ec116730edc247a8ce3e1493848b29588a3dd1652e120a6ed588330393"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-STATS-EN.pdf",
@@ -989,7 +989,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "69efc837c056cd087c8d6f3c72e5c5a421bc2a91d92a1e9c14a8392f7957c9b1"
+   "sha256": "4e6912de3ea1afc25c190f3ca188cb9c1834836a5a592665297dfa84bb458492"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-SUN-EN.pdf",
@@ -1001,7 +1001,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "3475d27df937d2f9fb9426b45de240f35fa3c5077183dcd40c10689d7f9a89bc"
+   "sha256": "1d376afc334b436205bdfe0ffeac8bc7b9ff9096cd07cab5f12003cf049b4b36"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-TABINT-EN.pdf",
@@ -1013,7 +1013,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "532621b16c5839e2d12b2af3eedaef001e276910bbe176024caf4128d9b00f38"
+   "sha256": "855e2fc64f2943f4a66f694c00556b45455e4b8829d5cd48f2f9cbe0e1c99b00"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-TDB-EN.pdf",
@@ -1025,7 +1025,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "36a4781ea00b1410255b3b756bbf6154126a5ec44b5c6b485577f94a43dc3015"
+   "sha256": "a44ab40f519d240b271c74c5f4399131f975bb857970ab5866287cc13b6ca695"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-TELEMETRY-EN.pdf",
@@ -1037,7 +1037,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "ecc2b9cbe9045e06aac7d51eabe8552b623700925e5f921e993eb44a22929df7"
+   "sha256": "1562bf1934f1a69aac25fe9845c9e99c1df3db26917bb476f7d82ac21e960f6a"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-TELEMETRY-C-EN.pdf",
@@ -1049,7 +1049,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "f55bf7effe1071dfe59909680250beed7fbf7b9069ab34dd9596f12a6f06437c"
+   "sha256": "d76f2990c1fb3e6e4cc8020c818048a05398650b2805657c1076e84841a79bdd"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-TIMECODE-EN.pdf",
@@ -1061,7 +1061,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "3347cea3481cd51a3f366e6293f5d5c5c77c6671892b605bd2d145c443169906"
+   "sha256": "536d5929ee70225ce6e4240d2a56ad3424109b0c4dfc0a44c0cc01119f74e066"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-TLE-EN.pdf",
@@ -1073,7 +1073,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "33f5dc91f3f76008ac34b907b1092ba62e42e4e9388ccaccb9fb557eac466321"
+   "sha256": "8b026ac0882a81552fb4cebd739f4103bd0c4154b13cdf8cbff35badef0c06da"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-TOPO-EN.pdf",
@@ -1085,7 +1085,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "3c0ca3978395edb7b94a1877bcecd69a5b19f1a22e4b8b384d1731a6bbe05cbf"
+   "sha256": "f6c489533c9eadd6f2e85ae17ad6bd8b8783ff53fd944e7a04a37a81e45b1592"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-TWOBODY-EN.pdf",
@@ -1097,7 +1097,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "817b10dc2a781124e0a49aab78f2f604ad2f5f7fe0a9ee57a4140608251a694d"
+   "sha256": "dac79aa279908fa1ac7e7d69492ef30a33920e6ea8666dd4f49db4cb35f5f386"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-UNITS-EN.pdf",
@@ -1109,7 +1109,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "4d1209341dacb50cba9e7ea671c4e0456cd846a422631ae3938e036e83ef13ec"
+   "sha256": "ef3dd6ef4cec638360c91cd90d34e12d07c972368131e6ba117343d392aa3d62"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-UTM-EN.pdf",
@@ -1121,7 +1121,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "74894b2a5598f4e5b1a6a7fa7fe8f2225faf40e6991504e5eaa5dd901b69b633"
+   "sha256": "3db91094c245bb403874bc02d67101055d253d36f2ff783f440b0a5eaaaeac6d"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-VEC3-EN.pdf",
@@ -1133,7 +1133,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "a2755cec62b2329ff7f18c5ce47f6e1ee438f5a197ba5705e9784da794171397"
+   "sha256": "82107c6c938922335ebfb6aa59f3d806b2ab351d593aba092145f6c7c9f08dfc"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-WAHBA-EN.pdf",
@@ -1145,7 +1145,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "8ffeecf2b8d499091b7d4099750b25c85a9f5202fff22d4af2268baa54aafbe1"
+   "sha256": "142c4c1b31d85cab177d6dd653ec1c6a12be283d79077aa0f26d21f5238640f7"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-WRAP-EN.pdf",
@@ -1157,7 +1157,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "bf1cb253af27be620f3e94283113c8650497ef18196c3bfd31e813ae9aedf742"
+   "sha256": "a9360878e042110df529dd227cef5fee3518fba338817e71cdac187f42488c22"
   },
   {
    "file": "pdf/forms/STAR-FORM-GDPR-EN.pdf",
@@ -1169,7 +1169,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 1,
-   "sha256": "eed4da19b156dad30d535c80baf00c9a7a1e7c5b889f7a634e806ffb47ab8b7e"
+   "sha256": "9c8a097b8addb23bdfbd6a1d808d4d80d6fe3da0c183dd342764aa3afdd042b7"
   },
   {
    "file": "pdf/forms/STAR-FORM-VULNERABILITY-EN.pdf",
@@ -1181,7 +1181,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 1,
-   "sha256": "6a18235060eed0238f001edf8b0f6971f9a0206d90a8835755f9b072c54ee8de"
+   "sha256": "57b8ddf4ced6048d95dbcbe3e91b64c454298ae32e99242e52178738f27735d6"
   },
   {
    "file": "pdf/forms/STAR-FORM-ASSESSMENT-EN.pdf",
@@ -1193,7 +1193,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 1,
-   "sha256": "19dec1cb9782cecdafe8021903d35bf74702c8a1a3f206ef87e8aa61c8da29f9"
+   "sha256": "34a9600904093473165e948c5cc98fbfcfc371d58459320d85678c425d2f6ed7"
   },
   {
    "file": "pdf/forms/STAR-FORM-NDA-EN.pdf",
@@ -1205,7 +1205,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 1,
-   "sha256": "4b0291f7032644f731617344e84dd60b21db31c3d35601bc97af3bfe96c30eef"
+   "sha256": "6f0dee79cdd2e98313a46d9e4ab4fdc4d379e2a20b8292757641faee5b8d8200"
   },
   {
    "file": "pdf/forms/STAR-FORM-END-USE-EN.pdf",
@@ -1217,7 +1217,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 1,
-   "sha256": "bcb42020af5933738b3f9ada37b25bf0c77d3e8c8b5c0aa5e1910501c411eae3"
+   "sha256": "bd881e962db5def23f8440744a878a0a224bbb471e2d9f548e088cdc51c01bb9"
   },
   {
    "file": "pdf/forms/STAR-FORM-BILLING-DETAILS-EN.pdf",
@@ -1229,7 +1229,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 1,
-   "sha256": "c118cbc3541eac1d819a42302088f68aaccbfd194e725cc08653d55445f5d7b4"
+   "sha256": "083d831b3841a5b3041f5742832eb9e45aff980787c274ae9c0fe0e77ffe009d"
   },
   {
    "file": "pdf/forms/STAR-FORM-ORDER-EN.pdf",
@@ -1241,7 +1241,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 1,
-   "sha256": "908aeae23b7678614df903958f6ad3155483ee36477d04408d83ad27b0aa0562"
+   "sha256": "56ba539ae058595b41a1ad645125c98db306a541e7f9089daf23cdeef31ea618"
   },
   {
    "file": "pdf/forms/STAR-FORM-CLA-INDIVIDUAL-EN.pdf",
@@ -1253,7 +1253,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 1,
-   "sha256": "bd86c77904acfb586c15c3af2450a328887e7386b6b39baf27ee855ffc316004"
+   "sha256": "f66e38aa38d42bf9c79867da560717496e8eaeb9a62e7f8a30327c4ad049c441"
   },
   {
    "file": "pdf/forms/STAR-FORM-CLA-CORPORATE-EN.pdf",
@@ -1265,7 +1265,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 1,
-   "sha256": "1ad5c502423a08b000a10030c9577e7a6f6c55ad77f9c2f86635c81f66598151"
+   "sha256": "65c960219fa90e9cc2b79d628a321f47552a0bf59f9fb7cafa9cd502740b78bd"
   },
   {
    "file": "pdf/STAR-LEGAL-NOTICE-IT.pdf",
@@ -1277,7 +1277,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 1,
-   "sha256": "f439dbf07a1a4710aea3333ebb943491055bdf13846ed3e46bcbc7e504f0ba90"
+   "sha256": "3c4833d0f84f044e86ab54701a2864a311971fff9ffda6391268627fc34f7741"
   },
   {
    "file": "pdf/STAR-LEGAL-TERMS-IT.pdf",
@@ -1289,7 +1289,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "315a956ca0de6ad50210ef3a502b10f5ba3ac8b13a35621c1c5a93f0870a6877"
+   "sha256": "726c5a2506a3945e6fedf2760806994defb58b49510b389600f1ec190c9bd697"
   },
   {
    "file": "pdf/STAR-LEGAL-PRIVACY-IT.pdf",
@@ -1301,7 +1301,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "5310cc804e1bccae6d12004a3478cfdd42c98b684bb83a94544bc5ae33b50c71"
+   "sha256": "f2af34d209d8fb59cb5e0a941807bb6e6297b3d7bc73901a50fe2c205e6991f1"
   },
   {
    "file": "pdf/STAR-LEGAL-COOKIES-IT.pdf",
@@ -1313,7 +1313,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 1,
-   "sha256": "c9bbe1fbc745c36a02b74ae756d18207b7d50ef0fe2667e0b0459b89b9d8ea46"
+   "sha256": "a86493e67a14103ed435c33f91b4555b0e0c3b4f8bc227057c2957bd30c81aa2"
   },
   {
    "file": "pdf/STAR-LEGAL-EVIDENCE-IT.pdf",
@@ -1325,7 +1325,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 2,
-   "sha256": "f649c4266a31f920ca8a50783a69a0aec043b359f8ebe226f593ade94f8250a5"
+   "sha256": "7b7f5ad7987c5ee83a0f7701e716e76ff1b4fc3b6b8ae8a0f7ad71f238e08f13"
   },
   {
    "file": "pdf/STAR-LEGAL-SECURITY-IT.pdf",
@@ -1337,7 +1337,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 2,
-   "sha256": "8e53f9bbf1bf2b4f969f4b0d420a90651cb8e898064baf4e127a56ab41588070"
+   "sha256": "6ff916b2856f35ef2644ea93f1af37fb1e4fa69cb6f46fbeeb56b021bc6508b1"
   },
   {
    "file": "pdf/STAR-LEGAL-LICENSING-IT.pdf",
@@ -1349,7 +1349,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 2,
-   "sha256": "129ac7aa1f1575576d40c2f8136dfa9e2c9fb90a28d0eb63ee6bcf747cd0b3f4"
+   "sha256": "2fe11865332b3c6a4a58992dc83e4cb2d120066434dd6b84e369610e57ba13f5"
   },
   {
    "file": "pdf/STAR-LEGAL-MARKS-IT.pdf",
@@ -1361,7 +1361,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 1,
-   "sha256": "b2b353522491a69cd85dfec5ee094666f97cf3b584cdea0bc5a47b2ee4e055be"
+   "sha256": "e981f1093bf1e013be242daca786616f0d04202d8fd2d94b42409b7fb8f8a109"
   },
   {
    "file": "pdf/STAR-LEGAL-A11Y-IT.pdf",
@@ -1373,7 +1373,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 2,
-   "sha256": "8b9b0630b0735e02d0579de42c0aa8e018707d2e1f75ecc8d691a07f94baeeb2"
+   "sha256": "924e2eed1441310559188f96dbc0495587fa74b27173c08096fae953f82537d2"
   },
   {
    "file": "pdf/STAR-LEGAL-INFRA-IT.pdf",
@@ -1385,7 +1385,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 1,
-   "sha256": "42d9a4846abd46b35f6887cef0ef8aa31fddf302354d85e25fc562bb62352521"
+   "sha256": "327381b60f5a487579baf9d707cb7dd4b88ceaad2082abb306485f80f079f71c"
   },
   {
    "file": "pdf/STAR-LEGAL-AI-IT.pdf",
@@ -1397,7 +1397,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 1,
-   "sha256": "646d24a5dbebd5a762fd594744083e5ac95b29f9c3c842e11de0e1ab0011796d"
+   "sha256": "0e051cff3e21f87bb902737dead11cd5fb9c1bd520042efd41feb0d11911e3af"
   },
   {
    "file": "pdf/STAR-LEGAL-SPACE-IT.pdf",
@@ -1409,7 +1409,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 2,
-   "sha256": "3be5403fc4aa8f654943177bc2588b2886b86f2fdcce80bf325d3a4ad7d6aff3"
+   "sha256": "bb7e150e75c2478600e603235b7f4c2b6a05dffce5b0d68779aabf93b58b9fe1"
   },
   {
    "file": "pdf/STAR-LEGAL-CONTRIB-IT.pdf",
@@ -1421,7 +1421,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 1,
-   "sha256": "83e31bb9059abbdc4d1b59188e579fa7b32ea7600b83fbfb7a1836843d4aa051"
+   "sha256": "44bf6706049c36104fcf0975a39e7d9c756fd8936380972d97a9280cd506bb16"
   },
   {
    "file": "pdf/STAR-LEGAL-AUP-IT.pdf",
@@ -1433,7 +1433,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 2,
-   "sha256": "e8e7b6a7184de44140d55d05913414e1bfe8fc8e802982aaaa02a34d4cfb90f1"
+   "sha256": "47ae5c4c2fca124a574a8b2d66781ad1a27b91278492ff52409ac3665ee4c3c0"
   },
   {
    "file": "pdf/STAR-LEGAL-MINORS-IT.pdf",
@@ -1445,7 +1445,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 2,
-   "sha256": "d1c2ce9850cae24d073e22346eed41e8470b90b28c581b7508c6b317aadd2d90"
+   "sha256": "a16da317636ae0524505cd0a08494db0e0b4ce05bba72c3686ba4a6b613ed22e"
   },
   {
    "file": "pdf/STAR-LEGAL-BILLING-IT.pdf",
@@ -1457,7 +1457,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 2,
-   "sha256": "b935f41feca413ac05ca037455aa083e594285693d638eb653fb31ab5b65b786"
+   "sha256": "9927b9ee051db67543eab8d3ed05ec500c1d2364b53c1684e5ad41ea1b353ff7"
   },
   {
    "file": "pdf/STAR-LEGAL-CONSUMERS-IT.pdf",
@@ -1469,7 +1469,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 2,
-   "sha256": "c97729e2cd91fd7eb17eb2e127ee5e2db7fea37d19fbb24177f752036fb2fc1f"
+   "sha256": "93a5d64f44aad3773ffca412827c62ff063603f7c2e27f9293d3505242b924ed"
   },
   {
    "file": "pdf/STAR-LEGAL-REQUESTS-IT.pdf",
@@ -1481,7 +1481,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 2,
-   "sha256": "ae16c9e21d7c5ae1a19cdd161eb9ebbe4bd986a5c8ea70774ffd518ce0d60c8b"
+   "sha256": "8e23cf0a4ec2303b4055e4a6b6e6eb84847b5379c69e37268e434c4735d3685d"
   },
   {
    "file": "pdf/STAR-LEGAL-BREACH-IT.pdf",
@@ -1493,7 +1493,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 2,
-   "sha256": "d4a98584a9d03b3370571703214c013def7c21f695cdcaf58c41ff10e83cb681"
+   "sha256": "4c5300f39dea094916f60ead41774a2d3a12b21c215d9230d12ca7dbf29c718a"
   },
   {
    "file": "pdf/STAR-LEGAL-RECORD-IT.pdf",
@@ -1505,7 +1505,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 2,
-   "sha256": "0eff772f82e9a6cb7617d68b6bc3d1f462f8f32947345b11fc13ad3c426a0fd8"
+   "sha256": "61a8b76d28f6223739f4cdf633b2310be1b4d886a99ad4a0642e27c6bec6e55f"
   },
   {
    "file": "pdf/STAR-LEGAL-LICENCES-IT.pdf",
@@ -1517,7 +1517,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 1,
-   "sha256": "543d971f74dc7cd5e14be03c5da88bb4ed5695702422e7002eab38176196c76c"
+   "sha256": "2cefc7566ca2f4276a828c2f2db7d46073d78f2a77feaf64d5ba4e98ede5779a"
   },
   {
    "file": "pdf/STAR-LEGAL-PERMISSIONS-IT.pdf",
@@ -1529,7 +1529,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 1,
-   "sha256": "fd18fed692aba3dc0653b43e412d7ab845038877e2d1df0a8e28dfc2ad4f866f"
+   "sha256": "cbd9f89b90a1e9c783b3d81d54a4325bdabaa119ccf261625ac412f247449376"
   },
   {
    "file": "pdf/STAR-LEGAL-HISTORY-IT.pdf",
@@ -1541,7 +1541,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 2,
-   "sha256": "0147a8775ac7047e692d4033f503a867c7314ed318e76fcb0fce636cf39fd7c6"
+   "sha256": "61f08330581ab75c2c15e263461d0d749695b892f6f1e7a858ed4498cf405cf0"
   },
   {
    "file": "pdf/STAR-LEGAL-MATRIX-IT.pdf",
@@ -1553,7 +1553,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 8,
-   "sha256": "4f4f0133183efbcb9fb4b2df536e3f3136ca292c288eef0808e92b877a150b18"
+   "sha256": "81a274810cbdbd20f8f9d04258214c8acb39621d5d8f99999810891755320a7f"
   },
   {
    "file": "pdf/STAR-LEGAL-FORMS-IT.pdf",
@@ -1565,7 +1565,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 10,
-   "sha256": "874463a69fd86b8dd0179479b404de06edfd9a92f85f832aa58eabedfebcd77e"
+   "sha256": "35a76bd7870015abcb4745d6cb7ef673b9c4a6cbdb809120a1c8a7666bb75cfe"
   },
   {
    "file": "pdf/STAR-LEGAL-PACKAGES-IT.pdf",
@@ -1577,7 +1577,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 5,
-   "sha256": "1d7fb630cc19d944997285a9cf4f7a76e97ef4271dd49bbad0939e69d1964136"
+   "sha256": "812b4d92f4199bfb309577da397bfffa26a5267a5b545ce241c22de5da6bfe53"
   },
   {
    "file": "pdf/packages/STAR-PKG-CONJUNCTION-SCREEN-SGP4-IT.pdf",
@@ -1589,7 +1589,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "c704525c0c5eefa46e95f975d7fe7b0ebed118ad2a52446e4d9ea37a7893e68a"
+   "sha256": "5ed79501b50023b0067aa46aa7fefcd394621d44268a9036ac093709bfbb8d41"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-ALBERS-IT.pdf",
@@ -1601,7 +1601,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "1f9fb1a9a3e9b0d6dab00a936b55e29aa5e280ae49180040b1c01d36ee0657c7"
+   "sha256": "50775cf07de4835a770717e1f0e1e37ef2a517df89403aa34c007aa2c7822c8d"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-ANOMALY-IT.pdf",
@@ -1613,7 +1613,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "b6c8af2b53a27d863a81ef7e0e77e0ea3abbfec2ebbf7faaea2259ae1a1de3a7"
+   "sha256": "2afd263b309043cbcfdd46e174d4f21b9f7ea7a93fdc339e5a6edb11344be873"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-ATMOSPHERE-IT.pdf",
@@ -1625,7 +1625,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "730ac3df44edf2b8c8951693c6c9cb4d37de1ec4c4b84e5889ee1c521af589fd"
+   "sha256": "9623d98c52ed80d87230550a453bea8c2208be5a6b269304cd031250aaa29d53"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-AUDIT-IT.pdf",
@@ -1637,7 +1637,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 5,
-   "sha256": "7b3ffde9fd48db95eb00ccb1aab9702c981dad60812f8703691988c2d6a23a67"
+   "sha256": "30aabcb4179065c066b8e287c53033a17a04f84a4292eb61e45571bac7682b0d"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-CALENDAR-IT.pdf",
@@ -1649,7 +1649,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "884f19b1772a7efff96b40fba7a9b0fd19a405171da4908fcd2a273fe7f14627"
+   "sha256": "da40aadd6febe7b71578a5dbab45592e13d134dfa929b5f7fc751990e28a6dd9"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-CDM-IT.pdf",
@@ -1661,7 +1661,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "daa7ffe60b949b3d9422c4a41a9d22815fd451f447412bdebf6bb7cc9da2ecba"
+   "sha256": "2a942dd6c8646c878814d3055acc4edd4626fa498f6ad3b46b14cca227dea017"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-CHEBYSHEV-IT.pdf",
@@ -1673,7 +1673,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "7d2eecfd64cbbfff6e8e87ef8dbbd33a1d24ccc670506793e476ec1c9a50e2ae"
+   "sha256": "c0876dfae54b1a35cb1e0790b517b35b9478b5e6ae2cd8215acbfd33890be01c"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-COORDS-IT.pdf",
@@ -1685,7 +1685,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "22d5165586b8db4f7dc3c7aa177d94fc4d5d99ec787105c527aa6554218d96a2"
+   "sha256": "09064eb1fc81f88d784a06df898670efdb254f025f071dec836cf89a5e797b54"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-COVERAGE-IT.pdf",
@@ -1697,7 +1697,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "7affadcfe73ddecb48a73257f874e6db764b906ffce4f0a0f84002481de0777d"
+   "sha256": "24d10df2fdf07350841b22162e9053ca78f99704e9f9a6d004f0c5a7f39b9341"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-CRC-IT.pdf",
@@ -1709,7 +1709,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "3509a9d1d4930fa3564a55704e7a85b7fd089c7dda2256b2fa3ce09487af35e3"
+   "sha256": "69d109a247903459a595c0902f8d2b8fdde7d9d9d93139045d35e245ccd51ac1"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-CROSSCHECK-IT.pdf",
@@ -1721,7 +1721,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "d1d5f3660270d64274af3a794543034c16491deae782078de69e23e69586da5d"
+   "sha256": "fc5b9358b4ba2ef3a1e1230453d57f06762a973c70c0db45b7708a333f980cfa"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-CW-IT.pdf",
@@ -1733,7 +1733,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "cac50192aaf286eeba14819830736d18b00171e197e58e3d64ba8afba0dc0661"
+   "sha256": "d9f362ad032cbdd5ec9f0519724821058d627a66d67564ecb582d042eacf2c7a"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-DOPPLER-IT.pdf",
@@ -1745,7 +1745,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "78a7fec10bc0fa8b8fa178294791ad13f11d005b787d5fec71bc9255683a32e9"
+   "sha256": "02016d0048935da9156e82ba4ae93dd4abe72e03ffb9efd0324d26b719615b9d"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-ECLIPTIC-IT.pdf",
@@ -1757,7 +1757,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "1487e998d103066ebab5873e528847b388e474ee266afb2d8ff16dc45a92653b"
+   "sha256": "7acfb854a8337920043a5f998b1587c08e1807113613e7e49a320191a1ebc00d"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-ELEMENTS-IT.pdf",
@@ -1769,7 +1769,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "7ea75af147e03238d0b70cffd7205fcca21a9f69431831450a11b333bd6e8463"
+   "sha256": "320e606a80ef0aced6fc795af88e2d79b3f3315ec002311aa7dba3d1bfe9aca2"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-ELLIPSOID-IT.pdf",
@@ -1781,7 +1781,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "558e0eaef6135da27d8a20b56b69b5f3ee41318bb3237ba1ceee6d02209749c4"
+   "sha256": "1efa1cff1e26accd2883f908d013b65a002455e498e151bfb2215e51eacf583d"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-EPOCH-IT.pdf",
@@ -1793,7 +1793,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "659b42a6e2e7b3b6caea837e8cc0a9e245d1588d4da97c14500b356c184e1006"
+   "sha256": "2438fb4d1ca01826044fb8bdbc2af0f7b07c507f8b67ec166bf8057a87802823"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-ERA-IT.pdf",
@@ -1805,7 +1805,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "ca4b921b283b290ac72121eae6d8678207d0f030331b960becea2e0417e57d63"
+   "sha256": "f3997062f7fe2247a7dafc3ad6989e4fc0b42a17a57507569027c5afa73716e2"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-EULER-IT.pdf",
@@ -1817,7 +1817,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "f01ab96b61c387888269c4a6b03a0567530d299d872a995a5f85767a278f535b"
+   "sha256": "742941f3f0771c0629d89b74215a58804da6216ae018676f6ae9360da5aae004"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-GALACTIC-IT.pdf",
@@ -1829,7 +1829,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "94126951f45a19cf03abfc93444ba6a08ba35c9a72afcbe750a8210762374632"
+   "sha256": "304cd5d83fd031e94b62a495a7604118fa8a79fb992104df4b865499326802f6"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-GASDYNAMICS-IT.pdf",
@@ -1841,7 +1841,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 4,
-   "sha256": "ac50ac1669298699caeba59ae46b503d4a255b46a903227e487b3a960f3d304c"
+   "sha256": "bacd804cb1efe0f169035a973de20bb41a36598724b47652eff7e4d00ebbaaa2"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-GEODESIC-IT.pdf",
@@ -1853,7 +1853,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "847dfbc5437040e0158e6c2c24c2275a072ffb448363986fb941fbbd6268c6ef"
+   "sha256": "bc588556c8cb243649cc217e922f2a6cf5a852610c19f2789198d6b101879827"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-GEODESY-IT.pdf",
@@ -1865,7 +1865,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "68a3b73e837bc4262ea86c55ac93da84550a2de957085bcae3eb10157b0eb9a6"
+   "sha256": "2253c78cebbe1d3f78ea6731dd581151002fe1837445ed335a799e142ef6eabd"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-HORIZON-IT.pdf",
@@ -1877,7 +1877,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "a6975bbfabd743b1b1c2b78192ff081590a52b486819b12eb48b1e99b6dbe801"
+   "sha256": "00ef42a41b6bed0d759c1271b60966f4e4a1d71d30a6f9c6a1b92ca449ab358b"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-INTERP-IT.pdf",
@@ -1889,7 +1889,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "4306c56486b7a1ef6b05d20ed5342ced774fd02f933c04b5675f9c3da906b983"
+   "sha256": "7627e891a3272637ba19053f97a96aeaa42caa31eeb10cef9087b9cded3b753b"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-IOD-IT.pdf",
@@ -1901,7 +1901,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "2b4dc2be906e5a70a3e7794afcfaf1b4e82b436b5b784bd16c9a1d2bde523feb"
+   "sha256": "1d0ad5d85e24007f4eb85f58ca14fc3a4e3e49081c2ab9852b8059a80b284d96"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-J2-IT.pdf",
@@ -1913,7 +1913,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "722ccba05458b701995c93689fb5a98136bc4c8ee592b0b06f7f73842bc37714"
+   "sha256": "33c5bef7f1116a885e49597847c589fa974edb6be8e92749f0168991c95badf9"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-KEPLER-IT.pdf",
@@ -1925,7 +1925,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "69c548bc4e2d948a7d7dbb6aec9aabc7c2f2aaaa476d6399ca2c63b18f2bd876"
+   "sha256": "09f50db1664eade26b1e9eae231bd4a0adcd1a8a0092b1a7a36e9d7fb3b341e0"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-LAMBERT-IT.pdf",
@@ -1937,7 +1937,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "59acd1ae6d9165ccc8b857d17a1e885ae21b0fbd9853a2f38496a89087c4bfa7"
+   "sha256": "79d5672112175ec93d62fdf6acea25f48300965f7a38b44526001984b7dbbc70"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-LCC-IT.pdf",
@@ -1949,7 +1949,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "a09a4246c5e97b78e64b31d8693938ffd5b1e806b42e32fc507971d9ca3e8731"
+   "sha256": "a46e18e4cd8e184fadcc75924b48304734b78ae7feecd8fa1036a8ef5367d040"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-LINEFIT-IT.pdf",
@@ -1961,7 +1961,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "17e6b2483b639aff732f51d7fe3f1a8747a8b4e0024898231527e786d7935a6d"
+   "sha256": "3acfec8f05dc8a49a9b5ae0170d8d4d419ed2878b8e5a46dcdd68899dd859591"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-LINSOLVE-IT.pdf",
@@ -1973,7 +1973,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "a69389ecbf76953536f9846f4193e09dc9b9e569368d4e8359e0e36c2d483526"
+   "sha256": "3280b43c89b4f97aefcaee203692a583a24e3b955ee3e5a13c2ed27068f499d6"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-MANEUVER-IT.pdf",
@@ -1985,7 +1985,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "dcebc38370072a5b4d817386424d683cd6db6c31b76497c154dc514bc214e763"
+   "sha256": "d23d520ff9072df34dc119fc927206151cbe2c942153af4da9ad02c0191ba215"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-MAT3-IT.pdf",
@@ -1997,7 +1997,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "180d572e115f29a460cb2faa22121d5d72794651a7b6934b100e3438b39fff4c"
+   "sha256": "2b294bfb02a2b05b622355ca78e20ee1306be92b2046dc5dee9ec4d74e1c3a99"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-MERCATOR-IT.pdf",
@@ -2009,7 +2009,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "416306239b452ed2d45ae2ff4685db91a497bd013dc89fcb8bb13893145789fe"
+   "sha256": "feb32ad9bda4201a59117344a7434e812ee82f56653c9c4272a9d371ebadbded"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-MOON-IT.pdf",
@@ -2021,7 +2021,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "0f46983f23886752eea9bf1b03c5efc9e3e4cc0a3647fa1d41cc2dee635e9e3a"
+   "sha256": "467e51f0336b649098339e1b9510cfadbf5a317c7205595e808c302d4248bdbf"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-MRP-IT.pdf",
@@ -2033,7 +2033,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "dd0824894a1245c394f5ed9998fa7d1209d55ccf7220b911b2073f6a2008208c"
+   "sha256": "4361c92df80cfeebd1ee55f8a88fb05fbad54a542debd3920bf96014d13d3d17"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-ORBIT-IT.pdf",
@@ -2045,7 +2045,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "c32767aadf9c29cfb3f32892e2864dff3df4c690a55e97d6601689f7c888cbfb"
+   "sha256": "329c0fe1fac92ad629bfe25a59ad0366151a4773174e5530154fd1556673feac"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-POLAR-IT.pdf",
@@ -2057,7 +2057,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "ffbf041274ce6177ada17a7a6e394bc8eaa104e8a6d50f2e5ded1628b5fbab5e"
+   "sha256": "d81014caeeb57e7d0dc39a19cbf3975307e72ddb12020c542e6d15a1efd75d3a"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-POLY-IT.pdf",
@@ -2069,7 +2069,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "fd75c2cd65613ec9958d0e3abfc1da752f35e1f0db0e8fc46e0ce8f3cfeb2e52"
+   "sha256": "818d6b813201836a9b6af0fa501322118f0b24327036d16aebcff6c1a2d1fe2e"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-POLYFIT-IT.pdf",
@@ -2081,7 +2081,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "fd6f119bb96a70c74809845ed9ca68f780093940adb999fd66ebccf4135c3433"
+   "sha256": "9f4687526c51bd2d72c150be861ec950f334fb450de4851de9f6c6b3441034a5"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-PRECESSION-IT.pdf",
@@ -2093,7 +2093,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "ca26f381e9004a048fbec8aa00718203dcce587de485b32cb179b4bd127db8c7"
+   "sha256": "f0adb975bdcc15fc8287f52671561aaebfdb6fa8ebfab5a09c688f8b8e4177e6"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-QUADRATURE-IT.pdf",
@@ -2105,7 +2105,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "4930a63a79708950bec1cbb725c102dd2b1324f1f119a07454187b884d0db9ff"
+   "sha256": "365f64f863b0911886d7bc0ca21fb6e045a9a315f72a51e82c1319a98c74d3d1"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-QUANTILE-IT.pdf",
@@ -2117,7 +2117,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "feae199e6296b9a61b19d4adeb0fc17a0e863c40926d87668570c475f0178889"
+   "sha256": "1f386730e55a0fe75488528777e7573c59290b6dbb24ed706e72939fef24c12f"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-QUATERNION-IT.pdf",
@@ -2129,7 +2129,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "361c520deabfb290d499fb00eacb827e537260815c085ffb2b8a873500416d22"
+   "sha256": "039a8175153255bdd875e3483d848049d9618d47f1293493a83d46b0dc50be43"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-ROOTFIND-IT.pdf",
@@ -2141,7 +2141,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "c8bcd748867aa5c5d58af58c2d4140031775480e3379b0c7d8c2f4fcf2bc19c7"
+   "sha256": "116ba9d3c8e53065294ba09267630f874ad55f099784b102a219226349f3a825"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-ROTFRAME-IT.pdf",
@@ -2153,7 +2153,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "374b2ee3416ac77ecd3b33f268388072334e93cf6320425ce39f4557a928c3bf"
+   "sha256": "4156959cc6f90f5ed166b51d53d96ed2f66e7b91ba88c22eb1e8b59f2986b3a7"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-SEXAGESIMAL-IT.pdf",
@@ -2165,7 +2165,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "82f5c05d382166f86d54fabb3ce9432cd4504b6328982fab1730599d90fde132"
+   "sha256": "06ed86b0017cc4486fc69be21bf3ef6ed5cca70ffea1fb5e6e5e75ced14a6634"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-SIDEREAL-IT.pdf",
@@ -2177,7 +2177,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "dad44b10882765710a5827515171d4a055497eb203d25919f9bf753534d3c53d"
+   "sha256": "15d417968f88a9b602d786c6bf05cee7e256067a255c8a8d1b7b20d7604f6aa5"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-SIGMA-IT.pdf",
@@ -2189,7 +2189,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "c43dbec6a64143b623bf22c9ceeb2011da15f720e30133efa34b0e7cfc7487da"
+   "sha256": "9512e4ff502fa041f547b4af0d14cd024ad771dbc4cb398b1a178f14901b43f0"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-SLERP-IT.pdf",
@@ -2201,7 +2201,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "cd8ac88152f5fbf4e6947c8dcd8ebd416d2089ae368a5a30297d9638aac73347"
+   "sha256": "899490fe60268a1b83467ea178b772ea7789ea2cbd3e83b09d1b148b90226945"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-SPACEPACKET-IT.pdf",
@@ -2213,7 +2213,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 4,
-   "sha256": "26b9ca26016734d6d998d91b680fb0f776d7bc8384b3c2c143120533860452a3"
+   "sha256": "6d4c40e47a65353fbc3aaa1f36a170f4dcc6ccc4f69454e34ea6a5be3b402417"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-SPHERE-IT.pdf",
@@ -2225,7 +2225,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "d0a8b706bb6051b971fd007f6ceae4719e36bae881b6ffc067081ab1e33e96c3"
+   "sha256": "b5bc255491001e87aaa05ac61e6ac0d916cdb88d8a45235295cb7f5ebb6e6f2c"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-SPLINE-IT.pdf",
@@ -2237,7 +2237,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "87c749708bd519d887001dc4e0dbdd2941d9a6db0ed52fa92a9c0740a3d11514"
+   "sha256": "27a138d45a25d662d0a9c38f5fe1d9ff9579da2772e9f3fee348a6e327e8d5fa"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-STATS-IT.pdf",
@@ -2249,7 +2249,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "7b4428df77ef90d9c0b240cf5942cb14db6591774ac58de659300f09d3c972f0"
+   "sha256": "78eba0de7f387d2cd9f637984bd8b29b2644795795aaf97db1ef25bcb577ef66"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-SUN-IT.pdf",
@@ -2261,7 +2261,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "3988a6de6a24e7b7744cdd8dc96de3abddeac6968edd4094667b22f790d7eb89"
+   "sha256": "d684e54bce0777cbff532d8122bc4f58ecd782ab006099ba4d3ad4813ac52ff5"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-TABINT-IT.pdf",
@@ -2273,7 +2273,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "1eef23b67c47cbd07a98b2667675d3a55e0a38678e223d8b1dea991518a0ec62"
+   "sha256": "e7591d573dcc69883753cd6c6184b47db849294ed19942813c0ac846dcc52189"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-TDB-IT.pdf",
@@ -2285,7 +2285,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "b010d6e6cc1b59b6915d6b7546ed9803beb845bf9e41f5043013e2946d64beee"
+   "sha256": "b63b8b127a43ed4fc58a5fc3e8c92e0dd9b3440262c840fbad216c0935e12bd8"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-TELEMETRY-IT.pdf",
@@ -2297,7 +2297,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "3dbe8a17b89edb15bd2656d1244f065f92084d3f4b016ab513197244cb8eed4a"
+   "sha256": "b59ea60e5d24a23e2ce04d3db6ec59ba7060d243523eff36f65d8c1ed3b95a4c"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-TELEMETRY-C-IT.pdf",
@@ -2309,7 +2309,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "54f8c487b47a6d703c3faadbd433b710a5c4cd57e9c209c25da81faf997d7368"
+   "sha256": "04f5dc14d0761ce6e432116153ca10c718416cd8e157d41ae8ed5c82ee02091b"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-TIMECODE-IT.pdf",
@@ -2321,7 +2321,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "60f9eb2f0915d17ab7957965c4b9f3bdb3112f7ea3d659fd35e9120a46a38b39"
+   "sha256": "679464e71208474147dc8c689cfef42b725bea986e80b3a4c257921af861391a"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-TLE-IT.pdf",
@@ -2333,7 +2333,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "3d155e15573387d6d6418a8af052aff9d3fc90d68bb7613a69822fa0ec879353"
+   "sha256": "0cfce507a969aceebfb551aa2f46b7dc3c689e6e2e707d76d849e5b78662ba63"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-TOPO-IT.pdf",
@@ -2345,7 +2345,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "7b38b97d003eabfd1e64705d7aa1f5356f0eff1c8674041bc7ce3f8f2768e907"
+   "sha256": "2b321ffc8d9d42cee40b7ed0b0de11fd4431c6c8626878ddff623cee1d406358"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-TWOBODY-IT.pdf",
@@ -2357,7 +2357,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "7ef00347f0360414157bddd9c408aa401d089352fe89a15f7693b652d491b839"
+   "sha256": "d047cf8299c9a491a572b6d20619c30e78931014413a0262375404584acf980e"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-UNITS-IT.pdf",
@@ -2369,7 +2369,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "e4540cfc8d29319b6f40070f07f2418c9886d82ebb1f272e4e1213fce231d1d3"
+   "sha256": "f8ee391cc52301bbb4576a4b6d7c978c570a958588081a77558b82f1eb39526a"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-UTM-IT.pdf",
@@ -2381,7 +2381,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "510fc7dd3a762857a9cd1453f26df6cdebf1ab587628c441e1102fbaca4962f2"
+   "sha256": "87ff1bc0f876e5dfbb69d362e99df98ba086b541b5161d2baafadb8071f38b67"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-VEC3-IT.pdf",
@@ -2393,7 +2393,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "20908249111c51320742d7495b1b985e0dd182292c927c772db22e9191af5420"
+   "sha256": "bcc6cc125c5fc0108efc6c59c97f18379de342f091436c12431f68a6e8ca1b16"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-WAHBA-IT.pdf",
@@ -2405,7 +2405,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "58482ceb755b5e57d935aae80d75f0657690e24297b892fbf25a5578094dc06e"
+   "sha256": "f31f12067ee5a162238207923de673c74494f435bc44c77fd0896e44fe19f459"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-WRAP-IT.pdf",
@@ -2417,7 +2417,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 3,
-   "sha256": "abf8518893ae04a9301bd229e0a4b9928ca5acb24165d13e8e5ad05fe85a9472"
+   "sha256": "a187c916619f934abe14ab908e50d1bf449144a761767ea5a4205513450c77b0"
   },
   {
    "file": "pdf/forms/STAR-FORM-GDPR-IT.pdf",
@@ -2429,7 +2429,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 1,
-   "sha256": "8d65af48b8cd46fce0ccedb8584a078bf99cb60979effe93ad7b68122758f7e0"
+   "sha256": "b272774d1f874566c61312796cfe46cae57dbb6643bdcb626c3b691ecd238f22"
   },
   {
    "file": "pdf/forms/STAR-FORM-VULNERABILITY-IT.pdf",
@@ -2441,7 +2441,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 1,
-   "sha256": "0069deb301785a108f065d0e02a04c4904d2628a783ecec0dc8035f83357e4a2"
+   "sha256": "f7fafd203cc7fa7bcdbfec79125653fd28b3e761dca498f7f71cbf48ce24b5d2"
   },
   {
    "file": "pdf/forms/STAR-FORM-ASSESSMENT-IT.pdf",
@@ -2453,7 +2453,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 1,
-   "sha256": "55687ae70455230c69f2c0c17311c105026d01b8f593ecb8b48923c227afac10"
+   "sha256": "cffb0764c1a4e93425c0f24261b329bcf0d772db275edccc4901f089d3a73bd4"
   },
   {
    "file": "pdf/forms/STAR-FORM-NDA-IT.pdf",
@@ -2465,7 +2465,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 1,
-   "sha256": "e7e38e74d951b1033d1d408e43651e81cc5eb093e92e0310168a1a412c175d4b"
+   "sha256": "108133bb520b39529f5867dc55d02077f10fd0fc90f5ace85f42ba04ee1b5219"
   },
   {
    "file": "pdf/forms/STAR-FORM-END-USE-IT.pdf",
@@ -2477,7 +2477,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 1,
-   "sha256": "25b8c5a79adb8a70f248b29ec2351c24fa1df9e14c377d6a07490513a3cc3b1a"
+   "sha256": "634b977eac61eecf18dfffa3772594a630a56822cdcf3599187a5d7d6d79eb70"
   },
   {
    "file": "pdf/forms/STAR-FORM-BILLING-DETAILS-IT.pdf",
@@ -2489,7 +2489,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 1,
-   "sha256": "4bd68342b1159054330431cf80bb9bf4946e4e7184f3a9866c0ae038555c8c69"
+   "sha256": "4a501ee0f9057f7f99232ef200e663735104bfe75b25897e2c5fcb6e53f35f96"
   },
   {
    "file": "pdf/forms/STAR-FORM-ORDER-IT.pdf",
@@ -2501,7 +2501,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 1,
-   "sha256": "5e355c000af6dcd84f25880882b6d6a25a3ca93fba89553d58100901deb7ec42"
+   "sha256": "81897f31a1260de5fc7a9bc11f1a2ec97f870aca669715060a37352daa8a3541"
   },
   {
    "file": "pdf/forms/STAR-FORM-CLA-INDIVIDUAL-IT.pdf",
@@ -2513,7 +2513,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 1,
-   "sha256": "aa910591286379ee8092af798b0dc73f92b60ffed200fd624f1e4dcce6cc3ba3"
+   "sha256": "316847dddf35a23523582762f608af07b2031842d26cabfc030d46a3de3586be"
   },
   {
    "file": "pdf/forms/STAR-FORM-CLA-CORPORATE-IT.pdf",
@@ -2525,7 +2525,7 @@
    "version": "1.3",
    "date": "2026-10-16",
    "pages": 1,
-   "sha256": "176ddc72c2573b7440618a47122f92eb3859fd5ade7b4af16527d9feee5c260a"
+   "sha256": "d68699dbb30581815341f356817b9eccfe80b069b20c3bb1462096b64c1d3987"
   }
  ]
 }
