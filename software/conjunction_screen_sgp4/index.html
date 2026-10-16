@@ -5,25 +5,28 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>conjunction-screen-sgp4 — Conjunction screening of TLE catalogues with SGP4, KD-tree coarse pass and closed-form TCA refinement · S.T.A.R.</title>
+<title>conjunction-screen-sgp4 — Conjunction screening of TLE… · S.T.A.R.</title>
 <meta name="description" content="Screening of close approaches between objects of TLE catalogues (who to look at), NOT a collision-probability tool.">
 <link rel="icon" href="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" type="image/png">
 <link rel="canonical" href="https://andrea07072000.github.io/S.T.A.R.-/software/conjunction_screen_sgp4/">
 <link rel="alternate" hreflang="en" href="https://andrea07072000.github.io/S.T.A.R.-/software/conjunction_screen_sgp4/">
 <link rel="alternate" hreflang="it" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/conjunction_screen_sgp4/">
 <link rel="alternate" hreflang="x-default" href="https://andrea07072000.github.io/S.T.A.R.-/software/conjunction_screen_sgp4/">
-<meta property="og:title" content="conjunction-screen-sgp4 — Conjunction screening of TLE catalogues with SGP4, KD-tree coarse pass and closed-form TCA refinement · S.T.A.R.">
+<meta property="og:title" content="conjunction-screen-sgp4 — Conjunction screening of TLE… · S.T.A.R.">
 <meta property="og:description" content="Screening of close approaches between objects of TLE catalogues (who to look at), NOT a collision-probability tool.">
-<meta property="og:image" content="https://andrea07072000.github.io/S.T.A.R.-/assets/images/star_logo_dark_transparent.png">
+<meta property="og:image" content="https://andrea07072000.github.io/S.T.A.R.-/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Earth with the four XC-008 test orbits; three independent implementations agree within 5 cm.">
 <meta property="og:url" content="https://andrea07072000.github.io/S.T.A.R.-/software/conjunction_screen_sgp4/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="S.T.A.R.">
 <meta property="og:locale" content="en_GB">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "conjunction-screen-sgp4", "version": "0.2.1", "description": "Screening of close approaches between objects of TLE catalogues (who to look at), NOT a collision-probability tool.", "url": "https://andrea07072000.github.io/S.T.A.R.-/software/conjunction_screen_sgp4/", "codeRepository": "https://github.com/Andrea07072000/S.T.A.R.-", "programmingLanguage": "Python", "license": "https://www.apache.org/licenses/LICENSE-2.0", "author": {"@type": "Person", "name": "Andrea Cavazzini"}, "inLanguage": "en", "runtimePlatform": "Python >=3.9"}]</script>
 
-  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-CNEomOuj.js"></script>
-  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-DqwyaoOm.css">
+  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-D5-5iXaN.js"></script>
+  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-CawSUGgz.css">
 </head>
 <body data-page="software" data-lang="en" data-search="/S.T.A.R.-/search-en.json">
 <a class="skip" href="#main">Skip to content</a>
@@ -64,7 +67,7 @@
   note    = {Apache-2.0. Source: https://github.com/Andrea07072000/S.T.A.R.-, commit 94fcf7c}
 }
 </code></pre><ul class="inline-links"><li><a href="/S.T.A.R.-/cite/conjunction_screen_sgp4.cff" download>CITATION.cff</a></li><li><a href="/S.T.A.R.-/cite/conjunction_screen_sgp4.bib" download>BibTeX</a></li><li><a href="/S.T.A.R.-/sbom/conjunction_screen_sgp4.cdx.json" download>SBOM CycloneDX 1.5</a></li><li><a href="/S.T.A.R.-/sbom/conjunction_screen_sgp4.spdx.json" download>SBOM SPDX 2.3</a></li></ul></section>
-<section class="section tight" id="dev"><h2>For developers</h2><p>Install directly from the public repository:</p><pre class="cmd"><code>python -m pip install &quot;conjunction-screen-sgp4 @ git+https://github.com/Andrea07072000/S.T.A.R.-.git#subdirectory=packages/conjunction_screen_sgp4&quot;</code></pre>
+<section class="section tight" id="dev"><h2>For developers</h2><p>Install directly from the public repository:</p><pre class="cmd"><code>python -m pip install &quot;conjunction-screen-sgp4 @ git+https://github.com/Andrea07072000/S.T.A.R.-.git@94fcf7c1ccc8c27dd780e665d696564eb872f08b#subdirectory=packages/conjunction_screen_sgp4&quot;</code></pre>
 <p class="small"><a href="https://github.com/Andrea07072000/S.T.A.R.-/tree/main/packages/conjunction_screen_sgp4">README · tests · evidence (GitHub)</a></p></section>
 <section class="section tight" id="tech"><h2>Technical sheet</h2><dl class="meta"><dt>Package</dt><dd class='mono'>conjunction-screen-sgp4</dd><dt>Version</dt><dd class='mono'>0.2.1</dd><dt>Licence</dt><dd class='mono'>Apache-2.0</dd><dt>Python</dt><dd class='mono'>&gt;=3.9</dd><dt>Dependencies</dt><dd class='mono'>numpy, scipy, sgp4</dd><dt>Capability</dt><dd class='mono'>star.conjunction.screen</dd><dt>Maturity</dt><dd class='mono'>RELEASED</dd><dt>Published commit</dt><dd class='mono'>94fcf7c</dd></dl>
 <h3>Requirements</h3><ul class="reqs"><li><b class='mono'>R1</b> <code>screen(tle_paths, start, hours, step, coarse_km, final_km, cross_only, refine)</code> returns encounters (TCA in UTC, miss distance km, age of the older TLE) below <code>final_km</code>, excluding pairs that stay close (formations).</li><li><b class='mono'>R2</b> TLEs are propagated with SGP4 only (mean elements); propagation errors are reported, never replaced.</li><li><b class='mono'>R3</b> <code>refine_tca(state_at, step)</code>: closed-form TCA from relative motion, shared by screening and tests.</li></ul>
@@ -84,10 +87,10 @@
    <div><h2>Contact</h2><ul><li><a href="mailto:Info.and.News.S.T.A.R@proton.me">Info.and.News.S.T.A.R@proton.me</a></li>
     <li><a href="/S.T.A.R.-/assessment/#request">Request an assessment</a></li></ul></div>
   </div>
-  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generated from the registry on 2026-10-15 · engineering commit 3b5be48 · public commit 94fcf7c</span>
+  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generated from the registry on 2026-10-16 · engineering commit 1dd9e42 · public commit 94fcf7c</span>
    <a href="/S.T.A.R.-/it/software/conjunction_screen_sgp4/" lang="it">Italiano</a></div>
  </div>
 </footer>
-<dialog class="search-dlg" aria-label="Search the site"><form method="dialog" class="search-box"><label class="visually-hidden" for="site-q">Search the site</label><input id="site-q" type="search" autocomplete="off" placeholder="Packages, legal documents, pages…"><button class="btn small" value="close">Esc</button></form><ul class="search-res" role="listbox"></ul><p class="small muted search-none" hidden>Nothing found. Try a shorter word.</p></dialog>
+<dialog class="search-dlg" aria-label="Search the site"><form method="dialog" class="search-box"><label class="visually-hidden" for="site-q">Search the site</label><input id="site-q" type="search" autocomplete="off" placeholder="Packages, legal documents, pages…"><button class="btn small" value="close" aria-label="Close">Esc</button></form><p class="visually-hidden" role="status" aria-live="polite"><span class="search-count"></span> results</p><ul class="search-res"></ul><p class="small muted search-none" hidden>Nothing found. Try a shorter word.</p></dialog>
 </body>
 </html>

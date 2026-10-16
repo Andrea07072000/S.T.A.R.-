@@ -5,25 +5,28 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>star-j2 — What the Earth&#x27;s oblateness does to an orbit, on average · S.T.A.R.</title>
+<title>star-j2 — What the Earth&#x27;s oblateness does to an orbit, on… · S.T.A.R.</title>
 <meta name="description" content="First-order secular effect of J2 on mean elements: node regression, perigee rotation, mean-anomaly rate, nodal period, sun-synchronous inclination; measured within 0.4 % of Orekit&#x27;s Eckstein-Hechler t">
 <link rel="icon" href="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" type="image/png">
 <link rel="canonical" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_j2/">
 <link rel="alternate" hreflang="en" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_j2/">
 <link rel="alternate" hreflang="it" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_j2/">
 <link rel="alternate" hreflang="x-default" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_j2/">
-<meta property="og:title" content="star-j2 — What the Earth&#x27;s oblateness does to an orbit, on average · S.T.A.R.">
+<meta property="og:title" content="star-j2 — What the Earth&#x27;s oblateness does to an orbit, on… · S.T.A.R.">
 <meta property="og:description" content="First-order secular effect of J2 on mean elements: node regression, perigee rotation, mean-anomaly rate, nodal period, sun-synchronous inclination; measured within 0.4 % of Orekit&#x27;s Eckstein-Hechler t">
-<meta property="og:image" content="https://andrea07072000.github.io/S.T.A.R.-/assets/images/star_logo_dark_transparent.png">
+<meta property="og:image" content="https://andrea07072000.github.io/S.T.A.R.-/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Earth with the four XC-008 test orbits; three independent implementations agree within 5 cm.">
 <meta property="og:url" content="https://andrea07072000.github.io/S.T.A.R.-/software/star_j2/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="S.T.A.R.">
 <meta property="og:locale" content="en_GB">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "star-j2", "version": "0.1.0", "description": "First-order secular effect of J2 on mean elements: node regression, perigee rotation, mean-anomaly rate, nodal period, sun-synchronous inclination; measured within 0.4 % of Orekit's Eckstein-Hechler theory and of a numerical integration.", "url": "https://andrea07072000.github.io/S.T.A.R.-/software/star_j2/", "codeRepository": "https://github.com/Andrea07072000/S.T.A.R.-", "programmingLanguage": "Python", "license": "https://www.apache.org/licenses/LICENSE-2.0", "author": {"@type": "Person", "name": "Andrea Cavazzini"}, "inLanguage": "en", "runtimePlatform": "Python >=3.9"}]</script>
 
-  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-CNEomOuj.js"></script>
-  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-DqwyaoOm.css">
+  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-D5-5iXaN.js"></script>
+  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-CawSUGgz.css">
 </head>
 <body data-page="software" data-lang="en" data-search="/S.T.A.R.-/search-en.json">
 <a class="skip" href="#main">Skip to content</a>
@@ -66,7 +69,7 @@ print(star_j2.sun_synchronous_inclination_deg(6378.137 + 800))  # about 98.6 deg
   note    = {Apache-2.0. Source: https://github.com/Andrea07072000/S.T.A.R.-, commit 94fcf7c}
 }
 </code></pre><ul class="inline-links"><li><a href="/S.T.A.R.-/cite/star_j2.cff" download>CITATION.cff</a></li><li><a href="/S.T.A.R.-/cite/star_j2.bib" download>BibTeX</a></li><li><a href="/S.T.A.R.-/sbom/star_j2.cdx.json" download>SBOM CycloneDX 1.5</a></li><li><a href="/S.T.A.R.-/sbom/star_j2.spdx.json" download>SBOM SPDX 2.3</a></li></ul></section>
-<section class="section tight" id="dev"><h2>For developers</h2><p>Install directly from the public repository:</p><pre class="cmd"><code>python -m pip install &quot;star-j2 @ git+https://github.com/Andrea07072000/S.T.A.R.-.git#subdirectory=packages/star_j2&quot;</code></pre>
+<section class="section tight" id="dev"><h2>For developers</h2><p>Install directly from the public repository:</p><pre class="cmd"><code>python -m pip install &quot;star-j2 @ git+https://github.com/Andrea07072000/S.T.A.R.-.git@94fcf7c1ccc8c27dd780e665d696564eb872f08b#subdirectory=packages/star_j2&quot;</code></pre>
 <p class="small"><a href="https://github.com/Andrea07072000/S.T.A.R.-/tree/main/packages/star_j2">README · tests · evidence (GitHub)</a></p></section>
 <section class="section tight" id="tech"><h2>Technical sheet</h2><dl class="meta"><dt>Package</dt><dd class='mono'>star-j2</dd><dt>Version</dt><dd class='mono'>0.1.0</dd><dt>Licence</dt><dd class='mono'>Apache-2.0</dd><dt>Python</dt><dd class='mono'>&gt;=3.9</dd><dt>Dependencies</dt><dd class='mono'>none (standard library only)</dd><dt>Capability</dt><dd class='mono'>star.orbit.j2-secular</dd><dt>Maturity</dt><dd class='mono'>RELEASED</dd><dt>Published commit</dt><dd class='mono'>94fcf7c</dd></dl>
 <h3>Requirements</h3><ul class="reqs"><li><b class='mono'>R1</b> <code>raan_rate_deg_day</code>, <code>argp_rate_deg_day</code>, <code>mean_anomaly_rate_deg_day</code>, <code>nodal_period_s</code> for mean elements (a in km, e, inclination in degrees), EGM96/WGS-84 constants by default, overridable by keyword.</li><li><b class='mono'>R2</b> <code>sun_synchronous_inclination_deg(a_km, e=0)</code>: the inclination whose node advances 360 degrees per tropical year; <code>CRITICAL_INCLINATION_DEG</code> = 63.4349...: the perigee does not rotate.</li><li><b class='mono'>R3</b> Accuracy, measured on 51 orbits: node rate within 0.31 % of Orekit&#x27;s Eckstein-Hechler theory (J2 only, mean elements) and within 0.38 % of a numerical integration of the equations of motion with J2; perigee rate within 0.013 deg/day of the numerical integration. The formulas are first order in J2: differences of this size are the model, not a rounding error.</li><li><b class='mono'>R4</b> Every function returns a finite float or raises <code>ValueError</code>: non-numeric, boolean, NaN or infinite input; a &lt;= 0; e outside [0, 1); inclination outside [0, 180]; perigee inside the Earth; non-positive mu, re or j2; an orbit too high to be sun-synchronous (above about 12 350 km semi-major axis for a circular orbit).</li></ul>
@@ -86,10 +89,10 @@ print(star_j2.sun_synchronous_inclination_deg(6378.137 + 800))  # about 98.6 deg
    <div><h2>Contact</h2><ul><li><a href="mailto:Info.and.News.S.T.A.R@proton.me">Info.and.News.S.T.A.R@proton.me</a></li>
     <li><a href="/S.T.A.R.-/assessment/#request">Request an assessment</a></li></ul></div>
   </div>
-  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generated from the registry on 2026-10-15 · engineering commit 3b5be48 · public commit 94fcf7c</span>
+  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generated from the registry on 2026-10-16 · engineering commit 1dd9e42 · public commit 94fcf7c</span>
    <a href="/S.T.A.R.-/it/software/star_j2/" lang="it">Italiano</a></div>
  </div>
 </footer>
-<dialog class="search-dlg" aria-label="Search the site"><form method="dialog" class="search-box"><label class="visually-hidden" for="site-q">Search the site</label><input id="site-q" type="search" autocomplete="off" placeholder="Packages, legal documents, pages…"><button class="btn small" value="close">Esc</button></form><ul class="search-res" role="listbox"></ul><p class="small muted search-none" hidden>Nothing found. Try a shorter word.</p></dialog>
+<dialog class="search-dlg" aria-label="Search the site"><form method="dialog" class="search-box"><label class="visually-hidden" for="site-q">Search the site</label><input id="site-q" type="search" autocomplete="off" placeholder="Packages, legal documents, pages…"><button class="btn small" value="close" aria-label="Close">Esc</button></form><p class="visually-hidden" role="status" aria-live="polite"><span class="search-count"></span> results</p><ul class="search-res"></ul><p class="small muted search-none" hidden>Nothing found. Try a shorter word.</p></dialog>
 </body>
 </html>

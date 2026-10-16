@@ -14,16 +14,19 @@
 <link rel="alternate" hreflang="x-default" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_quadrature/">
 <meta property="og:title" content="star-quadrature — Gauss-Legendre quadrature · S.T.A.R.">
 <meta property="og:description" content="Gauss-Legendre nodes and weights for 1 to 32 points, each node the float nearest to the true root (exact coefficients, exact-sign bisection) and each weight evaluated exactly and rounded once; fixed-r">
-<meta property="og:image" content="https://andrea07072000.github.io/S.T.A.R.-/assets/images/star_logo_dark_transparent.png">
+<meta property="og:image" content="https://andrea07072000.github.io/S.T.A.R.-/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Earth with the four XC-008 test orbits; three independent implementations agree within 5 cm.">
 <meta property="og:url" content="https://andrea07072000.github.io/S.T.A.R.-/software/star_quadrature/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="S.T.A.R.">
 <meta property="og:locale" content="en_GB">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "star-quadrature", "version": "0.1.0", "description": "Gauss-Legendre nodes and weights for 1 to 32 points, each node the float nearest to the true root (exact coefficients, exact-sign bisection) and each weight evaluated exactly and rounded once; fixed-rule integration and Legendre polynomials with derivative; all 528 nodes and weights equal SymPy's 40-digit values rounded to a float.", "url": "https://andrea07072000.github.io/S.T.A.R.-/software/star_quadrature/", "codeRepository": "https://github.com/Andrea07072000/S.T.A.R.-", "programmingLanguage": "Python", "license": "https://www.apache.org/licenses/LICENSE-2.0", "author": {"@type": "Person", "name": "Andrea Cavazzini"}, "inLanguage": "en", "runtimePlatform": "Python >=3.9"}]</script>
 
-  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-CNEomOuj.js"></script>
-  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-DqwyaoOm.css">
+  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-D5-5iXaN.js"></script>
+  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-CawSUGgz.css">
 </head>
 <body data-page="software" data-lang="en" data-search="/S.T.A.R.-/search-en.json">
 <a class="skip" href="#main">Skip to content</a>
@@ -69,7 +72,7 @@ print(sq.legendre(2, 0.5))  # (-0.125, 1.5): P_2 and its derivative</textarea><d
   note    = {Apache-2.0. Source: https://github.com/Andrea07072000/S.T.A.R.-, commit 94fcf7c}
 }
 </code></pre><ul class="inline-links"><li><a href="/S.T.A.R.-/cite/star_quadrature.cff" download>CITATION.cff</a></li><li><a href="/S.T.A.R.-/cite/star_quadrature.bib" download>BibTeX</a></li><li><a href="/S.T.A.R.-/sbom/star_quadrature.cdx.json" download>SBOM CycloneDX 1.5</a></li><li><a href="/S.T.A.R.-/sbom/star_quadrature.spdx.json" download>SBOM SPDX 2.3</a></li></ul></section>
-<section class="section tight" id="dev"><h2>For developers</h2><p>Install directly from the public repository:</p><pre class="cmd"><code>python -m pip install &quot;star-quadrature @ git+https://github.com/Andrea07072000/S.T.A.R.-.git#subdirectory=packages/star_quadrature&quot;</code></pre>
+<section class="section tight" id="dev"><h2>For developers</h2><p>Install directly from the public repository:</p><pre class="cmd"><code>python -m pip install &quot;star-quadrature @ git+https://github.com/Andrea07072000/S.T.A.R.-.git@94fcf7c1ccc8c27dd780e665d696564eb872f08b#subdirectory=packages/star_quadrature&quot;</code></pre>
 <p class="small"><a href="https://github.com/Andrea07072000/S.T.A.R.-/tree/main/packages/star_quadrature">README · tests · evidence (GitHub)</a></p></section>
 <section class="section tight" id="tech"><h2>Technical sheet</h2><dl class="meta"><dt>Package</dt><dd class='mono'>star-quadrature</dd><dt>Version</dt><dd class='mono'>0.1.0</dd><dt>Licence</dt><dd class='mono'>Apache-2.0</dd><dt>Python</dt><dd class='mono'>&gt;=3.9</dd><dt>Dependencies</dt><dd class='mono'>none (standard library only)</dd><dt>Capability</dt><dd class='mono'>star.numerics.gauss-legendre</dd><dt>Maturity</dt><dd class='mono'>RELEASED</dd><dt>Published commit</dt><dd class='mono'>94fcf7c</dd></dl>
 <h3>Requirements</h3><ul class="reqs"><li><b class='mono'>R1</b> <code>gauss_legendre(n)</code> returns the n nodes (increasing) and the n weights of the rule on [-1, 1], for n from 1 to 32. Each node is the float nearest to the true root of P_n: the polynomial is built with exact coefficients and the root is found by bisection over the floats with the exact sign. Each weight is evaluated in exact arithmetic and rounded once. Nodes are exactly antisymmetric and weights exactly symmetric.</li><li><b class='mono'>R2</b> <code>integrate(f, a, b, n)</code> applies the n-point rule to [a, b]; <code>legendre(n, x)</code> returns P_n(x) and P_n&#x27;(x) for x in [-1, 1] by the three-term recurrences (no division by 1 - x²).</li><li><b class='mono'>R3</b> Measured on all 32 rules (528 nodes and weights): every node and every weight equals SymPy&#x27;s 40-digit value rounded to a float. 400 Legendre values with derivatives and 120 exact integrals of monomials agree with SymPy within 1e-14 relative; NumPy and SciPy agree within their own accuracy.</li><li><b class='mono'>R4</b> Every function returns floats or raises <code>ValueError</code>: n that is not an integer in range (booleans and floats refused), x outside [-1, 1], limits that are not finite numbers within 1e150, f that is not callable or returns something that is not a finite real number, an overflowing result.</li></ul>
@@ -89,10 +92,10 @@ print(sq.legendre(2, 0.5))  # (-0.125, 1.5): P_2 and its derivative</textarea><d
    <div><h2>Contact</h2><ul><li><a href="mailto:Info.and.News.S.T.A.R@proton.me">Info.and.News.S.T.A.R@proton.me</a></li>
     <li><a href="/S.T.A.R.-/assessment/#request">Request an assessment</a></li></ul></div>
   </div>
-  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generated from the registry on 2026-10-15 · engineering commit 3b5be48 · public commit 94fcf7c</span>
+  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generated from the registry on 2026-10-16 · engineering commit 1dd9e42 · public commit 94fcf7c</span>
    <a href="/S.T.A.R.-/it/software/star_quadrature/" lang="it">Italiano</a></div>
  </div>
 </footer>
-<dialog class="search-dlg" aria-label="Search the site"><form method="dialog" class="search-box"><label class="visually-hidden" for="site-q">Search the site</label><input id="site-q" type="search" autocomplete="off" placeholder="Packages, legal documents, pages…"><button class="btn small" value="close">Esc</button></form><ul class="search-res" role="listbox"></ul><p class="small muted search-none" hidden>Nothing found. Try a shorter word.</p></dialog>
+<dialog class="search-dlg" aria-label="Search the site"><form method="dialog" class="search-box"><label class="visually-hidden" for="site-q">Search the site</label><input id="site-q" type="search" autocomplete="off" placeholder="Packages, legal documents, pages…"><button class="btn small" value="close" aria-label="Close">Esc</button></form><p class="visually-hidden" role="status" aria-live="polite"><span class="search-count"></span> results</p><ul class="search-res"></ul><p class="small muted search-none" hidden>Nothing found. Try a shorter word.</p></dialog>
 </body>
 </html>

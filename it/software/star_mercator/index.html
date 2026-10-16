@@ -5,25 +5,28 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pacchetto star-mercator — Mercatore sull&#x27;ellissoide e Web Mercator · S.T.A.R.</title>
+<title>Pacchetto star-mercator — Mercatore sull&#x27;ellissoide e Web… · S.T.A.R.</title>
 <meta name="description" content="Proiezione di Mercatore sull&#x27;ellissoide con latitudine di scala vera facoltativa, diretta, inversa e fattore di scala, e Web Mercator; entro 6e-8 m da PROJ, 7,5e-9 m dalla latitudine isometrica di PyG">
 <link rel="icon" href="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" type="image/png">
 <link rel="canonical" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_mercator/">
 <link rel="alternate" hreflang="en" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_mercator/">
 <link rel="alternate" hreflang="it" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_mercator/">
 <link rel="alternate" hreflang="x-default" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_mercator/">
-<meta property="og:title" content="Pacchetto star-mercator — Mercatore sull&#x27;ellissoide e Web Mercator · S.T.A.R.">
+<meta property="og:title" content="Pacchetto star-mercator — Mercatore sull&#x27;ellissoide e Web… · S.T.A.R.">
 <meta property="og:description" content="Proiezione di Mercatore sull&#x27;ellissoide con latitudine di scala vera facoltativa, diretta, inversa e fattore di scala, e Web Mercator; entro 6e-8 m da PROJ, 7,5e-9 m dalla latitudine isometrica di PyG">
-<meta property="og:image" content="https://andrea07072000.github.io/S.T.A.R.-/assets/images/star_logo_dark_transparent.png">
+<meta property="og:image" content="https://andrea07072000.github.io/S.T.A.R.-/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="La Terra con le quattro orbite di prova XC-008; tre implementazioni indipendenti concordano entro 5 cm.">
 <meta property="og:url" content="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_mercator/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="S.T.A.R.">
 <meta property="og:locale" content="it_IT">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "star-mercator", "version": "0.1.0", "description": "Proiezione di Mercatore sull'ellissoide con latitudine di scala vera facoltativa, diretta, inversa e fattore di scala, e Web Mercator; entro 6e-8 m da PROJ, 7,5e-9 m dalla latitudine isometrica di PyGeodesy e 3e-8 m da entrambi per il Web Mercator su 600 casi; riproduce la x e il fattore di scala pubblicati da Snyder.", "url": "https://andrea07072000.github.io/S.T.A.R.-/it/software/star_mercator/", "codeRepository": "https://github.com/Andrea07072000/S.T.A.R.-", "programmingLanguage": "Python", "license": "https://www.apache.org/licenses/LICENSE-2.0", "author": {"@type": "Person", "name": "Andrea Cavazzini"}, "inLanguage": "it", "runtimePlatform": "Python >=3.9"}]</script>
 
-  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-CNEomOuj.js"></script>
-  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-DqwyaoOm.css">
+  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-D5-5iXaN.js"></script>
+  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-CawSUGgz.css">
 </head>
 <body data-page="software" data-lang="it" data-search="/S.T.A.R.-/search-it.json">
 <a class="skip" href="#main">Vai al contenuto</a>
@@ -31,9 +34,9 @@
  <div class="wrap">
   <a class="wordmark" href="/S.T.A.R.-/it/">S.T.A.R.</a>
   <button class="btn small menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
-  <nav class="main-nav" id="main-nav" aria-label="Main"><a href="/S.T.A.R.-/it/start/">Come iniziare</a><a href="/S.T.A.R.-/it/software/" aria-current="page">Software</a><a href="/S.T.A.R.-/it/evidence/">Evidenze</a><a href="/S.T.A.R.-/it/assessment/">Valutazione</a><a href="/S.T.A.R.-/it/about/">Chi siamo</a><button class="search-open nav-search" type="button" aria-haspopup="dialog">Cerca nel sito</button></nav>
+  <nav class="main-nav" id="main-nav" aria-label="Principale"><a href="/S.T.A.R.-/it/start/">Come iniziare</a><a href="/S.T.A.R.-/it/software/" aria-current="page">Software</a><a href="/S.T.A.R.-/it/evidence/">Evidenze</a><a href="/S.T.A.R.-/it/assessment/">Valutazione</a><a href="/S.T.A.R.-/it/about/">Chi siamo</a><button class="search-open nav-search" type="button" aria-haspopup="dialog">Cerca nel sito</button></nav>
   <div class="header-right">
-   <div class="lang" role="group" aria-label="Language">
+   <div class="lang" role="group" aria-label="Lingua">
     <a href="/S.T.A.R.-/software/star_mercator/" lang="en" hreflang="en">EN</a>
     <span aria-current="true">IT</span>
    </div>
@@ -68,7 +71,7 @@ print(sm.web_mercator_forward(48.8582, 2.2945))  # (255422.57, 6250835.06): EPSG
   note    = {Apache-2.0. Source: https://github.com/Andrea07072000/S.T.A.R.-, commit 94fcf7c}
 }
 </code></pre><ul class="inline-links"><li><a href="/S.T.A.R.-/cite/star_mercator.cff" download>CITATION.cff</a></li><li><a href="/S.T.A.R.-/cite/star_mercator.bib" download>BibTeX</a></li><li><a href="/S.T.A.R.-/sbom/star_mercator.cdx.json" download>SBOM CycloneDX 1.5</a></li><li><a href="/S.T.A.R.-/sbom/star_mercator.spdx.json" download>SBOM SPDX 2.3</a></li></ul></section>
-<section class="section tight" id="dev"><h2>Per sviluppatori</h2><p>Installa direttamente dal repository pubblico:</p><pre class="cmd"><code>python -m pip install &quot;star-mercator @ git+https://github.com/Andrea07072000/S.T.A.R.-.git#subdirectory=packages/star_mercator&quot;</code></pre>
+<section class="section tight" id="dev"><h2>Per sviluppatori</h2><p>Installa direttamente dal repository pubblico:</p><pre class="cmd"><code>python -m pip install &quot;star-mercator @ git+https://github.com/Andrea07072000/S.T.A.R.-.git@94fcf7c1ccc8c27dd780e665d696564eb872f08b#subdirectory=packages/star_mercator&quot;</code></pre>
 <p class="small"><a href="https://github.com/Andrea07072000/S.T.A.R.-/tree/main/packages/star_mercator">README · tests · evidence (GitHub)</a></p></section>
 <section class="section tight" id="tech"><h2>Scheda tecnica</h2><dl class="meta"><dt>Pacchetto</dt><dd class='mono'>star-mercator</dd><dt>Versione</dt><dd class='mono'>0.1.0</dd><dt>Licenza</dt><dd class='mono'>Apache-2.0</dd><dt>Python</dt><dd class='mono'>&gt;=3.9</dd><dt>Dipendenze</dt><dd class='mono'>nessuna (solo libreria standard)</dd><dt>Capacità</dt><dd class='mono'>star.geodesy.mercator</dd><dt>Maturità</dt><dd class='mono'>RELEASED</dd><dt>Commit pubblicato</dt><dd class='mono'>94fcf7c</dd></dl>
 <h3>Requisiti</h3><ul class="reqs"><li><b class='mono'>R1</b> <code>mercator_forward</code>, <code>mercator_inverse</code>: il Mercatore conforme dell&#x27;ellissoide, y = a·k0·ψ con ψ la latitudine isometrica scritta senza cancellazioni, qualunque meridiano centrale, una latitudine di scala vera facoltativa. Riproducono la x dell&#x27;esempio numerico di Snyder (USGS PP 1395, p. 266) al decimo di metro stampato.</li><li><b class='mono'>R2</b> <code>mercator_scale</code>: fattore di scala puntuale, 1 sui paralleli di scala vera. Riproduce k = 1,2194146 di Snyder. <code>web_mercator_forward</code>, <code>web_mercator_inverse</code>: EPSG:3857.</li><li><b class='mono'>R3</b> Misurato su 600 casi sul WGS-84 (latitudini fino a ±89, scala vera fino a ±80): diretta entro 5,5e-8 m e inversa entro 6e-8 m da PROJ; y entro 7,5e-9 m dalla latitudine isometrica di PyGeodesy; Web Mercator entro 3e-8 m da PROJ e PyGeodesy; scala entro 7,5e-8 da PROJ (i cui fattori sono numerici).</li><li><b class='mono'>R4</b> Ogni funzione restituisce float finiti o solleva <code>ValueError</code>: ingressi non numerici, booleani, NaN o infiniti, latitudine oltre ±89,5, latitudine di scala vera oltre ±80, longitudini oltre ±180, un ellissoide fuori dagli intervalli dichiarati, coordinate piane oltre l&#x27;immagine. Le longitudini dell&#x27;inversa sono in [-180, 180).</li></ul>
@@ -88,10 +91,10 @@ print(sm.web_mercator_forward(48.8582, 2.2945))  # (255422.57, 6250835.06): EPSG
    <div><h2>Contatti</h2><ul><li><a href="mailto:Info.and.News.S.T.A.R@proton.me">Info.and.News.S.T.A.R@proton.me</a></li>
     <li><a href="/S.T.A.R.-/it/assessment/#request">Richiedi una valutazione</a></li></ul></div>
   </div>
-  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generato dal registro il 2026-10-15 · commit di ingegneria 3b5be48 · commit pubblico 94fcf7c</span>
+  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generato dal registro il 2026-10-16 · commit di ingegneria 1dd9e42 · commit pubblico 94fcf7c</span>
    <a href="/S.T.A.R.-/software/star_mercator/" lang="en">English</a></div>
  </div>
 </footer>
-<dialog class="search-dlg" aria-label="Cerca nel sito"><form method="dialog" class="search-box"><label class="visually-hidden" for="site-q">Cerca nel sito</label><input id="site-q" type="search" autocomplete="off" placeholder="Pacchetti, documenti legali, pagine…"><button class="btn small" value="close">Esc</button></form><ul class="search-res" role="listbox"></ul><p class="small muted search-none" hidden>Nessun risultato. Prova una parola più corta.</p></dialog>
+<dialog class="search-dlg" aria-label="Cerca nel sito"><form method="dialog" class="search-box"><label class="visually-hidden" for="site-q">Cerca nel sito</label><input id="site-q" type="search" autocomplete="off" placeholder="Pacchetti, documenti legali, pagine…"><button class="btn small" value="close" aria-label="Chiudi">Esc</button></form><p class="visually-hidden" role="status" aria-live="polite"><span class="search-count"></span> risultati</p><ul class="search-res"></ul><p class="small muted search-none" hidden>Nessun risultato. Prova una parola più corta.</p></dialog>
 </body>
 </html>

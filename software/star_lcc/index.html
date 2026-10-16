@@ -14,16 +14,19 @@
 <link rel="alternate" hreflang="x-default" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_lcc/">
 <meta property="og:title" content="star-lcc — Lambert conformal conic projection · S.T.A.R.">
 <meta property="og:description" content="Lambert conformal conic projection, forward, inverse and scale factor, for cones in either hemisphere and the tangent cone; within 8e-7 m per Earth radius of PROJ and 7e-6 m of PyGeodesy on 600 cases;">
-<meta property="og:image" content="https://andrea07072000.github.io/S.T.A.R.-/assets/images/star_logo_dark_transparent.png">
+<meta property="og:image" content="https://andrea07072000.github.io/S.T.A.R.-/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Earth with the four XC-008 test orbits; three independent implementations agree within 5 cm.">
 <meta property="og:url" content="https://andrea07072000.github.io/S.T.A.R.-/software/star_lcc/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="S.T.A.R.">
 <meta property="og:locale" content="en_GB">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "star-lcc", "version": "0.1.0", "description": "Lambert conformal conic projection, forward, inverse and scale factor, for cones in either hemisphere and the tangent cone; within 8e-7 m per Earth radius of PROJ and 7e-6 m of PyGeodesy on 600 cases; reproduces Snyder's published example and refuses degenerate cones.", "url": "https://andrea07072000.github.io/S.T.A.R.-/software/star_lcc/", "codeRepository": "https://github.com/Andrea07072000/S.T.A.R.-", "programmingLanguage": "Python", "license": "https://www.apache.org/licenses/LICENSE-2.0", "author": {"@type": "Person", "name": "Andrea Cavazzini"}, "inLanguage": "en", "runtimePlatform": "Python >=3.9"}]</script>
 
-  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-CNEomOuj.js"></script>
-  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-DqwyaoOm.css">
+  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-D5-5iXaN.js"></script>
+  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-CawSUGgz.css">
 </head>
 <body data-page="software" data-lang="en" data-search="/S.T.A.R.-/search-en.json">
 <a class="skip" href="#main">Skip to content</a>
@@ -68,7 +71,7 @@ print(sl.lcc_inverse(1894410.9, 1564649.5, 33.0, 45.0, 23.0, -96.0, *C))  # (35.
   note    = {Apache-2.0. Source: https://github.com/Andrea07072000/S.T.A.R.-, commit 94fcf7c}
 }
 </code></pre><ul class="inline-links"><li><a href="/S.T.A.R.-/cite/star_lcc.cff" download>CITATION.cff</a></li><li><a href="/S.T.A.R.-/cite/star_lcc.bib" download>BibTeX</a></li><li><a href="/S.T.A.R.-/sbom/star_lcc.cdx.json" download>SBOM CycloneDX 1.5</a></li><li><a href="/S.T.A.R.-/sbom/star_lcc.spdx.json" download>SBOM SPDX 2.3</a></li></ul></section>
-<section class="section tight" id="dev"><h2>For developers</h2><p>Install directly from the public repository:</p><pre class="cmd"><code>python -m pip install &quot;star-lcc @ git+https://github.com/Andrea07072000/S.T.A.R.-.git#subdirectory=packages/star_lcc&quot;</code></pre>
+<section class="section tight" id="dev"><h2>For developers</h2><p>Install directly from the public repository:</p><pre class="cmd"><code>python -m pip install &quot;star-lcc @ git+https://github.com/Andrea07072000/S.T.A.R.-.git@94fcf7c1ccc8c27dd780e665d696564eb872f08b#subdirectory=packages/star_lcc&quot;</code></pre>
 <p class="small"><a href="https://github.com/Andrea07072000/S.T.A.R.-/tree/main/packages/star_lcc">README · tests · evidence (GitHub)</a></p></section>
 <section class="section tight" id="tech"><h2>Technical sheet</h2><dl class="meta"><dt>Package</dt><dd class='mono'>star-lcc</dd><dt>Version</dt><dd class='mono'>0.1.0</dd><dt>Licence</dt><dd class='mono'>Apache-2.0</dd><dt>Python</dt><dd class='mono'>&gt;=3.9</dd><dt>Dependencies</dt><dd class='mono'>none (standard library only)</dd><dt>Capability</dt><dd class='mono'>star.geodesy.lambert-conic</dd><dt>Maturity</dt><dd class='mono'>RELEASED</dd><dt>Published commit</dt><dd class='mono'>94fcf7c</dd></dl>
 <h3>Requirements</h3><ul class="reqs"><li><b class='mono'>R1</b> <code>lcc_forward</code> and <code>lcc_inverse</code>: Snyder&#x27;s formulas (USGS PP 1395, 15-1 … 15-11) with the isometric latitude written without cancellation, cones in either hemisphere, equal parallels for the tangent cone, the central meridian anywhere including across the date line. Reproduce Snyder&#x27;s numerical example to the printed 0.1 m.</li><li><b class='mono'>R2</b> <code>lcc_scale</code>: the point scale factor, exactly 1 on the standard parallels. Reproduces Snyder&#x27;s k = 0.9970171.</li><li><b class='mono'>R3</b> Measured on 600 cones and points on WGS-84 (60 tangent cones): forward within 8e-7 m per Earth radius of plane distance of PROJ and 7e-6 m of PyGeodesy; inverse within 7e-7 m (PROJ&#x27;s plane coordinates) and 6e-6 m (PyGeodesy&#x27;s) of the starting point; scale within 1.2e-9 of PROJ (which differentiates numerically).</li><li><b class='mono'>R4</b> Every function returns finite floats or raises <code>ValueError</code>: non-numeric, boolean, NaN or infinite input, latitudes beyond ±89, longitudes beyond ±180, standard parallels on opposite sides of the equator or within 1e-3 deg of it, an ellipsoid outside the stated ranges, a point at or beyond the apex of the cone.</li></ul>
@@ -88,10 +91,10 @@ print(sl.lcc_inverse(1894410.9, 1564649.5, 33.0, 45.0, 23.0, -96.0, *C))  # (35.
    <div><h2>Contact</h2><ul><li><a href="mailto:Info.and.News.S.T.A.R@proton.me">Info.and.News.S.T.A.R@proton.me</a></li>
     <li><a href="/S.T.A.R.-/assessment/#request">Request an assessment</a></li></ul></div>
   </div>
-  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generated from the registry on 2026-10-15 · engineering commit 3b5be48 · public commit 94fcf7c</span>
+  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generated from the registry on 2026-10-16 · engineering commit 1dd9e42 · public commit 94fcf7c</span>
    <a href="/S.T.A.R.-/it/software/star_lcc/" lang="it">Italiano</a></div>
  </div>
 </footer>
-<dialog class="search-dlg" aria-label="Search the site"><form method="dialog" class="search-box"><label class="visually-hidden" for="site-q">Search the site</label><input id="site-q" type="search" autocomplete="off" placeholder="Packages, legal documents, pages…"><button class="btn small" value="close">Esc</button></form><ul class="search-res" role="listbox"></ul><p class="small muted search-none" hidden>Nothing found. Try a shorter word.</p></dialog>
+<dialog class="search-dlg" aria-label="Search the site"><form method="dialog" class="search-box"><label class="visually-hidden" for="site-q">Search the site</label><input id="site-q" type="search" autocomplete="off" placeholder="Packages, legal documents, pages…"><button class="btn small" value="close" aria-label="Close">Esc</button></form><p class="visually-hidden" role="status" aria-live="polite"><span class="search-count"></span> results</p><ul class="search-res"></ul><p class="small muted search-none" hidden>Nothing found. Try a shorter word.</p></dialog>
 </body>
 </html>

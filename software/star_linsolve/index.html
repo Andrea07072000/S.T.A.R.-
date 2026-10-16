@@ -14,16 +14,19 @@
 <link rel="alternate" hreflang="x-default" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_linsolve/">
 <meta property="og:title" content="star-linsolve — Small linear systems, correctly rounded · S.T.A.R.">
 <meta property="og:description" content="Determinant, solution and inverse of a square matrix of order 1 to 20 by elimination in exact rational arithmetic, each result rounded once: conditioning costs no digit and singularity is decided exac">
-<meta property="og:image" content="https://andrea07072000.github.io/S.T.A.R.-/assets/images/star_logo_dark_transparent.png">
+<meta property="og:image" content="https://andrea07072000.github.io/S.T.A.R.-/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Earth with the four XC-008 test orbits; three independent implementations agree within 5 cm.">
 <meta property="og:url" content="https://andrea07072000.github.io/S.T.A.R.-/software/star_linsolve/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="S.T.A.R.">
 <meta property="og:locale" content="en_GB">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "star-linsolve", "version": "0.1.0", "description": "Determinant, solution and inverse of a square matrix of order 1 to 20 by elimination in exact rational arithmetic, each result rounded once: conditioning costs no digit and singularity is decided exactly; equal to SymPy's exact results on all 151 systems of the cross-check, Hilbert matrices of order 6 to 12 included.", "url": "https://andrea07072000.github.io/S.T.A.R.-/software/star_linsolve/", "codeRepository": "https://github.com/Andrea07072000/S.T.A.R.-", "programmingLanguage": "Python", "license": "https://www.apache.org/licenses/LICENSE-2.0", "author": {"@type": "Person", "name": "Andrea Cavazzini"}, "inLanguage": "en", "runtimePlatform": "Python >=3.9"}]</script>
 
-  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-CNEomOuj.js"></script>
-  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-DqwyaoOm.css">
+  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-D5-5iXaN.js"></script>
+  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-CawSUGgz.css">
 </head>
 <body data-page="software" data-lang="en" data-search="/S.T.A.R.-/search-en.json">
 <a class="skip" href="#main">Skip to content</a>
@@ -69,7 +72,7 @@ print(sl.solve([[1, 1], [1, 1 + e]], [2, 2 + 2 * e]))  # (0.0, 2.0): nearly sing
   note    = {Apache-2.0. Source: https://github.com/Andrea07072000/S.T.A.R.-, commit 94fcf7c}
 }
 </code></pre><ul class="inline-links"><li><a href="/S.T.A.R.-/cite/star_linsolve.cff" download>CITATION.cff</a></li><li><a href="/S.T.A.R.-/cite/star_linsolve.bib" download>BibTeX</a></li><li><a href="/S.T.A.R.-/sbom/star_linsolve.cdx.json" download>SBOM CycloneDX 1.5</a></li><li><a href="/S.T.A.R.-/sbom/star_linsolve.spdx.json" download>SBOM SPDX 2.3</a></li></ul></section>
-<section class="section tight" id="dev"><h2>For developers</h2><p>Install directly from the public repository:</p><pre class="cmd"><code>python -m pip install &quot;star-linsolve @ git+https://github.com/Andrea07072000/S.T.A.R.-.git#subdirectory=packages/star_linsolve&quot;</code></pre>
+<section class="section tight" id="dev"><h2>For developers</h2><p>Install directly from the public repository:</p><pre class="cmd"><code>python -m pip install &quot;star-linsolve @ git+https://github.com/Andrea07072000/S.T.A.R.-.git@94fcf7c1ccc8c27dd780e665d696564eb872f08b#subdirectory=packages/star_linsolve&quot;</code></pre>
 <p class="small"><a href="https://github.com/Andrea07072000/S.T.A.R.-/tree/main/packages/star_linsolve">README · tests · evidence (GitHub)</a></p></section>
 <section class="section tight" id="tech"><h2>Technical sheet</h2><dl class="meta"><dt>Package</dt><dd class='mono'>star-linsolve</dd><dt>Version</dt><dd class='mono'>0.1.0</dd><dt>Licence</dt><dd class='mono'>Apache-2.0</dd><dt>Python</dt><dd class='mono'>&gt;=3.9</dd><dt>Dependencies</dt><dd class='mono'>none (standard library only)</dd><dt>Capability</dt><dd class='mono'>star.numerics.linsolve</dd><dt>Maturity</dt><dd class='mono'>RELEASED</dd><dt>Published commit</dt><dd class='mono'>94fcf7c</dd></dl>
 <h3>Requirements</h3><ul class="reqs"><li><b class='mono'>R1</b> <code>det(a)</code> returns the determinant, <code>solve(a, b)</code> the vector x with a x = b, <code>inverse(a)</code> the inverse, for a matrix given as a list or tuple of rows.</li><li><b class='mono'>R2</b> The elimination is done in exact rational arithmetic on the floats given and each result is rounded once: the conditioning of the matrix costs no digit. A matrix is singular exactly when its exact determinant is zero; no tolerance is involved, so a nearly singular matrix is solved and an exactly singular one is refused.</li><li><b class='mono'>R3</b> Measured on 151 systems (110 well conditioned, 40 badly conditioned, and the Hilbert matrix of order 3 scaled to integers): determinant, solution and inverse equal the exact rational results of SymPy rounded to a float and those of mpmath at 400 digits. NumPy agrees within 1e-12 on the well-conditioned systems; on the badly conditioned ones it loses most digits or refuses the matrix as singular (the numbers are in the evidence file).</li><li><b class='mono'>R4</b> Every function returns floats or raises <code>ValueError</code>: a matrix that is not square or larger than 20, entries that are not finite real numbers within 1e100 (booleans refused), a right-hand side of the wrong length, a singular matrix (for <code>solve</code> and <code>inverse</code>), a result too large for a float.</li></ul>
@@ -89,10 +92,10 @@ print(sl.solve([[1, 1], [1, 1 + e]], [2, 2 + 2 * e]))  # (0.0, 2.0): nearly sing
    <div><h2>Contact</h2><ul><li><a href="mailto:Info.and.News.S.T.A.R@proton.me">Info.and.News.S.T.A.R@proton.me</a></li>
     <li><a href="/S.T.A.R.-/assessment/#request">Request an assessment</a></li></ul></div>
   </div>
-  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generated from the registry on 2026-10-15 · engineering commit 3b5be48 · public commit 94fcf7c</span>
+  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generated from the registry on 2026-10-16 · engineering commit 1dd9e42 · public commit 94fcf7c</span>
    <a href="/S.T.A.R.-/it/software/star_linsolve/" lang="it">Italiano</a></div>
  </div>
 </footer>
-<dialog class="search-dlg" aria-label="Search the site"><form method="dialog" class="search-box"><label class="visually-hidden" for="site-q">Search the site</label><input id="site-q" type="search" autocomplete="off" placeholder="Packages, legal documents, pages…"><button class="btn small" value="close">Esc</button></form><ul class="search-res" role="listbox"></ul><p class="small muted search-none" hidden>Nothing found. Try a shorter word.</p></dialog>
+<dialog class="search-dlg" aria-label="Search the site"><form method="dialog" class="search-box"><label class="visually-hidden" for="site-q">Search the site</label><input id="site-q" type="search" autocomplete="off" placeholder="Packages, legal documents, pages…"><button class="btn small" value="close" aria-label="Close">Esc</button></form><p class="visually-hidden" role="status" aria-live="polite"><span class="search-count"></span> results</p><ul class="search-res"></ul><p class="small muted search-none" hidden>Nothing found. Try a shorter word.</p></dialog>
 </body>
 </html>

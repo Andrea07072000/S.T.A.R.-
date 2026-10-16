@@ -14,16 +14,19 @@
 <link rel="alternate" hreflang="x-default" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_sun/">
 <meta property="og:title" content="star-sun — Sun direction, beta angle and eclipse test · S.T.A.R.">
 <meta property="og:description" content="Low-precision geocentric Sun vector for 1950-2050 (measured within 0.0097 deg of JPL DE440 apparent), orbit beta angle and cylindrical shadow test; every function returns finite values or raises Value">
-<meta property="og:image" content="https://andrea07072000.github.io/S.T.A.R.-/assets/images/star_logo_dark_transparent.png">
+<meta property="og:image" content="https://andrea07072000.github.io/S.T.A.R.-/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Earth with the four XC-008 test orbits; three independent implementations agree within 5 cm.">
 <meta property="og:url" content="https://andrea07072000.github.io/S.T.A.R.-/software/star_sun/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="S.T.A.R.">
 <meta property="og:locale" content="en_GB">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "star-sun", "version": "0.1.0", "description": "Low-precision geocentric Sun vector for 1950-2050 (measured within 0.0097 deg of JPL DE440 apparent), orbit beta angle and cylindrical shadow test; every function returns finite values or raises ValueError.", "url": "https://andrea07072000.github.io/S.T.A.R.-/software/star_sun/", "codeRepository": "https://github.com/Andrea07072000/S.T.A.R.-", "programmingLanguage": "Python", "license": "https://www.apache.org/licenses/LICENSE-2.0", "author": {"@type": "Person", "name": "Andrea Cavazzini"}, "inLanguage": "en", "runtimePlatform": "Python >=3.9"}]</script>
 
-  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-CNEomOuj.js"></script>
-  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-DqwyaoOm.css">
+  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-D5-5iXaN.js"></script>
+  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-CawSUGgz.css">
 </head>
 <body data-page="software" data-lang="en" data-search="/S.T.A.R.-/search-en.json">
 <a class="skip" href="#main">Skip to content</a>
@@ -67,7 +70,7 @@ dark = star_sun.in_shadow(r_sat_km, sun)                # True inside the Earth&
   note    = {Apache-2.0. Source: https://github.com/Andrea07072000/S.T.A.R.-, commit 94fcf7c}
 }
 </code></pre><ul class="inline-links"><li><a href="/S.T.A.R.-/cite/star_sun.cff" download>CITATION.cff</a></li><li><a href="/S.T.A.R.-/cite/star_sun.bib" download>BibTeX</a></li><li><a href="/S.T.A.R.-/sbom/star_sun.cdx.json" download>SBOM CycloneDX 1.5</a></li><li><a href="/S.T.A.R.-/sbom/star_sun.spdx.json" download>SBOM SPDX 2.3</a></li></ul></section>
-<section class="section tight" id="dev"><h2>For developers</h2><p>Install directly from the public repository:</p><pre class="cmd"><code>python -m pip install &quot;star-sun @ git+https://github.com/Andrea07072000/S.T.A.R.-.git#subdirectory=packages/star_sun&quot;</code></pre>
+<section class="section tight" id="dev"><h2>For developers</h2><p>Install directly from the public repository:</p><pre class="cmd"><code>python -m pip install &quot;star-sun @ git+https://github.com/Andrea07072000/S.T.A.R.-.git@94fcf7c1ccc8c27dd780e665d696564eb872f08b#subdirectory=packages/star_sun&quot;</code></pre>
 <p class="small"><a href="https://github.com/Andrea07072000/S.T.A.R.-/tree/main/packages/star_sun">README · tests · evidence (GitHub)</a></p></section>
 <section class="section tight" id="tech"><h2>Technical sheet</h2><dl class="meta"><dt>Package</dt><dd class='mono'>star-sun</dd><dt>Version</dt><dd class='mono'>0.1.0</dd><dt>Licence</dt><dd class='mono'>Apache-2.0</dd><dt>Python</dt><dd class='mono'>&gt;=3.9</dd><dt>Dependencies</dt><dd class='mono'>none (standard library only)</dd><dt>Capability</dt><dd class='mono'>star.orbit.sun</dd><dt>Maturity</dt><dd class='mono'>RELEASED</dd><dt>Published commit</dt><dd class='mono'>94fcf7c</dd></dl>
 <h3>Requirements</h3><ul class="reqs"><li><b class='mono'>R1</b> <code>sun_vector_au(jd_day, jd_frac=0.0)</code> and <code>sun_ra_dec_deg</code>: geocentric Sun in AU, mean equator and equinox of date, for UT1 Julian dates from 1950-01-01 to 2050-01-01 (inclusive); outside, <code>ValueError</code>. Reproduces Vallado Example 5-1 within 1.2e-6 AU.</li><li><b class='mono'>R2</b> Measured accuracy (402 dates): direction within 0.0097 deg of JPL DE440 *apparent* and of astropy, distance within 7e-5 AU. The series includes aberration: against *geometric* positions the difference reaches 0.014 deg.</li><li><b class='mono'>R3</b> <code>beta_angle_deg(sun, inc_deg, raan_deg)</code>: angle between the Sun direction and the orbit plane, in [-90, 90], positive on the side of the angular momentum; only the direction of <code>sun</code> is used.</li><li><b class='mono'>R4</b> <code>in_shadow(r_sat, sun, body_radius=6378.137)</code>: True when the satellite is behind the body and closer than one body radius to the Sun-body axis (cylinder, parallel rays, no penumbra); <code>r_sat</code> and <code>body_radius</code> in the same unit.</li><li><b class='mono'>R5</b> Every function returns finite values or raises <code>ValueError</code>: non-numeric, boolean, NaN, infinite or |value| &gt;= 1e300 input; a vector that is not three numbers; a zero Sun vector; a satellite inside the body; a non-positive body radius; inclination outside [0, 180]; node outside [-360, 360]; a date outside 1950-2050.</li></ul>
@@ -87,10 +90,10 @@ dark = star_sun.in_shadow(r_sat_km, sun)                # True inside the Earth&
    <div><h2>Contact</h2><ul><li><a href="mailto:Info.and.News.S.T.A.R@proton.me">Info.and.News.S.T.A.R@proton.me</a></li>
     <li><a href="/S.T.A.R.-/assessment/#request">Request an assessment</a></li></ul></div>
   </div>
-  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generated from the registry on 2026-10-15 · engineering commit 3b5be48 · public commit 94fcf7c</span>
+  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generated from the registry on 2026-10-16 · engineering commit 1dd9e42 · public commit 94fcf7c</span>
    <a href="/S.T.A.R.-/it/software/star_sun/" lang="it">Italiano</a></div>
  </div>
 </footer>
-<dialog class="search-dlg" aria-label="Search the site"><form method="dialog" class="search-box"><label class="visually-hidden" for="site-q">Search the site</label><input id="site-q" type="search" autocomplete="off" placeholder="Packages, legal documents, pages…"><button class="btn small" value="close">Esc</button></form><ul class="search-res" role="listbox"></ul><p class="small muted search-none" hidden>Nothing found. Try a shorter word.</p></dialog>
+<dialog class="search-dlg" aria-label="Search the site"><form method="dialog" class="search-box"><label class="visually-hidden" for="site-q">Search the site</label><input id="site-q" type="search" autocomplete="off" placeholder="Packages, legal documents, pages…"><button class="btn small" value="close" aria-label="Close">Esc</button></form><p class="visually-hidden" role="status" aria-live="polite"><span class="search-count"></span> results</p><ul class="search-res"></ul><p class="small muted search-none" hidden>Nothing found. Try a shorter word.</p></dialog>
 </body>
 </html>

@@ -14,16 +14,19 @@
 <link rel="alternate" hreflang="x-default" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_utm/">
 <meta property="og:title" content="star-utm — Transverse Mercator and UTM coordinates · S.T.A.R.">
 <meta property="og:description" content="Transverse Mercator and UTM coordinates, forward and inverse, by Krueger&#x27;s series; within 2e-7 m of PROJ and PyGeodesy on 600 points in their zone and 2.5e-7 m of PROJ up to 12 deg from the central me">
-<meta property="og:image" content="https://andrea07072000.github.io/S.T.A.R.-/assets/images/star_logo_dark_transparent.png">
+<meta property="og:image" content="https://andrea07072000.github.io/S.T.A.R.-/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Earth with the four XC-008 test orbits; three independent implementations agree within 5 cm.">
 <meta property="og:url" content="https://andrea07072000.github.io/S.T.A.R.-/software/star_utm/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="S.T.A.R.">
 <meta property="og:locale" content="en_GB">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "star-utm", "version": "0.1.0", "description": "Transverse Mercator and UTM coordinates, forward and inverse, by Krueger's series; within 2e-7 m of PROJ and PyGeodesy on 600 points in their zone and 2.5e-7 m of PROJ up to 12 deg from the central meridian; reproduces Snyder's published example and refuses out-of-range input.", "url": "https://andrea07072000.github.io/S.T.A.R.-/software/star_utm/", "codeRepository": "https://github.com/Andrea07072000/S.T.A.R.-", "programmingLanguage": "Python", "license": "https://www.apache.org/licenses/LICENSE-2.0", "author": {"@type": "Person", "name": "Andrea Cavazzini"}, "inLanguage": "en", "runtimePlatform": "Python >=3.9"}]</script>
 
-  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-CNEomOuj.js"></script>
-  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-DqwyaoOm.css">
+  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-D5-5iXaN.js"></script>
+  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-CawSUGgz.css">
 </head>
 <body data-page="software" data-lang="en" data-search="/S.T.A.R.-/search-en.json">
 <a class="skip" href="#main">Skip to content</a>
@@ -67,7 +70,7 @@ print(su.tm_forward(40.5, -73.5, -75.0, 6378206.4, 1 / 294.978698214))  # (12710
   note    = {Apache-2.0. Source: https://github.com/Andrea07072000/S.T.A.R.-, commit 94fcf7c}
 }
 </code></pre><ul class="inline-links"><li><a href="/S.T.A.R.-/cite/star_utm.cff" download>CITATION.cff</a></li><li><a href="/S.T.A.R.-/cite/star_utm.bib" download>BibTeX</a></li><li><a href="/S.T.A.R.-/sbom/star_utm.cdx.json" download>SBOM CycloneDX 1.5</a></li><li><a href="/S.T.A.R.-/sbom/star_utm.spdx.json" download>SBOM SPDX 2.3</a></li></ul></section>
-<section class="section tight" id="dev"><h2>For developers</h2><p>Install directly from the public repository:</p><pre class="cmd"><code>python -m pip install &quot;star-utm @ git+https://github.com/Andrea07072000/S.T.A.R.-.git#subdirectory=packages/star_utm&quot;</code></pre>
+<section class="section tight" id="dev"><h2>For developers</h2><p>Install directly from the public repository:</p><pre class="cmd"><code>python -m pip install &quot;star-utm @ git+https://github.com/Andrea07072000/S.T.A.R.-.git@94fcf7c1ccc8c27dd780e665d696564eb872f08b#subdirectory=packages/star_utm&quot;</code></pre>
 <p class="small"><a href="https://github.com/Andrea07072000/S.T.A.R.-/tree/main/packages/star_utm">README · tests · evidence (GitHub)</a></p></section>
 <section class="section tight" id="tech"><h2>Technical sheet</h2><dl class="meta"><dt>Package</dt><dd class='mono'>star-utm</dd><dt>Version</dt><dd class='mono'>0.1.0</dd><dt>Licence</dt><dd class='mono'>Apache-2.0</dd><dt>Python</dt><dd class='mono'>&gt;=3.9</dd><dt>Dependencies</dt><dd class='mono'>none (standard library only)</dd><dt>Capability</dt><dd class='mono'>star.geodesy.utm</dd><dt>Maturity</dt><dd class='mono'>RELEASED</dd><dt>Published commit</dt><dd class='mono'>94fcf7c</dd></dl>
 <h3>Requirements</h3><ul class="reqs"><li><b class='mono'>R1</b> <code>tm_forward</code> and <code>tm_inverse</code>: Krueger&#x27;s series to n^4 (Karney 2011) about a central meridian, with scale k0 and no false origin, for any ellipsoid with flattening up to 0.1. Reproduces Snyder&#x27;s numerical example (USGS PP 1395, p. 269) to the printed 0.1 m.</li><li><b class='mono'>R2</b> <code>utm_zone</code>, <code>utm_forward</code>, <code>utm_inverse</code>: WGS-84, k0 = 0.9996, false easting 500000 m, false northing 10000000 m in the South, 6-degree zones from 180 W; a zone can be forced.</li><li><b class='mono'>R3</b> Measured: 600 points in their zone within 2e-7 m (forward) and 6e-8 m (inverse) of PROJ and PyGeodesy; 300 points 3 to 12 deg from the central meridian within 2.5e-7 m of PROJ.</li><li><b class='mono'>R4</b> Every function returns its result or raises <code>ValueError</code>: non-numeric, boolean, NaN or infinite input, latitude outside [-90, 90] (UTM: [-80, 84]), longitude outside [-180, 180], a point more than 12 deg from the central meridian, an ellipsoid or scale outside the stated ranges, a zone not an integer in 1…60, a hemisphere other than &#x27;N&#x27; or &#x27;S&#x27;, coordinates beyond the pole of the projection.</li></ul>
@@ -87,10 +90,10 @@ print(su.tm_forward(40.5, -73.5, -75.0, 6378206.4, 1 / 294.978698214))  # (12710
    <div><h2>Contact</h2><ul><li><a href="mailto:Info.and.News.S.T.A.R@proton.me">Info.and.News.S.T.A.R@proton.me</a></li>
     <li><a href="/S.T.A.R.-/assessment/#request">Request an assessment</a></li></ul></div>
   </div>
-  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generated from the registry on 2026-10-15 · engineering commit 3b5be48 · public commit 94fcf7c</span>
+  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generated from the registry on 2026-10-16 · engineering commit 1dd9e42 · public commit 94fcf7c</span>
    <a href="/S.T.A.R.-/it/software/star_utm/" lang="it">Italiano</a></div>
  </div>
 </footer>
-<dialog class="search-dlg" aria-label="Search the site"><form method="dialog" class="search-box"><label class="visually-hidden" for="site-q">Search the site</label><input id="site-q" type="search" autocomplete="off" placeholder="Packages, legal documents, pages…"><button class="btn small" value="close">Esc</button></form><ul class="search-res" role="listbox"></ul><p class="small muted search-none" hidden>Nothing found. Try a shorter word.</p></dialog>
+<dialog class="search-dlg" aria-label="Search the site"><form method="dialog" class="search-box"><label class="visually-hidden" for="site-q">Search the site</label><input id="site-q" type="search" autocomplete="off" placeholder="Packages, legal documents, pages…"><button class="btn small" value="close" aria-label="Close">Esc</button></form><p class="visually-hidden" role="status" aria-live="polite"><span class="search-count"></span> results</p><ul class="search-res"></ul><p class="small muted search-none" hidden>Nothing found. Try a shorter word.</p></dialog>
 </body>
 </html>

@@ -5,25 +5,28 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pacchetto star-sigma — Che cosa significa «n sigma» in una, due e tre dimensioni · S.T.A.R.</title>
+<title>Pacchetto star-sigma — Che cosa significa «n sigma» in una,… · S.T.A.R.</title>
 <meta name="description" content="Copertura, probabilità di coda e inversa di n sigma per un errore gaussiano in una, due e tre dimensioni, più funzione di ripartizione e quantile della normale; entro 1,9e-13 relativo da mpmath a 40 c">
 <link rel="icon" href="/S.T.A.R.-/assets/images/star_logo_dark_transparent.png" type="image/png">
 <link rel="canonical" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_sigma/">
 <link rel="alternate" hreflang="en" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_sigma/">
 <link rel="alternate" hreflang="it" href="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_sigma/">
 <link rel="alternate" hreflang="x-default" href="https://andrea07072000.github.io/S.T.A.R.-/software/star_sigma/">
-<meta property="og:title" content="Pacchetto star-sigma — Che cosa significa «n sigma» in una, due e tre dimensioni · S.T.A.R.">
+<meta property="og:title" content="Pacchetto star-sigma — Che cosa significa «n sigma» in una,… · S.T.A.R.">
 <meta property="og:description" content="Copertura, probabilità di coda e inversa di n sigma per un errore gaussiano in una, due e tre dimensioni, più funzione di ripartizione e quantile della normale; entro 1,9e-13 relativo da mpmath a 40 c">
-<meta property="og:image" content="https://andrea07072000.github.io/S.T.A.R.-/assets/images/star_logo_dark_transparent.png">
+<meta property="og:image" content="https://andrea07072000.github.io/S.T.A.R.-/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="La Terra con le quattro orbite di prova XC-008; tre implementazioni indipendenti concordano entro 5 cm.">
 <meta property="og:url" content="https://andrea07072000.github.io/S.T.A.R.-/it/software/star_sigma/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="S.T.A.R.">
 <meta property="og:locale" content="it_IT">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "star-sigma", "version": "0.1.0", "description": "Copertura, probabilità di coda e inversa di n sigma per un errore gaussiano in una, due e tre dimensioni, più funzione di ripartizione e quantile della normale; entro 1,9e-13 relativo da mpmath a 40 cifre e 2,4e-13 da SciPy su 600 casi, code incluse; riproduce le tavole pubblicate della normale e del chi quadrato.", "url": "https://andrea07072000.github.io/S.T.A.R.-/it/software/star_sigma/", "codeRepository": "https://github.com/Andrea07072000/S.T.A.R.-", "programmingLanguage": "Python", "license": "https://www.apache.org/licenses/LICENSE-2.0", "author": {"@type": "Person", "name": "Andrea Cavazzini"}, "inLanguage": "it", "runtimePlatform": "Python >=3.9"}]</script>
 
-  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-CNEomOuj.js"></script>
-  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-DqwyaoOm.css">
+  <script type="module" crossorigin src="/S.T.A.R.-/assets/main-D5-5iXaN.js"></script>
+  <link rel="stylesheet" crossorigin href="/S.T.A.R.-/assets/main-CawSUGgz.css">
 </head>
 <body data-page="software" data-lang="it" data-search="/S.T.A.R.-/search-it.json">
 <a class="skip" href="#main">Vai al contenuto</a>
@@ -31,9 +34,9 @@
  <div class="wrap">
   <a class="wordmark" href="/S.T.A.R.-/it/">S.T.A.R.</a>
   <button class="btn small menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
-  <nav class="main-nav" id="main-nav" aria-label="Main"><a href="/S.T.A.R.-/it/start/">Come iniziare</a><a href="/S.T.A.R.-/it/software/" aria-current="page">Software</a><a href="/S.T.A.R.-/it/evidence/">Evidenze</a><a href="/S.T.A.R.-/it/assessment/">Valutazione</a><a href="/S.T.A.R.-/it/about/">Chi siamo</a><button class="search-open nav-search" type="button" aria-haspopup="dialog">Cerca nel sito</button></nav>
+  <nav class="main-nav" id="main-nav" aria-label="Principale"><a href="/S.T.A.R.-/it/start/">Come iniziare</a><a href="/S.T.A.R.-/it/software/" aria-current="page">Software</a><a href="/S.T.A.R.-/it/evidence/">Evidenze</a><a href="/S.T.A.R.-/it/assessment/">Valutazione</a><a href="/S.T.A.R.-/it/about/">Chi siamo</a><button class="search-open nav-search" type="button" aria-haspopup="dialog">Cerca nel sito</button></nav>
   <div class="header-right">
-   <div class="lang" role="group" aria-label="Language">
+   <div class="lang" role="group" aria-label="Lingua">
     <a href="/S.T.A.R.-/software/star_sigma/" lang="en" hreflang="en">EN</a>
     <span aria-current="true">IT</span>
    </div>
@@ -69,7 +72,7 @@ print(ss.sigma_tail(5.0, 1))  # 5.73e-07, computed directly</textarea><div class
   note    = {Apache-2.0. Source: https://github.com/Andrea07072000/S.T.A.R.-, commit 94fcf7c}
 }
 </code></pre><ul class="inline-links"><li><a href="/S.T.A.R.-/cite/star_sigma.cff" download>CITATION.cff</a></li><li><a href="/S.T.A.R.-/cite/star_sigma.bib" download>BibTeX</a></li><li><a href="/S.T.A.R.-/sbom/star_sigma.cdx.json" download>SBOM CycloneDX 1.5</a></li><li><a href="/S.T.A.R.-/sbom/star_sigma.spdx.json" download>SBOM SPDX 2.3</a></li></ul></section>
-<section class="section tight" id="dev"><h2>Per sviluppatori</h2><p>Installa direttamente dal repository pubblico:</p><pre class="cmd"><code>python -m pip install &quot;star-sigma @ git+https://github.com/Andrea07072000/S.T.A.R.-.git#subdirectory=packages/star_sigma&quot;</code></pre>
+<section class="section tight" id="dev"><h2>Per sviluppatori</h2><p>Installa direttamente dal repository pubblico:</p><pre class="cmd"><code>python -m pip install &quot;star-sigma @ git+https://github.com/Andrea07072000/S.T.A.R.-.git@94fcf7c1ccc8c27dd780e665d696564eb872f08b#subdirectory=packages/star_sigma&quot;</code></pre>
 <p class="small"><a href="https://github.com/Andrea07072000/S.T.A.R.-/tree/main/packages/star_sigma">README · tests · evidence (GitHub)</a></p></section>
 <section class="section tight" id="tech"><h2>Scheda tecnica</h2><dl class="meta"><dt>Pacchetto</dt><dd class='mono'>star-sigma</dd><dt>Versione</dt><dd class='mono'>0.1.0</dd><dt>Licenza</dt><dd class='mono'>Apache-2.0</dd><dt>Python</dt><dd class='mono'>&gt;=3.9</dd><dt>Dipendenze</dt><dd class='mono'>nessuna (solo libreria standard)</dd><dt>Capacità</dt><dd class='mono'>star.statistics.sigma-coverage</dd><dt>Maturità</dt><dd class='mono'>RELEASED</dd><dt>Commit pubblicato</dt><dd class='mono'>94fcf7c</dd></dl>
 <h3>Requisiti</h3><ul class="reqs"><li><b class='mono'>R1</b> <code>normal_cdf</code>, <code>normal_sf</code>, <code>normal_quantile</code> per la normale standard, accurate in entrambe le code. Riproducono i valori di tavola pubblicati Φ(1), Φ(1,959964), Φ(2,575829).</li><li><b class='mono'>R2</b> <code>sigma_coverage(n, dims)</code> e <code>sigma_tail(n, dims)</code> per dims 1, 2, 3 (la legge chi quadrato della distanza di Mahalanobis al quadrato), ciascuna calcolata direttamente perché nessuna perda cifre; <code>sigma_for_coverage(p, dims)</code> è l&#x27;inversa. Riproducono la regola 68-95-99,7 e i punti percentuali pubblicati del chi quadrato per 1, 2 e 3 gradi di libertà.</li><li><b class='mono'>R3</b> Misurato su 600 casi (z fino a ±37, n da 1e-4 a 12, probabilità da 1e-12 a 1 − 1e-12), come differenze RELATIVE: funzioni di ripartizione e code entro 1,9e-13 da mpmath a 40 cifre e 2,4e-13 da SciPy; copertura entro 8e-16 da mpmath; le inverse riproducono la probabilità di coda richiesta entro 1,3e-14.</li><li><b class='mono'>R4</b> Ogni funzione restituisce un float finito o solleva <code>ValueError</code>: ingressi non numerici, booleani, NaN o infiniti, z oltre ±38, n fuori da [0, 38], una probabilità fuori dall&#x27;intervallo aperto o semiaperto dichiarato, dims diverso da 1, 2 o 3.</li></ul>
@@ -89,10 +92,10 @@ print(ss.sigma_tail(5.0, 1))  # 5.73e-07, computed directly</textarea><div class
    <div><h2>Contatti</h2><ul><li><a href="mailto:Info.and.News.S.T.A.R@proton.me">Info.and.News.S.T.A.R@proton.me</a></li>
     <li><a href="/S.T.A.R.-/it/assessment/#request">Richiedi una valutazione</a></li></ul></div>
   </div>
-  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generato dal registro il 2026-10-15 · commit di ingegneria 3b5be48 · commit pubblico 94fcf7c</span>
+  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generato dal registro il 2026-10-16 · commit di ingegneria 1dd9e42 · commit pubblico 94fcf7c</span>
    <a href="/S.T.A.R.-/software/star_sigma/" lang="en">English</a></div>
  </div>
 </footer>
-<dialog class="search-dlg" aria-label="Cerca nel sito"><form method="dialog" class="search-box"><label class="visually-hidden" for="site-q">Cerca nel sito</label><input id="site-q" type="search" autocomplete="off" placeholder="Pacchetti, documenti legali, pagine…"><button class="btn small" value="close">Esc</button></form><ul class="search-res" role="listbox"></ul><p class="small muted search-none" hidden>Nessun risultato. Prova una parola più corta.</p></dialog>
+<dialog class="search-dlg" aria-label="Cerca nel sito"><form method="dialog" class="search-box"><label class="visually-hidden" for="site-q">Cerca nel sito</label><input id="site-q" type="search" autocomplete="off" placeholder="Pacchetti, documenti legali, pagine…"><button class="btn small" value="close" aria-label="Chiudi">Esc</button></form><p class="visually-hidden" role="status" aria-live="polite"><span class="search-count"></span> risultati</p><ul class="search-res"></ul><p class="small muted search-none" hidden>Nessun risultato. Prova una parola più corta.</p></dialog>
 </body>
 </html>

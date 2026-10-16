@@ -1,5 +1,5 @@
 Contact: mailto:Info.and.News.S.T.A.R@proton.me
-Expires: 2027-09-10T00:00:00Z
+Expires: 2027-09-11T00:00:00Z
 Preferred-Languages: en, it
 Policy: https://andrea07072000.github.io/S.T.A.R.-/legal/security/
 Canonical: https://andrea07072000.github.io/S.T.A.R.-/.well-known/security.txt
