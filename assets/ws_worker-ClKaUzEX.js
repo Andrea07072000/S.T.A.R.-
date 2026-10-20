@@ -851,6 +851,132 @@ TASKS = {"distance": task_distance, "coords": task_coords, "column": task_column
 import ws_products  # noqa: E402
 
 TASKS.update(ws_products.TASKS)
+
+
+# ---------------------------------------------------------------- what can be checked in this file? (MO-W05, 2026-10-20)
+# Looks at a file or pasted text HERE, in the browser, and says what each column holds - numbers, dates, Italian tax
+# codes, VAT numbers, IBANs, coordinates - with how many values are valid, and which Workspace tools fit. A column is
+# called by the kind that at least 60% of its non-empty values have; tax codes, VAT numbers and IBANs are counted
+# valid only when their check character or digits are right (the same engines as the released products).
+DETECT_SAMPLE = 5000            # values looked at per column (declared in the result)
+DETECT_SHARE = 0.6
+_LAT = re.compile(r"(?i)^(lat|latitude|latitudine|lat\\.)$")
+_LON = re.compile(r"(?i)^(lon|lng|long|longitude|longitudine|lon\\.)$")
+_TLE1 = re.compile(r"^1 [0-9 ]{5}[A-Z ] ")
+_TLE2 = re.compile(r"^2 [0-9 ]{5} ")
+
+
+def _kind_of(cell, num):
+    """The kinds one cell can be, and whether it is valid as that kind."""
+    c = cell.strip()
+    out = {}
+    if not c:
+        return out
+    u = re.sub(r"[\\s\\-.]", "", c).upper()
+    if len(u) == 16 and ws_products.CF_RE.fullmatch(u):
+        base = "".join(ws_products.OMO.get(ch, ch) if i in ws_products.OMO_POS else ch for i, ch in enumerate(u))
+        out["cf"] = ws_products.cf_check_char(u[:15]) == u[15] and base[9:11].isdigit()
+    p = u[2:] if u.startswith("IT") and len(u) == 13 else u
+    if len(p) == 11 and p.isdigit():
+        out["piva"] = ws_products.piva_check_digit_italian(p[:10]) == int(p[10])
+    if 15 <= len(u) <= 34 and u[:2].isalpha() and u[2:4].isdigit() and u.isalnum():
+        out["iban"] = ws_products.IBAN_LEN.get(u[:2]) == len(u) and ws_products.iban_mod97(u) == 1
+    try:
+        ws_products._parse_date(c, "x")
+        out["date"] = True
+    except ws_products.ProductError:
+        pass
+    v, _st = num(c)
+    if v is not None:
+        out["number"] = True
+    return out
+
+
+def task_detect(params):
+    text = params.get("text")
+    if not isinstance(text, str) or not text.strip():
+        raise TaskError("empty_file")
+    lines = [ln for ln in text.splitlines() if ln.strip()]
+    tle = sum(1 for k in range(len(lines) - 1) if _TLE1.match(lines[k]) and _TLE2.match(lines[k + 1]))
+    if tle:
+        res = {"kind": "tle", "rows": len(lines), "tle_sets": tle, "columns": [], "suggestions": [{"task": "fingerprint", "reason": "fp_any"}],
+               "planned": [{"code": "tle_check"}], "sampled": False}
+        return _answer(res, [{"name": "ws_tasks.detect (S.T.A.R. Workspace)", "version": "0.1.0"}], [],
+                       [{"code": "detect_tle", "ok": True, "args": {"n": tle}}], [])
+    tab = _read_table(text)
+    names, body, num = tab["names"], tab["body"], tab["num"]
+    cols, sampled = [], False
+    for j, name in enumerate(names):
+        values = [(k, r[j]) for k, r in enumerate(body) if j < len(r) and r[j].strip()]
+        if len(values) > DETECT_SAMPLE:
+            values, sampled = values[:DETECT_SAMPLE], True
+        n = len(values)
+        counts, valid, first_bad = {}, {}, {}
+        for k, cell in values:
+            for kind, ok in _kind_of(cell, num).items():
+                counts[kind] = counts.get(kind, 0) + 1
+                valid[kind] = valid.get(kind, 0) + (1 if ok else 0)
+                if not ok and kind not in first_bad:
+                    first_bad[kind] = {"row": k + (2 if tab["header"] else 1), "value": cell.strip()[:40]}
+        kind = "text" if n else "empty"
+        for k in ("cf", "iban", "piva", "date", "number"):          # the most specific kind that most values have
+            if n and counts.get(k, 0) >= DETECT_SHARE * n:
+                kind = k
+                break
+        if kind == "number" and tab["header"] and (_LAT.match(name.strip()) or _LON.match(name.strip())):
+            kind = "lat" if _LAT.match(name.strip()) else "lon"
+        col = {"name": name, "kind": kind, "n": n}
+        if kind in ("cf", "piva", "iban"):
+            col.update({"valid": valid.get(kind, 0), "invalid": counts.get(kind, 0) - valid.get(kind, 0),
+                        "other": n - counts.get(kind, 0), "first_invalid": first_bad.get(kind),
+                        "first_value": values[0][1].strip()[:40] if values else ""})
+        if kind == "date":
+            ds = sorted(ws_products._parse_date(c, "x") for _k, c in values if "date" in _kind_of(c, num))
+            col.update({"first": ds[0].isoformat(), "last": ds[-1].isoformat()})
+        cols.append(col)
+    sug = []
+    for kind, task in (("cf", "p_cf"), ("piva", "p_piva"), ("iban", "p_iban")):
+        for c in cols:
+            if c["kind"] == kind:
+                example = (c["first_invalid"] or {}).get("value") or c["first_value"]
+                sug.append({"task": task, "column": c["name"], "reason": f"{kind}_col",
+                            "args": {"n": c["n"], "valid": c["valid"], "invalid": c["invalid"]}, "preset": {"code": example}})
+    for c in cols:
+        if c["kind"] == "date":
+            sug.append({"task": "p_workdays", "column": c["name"], "reason": "date_col", "args": {"first": c["first"], "last": c["last"]},
+                        "preset": {"mode": "between", "start": c["first"], "end": c["last"]}})
+            break
+    lat = next((c for c in cols if c["kind"] == "lat"), None)
+    lon = next((c for c in cols if c["kind"] == "lon"), None)
+    if lat and lon:
+        j1, j2 = names.index(lat["name"]), names.index(lon["name"])
+        pts = [(r[j1].strip(), r[j2].strip()) for r in body if max(j1, j2) < len(r) and r[j1].strip() and r[j2].strip()][:2]
+        sug.append({"task": "coords", "column": f"{lat['name']}, {lon['name']}", "reason": "latlon_cols", "args": {"n": lat["n"]},
+                    "preset": {"lat": pts[0][0], "lon": pts[0][1]}})
+        if len(pts) == 2:
+            sug.append({"task": "distance", "column": f"{lat['name']}, {lon['name']}", "reason": "latlon_two", "args": {},
+                        "preset": {"lat1": pts[0][0], "lon1": pts[0][1], "lat2": pts[1][0], "lon2": pts[1][1]}})
+    def row_counter(name):                     # 1, 2, 3... (or any step-1 integer run): a row number, not a measurement
+        j = names.index(name)
+        vals = [num(r[j])[0] for r in body if j < len(r) and r[j].strip()][:DETECT_SAMPLE]
+        return len(vals) > 2 and all(v is not None and v == int(v) for v in vals) and all(b - a == 1 for a, b in zip(vals, vals[1:]))
+    # measurements only: coordinates and row counters are not offered to the column and line tools
+    numeric = [c for c in cols if c["kind"] == "number" and not row_counter(c["name"])]
+    for c in numeric[:1]:
+        sug.append({"task": "column", "column": c["name"], "reason": "num_col", "args": {"n": c["n"]}, "preset": {"text": "__file__", "column": c["name"]}})
+    if len(numeric) >= 2:
+        sug.append({"task": "linefit", "column": f"{numeric[0]['name']}, {numeric[1]['name']}", "reason": "two_num", "args": {},
+                    "preset": {"text": "__file__", "x": numeric[0]["name"], "y": numeric[1]["name"]}})
+    sug.append({"task": "fingerprint", "reason": "fp_any", "args": {}})
+    planned = [{"code": "register_batch"}] if any(c["kind"] in ("cf", "piva", "iban") for c in cols) else []
+    res = {"kind": "table", "rows": len(body), "header": tab["header"], "delimiter": tab["delimiter"], "decimal_comma": tab["decimal_comma"],
+           "columns": cols, "suggestions": sug, "planned": planned, "sampled": sampled, "sample_limit": DETECT_SAMPLE}
+    checks = [{"code": "detect_read", "ok": True, "args": {"rows": len(body), "cols": len(cols)}}]
+    warnings = [{"code": "detect_sampled", "args": {"limit": DETECT_SAMPLE}}] if sampled else []
+    return _answer(res, [{"name": "ws_tasks.detect (S.T.A.R. Workspace)", "version": "0.1.0"}], list(tab["transforms"]), checks, warnings)
+
+
+TASKS["detect"] = task_detect
 `),await r.runPythonAsync(`import sys, types
 _m = types.ModuleType('ws_tasks')
 exec(_ws_src, _m.__dict__)
