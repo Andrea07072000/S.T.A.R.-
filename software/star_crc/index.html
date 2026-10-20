@@ -58,7 +58,7 @@ print(hex(sc.crc16_ccsds(b&quot;123456789&quot;)))  # &#x27;0x29b1&#x27;
 print(hex(sc.crc32(b&quot;123456789&quot;)))  # &#x27;0xcbf43926&#x27;
 frame = b&quot;...&quot;                                          # a transfer frame without its error control field
 print(sc.crc16_ccsds(frame + sc.crc16_ccsds(frame).to_bytes(2, &quot;big&quot;)))  # 0: a frame with its check bits verifies
-print(hex(sc.crc(b&quot;123456789&quot;, 16, 0x8005, 0, True, True, 0)))  # &#x27;0xbb3d&#x27;: CRC-16/ARC through the generic function</textarea><div class="runner-bar"><button class="btn primary run" type="button">Run</button><button class="btn reset" type="button">Reset</button></div><output aria-live="polite"></output></div></section>
+print(hex(sc.crc(b&quot;123456789&quot;, 16, 0x8005, 0, True, True, 0)))  # &#x27;0xbb3d&#x27;: CRC-16/ARC through the generic function</textarea><div class="runner-bar"><button class="btn primary run" type="button">Run</button><button class="btn reset" type="button">Reset</button></div><output aria-live="polite"></output></div><p class="small pyodide-line">Runs in the browser: all 65 tests pass in the browser&#x27;s Python (Pyodide 314.0.7, Python 3.14.2), measured on 20 October 2026. <a class="btn small" href="/S.T.A.R.-/workspace/#fingerprint">Open it in the Workspace →</a></p></section>
 <section class="section tight" id="use"><h2>Use it on your computer</h2><p>No account and no GitHub needed. Download, then install with one command:</p>
 <ul class="files"><li><a class="btn small" href="/S.T.A.R.-/downloads/wheels/star_crc-0.1.0-py3-none-any.whl" download>Install file · star_crc-0.1.0-py3-none-any.whl</a> <span class="muted small">3 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/modules/star_crc.py" download>Single file — just copy it next to your code · star_crc.py</a> <span class="muted small">3 kB</span></li><li><a class="btn small" href="/S.T.A.R.-/downloads/source/star_crc-0.1.0-source.zip" download>Source code (.zip)</a> <span class="muted small">21 kB</span></li></ul><pre class="cmd"><code>python -m pip install star_crc-0.1.0-py3-none-any.whl</code></pre>
 <p class="small"><a href="/S.T.A.R.-/start/">Get started →</a></p></section>
@@ -90,7 +90,7 @@ print(hex(sc.crc(b&quot;123456789&quot;, 16, 0x8005, 0, True, True, 0)))  # &#x2
   </div>
   <div class="foot-legal"><span>Trust &amp; legal:</span><a href="/S.T.A.R.-/legal/notice/">Legal notice</a><a href="/S.T.A.R.-/legal/terms/">Website terms of use</a><a href="/S.T.A.R.-/legal/privacy/">Privacy notice</a><a href="/S.T.A.R.-/legal/cookies/">Cookie notice</a><a href="/S.T.A.R.-/legal/disclaimer/">Evidence and verification disclaimer</a><a href="/S.T.A.R.-/legal/licences/">Licences</a><a href="/S.T.A.R.-/legal/">All legal documents</a>
    <a href="/S.T.A.R.-/downloads/">Downloads</a><a href="/S.T.A.R.-/updates/">What&#x27;s new</a><a href="https://github.com/Andrea07072000/S.T.A.R.-">GitHub</a><a href="mailto:Info.and.News.S.T.A.R@proton.me">Info.and.News.S.T.A.R@proton.me</a></div>
-  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generated from the registry on 2026-10-20 · engineering commit 032d6e50 · public commit 94fcf7c</span>
+  <div class="foot-base"><span>© 2026 Andrea Cavazzini · S.T.A.R.</span><span>Generated from the registry on 2026-10-20 · engineering commit 4429f08f · public commit 94fcf7c</span>
    <a href="/S.T.A.R.-/it/software/star_crc/" lang="it">Italiano</a></div>
  </div>
 </footer>
