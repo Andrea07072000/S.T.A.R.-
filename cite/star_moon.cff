@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 type: software
-title: "star-moon: Where the Moon is, to a third of a degree"
+title: "star-moon: Where the Moon is, to about 0.4 degree (0.2 degree for 95 % of dates)"
 version: "0.1.0"
 authors:
   - family-names: Cavazzini

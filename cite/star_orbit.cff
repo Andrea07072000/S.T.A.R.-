@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 type: software
-title: "star-orbit: Cowell high-fidelity numerical perturbation orbit propagator federated with star_timescales"
+title: "star-orbit: Numerical orbit propagation (Cowell, fixed-step RK4) with two-body + J2 gravity, linked to star_timescales"
 version: "0.2.2"
 authors:
   - family-names: Cavazzini
