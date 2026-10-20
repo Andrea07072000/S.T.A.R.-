@@ -982,5 +982,243 @@ _m = types.ModuleType('ws_tasks')
 exec(_ws_src, _m.__dict__)
 sys.modules['ws_tasks'] = _m
 del _m, _ws_src
+`),r.globals.set(`_wf_src`,`"""S.T.A.R. Workspace workflow (MO-W06, 2026-10-20): several checks on the SAME table in one pass, a before/after list
+of every value read differently, a cleaned table and one receipt (its specification was written before this code).
+The "codes" step is the engine of product GP-027 (register cleaning). This file is sent to the browser as it is.
+
+Steps, each at most once, at most 4:
+  numbers      measurement and amount columns: the number read and its status, with the column tool's reader
+  codes        Italian tax codes, VAT numbers and IBANs: the released product engines (ws_products), row by row
+  dates        dates in the four formats of the products: the ISO date and its status
+  fingerprint  SHA-256 of the text given and of the cleaned table
+A step is a name (its columns are the ones the detection gives that kind) or {"step", "columns"}.
+
+Nothing is corrected. A value is read, normalised (spaces removed, upper case, ISO date) and marked; a wrong check
+character is reported, never replaced. The original columns are written back unchanged and the answer proves it by
+reading the cleaned table again.
+"""
+from __future__ import annotations
+
+import csv
+import hashlib
+import io
+
+import ws_products as wp
+import ws_tasks as wt
+
+VERSION = "0.1.0"
+TOOL = {"name": "S.T.A.R. Workspace workflow (ws_workflow)", "version": VERSION}
+STEPS = ("numbers", "codes", "dates", "fingerprint")
+MAX_STEPS = 4
+MAX_COLS = 20                    # columns per step
+DIFF_SHOWN = 200                 # before/after lines returned; the total is always given
+CODE_TASK = {"cf": wp.task_cf, "piva": wp.task_piva, "iban": wp.task_iban}
+CODE_FIELD = {"cf": "code", "piva": "code", "iban": "iban"}
+
+
+def _plan(params, tab, text):
+    """The steps asked, each with its columns: given, or taken from the detection of the same text."""
+    steps = params.get("steps")
+    if not isinstance(steps, list) or not steps:
+        raise wt.TaskError("wf_no_steps")
+    if len(steps) > MAX_STEPS:
+        raise wt.TaskError("wf_too_many_steps", limit=MAX_STEPS)
+    asked, seen = [], set()
+    for s in steps:                                       # the shape of the plan first, then its columns
+        name, cols = (s, None) if isinstance(s, str) else (s.get("step") if isinstance(s, dict) else None, s.get("columns") if isinstance(s, dict) else None)
+        if name not in STEPS:
+            raise wt.TaskError("wf_unknown_step", step=str(name)[:30])
+        if name in seen:
+            raise wt.TaskError("wf_step_twice", step=name)
+        seen.add(name)
+        asked.append((name, cols))
+    detected = None
+    plan, skipped = [], []
+    for name, cols in asked:
+        if name != "fingerprint" and cols is None:
+            if detected is None:
+                detected = wt.task_detect({"text": text})["result"]["columns"]
+            cols = _auto_columns(name, detected, tab)
+            if not cols:                                  # ticked by default, nothing of its kind here: skipped, and said
+                skipped.append(name)
+                continue
+        if name == "codes":
+            if not isinstance(cols, dict):
+                raise wt.TaskError("wf_bad_columns", step=name)
+            bad = [k for k in cols.values() if k not in CODE_TASK]
+            if bad:
+                raise wt.TaskError("wf_code_kind", kind=str(bad[0])[:20])
+        elif name != "fingerprint":
+            if not isinstance(cols, list) or not all(isinstance(c, (str, int)) for c in cols):
+                raise wt.TaskError("wf_bad_columns", step=name)
+        if name != "fingerprint":
+            if not cols:
+                raise wt.TaskError("wf_no_columns", step=name)
+            if len(cols) > MAX_COLS:
+                raise wt.TaskError("wf_too_many_columns", step=name, limit=MAX_COLS)
+            for c in cols:
+                wt._column(tab, c)                        # an unknown column is an error with its name, not a crash
+        plan.append((name, cols))
+    if not any(name != "fingerprint" for name, _c in plan) and skipped:
+        raise wt.TaskError("wf_no_columns", step=skipped[0])       # nothing left to check but a fingerprint
+    return plan, skipped
+
+
+def _row_counter(tab, j):
+    """1, 2, 3...: a row number, not a measurement (the rule of the detection's suggestions)."""
+    vals = [tab["num"](r[j])[0] for r in tab["body"] if j < len(r) and r[j].strip()][:wt.DETECT_SAMPLE]
+    return len(vals) > 2 and all(v is not None and v == int(v) for v in vals) and all(b - a == 1 for a, b in zip(vals, vals[1:]))
+
+
+def _auto_columns(step, detected, tab):
+    if step == "codes":
+        return {c["name"]: c["kind"] for c in detected if c["kind"] in CODE_TASK}
+    if step == "dates":
+        return [c["name"] for c in detected if c["kind"] == "date"]
+    return [c["name"] for c in detected if c["kind"] == "number" and not _row_counter(tab, tab["names"].index(c["name"]))]
+
+
+def _code(kind, cell):
+    """One value through the released engine: (normalised, valid, reason). The reason is the code of the first check
+    that failed, or of the error that stopped the engine (wrong length, letters in a VAT number...)."""
+    try:
+        out = CODE_TASK[kind]({"code": cell})
+    except wp.ProductError as e:
+        return "", "no", e.code
+    res = out["result"]
+    failed = next((c["code"] for c in out["checks"] if not c["ok"] and c["code"] != "cf_omocode_order"), "")
+    return res[CODE_FIELD[kind]], "yes" if res["valid"] else "no", failed
+
+
+def task_workflow(params):
+    text = params.get("text")
+    tab = wt._read_table(text)
+    plan, skipped = _plan(params, tab, text)
+    names, body = tab["names"], tab["body"]
+    width = len(names)
+    # every row as wide as the widest one, so the added columns stay aligned; a longer row keeps all its cells
+    full = max([width] + [len(r) for r in body])
+    first_row = 2 if tab["header"] else 1
+    rows = [list(r) + [""] * (full - len(r)) for r in body]
+    head = names + [""] * (full - width)
+    added, extra = [], [[] for _ in rows]
+    taken = set(names)
+
+    def new_col(label):
+        out, k = label, 2
+        while out in taken:
+            out, k = f"{label}_{k}", k + 1
+        taken.add(out)
+        added.append(out)
+        return out
+
+    diff, steps_out, checks, tools = [], [], [], [TOOL]
+    for step, cols in plan:
+        if step == "numbers":
+            summary = []
+            for c in cols:
+                j = wt._column(tab, c)
+                new_col(f"{names[j]}_value")
+                new_col(f"{names[j]}_status")
+                n = {"ok": 0, "converted": 0, "missing": 0, "non_numeric": 0}
+                for i, r in enumerate(rows):
+                    v, status = tab["num"](r[j])
+                    n[status] += 1
+                    extra[i] += ["" if v is None else repr(v), status]
+                    if status == "converted":
+                        diff.append({"row": first_row + i, "column": names[j], "before": r[j].strip(), "after": repr(v), "why": "number_format"})
+                summary.append({"column": names[j], **n})
+                checks.append({"code": "wf_numbers", "ok": n["non_numeric"] == 0, "args": {"column": names[j], "read": n["ok"] + n["converted"], "n": len(rows)}})
+            steps_out.append({"step": step, "columns": summary})
+        elif step == "codes":
+            summary = []
+            for c, kind in cols.items():
+                j = wt._column(tab, c)
+                for suffix in ("normalised", "valid", "reason"):
+                    new_col(f"{names[j]}_{suffix}")
+                n = {"valid": 0, "invalid": 0, "missing": 0}
+                for i, r in enumerate(rows):
+                    cell = r[j].strip()
+                    if not cell:
+                        n["missing"] += 1
+                        extra[i] += ["", "", "missing"]
+                        continue
+                    norm, valid, reason = _code(kind, cell)
+                    n["valid" if valid == "yes" else "invalid"] += 1
+                    extra[i] += [norm, valid, reason]
+                    if norm and norm != cell:
+                        diff.append({"row": first_row + i, "column": names[j], "before": cell, "after": norm, "why": "normalised"})
+                summary.append({"column": names[j], "kind": kind, **n})
+                checks.append({"code": "wf_codes", "ok": n["invalid"] == 0, "args": {"column": names[j], "kind": kind, "valid": n["valid"], "n": n["valid"] + n["invalid"]}})
+            steps_out.append({"step": step, "columns": summary})
+            if wp.TOOL not in tools:
+                tools.append(wp.TOOL)
+        elif step == "dates":
+            summary = []
+            for c in cols:
+                j = wt._column(tab, c)
+                new_col(f"{names[j]}_iso")
+                new_col(f"{names[j]}_status")
+                n = {"ok": 0, "converted": 0, "invalid": 0, "missing": 0}
+                for i, r in enumerate(rows):
+                    cell = r[j].strip()
+                    if not cell:
+                        n["missing"] += 1
+                        extra[i] += ["", "missing"]
+                        continue
+                    try:
+                        iso = wp._parse_date(cell, "x").isoformat()
+                    except wp.ProductError:
+                        n["invalid"] += 1
+                        extra[i] += ["", "invalid"]
+                        continue
+                    status = "ok" if iso == cell else "converted"
+                    n[status] += 1
+                    extra[i] += [iso, status]
+                    if status == "converted":
+                        diff.append({"row": first_row + i, "column": names[j], "before": cell, "after": iso, "why": "date_iso"})
+                summary.append({"column": names[j], **n})
+                checks.append({"code": "wf_dates", "ok": n["invalid"] == 0, "args": {"column": names[j], "read": n["ok"] + n["converted"], "n": n["ok"] + n["converted"] + n["invalid"]}})
+            steps_out.append({"step": step, "columns": summary})
+            if wp.TOOL not in tools:
+                tools.append(wp.TOOL)
+        else:
+            steps_out.append({"step": step, "columns": []})
+    out = io.StringIO()
+    w = csv.writer(out, delimiter=tab["delimiter"], lineterminator="\\n")
+    w.writerow(head + added)
+    for r, e in zip(rows, extra):
+        w.writerow(r + e)
+    cleaned = out.getvalue()
+    # the original columns are written back unchanged: read the cleaned table again and compare, cell by cell
+    back = list(csv.reader(io.StringIO(cleaned, newline=""), delimiter=tab["delimiter"]))
+    kept = back[0][:width] == names and len(back) - 1 == len(rows) and all(b[:full] == r for b, r in zip(back[1:], rows))
+    checks.append({"code": "wf_original_kept", "ok": kept, "args": {"rows": len(rows), "columns": width}})
+    res = {"rows": len(rows), "columns": names, "delimiter": tab["delimiter"], "header": tab["header"], "steps": steps_out,
+           "added_columns": added, "diff": diff[:DIFF_SHOWN], "diff_total": len(diff), "cleaned_csv": cleaned}
+    if any(s == "fingerprint" for s, _c in plan):
+        res["input_sha256"] = hashlib.sha256(text.encode("utf-8")).hexdigest()
+        res["output_sha256"] = hashlib.sha256(cleaned.encode("utf-8")).hexdigest()
+        tools.append({"name": "hashlib (Python standard library)", "version": "-"})
+    transforms = list(tab["transforms"])
+    if not tab["header"]:                                 # the cleaned table names its columns: a first row is added
+        transforms.append({"code": "wf_header_added", "before": "", "after": ", ".join(names[:6])})
+    transforms += [{"code": f"wf_{d['why']}", "before": d["before"][:60], "after": d["after"][:60]} for d in diff[:10]]
+    warnings = [{"code": "wf_step_skipped", "args": {"step": s}} for s in skipped]
+    if len(diff) > DIFF_SHOWN:
+        warnings.append({"code": "wf_diff_cut", "args": {"shown": DIFF_SHOWN, "total": len(diff)}})
+    if any(s == "codes" for s, _c in plan):
+        warnings.append({"code": "wf_formal_only", "args": {}})
+    if tab["ragged"]:
+        warnings.append({"code": "wf_ragged", "args": {"count": len(tab["ragged"]), "rows": tab["ragged"][:10]}})
+    return wt._answer(res, tools, transforms, checks, warnings)
+
+
+wt.TASKS["workflow"] = task_workflow
+`),await r.runPythonAsync(`import sys, types
+_m = types.ModuleType('ws_workflow')
+exec(_wf_src, _m.__dict__)
+sys.modules['ws_workflow'] = _m
+del _m, _wf_src
 `),t.postMessage({kind:`ready`}),r}let i=null;t.onmessage=async a=>{let o=a.data;if(o.kind===`init`)i=o;else try{n||(n=r(i),n.catch(()=>{n=null}));let a=await n;a.globals.set(`_p`,o.params),a.globals.set(`_task`,o.task),a.globals.set(`_hasd`,o.data!==null),a.globals.set(`_d`,o.data??0);let s=o.hash&&o.data?await e(o.data):null,c=await a.runPythonAsync(`import ws_tasks
 ws_tasks.run(_task, _p, bytes(_d.to_py()) if _hasd else None)`);t.postMessage({kind:`result`,id:o.id,json:c,fp:s})}catch(e){t.postMessage({kind:`failed`,id:o.id,error:String(e.message||e).slice(-4e3)})}};

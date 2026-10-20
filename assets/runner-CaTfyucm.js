@@ -1,0 +1,10 @@
+import{t as e}from"./main-1KAPcy6s.js";var t=null,n=document.documentElement.lang===`it`?{loading:`carico Python (circa 12 MB, una volta sola)…`,installing:`installo`,running:`eseguo…`,none:`(nessun output: aggiungi print(...) per vedere un risultato)`,http:`impossibile scaricare`}:{loading:`loading Python (about 12 MB, once)…`,installing:`installing`,running:`running…`,none:`(no output: add print(...) to see a result)`,http:`cannot download`},r=new Set;function i(){return document.documentElement.dataset.base||`/`}async function a(r){if(!t){r(n.loading);let a=i()+`pyodide/pyodide.mjs`;t=e(()=>import(a).then(e=>e.loadPyodide({indexURL:i()+`pyodide/`})),[]),t.catch(()=>{t=null})}return t}async function o(e,t,a){for(let o of t){if(r.has(o))continue;a(`${n.installing} ${o}…`);let t=await fetch(i()+`downloads/wheels/`+o);if(!t.ok)throw Error(`${n.http} ${o} (HTTP ${t.status})`);e.globals.set(`_wheel_bytes`,new Uint8Array(await t.arrayBuffer())),await e.runPythonAsync(`import io, site, zipfile
+zipfile.ZipFile(io.BytesIO(bytes(_wheel_bytes.to_py()))).extractall(site.getsitepackages()[0])
+del _wheel_bytes
+`),r.add(o)}}function s(e){let t=e.querySelector(`textarea`),r=e.querySelector(`button.run`),i=e.querySelector(`button.reset`),s=e.querySelector(`output`),c=t.value,l=JSON.parse(e.dataset.wheels||`[]`),u=e=>{s.textContent=e};i?.addEventListener(`click`,()=>{t.value=c,s.textContent=``,t.focus()}),t.addEventListener(`keydown`,e=>{(e.ctrlKey||e.metaKey)&&e.key===`Enter`&&(e.preventDefault(),r.click())}),r.addEventListener(`click`,async()=>{r.disabled=!0;let i=[];try{let r=await a(u);await o(r,l,u),u(n.running),r.setStdout({batched:e=>i.push(e)}),r.setStderr({batched:e=>i.push(e)}),await r.runPythonAsync(t.value),s.textContent=i.join(`
+`)||e.dataset.empty||n.none,s.className=`ok`}catch(e){let t=String(e.message||e).trim().split(`
+`).slice(-6).join(`
+`);s.textContent=(i.length?i.join(`
+`)+`
+
+`:``)+t,s.className=`err`}finally{r.disabled=!1}})}export{s as initRunner};
