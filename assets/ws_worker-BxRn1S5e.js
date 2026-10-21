@@ -1,0 +1,1695 @@
+async function e(e){let t=await crypto.subtle.digest(`SHA-256`,e);return Array.from(new Uint8Array(t)).map(e=>e.toString(16).padStart(2,`0`)).join(``)}const t=self;let n=null;async function r(e){let n=e=>t.postMessage({kind:`status`,text:e});n(e.msg.loading);let r=await(await import(
+/* @vite-ignore */
+e.base+`pyodide/pyodide.mjs`)).loadPyodide({indexURL:e.base+`pyodide/`});for(let t of e.wheels){n(`${e.msg.installing} ${t}…`);let i=await fetch(e.base+`downloads/wheels/`+t);if(!i.ok)throw Error(`${e.msg.http} ${t} (HTTP ${i.status})`);r.globals.set(`_wheel_bytes`,new Uint8Array(await i.arrayBuffer())),await r.runPythonAsync(`import io, site, zipfile
+zipfile.ZipFile(io.BytesIO(bytes(_wheel_bytes.to_py()))).extractall(site.getsitepackages()[0])
+del _wheel_bytes
+`)}return r.globals.set(`_wp_src`,`"""S.T.A.R. everyday products (first batch, 2026-10-20): Italian tax code, Italian VAT number, IBAN, working days.
+
+Pure Python (standard library only), so it runs unchanged in the visitor's browser (Pyodide) and under pytest, where it
+is compared with independent implementations (python-stdnum, schwifty, holidays, dateutil) that are NEVER shipped.
+Same contract as ws_tasks.py: a task returns result, tools, transforms, checks, warnings; errors carry a code.
+
+Sources of the rules:
+  codice fiscale  D.M. 23/12/1976 (format and check character), D.P.R. 605/1973; omocodia: letters L-V replace the
+                  digits from the right (Agenzia delle Entrate)
+  partita IVA     11 digits: 7 serial, 3 office code, 1 check digit computed with the Luhn mod-10 rule
+  IBAN            ISO 13616 (structure), ISO 7064 MOD 97-10 (check digits), SWIFT IBAN registry (lengths)
+  working days    L. 260/1949 art. 2 as amended (national holidays; 4 October from 2026, L. 151/2025; 17 March 2011 only,
+                  D.L. 5/2011), Gregorian Easter
+"""
+from __future__ import annotations
+
+import datetime as dt
+import re
+import unicodedata
+from decimal import ROUND_HALF_UP, Decimal, InvalidOperation
+
+VERSION = "0.1.0"
+TOOL = {"name": "S.T.A.R. everyday products (ws_products)", "version": VERSION}
+
+
+class ProductError(Exception):
+    """Same shape as ws_tasks.TaskError (code + args_), so the page shows a translated message, never a traceback."""
+    def __init__(self, code, **args):
+        super().__init__(code)
+        self.code, self.args_ = code, args
+
+
+def _answer(result, transforms, checks, warnings, tools=None):
+    return {"ok": True, "result": result, "tools": tools or [TOOL], "transforms": transforms, "checks": checks, "warnings": warnings}
+
+
+def _clean(text, field, allow=r"[\\s\\-\\.]"):
+    s = "" if text is None else str(text)
+    if not s.strip():
+        raise ProductError("empty", field=field)
+    if len(s) > 200:
+        raise ProductError("too_long", field=field, limit=200)
+    c = re.sub(allow, "", s).upper()
+    tr = [{"code": "normalised", "before": s.strip()[:60], "after": c}] if c != s.strip() else []
+    return c, tr
+
+
+# ---------------------------------------------------------------- shared: the odd/even tables of the Italian check characters
+ODD = {**dict(zip("0123456789", [1, 0, 5, 7, 9, 13, 15, 17, 19, 21])),
+       **dict(zip("ABCDEFGHIJKLMNOPQRSTUVWXYZ", [1, 0, 5, 7, 9, 13, 15, 17, 19, 21, 2, 4, 18, 20, 11, 3, 6, 8, 12, 14, 16, 10, 22, 25, 24, 23]))}
+EVEN = {**{d: int(d) for d in "0123456789"}, **{ch: i for i, ch in enumerate("ABCDEFGHIJKLMNOPQRSTUVWXYZ")}}
+
+
+def _odd_even_char(s):
+    """Check character of the codice fiscale and of the Italian bank CIN: odd positions (1st, 3rd, ...) through ODD,
+    even ones through EVEN, sum modulo 26 as a letter."""
+    total = sum(ODD[ch] if i % 2 == 0 else EVEN[ch] for i, ch in enumerate(s))
+    return chr(ord("A") + total % 26)
+
+
+# ---------------------------------------------------------------- 1. codice fiscale
+OMO = dict(zip("LMNPQRSTUV", "0123456789"))
+OMO_POS = [14, 13, 12, 10, 9, 7, 6]           # digit positions, in the order the Agenzia substitutes them (right to left)
+MONTHS = dict(zip("ABCDEHLMPRST", range(1, 13)))
+CF_RE = re.compile(r"[A-Z]{6}[0-9LMNPQRSTUV]{2}[ABCDEHLMPRST][0-9LMNPQRSTUV]{2}[A-Z][0-9LMNPQRSTUV]{3}[A-Z]")
+
+
+def cf_check_char(first15):
+    return _odd_even_char(first15)
+
+
+def _letters(word):
+    w = re.sub(r"[^A-Z]", "", _strip_accents(word).upper())
+    cons = [c for c in w if c not in "AEIOU"]
+    vows = [c for c in w if c in "AEIOU"]
+    return cons, vows
+
+
+def _strip_accents(s):
+    table = str.maketrans("ÀÁÂÄÈÉÊËÌÍÎÏÒÓÔÖÙÚÛÜàáâäèéêëìíîïòóôöùúûüÇçÑñ", "AAAAEEEEIIIIOOOOUUUUaaaaeeeeiiiioooouuuuCcNn")
+    return str(s).translate(table)
+
+
+def cf_surname_code(surname):
+    cons, vows = _letters(surname)
+    return "".join((cons + vows + ["X"] * 3)[:3])
+
+
+def cf_name_code(name):
+    cons, vows = _letters(name)
+    if len(cons) >= 4:
+        return cons[0] + cons[2] + cons[3]
+    return "".join((cons + vows + ["X"] * 3)[:3])
+
+
+def task_cf(params):
+    code, tr = _clean(params.get("code"), "code")
+    if len(code) != 16:
+        raise ProductError("cf_length", n=len(code))
+    if not CF_RE.fullmatch(code):
+        raise ProductError("cf_format")
+    checks, warnings = [], []
+    expected = cf_check_char(code[:15])
+    checks.append({"code": "cf_check_char", "ok": expected == code[15], "args": {"expected": expected, "found": code[15]}})
+    letters_at = [p for p in OMO_POS if code[p] in OMO]
+    omocode = bool(letters_at)
+    if omocode:
+        in_order = letters_at == OMO_POS[:len(letters_at)]
+        checks.append({"code": "cf_omocode_order", "ok": in_order, "args": {"n": len(letters_at)}})
+    base = "".join(OMO.get(ch, ch) if i in OMO_POS else ch for i, ch in enumerate(code))
+    yy, month, day = int(base[6:8]), MONTHS[base[8]], int(base[9:11])
+    sex = "F" if day > 40 else "M"
+    dd = day - 40 if day > 40 else day
+    today = dt.date.today()
+    births = []
+    for century in (1900, 2000):
+        try:
+            d = dt.date(century + yy, month, dd)
+        except ValueError:
+            continue
+        if d <= today:
+            births.append(d.isoformat())
+    checks.append({"code": "cf_birth_date", "ok": bool(births), "args": {"day": day, "month": month}})
+    place = base[11:15]
+    res = {"code": code, "valid": all(c["ok"] for c in checks if c["code"] != "cf_omocode_order"),
+           "check_char_expected": expected, "omocode": omocode, "omocode_positions": len(letters_at), "base_code": base[:15] + cf_check_char(base[:15]),
+           "sex": sex, "birth_day": dd, "birth_month": month, "birth_year_2digit": f"{yy:02d}", "birth_date_candidates": births,
+           "place_code": place, "place_kind": "foreign_country" if place[0] == "Z" else "italian_municipality",
+           "surname_code": code[:3], "name_code": code[3:6]}
+    for key, fn, field in (("surname", cf_surname_code, "surname_code"), ("name", cf_name_code, "name_code")):
+        given = (params.get(key) or "").strip()
+        if given:
+            mine = fn(given)
+            checks.append({"code": f"cf_{key}_match", "ok": mine == code[:3] if key == "surname" else mine == code[3:6], "args": {"expected": mine}})
+            res[f"{key}_given_code"] = mine
+    if omocode:
+        warnings.append({"code": "cf_omocode", "args": {"base": res["base_code"]}})
+    if len(births) == 2:
+        warnings.append({"code": "cf_century_ambiguous", "args": {"a": births[0][:4], "b": births[1][:4]}})
+    warnings.append({"code": "cf_not_registry", "args": {}})
+    return _answer(res, tr, checks, warnings)
+
+
+# ---------------------------------------------------------------- 2. partita IVA
+def piva_check_digit_italian(first10):
+    """The rule as written for the partita IVA: digits in odd positions (1st, 3rd, ... 9th) added; digits in even positions
+    (2nd ... 10th) doubled, minus 9 when the double exceeds 9, then added; check digit = (10 - total mod 10) mod 10."""
+    total = 0
+    for i, ch in enumerate(first10):
+        d = int(ch)
+        if i % 2 == 1:
+            d *= 2
+            d = d - 9 if d > 9 else d
+        total += d
+    return (10 - total % 10) % 10
+
+
+def luhn_check_digit(payload):
+    """The Luhn mod-10 rule, as usually stated: from the right of the payload, double every second digit starting with
+    the rightmost one."""
+    total = 0
+    for i, ch in enumerate(reversed(payload)):
+        d = int(ch)
+        if i % 2 == 0:
+            d *= 2
+            d = d - 9 if d > 9 else d
+        total += d
+    return (10 - total % 10) % 10
+
+
+def task_piva(params):
+    code, tr = _clean(params.get("code"), "code")
+    if code.startswith("IT"):
+        tr.append({"code": "country_prefix_removed", "before": code, "after": code[2:]})
+        code = code[2:]
+    if not code.isdigit():
+        raise ProductError("piva_digits")
+    if len(code) != 11:
+        raise ProductError("piva_length", n=len(code))
+    expected = piva_check_digit_italian(code[:10])
+    office = int(code[7:10])
+    checks = [{"code": "piva_check_digit", "ok": expected == int(code[10]), "args": {"expected": expected, "found": int(code[10])}},
+              {"code": "piva_office_code", "ok": 1 <= office <= 100 or office in (120, 121, 888, 999), "args": {"office": f"{office:03d}"}},
+              {"code": "piva_serial", "ok": code[:7] != "0000000", "args": {}}]
+    res = {"code": code, "valid": all(c["ok"] for c in checks), "serial": code[:7], "office_code": f"{office:03d}",
+           "check_digit_expected": expected, "luhn_same": luhn_check_digit(code[:10]) == expected}
+    return _answer(res, tr, checks, [{"code": "piva_not_vies", "args": {}}])
+
+
+# ---------------------------------------------------------------- 3. IBAN
+# total IBAN length per country (SWIFT IBAN registry); checked in the tests against python-stdnum and schwifty
+IBAN_LEN = {
+    "AD": 24, "AE": 23, "AL": 28, "AT": 20, "AZ": 28, "BA": 20, "BE": 16, "BG": 22, "BH": 22, "BI": 27, "BR": 29, "BY": 28,
+    "CH": 21, "CR": 22, "CY": 28, "CZ": 24, "DE": 22, "DJ": 27, "DK": 18, "DO": 28, "EE": 20, "EG": 29, "ES": 24, "FI": 18,
+    "FK": 18, "FO": 18, "FR": 27, "GB": 22, "GE": 22, "GI": 23, "GL": 18, "GR": 27, "GT": 28, "HN": 28, "HR": 21, "HU": 28,
+    "IE": 22, "IL": 23, "IQ": 23, "IS": 26, "IT": 27, "JO": 30, "KW": 30, "KZ": 20, "LB": 28, "LC": 32, "LI": 21, "LT": 20,
+    "LU": 20, "LV": 21, "LY": 25, "MC": 27, "MD": 24, "ME": 22, "MK": 19, "MN": 20, "MR": 27, "MT": 31, "MU": 30, "NI": 28,
+    "NL": 18, "NO": 15, "OM": 23, "PK": 24, "PL": 28, "PS": 29, "PT": 25, "QA": 29, "RO": 24, "RS": 22, "RU": 33, "SA": 24,
+    "SC": 31, "SD": 18, "SE": 24, "SI": 19, "SK": 24, "SM": 27, "SO": 23, "ST": 25, "SV": 28, "TL": 23, "TN": 24, "TR": 26,
+    "UA": 29, "VA": 22, "VG": 24, "XK": 20, "YE": 30,
+}
+
+
+def iban_mod97(iban):
+    moved = iban[4:] + iban[:4]
+    digits = "".join(str(int(ch, 36)) for ch in moved)
+    return int(digits) % 97
+
+
+def iban_check_digits(country, bban):
+    return f"{98 - iban_mod97(country + '00' + bban):02d}"
+
+
+def it_cin(abi_cab_account):
+    return _odd_even_char(abi_cab_account)
+
+
+def task_iban(params):
+    code, tr = _clean(params.get("code"), "code")
+    if code.startswith("IBAN"):
+        tr.append({"code": "iban_prefix_removed", "before": code, "after": code[4:]})
+        code = code[4:]
+    if not re.fullmatch(r"[A-Z0-9]+", code):
+        raise ProductError("iban_chars")
+    if len(code) < 5 or not code[:2].isalpha() or not code[2:4].isdigit():
+        raise ProductError("iban_format")
+    country = code[:2]
+    if country not in IBAN_LEN:
+        raise ProductError("iban_country", country=country)
+    checks = [{"code": "iban_length", "ok": len(code) == IBAN_LEN[country], "args": {"expected": IBAN_LEN[country], "found": len(code)}}]
+    checks.append({"code": "iban_mod97", "ok": iban_mod97(code) == 1, "args": {"expected": iban_check_digits(country, code[4:]), "found": code[2:4]}})
+    res = {"iban": code, "printed": " ".join(code[i:i + 4] for i in range(0, len(code), 4)), "country": country,
+           "check_digits": code[2:4], "bban": code[4:]}
+    if country in ("IT", "SM") and len(code) == 27:
+        bban = code[4:]
+        res.update(cin=bban[0], abi=bban[1:6], cab=bban[6:11], account=bban[11:])
+        ok_shape = bool(re.fullmatch(r"[A-Z]\\d{10}[A-Z0-9]{12}", bban))
+        checks.append({"code": "it_bban_format", "ok": ok_shape, "args": {}})
+        if ok_shape:
+            exp = it_cin(bban[1:])
+            checks.append({"code": "it_cin", "ok": exp == bban[0], "args": {"expected": exp, "found": bban[0]}})
+    res["valid"] = all(c["ok"] for c in checks)
+    return _answer(res, tr, checks, [{"code": "iban_not_account", "args": {}}])
+
+
+# ---------------------------------------------------------------- 4. working days and deadlines
+def easter(year):
+    """Gregorian Easter Sunday (the anonymous algorithm published by Meeus, valid for every Gregorian year)."""
+    a, b, c = year % 19, year // 100, year % 100
+    d, e = b // 4, b % 4
+    f = (b + 8) // 25
+    g = (b - f + 1) // 3
+    h = (19 * a + b - d - g + 15) % 30
+    i, k = c // 4, c % 4
+    ll = (32 + 2 * e + 2 * i - h - k) % 7
+    m = (a + 11 * h + 22 * ll) // 451
+    month = (h + ll - 7 * m + 114) // 31
+    day = (h + ll - 7 * m + 114) % 31 + 1
+    return dt.date(year, month, day)
+
+
+FIXED = [((1, 1), "new_year"), ((1, 6), "epiphany"), ((4, 25), "liberation"), ((5, 1), "labour"), ((6, 2), "republic"),
+         ((8, 15), "assumption"), ((11, 1), "all_saints"), ((12, 8), "immaculate"), ((12, 25), "christmas"), ((12, 26), "st_stephen")]
+YEAR_MIN, YEAR_MAX = 2001, 2099      # 2 June has been a holiday again since 2001 (L. 336/2000)
+
+
+def holidays_it(year, patron=None):
+    """National holidays of Italy for a year (L. 260/1949 art. 2 as amended), plus an optional local patron day (month, day)."""
+    if not YEAR_MIN <= year <= YEAR_MAX:
+        raise ProductError("year_range", min=YEAR_MIN, max=YEAR_MAX, year=year)
+    out = {dt.date(year, m, d): name for (m, d), name in FIXED}
+    if year >= 2026:                                   # L. 8 ottobre 2025, n. 151
+        out[dt.date(year, 10, 4)] = "st_francis"
+    if year == 2011:                                   # one-off: 150 years of the unification of Italy (D.L. 22 febbraio 2011, n. 5)
+        out[dt.date(2011, 3, 17)] = "unification_150"
+    e = easter(year)
+    out[e] = "easter"
+    out[e + dt.timedelta(days=1)] = "easter_monday"
+    if patron:
+        try:
+            p = dt.date(year, patron[0], patron[1])
+        except ValueError:
+            raise ProductError("patron_date", value=f"{patron[1]:02d}/{patron[0]:02d}") from None
+        out.setdefault(p, "patron")
+    return out
+
+
+def _parse_date(text, field):
+    s = "" if text is None else str(text).strip()
+    if not s:
+        raise ProductError("empty", field=field)
+    for fmt in ("%Y-%m-%d", "%d/%m/%Y", "%d-%m-%Y", "%d.%m.%Y"):
+        try:
+            return dt.datetime.strptime(s, fmt).date()
+        except ValueError:
+            pass
+    raise ProductError("bad_date", field=field, value=s[:30])
+
+
+def _parse_patron(text):
+    s = "" if text is None else str(text).strip()
+    if not s:
+        return None
+    m = re.fullmatch(r"(\\d{1,2})[/\\-.](\\d{1,2})", s)
+    if not m:
+        raise ProductError("bad_patron", value=s[:20])
+    return (int(m.group(2)), int(m.group(1)))          # typed as day/month
+
+
+def _is_working(d, hol, saturday_working):
+    if d.weekday() == 6 or (d.weekday() == 5 and not saturday_working):
+        return False
+    return d not in hol
+
+
+def _holidays_between(a, b, patron):
+    hol = {}
+    for y in range(a.year, b.year + 1):
+        hol.update(holidays_it(y, patron))
+    return hol
+
+
+def task_workdays(params):
+    mode = params.get("mode") or "between"
+    patron = _parse_patron(params.get("patron"))
+    sat = bool(params.get("saturday_working"))
+    start = _parse_date(params.get("start"), "start")
+    checks, warnings, tr = [], [], []
+    if mode == "between":
+        end = _parse_date(params.get("end"), "end")
+        if end < start:
+            start, end = end, start
+            tr.append({"code": "dates_swapped", "before": "", "after": ""})
+        if (end - start).days > 3660:
+            raise ProductError("span_too_long", limit_years=10)
+        hol = _holidays_between(start, end, patron)
+        days = [start + dt.timedelta(days=k) for k in range((end - start).days + 1)]
+        working = [d for d in days if _is_working(d, hol, sat)]
+        listed = sorted((d, n) for d, n in hol.items() if start <= d <= end)
+        res = {"mode": mode, "start": start.isoformat(), "end": end.isoformat(), "calendar_days": len(days),
+               "working_days": len(working), "both_ends_included": True,
+               "weekend_days": sum(1 for d in days if d.weekday() == 6 or (d.weekday() == 5 and not sat)),
+               "holidays_on_weekdays": [[d.isoformat(), n] for d, n in listed if d.weekday() < (6 if sat else 5)],
+               "holidays_all": [[d.isoformat(), n] for d, n in listed]}
+    else:
+        n = params.get("n")
+        try:
+            n = int(str(n).strip())
+        except (TypeError, ValueError):
+            raise ProductError("bad_n", value=str(n)[:20]) from None
+        if not 1 <= n <= 1000:
+            raise ProductError("n_range", min=1, max=1000)
+        hol = _holidays_between(start, start + dt.timedelta(days=n * 3 + 400), patron)
+        d, count, skipped = start, 0, []
+        while count < n:
+            d += dt.timedelta(days=1)
+            if _is_working(d, hol, sat):
+                count += 1
+            elif d in hol:
+                skipped.append([d.isoformat(), hol[d]])
+        res = {"mode": mode, "start": start.isoformat(), "n": n, "deadline": d.isoformat(), "weekday": d.weekday(),
+               "start_day_counted": False, "holidays_skipped": skipped}
+    res["saturday_working"] = sat
+    res["patron"] = f"{patron[1]:02d}/{patron[0]:02d}" if patron else ""
+    # bridge days ("ponti"): a working day between a holiday and the weekend, in the period shown
+    a, b = dt.date.fromisoformat(res["start"]), dt.date.fromisoformat(res.get("end") or res["deadline"])
+    hol_all = _holidays_between(a, b, patron)
+    bridges = []
+    if not sat:      # a bridge sits between a holiday and the weekend: Monday before a Tuesday holiday, Friday after a Thursday one
+        for h in sorted(x for x in hol_all if a <= x <= b):
+            for cand, wd in ((h - dt.timedelta(days=1), 0), (h + dt.timedelta(days=1), 4)):
+                if a <= cand <= b and cand.weekday() == wd and _is_working(cand, hol_all, sat):
+                    bridges.append(cand.isoformat())
+    res["bridge_days"] = sorted(set(bridges))
+    e = easter(a.year)
+    checks.append({"code": "easter_rule", "ok": e.weekday() == 6 and dt.date(a.year, 3, 22) <= e <= dt.date(a.year, 4, 25), "args": {"date": e.isoformat()}})
+    warnings.append({"code": "wd_rules", "args": {}})
+    return _answer(res, tr, checks, warnings)
+
+
+# ---------------------------------------------------------------- 5-8. second batch (M12, 2026-10-21)
+# Table comparison, duplicate or similar rows, VAT reconciliation in exact decimal arithmetic, file metadata and privacy.
+# Same contract; compared in tests/test_products2.py with independent implementations (pandas, rapidfuzz, fractions,
+# Pillow, exifread, pypdf, python-docx, openpyxl) that are never shipped.
+MAX_DIFF_LIST, MAX_SIMILAR_ROWS = 500, 400
+
+
+def _tables():
+    import ws_tasks                                      # here: ws_tasks imports this module at its end
+    return ws_tasks
+
+
+def dec(cell, decimal_comma=False):
+    """A cell as an exact Decimal, or None: '1.234,50' (Italian), '1,234.50', '1234.5', '€ 12,00', '-3'. Never a float."""
+    c = "" if cell is None else str(cell).strip().replace("−", "-").replace("€", "").replace("EUR", "").replace("\xA0", "").replace(" ", "")
+    if not c:
+        return None
+    # '12.340' alone is ambiguous: twelve point three four in a table written with points, 12,340 in one written with
+    # commas. It follows the table's convention; two or more groups ('1.234.567') or groups before a decimal comma
+    # ('1.234,50') are thousands in any table. (FAIL-0051, 2026-10-21: '12.340' read as 12340 in a point table made the
+    # table comparison report a price written with a trailing zero as changed - found by qa/volume_products_chdb.py)
+    if (re.fullmatch(r"[+-]?\\d{1,3}(\\.\\d{3})+,\\d+", c) or re.fullmatch(r"[+-]?\\d{1,3}(\\.\\d{3}){2,}", c)
+            or (decimal_comma and re.fullmatch(r"[+-]?\\d{1,3}(\\.\\d{3})+", c))
+            or (decimal_comma and re.fullmatch(r"[+-]?\\d+,\\d+", c)) or re.fullmatch(r"[+-]?\\d+,\\d{1,2}", c)):
+        c = c.replace(".", "").replace(",", ".")
+    elif re.fullmatch(r"[+-]?\\d{1,3}(,\\d{3})+(\\.\\d+)?", c):
+        c = c.replace(",", "")
+    if not re.fullmatch(r"[+-]?(\\d+(\\.\\d*)?|\\.\\d+)", c):
+        return None
+    try:
+        return Decimal(c)
+    except InvalidOperation:
+        return None
+
+
+def _same(a, b, dca, dcb):
+    """Two cells are equal if the text is equal, or if both are numbers with the same exact value ('1,50' and '1.5')."""
+    if a.strip() == b.strip():
+        return True
+    x, y = dec(a, dca), dec(b, dcb)
+    return x is not None and y is not None and x == y
+
+
+def task_tablediff(params):
+    wt = _tables()
+    ta, tb = wt._read_table(params.get("a")), wt._read_table(params.get("b"))
+    if not (ta["header"] and tb["header"]):
+        raise ProductError("diff_header")
+    key = str(params.get("key") or "").strip()
+    common = [n for n in ta["names"] if n in tb["names"]]
+    if key and key not in common:
+        raise ProductError("diff_key_missing", key=key)
+    key = key or (common[0] if common else "")
+    if not key:
+        raise ProductError("diff_no_common")
+    def index(t, which):
+        k = t["names"].index(key)
+        out, dup = {}, []
+        for r in t["body"]:
+            if len(r) <= k:
+                continue
+            v = r[k].strip()
+            if v in out:
+                dup.append(v)
+            out[v] = dict(zip(t["names"], r))
+        if dup:
+            raise ProductError("diff_key_duplicate", table=which, key=key, values=", ".join(sorted(set(dup))[:10]))
+        return out
+    A, B = index(ta, "A"), index(tb, "B")
+    cols = [c for c in common if c != key]
+    changes, unchanged = [], 0
+    for k in A.keys() & B.keys():
+        row = [(c, A[k].get(c, ""), B[k].get(c, "")) for c in cols if not _same(A[k].get(c, ""), B[k].get(c, ""), ta["decimal_comma"], tb["decimal_comma"])]
+        if row:
+            changes += [{"key": k, "column": c, "a": x, "b": y} for c, x, y in row]
+        else:
+            unchanged += 1
+    order = {k: i for i, k in enumerate(list(A) + [k for k in B if k not in A])}
+    changes.sort(key=lambda d: (order[d["key"]], cols.index(d["column"])))
+    removed = [k for k in A if k not in B]
+    added = [k for k in B if k not in A]
+    changed_rows = len({d["key"] for d in changes})
+    warnings = []
+    if len(changes) > MAX_DIFF_LIST:
+        warnings.append({"code": "diff_truncated", "args": {"shown": MAX_DIFF_LIST, "total": len(changes)}})
+    for t, name in ((ta, "A"), (tb, "B")):
+        if t["ragged"]:
+            warnings.append({"code": "diff_ragged", "args": {"table": name, "rows": ", ".join(map(str, t["ragged"][:10]))}})
+    res = {"key": key, "rows_a": len(A), "rows_b": len(B), "removed": removed[:MAX_DIFF_LIST], "added": added[:MAX_DIFF_LIST],
+           "n_removed": len(removed), "n_added": len(added), "n_changed_rows": changed_rows, "n_changed_cells": len(changes), "n_unchanged": unchanged,
+           "changes": changes[:MAX_DIFF_LIST], "columns_compared": cols,
+           "only_in_a": [c for c in ta["names"] if c not in tb["names"]], "only_in_b": [c for c in tb["names"] if c not in ta["names"]]}
+    checks = [{"code": "diff_identical", "ok": not (removed or added or changes), "args": {}}]
+    return _answer(res, ta["transforms"] + tb["transforms"], checks, warnings)
+
+
+def norm_cell(s):
+    """Accents removed, case folded, punctuation dropped, spaces collapsed: 'Rossi, Mario ' == 'ROSSI MARIO'."""
+    s = unicodedata.normalize("NFKD", str(s))
+    s = "".join(ch for ch in s if not unicodedata.combining(ch)).casefold()
+    s = re.sub(r"[^\\w\\s]", " ", s)
+    return re.sub(r"\\s+", " ", s).strip()
+
+
+def levenshtein_within(a, b, k):
+    """Levenshtein distance if it is at most k, else k + 1 (a band of width 2k + 1: fast when k is small)."""
+    if abs(len(a) - len(b)) > k:
+        return k + 1
+    if len(a) > len(b):
+        a, b = b, a
+    big = k + 1
+    prev = [j if j <= k else big for j in range(len(b) + 1)]
+    for i in range(1, len(a) + 1):
+        cur = [big] * (len(b) + 1)
+        lo, hi = max(1, i - k), min(len(b), i + k)
+        cur[0] = i if i <= k else big
+        best = cur[0]
+        for j in range(lo, hi + 1):
+            v = min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] != b[j - 1]))
+            cur[j] = v if v <= k else big
+            best = min(best, cur[j])
+        if best > k:
+            return k + 1
+        prev = cur
+    return prev[len(b)] if prev[len(b)] <= k else k + 1
+
+
+def task_dups(params):
+    wt = _tables()
+    t = wt._read_table(params.get("text"))
+    thr, tr = wt.parse_number(params.get("threshold", "0.9"), "threshold")
+    if not 0.5 <= thr <= 1:
+        raise ProductError("dups_threshold")
+    want = [c.strip() for c in str(params.get("columns") or "").split(",") if c.strip()]
+    missing = [c for c in want if c not in t["names"]]
+    if missing:
+        raise ProductError("dups_columns", columns=", ".join(missing))
+    idx = [t["names"].index(c) for c in want] if want else list(range(len(t["names"])))
+    first_line = 2 if t["header"] else 1
+    sig = [" | ".join(norm_cell(r[i]) if i < len(r) else "" for i in idx) for r in t["body"]]
+    groups = {}
+    for n, s in enumerate(sig):
+        groups.setdefault(s, []).append(n + first_line)
+    exact = [g for s, g in groups.items() if len(g) > 1 and s.replace("|", "").strip()]
+    reps = [(g[0], s) for s, g in groups.items() if s.replace("|", "").strip()]
+    reps.sort()
+    similar, scanned = [], reps[:MAX_SIMILAR_ROWS]
+    for x in range(len(scanned)):
+        la, sa = scanned[x]
+        for y in range(x + 1, len(scanned)):
+            lb, sb = scanned[y]
+            m = max(len(sa), len(sb))
+            k = int((1 - thr) * m + 1e-9)
+            d = levenshtein_within(sa, sb, k)
+            if d <= k:
+                sim = 1 - d / m if m else 1.0
+                if sim >= thr:
+                    similar.append({"rows": [la, lb], "similarity": round(sim, 4), "a": sa[:120], "b": sb[:120]})
+    similar.sort(key=lambda p: (-p["similarity"], p["rows"]))
+    warnings = []
+    if len(reps) > MAX_SIMILAR_ROWS:
+        warnings.append({"code": "dups_similar_limit", "args": {"limit": MAX_SIMILAR_ROWS, "rows": len(reps)}})
+    res = {"rows": len(t["body"]), "columns": [t["names"][i] for i in idx], "threshold": thr, "exact_groups": exact,
+           "n_exact_rows": sum(len(g) - 1 for g in exact), "similar": similar[:MAX_DIFF_LIST], "n_similar": len(similar)}
+    checks = [{"code": "dups_none", "ok": not exact and not similar, "args": {}}]
+    return _answer(res, t["transforms"] + ([tr] if tr else []), checks, warnings)
+
+
+CENT = Decimal("0.01")
+
+
+def round_cent(x):
+    """To the cent, halves away from zero (ROUND_HALF_UP on a Decimal): 0.005 -> 0.01, -0.005 -> -0.01."""
+    return x.quantize(CENT, rounding=ROUND_HALF_UP)
+
+
+def task_vat(params):
+    wt = _tables()
+    t = wt._read_table(params.get("text"))
+    names = [n.casefold() for n in t["names"]]
+    def col(match, default):
+        """The column whose header matches, else the positional default (if the table is that wide)."""
+        if t["header"]:
+            for i, n in enumerate(names):
+                if match(n):
+                    return i
+        return default if default is not None and default < len(names) else None
+    is_base = lambda n: any(w in n for w in ("imponibile", "taxable", "net", "base"))    # noqa: E731
+    ci = col(is_base, 0)
+    cr = col(lambda n: any(w in n for w in ("aliquota", "rate", "%")), 1)
+    cv = col(lambda n: not is_base(n) and any(w in n for w in ("iva", "vat", "imposta", "tax")), 2)
+    if cv in (ci, cr):
+        cv = None
+    first_line = 2 if t["header"] else 1
+    lines, by_rate, bad = [], {}, []
+    for n, r in enumerate(t["body"]):
+        cells = [r[i].strip() if i is not None and i < len(r) else "" for i in (ci, cr, cv)]
+        base, rate = dec(cells[0], t["decimal_comma"]), dec(cells[1].replace("%", ""), t["decimal_comma"])
+        if base is None or rate is None or not (0 <= rate <= 100):
+            bad.append(n + first_line)
+            continue
+        vat = round_cent(base * rate / 100)
+        declared = dec(cells[2], t["decimal_comma"]) if cells[2] else None
+        lines.append({"row": n + first_line, "taxable": str(base), "rate": str(rate), "vat": str(vat),
+                      "declared": None if declared is None else str(declared), "difference": None if declared is None else str(declared - vat)})
+        b = by_rate.setdefault(rate, [Decimal(0), Decimal(0)])
+        b[0] += base
+        b[1] += vat
+    if not lines:
+        raise ProductError("vat_no_lines")
+    rates = []
+    for rate in sorted(by_rate):
+        base, vat_lines = by_rate[rate]
+        vat_rate = round_cent(base * rate / 100)
+        rates.append({"rate": str(rate), "taxable": str(base), "vat_on_total": str(vat_rate), "vat_sum_of_lines": str(vat_lines), "rounding_gap": str(vat_lines - vat_rate)})
+    total_vat = sum((Decimal(x["vat_on_total"]) for x in rates), Decimal(0))
+    total_taxable = sum((Decimal(x["taxable"]) for x in rates), Decimal(0))
+    declared_total = dec(params.get("declared_vat"), t["decimal_comma"]) if str(params.get("declared_vat") or "").strip() else None
+    if str(params.get("declared_vat") or "").strip() and declared_total is None:
+        raise ProductError("not_a_number", field="declared_vat", value=str(params.get("declared_vat"))[:40])
+    mism = [x for x in lines if x["difference"] not in (None, "0", "0.00") and Decimal(x["difference"]) != 0]
+    checks = [{"code": "vat_lines", "ok": not mism, "args": {"n": len(mism)}}]
+    if declared_total is not None:
+        checks.append({"code": "vat_total", "ok": declared_total == total_vat, "args": {"declared": str(declared_total), "computed": str(total_vat), "difference": str(declared_total - total_vat)}})
+    warnings = [{"code": "vat_skipped", "args": {"rows": ", ".join(map(str, bad[:10])), "n": len(bad)}}] if bad else []
+    if any(Decimal(x["rounding_gap"]) != 0 for x in rates):
+        warnings.append({"code": "vat_rounding_gap", "args": {}})
+    res = {"lines": lines[:MAX_DIFF_LIST], "n_lines": len(lines), "rates": rates, "total_taxable": str(total_taxable), "total_vat": str(total_vat),
+           "total_invoice": str(total_taxable + total_vat), "declared_vat": None if declared_total is None else str(declared_total), "mismatched_lines": len(mism)}
+    return _answer(res, t["transforms"], checks, warnings)
+
+
+# ---- file metadata and privacy: JPEG (EXIF, XMP), PNG (text chunks, eXIf), PDF (Info, XMP), Office (docProps)
+PRIVACY = {"gps": "location", "author": "person", "artist": "person", "creator": "person", "last_modified_by": "person", "company": "person",
+           "manager": "person", "copyright": "person", "make": "device", "model": "device", "serial": "device", "lens": "device",
+           "software": "software", "producer": "software", "creator_tool": "software", "application": "software", "template": "software",
+           "created": "date", "modified": "date", "taken": "date", "title": "content", "subject": "content", "keywords": "content",
+           "description": "content", "comment": "content", "comments": "content", "tracked_changes": "content", "revision": "content"}
+EXIF_TAGS = {0x010E: "description", 0x010F: "make", 0x0110: "model", 0x0131: "software", 0x0132: "modified", 0x013B: "artist", 0x8298: "copyright",
+             0x9003: "taken", 0x9286: "comment", 0xA431: "serial", 0xA434: "lens", 0x9C9D: "author", 0x9C9C: "comment", 0x9C9F: "subject", 0x9C9B: "title"}
+
+
+def _tiff(data):
+    """Tags of a TIFF/EXIF block: IFD0, the Exif sub-IFD and the GPS IFD (decimal degrees and altitude)."""
+    import struct
+    if data[:2] not in (b"II", b"MM"):
+        raise ProductError("meta_bad")
+    e = "<" if data[:2] == b"II" else ">"
+    def u16(o): return struct.unpack(e + "H", data[o:o + 2])[0]
+    def u32(o): return struct.unpack(e + "I", data[o:o + 4])[0]
+    sizes = {1: 1, 2: 1, 3: 2, 4: 4, 5: 8, 7: 1, 9: 4, 10: 8}
+    def ifd(off):
+        out = {}
+        if not 0 < off < len(data) - 2:
+            return out
+        for i in range(min(u16(off), 512)):
+            p = off + 2 + 12 * i
+            if p + 12 > len(data):
+                break
+            tag, typ, cnt = u16(p), u16(p + 2), u32(p + 4)
+            size = sizes.get(typ, 1) * cnt
+            vo = p + 8 if size <= 4 else u32(p + 8)
+            raw = data[vo:vo + size]
+            if typ == 2:
+                val = raw.split(b"\\0")[0].decode("utf-8", "replace").strip()
+            elif typ == 3:
+                val = [u16(vo + 2 * k) for k in range(cnt)] if size <= len(data) - vo else []
+            elif typ in (4, 9):
+                val = [u32(vo + 4 * k) for k in range(cnt)]
+            elif typ in (5, 10):
+                val = [(u32(vo + 8 * k), u32(vo + 8 * k + 4)) for k in range(cnt)]
+            else:
+                val = raw
+            out[tag] = (typ, val)
+        return out
+    root = ifd(u32(4))
+    found = {}
+    def take(tags):
+        for tag, (typ, val) in tags.items():
+            name = EXIF_TAGS.get(tag)
+            if not name:
+                continue
+            if tag in (0x9C9D, 0x9C9C, 0x9C9F, 0x9C9B) and isinstance(val, (bytes, list)):   # XP* tags: UCS-2 little-endian
+                b = bytes(val) if isinstance(val, list) else val
+                val = b.decode("utf-16-le", "replace").rstrip("\\0").strip()
+            elif tag == 0x9286 and isinstance(val, bytes):                                   # UserComment: 8-byte charset id
+                val = val[8:].decode("utf-8", "replace").rstrip("\\0").strip()
+            if isinstance(val, str) and val:
+                found.setdefault(name, val)
+    take(root)
+    if 0x8769 in root:
+        take(ifd(root[0x8769][1][0]))
+    if 0x8825 in root:
+        g = ifd(root[0x8825][1][0])
+        def deg(t):
+            if t not in g or len(g[t][1]) != 3:
+                return None
+            return sum((n / d if d else 0) / 60 ** k for k, (n, d) in enumerate(g[t][1]))
+        lat, lon = deg(2), deg(4)
+        if lat is not None and lon is not None:
+            if g.get(1, (2, "N"))[1] == "S":
+                lat = -lat
+            if g.get(3, (2, "E"))[1] == "W":
+                lon = -lon
+            found["gps"] = f"{lat:.6f}, {lon:.6f}"
+            if 6 in g and g[6][1]:
+                n, d = g[6][1][0]
+                found["gps_altitude_m"] = f"{(n / d if d else 0):.1f}"
+    return found
+
+
+def _xmp(text):
+    out = {}
+    for name, pats in (("creator", [r"<dc:creator>.*?<rdf:li[^>]*>(.*?)</rdf:li>"]), ("creator_tool", [r'xmp:CreatorTool="([^"]*)"', r"<xmp:CreatorTool>(.*?)</xmp:CreatorTool>"]),
+                       ("producer", [r'pdf:Producer="([^"]*)"', r"<pdf:Producer>(.*?)</pdf:Producer>"]), ("title", [r"<dc:title>.*?<rdf:li[^>]*>(.*?)</rdf:li>"])):
+        for p in pats:
+            m = re.search(p, text, re.S)
+            if m and m.group(1).strip():
+                out[name] = re.sub(r"\\s+", " ", m.group(1)).strip()[:300]
+                break
+    return out
+
+
+def _pdf_string(raw):
+    """A PDF literal or hex string as text (PDFDocEncoding treated as Latin-1; UTF-16 with a byte-order mark)."""
+    if raw.startswith(b"<"):
+        try:
+            b = bytes.fromhex(re.sub(rb"[^0-9A-Fa-f]", b"", raw[1:-1]).decode())
+        except ValueError:
+            return ""
+    else:
+        b = re.sub(rb"\\\\([nrtbf()\\\\])", lambda m: {b"n": b"\\n", b"r": b"\\r", b"t": b"\\t", b"b": b"\\b", b"f": b"\\f"}.get(m.group(1), m.group(1)), raw[1:-1])
+        b = re.sub(rb"\\\\([0-7]{1,3})", lambda m: bytes([int(m.group(1), 8) & 255]), b)
+    if b[:2] in (b"\\xfe\\xff", b"\\xff\\xfe"):
+        return b.decode("utf-16", "replace").strip()
+    return b.decode("latin-1").strip()
+
+
+def _pdf(data):
+    import zlib
+    blobs = [data]
+    for m in re.finditer(rb"stream\\r?\\n", data):            # object streams hold the Info dictionary in newer PDFs
+        end = data.find(b"endstream", m.end())
+        if end < 0 or end - m.end() > 5_000_000:
+            continue
+        try:
+            blobs.append(zlib.decompress(data[m.end():end]))
+        except zlib.error:
+            pass
+    out = {}
+    keys = {b"Author": "author", b"Creator": "creator_tool", b"Producer": "producer", b"Title": "title", b"Subject": "subject", b"Keywords": "keywords",
+            b"CreationDate": "created", b"ModDate": "modified"}
+    for b in blobs:
+        for k, name in keys.items():
+            if name in out:
+                continue
+            m = re.search(rb"/" + k + rb"\\s*(\\((?:\\\\.|[^\\\\)])*\\)|<[0-9A-Fa-f\\s]*>)", b)
+            if m:
+                v = _pdf_string(m.group(1))
+                if v:
+                    out[name] = v[:300]
+        if b"<x:xmpmeta" in b or b"<rdf:RDF" in b:
+            for k, v in _xmp(b.decode("utf-8", "replace")).items():
+                out.setdefault(k, v)
+    return out
+
+
+def _office(data):
+    import io
+    import zipfile
+    try:
+        z = zipfile.ZipFile(io.BytesIO(data))
+    except zipfile.BadZipFile:
+        raise ProductError("meta_bad") from None
+    names = set(z.namelist())
+    if "[Content_Types].xml" not in names:
+        raise ProductError("meta_unsupported")
+    out = {}
+    def tags(xml, pairs):
+        for tag, name in pairs:
+            m = re.search(rf"<{tag}(?:\\s[^>]*)?>(.*?)</{tag}>", xml, re.S)
+            if m and m.group(1).strip():
+                out[name] = re.sub(r"\\s+", " ", m.group(1)).strip()[:300]
+    if "docProps/core.xml" in names:
+        tags(z.read("docProps/core.xml").decode("utf-8", "replace"), [("dc:creator", "author"), ("cp:lastModifiedBy", "last_modified_by"), ("dc:title", "title"),
+             ("dc:subject", "subject"), ("cp:keywords", "keywords"), ("dc:description", "description"), ("dcterms:created", "created"), ("dcterms:modified", "modified"), ("cp:revision", "revision")])
+    if "docProps/app.xml" in names:
+        tags(z.read("docProps/app.xml").decode("utf-8", "replace"), [("Company", "company"), ("Manager", "manager"), ("Application", "application"), ("Template", "template")])
+    if any(n.startswith(("word/comments", "xl/comments", "ppt/comments")) for n in names):
+        out["comments"] = "yes"
+    if "word/document.xml" in names:
+        doc = z.read("word/document.xml")
+        if b"<w:ins " in doc or b"<w:del " in doc:
+            out["tracked_changes"] = "yes"
+    kind = "docx" if "word/document.xml" in names else "xlsx" if "xl/workbook.xml" in names else "pptx" if "ppt/presentation.xml" in names else "office"
+    return kind, out
+
+
+def task_meta(params, data):
+    if not data:
+        raise ProductError("empty_file")
+    if len(data) > 100_000_000:
+        raise ProductError("meta_too_big", limit_mb=100)
+    if data[:2] == b"\\xff\\xd8":
+        kind, fields, p = "jpeg", {}, 2
+        while p + 4 <= len(data) and data[p] == 0xFF:
+            marker, size = data[p + 1], int.from_bytes(data[p + 2:p + 4], "big")
+            seg = data[p + 4:p + 2 + size]
+            if marker == 0xE1 and seg.startswith(b"Exif\\0\\0"):
+                fields.update(_tiff(seg[6:]))
+            elif marker == 0xE1 and b"http://ns.adobe.com/xap/1.0/" in seg[:40]:
+                for k, v in _xmp(seg.decode("utf-8", "replace")).items():
+                    fields.setdefault(k, v)
+            elif marker == 0xFE:
+                fields.setdefault("comment", seg.decode("utf-8", "replace").strip()[:300])
+            if marker == 0xDA:
+                break
+            p += 2 + size
+    elif data[:8] == b"\\x89PNG\\r\\n\\x1a\\n":
+        import zlib
+        kind, fields, p = "png", {}, 8
+        names = {"author": "author", "artist": "artist", "title": "title", "description": "description", "comment": "comment", "copyright": "copyright",
+                 "software": "software", "creation time": "created", "source": "model"}
+        while p + 8 <= len(data):
+            n, typ = int.from_bytes(data[p:p + 4], "big"), data[p + 4:p + 8]
+            body = data[p + 8:p + 8 + n]
+            if typ in (b"tEXt", b"zTXt", b"iTXt"):
+                k, _, rest = body.partition(b"\\0")
+                if typ == b"zTXt":
+                    try:
+                        rest = zlib.decompress(rest[1:])
+                    except zlib.error:
+                        rest = b""
+                elif typ == b"iTXt":
+                    flag, rest = rest[0], rest[2:]
+                    rest = rest.split(b"\\0", 2)[-1] if rest.count(b"\\0") >= 2 else rest
+                    if flag:
+                        try:
+                            rest = zlib.decompress(rest)
+                        except zlib.error:
+                            rest = b""
+                key = k.decode("latin-1").strip().casefold()
+                txt = rest.decode("utf-8" if typ == b"iTXt" else "latin-1", "replace").strip()
+                if key == "xml:com.adobe.xmp":
+                    for kk, v in _xmp(txt).items():
+                        fields.setdefault(kk, v)
+                elif txt:
+                    fields.setdefault(names.get(key, f"text_{key[:40]}"), txt[:300])
+            elif typ == b"eXIf":
+                fields.update(_tiff(body))
+            if typ == b"IEND":
+                break
+            p += 12 + n
+    elif data[:5] == b"%PDF-":
+        kind, fields = "pdf", _pdf(data)
+    elif data[:2] == b"PK":
+        kind, fields = _office(data)
+    else:
+        raise ProductError("meta_unsupported")
+    items = [{"field": k, "value": v, "category": PRIVACY.get(k.replace("gps_altitude_m", "gps"), "other")} for k, v in sorted(fields.items())]
+    sensitive = [i for i in items if i["category"] in ("location", "person", "device")]
+    res = {"kind": kind, "bytes": len(data), "fields": items, "n_fields": len(items), "n_sensitive": len(sensitive),
+           "has_location": any(i["category"] == "location" for i in items)}
+    checks = [{"code": "meta_clean", "ok": not sensitive, "args": {"n": len(sensitive)}}]
+    warnings = [{"code": "meta_location", "args": {}}] if res["has_location"] else []
+    return _answer(res, [], checks, warnings)
+
+
+TASKS = {"p_cf": task_cf, "p_piva": task_piva, "p_iban": task_iban, "p_workdays": task_workdays,
+         "p_tablediff": task_tablediff, "p_dups": task_dups, "p_vat": task_vat, "p_meta": task_meta}
+`),await r.runPythonAsync(`import sys, types
+_m = types.ModuleType('ws_products')
+exec(_wp_src, _m.__dict__)
+sys.modules['ws_products'] = _m
+del _m, _wp_src
+`),r.globals.set(`_ws_src`,`"""S.T.A.R. Workspace tasks: everyday jobs done by released S.T.A.R. packages, with a verification receipt.
+
+Runs unchanged in two places: in the visitor's browser (Pyodide, with the packages' published wheels) and on a PC
+under pytest (tests/test_ws_tasks.py, with independent references: pyproj, numpy, zlib). Nothing here contacts the
+network or keeps data: the input arrives as text or bytes, the answer leaves as a dictionary.
+
+Every task returns:
+  ok            True when a result was produced
+  result        the numbers, in plain units
+  tools         [{"name", "version"}] - the S.T.A.R. packages (and standard modules) that did the work
+  transforms    [{"code", "before", "after"}] - every change made to the input before using it
+  checks        [{"code", "ok", "args"}] - deterministic checks and their outcome
+  warnings      [{"code", "args"}] - things a person should look at
+  error         {"code", "args"} when ok is False (never a Python traceback)
+Messages are codes with arguments; the page turns them into English or Italian.
+"""
+from __future__ import annotations
+
+import csv
+import hashlib
+import io
+import json
+import math
+import re
+import zlib
+
+MAX_ROWS = 50_000
+MAX_TEXT = 5_000_000            # characters of CSV text
+MAX_CRC_BYTES = 1_000_000       # star_crc works bit by bit (about 4 s per MB on a laptop): the cross-check stops here
+R_MEAN_M = 6371008.8            # IUGG mean Earth radius, for the spherical comparison
+
+
+def _version(module, dist):
+    try:
+        from importlib.metadata import version
+        return version(dist)
+    except Exception:  # noqa: BLE001 - metadata may be missing when the module is imported from a source tree
+        return getattr(module, "__version__", "?")
+
+
+def _tool(module, dist):
+    return {"name": dist, "version": _version(module, dist)}
+
+
+class TaskError(Exception):
+    def __init__(self, code, **args):
+        super().__init__(code)
+        self.code, self.args_ = code, args
+
+
+def _answer(result, tools, transforms, checks, warnings):
+    return {"ok": True, "result": result, "tools": tools, "transforms": transforms, "checks": checks, "warnings": warnings}
+
+
+def run(task: str, params_json: str, data: bytes | None = None) -> str:
+    """Entry point used by the page: JSON in, JSON out, never an exception."""
+    try:
+        params = json.loads(params_json or "{}")
+        fn = TASKS.get(task)
+        if fn is None:
+            raise TaskError("unknown_task", task=task)
+        out = fn(params, data) if task in ("fingerprint", "p_meta") else fn(params)
+    except Exception as e:  # noqa: BLE001 - the page must always get an answer it can show
+        if hasattr(e, "code") and hasattr(e, "args_"):      # TaskError, or ws_products.ProductError
+            out = {"ok": False, "error": {"code": e.code, "args": e.args_}}
+        else:
+            out = {"ok": False, "error": {"code": "internal", "args": {"detail": f"{type(e).__name__}: {e}"[:300]}}}
+    return json.dumps(out, ensure_ascii=False, allow_nan=False, default=str)
+
+
+# ---------------------------------------------------------------- parsing what people type
+_NUM = re.compile(r"\\d+(?:[.,]\\d+)?")
+_SEP_OK = re.compile(r"^[\\s°'\\"′″dms.,:]*$")
+
+
+def parse_number(text, what):
+    if isinstance(text, (int, float)) and not isinstance(text, bool):
+        if not math.isfinite(text):
+            raise TaskError("not_a_number", field=what, value=str(text))
+        return float(text), None
+    s = "" if text is None else str(text).strip()          # 0 is a value, not an empty field
+    if not s:
+        raise TaskError("empty", field=what)
+    t = s.replace("−", "-")                          # spaces inside are NOT removed: "1 2 3" must not become 123
+    if re.fullmatch(r"[+-]?\\d+,\\d+", t):          # decimal comma, as written in Italy
+        v = float(t.replace(",", "."))
+        return v, {"code": "decimal_comma", "before": s, "after": repr(v)}
+    try:
+        v = float(t)
+    except ValueError:
+        raise TaskError("not_a_number", field=what, value=s[:40]) from None
+    if not math.isfinite(v):
+        raise TaskError("not_a_number", field=what, value=s[:40])
+    return v, None
+
+
+def parse_angle(text, kind):
+    """Decimal degrees ('41.9', '41,9', '-12.5') or degrees, minutes, seconds ('41 54 10 N', '41N', '12d29m46sO')."""
+    if isinstance(text, (int, float)) and not isinstance(text, bool):
+        return parse_number(text, kind)
+    s = "" if text is None else str(text).strip()          # 0 is a value, not an empty field
+    if not s:
+        raise TaskError("empty", field=kind)
+    try:
+        return parse_number(s, kind)
+    except TaskError:
+        pass
+    body = s.replace("−", "-")
+    sign = None
+    if body[:1] in "+-":
+        sign, body = body[0], body[1:]
+    hemi = None
+    last, prev = body[-1:], body[-2:-1]
+    # a final N/S/E/W/O is a hemisphere; after a lowercase unit (10sS) the capital letter is the hemisphere
+    if last.upper() in ("N", "S", "E", "W", "O") and (not prev.isalpha() or (last.isupper() and prev in "dms")):
+        hemi, body = body[-1].upper(), body[:-1]
+    nums = _NUM.findall(body)
+    if not 1 <= len(nums) <= 3 or not _SEP_OK.match(_NUM.sub("", body)):
+        raise TaskError("bad_angle", field=kind, value=s[:40])
+    parts = [float(x.replace(",", ".")) for x in nums] + [0.0, 0.0]
+    deg, mins, secs = parts[0], parts[1], parts[2]
+    if mins >= 60 or secs >= 60 or (len(nums) > 1 and deg != int(deg)):
+        raise TaskError("bad_angle", field=kind, value=s[:40])
+    v = deg + mins / 60 + secs / 3600
+    neg = sign == "-"
+    if hemi:
+        if kind.startswith("lat") and hemi not in "NS" or kind.startswith("lon") and hemi not in "EWO":
+            raise TaskError("wrong_hemisphere", field=kind, value=s[:40])
+        neg = neg != (hemi in "SWO")                        # O = Ovest, west in Italian
+    v = -v if neg else v
+    return v, {"code": "dms_to_decimal", "before": s, "after": f"{v:.8f}"}
+
+
+def _latlon(params, a, b):
+    lat, t1 = parse_angle(params.get(a), "lat")
+    lon, t2 = parse_angle(params.get(b), "lon")
+    if not -90 <= lat <= 90:
+        raise TaskError("lat_range", value=lat)
+    if not -180 <= lon <= 180:
+        raise TaskError("lon_range", value=lon)
+    return lat, lon, [t for t in (t1, t2) if t]
+
+
+# ---------------------------------------------------------------- 1. distance between two places
+def task_distance(params):
+    import star_geodesic as geo
+    import star_sphere as sph
+    lat1, lon1, tr1 = _latlon(params, "lat1", "lon1")
+    lat2, lon2, tr2 = _latlon(params, "lat2", "lon2")
+    checks = [{"code": "coords_in_range", "ok": True, "args": {}}]
+    warnings = []
+    try:
+        s12, az1, az2 = geo.inverse(lat1, lon1, lat2, lon2)
+    except RuntimeError:
+        raise TaskError("antipodal") from None
+    sep = sph.separation_deg(lon1, lat1, lon2, lat2)
+    s_sph = math.radians(sep) * R_MEAN_M
+    if s12 == 0:
+        warnings.append({"code": "same_point", "args": {}})
+        checks.append({"code": "round_trip", "ok": True, "args": {"mm": 0.0}})
+    elif s12 > 20_000_000:
+        # star_geodesic.direct() documents a 20,000 km limit; the longest geodesic is about 20,004 km
+        warnings.append({"code": "round_trip_skipped", "args": {"km": s12 / 1000}})
+    else:
+        # forward-backward check: walk the computed distance along the computed azimuth and see where we land
+        lat_b, lon_b, _ = geo.direct(lat1, lon1, az1, s12)
+        back = geo.inverse(lat2, lon2, lat_b, lon_b)[0]
+        checks.append({"code": "round_trip", "ok": back < 1e-3, "args": {"mm": back * 1000}})
+    diff = (s_sph - s12) / s12 * 100 if s12 else 0.0
+    # the path itself, for the map: points along the geodesic (direct problem), within the package's 20,000 km limit
+    path = [[lat1, lon1]]
+    if 0 < s12 <= 20_000_000:
+        for k in range(1, 64):
+            la, lo, _ = geo.direct(lat1, lon1, az1, s12 * k / 64)
+            path.append([la, lo])
+    path.append([lat2, lon2])
+    return _answer(
+        {"distance_m": s12, "distance_km": s12 / 1000, "azimuth_start_deg": az1, "azimuth_end_deg": az2,
+         "spherical_km": s_sph / 1000, "spherical_diff_percent": diff, "separation_deg": sep,
+         "points": [[lat1, lon1], [lat2, lon2]], "path": path},
+        [_tool(geo, "star-geodesic"), _tool(sph, "star-sphere")], tr1 + tr2, checks, warnings)
+
+
+# ---------------------------------------------------------------- 2. coordinate formats
+def _dms_text(fields, pos, neg):
+    sign, d, m, s, frac = fields
+    return f"{d}°{m:02d}'{s:02d}.{frac:03d}\\" {neg if sign == '-' else pos}"
+
+
+def task_coords(params):
+    import star_geodesic as geo
+    import star_sexagesimal as sx
+    import star_utm as utm
+    lat, lon, tr = _latlon(params, "lat", "lon")
+    checks, warnings = [{"code": "coords_in_range", "ok": True, "args": {}}], []
+    res = {"lat": lat, "lon": lon, "lat_dms": _dms_text(sx.deg_to_dms(lat, 3), "N", "S"), "lon_dms": _dms_text(sx.deg_to_dms(lon, 3), "E", "W")}
+    back = sx.dms_to_deg(*sx.deg_to_dms(lat, 6)[:3], sx.deg_to_dms(lat, 6)[3] + sx.deg_to_dms(lat, 6)[4] / 1e6)
+    checks.append({"code": "dms_round_trip", "ok": abs(back - lat) < 1e-9, "args": {"deg": abs(back - lat)}})
+    tools = [_tool(sx, "star-sexagesimal")]
+    if -80 <= lat <= 84:
+        zone, hemi, e, n = utm.utm_forward(lat, lon)
+        lat_b, lon_b = utm.utm_inverse(zone, hemi, e, n)
+        err = geo.inverse(lat, lon, lat_b, lon_b)[0]
+        res.update({"utm_zone": zone, "utm_hemisphere": hemi, "utm_easting": e, "utm_northing": n})
+        checks.append({"code": "utm_round_trip", "ok": err < 1e-3, "args": {"mm": err * 1000}})
+        tools += [_tool(utm, "star-utm"), _tool(geo, "star-geodesic")]
+        if 56 <= lat < 64 and 3 <= lon < 12 or 72 <= lat <= 84 and 0 <= lon < 42:
+            warnings.append({"code": "utm_special_zone", "args": {"zone": zone}})
+    else:
+        warnings.append({"code": "utm_polar", "args": {}})
+    return _answer(res, tools, tr, checks, warnings)
+
+
+# ---------------------------------------------------------------- CSV reading shared by tasks 3 and 4
+def _read_table(text):
+    if not isinstance(text, str) or not text.strip():
+        raise TaskError("empty_file")
+    if len(text) > MAX_TEXT:
+        raise TaskError("file_too_big", limit_mb=MAX_TEXT // 1_000_000)
+    transforms = []
+    if text.startswith("﻿"):
+        text = text[1:]
+        transforms.append({"code": "bom_removed", "before": "BOM", "after": ""})
+    sample = text[:20000]
+    # a binary file read as text is full of control characters: say so instead of inventing columns
+    controls = sum(1 for ch in sample if (ord(ch) < 32 and ch not in "\\t\\r\\n") or ch == "\\ufffd")
+    if controls > max(5, len(sample) // 100):
+        raise TaskError("not_text")
+    counts = {d: sample.count(d) for d in (";", "\\t", ",", "|")}          # "|" added 2026-10-19 (mandate input matrix)
+    delim = max(counts, key=counts.get) if any(counts.values()) else ","
+    try:
+        # newline="" as the csv module requires, so a lone carriage return inside a cell is not an error
+        rows = list(csv.reader(io.StringIO(text, newline=""), delimiter=delim))
+    except csv.Error as e:
+        raise TaskError("bad_csv", detail=str(e)[:120]) from None
+    rows = [r for r in rows if any(c.strip() for c in r)]
+    if not rows:
+        raise TaskError("empty_file")
+    if len(rows) > MAX_ROWS:
+        raise TaskError("too_many_rows", limit=MAX_ROWS)
+    decimal_comma = delim != "," and any(re.fullmatch(r"\\s*[+-]?\\d+,\\d+\\s*", c) for r in rows[:200] for c in r)
+
+    def num(cell):
+        c = cell.strip().replace("−", "-")
+        if not c:
+            return None, "missing"
+        if decimal_comma:
+            c2 = c.replace(".", "").replace(",", ".") if re.fullmatch(r"[+-]?\\d{1,3}(\\.\\d{3})+(,\\d+)?|[+-]?\\d+,\\d+|[+-]?\\d+", c) else c
+        else:
+            c2 = c.replace(",", "") if re.fullmatch(r"[+-]?\\d{1,3}(,\\d{3})+(\\.\\d+)?", c) else c
+        try:
+            v = float(c2)
+        except ValueError:
+            return None, "non_numeric"
+        if not math.isfinite(v):
+            return None, "non_numeric"
+        return v, ("converted" if c2 != c else "ok")
+    first_numeric = sum(num(c)[0] is not None for c in rows[0])
+    header = first_numeric < max(1, len(rows[0]) // 2) and len(rows) > 1
+    names = [c.strip() or f"col{k + 1}" for k, c in enumerate(rows[0])] if header else [f"col{k + 1}" for k in range(len(rows[0]))]
+    body = rows[1:] if header else rows
+    width = len(names)
+    ragged = [k + (2 if header else 1) for k, r in enumerate(body) if len(r) != width]
+    return {"delimiter": delim, "decimal_comma": decimal_comma, "header": header, "names": names, "body": body,
+            "ragged": ragged, "num": num, "transforms": transforms}
+
+
+def _column(tab, wanted):
+    names = tab["names"]
+    if wanted in (None, ""):
+        best, best_n = None, -1
+        for k in range(len(names)):
+            n = sum(tab["num"](r[k])[0] is not None for r in tab["body"][:500] if k < len(r))
+            if n > best_n:
+                best, best_n = k, n
+        return best
+    if isinstance(wanted, int) or str(wanted).isdigit():
+        k = int(wanted)
+        if not 0 <= k < len(names):
+            raise TaskError("no_column", name=str(wanted))
+        return k
+    if wanted in names:
+        return names.index(wanted)
+    raise TaskError("no_column", name=str(wanted)[:40])
+
+
+# ---------------------------------------------------------------- 3. check and summarise a column of numbers
+def task_column(params):
+    import star_quantile as qn
+    import star_stats as st
+    tab = _read_table(params.get("text"))
+    k = _column(tab, params.get("column"))
+    name = tab["names"][k]
+    values, statuses, transforms, bad = [], [], list(tab["transforms"]), []
+    first_row = 2 if tab["header"] else 1
+    for i, r in enumerate(tab["body"]):
+        cell = r[k] if k < len(r) else ""
+        v, status = tab["num"](cell)
+        statuses.append(status)
+        if v is None:
+            bad.append({"row": first_row + i, "value": cell[:40], "why": status})
+        else:
+            values.append((first_row + i, v))
+            if status == "converted" and sum(t["code"] == "number_format" for t in transforms) < 10:
+                transforms.append({"code": "number_format", "before": cell.strip(), "after": repr(v)})
+    n_conv = sum(s == "converted" for s in statuses)
+    checks = [
+        {"code": "columns_consistent", "ok": not tab["ragged"], "args": {"rows": tab["ragged"][:10], "count": len(tab["ragged"])}},
+        {"code": "numeric_share", "ok": len(values) >= 0.9 * len(statuses), "args": {"numeric": len(values), "total": len(statuses)}},
+    ]
+    if len(values) < 2:
+        raise TaskError("too_few_values", n=len(values), column=name[:40])
+    xs = [v for _, v in values]
+    med, mad = qn.median(xs), qn.mad(xs)
+    # modified z-score (Iglewicz and Hoaglin): |x - median| / (1.4826 MAD) above 3.5 is flagged for a person to look at
+    scale = 1.4826 * mad
+    outliers = [{"row": r, "value": v, "score": abs(v - med) / scale} for r, v in values if scale > 0 and abs(v - med) / scale > 3.5]
+    checks.append({"code": "outliers", "ok": not outliers, "args": {"count": len(outliers)}})
+    res = {"column": name, "columns": tab["names"], "delimiter": tab["delimiter"], "decimal_comma": tab["decimal_comma"], "header": tab["header"],
+           "n": len(xs), "missing": sum(s == "missing" for s in statuses), "non_numeric": sum(s == "non_numeric" for s in statuses),
+           "converted": n_conv, "mean": st.mean(xs), "stdev": st.stdev(xs), "min": min(xs), "max": max(xs), "median": med,
+           "q1": qn.quantile(xs, 0.25), "q3": qn.quantile(xs, 0.75), "iqr": qn.iqr(xs), "mad": mad,
+           "bad_rows": bad[:20], "bad_total": len(bad), "outliers": sorted(outliers, key=lambda o: -o["score"])[:20], "outliers_total": len(outliers)}
+    # a cleaned copy: the original columns plus the number read and its status, row by row
+    out = io.StringIO()
+    w = csv.writer(out, lineterminator="\\n")
+    w.writerow(tab["names"] + [f"{name}_value", f"{name}_status"])
+    flagged = {o["row"] for o in outliers}
+    for i, r in enumerate(tab["body"]):
+        v, status = tab["num"](r[k] if k < len(r) else "")
+        status = "outlier" if first_row + i in flagged else status
+        w.writerow(list(r) + (["" for _ in range(len(tab["names"]) - len(r))] if len(r) < len(tab["names"]) else []) + ["" if v is None else repr(v), status])
+    res["cleaned_csv"] = out.getvalue()
+    warnings = [{"code": "converted_numbers", "args": {"count": n_conv}}] if n_conv else []
+    return _answer(res, [_tool(st, "star-stats"), _tool(qn, "star-quantile")], transforms, checks, warnings)
+
+
+# ---------------------------------------------------------------- 4. straight-line fit
+def task_linefit(params):
+    import star_linefit as lf
+    tab = _read_table(params.get("text"))
+    if len(tab["names"]) < 2:
+        raise TaskError("need_two_columns")
+    kx = _column(tab, params.get("x") if params.get("x") not in (None, "") else 0)
+    ky = _column(tab, params.get("y") if params.get("y") not in (None, "") else (1 if kx != 1 else 0))
+    if kx == ky:
+        raise TaskError("same_column")
+    pts, skipped = [], []
+    first_row = 2 if tab["header"] else 1
+    for i, r in enumerate(tab["body"]):
+        x, sx_ = tab["num"](r[kx] if kx < len(r) else "")
+        y, sy_ = tab["num"](r[ky] if ky < len(r) else "")
+        (pts.append((x, y)) if x is not None and y is not None else skipped.append(first_row + i))
+    if len(pts) < 3:
+        raise TaskError("too_few_points", n=len(pts))
+    xs, ys = [p[0] for p in pts], [p[1] for p in pts]
+    if max(xs) == min(xs):
+        raise TaskError("x_constant")
+    slope, intercept = lf.fit(xs, ys)
+    s_slope, s_icpt, s_res = lf.fit_errors(xs, ys)
+    try:
+        r = lf.correlation(xs, ys)
+    except ValueError:
+        r = float("nan")
+    resid = [y - (slope * x + intercept) for x, y in pts]
+    worst = max(range(len(pts)), key=lambda i: abs(resid[i]))
+    checks = [{"code": "enough_points", "ok": len(pts) >= 5, "args": {"n": len(pts)}},
+              {"code": "rows_skipped", "ok": not skipped, "args": {"count": len(skipped), "rows": skipped[:10]}}]
+    if s_res > 0 and abs(resid[worst]) > 3 * s_res:
+        checks.append({"code": "large_residual", "ok": False, "args": {"x": xs[worst], "y": ys[worst], "times": abs(resid[worst]) / s_res}})
+    res = {"x_name": tab["names"][kx], "y_name": tab["names"][ky], "n": len(pts), "slope": slope, "intercept": intercept,
+           "slope_err": s_slope, "intercept_err": s_icpt, "residual_sd": s_res, "r": None if math.isnan(r) else r,
+           "r2": None if math.isnan(r) else r * r, "points": pts[:2000], "columns": tab["names"]}
+    return _answer(res, [_tool(lf, "star-linefit")], list(tab["transforms"]), checks, [])
+
+
+# ---------------------------------------------------------------- 5. file fingerprint
+def _reflect32(v):
+    out = 0
+    for _ in range(32):
+        out = (out << 1) | (v & 1)
+        v >>= 1
+    return out
+
+
+def crc32_star(sc, data):
+    """CRC-32/ISO-HDLC with star_crc, which accepts at most 64 KiB per call: blocks are chained by passing the
+    register on (reflected back, because the algorithm is reflected). Equal to zlib.crc32 at every length (tested)."""
+    if len(data) <= sc.MAX_BYTES:
+        return sc.crc32(data)
+    state = 0xFFFFFFFF
+    for i in range(0, len(data), sc.MAX_BYTES):
+        state = _reflect32(sc.crc(data[i:i + sc.MAX_BYTES], 32, 0x04C11DB7, state, True, True, 0))
+    return _reflect32(state) ^ 0xFFFFFFFF
+def task_fingerprint(params, data):
+    import star_crc as sc
+    if data is None or len(data) == 0:
+        raise TaskError("empty_file")
+    sha256 = hashlib.sha256(data).hexdigest()
+    res = {"bytes": len(data), "sha256": sha256, "sha1": hashlib.sha1(data).hexdigest(), "md5": hashlib.md5(data).hexdigest()}
+    checks, warnings, tools = [], [], [{"name": "hashlib, zlib (Python standard library)", "version": "-"}]
+    c2 = zlib.crc32(data) & 0xFFFFFFFF
+    res["crc32"] = f"{c2:08x}"
+    if len(data) <= MAX_CRC_BYTES:
+        c1 = crc32_star(sc, data)
+        checks.append({"code": "crc_two_implementations", "ok": c1 == c2, "args": {"star": f"{c1:08x}", "zlib": f"{c2:08x}"}})
+        tools.insert(0, _tool(sc, "star-crc"))
+    else:
+        warnings.append({"code": "crc_skipped", "args": {"limit_mb": MAX_CRC_BYTES // 1_000_000}})
+    expected = re.sub(r"[\\s:-]", "", str(params.get("expected") or "")).lower()
+    if expected:
+        kind = {8: "crc32", 32: "md5", 40: "sha1", 64: "sha256"}.get(len(expected))
+        if not kind or not re.fullmatch(r"[0-9a-f]+", expected):
+            raise TaskError("bad_expected", length=len(expected))
+        res["compared"] = kind
+        res["match"] = res[kind] == expected
+        checks.append({"code": "matches_expected", "ok": res["match"], "args": {"kind": kind}})
+    return _answer(res, tools, [], checks, warnings)
+
+
+# ---------------------------------------------------------------- 6. unit conversion
+def task_units(params):
+    import star_units as su
+    v, tr = parse_number(params.get("value"), "value")
+    a, b = str(params.get("from") or ""), str(params.get("to") or "")
+    known = su.units()
+    if a not in known or b not in known:
+        raise TaskError("unknown_unit", unit=a if a not in known else b)
+    da, db = su.dimension(a), su.dimension(b)
+    if da != db:
+        raise TaskError("different_dimensions", a=a, da=da, b=b, db=db)
+    try:
+        if da == "temperature":
+            out = su.convert_temperature(v, a, b)
+            back = su.convert_temperature(out, b, a)
+        else:
+            out = su.convert(v, a, b)
+            back = su.convert(out, b, a)
+    except ValueError as e:
+        raise TaskError("unit_refused", detail=str(e)[:120]) from None
+    rel = abs(back - v) / abs(v) if v else abs(back)
+    checks = [{"code": "same_dimension", "ok": True, "args": {"dimension": da}},
+              {"code": "unit_round_trip", "ok": rel < 1e-12, "args": {"rel": rel}}]
+    res = {"value": v, "from": a, "to": b, "result": out, "dimension": da,
+           "factor": None if da == "temperature" or v == 0 else out / v}
+    return _answer(res, [_tool(su, "star-units")], [tr] if tr else [], checks, [])
+
+
+def units_catalogue():
+    import star_units as su
+    out = {}
+    for u in su.units():
+        out.setdefault(su.dimension(u), []).append(u)
+    return json.dumps(out)
+
+
+TASKS = {"distance": task_distance, "coords": task_coords, "column": task_column, "linefit": task_linefit,
+         "fingerprint": task_fingerprint, "units": task_units}
+
+# the everyday products (first batch 2026-10-20) live in ws_products.py; the page loads that module before this one.
+# Imported without a fallback on purpose: a missing products module must fail loudly, not hide the products.
+import ws_products  # noqa: E402
+
+TASKS.update(ws_products.TASKS)
+
+
+# ---------------------------------------------------------------- what can be checked in this file? (MO-W05, 2026-10-20)
+# Looks at a file or pasted text HERE, in the browser, and says what each column holds - numbers, dates, Italian tax
+# codes, VAT numbers, IBANs, coordinates - with how many values are valid, and which Workspace tools fit. A column is
+# called by the kind that at least 60% of its non-empty values have; tax codes, VAT numbers and IBANs are counted
+# valid only when their check character or digits are right (the same engines as the released products).
+DETECT_SAMPLE = 5000            # values looked at per column (declared in the result)
+DETECT_SHARE = 0.6
+_LAT = re.compile(r"(?i)^(lat|latitude|latitudine|lat\\.)$")
+_LON = re.compile(r"(?i)^(lon|lng|long|longitude|longitudine|lon\\.)$")
+_TLE1 = re.compile(r"^1 [0-9 ]{5}[A-Z ] ")
+_TLE2 = re.compile(r"^2 [0-9 ]{5} ")
+
+
+def _kind_of(cell, num):
+    """The kinds one cell can be, and whether it is valid as that kind."""
+    c = cell.strip()
+    out = {}
+    if not c:
+        return out
+    u = re.sub(r"[\\s\\-.]", "", c).upper()
+    if len(u) == 16 and ws_products.CF_RE.fullmatch(u):
+        base = "".join(ws_products.OMO.get(ch, ch) if i in ws_products.OMO_POS else ch for i, ch in enumerate(u))
+        out["cf"] = ws_products.cf_check_char(u[:15]) == u[15] and base[9:11].isdigit()
+    p = u[2:] if u.startswith("IT") and len(u) == 13 else u
+    if len(p) == 11 and p.isdigit():
+        out["piva"] = ws_products.piva_check_digit_italian(p[:10]) == int(p[10])
+    if 15 <= len(u) <= 34 and u[:2].isalpha() and u[2:4].isdigit() and u.isalnum():
+        out["iban"] = ws_products.IBAN_LEN.get(u[:2]) == len(u) and ws_products.iban_mod97(u) == 1
+    try:
+        ws_products._parse_date(c, "x")
+        out["date"] = True
+    except ws_products.ProductError:
+        pass
+    v, _st = num(c)
+    if v is not None:
+        out["number"] = True
+    return out
+
+
+def task_detect(params):
+    text = params.get("text")
+    if not isinstance(text, str) or not text.strip():
+        raise TaskError("empty_file")
+    lines = [ln for ln in text.splitlines() if ln.strip()]
+    tle = sum(1 for k in range(len(lines) - 1) if _TLE1.match(lines[k]) and _TLE2.match(lines[k + 1]))
+    if tle:
+        res = {"kind": "tle", "rows": len(lines), "tle_sets": tle, "columns": [], "suggestions": [{"task": "fingerprint", "reason": "fp_any"}],
+               "planned": [{"code": "tle_check"}], "sampled": False}
+        return _answer(res, [{"name": "ws_tasks.detect (S.T.A.R. Workspace)", "version": "0.1.0"}], [],
+                       [{"code": "detect_tle", "ok": True, "args": {"n": tle}}], [])
+    tab = _read_table(text)
+    names, body, num = tab["names"], tab["body"], tab["num"]
+    cols, sampled = [], False
+    for j, name in enumerate(names):
+        values = [(k, r[j]) for k, r in enumerate(body) if j < len(r) and r[j].strip()]
+        if len(values) > DETECT_SAMPLE:
+            values, sampled = values[:DETECT_SAMPLE], True
+        n = len(values)
+        counts, valid, first_bad = {}, {}, {}
+        for k, cell in values:
+            for kind, ok in _kind_of(cell, num).items():
+                counts[kind] = counts.get(kind, 0) + 1
+                valid[kind] = valid.get(kind, 0) + (1 if ok else 0)
+                if not ok and kind not in first_bad:
+                    first_bad[kind] = {"row": k + (2 if tab["header"] else 1), "value": cell.strip()[:40]}
+        kind = "text" if n else "empty"
+        for k in ("cf", "iban", "piva", "date", "number"):          # the most specific kind that most values have
+            if n and counts.get(k, 0) >= DETECT_SHARE * n:
+                kind = k
+                break
+        if kind == "number" and tab["header"] and (_LAT.match(name.strip()) or _LON.match(name.strip())):
+            kind = "lat" if _LAT.match(name.strip()) else "lon"
+        col = {"name": name, "kind": kind, "n": n}
+        if kind in ("cf", "piva", "iban"):
+            col.update({"valid": valid.get(kind, 0), "invalid": counts.get(kind, 0) - valid.get(kind, 0),
+                        "other": n - counts.get(kind, 0), "first_invalid": first_bad.get(kind),
+                        "first_value": values[0][1].strip()[:40] if values else ""})
+        if kind == "date":
+            ds = sorted(ws_products._parse_date(c, "x") for _k, c in values if "date" in _kind_of(c, num))
+            col.update({"first": ds[0].isoformat(), "last": ds[-1].isoformat()})
+        cols.append(col)
+    sug = []
+    for kind, task in (("cf", "p_cf"), ("piva", "p_piva"), ("iban", "p_iban")):
+        for c in cols:
+            if c["kind"] == kind:
+                example = (c["first_invalid"] or {}).get("value") or c["first_value"]
+                sug.append({"task": task, "column": c["name"], "reason": f"{kind}_col",
+                            "args": {"n": c["n"], "valid": c["valid"], "invalid": c["invalid"]}, "preset": {"code": example}})
+    for c in cols:
+        if c["kind"] == "date":
+            sug.append({"task": "p_workdays", "column": c["name"], "reason": "date_col", "args": {"first": c["first"], "last": c["last"]},
+                        "preset": {"mode": "between", "start": c["first"], "end": c["last"]}})
+            break
+    lat = next((c for c in cols if c["kind"] == "lat"), None)
+    lon = next((c for c in cols if c["kind"] == "lon"), None)
+    if lat and lon:
+        j1, j2 = names.index(lat["name"]), names.index(lon["name"])
+        pts = [(r[j1].strip(), r[j2].strip()) for r in body if max(j1, j2) < len(r) and r[j1].strip() and r[j2].strip()][:2]
+        sug.append({"task": "coords", "column": f"{lat['name']}, {lon['name']}", "reason": "latlon_cols", "args": {"n": lat["n"]},
+                    "preset": {"lat": pts[0][0], "lon": pts[0][1]}})
+        if len(pts) == 2:
+            sug.append({"task": "distance", "column": f"{lat['name']}, {lon['name']}", "reason": "latlon_two", "args": {},
+                        "preset": {"lat1": pts[0][0], "lon1": pts[0][1], "lat2": pts[1][0], "lon2": pts[1][1]}})
+    def row_counter(name):                     # 1, 2, 3... (or any step-1 integer run): a row number, not a measurement
+        j = names.index(name)
+        vals = [num(r[j])[0] for r in body if j < len(r) and r[j].strip()][:DETECT_SAMPLE]
+        return len(vals) > 2 and all(v is not None and v == int(v) for v in vals) and all(b - a == 1 for a, b in zip(vals, vals[1:]))
+    # measurements only: coordinates and row counters are not offered to the column and line tools
+    numeric = [c for c in cols if c["kind"] == "number" and not row_counter(c["name"])]
+    for c in numeric[:1]:
+        sug.append({"task": "column", "column": c["name"], "reason": "num_col", "args": {"n": c["n"]}, "preset": {"text": "__file__", "column": c["name"]}})
+    if len(numeric) >= 2:
+        sug.append({"task": "linefit", "column": f"{numeric[0]['name']}, {numeric[1]['name']}", "reason": "two_num", "args": {},
+                    "preset": {"text": "__file__", "x": numeric[0]["name"], "y": numeric[1]["name"]}})
+    sug.append({"task": "fingerprint", "reason": "fp_any", "args": {}})
+    planned = [{"code": "register_batch"}] if any(c["kind"] in ("cf", "piva", "iban") for c in cols) else []
+    res = {"kind": "table", "rows": len(body), "header": tab["header"], "delimiter": tab["delimiter"], "decimal_comma": tab["decimal_comma"],
+           "columns": cols, "suggestions": sug, "planned": planned, "sampled": sampled, "sample_limit": DETECT_SAMPLE}
+    checks = [{"code": "detect_read", "ok": True, "args": {"rows": len(body), "cols": len(cols)}}]
+    warnings = [{"code": "detect_sampled", "args": {"limit": DETECT_SAMPLE}}] if sampled else []
+    return _answer(res, [{"name": "ws_tasks.detect (S.T.A.R. Workspace)", "version": "0.1.0"}], list(tab["transforms"]), checks, warnings)
+
+
+TASKS["detect"] = task_detect
+`),await r.runPythonAsync(`import sys, types
+_m = types.ModuleType('ws_tasks')
+exec(_ws_src, _m.__dict__)
+sys.modules['ws_tasks'] = _m
+del _m, _ws_src
+`),r.globals.set(`_wf_src`,`"""S.T.A.R. Workspace workflow (MO-W06, 2026-10-20): several checks on the SAME table in one pass, a before/after list
+of every value read differently, a cleaned table and one receipt (its specification was written before this code).
+The "codes" step is the engine of product GP-027 (register cleaning). This file is sent to the browser as it is.
+
+Steps, each at most once, at most 4:
+  numbers      measurement and amount columns: the number read and its status, with the column tool's reader
+  codes        Italian tax codes, VAT numbers and IBANs: the released product engines (ws_products), row by row
+  dates        dates in the four formats of the products: the ISO date and its status
+  fingerprint  SHA-256 of the text given and of the cleaned table
+A step is a name (its columns are the ones the detection gives that kind) or {"step", "columns"}.
+
+Nothing is corrected. A value is read, normalised (spaces removed, upper case, ISO date) and marked; a wrong check
+character is reported, never replaced. The original columns are written back unchanged and the answer proves it by
+reading the cleaned table again.
+"""
+from __future__ import annotations
+
+import csv
+import hashlib
+import io
+
+import ws_products as wp
+import ws_tasks as wt
+
+VERSION = "0.1.0"
+TOOL = {"name": "S.T.A.R. Workspace workflow (ws_workflow)", "version": VERSION}
+STEPS = ("numbers", "codes", "dates", "fingerprint")
+MAX_STEPS = 4
+MAX_COLS = 20                    # columns per step
+DIFF_SHOWN = 200                 # before/after lines returned; the total is always given
+CODE_TASK = {"cf": wp.task_cf, "piva": wp.task_piva, "iban": wp.task_iban}
+CODE_FIELD = {"cf": "code", "piva": "code", "iban": "iban"}
+
+
+def _plan(params, tab, text):
+    """The steps asked, each with its columns: given, or taken from the detection of the same text."""
+    steps = params.get("steps")
+    if not isinstance(steps, list) or not steps:
+        raise wt.TaskError("wf_no_steps")
+    if len(steps) > MAX_STEPS:
+        raise wt.TaskError("wf_too_many_steps", limit=MAX_STEPS)
+    asked, seen = [], set()
+    for s in steps:                                       # the shape of the plan first, then its columns
+        name, cols = (s, None) if isinstance(s, str) else (s.get("step") if isinstance(s, dict) else None, s.get("columns") if isinstance(s, dict) else None)
+        if name not in STEPS:
+            raise wt.TaskError("wf_unknown_step", step=str(name)[:30])
+        if name in seen:
+            raise wt.TaskError("wf_step_twice", step=name)
+        seen.add(name)
+        asked.append((name, cols))
+    detected = None
+    plan, skipped = [], []
+    for name, cols in asked:
+        if name != "fingerprint" and cols is None:
+            if detected is None:
+                detected = wt.task_detect({"text": text})["result"]["columns"]
+            cols = _auto_columns(name, detected, tab)
+            if not cols:                                  # ticked by default, nothing of its kind here: skipped, and said
+                skipped.append(name)
+                continue
+        if name == "codes":
+            if not isinstance(cols, dict):
+                raise wt.TaskError("wf_bad_columns", step=name)
+            bad = [k for k in cols.values() if k not in CODE_TASK]
+            if bad:
+                raise wt.TaskError("wf_code_kind", kind=str(bad[0])[:20])
+        elif name != "fingerprint":
+            if not isinstance(cols, list) or not all(isinstance(c, (str, int)) for c in cols):
+                raise wt.TaskError("wf_bad_columns", step=name)
+        if name != "fingerprint":
+            if not cols:
+                raise wt.TaskError("wf_no_columns", step=name)
+            if len(cols) > MAX_COLS:
+                raise wt.TaskError("wf_too_many_columns", step=name, limit=MAX_COLS)
+            for c in cols:
+                wt._column(tab, c)                        # an unknown column is an error with its name, not a crash
+        plan.append((name, cols))
+    if not any(name != "fingerprint" for name, _c in plan) and skipped:
+        raise wt.TaskError("wf_no_columns", step=skipped[0])       # nothing left to check but a fingerprint
+    return plan, skipped
+
+
+def _row_counter(tab, j):
+    """1, 2, 3...: a row number, not a measurement (the rule of the detection's suggestions)."""
+    vals = [tab["num"](r[j])[0] for r in tab["body"] if j < len(r) and r[j].strip()][:wt.DETECT_SAMPLE]
+    return len(vals) > 2 and all(v is not None and v == int(v) for v in vals) and all(b - a == 1 for a, b in zip(vals, vals[1:]))
+
+
+def _auto_columns(step, detected, tab):
+    if step == "codes":
+        return {c["name"]: c["kind"] for c in detected if c["kind"] in CODE_TASK}
+    if step == "dates":
+        return [c["name"] for c in detected if c["kind"] == "date"]
+    return [c["name"] for c in detected if c["kind"] == "number" and not _row_counter(tab, tab["names"].index(c["name"]))]
+
+
+def _code(kind, cell):
+    """One value through the released engine: (normalised, valid, reason). The reason is the code of the first check
+    that failed, or of the error that stopped the engine (wrong length, letters in a VAT number...)."""
+    try:
+        out = CODE_TASK[kind]({"code": cell})
+    except wp.ProductError as e:
+        return "", "no", e.code
+    res = out["result"]
+    failed = next((c["code"] for c in out["checks"] if not c["ok"] and c["code"] != "cf_omocode_order"), "")
+    return res[CODE_FIELD[kind]], "yes" if res["valid"] else "no", failed
+
+
+def task_workflow(params):
+    text = params.get("text")
+    tab = wt._read_table(text)
+    plan, skipped = _plan(params, tab, text)
+    names, body = tab["names"], tab["body"]
+    width = len(names)
+    # every row as wide as the widest one, so the added columns stay aligned; a longer row keeps all its cells
+    full = max([width] + [len(r) for r in body])
+    first_row = 2 if tab["header"] else 1
+    rows = [list(r) + [""] * (full - len(r)) for r in body]
+    head = names + [""] * (full - width)
+    added, extra = [], [[] for _ in rows]
+    taken = set(names)
+
+    def new_col(label):
+        out, k = label, 2
+        while out in taken:
+            out, k = f"{label}_{k}", k + 1
+        taken.add(out)
+        added.append(out)
+        return out
+
+    diff, steps_out, checks, tools = [], [], [], [TOOL]
+    for step, cols in plan:
+        if step == "numbers":
+            summary = []
+            for c in cols:
+                j = wt._column(tab, c)
+                new_col(f"{names[j]}_value")
+                new_col(f"{names[j]}_status")
+                n = {"ok": 0, "converted": 0, "missing": 0, "non_numeric": 0}
+                for i, r in enumerate(rows):
+                    v, status = tab["num"](r[j])
+                    n[status] += 1
+                    extra[i] += ["" if v is None else repr(v), status]
+                    if status == "converted":
+                        diff.append({"row": first_row + i, "column": names[j], "before": r[j].strip(), "after": repr(v), "why": "number_format"})
+                summary.append({"column": names[j], **n})
+                checks.append({"code": "wf_numbers", "ok": n["non_numeric"] == 0, "args": {"column": names[j], "read": n["ok"] + n["converted"], "n": len(rows)}})
+            steps_out.append({"step": step, "columns": summary})
+        elif step == "codes":
+            summary = []
+            for c, kind in cols.items():
+                j = wt._column(tab, c)
+                for suffix in ("normalised", "valid", "reason"):
+                    new_col(f"{names[j]}_{suffix}")
+                n = {"valid": 0, "invalid": 0, "missing": 0}
+                for i, r in enumerate(rows):
+                    cell = r[j].strip()
+                    if not cell:
+                        n["missing"] += 1
+                        extra[i] += ["", "", "missing"]
+                        continue
+                    norm, valid, reason = _code(kind, cell)
+                    n["valid" if valid == "yes" else "invalid"] += 1
+                    extra[i] += [norm, valid, reason]
+                    if norm and norm != cell:
+                        diff.append({"row": first_row + i, "column": names[j], "before": cell, "after": norm, "why": "normalised"})
+                summary.append({"column": names[j], "kind": kind, **n})
+                checks.append({"code": "wf_codes", "ok": n["invalid"] == 0, "args": {"column": names[j], "kind": kind, "valid": n["valid"], "n": n["valid"] + n["invalid"]}})
+            steps_out.append({"step": step, "columns": summary})
+            if wp.TOOL not in tools:
+                tools.append(wp.TOOL)
+        elif step == "dates":
+            summary = []
+            for c in cols:
+                j = wt._column(tab, c)
+                new_col(f"{names[j]}_iso")
+                new_col(f"{names[j]}_status")
+                n = {"ok": 0, "converted": 0, "invalid": 0, "missing": 0}
+                for i, r in enumerate(rows):
+                    cell = r[j].strip()
+                    if not cell:
+                        n["missing"] += 1
+                        extra[i] += ["", "missing"]
+                        continue
+                    try:
+                        iso = wp._parse_date(cell, "x").isoformat()
+                    except wp.ProductError:
+                        n["invalid"] += 1
+                        extra[i] += ["", "invalid"]
+                        continue
+                    status = "ok" if iso == cell else "converted"
+                    n[status] += 1
+                    extra[i] += [iso, status]
+                    if status == "converted":
+                        diff.append({"row": first_row + i, "column": names[j], "before": cell, "after": iso, "why": "date_iso"})
+                summary.append({"column": names[j], **n})
+                checks.append({"code": "wf_dates", "ok": n["invalid"] == 0, "args": {"column": names[j], "read": n["ok"] + n["converted"], "n": n["ok"] + n["converted"] + n["invalid"]}})
+            steps_out.append({"step": step, "columns": summary})
+            if wp.TOOL not in tools:
+                tools.append(wp.TOOL)
+        else:
+            steps_out.append({"step": step, "columns": []})
+    out = io.StringIO()
+    w = csv.writer(out, delimiter=tab["delimiter"], lineterminator="\\n")
+    w.writerow(head + added)
+    for r, e in zip(rows, extra):
+        w.writerow(r + e)
+    cleaned = out.getvalue()
+    # the original columns are written back unchanged: read the cleaned table again and compare, cell by cell
+    back = list(csv.reader(io.StringIO(cleaned, newline=""), delimiter=tab["delimiter"]))
+    kept = back[0][:width] == names and len(back) - 1 == len(rows) and all(b[:full] == r for b, r in zip(back[1:], rows))
+    checks.append({"code": "wf_original_kept", "ok": kept, "args": {"rows": len(rows), "columns": width}})
+    res = {"rows": len(rows), "columns": names, "delimiter": tab["delimiter"], "header": tab["header"], "steps": steps_out,
+           "added_columns": added, "diff": diff[:DIFF_SHOWN], "diff_total": len(diff), "cleaned_csv": cleaned}
+    if any(s == "fingerprint" for s, _c in plan):
+        res["input_sha256"] = hashlib.sha256(text.encode("utf-8")).hexdigest()
+        res["output_sha256"] = hashlib.sha256(cleaned.encode("utf-8")).hexdigest()
+        tools.append({"name": "hashlib (Python standard library)", "version": "-"})
+    transforms = list(tab["transforms"])
+    if not tab["header"]:                                 # the cleaned table names its columns: a first row is added
+        transforms.append({"code": "wf_header_added", "before": "", "after": ", ".join(names[:6])})
+    transforms += [{"code": f"wf_{d['why']}", "before": d["before"][:60], "after": d["after"][:60]} for d in diff[:10]]
+    warnings = [{"code": "wf_step_skipped", "args": {"step": s}} for s in skipped]
+    if len(diff) > DIFF_SHOWN:
+        warnings.append({"code": "wf_diff_cut", "args": {"shown": DIFF_SHOWN, "total": len(diff)}})
+    if any(s == "codes" for s, _c in plan):
+        warnings.append({"code": "wf_formal_only", "args": {}})
+    if tab["ragged"]:
+        warnings.append({"code": "wf_ragged", "args": {"count": len(tab["ragged"]), "rows": tab["ragged"][:10]}})
+    return wt._answer(res, tools, transforms, checks, warnings)
+
+
+wt.TASKS["workflow"] = task_workflow
+`),await r.runPythonAsync(`import sys, types
+_m = types.ModuleType('ws_workflow')
+exec(_wf_src, _m.__dict__)
+sys.modules['ws_workflow'] = _m
+del _m, _wf_src
+`),t.postMessage({kind:`ready`}),r}let i=null;t.onmessage=async a=>{let o=a.data;if(o.kind===`init`)i=o;else try{n||(n=r(i),n.catch(()=>{n=null}));let a=await n;a.globals.set(`_p`,o.params),a.globals.set(`_task`,o.task),a.globals.set(`_hasd`,o.data!==null),a.globals.set(`_d`,o.data??0);let s=o.hash&&o.data?await e(o.data):null,c=await a.runPythonAsync(`import ws_tasks
+ws_tasks.run(_task, _p, bytes(_d.to_py()) if _hasd else None)`);t.postMessage({kind:`result`,id:o.id,json:c,fp:s})}catch(e){t.postMessage({kind:`failed`,id:o.id,error:String(e.message||e).slice(-4e3)})}};
