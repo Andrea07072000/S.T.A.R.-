@@ -1,8 +1,8 @@
 {
  "owner": "Andrea Cavazzini",
  "contact": "Info.and.News.S.T.A.R@proton.me",
- "version": "1.5",
- "date": "2026-10-20",
+ "version": "1.6",
+ "date": "2026-10-21",
  "legal_review": "not yet performed by a lawyer",
  "files": 210,
  "pages": 538,
@@ -14,10 +14,10 @@
    "title": "Legal notice",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/notice/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 1,
-   "sha256": "925c3cd4587ba017a2638ded710ecfc9fa7d51ab83a02859bd869c75ab5c2d14"
+   "sha256": "201f1926a4b6600bd91eba62518a380c062129a1486abf61a022ba03b4582e85"
   },
   {
    "file": "pdf/STAR-LEGAL-TERMS-EN.pdf",
@@ -26,10 +26,10 @@
    "title": "Website terms of use",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/terms/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "45341bb3ca816f728754ba7a46ed02e0866dbb2fc57a26dde972b02b1ed504ba"
+   "sha256": "5c54d3629cc7419438acd509ea18f6fcd84614240bc6ad2835c27daf2aca4f5a"
   },
   {
    "file": "pdf/STAR-LEGAL-PRIVACY-EN.pdf",
@@ -38,10 +38,10 @@
    "title": "Privacy notice",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/privacy/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 2,
-   "sha256": "820d0c0ec808da4c4a53318ff715feb7b9bb1382d27360c1c2db28de92abbbeb"
+   "sha256": "86ffaf4ffd2cdbf1ebac32923b79afd5337d982dd99135ac1ff9428dc9235b3f"
   },
   {
    "file": "pdf/STAR-LEGAL-COOKIES-EN.pdf",
@@ -50,10 +50,10 @@
    "title": "Cookie notice",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/cookies/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 1,
-   "sha256": "9d8c6a43426b572722c7189d3543c23a30162ce6997e019ba8b320265c008e6b"
+   "sha256": "f7eaa91c86175c41a251c9afd1860a2690feb99692482c2dd5f95cfeac1a7beb"
   },
   {
    "file": "pdf/STAR-LEGAL-EVIDENCE-EN.pdf",
@@ -62,10 +62,10 @@
    "title": "Evidence and verification disclaimer",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/disclaimer/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 2,
-   "sha256": "4e2c35cd43c77fd740b465252d6af852a100ca2a28668c0818256e90b61561c0"
+   "sha256": "c5c579ec7ee1c7ebd5b8b206f2262b3bfa4c3ac34ffeb0b58d35bda0d2221c36"
   },
   {
    "file": "pdf/STAR-LEGAL-SECURITY-EN.pdf",
@@ -74,10 +74,10 @@
    "title": "Vulnerability disclosure policy",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/security/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 1,
-   "sha256": "508b66e3d3451518ae863e11432536f890ceab23a1b1a5978e4a59162df05f02"
+   "sha256": "4d7252ca28ef6832557536c5671d5e608f688e63c204ee7173eee4325ee7ab01"
   },
   {
    "file": "pdf/STAR-LEGAL-LICENSING-EN.pdf",
@@ -86,10 +86,10 @@
    "title": "Open-source and third-party licences",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/licensing/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 1,
-   "sha256": "cbe235f07b5d4e350bfa25713a51043a12b859528b88666c217c85913d0ba6d6"
+   "sha256": "31819c4bc839107ecf16b155233bb2ed09d3aa01cd29477a5ec83a64e63113d9"
   },
   {
    "file": "pdf/STAR-LEGAL-MARKS-EN.pdf",
@@ -98,10 +98,10 @@
    "title": "Trademark and attribution policy",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/trademarks/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 1,
-   "sha256": "43fce163a0dda3c9410139a95eb242ca010d9d66451bccda09ef18ec29858be2"
+   "sha256": "9fee7b3be17abc5570bdd6a7ecac52fe3fc74085ecd540cd588a27d1378aed1d"
   },
   {
    "file": "pdf/STAR-LEGAL-A11Y-EN.pdf",
@@ -110,10 +110,10 @@
    "title": "Accessibility statement",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/accessibility/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 1,
-   "sha256": "0b9f4940fad7f24e0821b9f20396b99d3792b99d6105eba1f720af5fc5c48a52"
+   "sha256": "8c098cb1bac3460abd44056f042a5151cd94378990c2926717efca68b50734ab"
   },
   {
    "file": "pdf/STAR-LEGAL-INFRA-EN.pdf",
@@ -122,10 +122,10 @@
    "title": "Infrastructure and providers",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/infrastructure/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 1,
-   "sha256": "54edfc1f7e3b3747cea0e0387584c8b86ae857476836a6dc8fa712789aa8e28e"
+   "sha256": "df34f674231e2519ea213b03eafa016b4859ff4d6db466fd5ed9940315b9ec64"
   },
   {
    "file": "pdf/STAR-LEGAL-AI-EN.pdf",
@@ -134,10 +134,10 @@
    "title": "Use of artificial intelligence",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/ai/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 1,
-   "sha256": "8d9d3fe12d89ea1b12e0574a09b1e8d79e2db403c094e71217224def9e462343"
+   "sha256": "bb9f60854533bbd672dccb4fd17ebfb7cb091ac1c1ed03b7efdad7d174fff1e0"
   },
   {
    "file": "pdf/STAR-LEGAL-SPACE-EN.pdf",
@@ -146,10 +146,10 @@
    "title": "Space activities and export controls",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/space-export/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 1,
-   "sha256": "4e5533ab58ba9c8b226fbee7282b50c881051f5d0eaae282b2e3e2047e5a9bed"
+   "sha256": "cb2685791c2bf2fe99ea501ede008c42baf97f41033df92cb504811f0046210e"
   },
   {
    "file": "pdf/STAR-LEGAL-CONTRIB-EN.pdf",
@@ -158,10 +158,10 @@
    "title": "Contributions",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/contributions/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 1,
-   "sha256": "63e7607cfd5711ff8bb9d9de618db59c95d0b46f45cf113a90e7b5e37a43f17a"
+   "sha256": "588f7bd490412cbc99b92f89165a05d89d1746b105e42ed7a52d1645bb269db6"
   },
   {
    "file": "pdf/STAR-LEGAL-AUP-EN.pdf",
@@ -170,10 +170,10 @@
    "title": "Acceptable use",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/acceptable-use/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 2,
-   "sha256": "405197c252b7dd0a9c934bce258432ce7172538b5f5f527514739e785ac48676"
+   "sha256": "f868cb16393a84b2ac3f89fa3d4fbeeb72a627fe13c27ee027d015586474bf62"
   },
   {
    "file": "pdf/STAR-LEGAL-MINORS-EN.pdf",
@@ -182,10 +182,10 @@
    "title": "Minimum age",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/minors/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 2,
-   "sha256": "1b3cebf188275974cc4cb3845322fdfd37d3f0b6f09a74b06982590215ec1a7a"
+   "sha256": "a01e059c5733c9636b364c2f2512a27e5d29dc07a4f1bfa363c0a385dee785c7"
   },
   {
    "file": "pdf/STAR-LEGAL-BILLING-EN.pdf",
@@ -194,10 +194,10 @@
    "title": "Payments and invoicing",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/billing/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 2,
-   "sha256": "643451715c3595188c4441f3d0ff1d20228c5ead8fad90b0f0858134c9c053c3"
+   "sha256": "3d93481fdccd3a0f6d9ec4bf1ccae389fac85e1660979822d457ad4f64974d21"
   },
   {
    "file": "pdf/STAR-LEGAL-CONSUMERS-EN.pdf",
@@ -206,10 +206,10 @@
    "title": "Consumers and complaints",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/consumers/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 2,
-   "sha256": "d28537998ad0856840c1665d67780c9a229dc72e20f6e168f09fdbb269690100"
+   "sha256": "f6fe23a1b4786079f93070e6719f6191d9faadc8c2f8b714fe8fd6f0955cbe80"
   },
   {
    "file": "pdf/STAR-LEGAL-REQUESTS-EN.pdf",
@@ -218,10 +218,10 @@
    "title": "Requests to third parties",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/third-party-requests/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 2,
-   "sha256": "a8a27aa804d15ef0c689dddcf558837bd51f90df9a31adad2b407730554a2a77"
+   "sha256": "949f324553f5c79e109fe6bf7c817bd9ca3ad490be8943623302c1f1df74564e"
   },
   {
    "file": "pdf/STAR-LEGAL-BREACH-EN.pdf",
@@ -230,10 +230,10 @@
    "title": "Personal data breaches",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/data-breach/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 1,
-   "sha256": "a11e750a1f6a6f66a34fac088daf74b79a7b993e74323687fddf3442b6af4149"
+   "sha256": "0eef34360e21600c18e28c1f577a93a62a533918e3d32223fd6480dbb2388114"
   },
   {
    "file": "pdf/STAR-LEGAL-RECORD-EN.pdf",
@@ -242,10 +242,10 @@
    "title": "Record of processing",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/processing-record/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 2,
-   "sha256": "006ac93e66de017f861b0b7bf1fc6e88b852193924ae11550990239a65e278b6"
+   "sha256": "370e3866608c803033235397ea859833e42016c42b04729153df9a237da36068"
   },
   {
    "file": "pdf/STAR-LEGAL-LICENCES-EN.pdf",
@@ -254,10 +254,10 @@
    "title": "Licences",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/licences/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 1,
-   "sha256": "6cdd4a11b9d7b32980419f971c6cd5928657f304d0da911d5bffc91583bf111d"
+   "sha256": "f1debc9fc8692a0091f82a27307ab3ae7b93b8958bd6538496a54fae1e146f41"
   },
   {
    "file": "pdf/STAR-LEGAL-PERMISSIONS-EN.pdf",
@@ -266,10 +266,10 @@
    "title": "What you may do with S.T.A.R. software",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/permissions/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 1,
-   "sha256": "f6a6c5e524dbce6241c919ad936cd1d80c112507c4d008269e42e2a6f9b5e547"
+   "sha256": "0c7dc26b59635149c46e73fbc7f10db9ae43c4cb27c195311df4547bc51d3e53"
   },
   {
    "file": "pdf/STAR-LEGAL-HISTORY-EN.pdf",
@@ -278,10 +278,10 @@
    "title": "Version history of the legal documents",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/history/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 2,
-   "sha256": "ef9359cc1aeb43080a3b7d4b16cb68ee759dbb80b479a7f234f7eaa510e0231c"
+   "sha256": "b7acded0ea4277bbd063d3b64056cadb09bca293fc12dd7d132cdfdedfa77d79"
   },
   {
    "file": "pdf/STAR-LEGAL-MATRIX-EN.pdf",
@@ -290,10 +290,10 @@
    "title": "Permission matrix, package by package",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/matrix/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 9,
-   "sha256": "a456cf92d5d0ef525e327b591b1f51b52e766a4ed94d962ba6e873ceb8ef32f4"
+   "sha256": "65c3d277d40a631b4a6e5f8ec4e098d067df04c80b92dea3903456bd7c138ce8"
   },
   {
    "file": "pdf/STAR-LEGAL-FORMS-EN.pdf",
@@ -302,10 +302,10 @@
    "title": "Forms and templates",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/forms/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 1,
-   "sha256": "8a665fc6bf5883a1559b58fd96ca32ee523383d16a329a4d06290cc7f15bd4df"
+   "sha256": "dc92ec7787ef6733e35f3c2d5be216068896759259837a2de90bd3434a8176f1"
   },
   {
    "file": "pdf/STAR-LEGAL-PACKAGES-EN.pdf",
@@ -314,10 +314,10 @@
    "title": "Compliance sheets, one per package",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 5,
-   "sha256": "796a4e7e7d1a8bad7603a9b783ad7d346987f68b798e37016130298036f3e3a5"
+   "sha256": "f2dd92267cb4fb0831c68330b159f0a1fef3788e8a4d193035c5f4573b919f7b"
   },
   {
    "file": "pdf/packages/STAR-PKG-CONJUNCTION-SCREEN-SGP4-EN.pdf",
@@ -326,10 +326,10 @@
    "title": "Compliance sheet — conjunction-screen-sgp4",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/conjunction_screen_sgp4/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "167d8d8eea431144a4bca3e610dc3d06756e6abd75befcfe30975edf2187598a"
+   "sha256": "c007e473d277c4347b27b542bfc06764b044cc6b5c22ae7227c5e5b0761600b0"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-ALBERS-EN.pdf",
@@ -338,10 +338,10 @@
    "title": "Compliance sheet — star-albers",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_albers/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "fee16f167c11c84ccb49fe7a6596bd6ad41bc4621c9650f507fbf65ea6498e85"
+   "sha256": "3997e17bdda2db58b545a91d6e7daa41fa57222ca487650d870e47a3a87348b4"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-ANOMALY-EN.pdf",
@@ -350,10 +350,10 @@
    "title": "Compliance sheet — star-anomaly",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_anomaly/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "2ca7fba34689b1158e84c9fb0c5350f2707cecc72cf6548384106af921a8b4c7"
+   "sha256": "d92bf08f923fcf1ab9a63e8329a774ba4a85fc6b9a6a747da88b20738491323f"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-ATMOSPHERE-EN.pdf",
@@ -362,10 +362,10 @@
    "title": "Compliance sheet — star-atmosphere",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_atmosphere/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "822f0d2b269f48227d67f57534d50c6cf736b8092f41cd69b8682e4fc9ffdebf"
+   "sha256": "f0e337cfcce18299baadc5fc95dc8bc32d8d8c615d1bc37e0ea35536349f1b9b"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-AUDIT-EN.pdf",
@@ -374,10 +374,10 @@
    "title": "Compliance sheet — star-audit",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_audit/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 4,
-   "sha256": "f1f798fd011f148dc05c1b1ca6bda6b9e5b28cabae653ffe947e5ca03ef41654"
+   "sha256": "099504a3326d98fddf26dabd255e88e65f069078ca1313703494741aaa50bf03"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-CALENDAR-EN.pdf",
@@ -386,10 +386,10 @@
    "title": "Compliance sheet — star-calendar",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_calendar/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "a7db10e61bced8875dfc56e6753023976be53548af51a973852f745c0c266f33"
+   "sha256": "9baf667c6af09338ba02eb3771d0baa05952fac57d737849f095086456482958"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-CDM-EN.pdf",
@@ -398,10 +398,10 @@
    "title": "Compliance sheet — star-cdm",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_cdm/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "6ffb2f9c79e865442a405a270738605557df234169d7666c3d591bf5bd90ecb2"
+   "sha256": "725bd81d8b6ee0907b3efd04074de76fa734bc55749026ff1baa6839fc78a0d6"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-CHEBYSHEV-EN.pdf",
@@ -410,10 +410,10 @@
    "title": "Compliance sheet — star-chebyshev",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_chebyshev/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "6f3b26b368ea5a08eb563a0c106f5551f2265bee57d7014f3621c0a6f95823f8"
+   "sha256": "3cc1e5922911ad0d385bf5d5e20b314245d679f6ecadf4d94b72b1f5eddf0721"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-COORDS-EN.pdf",
@@ -422,10 +422,10 @@
    "title": "Compliance sheet — star-coords",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_coords/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "6f511ddffb317b6ce5660186ace593ec812f54afb6d077e7eba55749ba9ab38b"
+   "sha256": "8c9a4090b90b718654ed973828f0a5fee20792e6f80cb411d371280f47973e64"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-COVERAGE-EN.pdf",
@@ -434,10 +434,10 @@
    "title": "Compliance sheet — star-coverage",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_coverage/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "dfe8dddeaf6a4395446f1c29d1db782ee4f1867fdcecb41416a3a83a5c720e70"
+   "sha256": "c649a0a2efd035e6f90b4d6215ee83307373b83d5cba0ff95051bae4fdcb1366"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-CRC-EN.pdf",
@@ -446,10 +446,10 @@
    "title": "Compliance sheet — star-crc",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_crc/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "682a6cfacfc03b809be2e50e8311167d96dab9578a6835dac85e59717173a67b"
+   "sha256": "2d04846bc20091e9d87755fcd48d10ea058d772286980f156690abeac7f6ebc8"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-CROSSCHECK-EN.pdf",
@@ -458,10 +458,10 @@
    "title": "Compliance sheet — star-crosscheck",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_crosscheck/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "152dd958758750c39b8a6714f01b821a27f46e7948dbb195874225832d3133bb"
+   "sha256": "eeea391d6fa50d2e94415bc1f75348fdaa53f55f6e0111cd3c143abebaca5228"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-CW-EN.pdf",
@@ -470,10 +470,10 @@
    "title": "Compliance sheet — star-cw",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_cw/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "e2859ffffd6ca3a895d161936cc4fb1a5b5ae5538088e394297b9d770a55901d"
+   "sha256": "542dffad55c89e60c4c0d2b7c1785aaa9630a38c71c32347eedb372f720cb852"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-DOPPLER-EN.pdf",
@@ -482,10 +482,10 @@
    "title": "Compliance sheet — star-doppler",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_doppler/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "933456f20eb24756dd9062dc4152ed161451dbacc30af7bd677213b2acc7722f"
+   "sha256": "f0882cf5e9cbfb009a1b0c8adfa5352054e071139d9385886da6592e9e0e3a01"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-ECLIPTIC-EN.pdf",
@@ -494,10 +494,10 @@
    "title": "Compliance sheet — star-ecliptic",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_ecliptic/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "61c440cdfa40606bdf4bf7776e051a0bd992fd0f9af8353c082d3b14381a62b6"
+   "sha256": "ef7e4f9c656bbbd47094fd174f43c5a69b1c5c18feb0ee26f431f03d99fabe5f"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-ELEMENTS-EN.pdf",
@@ -506,10 +506,10 @@
    "title": "Compliance sheet — star-elements",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_elements/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "5110cd3227c2a4ca3fdb27d1ebd40a9036e3d10aaef5b64fec57cd2a873fb85f"
+   "sha256": "7ed37d4686c22813502317a8500933a2d07ccfc576ce0375d533a7f9815e35e8"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-ELLIPSOID-EN.pdf",
@@ -518,10 +518,10 @@
    "title": "Compliance sheet — star-ellipsoid",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_ellipsoid/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "24cce7f104c5d64c984b25bb32a6f41c6dab3f358b150e6a1e27b8aadbcb3fc4"
+   "sha256": "475f12fdbfabd2cf290ba6d345c1d4324189dcdb07fe203daab8ed84e74edc31"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-EPOCH-EN.pdf",
@@ -530,10 +530,10 @@
    "title": "Compliance sheet — star-epoch",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_epoch/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "6acd9c3d841dd36ac5a12c07f575455ed8b4144ad9f5e24bd1ce1ac1438bf74e"
+   "sha256": "a9c8fca673cc363446d67054076648a9ba55e8fc22f9ec39288541711d2ea1e5"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-ERA-EN.pdf",
@@ -542,10 +542,10 @@
    "title": "Compliance sheet — star-era",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_era/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "0049bf3e6920be0364989c3049df0055789d347992215b627364af3c2530be56"
+   "sha256": "2d2fe91ba658f0d9723602abf852509072418fb74cfb85723a7152175ce15465"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-EULER-EN.pdf",
@@ -554,10 +554,10 @@
    "title": "Compliance sheet — star-euler",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_euler/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "140b6d1387dba8918b8e7371bee91679f5670d405a6ada1362b129cb14c7bc2b"
+   "sha256": "1bae602dc4b99d7423da2d464e47c72e9bbf1bda1000b75f783675d758be51c8"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-GALACTIC-EN.pdf",
@@ -566,10 +566,10 @@
    "title": "Compliance sheet — star-galactic",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_galactic/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "35bef89b1a9fce0719452f32b2a08c0dfd1f2d6634762ae57257a2c8ef39a118"
+   "sha256": "b212aac05b008ba976b12f9fd72646359901710dfa6361b1b0dcc02c77a5323c"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-GASDYNAMICS-EN.pdf",
@@ -578,10 +578,10 @@
    "title": "Compliance sheet — star-gasdynamics",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_gasdynamics/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "ebd9da4fcfcffbcd664709e2830ffc43735ddc8bdace5df0b3526c252b3680ba"
+   "sha256": "e2bbc4a103dd203a5a4fcfa4f2a4bf7759075a18cddd7185a1a3d77a9388dbde"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-GEODESIC-EN.pdf",
@@ -590,10 +590,10 @@
    "title": "Compliance sheet — star-geodesic",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_geodesic/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "f8630fe03ab62d0482efbe24d44cb416eefd9b635b21a9d7be52e714d19f95b2"
+   "sha256": "92a5e51e21d66ffc89296d10697bd52bd2df7c577a0c49c3857402b52f3bae79"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-GEODESY-EN.pdf",
@@ -602,10 +602,10 @@
    "title": "Compliance sheet — star-geodesy",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_geodesy/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "48d6dc8b6ac36c9f4bb90d5b003b893e36839d267a82918510e32b192d4ddd39"
+   "sha256": "7c51847e5f65a64db5d933087a07699f117e597845c2e56a1766042d5e90f5c2"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-HORIZON-EN.pdf",
@@ -614,10 +614,10 @@
    "title": "Compliance sheet — star-horizon",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_horizon/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "7ac5f8c255f2a12e572c0a54832b3055ce05f6de90acb5104cc53486dd5c688c"
+   "sha256": "fa60364f5af86bf79379b59704f150bd3fa6d396b7719b8bd62a676242576f09"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-INTERP-EN.pdf",
@@ -626,10 +626,10 @@
    "title": "Compliance sheet — star-interp",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_interp/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "7eb9936a90e94e45c1398c717073e279dc9ee2cd6100c341d702d4f681a2181c"
+   "sha256": "e6174faa5220f8594cce23dc2994e1426523a7a1a4ca24a32a67bb1a6d2b0721"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-IOD-EN.pdf",
@@ -638,10 +638,10 @@
    "title": "Compliance sheet — star-iod",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_iod/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "b477495c9962caca29050e36c6db641537795cee1984531541998358df8775aa"
+   "sha256": "64eed7ed63810ced996036619cb946c7f0b4e455db80ae4f9a979467b8d81eb9"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-J2-EN.pdf",
@@ -650,10 +650,10 @@
    "title": "Compliance sheet — star-j2",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_j2/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "b3c7fdc339efaa62b098da9347c691ed44404f57a8faadcbaf6718ed37c8119b"
+   "sha256": "2fe7eec83319aec6f23e64ad51ad6a23d958fafb4a02d63ea6fd46d003db20c4"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-KEPLER-EN.pdf",
@@ -662,10 +662,10 @@
    "title": "Compliance sheet — star-kepler",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_kepler/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "52cd7ee24634ff3e186f5eb0e82b2df7454fbc0bf498ab3b41659813332c68c0"
+   "sha256": "8c159720b752a513448ada7ab7ed919a9b0306a9f31d21d9da097f249b7eb0d2"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-LAMBERT-EN.pdf",
@@ -674,10 +674,10 @@
    "title": "Compliance sheet — star-lambert",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_lambert/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "0535243c225e3d445717d430c2d65ac1592226b0d22645ef5953405b8f7acd22"
+   "sha256": "7dd37c283cd04ddc560ddf9a526e4ba28dbb4824594ac32a996103ea5fd487be"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-LCC-EN.pdf",
@@ -686,10 +686,10 @@
    "title": "Compliance sheet — star-lcc",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_lcc/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "a80de6b97d5ba0fb214867ac457a3a209670f9b0d799310877895b956112d16d"
+   "sha256": "64dd66b370d25f0a5c35dbd5a610929a0ccb803159c2b098700b9e07bf5e49b5"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-LINEFIT-EN.pdf",
@@ -698,10 +698,10 @@
    "title": "Compliance sheet — star-linefit",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_linefit/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "4de103ce24aeb91de7f4fb87e6118cc366db6ca6e9c6e2a191c71878fbab71c8"
+   "sha256": "9dc8e7be96008559ddd36ff9c471ea555462740dfdbf4b18003335f299050a2b"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-LINSOLVE-EN.pdf",
@@ -710,10 +710,10 @@
    "title": "Compliance sheet — star-linsolve",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_linsolve/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "1da1342560ec3b78e4824051f2f2b82a69942e3f9677a48c0ad32b6f6818c28f"
+   "sha256": "e8f6d0c238080d1a9215a96d9ef6cd6a9689ec2b640d32a40aaedf5fa40d47c8"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-MANEUVER-EN.pdf",
@@ -722,10 +722,10 @@
    "title": "Compliance sheet — star-maneuver",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_maneuver/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "4090499d77581d49a633c73e3b194cf502f3a21afcf1ff77af861ff4ec20aa7a"
+   "sha256": "7c4abdbb07076fbdd71e7d028c23202f19e0d32db4169b3da9ec8987e3042194"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-MAT3-EN.pdf",
@@ -734,10 +734,10 @@
    "title": "Compliance sheet — star-mat3",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_mat3/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "a4455261c6298a38d3d2b1af9e59440e6300b8025b18ecba1211687bce7e0f58"
+   "sha256": "baa6175e7ca492e3ee936b6791d9daa21e769d3459d40811fee32ed6a1cacaed"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-MERCATOR-EN.pdf",
@@ -746,10 +746,10 @@
    "title": "Compliance sheet — star-mercator",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_mercator/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "40a0678c4e58cc18b85c419886e9731fa0e077b142440f1c2b198470def703b5"
+   "sha256": "7280344c2f05008fb271afcd09a519d4bcf7f56f98dec5405b7f2b6ef4378407"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-MOON-EN.pdf",
@@ -758,10 +758,10 @@
    "title": "Compliance sheet — star-moon",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_moon/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "e78ece3484f94427c408acd8845ad086e1a0e984cea1640eff4befb9e1ac82df"
+   "sha256": "0177d8c826a4dfe1d6c55cd1149ca7de346cd0ba17ebc501e8b530d260059dec"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-MRP-EN.pdf",
@@ -770,10 +770,10 @@
    "title": "Compliance sheet — star-mrp",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_mrp/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "f18187c1ced8391d15596f923723c584deb51271a83a6a6fe263eddd780b0fb4"
+   "sha256": "5fd59fcc709800a372f2c30a7df2cb7734946154172dde2f55a2af811271160c"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-ORBIT-EN.pdf",
@@ -782,10 +782,10 @@
    "title": "Compliance sheet — star-orbit",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_orbit/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "51a5ebc96d4391e32c4cf65f5f8d17c78239556614d6571460fd22d4bf227547"
+   "sha256": "5bf5c001b810bc41f7651ab022bc6ec899a980bf20c0ed1f7923a76e1f85defa"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-POLAR-EN.pdf",
@@ -794,10 +794,10 @@
    "title": "Compliance sheet — star-polar",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_polar/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "141e63eb8750272cfc85487ca8ef6bcea8362bded8bd1e20a1fa6745b3051e13"
+   "sha256": "a23badd14b11ce4efb06e8b961cfe211eb8f72c3651399dfc1e5a2311aebff97"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-POLY-EN.pdf",
@@ -806,10 +806,10 @@
    "title": "Compliance sheet — star-poly",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_poly/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "be1ca613dc46109e8e3c7040bb6502511891b90f3ce2706ca417f7d1c6e701b0"
+   "sha256": "0e383115d2f161e6313f494eefc57c046a6998c8fa878646f7e2979be19d266e"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-POLYFIT-EN.pdf",
@@ -818,10 +818,10 @@
    "title": "Compliance sheet — star-polyfit",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_polyfit/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "722c8917c88a8611d468c0dabc677c207a9a190434cfcb936db6890dd6fdd867"
+   "sha256": "355402f9a4328202cfd5074ef333a8bfab3e009a4d916b6cf683c8d4ab00d848"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-PRECESSION-EN.pdf",
@@ -830,10 +830,10 @@
    "title": "Compliance sheet — star-precession",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_precession/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "5e79f9daef2d531ee70feb51905e2cefe618f193df01b846c4d4ca6b22ce44e6"
+   "sha256": "5b08128789c0b804374f0ea095dd52644604d0be3f6f6914ac562cb7610a84df"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-QUADRATURE-EN.pdf",
@@ -842,10 +842,10 @@
    "title": "Compliance sheet — star-quadrature",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_quadrature/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "36ac3a0c6d2bee58ff6708979b5e2371dc7e4f7dadb51f43c8917fd288246bff"
+   "sha256": "04738e3a644c194eb649e4d697501108db3908c5a5a48c1ed782f3947350d862"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-QUANTILE-EN.pdf",
@@ -854,10 +854,10 @@
    "title": "Compliance sheet — star-quantile",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_quantile/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "9ff78aef47b9cad03b15ffad624d03a478d42d45f6ae858bd04e869e9ccb8e05"
+   "sha256": "5a790ad3d130475719c2e9a4fe2a8c420e33d552d79a96cc0051cf5f0702e811"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-QUATERNION-EN.pdf",
@@ -866,10 +866,10 @@
    "title": "Compliance sheet — star-quaternion",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_quaternion/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "9cb9183c8783b75d7d48fc2465007f189ad6548f06075afe46a503b5c8c251c0"
+   "sha256": "65a8441ba13db395ffe062d1525d07fd7c3e7e1fd05658219541d0b8a32868ee"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-ROOTFIND-EN.pdf",
@@ -878,10 +878,10 @@
    "title": "Compliance sheet — star-rootfind",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_rootfind/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "6e512a5fa27687f20b280e0c7fc1032b964272590f05d1a4b179b422a7af998d"
+   "sha256": "63931e2284597f77e5ca64f1e82b8e160d85cb2073f15a54ceb512076b72cabf"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-ROTFRAME-EN.pdf",
@@ -890,10 +890,10 @@
    "title": "Compliance sheet — star-rotframe",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_rotframe/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "e6a6239fa15c86ce653f917ab507427a86556f80fb3f9a57960146a754a16cc5"
+   "sha256": "c1ef5117014b71886d65dd8a158c3600d819790835949b481e32ceb76e7cb299"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-SEXAGESIMAL-EN.pdf",
@@ -902,10 +902,10 @@
    "title": "Compliance sheet — star-sexagesimal",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_sexagesimal/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "061a9663237d5214cee6fc939aae8017ca1c98cb566aa597cf1aba43168081c0"
+   "sha256": "69a0fd85fa6f1911df87a84ba0352682558665860f793139e13a00d37d91232f"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-SIDEREAL-EN.pdf",
@@ -914,10 +914,10 @@
    "title": "Compliance sheet — star-sidereal",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_sidereal/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "287b3b1cd96248e9acd692b85974e99044109b37b9f2ba98f599fe7e07da0e75"
+   "sha256": "356eef3957d61f429ca8cb58cd81ee9180e2be6c9ba87dac08b5dd8f0fed83f6"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-SIGMA-EN.pdf",
@@ -926,10 +926,10 @@
    "title": "Compliance sheet — star-sigma",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_sigma/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "af6c29e24e78d366a817be84eb29376434949ccb249468b542e80f69b8993b23"
+   "sha256": "9346e585f3a0718b32706e5332bf04f1365bb94b458e628f6eecbb3ab77b7286"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-SLERP-EN.pdf",
@@ -938,10 +938,10 @@
    "title": "Compliance sheet — star-slerp",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_slerp/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "f3ce4a06466d74866e2f24a551def9fcce792dc23df0390b7139645b886e068c"
+   "sha256": "5bb221a9491007564bbf4e0e48a22593093a3d1db29e101b9af957f462923919"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-SPACEPACKET-EN.pdf",
@@ -950,10 +950,10 @@
    "title": "Compliance sheet — star-spacepacket",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_spacepacket/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "c9cf4c904a4c1582dc91dc19c43a0edda3173c8a940d18c61b7004d84c4bde57"
+   "sha256": "bd56a4e7f52baba4a48b891dc2a11fb1d225e946d28778d2d3e405742235fe6b"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-SPHERE-EN.pdf",
@@ -962,10 +962,10 @@
    "title": "Compliance sheet — star-sphere",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_sphere/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "b6747537391538cef4af022e2170885fe929d1380fba311b4f95537992ab5b9f"
+   "sha256": "b31f89462edf43f14208e1cfb0ea6bb8792800373520f72161b1971e977115f5"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-SPLINE-EN.pdf",
@@ -974,10 +974,10 @@
    "title": "Compliance sheet — star-spline",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_spline/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "b923d412d1f5b62115ec15ab30be747283efceb191853d4ba3635ace9a797afb"
+   "sha256": "d65b421c8e8cae0547264fdebc8fa287b72025fabedae3e677956d534da575d4"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-STATS-EN.pdf",
@@ -986,10 +986,10 @@
    "title": "Compliance sheet — star-stats",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_stats/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "08fb30b7e3ae065caa4698caeecfd169645676bb71945d6e36c1eddef496505d"
+   "sha256": "c92109b8576ec2bb69cabadecefb9e8f4d1841ef239902ebc22279b79e4f2134"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-SUN-EN.pdf",
@@ -998,10 +998,10 @@
    "title": "Compliance sheet — star-sun",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_sun/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "8791dbccf9983bffc5e0faae4d85778800c8516cdbacd03550ad05e61dd401a6"
+   "sha256": "71fc057b59ccc49e9d8ae293d82a4d9a93d65558d5bf0851c2eb30615190b885"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-TABINT-EN.pdf",
@@ -1010,10 +1010,10 @@
    "title": "Compliance sheet — star-tabint",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_tabint/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "9969f07432a361d463fcec935a02d2e519d478b56bbec0c4cf08ae38044691a1"
+   "sha256": "20e8e7df2e7653fc8e822c5ac9af45c0aecb34714a078483d941268ccb40a750"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-TDB-EN.pdf",
@@ -1022,10 +1022,10 @@
    "title": "Compliance sheet — star-tdb",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_tdb/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "e4bc43b4f81e93249e5394d9ecd5b86e47705953703de8bdccf3c1dd5e2a813a"
+   "sha256": "7dab4e8e74d16706dea6a0ac80956a14653163e8bbcb9d4a9543faea4e1260b5"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-TELEMETRY-EN.pdf",
@@ -1034,10 +1034,10 @@
    "title": "Compliance sheet — star-telemetry",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_telemetry/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "c861cb25cb406506ab2a917c0b9927a1357164c67a281d70baa3568979a65461"
+   "sha256": "80c3410579efcfaf575adb3fefb631b2abfb85ae1bc0964d3afec80efd919218"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-TELEMETRY-C-EN.pdf",
@@ -1046,10 +1046,10 @@
    "title": "Compliance sheet — star-aos-c",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_telemetry_c/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "5bf4dadb63024c342296f354b8cfdbcc5da188b2d675967f5e1d3cf74e1833ad"
+   "sha256": "fa4f52f30bee99299626a29c3701f0b5cdba9f1a82f01b07685afe1c5ae5b9b3"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-TIMECODE-EN.pdf",
@@ -1058,10 +1058,10 @@
    "title": "Compliance sheet — star-timecode",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_timecode/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "298aa8767d5bb7273c0a1bfef9dd4be94774eef0099988b9f098723eae61c2c2"
+   "sha256": "593a498a479509c1fef9d8eb2dcb44b93ee72f8205720254bb64bee97ddcbf35"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-TLE-EN.pdf",
@@ -1070,10 +1070,10 @@
    "title": "Compliance sheet — star-tle",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_tle/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "02c3c622f764bdbb70ae604bb6ca6fea3879b201df6efc414f801fbf2bc10ec3"
+   "sha256": "910307eb970ab24ae11f781f8dc05a7b05ce25abc2c47101a49c9ef14cb42145"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-TOPO-EN.pdf",
@@ -1082,10 +1082,10 @@
    "title": "Compliance sheet — star-topo",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_topo/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "e37014ac8f011aec114559c88435a5581eb0b0b9effa672e0749d84b5b180bc7"
+   "sha256": "87e9bae08e3c741f2223346b2bc802ae0f0cefd22ebac17711a09640e7f79692"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-TWOBODY-EN.pdf",
@@ -1094,10 +1094,10 @@
    "title": "Compliance sheet — star-twobody",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_twobody/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "6b4c42da419e747d3b9fbc08f836c89a1570965e0ff49b0f39e696423129cb87"
+   "sha256": "13070afb1faa28323107f095bbd313c479bd6a835caac04e4e35075d8ead58ef"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-UNITS-EN.pdf",
@@ -1106,10 +1106,10 @@
    "title": "Compliance sheet — star-units",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_units/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "c0be1df32d01a41e1abc5c1af8b90fd8b64bdde8b945bdab63cae97567d4047f"
+   "sha256": "dfc52b85037d505cec9c895e3e482ab49707b57223e4a65dafb185de47bb022c"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-UTM-EN.pdf",
@@ -1118,10 +1118,10 @@
    "title": "Compliance sheet — star-utm",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_utm/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "4936b5a907fd8834bdd3c7ff0a0f0a27dd010e5a0f27e6619d8972454fead1b7"
+   "sha256": "4a6b000b88d96564e03dcfb6dbf5d3615811261c0860e1486a83c8214ced3d1e"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-VEC3-EN.pdf",
@@ -1130,10 +1130,10 @@
    "title": "Compliance sheet — star-vec3",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_vec3/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "563c5e072afe740dcd48f8b5035d8765c7d6517c57f141e971b541cd0fe73ab9"
+   "sha256": "2ba1614d18da18adccf40a3a51ad6f00ee08d4835ee14df6f5ef530b9f7f5e6a"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-WAHBA-EN.pdf",
@@ -1142,10 +1142,10 @@
    "title": "Compliance sheet — star-wahba",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_wahba/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "b04ab3254ee15904e81dff3d48b3e57557bbfa01bd440274f0ffec4056895d0e"
+   "sha256": "002bab920a33d5a535cba183fa66d8f5763bbc005d0e27643897b97789d27c54"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-WRAP-EN.pdf",
@@ -1154,10 +1154,10 @@
    "title": "Compliance sheet — star-wrap",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/packages/star_wrap/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "f25c456bf07c6c2e372bed8ac7086b22e29d532b5d94a53e60a521cee58b363f"
+   "sha256": "3aaa96e2ae7d8ea85c6fe21ddd1aadee025f1dc7d9b1ea2467dcd011bafeb8a2"
   },
   {
    "file": "pdf/forms/STAR-FORM-GDPR-EN.pdf",
@@ -1166,10 +1166,10 @@
    "title": "Personal data request (GDPR)",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/forms/#gdpr",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 1,
-   "sha256": "091ca3d66994ec7e25aeeacf354a30a8cb7e63ecf8ab77d00b72a334475b5b0f"
+   "sha256": "e41a6bc2532f102e74a9bcfe1e0627218561b771bec36dd16e407f19f6b7504b"
   },
   {
    "file": "pdf/forms/STAR-FORM-VULNERABILITY-EN.pdf",
@@ -1178,10 +1178,10 @@
    "title": "Vulnerability report",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/forms/#vulnerability",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 1,
-   "sha256": "4c6e4a6ca4afd0ff5cf1ffbe9c2176dfc6a36c1487b9cc56c9cc9229506c3912"
+   "sha256": "6c2e6b198c89585838a31f14b9b75481864d291f7aac47a4372ee20eaea01eec"
   },
   {
    "file": "pdf/forms/STAR-FORM-ASSESSMENT-EN.pdf",
@@ -1190,10 +1190,10 @@
    "title": "Assessment request",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/forms/#assessment",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 1,
-   "sha256": "fb29ef8e9f404f7f2c58626d51d1338486071da79de5a84e18f4007296db5b17"
+   "sha256": "f05fb1533fb8d0a4f6db8b202b0db8e73f3fe656bcc8017b987f10e18ef252dd"
   },
   {
    "file": "pdf/forms/STAR-FORM-NDA-EN.pdf",
@@ -1202,10 +1202,10 @@
    "title": "Mutual non-disclosure agreement (template)",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/forms/#nda",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 1,
-   "sha256": "ea5851782cc7f27bc80ae12095a8629043e7617bd1b38078bc5c311d1576c4d1"
+   "sha256": "afe60061e08a51d0dea0e552b46a09df475f7c7fd98882adfd273a97078e57a0"
   },
   {
    "file": "pdf/forms/STAR-FORM-END-USE-EN.pdf",
@@ -1214,10 +1214,10 @@
    "title": "End-use statement",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/forms/#end-use",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 1,
-   "sha256": "86e443e18cd88d3071a5c6f5006416fdf2aaaffab57567f6b897c6ac03ab22e2"
+   "sha256": "e6350ace7fcdd4a4dad0099d796426adceb245e5ac407a840b9780bf738157ef"
   },
   {
    "file": "pdf/forms/STAR-FORM-BILLING-DETAILS-EN.pdf",
@@ -1226,10 +1226,10 @@
    "title": "Billing details",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/forms/#billing-details",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 1,
-   "sha256": "4c8d526c4a0e40fb8d0c5c401e05b3eaddb8d22f19f60a9ca70c795ea5f31c18"
+   "sha256": "134610b1b10d6f42ab22e1b9653ab76e1675e6353b94323bc97a5a3e361ae048"
   },
   {
    "file": "pdf/forms/STAR-FORM-ORDER-EN.pdf",
@@ -1238,10 +1238,10 @@
    "title": "Acceptance of an offer",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/forms/#order",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 1,
-   "sha256": "027bf8de76c000a9f68c1141a6950f270af195629b8cad5abe2dbfb7c0d17643"
+   "sha256": "e6e69789683a71b153be38e675666bda3d73d9d71ca72dfa8507c682e94b186b"
   },
   {
    "file": "pdf/forms/STAR-FORM-CLA-INDIVIDUAL-EN.pdf",
@@ -1250,10 +1250,10 @@
    "title": "Contributor licence agreement — individual (template)",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/forms/#cla-individual",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 1,
-   "sha256": "e93b9de54ad26ca9e40e72d44ec15015df9dbcc569339d56f13e4627a728dc73"
+   "sha256": "3403c70c8e7c32beb543215a8152a02e4e70d654387604512fe1b0e22d2afe9e"
   },
   {
    "file": "pdf/forms/STAR-FORM-CLA-CORPORATE-EN.pdf",
@@ -1262,10 +1262,10 @@
    "title": "Contributor licence agreement — organisation (template)",
    "language": "en",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/legal/forms/#cla-corporate",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 1,
-   "sha256": "b83ed678fd86724ec1a810de1f6c536843bb1c04215103a8ada66a909f256cdb"
+   "sha256": "70b65a9e2adec103d42256c33699b25ca7de64df0a204c8091ecad479e5b7999"
   },
   {
    "file": "pdf/STAR-LEGAL-NOTICE-IT.pdf",
@@ -1274,10 +1274,10 @@
    "title": "Note legali",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/notice/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 1,
-   "sha256": "6b43df2305056e0dfd22e56eed6b8e90ae326152e1e482ccd626577dcfce1d1a"
+   "sha256": "88328307738cd7d487eaad370bd6603d8d6771600abbc621b40fd8dce8cd5c9f"
   },
   {
    "file": "pdf/STAR-LEGAL-TERMS-IT.pdf",
@@ -1286,10 +1286,10 @@
    "title": "Termini d'uso del sito",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/terms/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "e9056f859c6fdf29afbba06fdba7c3da8c3ed4b6a79259015fe2301c892ee148"
+   "sha256": "1b0d501d3dc29b2749db523523e885d994dab55c69e9f7fa77c822957102f588"
   },
   {
    "file": "pdf/STAR-LEGAL-PRIVACY-IT.pdf",
@@ -1298,10 +1298,10 @@
    "title": "Informativa sulla privacy",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/privacy/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 2,
-   "sha256": "96e296acb9f7155bfde9f16e1df6b3120025b82d7066458640117bdda37a7dd1"
+   "sha256": "01901d053c4e04655cd559dedd6bfc1b5e422b643ea6b1a5e893b01c143cfa0b"
   },
   {
    "file": "pdf/STAR-LEGAL-COOKIES-IT.pdf",
@@ -1310,10 +1310,10 @@
    "title": "Informativa sui cookie",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/cookies/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 1,
-   "sha256": "9cfa46e254e233a57ca3072014369630e7849b22dce49b85af2ea5f5be8afb83"
+   "sha256": "91e5df8d9fe03f405aa34b584796eab6d9270fd735a624d812a65bb7f2954235"
   },
   {
    "file": "pdf/STAR-LEGAL-EVIDENCE-IT.pdf",
@@ -1322,10 +1322,10 @@
    "title": "Avvertenza su evidenze e verifiche",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/disclaimer/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 2,
-   "sha256": "a333c5e97f795a422113ccea9068327df952850df0255db0f375b00f861d1255"
+   "sha256": "972900e8cd6fdce602bf88ed7816e6b77e73e7b16b3736a6be0156eabad42232"
   },
   {
    "file": "pdf/STAR-LEGAL-SECURITY-IT.pdf",
@@ -1334,10 +1334,10 @@
    "title": "Politica di segnalazione delle vulnerabilità",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/security/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 1,
-   "sha256": "f6faabae1fd9055e66eb05f780fb1e6ce21c79a28711e690c87dfe07c79955ed"
+   "sha256": "b6cdeab5eca2413c388d14c77ace5cb5aa48704415fbf90055c3b2cd6f0805b1"
   },
   {
    "file": "pdf/STAR-LEGAL-LICENSING-IT.pdf",
@@ -1346,10 +1346,10 @@
    "title": "Licenze open source e di terzi",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/licensing/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 1,
-   "sha256": "72e0b46eabb332fabbe56d4a75f78cd6f25895010ddfc5d052d541a43cee4313"
+   "sha256": "43a45969d0546df84fbf04ce98d2861c1d5a89e61537603afd6e76ecb39d5986"
   },
   {
    "file": "pdf/STAR-LEGAL-MARKS-IT.pdf",
@@ -1358,10 +1358,10 @@
    "title": "Politica su marchi e attribuzione",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/trademarks/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 1,
-   "sha256": "a8fdebe3f3a98eef06ca22666e5f13305ae1e8e7bee13b37849bae08736873b7"
+   "sha256": "2a990e5be09de5e7dc7bb92b05d0494116ad77d41faf531655b9b53790336ddc"
   },
   {
    "file": "pdf/STAR-LEGAL-A11Y-IT.pdf",
@@ -1370,10 +1370,10 @@
    "title": "Dichiarazione di accessibilità",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/accessibility/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 1,
-   "sha256": "70ffb99d1dc1f21a79174f7a9ca48707bcec8349180efce739a5813e82705038"
+   "sha256": "fae68fe417a7f4abba0e03eccd0ab7d3b20e920519385e69506d103fbfa0e344"
   },
   {
    "file": "pdf/STAR-LEGAL-INFRA-IT.pdf",
@@ -1382,10 +1382,10 @@
    "title": "Infrastruttura e fornitori",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/infrastructure/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 1,
-   "sha256": "9f92d423871fd18b6e5cfdc6a70e27bc79f4dabe6fb30604e9d543e974247293"
+   "sha256": "c03350810151c4549297393e0d8b9d80ef2516aa03b6a5908101d43c6aac6db7"
   },
   {
    "file": "pdf/STAR-LEGAL-AI-IT.pdf",
@@ -1394,10 +1394,10 @@
    "title": "Uso dell'intelligenza artificiale",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/ai/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 1,
-   "sha256": "a4f13bb3530b412296d71f214f3d6bbb44d0e6ae4a8a0f998ded24bdba4c8a3f"
+   "sha256": "e5c55caa620970e091e6bf4d49cd66be598afe7842bba1752be12f0f8400aaf7"
   },
   {
    "file": "pdf/STAR-LEGAL-SPACE-IT.pdf",
@@ -1406,10 +1406,10 @@
    "title": "Attività spaziali e controllo delle esportazioni",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/space-export/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 1,
-   "sha256": "07bed263faf72ea73343a40dad267020c11db1951b8466d1b9eff167898ce0b1"
+   "sha256": "767180702c670d4ebd8d91c1745fa682ee40122870841f1f3d3f7eeb3c9e0f75"
   },
   {
    "file": "pdf/STAR-LEGAL-CONTRIB-IT.pdf",
@@ -1418,10 +1418,10 @@
    "title": "Contributi",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/contributions/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 1,
-   "sha256": "45d446c998e31dd20272f48b8b2d1455779230396274b76389f0d8db4f72b187"
+   "sha256": "a89f691fbb378a4e7e30098522abfb497b8b3e513df8ee9551a27a86b7d02aed"
   },
   {
    "file": "pdf/STAR-LEGAL-AUP-IT.pdf",
@@ -1430,10 +1430,10 @@
    "title": "Uso accettabile",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/acceptable-use/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 2,
-   "sha256": "7079d883c17ed0375a38442b596eef28b9d068995c99fbde5fa3de188b007770"
+   "sha256": "ccc728f88748b946be7881985c216f27ffb8b3582a007c21b26b5889953eb6be"
   },
   {
    "file": "pdf/STAR-LEGAL-MINORS-IT.pdf",
@@ -1442,10 +1442,10 @@
    "title": "Età minima",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/minors/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 2,
-   "sha256": "800104321558bebce1595bd7b8302acab83b08696615e46539e80fa994a63ec7"
+   "sha256": "b44049bc20261181e4ef357c84eb81f32c88615544ae9b05b7a67d0a351cae40"
   },
   {
    "file": "pdf/STAR-LEGAL-BILLING-IT.pdf",
@@ -1454,10 +1454,10 @@
    "title": "Pagamenti e fatturazione",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/billing/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 2,
-   "sha256": "33953606a7f01d0ad6017879036f6e1a6cb324e527cee118cfffe5d6fa3d65a4"
+   "sha256": "1369d97a9350e12c34a75c50f816d506dbd83b47148d82437046a922e24536fe"
   },
   {
    "file": "pdf/STAR-LEGAL-CONSUMERS-IT.pdf",
@@ -1466,10 +1466,10 @@
    "title": "Consumatori e reclami",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/consumers/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 2,
-   "sha256": "d517bd40f7f8d962bdf98d95340893b141c6486bec54e0ee31883cdb15a237a6"
+   "sha256": "f83d0438b3942058081244d739c9b5934aed4153def8ce147208b253d7443b21"
   },
   {
    "file": "pdf/STAR-LEGAL-REQUESTS-IT.pdf",
@@ -1478,10 +1478,10 @@
    "title": "Richieste a terzi",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/third-party-requests/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 2,
-   "sha256": "121ee8a0ce2f737b0bbb51c9804c736db111d2c5fb8c2c496180baeb5e87e607"
+   "sha256": "14014c6e06f6c69a0735392c7d7d88171caba9d73f18d544ded0ac22f43e8a91"
   },
   {
    "file": "pdf/STAR-LEGAL-BREACH-IT.pdf",
@@ -1490,10 +1490,10 @@
    "title": "Violazioni di dati personali",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/data-breach/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 1,
-   "sha256": "55ba045c3c783116d1a75cf8ed5de19bc49488f7dfd8937829ef14f1ec750147"
+   "sha256": "a4fbbec2775eae94aacb5f54814c2a3b659ad836de87997d04bbfc8c7a465b3a"
   },
   {
    "file": "pdf/STAR-LEGAL-RECORD-IT.pdf",
@@ -1502,10 +1502,10 @@
    "title": "Registro dei trattamenti",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/processing-record/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 2,
-   "sha256": "1e8b638aaadf7d9e96b56b3f8e9238bdf11991976aa00a9db2083dff6f075232"
+   "sha256": "d1bbe620521a4df40dbade7d1751b64076bf0d5e8e4990e7f70e3ac1794ebadb"
   },
   {
    "file": "pdf/STAR-LEGAL-LICENCES-IT.pdf",
@@ -1514,10 +1514,10 @@
    "title": "Licenze",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/licences/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 1,
-   "sha256": "c289943966e2c21d6c3a45f5be37eadb7910cb834692784f7d1dea79f203ed08"
+   "sha256": "55b26c69dd97c4d44848aa764d06880b7ba0a0e6ea556cc5ff774b340a4b2664"
   },
   {
    "file": "pdf/STAR-LEGAL-PERMISSIONS-IT.pdf",
@@ -1526,10 +1526,10 @@
    "title": "Che cosa puoi fare con il software S.T.A.R.",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/permissions/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 1,
-   "sha256": "3c7ee0ac7e0df6bb41c7272ff4fe0a934f909e003ce30d64eda736f9413523d1"
+   "sha256": "4972180643a195fd7154b26ba440b329d09262d85cc328c4d87e75e28991068f"
   },
   {
    "file": "pdf/STAR-LEGAL-HISTORY-IT.pdf",
@@ -1538,10 +1538,10 @@
    "title": "Storico delle versioni dei documenti legali",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/history/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 2,
-   "sha256": "8ba4b871fb4dadbd5cc29fac2322b14f03d277d8a1a72f866e3eabf5825a622d"
+   "sha256": "125221ee0bb49e7c1bd07494c47b856842f652a9cff0a383dea40cefabf8090e"
   },
   {
    "file": "pdf/STAR-LEGAL-MATRIX-IT.pdf",
@@ -1550,10 +1550,10 @@
    "title": "Matrice dei permessi, pacchetto per pacchetto",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/matrix/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 8,
-   "sha256": "13962ad5e3e50a16c7063e4e10c28c492954d8ca4f214d880b4465003460835d"
+   "sha256": "35e05d1fa2ddd1985e55168f6bb4225a55fa760104c45fe0400e86c25f4b2695"
   },
   {
    "file": "pdf/STAR-LEGAL-FORMS-IT.pdf",
@@ -1562,10 +1562,10 @@
    "title": "Moduli e modelli",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/forms/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 1,
-   "sha256": "6d53eea22113a9afacfe17728421da1d42353534a7b875b9e2cb2a15bc326612"
+   "sha256": "ae6d87559efe48e5ec8b7a677c082c3a948ea1a1b037cb857f64f2a081a7417c"
   },
   {
    "file": "pdf/STAR-LEGAL-PACKAGES-IT.pdf",
@@ -1574,10 +1574,10 @@
    "title": "Schede di conformità, una per pacchetto",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 5,
-   "sha256": "87473db43c829282c15468627bb4f30583ea392da79e6c10de95d93e22d76fa1"
+   "sha256": "09b3dafae70e274d3e1e9db6f0a04ce581cc07a8203fadd786526817ac38fe10"
   },
   {
    "file": "pdf/packages/STAR-PKG-CONJUNCTION-SCREEN-SGP4-IT.pdf",
@@ -1586,10 +1586,10 @@
    "title": "Scheda di conformità — conjunction-screen-sgp4",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/conjunction_screen_sgp4/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "ac9e3c160e6e0c83e3e08f325392fc90c669eddbdc3ac956c4cc5a168ced2a18"
+   "sha256": "168a1299ed623c4fa85109aec89ecc9ebbd48294fa7deed2263ba991cdbaa719"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-ALBERS-IT.pdf",
@@ -1598,10 +1598,10 @@
    "title": "Scheda di conformità — star-albers",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_albers/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "abbcb42837679f6207d5bf74f56af3ee939dc57f9377c97d38f089c701e626e0"
+   "sha256": "e32beb6a02f007f8e2daaf283914c373af5a190bd7886701e82beaba7f5843f3"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-ANOMALY-IT.pdf",
@@ -1610,10 +1610,10 @@
    "title": "Scheda di conformità — star-anomaly",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_anomaly/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "2badcfddbb2096a5d92e7f4b963098ce55d6ef9c89adc2e8db2f4c5c2c15d962"
+   "sha256": "4fa4da133eefc1b3992f7a00cb9d4dca070189332d5c744de5a07096cc9b4901"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-ATMOSPHERE-IT.pdf",
@@ -1622,10 +1622,10 @@
    "title": "Scheda di conformità — star-atmosphere",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_atmosphere/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "542ed2e7e09a5e3a0ada24035bb1b3ed5f698048b829caa8468d30a4a21d2566"
+   "sha256": "2e81938ad946d581696070bf871024bb206636c5f08f9d10fc5f7b016f38c93a"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-AUDIT-IT.pdf",
@@ -1634,10 +1634,10 @@
    "title": "Scheda di conformità — star-audit",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_audit/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 5,
-   "sha256": "377951d6cc79d9c7bebfecb7ebeb66f83a764aed8f88f02e2675a4fe5d4fb23c"
+   "sha256": "7ad6e3b794f92700f38d2cd4cf57ea35d01f7ad7dc1cc20616a497c6481d69d5"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-CALENDAR-IT.pdf",
@@ -1646,10 +1646,10 @@
    "title": "Scheda di conformità — star-calendar",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_calendar/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "cf8f214e1d67af067dfbea8348b15aaa8b818e2acd153a39eac09204de9acbb2"
+   "sha256": "168ae22c3b13bff6fb2d2f48944178809e2599d665c87a00d1c1630fdf41d25a"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-CDM-IT.pdf",
@@ -1658,10 +1658,10 @@
    "title": "Scheda di conformità — star-cdm",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_cdm/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "247c0e03c940b86b0db7f9ff9d87015dab9d089a2bf16a6dffa6778269f7055e"
+   "sha256": "6d9d58fac7e9010d65602e643fc65eb05ea1b995ff0e13c337e4b62bf47b2328"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-CHEBYSHEV-IT.pdf",
@@ -1670,10 +1670,10 @@
    "title": "Scheda di conformità — star-chebyshev",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_chebyshev/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "04a6007717cc618244874d996be569ede4319793b59e905864bccf8bf93b3532"
+   "sha256": "6b294d23a4cebf67624a9e5b8fa7dab9fda9d8d0a104c2fcd97c6185dbb5c3b0"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-COORDS-IT.pdf",
@@ -1682,10 +1682,10 @@
    "title": "Scheda di conformità — star-coords",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_coords/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "54ce27a19d274cb50f2b8b68cc067b41ad67423400014ca18455f3d6b6f4c2b5"
+   "sha256": "fe4a858d04d96f7fff5ebc9f8187163fc37e506f1aadab531763744be686394f"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-COVERAGE-IT.pdf",
@@ -1694,10 +1694,10 @@
    "title": "Scheda di conformità — star-coverage",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_coverage/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "c419d2edd0e8e8802664e60a45fd7d0e6d4c94bda031592493be7cf52fab215b"
+   "sha256": "9870dbce3f684a6ebc3e6c6667979503df077af635d1d25881b82e64261ec76a"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-CRC-IT.pdf",
@@ -1706,10 +1706,10 @@
    "title": "Scheda di conformità — star-crc",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_crc/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "bf8da9e37c726a343d384abdf9b599974256a56922d8649f202f87efdcc5328f"
+   "sha256": "dc7b5ced734f27fca720ba56768398d314cfb02fcfd4c1f16b3460079008804d"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-CROSSCHECK-IT.pdf",
@@ -1718,10 +1718,10 @@
    "title": "Scheda di conformità — star-crosscheck",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_crosscheck/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "33d7a3af999b2ace4a6523a1155f8da9efa0f24822a4de2cd7b61d63f17b1a69"
+   "sha256": "42000bab52a2b12f7c6021483f6a5bb06780bceefe507f71c9ce617e75c200e6"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-CW-IT.pdf",
@@ -1730,10 +1730,10 @@
    "title": "Scheda di conformità — star-cw",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_cw/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "1a9f53691b0f33ba60688db708c253134ba227632deaa4e84e51982007dfc2fc"
+   "sha256": "a5c1f6e3b070cf5e57d139b2647447a76f7c797a78231e99b779df6af33b17d1"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-DOPPLER-IT.pdf",
@@ -1742,10 +1742,10 @@
    "title": "Scheda di conformità — star-doppler",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_doppler/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "2c964496b9a71b04825df557465c1973ca0bbcbaab614ffa7e01b32fa58e817b"
+   "sha256": "cbec2afc951c58886a9fba95ffaed311b01bd627a606b6c498dd290d6f4b9fc9"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-ECLIPTIC-IT.pdf",
@@ -1754,10 +1754,10 @@
    "title": "Scheda di conformità — star-ecliptic",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_ecliptic/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "f05f8567fd3ad899152f8ebb33df9a945a19bc742d3e0a60d3241081b890b034"
+   "sha256": "4a287aa2f77dbe8673389367eed6f8aa2124fd38ce295d4cc072b73e0c0a7d89"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-ELEMENTS-IT.pdf",
@@ -1766,10 +1766,10 @@
    "title": "Scheda di conformità — star-elements",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_elements/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "47506bf546d91cf5ba03f7bf9bece02c2a2d31a676d60877f1a3b331c122e216"
+   "sha256": "d42327eae837a65ffeaffafb271adae4ffb54a5620abb1b4c4c6b49f47cba63d"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-ELLIPSOID-IT.pdf",
@@ -1778,10 +1778,10 @@
    "title": "Scheda di conformità — star-ellipsoid",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_ellipsoid/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "4b5554a14510bfa1590b6bff7d854015f210b6c64e53c48c485a5092fc060d03"
+   "sha256": "198f5c5280bb82d75d15d33767c82d8e1cad5008dc2128eae053c2fd7a270ccf"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-EPOCH-IT.pdf",
@@ -1790,10 +1790,10 @@
    "title": "Scheda di conformità — star-epoch",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_epoch/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "431082045697d93ebce882b3132e1643d0c9fa5f4694865accfc0b091a88a417"
+   "sha256": "b3b583252020dec571faaa785f2981bd8c3c95bb1d8d49da40f4a5de345a69bb"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-ERA-IT.pdf",
@@ -1802,10 +1802,10 @@
    "title": "Scheda di conformità — star-era",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_era/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "e7092418dcbd9f6d1f485397f12fdb70c1a08a5cd217828976838a02cec81548"
+   "sha256": "02d6e88a51c0657a4d85cf53d6934146126aa403cff1d0c5b1073a288f7465a8"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-EULER-IT.pdf",
@@ -1814,10 +1814,10 @@
    "title": "Scheda di conformità — star-euler",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_euler/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "8787ad4e269981319563aa74eb1b02003c4adba96afa27c6a6b4133e8b49fae5"
+   "sha256": "122190370911c24767ba664b04e33e3075d38be546538b960066db0c05a3643e"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-GALACTIC-IT.pdf",
@@ -1826,10 +1826,10 @@
    "title": "Scheda di conformità — star-galactic",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_galactic/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "11e6c6b2b7046772fed9cf774e80f66831fad537a3b505c1c7178485e16e4439"
+   "sha256": "2543706af438e8e58ba4284c69e91b05820b0ec24b1d324a398dadf17fa57f37"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-GASDYNAMICS-IT.pdf",
@@ -1838,10 +1838,10 @@
    "title": "Scheda di conformità — star-gasdynamics",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_gasdynamics/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "139cbfb4d1481743f34488e801aa9fbf5c1942ecace57594dd92aeb56943f6a1"
+   "sha256": "e9b74a8bcdfbdd8411ed3493d3c0ea4eb5d6c9de2e238402cfe1e380c7c1e755"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-GEODESIC-IT.pdf",
@@ -1850,10 +1850,10 @@
    "title": "Scheda di conformità — star-geodesic",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_geodesic/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "2ba3dfb2cdfb8c57bd6bc89b3b38694ae8ae4092983a62557ca6e4735ee6f885"
+   "sha256": "e91babe8e6dd01e341d6b6adb04de39d03cba0bb0a4f4a1053e07469714cc20c"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-GEODESY-IT.pdf",
@@ -1862,10 +1862,10 @@
    "title": "Scheda di conformità — star-geodesy",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_geodesy/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "abd9fb1c2d9ad8d22b108589b09b06b29fb2e3a206fffe781df6a274b70db725"
+   "sha256": "9189efe18b9c45a776f04ba52ad4f355963671f454e821721558cf9d664a9259"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-HORIZON-IT.pdf",
@@ -1874,10 +1874,10 @@
    "title": "Scheda di conformità — star-horizon",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_horizon/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "087307201e5b41ff77d3946057ac3bc4df1e859365634b5be83aa21c29719a91"
+   "sha256": "e1fc54bb6128721755658866082c13b03e6206a1bdc8b09e8040bc9622aa6440"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-INTERP-IT.pdf",
@@ -1886,10 +1886,10 @@
    "title": "Scheda di conformità — star-interp",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_interp/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "b55ddfb0cd7ad9087b57d61b32d377cec9463c203c707b441acf42546e0901ed"
+   "sha256": "40aa75f48f4f93fb4154095a4af662d0763cb6bab8198fdc20fd2e09498a0cc5"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-IOD-IT.pdf",
@@ -1898,10 +1898,10 @@
    "title": "Scheda di conformità — star-iod",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_iod/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "796489682b6146f3012565990a87066a2d94cc05168a125db6e47f300091db28"
+   "sha256": "5f49318ce442c09bb3c30d77770defe32843371701f9867eda4641c1a84585c5"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-J2-IT.pdf",
@@ -1910,10 +1910,10 @@
    "title": "Scheda di conformità — star-j2",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_j2/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "69e3a49e5c8734289d39ad5880aab7e28facc98b2af8e0579a7f29ba91f30f10"
+   "sha256": "24ef7365c6e5d5938b59cd4c4638115b2cd2ecdd5b3e2b68b5064e6e7c707327"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-KEPLER-IT.pdf",
@@ -1922,10 +1922,10 @@
    "title": "Scheda di conformità — star-kepler",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_kepler/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "b2f11f3ef8e2025febe0aa3f31b4362db0907e03105426f15a4c86696d011c2c"
+   "sha256": "27b08203b3290ef4e5a6f78dea9ebe75765fa71f782455c5a5ef1074e5c0548b"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-LAMBERT-IT.pdf",
@@ -1934,10 +1934,10 @@
    "title": "Scheda di conformità — star-lambert",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_lambert/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "5db1d9ae8f19433aba0b45344e6cc4deaa6f9b4b72bed299f4d515c3b5ca398c"
+   "sha256": "0c17c398d364d4e7fe13f53e7322936e23d455d13fb1819d4a6d2acff8720404"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-LCC-IT.pdf",
@@ -1946,10 +1946,10 @@
    "title": "Scheda di conformità — star-lcc",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_lcc/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "d8164ad922658057a46d9c8082ac516236d4143cffa4f2394d487dc1561c3bf0"
+   "sha256": "5f3d6214d86153d09c4255c0e4432a9377a6a6ced64794464b40206626404c1a"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-LINEFIT-IT.pdf",
@@ -1958,10 +1958,10 @@
    "title": "Scheda di conformità — star-linefit",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_linefit/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "b2568cb790986d1bc3add48ea586804e30f29f44f8ddff121dc63b27947ff219"
+   "sha256": "ae8bfd217b9927f7fe7777e45f80418cd2809947afdd2ff111367399c774f87b"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-LINSOLVE-IT.pdf",
@@ -1970,10 +1970,10 @@
    "title": "Scheda di conformità — star-linsolve",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_linsolve/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "4da0d5404be0ff44e80eea5d58b5bdbdea308210902815dff6594b7d2abd8472"
+   "sha256": "dbd8a0d0c4d3b1e8638ca9e47ad2e2fab9ebf1807e453c1a463b436f138e1bf4"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-MANEUVER-IT.pdf",
@@ -1982,10 +1982,10 @@
    "title": "Scheda di conformità — star-maneuver",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_maneuver/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "04786954d08be4cf7ddbafa8ac2168fbae3770a553888fbb547138e6e6dca4b7"
+   "sha256": "d425503671bd95d94320624f972e7f47e23f12a7e58d853de5baf319a7532475"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-MAT3-IT.pdf",
@@ -1994,10 +1994,10 @@
    "title": "Scheda di conformità — star-mat3",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_mat3/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "580d0b114dbfb9c3e036d0f7ef1b62bb9dbe75db3fa49d52645f8324f6ad2ccb"
+   "sha256": "dd8fa9a62a34976d5565ed910c9006aaa692722e45b63dec44f899a1db6fc149"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-MERCATOR-IT.pdf",
@@ -2006,10 +2006,10 @@
    "title": "Scheda di conformità — star-mercator",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_mercator/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "832f01e4a5973a96d11984dad4156f3921002943df1ec7ed962c88a0698be94d"
+   "sha256": "0187fd1840861033fc1fe85e1f6f13d0f8b60ebd60ec1ee416e3a384bdbe40b4"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-MOON-IT.pdf",
@@ -2018,10 +2018,10 @@
    "title": "Scheda di conformità — star-moon",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_moon/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "a7ab9267a194fcd20de89aab3a7f7a8216b8c49a6c6114c0b56a63d57c482e34"
+   "sha256": "246f400c684d4b5ef7edae70fbdf0f8d28ed26f9a2a933326423257301d6f296"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-MRP-IT.pdf",
@@ -2030,10 +2030,10 @@
    "title": "Scheda di conformità — star-mrp",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_mrp/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "32b126086d8806cf6a18733999030fcc1c4f10162673e030fbd3386a4ebc5a67"
+   "sha256": "0010a033fa54228768bc4a07cc3a0bb2b54b601d3e7388fdd407fbc220e238b9"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-ORBIT-IT.pdf",
@@ -2042,10 +2042,10 @@
    "title": "Scheda di conformità — star-orbit",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_orbit/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "f75ff80811876fc922a1161be94eed3fc52cb464fb22621b8174664fdbaa9985"
+   "sha256": "fd7c32563a990c094acb75754f9e172be0e8bf2139bc8d96a6b4ef9041ddeb7f"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-POLAR-IT.pdf",
@@ -2054,10 +2054,10 @@
    "title": "Scheda di conformità — star-polar",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_polar/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "761835c4bcd019c5f257ba2cce968d0f603a9e48caeb43b70b21ebf475bb2c48"
+   "sha256": "8fa1c4ce0c29beb05b19a96792a681921bf8bf853751674b42afd981323a01e9"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-POLY-IT.pdf",
@@ -2066,10 +2066,10 @@
    "title": "Scheda di conformità — star-poly",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_poly/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "08778d403004d5452baf8c4e1282fd0301cb72e6ac7e1577bcec9615ab53d1e4"
+   "sha256": "875f94d0e505c6a8cfb1ad08cad58aa026fc44b15ba3f142949fc4003b223430"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-POLYFIT-IT.pdf",
@@ -2078,10 +2078,10 @@
    "title": "Scheda di conformità — star-polyfit",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_polyfit/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "ca83760cb31c9b7934da453c31b4858c28d1f70305e7f4fdfa9522950d30f0d5"
+   "sha256": "85841d24bebc2fcb850c029ad356e72f32765c12cf7a6afe8bfd3a92c142f05f"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-PRECESSION-IT.pdf",
@@ -2090,10 +2090,10 @@
    "title": "Scheda di conformità — star-precession",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_precession/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "a82ad7d3d64f2715fc5449baee72bb6a543d39e47ca7f8ef4aa7d64093fc8c0e"
+   "sha256": "35b31a2dac503e9ccba9d505beed28d0e3eead0df81e97b69db17d7ce1055aed"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-QUADRATURE-IT.pdf",
@@ -2102,10 +2102,10 @@
    "title": "Scheda di conformità — star-quadrature",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_quadrature/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "247cb42a383d980837bbbcde135523d46a0817d045a5276a0f901dcb4573dcba"
+   "sha256": "e3bf464571ed8d90d4672519286411a9324cd7e680026ff239dca017e86d320b"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-QUANTILE-IT.pdf",
@@ -2114,10 +2114,10 @@
    "title": "Scheda di conformità — star-quantile",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_quantile/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "37ae4c71073d08ebedd71b10b105992806f0507fa49a67a59b35bf7540f30fa7"
+   "sha256": "831387c4f638ed44dd2790b2d8bfb3d8bff657d4b1af4a3a290e8aaf05e2c38b"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-QUATERNION-IT.pdf",
@@ -2126,10 +2126,10 @@
    "title": "Scheda di conformità — star-quaternion",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_quaternion/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "f0deb35e8659d31bb12e69eb9993813b27ea4cc746ba52ecdfde0b9fac971686"
+   "sha256": "a591fc80626ad5ee6ce73828d34942ed130a59ad11b131dac1dfda92dad9b2ce"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-ROOTFIND-IT.pdf",
@@ -2138,10 +2138,10 @@
    "title": "Scheda di conformità — star-rootfind",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_rootfind/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "ba7ec80457a388712fba6fa9a842b3d127a8fe52c6bf2cd7ac05f1f0f33179ee"
+   "sha256": "ed423c4376cf9f704bb94221ca64931f6f8257d983cba0c91ce45c6b1102a77c"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-ROTFRAME-IT.pdf",
@@ -2150,10 +2150,10 @@
    "title": "Scheda di conformità — star-rotframe",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_rotframe/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "bc0276f7e7bbb6a85922d2fd0c9af3618a49475b0494f90d7ed9efad1c6c6f64"
+   "sha256": "f523a64bec804c91d40dc4dba595011dd69bc7b96a0084fb2469371a8c19623d"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-SEXAGESIMAL-IT.pdf",
@@ -2162,10 +2162,10 @@
    "title": "Scheda di conformità — star-sexagesimal",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_sexagesimal/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "f6b2048ad8f567ca63eaca964883e762a4067fcd6a24c5f9efd0b6e45a32483b"
+   "sha256": "b8fa8758572b061a3a00dc25351d648b989a2003a4eee41e73f5eb4a0926e2c4"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-SIDEREAL-IT.pdf",
@@ -2174,10 +2174,10 @@
    "title": "Scheda di conformità — star-sidereal",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_sidereal/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "aa11ca1a280f3ea236a236f7e6ebdfb031c6d68709319f97e3fd1a14c816a643"
+   "sha256": "f3c23c6dab2231f70529f623729cf29903c936357bb41f5a76a70845c6f98ea2"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-SIGMA-IT.pdf",
@@ -2186,10 +2186,10 @@
    "title": "Scheda di conformità — star-sigma",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_sigma/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "0b87a92030b85794f3e1f80e8a3222536f6064a023c0ee84c71772906afc57cc"
+   "sha256": "1acde35380c4adb89b5caf4d58d7fb10e8f39b7cd796a7857ee84cdca89aa366"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-SLERP-IT.pdf",
@@ -2198,10 +2198,10 @@
    "title": "Scheda di conformità — star-slerp",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_slerp/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "cf6b8faffa18a3b41826764bd58a9e56db9a81f45eb34b1a3aed8b92864fbfe6"
+   "sha256": "420c5b406a73bb3d215fce1335dbd3d3b5a1ae5269518a3c58d44e3303e61941"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-SPACEPACKET-IT.pdf",
@@ -2210,10 +2210,10 @@
    "title": "Scheda di conformità — star-spacepacket",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_spacepacket/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "cdc075b16356da2f584011bbf7989e7cb53c3e002deaf6d5b3cc63abbed2b914"
+   "sha256": "ccf22cc54143d666ee328a7545724c50c672c892ff3f30741ab70462be4dcf63"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-SPHERE-IT.pdf",
@@ -2222,10 +2222,10 @@
    "title": "Scheda di conformità — star-sphere",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_sphere/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "4cfd04f4acd8391781e198a693de60f114e760ef94c540c3a76c4390b223ed5e"
+   "sha256": "67fae4327d242594529d05d0233a54d848cdbbcd85c44444ae74b2277e10d8a9"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-SPLINE-IT.pdf",
@@ -2234,10 +2234,10 @@
    "title": "Scheda di conformità — star-spline",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_spline/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "520da6eb59d6a67572d2a526ab6fe11a65d5b6dc647dab8ac1588f9bb2b86632"
+   "sha256": "dcf6e36165546285b8bb23d1abd87bf2ab2a8bdce07ef01f56ae1d219789caf9"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-STATS-IT.pdf",
@@ -2246,10 +2246,10 @@
    "title": "Scheda di conformità — star-stats",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_stats/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "500ac8c2f0fdfb28ddd70a131d328016f3ed0e043f7b6420efb8fda3442d467e"
+   "sha256": "0bc170af09c8326f4cf48205361eb172feeea33156d98ea1809d410efe1c59f2"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-SUN-IT.pdf",
@@ -2258,10 +2258,10 @@
    "title": "Scheda di conformità — star-sun",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_sun/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "2ab16922672b66c1eba601f15d546382fedb647081f40fb5d1d7cc4624eee2d8"
+   "sha256": "3c89dfb8008ed45801fbc87ba7aa882f9d812ee79dd0f3962219dc1e5a5c630d"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-TABINT-IT.pdf",
@@ -2270,10 +2270,10 @@
    "title": "Scheda di conformità — star-tabint",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_tabint/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "01b58a62982bdc020326a0f8961a0a6decc010b92b9622f2342ec7ca0b5b61dd"
+   "sha256": "86d9d8024078b699d03bb182ea824c1bc3dcf13e3d8bd87e8dac14c6c0269e8c"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-TDB-IT.pdf",
@@ -2282,10 +2282,10 @@
    "title": "Scheda di conformità — star-tdb",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_tdb/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "ff8046b83e9edcc9a890787861b5b8e28e9fb38d19f357a5b48b76bb2fa30261"
+   "sha256": "b14e097d12686dbe2b07e328c1acc028878f42389a694ee05cd84a9e83569178"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-TELEMETRY-IT.pdf",
@@ -2294,10 +2294,10 @@
    "title": "Scheda di conformità — star-telemetry",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_telemetry/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "b90874555045aad7955baf09ccae1fe58bf1915d2c06dc73eff2fc8a45942899"
+   "sha256": "620ea9090c517508f546dc830613fa217ef8f597967dd15ff54ac3e95bf09353"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-TELEMETRY-C-IT.pdf",
@@ -2306,10 +2306,10 @@
    "title": "Scheda di conformità — star-aos-c",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_telemetry_c/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "c86bb0942d76ef60e7f44bd53d62e189a505d30df7170d6574ab52a2e5429540"
+   "sha256": "d93c2ffc97ee7f90d59e079e868c0f4ae5f0b6764973b03af5ed8a6b9e8ec44c"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-TIMECODE-IT.pdf",
@@ -2318,10 +2318,10 @@
    "title": "Scheda di conformità — star-timecode",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_timecode/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "70dffbfabfb4e6300081fb320a37301e4a31c89f58e956b5b76bc3e8b3f92c30"
+   "sha256": "a7ea8b9a49a50bc024e609cba0619e05ffdce6e97f48b8f92965ca77cdf1d69f"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-TLE-IT.pdf",
@@ -2330,10 +2330,10 @@
    "title": "Scheda di conformità — star-tle",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_tle/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "a6300fa5e4d65cf761250ebfecf6fb36ade376e42df5abd5ae64d6e83098af79"
+   "sha256": "e5e2db0db958e489123e936a9de395404be23febf8737b0de010f99f118e49d2"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-TOPO-IT.pdf",
@@ -2342,10 +2342,10 @@
    "title": "Scheda di conformità — star-topo",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_topo/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "775f8aec12042ef5b1d23636825f66555dba68f91e919d481ac9bc6e7d84f374"
+   "sha256": "20fa64268d95c64c5dabdb191e648934d9ec2f347e9f8d61becb0cdced69af4b"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-TWOBODY-IT.pdf",
@@ -2354,10 +2354,10 @@
    "title": "Scheda di conformità — star-twobody",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_twobody/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "bc4f9c1e69aab6f6440b57b5b619c46859c03f4e72af2a927ca30647f0742362"
+   "sha256": "5ed9d4626cd04f333f6fa288cb2046dfd1758d40af8fcc9a605eafb04df89050"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-UNITS-IT.pdf",
@@ -2366,10 +2366,10 @@
    "title": "Scheda di conformità — star-units",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_units/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "721fc457a3a240477ff74ecf23bb56ea9dafa61730d678992df3b9915f00299e"
+   "sha256": "dccbbc2b6de478ad1829015138d6fe3fcccbda70a3c28bc7ef496b6323f6073c"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-UTM-IT.pdf",
@@ -2378,10 +2378,10 @@
    "title": "Scheda di conformità — star-utm",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_utm/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "7bf1fb13f8206528070aaabc60294bf10a0076b5b4c2fca55f9529b0131fe217"
+   "sha256": "0683a8bff7f4daaa0a805dcc268d69d770116d4523a6660a925c32690f449a4b"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-VEC3-IT.pdf",
@@ -2390,10 +2390,10 @@
    "title": "Scheda di conformità — star-vec3",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_vec3/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "074256a62b8d9a823fcc4a8c7105b80dda11a989aca119bdc9123827cc26867e"
+   "sha256": "78b789b2864d617e44655bfe4dc3dbf3792e204d12d1f3989b5fe578bdee062d"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-WAHBA-IT.pdf",
@@ -2402,10 +2402,10 @@
    "title": "Scheda di conformità — star-wahba",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_wahba/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "fe59dc02fa4c710d45d390d1720ef9d1ee5073463b935eefc491439355713417"
+   "sha256": "8f5b5a5d7b348b7943eda9329afb7a1137706b71f4d8fc90cdd2d3f9b71023f2"
   },
   {
    "file": "pdf/packages/STAR-PKG-STAR-WRAP-IT.pdf",
@@ -2414,10 +2414,10 @@
    "title": "Scheda di conformità — star-wrap",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/packages/star_wrap/",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 3,
-   "sha256": "2f5a00095accaaf919bb8f87bbb9badf00ba55251af9f90ecfb3b1a04259b6e8"
+   "sha256": "d84aa99a699159925af88f4748a01005164716d9dadb5c96fb76c65975408d6c"
   },
   {
    "file": "pdf/forms/STAR-FORM-GDPR-IT.pdf",
@@ -2426,10 +2426,10 @@
    "title": "Richiesta sui dati personali (GDPR)",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/forms/#gdpr",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 1,
-   "sha256": "0c13dce46b9d34d3ecf699fd6427f69345f69d191b098b0341eef7e9784fc1bc"
+   "sha256": "634c6c2f22610ad3128ab367b0edbfc788ee44ea116cb1f77c82caca31324c26"
   },
   {
    "file": "pdf/forms/STAR-FORM-VULNERABILITY-IT.pdf",
@@ -2438,10 +2438,10 @@
    "title": "Segnalazione di vulnerabilità",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/forms/#vulnerability",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 1,
-   "sha256": "bb4c316ee9688ae6450bf88a44edcbd4294bbf1b074034ee90f36e96e7ab4022"
+   "sha256": "8b8e038f2fb3b4b7a8ac19573c2d727ba36f75efa4ebddefa33ffdb53155daa3"
   },
   {
    "file": "pdf/forms/STAR-FORM-ASSESSMENT-IT.pdf",
@@ -2450,10 +2450,10 @@
    "title": "Richiesta di valutazione",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/forms/#assessment",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 1,
-   "sha256": "694fef0f4edc026c39f4711a3bc90178dcea7b00338cc67185d93794cf8ebc94"
+   "sha256": "eb91a10adbe36cb89904b97e78843253d674e8c8f8fe9eeded5c7b92ec72800f"
   },
   {
    "file": "pdf/forms/STAR-FORM-NDA-IT.pdf",
@@ -2462,10 +2462,10 @@
    "title": "Accordo di riservatezza reciproco (modello)",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/forms/#nda",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 1,
-   "sha256": "0868f03d1eebcb89af871ce8e7a6cdc8ba448ebfc9e01f114e0a6dd1c5379088"
+   "sha256": "03da540ac4619d307fe1b3cda551b4a5549a473afd33d6fb9aa5c925fbbb6da7"
   },
   {
    "file": "pdf/forms/STAR-FORM-END-USE-IT.pdf",
@@ -2474,10 +2474,10 @@
    "title": "Dichiarazione di uso finale",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/forms/#end-use",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 1,
-   "sha256": "1197aae243fd0e6dd65e7ed1a37a28022050de88540d04c755a7fca6d35c6d44"
+   "sha256": "45db4d5db92918f354b50da2a283558c45c3f4e1fc30d5dcaca0c60d2f608631"
   },
   {
    "file": "pdf/forms/STAR-FORM-BILLING-DETAILS-IT.pdf",
@@ -2486,10 +2486,10 @@
    "title": "Dati di fatturazione",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/forms/#billing-details",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 1,
-   "sha256": "cfaae13972c59c97bb9ba744211cc785e13d41d4c32ab78e686fc65dca5b8695"
+   "sha256": "5acfc39b08c18ebc2f0969274b82892e4fa35bee3cb91c2fc5bc526bdafd8759"
   },
   {
    "file": "pdf/forms/STAR-FORM-ORDER-IT.pdf",
@@ -2498,10 +2498,10 @@
    "title": "Accettazione di un'offerta",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/forms/#order",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 1,
-   "sha256": "22d9a78c5416f8390cd1cdc9bfb0e4f2309fca26cc0d48a2cd5e92b1ee0c8b51"
+   "sha256": "2f555516efd4380a6aa1b6032ce4394719bff07d1a3d2cc97b0e5cab7a60c75f"
   },
   {
    "file": "pdf/forms/STAR-FORM-CLA-INDIVIDUAL-IT.pdf",
@@ -2510,10 +2510,10 @@
    "title": "Accordo di licenza per i contributi — persona fisica (modello)",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/forms/#cla-individual",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 1,
-   "sha256": "de80d97c172e4e2bd4066b923fde808413aca215bbbffa4280031f5bbebe61d1"
+   "sha256": "618df85406c3e443e2e5916f291a797eed6ff4d8f20ea59c6ac03aa4677247ff"
   },
   {
    "file": "pdf/forms/STAR-FORM-CLA-CORPORATE-IT.pdf",
@@ -2522,10 +2522,10 @@
    "title": "Accordo di licenza per i contributi — organizzazione (modello)",
    "language": "it",
    "source": "https://andrea07072000.github.io/S.T.A.R.-/it/legal/forms/#cla-corporate",
-   "version": "1.5",
-   "date": "2026-10-20",
+   "version": "1.6",
+   "date": "2026-10-21",
    "pages": 1,
-   "sha256": "2e8385f6f871d12dfb457d7e99678bfb51e2dc87d1b7fd4bed6476e52aaf9b26"
+   "sha256": "2d98543b374bfdfd618a00396ebcd1920f94e8c6a2b6fd9182647d01e9a8f747"
   }
  ]
 }
