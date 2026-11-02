@@ -4,7 +4,7 @@
 
 Please report suspected vulnerabilities **privately** by email to Info.and.News.S.T.A.R@proton.me, not
 in a public issue. Include what you observed, how to reproduce it, and the affected commit.
-You will receive an acknowledgement; there is currently no formal response-time commitment.
+A first answer aims to arrive within 7 days, on a best-effort basis; there is no formal response-time commitment.
 
 ## Scope
 

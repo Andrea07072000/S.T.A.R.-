@@ -1,6 +1,6 @@
 # Contributing
 
-Issues and pull requests are welcome.
+Issues are welcome. Outside pull requests are not accepted yet: the terms for them are still to be defined.
 
 - **Bugs**: include the input, the observed output, the expected output and its source
   (a primary reference is better than another implementation).
@@ -10,5 +10,4 @@ Issues and pull requests are welcome.
   expiry date together with the table; the MJD cross-check in the tests must still pass.
 - Run `python -m pytest` before opening a pull request.
 
-By submitting a contribution you agree that it is licensed under the Apache License 2.0, the
-license of this repository, and that you have the right to submit it.
+Code is published under the Apache License 2.0. No contribution terms apply yet, because no outside contribution is accepted.
