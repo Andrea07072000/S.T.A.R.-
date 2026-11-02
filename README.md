@@ -167,4 +167,4 @@ unattended (preflight before overnight runs, honest status reports), each one be
 [Apache-2.0](LICENSE) · [Security policy](SECURITY.md) · [Contributing](CONTRIBUTING.md) ·
 [Changelog](CHANGELOG.md) · Cite: [`CITATION.cff`](CITATION.cff)
 
-Andrea Cavazzini — cavazziniandrea515@gmail.com
+Andrea Cavazzini — Info.and.News.S.T.A.R@proton.me
