@@ -1,4 +1,4 @@
-import{installWheels as e,loadPy as t}from"./runner-Dmp78hkh.js";var n=`"""Scientific Workbench of the Workspace (M11, 2026-10-21): five released S.T.A.R. packages behind simple forms.\r
+import{installWheels as e,loadPy as t}from"./runner-BkJWV8jM.js";var n=`"""Scientific Workbench of the Workspace (M11, 2026-10-21): five released S.T.A.R. packages behind simple forms.\r
 Runs in the browser (Pyodide, after the package's wheel is installed) and in CPython for the tests\r
 (tests/test_ws_bench.py compares every tool with an independent reference). Each function takes plain values and\r
 returns a JSON-ready dict; a refused input returns {"error": the package's own message}.\r
