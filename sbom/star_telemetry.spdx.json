@@ -5,7 +5,7 @@
  "name": "star-telemetry-0.2.7",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_telemetry-0.2.7-94fcf7c",
  "creationInfo": {
-  "created": "2026-10-27T00:00:00Z",
+  "created": "2026-11-02T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "8292839466293b2f49a5400378b3e320602c9fc1f3814baf2b77b4eaabf19560"
+     "checksumValue": "5eaf94832392d32de19ac98c76ea0d8b7f0321dfd3822b4d45f4077741e95227"
     }
    ]
   }

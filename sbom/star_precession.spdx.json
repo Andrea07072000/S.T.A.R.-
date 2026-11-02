@@ -5,7 +5,7 @@
  "name": "star-precession-0.1.0",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_precession-0.1.0-94fcf7c",
  "creationInfo": {
-  "created": "2026-10-27T00:00:00Z",
+  "created": "2026-11-02T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "461606b45b709e7d491e50960d0cca319d0f882da7f2a0052c05535da884953c"
+     "checksumValue": "d9728001a4ad662881649812c0e3121cb31b6abc569cd9f86571fc41a2a1b61a"
     }
    ]
   }

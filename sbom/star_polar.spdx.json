@@ -5,7 +5,7 @@
  "name": "star-polar-0.1.0",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_polar-0.1.0-94fcf7c",
  "creationInfo": {
-  "created": "2026-10-27T00:00:00Z",
+  "created": "2026-11-02T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "f63ee9e3fe729ae90e525d4d234d0f4d766ac12eb305726019e14b83e996569c"
+     "checksumValue": "f1018c2a8c4eed724caf26f6332d50f3e2666065857d0fc96122fc1826bf1170"
     }
    ]
   }

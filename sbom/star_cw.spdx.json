@@ -5,7 +5,7 @@
  "name": "star-cw-0.1.0",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_cw-0.1.0-94fcf7c",
  "creationInfo": {
-  "created": "2026-10-27T00:00:00Z",
+  "created": "2026-11-02T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "d95578b636d0c379dcd7ed4f69ce1b9ff6b7cba3c0f61f873ec34f18c2afe0f0"
+     "checksumValue": "68c0086b0f7b5b53ca0878e14273bc61736d027ead2c2606ecc1d4fd156c6d4e"
     }
    ]
   }

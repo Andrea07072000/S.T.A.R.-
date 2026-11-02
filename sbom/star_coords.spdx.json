@@ -5,7 +5,7 @@
  "name": "star-coords-0.1.0",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_coords-0.1.0-94fcf7c",
  "creationInfo": {
-  "created": "2026-10-27T00:00:00Z",
+  "created": "2026-11-02T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "231f8862e99211c55be7d7290aafdd896baddafc944802d8aa9ff6dad5034b2c"
+     "checksumValue": "d110694569d5f82274fae77fce08c19a4f0fe1e43c3c25abbebec9412e9c9944"
     }
    ]
   }

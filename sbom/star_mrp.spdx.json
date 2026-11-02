@@ -5,7 +5,7 @@
  "name": "star-mrp-0.1.0",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_mrp-0.1.0-94fcf7c",
  "creationInfo": {
-  "created": "2026-10-27T00:00:00Z",
+  "created": "2026-11-02T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "e94f7a9856393cb1dc2f43a23ad7ad1a5914d944df478a52e13b97425a19c1f9"
+     "checksumValue": "f3bfb4e876ab9c5179b8023a9902b087d99db35f4796ed6c1e316487bf1a21ae"
     }
    ]
   }

@@ -5,7 +5,7 @@
  "name": "star-rotframe-0.1.0",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_rotframe-0.1.0-94fcf7c",
  "creationInfo": {
-  "created": "2026-10-27T00:00:00Z",
+  "created": "2026-11-02T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "0a0beaefee068cd94d5c9cedfadf3f5e8f960cd376dae03d595acdb9dd66acef"
+     "checksumValue": "499caa597bb01dc39524fdbed598d5484ca7d115f057a497a54d302c266c1728"
     }
    ]
   }

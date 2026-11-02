@@ -5,7 +5,7 @@
  "name": "star-tdb-0.1.1",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_tdb-0.1.1-94fcf7c",
  "creationInfo": {
-  "created": "2026-10-27T00:00:00Z",
+  "created": "2026-11-02T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "ba9a7ae408d7aa74829bb51916ebebeb0abadab27b6835cc7a25b258a85beb75"
+     "checksumValue": "8f7477569a4c6b5f8a57da74b98c9f95bded2cfe60497e678647d78029674471"
     }
    ]
   }

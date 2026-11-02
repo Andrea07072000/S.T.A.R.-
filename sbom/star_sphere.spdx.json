@@ -5,7 +5,7 @@
  "name": "star-sphere-0.1.1",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_sphere-0.1.1-94fcf7c",
  "creationInfo": {
-  "created": "2026-10-27T00:00:00Z",
+  "created": "2026-11-02T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "7c53108424ef7bb49950be28efadd86ed9994349ef88542b27b3a8fb25318239"
+     "checksumValue": "375e7709ea401aba94ecbfd5b2ed230bc234559f84b6e8dbb7aac9d31bab18cd"
     }
    ]
   }

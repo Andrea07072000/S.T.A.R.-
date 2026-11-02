@@ -5,7 +5,7 @@
  "name": "star-topo-0.1.0",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_topo-0.1.0-94fcf7c",
  "creationInfo": {
-  "created": "2026-10-27T00:00:00Z",
+  "created": "2026-11-02T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "a5f9f3ea0ff73cdb4aef0847fb74e373fdab45c6467672a9396ed5ef5ac8ee36"
+     "checksumValue": "c23aa3bcc77b0f693573111043bbddcb20bca856c89cfd9bba4a8356d4ba01da"
     }
    ]
   }

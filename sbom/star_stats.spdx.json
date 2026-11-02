@@ -5,7 +5,7 @@
  "name": "star-stats-0.1.0",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_stats-0.1.0-94fcf7c",
  "creationInfo": {
-  "created": "2026-10-27T00:00:00Z",
+  "created": "2026-11-02T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "47225878d6eb31cf6e678d88322b7c1362e20046915a8b5300d0ce8ac98761c9"
+     "checksumValue": "13536b0fe09955f2e53c6416a2cb83f470121f47ef5e60baad15fdfbfb88b690"
     }
    ]
   }

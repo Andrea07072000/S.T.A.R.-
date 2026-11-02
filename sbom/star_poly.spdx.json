@@ -5,7 +5,7 @@
  "name": "star-poly-0.1.0",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_poly-0.1.0-94fcf7c",
  "creationInfo": {
-  "created": "2026-10-27T00:00:00Z",
+  "created": "2026-11-02T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "a1683cd8576f005a3d1b15685d00c09aa41558791f16d69f5e71723f5ce46d07"
+     "checksumValue": "a453d7d4b002d3c57b2eaf193b346a4a3b132feed0489b93d700495ecdd6f415"
     }
    ]
   }

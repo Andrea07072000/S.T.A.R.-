@@ -5,7 +5,7 @@
  "name": "star-moon-0.1.0",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_moon-0.1.0-94fcf7c",
  "creationInfo": {
-  "created": "2026-10-27T00:00:00Z",
+  "created": "2026-11-02T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "a50cb2e2e106001163cd963b32cfdf612904dbf06417c388f081dd2f520e222d"
+     "checksumValue": "8c4374f84ffea25d5f71c40d41169bf8e872f315ca65f5714a2aab6277353e35"
     }
    ]
   }

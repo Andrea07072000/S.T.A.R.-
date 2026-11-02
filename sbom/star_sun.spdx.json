@@ -5,7 +5,7 @@
  "name": "star-sun-0.1.0",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_sun-0.1.0-94fcf7c",
  "creationInfo": {
-  "created": "2026-10-27T00:00:00Z",
+  "created": "2026-11-02T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "efe79a6c0bc738b3ecf83c90e2e34c67a53b7d6eff223b175c5da48d5d45942e"
+     "checksumValue": "34cd55d1a80b0ae859fe067b9d0e41833d2e74851b544d208f7e163cead0c4e9"
     }
    ]
   }

@@ -5,7 +5,7 @@
  "name": "star-albers-0.1.0",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_albers-0.1.0-94fcf7c",
  "creationInfo": {
-  "created": "2026-10-27T00:00:00Z",
+  "created": "2026-11-02T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "a428fb35be3fce23b5fcbd3243a9ffaba6a8a828d1344a130d2c2b9a4b04ecb9"
+     "checksumValue": "829c1d3dc74bdb43d3d1ea6ed688e0f855e1d1c276ba3e9cea8d226e06d199c3"
     }
    ]
   }

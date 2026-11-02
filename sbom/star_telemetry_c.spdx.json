@@ -5,7 +5,7 @@
  "name": "star-aos-c-0.1.3",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_telemetry_c-0.1.3-94fcf7c",
  "creationInfo": {
-  "created": "2026-10-27T00:00:00Z",
+  "created": "2026-11-02T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "192d0b6eac36ed5cb6984bd606957901d3be024b3c94a60823ac01acb3ff1089"
+     "checksumValue": "0def49043646b72acc0cc6f65659b489ddb8c6021d6010bbf88fd4765acf35d9"
     }
    ]
   }
