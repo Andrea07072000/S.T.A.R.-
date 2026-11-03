@@ -1,10 +1,10 @@
 {
  "bomFormat": "CycloneDX",
  "specVersion": "1.5",
- "serialNumber": "urn:uuid:f4e564b9-1a4a-5726-b82b-c59314a194ad",
+ "serialNumber": "urn:uuid:41651d13-030a-53bf-96b3-1d88d8fe4a08",
  "version": 1,
  "metadata": {
-  "timestamp": "2026-11-02T00:00:00Z",
+  "timestamp": "2026-11-03T00:00:00Z",
   "authors": [
    {
     "name": "Andrea Cavazzini"
@@ -23,7 +23,7 @@
      }
     }
    ],
-   "purl": "pkg:generic/star-calendar@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%4094fcf7c%23packages%2Fstar_calendar",
+   "purl": "pkg:generic/star-calendar@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_calendar",
    "author": "Andrea Cavazzini",
    "externalReferences": [
     {
@@ -38,7 +38,7 @@
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "e00159343e740d89e07d57884a3dbd620bd6b6950f4d122923e0f7d494dc0e95"
+     "content": "162b26054aca34c1234e4b1bd8fc6b704805bd7cc9d324854254568e7b7e3373"
     }
    ]
   },

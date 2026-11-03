@@ -1,10 +1,10 @@
 {
  "bomFormat": "CycloneDX",
  "specVersion": "1.5",
- "serialNumber": "urn:uuid:83b2fc9d-00c2-5716-8193-94154c3deb05",
+ "serialNumber": "urn:uuid:261cfedb-bdd1-58fd-bbe8-6c0ae47e17c8",
  "version": 1,
  "metadata": {
-  "timestamp": "2026-11-02T00:00:00Z",
+  "timestamp": "2026-11-03T00:00:00Z",
   "authors": [
    {
     "name": "Andrea Cavazzini"
@@ -23,7 +23,7 @@
      }
     }
    ],
-   "purl": "pkg:generic/star-spline@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%4094fcf7c%23packages%2Fstar_spline",
+   "purl": "pkg:generic/star-spline@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_spline",
    "author": "Andrea Cavazzini",
    "externalReferences": [
     {
@@ -38,7 +38,7 @@
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "4dad2f4b03af94712d6c04e1a934adb8eb4019dd5d8869581c7936a5e0ad47b2"
+     "content": "a88e3d87363520c196412567ebd5e884a956a0470bbe021439d5a44810fec427"
     }
    ]
   },

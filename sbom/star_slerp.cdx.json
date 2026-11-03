@@ -1,10 +1,10 @@
 {
  "bomFormat": "CycloneDX",
  "specVersion": "1.5",
- "serialNumber": "urn:uuid:55eea5e9-7e3c-5601-8ef2-fed8e553e631",
+ "serialNumber": "urn:uuid:1c9cffe8-15f5-531e-87e0-5fc98c939ef4",
  "version": 1,
  "metadata": {
-  "timestamp": "2026-11-02T00:00:00Z",
+  "timestamp": "2026-11-03T00:00:00Z",
   "authors": [
    {
     "name": "Andrea Cavazzini"
@@ -23,7 +23,7 @@
      }
     }
    ],
-   "purl": "pkg:generic/star-slerp@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%4094fcf7c%23packages%2Fstar_slerp",
+   "purl": "pkg:generic/star-slerp@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_slerp",
    "author": "Andrea Cavazzini",
    "externalReferences": [
     {
@@ -38,7 +38,7 @@
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "e339888fef48bbe81f58a694a9fe9832e956b2416689e621aaa11e814c493524"
+     "content": "f9c6c73ca8f47c7540b41bd9cd98d6b3362f54620cb034f053edeb02d38c0844"
     }
    ]
   },

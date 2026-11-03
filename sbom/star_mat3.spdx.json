@@ -3,9 +3,9 @@
  "dataLicense": "CC0-1.0",
  "SPDXID": "SPDXRef-DOCUMENT",
  "name": "star-mat3-0.1.0",
- "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_mat3-0.1.0-94fcf7c",
+ "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_mat3-0.1.0-dc09f61",
  "creationInfo": {
-  "created": "2026-11-02T00:00:00Z",
+  "created": "2026-11-03T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -16,7 +16,7 @@
    "SPDXID": "SPDXRef-Package-star-mat3",
    "name": "star-mat3",
    "versionInfo": "0.1.0",
-   "downloadLocation": "git+https://github.com/Andrea07072000/S.T.A.R.-@94fcf7c#packages/star_mat3",
+   "downloadLocation": "git+https://github.com/Andrea07072000/S.T.A.R.-@dc09f61#packages/star_mat3",
    "homepage": "https://andrea07072000.github.io/S.T.A.R.-/software/star_mat3/",
    "filesAnalyzed": false,
    "licenseConcluded": "Apache-2.0",
@@ -28,13 +28,13 @@
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:generic/star-mat3@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%4094fcf7c%23packages%2Fstar_mat3"
+     "referenceLocator": "pkg:generic/star-mat3@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_mat3"
     }
    ],
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "f303e9d46f8eacc324b24850ec57b249f291d2145f6322a5b2d381c5e625dd03"
+     "checksumValue": "48599c06fad81cc41aabbee306eb3922aca557e8f67fda0b11182de88e36a8fb"
     }
    ]
   }

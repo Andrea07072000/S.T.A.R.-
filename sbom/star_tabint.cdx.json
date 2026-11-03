@@ -1,10 +1,10 @@
 {
  "bomFormat": "CycloneDX",
  "specVersion": "1.5",
- "serialNumber": "urn:uuid:95867657-5192-54b2-92b2-c110abb84823",
+ "serialNumber": "urn:uuid:7477a9ea-d66d-504b-a6ef-93d7128cf066",
  "version": 1,
  "metadata": {
-  "timestamp": "2026-11-02T00:00:00Z",
+  "timestamp": "2026-11-03T00:00:00Z",
   "authors": [
    {
     "name": "Andrea Cavazzini"
@@ -23,7 +23,7 @@
      }
     }
    ],
-   "purl": "pkg:generic/star-tabint@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%4094fcf7c%23packages%2Fstar_tabint",
+   "purl": "pkg:generic/star-tabint@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_tabint",
    "author": "Andrea Cavazzini",
    "externalReferences": [
     {
@@ -38,7 +38,7 @@
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "3c5cd25c713cf3590cd0819a56d592d823bfad9aa7e9fb55e912cdc6326602e1"
+     "content": "cf6d3a8734a3168760e1472795c26d426dd2b1d47c934faa21a2bd92c98acef7"
     }
    ]
   },

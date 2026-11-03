@@ -1,10 +1,10 @@
 {
  "bomFormat": "CycloneDX",
  "specVersion": "1.5",
- "serialNumber": "urn:uuid:0919659c-496d-5303-96a7-0d5ae949e238",
+ "serialNumber": "urn:uuid:b5c3aabf-0624-5a57-9048-d0b447a72ec2",
  "version": 1,
  "metadata": {
-  "timestamp": "2026-11-02T00:00:00Z",
+  "timestamp": "2026-11-03T00:00:00Z",
   "authors": [
    {
     "name": "Andrea Cavazzini"
@@ -23,7 +23,7 @@
      }
     }
    ],
-   "purl": "pkg:generic/star-precession@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%4094fcf7c%23packages%2Fstar_precession",
+   "purl": "pkg:generic/star-precession@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_precession",
    "author": "Andrea Cavazzini",
    "externalReferences": [
     {
@@ -38,7 +38,7 @@
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "227a6764a80fbcb265d09f1b1600ec5bf2d4fb6df696a3cabbaf178f0fae9711"
+     "content": "fed25003b41e588fe703045c1459952c99f7764f01ca81434f955b9957024a25"
     }
    ]
   },

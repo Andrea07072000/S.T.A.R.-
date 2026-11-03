@@ -3,9 +3,9 @@
  "dataLicense": "CC0-1.0",
  "SPDXID": "SPDXRef-DOCUMENT",
  "name": "star-twobody-0.1.0",
- "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_twobody-0.1.0-94fcf7c",
+ "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_twobody-0.1.0-dc09f61",
  "creationInfo": {
-  "created": "2026-11-02T00:00:00Z",
+  "created": "2026-11-03T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -16,7 +16,7 @@
    "SPDXID": "SPDXRef-Package-star-twobody",
    "name": "star-twobody",
    "versionInfo": "0.1.0",
-   "downloadLocation": "git+https://github.com/Andrea07072000/S.T.A.R.-@94fcf7c#packages/star_twobody",
+   "downloadLocation": "git+https://github.com/Andrea07072000/S.T.A.R.-@dc09f61#packages/star_twobody",
    "homepage": "https://andrea07072000.github.io/S.T.A.R.-/software/star_twobody/",
    "filesAnalyzed": false,
    "licenseConcluded": "Apache-2.0",
@@ -28,13 +28,13 @@
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:generic/star-twobody@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%4094fcf7c%23packages%2Fstar_twobody"
+     "referenceLocator": "pkg:generic/star-twobody@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_twobody"
     }
    ],
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "6f064459698a86f7db5fe7e423396180d8f3a96240cb769a195ed14ceb472303"
+     "checksumValue": "d8954498f3f3d2a0b6ef19843a4ff7a7727561825989738525bf370fdbb24bf2"
     }
    ]
   }

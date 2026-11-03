@@ -3,9 +3,9 @@
  "dataLicense": "CC0-1.0",
  "SPDXID": "SPDXRef-DOCUMENT",
  "name": "star-precession-0.1.0",
- "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_precession-0.1.0-94fcf7c",
+ "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_precession-0.1.0-dc09f61",
  "creationInfo": {
-  "created": "2026-11-02T00:00:00Z",
+  "created": "2026-11-03T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -16,7 +16,7 @@
    "SPDXID": "SPDXRef-Package-star-precession",
    "name": "star-precession",
    "versionInfo": "0.1.0",
-   "downloadLocation": "git+https://github.com/Andrea07072000/S.T.A.R.-@94fcf7c#packages/star_precession",
+   "downloadLocation": "git+https://github.com/Andrea07072000/S.T.A.R.-@dc09f61#packages/star_precession",
    "homepage": "https://andrea07072000.github.io/S.T.A.R.-/software/star_precession/",
    "filesAnalyzed": false,
    "licenseConcluded": "Apache-2.0",
@@ -28,13 +28,13 @@
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:generic/star-precession@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%4094fcf7c%23packages%2Fstar_precession"
+     "referenceLocator": "pkg:generic/star-precession@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_precession"
     }
    ],
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "227a6764a80fbcb265d09f1b1600ec5bf2d4fb6df696a3cabbaf178f0fae9711"
+     "checksumValue": "fed25003b41e588fe703045c1459952c99f7764f01ca81434f955b9957024a25"
     }
    ]
   }

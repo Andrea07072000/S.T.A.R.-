@@ -1,10 +1,10 @@
 {
  "bomFormat": "CycloneDX",
  "specVersion": "1.5",
- "serialNumber": "urn:uuid:dc9a5087-3f86-5a7d-a82b-e9f25e0dd5c9",
+ "serialNumber": "urn:uuid:c31a2299-f814-572e-b710-96bef06cb5c7",
  "version": 1,
  "metadata": {
-  "timestamp": "2026-11-02T00:00:00Z",
+  "timestamp": "2026-11-03T00:00:00Z",
   "authors": [
    {
     "name": "Andrea Cavazzini"
@@ -23,7 +23,7 @@
      }
     }
    ],
-   "purl": "pkg:generic/star-interp@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%4094fcf7c%23packages%2Fstar_interp",
+   "purl": "pkg:generic/star-interp@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_interp",
    "author": "Andrea Cavazzini",
    "externalReferences": [
     {
@@ -38,7 +38,7 @@
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "29f8ae9ebe0ef1c0c0859b5a4cb20c0a900486df53f6e8509b62741584de1b0e"
+     "content": "b45c3a3c3a839b67121c14689ea92d0e04af956d779b316a685be983ac1ee41f"
     }
    ]
   },

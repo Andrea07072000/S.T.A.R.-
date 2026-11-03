@@ -1,10 +1,10 @@
 {
  "bomFormat": "CycloneDX",
  "specVersion": "1.5",
- "serialNumber": "urn:uuid:b648bd32-3316-5ecc-979e-aa66e4460625",
+ "serialNumber": "urn:uuid:de86f2ad-b127-5880-92e1-47f51ddea709",
  "version": 1,
  "metadata": {
-  "timestamp": "2026-11-02T00:00:00Z",
+  "timestamp": "2026-11-03T00:00:00Z",
   "authors": [
    {
     "name": "Andrea Cavazzini"
@@ -23,7 +23,7 @@
      }
     }
    ],
-   "purl": "pkg:generic/star-kepler@0.1.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%4094fcf7c%23packages%2Fstar_kepler",
+   "purl": "pkg:generic/star-kepler@0.1.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_kepler",
    "author": "Andrea Cavazzini",
    "externalReferences": [
     {
@@ -38,7 +38,7 @@
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "519aebc3ba8a78c1d7c5ef803d54de94d73de640702b6eb944c3a97e44f2edc1"
+     "content": "5a5481c966f92eedd5b0b55b810cf54471068d602fb5888432479d4d13106626"
     }
    ]
   },

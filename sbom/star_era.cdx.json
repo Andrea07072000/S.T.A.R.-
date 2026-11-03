@@ -1,10 +1,10 @@
 {
  "bomFormat": "CycloneDX",
  "specVersion": "1.5",
- "serialNumber": "urn:uuid:7471a1c4-1520-526f-a920-1a0f48db50e6",
+ "serialNumber": "urn:uuid:97ed8bb1-5173-5240-b45e-a9e6bedbaaff",
  "version": 1,
  "metadata": {
-  "timestamp": "2026-11-02T00:00:00Z",
+  "timestamp": "2026-11-03T00:00:00Z",
   "authors": [
    {
     "name": "Andrea Cavazzini"
@@ -23,7 +23,7 @@
      }
     }
    ],
-   "purl": "pkg:generic/star-era@0.1.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%4094fcf7c%23packages%2Fstar_era",
+   "purl": "pkg:generic/star-era@0.1.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_era",
    "author": "Andrea Cavazzini",
    "externalReferences": [
     {
@@ -38,7 +38,7 @@
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "56eddb7113c509e99fa5f4651e9eaaf533d1e3f1f340cfec00b2e90728d273f8"
+     "content": "3716353ff3c413ae6f6b0bc5fc61124493e97154337b50437cbcb4cf2110372d"
     }
    ]
   },

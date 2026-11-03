@@ -1,10 +1,10 @@
 {
  "bomFormat": "CycloneDX",
  "specVersion": "1.5",
- "serialNumber": "urn:uuid:3eca6b5a-04ef-525a-9eeb-57adaca63c55",
+ "serialNumber": "urn:uuid:69f824f3-f19d-535d-a611-a053d9789b2a",
  "version": 1,
  "metadata": {
-  "timestamp": "2026-11-02T00:00:00Z",
+  "timestamp": "2026-11-03T00:00:00Z",
   "authors": [
    {
     "name": "Andrea Cavazzini"
@@ -23,7 +23,7 @@
      }
     }
    ],
-   "purl": "pkg:generic/star-quantile@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%4094fcf7c%23packages%2Fstar_quantile",
+   "purl": "pkg:generic/star-quantile@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_quantile",
    "author": "Andrea Cavazzini",
    "externalReferences": [
     {
@@ -38,7 +38,7 @@
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "68408d480a0e5cecd713e5247c3af14ae3f2456a96ed4707d3c3a27b998d122e"
+     "content": "6754abbe0bd36182db3b73e376c31bab3e222f6c7ad0daf01408db931cf1e8b1"
     }
    ]
   },

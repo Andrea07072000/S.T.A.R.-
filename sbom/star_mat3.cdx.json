@@ -1,10 +1,10 @@
 {
  "bomFormat": "CycloneDX",
  "specVersion": "1.5",
- "serialNumber": "urn:uuid:35f315a7-8e5a-5cf5-8cb8-da729377c3bb",
+ "serialNumber": "urn:uuid:a08ff5fb-f22d-5923-902c-648603549ea2",
  "version": 1,
  "metadata": {
-  "timestamp": "2026-11-02T00:00:00Z",
+  "timestamp": "2026-11-03T00:00:00Z",
   "authors": [
    {
     "name": "Andrea Cavazzini"
@@ -23,7 +23,7 @@
      }
     }
    ],
-   "purl": "pkg:generic/star-mat3@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%4094fcf7c%23packages%2Fstar_mat3",
+   "purl": "pkg:generic/star-mat3@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_mat3",
    "author": "Andrea Cavazzini",
    "externalReferences": [
     {
@@ -38,7 +38,7 @@
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "f303e9d46f8eacc324b24850ec57b249f291d2145f6322a5b2d381c5e625dd03"
+     "content": "48599c06fad81cc41aabbee306eb3922aca557e8f67fda0b11182de88e36a8fb"
     }
    ]
   },

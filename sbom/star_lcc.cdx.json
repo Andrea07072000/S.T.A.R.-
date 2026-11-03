@@ -1,10 +1,10 @@
 {
  "bomFormat": "CycloneDX",
  "specVersion": "1.5",
- "serialNumber": "urn:uuid:37b62cc0-a9bc-5b08-b355-6b7c0ccb2599",
+ "serialNumber": "urn:uuid:7046bcbb-9bc9-58cf-8425-790b7899ef3d",
  "version": 1,
  "metadata": {
-  "timestamp": "2026-11-02T00:00:00Z",
+  "timestamp": "2026-11-03T00:00:00Z",
   "authors": [
    {
     "name": "Andrea Cavazzini"
@@ -23,7 +23,7 @@
      }
     }
    ],
-   "purl": "pkg:generic/star-lcc@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%4094fcf7c%23packages%2Fstar_lcc",
+   "purl": "pkg:generic/star-lcc@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_lcc",
    "author": "Andrea Cavazzini",
    "externalReferences": [
     {
@@ -38,7 +38,7 @@
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "57757e450d9b2be03820b61ca47e310392ea3d43fa2288b09c25c6b62091f1d4"
+     "content": "2a61a8d89bf515f07b8605661207a4d78a6bbbc4760a70d49a2be52dd76577e7"
     }
    ]
   },

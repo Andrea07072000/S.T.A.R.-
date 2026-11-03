@@ -1,10 +1,10 @@
 {
  "bomFormat": "CycloneDX",
  "specVersion": "1.5",
- "serialNumber": "urn:uuid:ad8b931d-41b9-5b76-9408-7ebc7bcaa8e2",
+ "serialNumber": "urn:uuid:f0140d7e-18bc-58f0-b383-1d0f3b1f9b11",
  "version": 1,
  "metadata": {
-  "timestamp": "2026-11-02T00:00:00Z",
+  "timestamp": "2026-11-03T00:00:00Z",
   "authors": [
    {
     "name": "Andrea Cavazzini"
@@ -23,7 +23,7 @@
      }
     }
    ],
-   "purl": "pkg:generic/star-quadrature@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%4094fcf7c%23packages%2Fstar_quadrature",
+   "purl": "pkg:generic/star-quadrature@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_quadrature",
    "author": "Andrea Cavazzini",
    "externalReferences": [
     {
@@ -38,7 +38,7 @@
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "0a99fffbb0e8d542c7fca7feb22dff37d3ed3f4819821f252c64b12dd792d97f"
+     "content": "f79b46c0146cfbdca0823ee1a1bb9bdf4b115343d5cbc883ad21ce39a9ca4dc5"
     }
    ]
   },

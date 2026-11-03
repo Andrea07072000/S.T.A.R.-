@@ -1,10 +1,10 @@
 {
  "bomFormat": "CycloneDX",
  "specVersion": "1.5",
- "serialNumber": "urn:uuid:7aa51ebd-5fda-5712-92d6-7942dae235b6",
+ "serialNumber": "urn:uuid:183dae9f-5013-500b-bf12-4402cf8318f8",
  "version": 1,
  "metadata": {
-  "timestamp": "2026-11-02T00:00:00Z",
+  "timestamp": "2026-11-03T00:00:00Z",
   "authors": [
    {
     "name": "Andrea Cavazzini"
@@ -23,7 +23,7 @@
      }
     }
    ],
-   "purl": "pkg:generic/star-quaternion@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%4094fcf7c%23packages%2Fstar_quaternion",
+   "purl": "pkg:generic/star-quaternion@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_quaternion",
    "author": "Andrea Cavazzini",
    "externalReferences": [
     {
@@ -38,7 +38,7 @@
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "7740e1b77b522fd0c3755cacee1aba37537f8d30deb51aa4e2eb580bda9915bb"
+     "content": "c1762014b424b53c5edf54502de7624ad8d64d288487e4cf8094b8668c3ddaef"
     }
    ]
   },

@@ -1,10 +1,10 @@
 {
  "bomFormat": "CycloneDX",
  "specVersion": "1.5",
- "serialNumber": "urn:uuid:a0d65a9c-8426-5446-80b7-5d7d76be3465",
+ "serialNumber": "urn:uuid:3f7670a4-8e81-59fa-a61f-a2f69834cc0d",
  "version": 1,
  "metadata": {
-  "timestamp": "2026-11-02T00:00:00Z",
+  "timestamp": "2026-11-03T00:00:00Z",
   "authors": [
    {
     "name": "Andrea Cavazzini"
@@ -23,7 +23,7 @@
      }
     }
    ],
-   "purl": "pkg:generic/star-iod@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%4094fcf7c%23packages%2Fstar_iod",
+   "purl": "pkg:generic/star-iod@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_iod",
    "author": "Andrea Cavazzini",
    "externalReferences": [
     {
@@ -38,7 +38,7 @@
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "27d9541033a288ff2051644386004eef2abbad2160957f29fba6e8e42efe86a5"
+     "content": "64b50c5d91f1432efec584b8dd960d856d65ad6fe8bc195c92b5552067821cd9"
     }
    ]
   },

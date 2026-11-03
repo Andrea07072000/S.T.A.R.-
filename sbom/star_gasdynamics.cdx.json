@@ -1,10 +1,10 @@
 {
  "bomFormat": "CycloneDX",
  "specVersion": "1.5",
- "serialNumber": "urn:uuid:5a187264-1f55-5029-857e-122d093df48f",
+ "serialNumber": "urn:uuid:910b81a7-ce10-50e0-8793-341d4397f733",
  "version": 1,
  "metadata": {
-  "timestamp": "2026-11-02T00:00:00Z",
+  "timestamp": "2026-11-03T00:00:00Z",
   "authors": [
    {
     "name": "Andrea Cavazzini"
@@ -23,7 +23,7 @@
      }
     }
    ],
-   "purl": "pkg:generic/star-gasdynamics@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%4094fcf7c%23packages%2Fstar_gasdynamics",
+   "purl": "pkg:generic/star-gasdynamics@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_gasdynamics",
    "author": "Andrea Cavazzini",
    "externalReferences": [
     {
@@ -38,7 +38,7 @@
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "a3c3838c7e1bdce3ac656e04ee39e2ded6ed9db015ddddc2f1a6176dcfb37215"
+     "content": "571d1f6e5e6d17afaac16b1067cf3e8b762589b3336b59f098b62834ef7f9584"
     }
    ]
   },

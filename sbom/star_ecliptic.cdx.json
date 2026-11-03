@@ -1,10 +1,10 @@
 {
  "bomFormat": "CycloneDX",
  "specVersion": "1.5",
- "serialNumber": "urn:uuid:fe8fa002-3cf6-589a-af35-20b5d37b17d1",
+ "serialNumber": "urn:uuid:c85ab7d2-0db6-50e2-8fe5-b60792342bd6",
  "version": 1,
  "metadata": {
-  "timestamp": "2026-11-02T00:00:00Z",
+  "timestamp": "2026-11-03T00:00:00Z",
   "authors": [
    {
     "name": "Andrea Cavazzini"
@@ -23,7 +23,7 @@
      }
     }
    ],
-   "purl": "pkg:generic/star-ecliptic@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%4094fcf7c%23packages%2Fstar_ecliptic",
+   "purl": "pkg:generic/star-ecliptic@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_ecliptic",
    "author": "Andrea Cavazzini",
    "externalReferences": [
     {
@@ -38,7 +38,7 @@
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "87def57f29befa432437e81b5e6e6122f81ad7e7e64f18a28fd68ee48260caee"
+     "content": "115c13d9750c42546092b3c640e0ce15f1a0f8cc5068f8e6d5f537ee368be071"
     }
    ]
   },
