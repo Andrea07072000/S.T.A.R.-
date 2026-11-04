@@ -5,7 +5,7 @@
  "name": "star-tabint-0.1.0",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_tabint-0.1.0-dc09f61",
  "creationInfo": {
-  "created": "2026-11-03T00:00:00Z",
+  "created": "2026-11-04T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "cf6d3a8734a3168760e1472795c26d426dd2b1d47c934faa21a2bd92c98acef7"
+     "checksumValue": "155570c2312c3d937aa800c186e88c1ec4b0c4ba2a7a80f0c7bd5a79a5e0b851"
     }
    ]
   }

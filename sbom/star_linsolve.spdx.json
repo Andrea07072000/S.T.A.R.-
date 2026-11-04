@@ -5,7 +5,7 @@
  "name": "star-linsolve-0.1.0",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_linsolve-0.1.0-dc09f61",
  "creationInfo": {
-  "created": "2026-11-03T00:00:00Z",
+  "created": "2026-11-04T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "4e7e0cd44ffdd8fbcf459b63d0fc7084fd296d418f1eda8c21ef76aa9e37eb89"
+     "checksumValue": "5b8db21a2a8f74058b78693eba2ce587760c0f4ac492640c926335658af0c4fb"
     }
    ]
   }

@@ -4,7 +4,7 @@
  "serialNumber": "urn:uuid:37cac8ea-7351-513b-a168-5f9616bdf453",
  "version": 1,
  "metadata": {
-  "timestamp": "2026-11-03T00:00:00Z",
+  "timestamp": "2026-11-04T00:00:00Z",
   "authors": [
    {
     "name": "Andrea Cavazzini"
@@ -38,7 +38,7 @@
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "a2d8b0c9e68af141ce0b315b2b635282a87d460ebae864c8bc3a3b417be7d0a8"
+     "content": "1213c822d5f8a0766ddc9b62fe58586fe1595b7ed59576a47003ce4f4e0b92ef"
     }
    ]
   },

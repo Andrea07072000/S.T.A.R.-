@@ -5,7 +5,7 @@
  "name": "star-iod-0.1.0",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_iod-0.1.0-dc09f61",
  "creationInfo": {
-  "created": "2026-11-03T00:00:00Z",
+  "created": "2026-11-04T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "64b50c5d91f1432efec584b8dd960d856d65ad6fe8bc195c92b5552067821cd9"
+     "checksumValue": "e49185f82e9b01b594e2e23d2d04dfa6c5cf3ca7b29069b2974f6f86a82c2bc4"
     }
    ]
   }

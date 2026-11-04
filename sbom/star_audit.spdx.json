@@ -5,7 +5,7 @@
  "name": "star-audit-0.13.1",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_audit-0.13.1-dc09f61",
  "creationInfo": {
-  "created": "2026-11-03T00:00:00Z",
+  "created": "2026-11-04T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "0c7bc31056ca6ecb3d76b089b9279c2613a09e6d0b051a507969a50fae1322c1"
+     "checksumValue": "58b8cc1d42722232d5bec34affc6e3ce3187bec737044a418fb6ab48f44259f2"
     }
    ]
   },

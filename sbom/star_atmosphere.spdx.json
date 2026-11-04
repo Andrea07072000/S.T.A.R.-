@@ -5,7 +5,7 @@
  "name": "star-atmosphere-0.1.0",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_atmosphere-0.1.0-dc09f61",
  "creationInfo": {
-  "created": "2026-11-03T00:00:00Z",
+  "created": "2026-11-04T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "8283dfef105945d875f296c2a873f26ad548b1d7568b116ed8c5d163c8f7bd19"
+     "checksumValue": "d82c9369ea98c04dfe2661e9331484ed64790b20e15399cef87e7173007a6202"
     }
    ]
   }

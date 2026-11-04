@@ -5,7 +5,7 @@
  "name": "star-era-0.1.2",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_era-0.1.2-dc09f61",
  "creationInfo": {
-  "created": "2026-11-03T00:00:00Z",
+  "created": "2026-11-04T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "3716353ff3c413ae6f6b0bc5fc61124493e97154337b50437cbcb4cf2110372d"
+     "checksumValue": "66f6d6863d1794df15655d01be3391f9655030d6ceb3c0193ce32e8f91afb02a"
     }
    ]
   }

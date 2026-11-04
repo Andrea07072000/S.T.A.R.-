@@ -5,7 +5,7 @@
  "name": "star-slerp-0.1.0",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_slerp-0.1.0-dc09f61",
  "creationInfo": {
-  "created": "2026-11-03T00:00:00Z",
+  "created": "2026-11-04T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "f9c6c73ca8f47c7540b41bd9cd98d6b3362f54620cb034f053edeb02d38c0844"
+     "checksumValue": "8b22297f7afcccbd8aa0b2d94e2ee42d01a4919f9f586747b3b25446b38b66a2"
     }
    ]
   }

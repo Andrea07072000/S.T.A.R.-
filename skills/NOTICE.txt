@@ -1,0 +1,6 @@
+nightshift-skills: honest-numbers and 3am-safety
+
+The two SKILL.md files in this folder are copied unchanged from the nightshift-skills repository
+(skills/honest-numbers/SKILL.md v1.1.0 and skills/3am-safety/SKILL.md v1.2.0, commit 428538e).
+They are licensed under the Apache License, Version 2.0: see LICENSE.txt in this folder.
+The S.T.A.R. website shows their SHA-256 fingerprints and recomputes them in the browser.

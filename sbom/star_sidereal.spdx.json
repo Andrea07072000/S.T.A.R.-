@@ -5,7 +5,7 @@
  "name": "star-sidereal-0.1.2",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_sidereal-0.1.2-dc09f61",
  "creationInfo": {
-  "created": "2026-11-03T00:00:00Z",
+  "created": "2026-11-04T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "c7312bac5f44cc2ee8aef1677d8d7886c7a9499fced25845a6a3417a7844822b"
+     "checksumValue": "81cebed335b95316594d92c82d9246c4c20b328ea10a898ab84f410da66f715d"
     }
    ]
   }

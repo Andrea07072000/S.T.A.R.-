@@ -5,7 +5,7 @@
  "name": "star-sexagesimal-0.1.0",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_sexagesimal-0.1.0-dc09f61",
  "creationInfo": {
-  "created": "2026-11-03T00:00:00Z",
+  "created": "2026-11-04T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "d442c31a1e24dd9bddabba30cd7e601c5d902cfbf5dc2522a49ad1d648c5242d"
+     "checksumValue": "8ebd05e637bcc18ab7484442f23c2ae51f0b7ad33ec07260cacba14cc53c7eff"
     }
    ]
   }

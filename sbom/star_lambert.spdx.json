@@ -5,7 +5,7 @@
  "name": "star-lambert-0.1.3",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_lambert-0.1.3-dc09f61",
  "creationInfo": {
-  "created": "2026-11-03T00:00:00Z",
+  "created": "2026-11-04T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "eb900215a0a6fe0470efc8dcb76dcc5b51e78f0d17fc3a583ca8abc2dd118c0e"
+     "checksumValue": "ba77c73166cb302eb3fbab70b30b39510edb67dbfbd1cf31077f4e708e05ca96"
     }
    ]
   }

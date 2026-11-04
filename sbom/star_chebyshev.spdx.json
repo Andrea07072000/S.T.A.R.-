@@ -5,7 +5,7 @@
  "name": "star-chebyshev-0.1.0",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_chebyshev-0.1.0-dc09f61",
  "creationInfo": {
-  "created": "2026-11-03T00:00:00Z",
+  "created": "2026-11-04T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "1a7b5592bfe79291998592d3b43ecab2e0c3f7eaf12596ceac774d362f8053c0"
+     "checksumValue": "c827eddfffadc23ea78d714393f55c78db9f1f7c8f652f2ca640007c050805c3"
     }
    ]
   }

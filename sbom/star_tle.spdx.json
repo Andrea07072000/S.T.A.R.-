@@ -5,7 +5,7 @@
  "name": "star-tle-0.1.0",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_tle-0.1.0-dc09f61",
  "creationInfo": {
-  "created": "2026-11-03T00:00:00Z",
+  "created": "2026-11-04T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "facd5499beebd2e5867fbc86dc1968449f6b969a0803d894944daff7a28483b6"
+     "checksumValue": "a36b70c6d0f9d25bf138b5e601e8bbee47b8f0104e75a479a2f19b57c3258e52"
     }
    ]
   }

@@ -5,7 +5,7 @@
  "name": "star-cdm-0.2.2",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_cdm-0.2.2-dc09f61",
  "creationInfo": {
-  "created": "2026-11-03T00:00:00Z",
+  "created": "2026-11-04T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "6f630d78c65bc00ae004d7d8f0b7f0843ebcbcf74ade7e18cdbc2c3899ac2ef3"
+     "checksumValue": "ffc17253d27022b2e01af9d16047fffb7a656356f4f3d2392a7b3e27ce720610"
     }
    ]
   }

@@ -5,7 +5,7 @@
  "name": "conjunction-screen-sgp4-0.2.1",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/conjunction_screen_sgp4-0.2.1-dc09f61",
  "creationInfo": {
-  "created": "2026-11-03T00:00:00Z",
+  "created": "2026-11-04T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "b1612b180d8a85a7395578f7623432b8b33583679f350f33fc49990ee61fce08"
+     "checksumValue": "d82e63c66d7a9506bb71912336ab0aa3215863defbccf2f43c0355318c3f3056"
     }
    ]
   },
