@@ -1,10 +1,10 @@
 {
  "bomFormat": "CycloneDX",
  "specVersion": "1.5",
- "serialNumber": "urn:uuid:10fc72af-2a43-5e2b-94ff-7f0199a7853e",
+ "serialNumber": "urn:uuid:946a7d0e-6d6d-5678-9b3f-fd7ed36afd6b",
  "version": 1,
  "metadata": {
-  "timestamp": "2026-11-04T00:00:00Z",
+  "timestamp": "2026-11-07T00:00:00Z",
   "authors": [
    {
     "name": "Andrea Cavazzini"
@@ -23,7 +23,7 @@
      }
     }
    ],
-   "purl": "pkg:generic/star-doppler@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_doppler",
+   "purl": "pkg:generic/star-doppler@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61d%23packages%2Fstar_doppler",
    "author": "Andrea Cavazzini",
    "externalReferences": [
     {
@@ -38,7 +38,7 @@
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "bce2b25083af809c7bff266f00fdd96131637bab828ba8c5ee2e9c68553d5ed5"
+     "content": "c16fa11acf02f9fee5af201390676a8f303f6be5418513504a048672148a3752"
     }
    ]
   },

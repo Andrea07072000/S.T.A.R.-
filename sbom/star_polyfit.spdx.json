@@ -3,9 +3,9 @@
  "dataLicense": "CC0-1.0",
  "SPDXID": "SPDXRef-DOCUMENT",
  "name": "star-polyfit-0.1.0",
- "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_polyfit-0.1.0-dc09f61",
+ "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_polyfit-0.1.0-dc09f61d",
  "creationInfo": {
-  "created": "2026-11-04T00:00:00Z",
+  "created": "2026-11-07T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -16,7 +16,7 @@
    "SPDXID": "SPDXRef-Package-star-polyfit",
    "name": "star-polyfit",
    "versionInfo": "0.1.0",
-   "downloadLocation": "git+https://github.com/Andrea07072000/S.T.A.R.-@dc09f61#packages/star_polyfit",
+   "downloadLocation": "git+https://github.com/Andrea07072000/S.T.A.R.-@dc09f61d#packages/star_polyfit",
    "homepage": "https://andrea07072000.github.io/S.T.A.R.-/software/star_polyfit/",
    "filesAnalyzed": false,
    "licenseConcluded": "Apache-2.0",
@@ -28,13 +28,13 @@
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:generic/star-polyfit@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_polyfit"
+     "referenceLocator": "pkg:generic/star-polyfit@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61d%23packages%2Fstar_polyfit"
     }
    ],
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "9926c7dd32ac688632e6c6fe7ab4e183df30e8316c670f590c6643be6b11bfe3"
+     "checksumValue": "0d4acaeaae061d098da675f78771d0a9cd490c630def7ab21f1bea41b679040b"
     }
    ]
   }

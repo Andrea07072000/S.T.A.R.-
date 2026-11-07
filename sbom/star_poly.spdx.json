@@ -3,9 +3,9 @@
  "dataLicense": "CC0-1.0",
  "SPDXID": "SPDXRef-DOCUMENT",
  "name": "star-poly-0.1.0",
- "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_poly-0.1.0-dc09f61",
+ "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_poly-0.1.0-dc09f61d",
  "creationInfo": {
-  "created": "2026-11-04T00:00:00Z",
+  "created": "2026-11-07T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -16,7 +16,7 @@
    "SPDXID": "SPDXRef-Package-star-poly",
    "name": "star-poly",
    "versionInfo": "0.1.0",
-   "downloadLocation": "git+https://github.com/Andrea07072000/S.T.A.R.-@dc09f61#packages/star_poly",
+   "downloadLocation": "git+https://github.com/Andrea07072000/S.T.A.R.-@dc09f61d#packages/star_poly",
    "homepage": "https://andrea07072000.github.io/S.T.A.R.-/software/star_poly/",
    "filesAnalyzed": false,
    "licenseConcluded": "Apache-2.0",
@@ -28,13 +28,13 @@
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:generic/star-poly@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_poly"
+     "referenceLocator": "pkg:generic/star-poly@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61d%23packages%2Fstar_poly"
     }
    ],
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "4c637a302a69ee3d96b1eabe90b84146adb5aa200a2916c252f4d8f9f9d46fa3"
+     "checksumValue": "4b176d11ddae83726a7a30f85ce641322aa349e5fc04cfe438d66d1ccec80122"
     }
    ]
   }

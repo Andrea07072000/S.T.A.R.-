@@ -3,9 +3,9 @@
  "dataLicense": "CC0-1.0",
  "SPDXID": "SPDXRef-DOCUMENT",
  "name": "star-ecliptic-0.1.0",
- "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_ecliptic-0.1.0-dc09f61",
+ "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_ecliptic-0.1.0-dc09f61d",
  "creationInfo": {
-  "created": "2026-11-04T00:00:00Z",
+  "created": "2026-11-07T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -16,7 +16,7 @@
    "SPDXID": "SPDXRef-Package-star-ecliptic",
    "name": "star-ecliptic",
    "versionInfo": "0.1.0",
-   "downloadLocation": "git+https://github.com/Andrea07072000/S.T.A.R.-@dc09f61#packages/star_ecliptic",
+   "downloadLocation": "git+https://github.com/Andrea07072000/S.T.A.R.-@dc09f61d#packages/star_ecliptic",
    "homepage": "https://andrea07072000.github.io/S.T.A.R.-/software/star_ecliptic/",
    "filesAnalyzed": false,
    "licenseConcluded": "Apache-2.0",
@@ -28,13 +28,13 @@
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:generic/star-ecliptic@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_ecliptic"
+     "referenceLocator": "pkg:generic/star-ecliptic@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61d%23packages%2Fstar_ecliptic"
     }
    ],
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "b6da97d9e15a106cf87ca8f225b67cf417f613d5c5cdb5d562f29d32cb1efe5b"
+     "checksumValue": "f2887fdb9cb0c76bfc0e1d8638f449d7fd2b9dfae28c556a88587b5fe905b173"
     }
    ]
   }

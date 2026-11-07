@@ -1,10 +1,10 @@
 {
  "bomFormat": "CycloneDX",
  "specVersion": "1.5",
- "serialNumber": "urn:uuid:182e57c5-aff4-5aed-9ca2-3bfbb80290b8",
+ "serialNumber": "urn:uuid:a1226baf-9a3b-53c9-a0a4-b6a6e80d4ebc",
  "version": 1,
  "metadata": {
-  "timestamp": "2026-11-04T00:00:00Z",
+  "timestamp": "2026-11-07T00:00:00Z",
   "authors": [
    {
     "name": "Andrea Cavazzini"
@@ -23,7 +23,7 @@
      }
     }
    ],
-   "purl": "pkg:generic/star-chebyshev@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_chebyshev",
+   "purl": "pkg:generic/star-chebyshev@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61d%23packages%2Fstar_chebyshev",
    "author": "Andrea Cavazzini",
    "externalReferences": [
     {
@@ -38,7 +38,7 @@
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "c827eddfffadc23ea78d714393f55c78db9f1f7c8f652f2ca640007c050805c3"
+     "content": "b7b2a805ee6e63b5e63a7c778ac1ac19abd20e7b785956c2d1038ef438ebd636"
     }
    ]
   },

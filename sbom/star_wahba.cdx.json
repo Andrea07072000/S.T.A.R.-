@@ -1,10 +1,10 @@
 {
  "bomFormat": "CycloneDX",
  "specVersion": "1.5",
- "serialNumber": "urn:uuid:6f14f8d7-85d1-500e-8ec0-5bb1948c481b",
+ "serialNumber": "urn:uuid:706fc2bc-7657-513b-a860-9a99a75dc21c",
  "version": 1,
  "metadata": {
-  "timestamp": "2026-11-04T00:00:00Z",
+  "timestamp": "2026-11-07T00:00:00Z",
   "authors": [
    {
     "name": "Andrea Cavazzini"
@@ -23,7 +23,7 @@
      }
     }
    ],
-   "purl": "pkg:generic/star-wahba@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_wahba",
+   "purl": "pkg:generic/star-wahba@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61d%23packages%2Fstar_wahba",
    "author": "Andrea Cavazzini",
    "externalReferences": [
     {
@@ -38,7 +38,7 @@
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "dfc3e770f0810bb3b82557e99e2ac8246b85a50da34e30037153521386c4b1af"
+     "content": "538aec7d3844de41cefae6365722c93560ba8d9ce3752dba333221bff4b1a040"
     }
    ]
   },

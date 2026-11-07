@@ -1,10 +1,10 @@
 {
  "bomFormat": "CycloneDX",
  "specVersion": "1.5",
- "serialNumber": "urn:uuid:cdd03b9e-8753-5898-a3e2-f3c3e6689f3e",
+ "serialNumber": "urn:uuid:09f23983-8dfa-5f49-958c-23d61ce8b9b9",
  "version": 1,
  "metadata": {
-  "timestamp": "2026-11-04T00:00:00Z",
+  "timestamp": "2026-11-07T00:00:00Z",
   "authors": [
    {
     "name": "Andrea Cavazzini"
@@ -23,7 +23,7 @@
      }
     }
    ],
-   "purl": "pkg:generic/star-sun@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_sun",
+   "purl": "pkg:generic/star-sun@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61d%23packages%2Fstar_sun",
    "author": "Andrea Cavazzini",
    "externalReferences": [
     {
@@ -38,7 +38,7 @@
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "becba873b78586947f702da49b40acf169549ecf820c0004bab59eb5315159fc"
+     "content": "283a97c71bb7688dd5190b772c59ec48d15201e7f492652e6a07d95628fc4fc7"
     }
    ]
   },

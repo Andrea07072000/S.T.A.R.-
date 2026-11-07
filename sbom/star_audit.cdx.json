@@ -1,10 +1,10 @@
 {
  "bomFormat": "CycloneDX",
  "specVersion": "1.5",
- "serialNumber": "urn:uuid:5ee52de8-3fdc-5ada-b254-fd1c82a00416",
+ "serialNumber": "urn:uuid:beae1847-b0c2-5086-bac6-6ea42507b83a",
  "version": 1,
  "metadata": {
-  "timestamp": "2026-11-04T00:00:00Z",
+  "timestamp": "2026-11-07T00:00:00Z",
   "authors": [
    {
     "name": "Andrea Cavazzini"
@@ -23,7 +23,7 @@
      }
     }
    ],
-   "purl": "pkg:generic/star-audit@0.13.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_audit",
+   "purl": "pkg:generic/star-audit@0.13.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61d%23packages%2Fstar_audit",
    "author": "Andrea Cavazzini",
    "externalReferences": [
     {
@@ -38,7 +38,7 @@
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "58b8cc1d42722232d5bec34affc6e3ce3187bec737044a418fb6ab48f44259f2"
+     "content": "685c07d3662ec0c4ea5afe528491015eb4ac477a9573210977d9096a73356b56"
     }
    ]
   },
@@ -64,7 +64,7 @@
      }
     }
    ],
-   "purl": "pkg:generic/star-geodesy@0.1.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_geodesy"
+   "purl": "pkg:generic/star-geodesy@0.1.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61d%23packages%2Fstar_geodesy"
   },
   {
    "type": "library",

@@ -1,10 +1,10 @@
 {
  "bomFormat": "CycloneDX",
  "specVersion": "1.5",
- "serialNumber": "urn:uuid:116ee088-d145-5e3b-b395-1bf168ead8b1",
+ "serialNumber": "urn:uuid:699c69f6-9eb0-5f2d-b54c-9565dc16493e",
  "version": 1,
  "metadata": {
-  "timestamp": "2026-11-04T00:00:00Z",
+  "timestamp": "2026-11-07T00:00:00Z",
   "authors": [
    {
     "name": "Andrea Cavazzini"
@@ -23,7 +23,7 @@
      }
     }
    ],
-   "purl": "pkg:generic/star-orbit@0.2.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_orbit",
+   "purl": "pkg:generic/star-orbit@0.2.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61d%23packages%2Fstar_orbit",
    "author": "Andrea Cavazzini",
    "externalReferences": [
     {
@@ -38,7 +38,7 @@
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "ab5c33ceae9198b307ddfa7be8e43349ce3137b91c820a127b183261192cf866"
+     "content": "4c0883726a0f93d37619b7a06253fc89916e821931ad822fd11b210abd84cff8"
     }
    ]
   },

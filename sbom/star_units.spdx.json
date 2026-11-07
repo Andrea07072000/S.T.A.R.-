@@ -3,9 +3,9 @@
  "dataLicense": "CC0-1.0",
  "SPDXID": "SPDXRef-DOCUMENT",
  "name": "star-units-0.1.1",
- "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_units-0.1.1-dc09f61",
+ "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_units-0.1.1-dc09f61d",
  "creationInfo": {
-  "created": "2026-11-04T00:00:00Z",
+  "created": "2026-11-07T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -16,7 +16,7 @@
    "SPDXID": "SPDXRef-Package-star-units",
    "name": "star-units",
    "versionInfo": "0.1.1",
-   "downloadLocation": "git+https://github.com/Andrea07072000/S.T.A.R.-@dc09f61#packages/star_units",
+   "downloadLocation": "git+https://github.com/Andrea07072000/S.T.A.R.-@dc09f61d#packages/star_units",
    "homepage": "https://andrea07072000.github.io/S.T.A.R.-/software/star_units/",
    "filesAnalyzed": false,
    "licenseConcluded": "Apache-2.0",
@@ -28,13 +28,13 @@
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:generic/star-units@0.1.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_units"
+     "referenceLocator": "pkg:generic/star-units@0.1.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61d%23packages%2Fstar_units"
     }
    ],
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "bd6f9d63e686da58d1919a17b1c57a514efb7fa9713a2974b432a5d0b31142ed"
+     "checksumValue": "72caa9cde5cb2dddf1e97f2fe26097a09693f43753651deca4cda6c8085c2c2d"
     }
    ]
   }

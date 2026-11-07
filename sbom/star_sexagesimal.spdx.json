@@ -3,9 +3,9 @@
  "dataLicense": "CC0-1.0",
  "SPDXID": "SPDXRef-DOCUMENT",
  "name": "star-sexagesimal-0.1.0",
- "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_sexagesimal-0.1.0-dc09f61",
+ "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_sexagesimal-0.1.0-dc09f61d",
  "creationInfo": {
-  "created": "2026-11-04T00:00:00Z",
+  "created": "2026-11-07T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -16,7 +16,7 @@
    "SPDXID": "SPDXRef-Package-star-sexagesimal",
    "name": "star-sexagesimal",
    "versionInfo": "0.1.0",
-   "downloadLocation": "git+https://github.com/Andrea07072000/S.T.A.R.-@dc09f61#packages/star_sexagesimal",
+   "downloadLocation": "git+https://github.com/Andrea07072000/S.T.A.R.-@dc09f61d#packages/star_sexagesimal",
    "homepage": "https://andrea07072000.github.io/S.T.A.R.-/software/star_sexagesimal/",
    "filesAnalyzed": false,
    "licenseConcluded": "Apache-2.0",
@@ -28,13 +28,13 @@
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:generic/star-sexagesimal@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_sexagesimal"
+     "referenceLocator": "pkg:generic/star-sexagesimal@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61d%23packages%2Fstar_sexagesimal"
     }
    ],
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "8ebd05e637bcc18ab7484442f23c2ae51f0b7ad33ec07260cacba14cc53c7eff"
+     "checksumValue": "2455117e2358d09223d4599796a8b2c766c5a161bb68863e0aa1d0fd7af75002"
     }
    ]
   }

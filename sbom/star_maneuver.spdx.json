@@ -3,9 +3,9 @@
  "dataLicense": "CC0-1.0",
  "SPDXID": "SPDXRef-DOCUMENT",
  "name": "star-maneuver-0.2.2",
- "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_maneuver-0.2.2-dc09f61",
+ "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_maneuver-0.2.2-dc09f61d",
  "creationInfo": {
-  "created": "2026-11-04T00:00:00Z",
+  "created": "2026-11-07T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -16,7 +16,7 @@
    "SPDXID": "SPDXRef-Package-star-maneuver",
    "name": "star-maneuver",
    "versionInfo": "0.2.2",
-   "downloadLocation": "git+https://github.com/Andrea07072000/S.T.A.R.-@dc09f61#packages/star_maneuver",
+   "downloadLocation": "git+https://github.com/Andrea07072000/S.T.A.R.-@dc09f61d#packages/star_maneuver",
    "homepage": "https://andrea07072000.github.io/S.T.A.R.-/software/star_maneuver/",
    "filesAnalyzed": false,
    "licenseConcluded": "Apache-2.0",
@@ -28,13 +28,13 @@
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:generic/star-maneuver@0.2.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_maneuver"
+     "referenceLocator": "pkg:generic/star-maneuver@0.2.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61d%23packages%2Fstar_maneuver"
     }
    ],
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "a1defe3d0e354e839d280f77206fb968b18f39d70bdfc58e01c123bbad486859"
+     "checksumValue": "08218b952fb6e504b60a26de717d44d87403b47254c6bd18a2b13dfc2e9ff603"
     }
    ]
   }

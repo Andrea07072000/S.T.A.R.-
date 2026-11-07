@@ -1,10 +1,10 @@
 {
  "bomFormat": "CycloneDX",
  "specVersion": "1.5",
- "serialNumber": "urn:uuid:4b49fdc1-1621-5b8e-a299-62a19dae50a5",
+ "serialNumber": "urn:uuid:9b63988d-c947-5d76-9ba8-e717e611558f",
  "version": 1,
  "metadata": {
-  "timestamp": "2026-11-04T00:00:00Z",
+  "timestamp": "2026-11-07T00:00:00Z",
   "authors": [
    {
     "name": "Andrea Cavazzini"
@@ -23,7 +23,7 @@
      }
     }
    ],
-   "purl": "pkg:generic/star-moon@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_moon",
+   "purl": "pkg:generic/star-moon@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61d%23packages%2Fstar_moon",
    "author": "Andrea Cavazzini",
    "externalReferences": [
     {
@@ -38,7 +38,7 @@
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "bea0ea14b60e5e14b8b00084753d1f683113f8a82c592663452187025f5a0821"
+     "content": "59e187aebe27e4210b0bbc34db6bf8d75812812afd538e57c30da2e4c9c4e9d2"
     }
    ]
   },

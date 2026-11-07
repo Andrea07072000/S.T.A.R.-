@@ -1,10 +1,10 @@
 {
  "bomFormat": "CycloneDX",
  "specVersion": "1.5",
- "serialNumber": "urn:uuid:fe603c44-5a41-50b7-94c4-561f4ed091ec",
+ "serialNumber": "urn:uuid:840690a9-38ba-5e86-a666-04fb9d02c1a3",
  "version": 1,
  "metadata": {
-  "timestamp": "2026-11-04T00:00:00Z",
+  "timestamp": "2026-11-07T00:00:00Z",
   "authors": [
    {
     "name": "Andrea Cavazzini"
@@ -23,7 +23,7 @@
      }
     }
    ],
-   "purl": "pkg:generic/star-sexagesimal@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_sexagesimal",
+   "purl": "pkg:generic/star-sexagesimal@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61d%23packages%2Fstar_sexagesimal",
    "author": "Andrea Cavazzini",
    "externalReferences": [
     {
@@ -38,7 +38,7 @@
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "8ebd05e637bcc18ab7484442f23c2ae51f0b7ad33ec07260cacba14cc53c7eff"
+     "content": "2455117e2358d09223d4599796a8b2c766c5a161bb68863e0aa1d0fd7af75002"
     }
    ]
   },

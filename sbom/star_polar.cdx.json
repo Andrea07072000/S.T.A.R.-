@@ -1,10 +1,10 @@
 {
  "bomFormat": "CycloneDX",
  "specVersion": "1.5",
- "serialNumber": "urn:uuid:33f9e8f5-fbb7-59da-ae78-ea11146a63d5",
+ "serialNumber": "urn:uuid:f2d5c316-97a2-581e-8ded-12884be15e85",
  "version": 1,
  "metadata": {
-  "timestamp": "2026-11-04T00:00:00Z",
+  "timestamp": "2026-11-07T00:00:00Z",
   "authors": [
    {
     "name": "Andrea Cavazzini"
@@ -23,7 +23,7 @@
      }
     }
    ],
-   "purl": "pkg:generic/star-polar@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_polar",
+   "purl": "pkg:generic/star-polar@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61d%23packages%2Fstar_polar",
    "author": "Andrea Cavazzini",
    "externalReferences": [
     {
@@ -38,7 +38,7 @@
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "6d441ad4367db55db161cdc78a4b4e31f12e07c9222cbf5d6df0fc42dab45972"
+     "content": "5447d341e028c289d8894ecaa9d533c5dc51962b2ba6c09ae453464d684b1256"
     }
    ]
   },

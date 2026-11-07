@@ -3,9 +3,9 @@
  "dataLicense": "CC0-1.0",
  "SPDXID": "SPDXRef-DOCUMENT",
  "name": "star-quantile-0.1.0",
- "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_quantile-0.1.0-dc09f61",
+ "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_quantile-0.1.0-dc09f61d",
  "creationInfo": {
-  "created": "2026-11-04T00:00:00Z",
+  "created": "2026-11-07T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -16,7 +16,7 @@
    "SPDXID": "SPDXRef-Package-star-quantile",
    "name": "star-quantile",
    "versionInfo": "0.1.0",
-   "downloadLocation": "git+https://github.com/Andrea07072000/S.T.A.R.-@dc09f61#packages/star_quantile",
+   "downloadLocation": "git+https://github.com/Andrea07072000/S.T.A.R.-@dc09f61d#packages/star_quantile",
    "homepage": "https://andrea07072000.github.io/S.T.A.R.-/software/star_quantile/",
    "filesAnalyzed": false,
    "licenseConcluded": "Apache-2.0",
@@ -28,13 +28,13 @@
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:generic/star-quantile@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_quantile"
+     "referenceLocator": "pkg:generic/star-quantile@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61d%23packages%2Fstar_quantile"
     }
    ],
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "694b91011704c20899e496dc030d261f7ea57f31cd89cb4d9f163d71cd1e7cc8"
+     "checksumValue": "9bceb2c4899cf69888a6fa1da03a6a505841709dcae787ef73b610a85e916376"
     }
    ]
   }

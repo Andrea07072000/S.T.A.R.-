@@ -1,10 +1,10 @@
 {
  "bomFormat": "CycloneDX",
  "specVersion": "1.5",
- "serialNumber": "urn:uuid:d73a1f7e-27d9-52d8-904b-095d753450d3",
+ "serialNumber": "urn:uuid:0687cf32-6c2d-597a-85d6-832e49aed783",
  "version": 1,
  "metadata": {
-  "timestamp": "2026-11-04T00:00:00Z",
+  "timestamp": "2026-11-07T00:00:00Z",
   "authors": [
    {
     "name": "Andrea Cavazzini"
@@ -23,7 +23,7 @@
      }
     }
    ],
-   "purl": "pkg:generic/star-coverage@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_coverage",
+   "purl": "pkg:generic/star-coverage@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61d%23packages%2Fstar_coverage",
    "author": "Andrea Cavazzini",
    "externalReferences": [
     {
@@ -38,7 +38,7 @@
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "dd391235d1426546472065702731e3a543da82145148ed461ca0fedf91017856"
+     "content": "273e820c6946de4a30824e3274d7044f453c4222c8e2be68278474f7ec6a2fe3"
     }
    ]
   },

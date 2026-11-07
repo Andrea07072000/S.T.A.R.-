@@ -3,9 +3,9 @@
  "dataLicense": "CC0-1.0",
  "SPDXID": "SPDXRef-DOCUMENT",
  "name": "star-sphere-0.1.1",
- "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_sphere-0.1.1-dc09f61",
+ "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_sphere-0.1.1-dc09f61d",
  "creationInfo": {
-  "created": "2026-11-04T00:00:00Z",
+  "created": "2026-11-07T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -16,7 +16,7 @@
    "SPDXID": "SPDXRef-Package-star-sphere",
    "name": "star-sphere",
    "versionInfo": "0.1.1",
-   "downloadLocation": "git+https://github.com/Andrea07072000/S.T.A.R.-@dc09f61#packages/star_sphere",
+   "downloadLocation": "git+https://github.com/Andrea07072000/S.T.A.R.-@dc09f61d#packages/star_sphere",
    "homepage": "https://andrea07072000.github.io/S.T.A.R.-/software/star_sphere/",
    "filesAnalyzed": false,
    "licenseConcluded": "Apache-2.0",
@@ -28,13 +28,13 @@
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:generic/star-sphere@0.1.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_sphere"
+     "referenceLocator": "pkg:generic/star-sphere@0.1.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61d%23packages%2Fstar_sphere"
     }
    ],
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "ba9e082c040ee312f5ac0c041a1fe09ff1ed14bf34de074a859dbf3af57640c6"
+     "checksumValue": "17c0ee34ab3740e47555d412002391c58b71695c2b9f77caf41cb3e6eab56203"
     }
    ]
   }

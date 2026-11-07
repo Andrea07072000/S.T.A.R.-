@@ -3,9 +3,9 @@
  "dataLicense": "CC0-1.0",
  "SPDXID": "SPDXRef-DOCUMENT",
  "name": "star-geodesy-0.1.1",
- "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_geodesy-0.1.1-dc09f61",
+ "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_geodesy-0.1.1-dc09f61d",
  "creationInfo": {
-  "created": "2026-11-04T00:00:00Z",
+  "created": "2026-11-07T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -16,7 +16,7 @@
    "SPDXID": "SPDXRef-Package-star-geodesy",
    "name": "star-geodesy",
    "versionInfo": "0.1.1",
-   "downloadLocation": "git+https://github.com/Andrea07072000/S.T.A.R.-@dc09f61#packages/star_geodesy",
+   "downloadLocation": "git+https://github.com/Andrea07072000/S.T.A.R.-@dc09f61d#packages/star_geodesy",
    "homepage": "https://andrea07072000.github.io/S.T.A.R.-/software/star_geodesy/",
    "filesAnalyzed": false,
    "licenseConcluded": "Apache-2.0",
@@ -28,13 +28,13 @@
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:generic/star-geodesy@0.1.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_geodesy"
+     "referenceLocator": "pkg:generic/star-geodesy@0.1.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61d%23packages%2Fstar_geodesy"
     }
    ],
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "7e5ec875704229be41604233c74a5835ec9a3c57354183ef0dfa91a00a75fc83"
+     "checksumValue": "8ca738bee5dd8b5e22e91ede0b44d5d0abe847d39bf0f197c37a7e19fa7bf46f"
     }
    ]
   }

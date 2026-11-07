@@ -1,10 +1,10 @@
 {
  "bomFormat": "CycloneDX",
  "specVersion": "1.5",
- "serialNumber": "urn:uuid:5d2eb6db-8fd1-5e1e-b7d8-89acd57df7d4",
+ "serialNumber": "urn:uuid:ad5168df-ef88-5c95-9c3a-3e8e81e899ab",
  "version": 1,
  "metadata": {
-  "timestamp": "2026-11-04T00:00:00Z",
+  "timestamp": "2026-11-07T00:00:00Z",
   "authors": [
    {
     "name": "Andrea Cavazzini"
@@ -23,7 +23,7 @@
      }
     }
    ],
-   "purl": "pkg:generic/star-maneuver@0.2.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_maneuver",
+   "purl": "pkg:generic/star-maneuver@0.2.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61d%23packages%2Fstar_maneuver",
    "author": "Andrea Cavazzini",
    "externalReferences": [
     {
@@ -38,7 +38,7 @@
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "a1defe3d0e354e839d280f77206fb968b18f39d70bdfc58e01c123bbad486859"
+     "content": "08218b952fb6e504b60a26de717d44d87403b47254c6bd18a2b13dfc2e9ff603"
     }
    ]
   },

@@ -1,10 +1,10 @@
 {
  "bomFormat": "CycloneDX",
  "specVersion": "1.5",
- "serialNumber": "urn:uuid:e5bacb3e-7348-57cd-a59b-2ed065f6d2bc",
+ "serialNumber": "urn:uuid:34abdebd-ceba-5b9e-93fa-c1130f919a16",
  "version": 1,
  "metadata": {
-  "timestamp": "2026-11-04T00:00:00Z",
+  "timestamp": "2026-11-07T00:00:00Z",
   "authors": [
    {
     "name": "Andrea Cavazzini"
@@ -23,7 +23,7 @@
      }
     }
    ],
-   "purl": "pkg:generic/star-rootfind@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_rootfind",
+   "purl": "pkg:generic/star-rootfind@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61d%23packages%2Fstar_rootfind",
    "author": "Andrea Cavazzini",
    "externalReferences": [
     {
@@ -38,7 +38,7 @@
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "b84749f5f07554f9f01ed486655311e9ec64e3b1be4528fbcca542414822e92b"
+     "content": "94d72f853fd46ce0cc42d72f0b1f1aa5b7a87a63cf8fe3e1c3cc31b06ad01e03"
     }
    ]
   },

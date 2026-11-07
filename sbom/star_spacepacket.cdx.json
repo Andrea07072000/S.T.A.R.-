@@ -1,10 +1,10 @@
 {
  "bomFormat": "CycloneDX",
  "specVersion": "1.5",
- "serialNumber": "urn:uuid:52ceacf1-d66b-5834-86ae-8268fc80cabf",
+ "serialNumber": "urn:uuid:61f22e03-0407-54b3-84c7-6bdd8d14ee1a",
  "version": 1,
  "metadata": {
-  "timestamp": "2026-11-04T00:00:00Z",
+  "timestamp": "2026-11-07T00:00:00Z",
   "authors": [
    {
     "name": "Andrea Cavazzini"
@@ -23,7 +23,7 @@
      }
     }
    ],
-   "purl": "pkg:generic/star-spacepacket@0.1.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_spacepacket",
+   "purl": "pkg:generic/star-spacepacket@0.1.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61d%23packages%2Fstar_spacepacket",
    "author": "Andrea Cavazzini",
    "externalReferences": [
     {
@@ -38,7 +38,7 @@
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "3f4bf2ce91c61612778e244da0ca86356480a1f111f72adba5a31b7f4d9cba54"
+     "content": "e51d33d02fbb73fd72a9a8f03a32b908ae21a3cf485642b9ed6b45c9bccb0c4e"
     }
    ]
   },

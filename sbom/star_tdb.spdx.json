@@ -3,9 +3,9 @@
  "dataLicense": "CC0-1.0",
  "SPDXID": "SPDXRef-DOCUMENT",
  "name": "star-tdb-0.1.1",
- "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_tdb-0.1.1-dc09f61",
+ "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_tdb-0.1.1-dc09f61d",
  "creationInfo": {
-  "created": "2026-11-04T00:00:00Z",
+  "created": "2026-11-07T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -16,7 +16,7 @@
    "SPDXID": "SPDXRef-Package-star-tdb",
    "name": "star-tdb",
    "versionInfo": "0.1.1",
-   "downloadLocation": "git+https://github.com/Andrea07072000/S.T.A.R.-@dc09f61#packages/star_tdb",
+   "downloadLocation": "git+https://github.com/Andrea07072000/S.T.A.R.-@dc09f61d#packages/star_tdb",
    "homepage": "https://andrea07072000.github.io/S.T.A.R.-/software/star_tdb/",
    "filesAnalyzed": false,
    "licenseConcluded": "Apache-2.0",
@@ -28,13 +28,13 @@
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:generic/star-tdb@0.1.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_tdb"
+     "referenceLocator": "pkg:generic/star-tdb@0.1.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61d%23packages%2Fstar_tdb"
     }
    ],
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "ba9d60b260ef46698e9bcc7970f92e6ad1ffd9ce2c03133c309b68520c2d3495"
+     "checksumValue": "1d23e29ba9bae5d800e7996483920ac653f37df2ff179d4d64076cc9b6d8f28c"
     }
    ]
   }

@@ -1,10 +1,10 @@
 {
  "bomFormat": "CycloneDX",
  "specVersion": "1.5",
- "serialNumber": "urn:uuid:bc585146-1a1e-554b-a6f7-4dbc9f8ad5e9",
+ "serialNumber": "urn:uuid:1ac4017b-8904-5e12-9a4f-0e24c4a622c3",
  "version": 1,
  "metadata": {
-  "timestamp": "2026-11-04T00:00:00Z",
+  "timestamp": "2026-11-07T00:00:00Z",
   "authors": [
    {
     "name": "Andrea Cavazzini"
@@ -23,7 +23,7 @@
      }
     }
    ],
-   "purl": "pkg:generic/star-rotframe@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_rotframe",
+   "purl": "pkg:generic/star-rotframe@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61d%23packages%2Fstar_rotframe",
    "author": "Andrea Cavazzini",
    "externalReferences": [
     {
@@ -38,7 +38,7 @@
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "88531cc119cf59f869ca550cc8df1e4331a2451053132b3b4bb2286843b9d42a"
+     "content": "7b7a1314000ff917f5ceb7d06ff19b8644d3bebd712b20e3d2735a72b7b83d54"
     }
    ]
   },

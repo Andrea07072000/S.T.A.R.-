@@ -1,10 +1,10 @@
 {
  "bomFormat": "CycloneDX",
  "specVersion": "1.5",
- "serialNumber": "urn:uuid:5068239d-1012-5eb7-af4a-6f62005490f6",
+ "serialNumber": "urn:uuid:63fb1690-e196-51dc-bb24-db4f88136549",
  "version": 1,
  "metadata": {
-  "timestamp": "2026-11-04T00:00:00Z",
+  "timestamp": "2026-11-07T00:00:00Z",
   "authors": [
    {
     "name": "Andrea Cavazzini"
@@ -23,7 +23,7 @@
      }
     }
    ],
-   "purl": "pkg:generic/conjunction-screen-sgp4@0.2.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fconjunction_screen_sgp4",
+   "purl": "pkg:generic/conjunction-screen-sgp4@0.2.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61d%23packages%2Fconjunction_screen_sgp4",
    "author": "Andrea Cavazzini",
    "externalReferences": [
     {
@@ -38,7 +38,7 @@
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "d82e63c66d7a9506bb71912336ab0aa3215863defbccf2f43c0355318c3f3056"
+     "content": "2815ae919d95c83bb02252f4335e321784d31138243e8b32ccf1e6a74176c1cb"
     }
    ]
   },

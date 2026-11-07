@@ -1,10 +1,10 @@
 {
  "bomFormat": "CycloneDX",
  "specVersion": "1.5",
- "serialNumber": "urn:uuid:2084e9a6-3243-5fc5-a264-739cee827b4f",
+ "serialNumber": "urn:uuid:7b852195-6716-5631-9b3e-bccdad4ec85f",
  "version": 1,
  "metadata": {
-  "timestamp": "2026-11-04T00:00:00Z",
+  "timestamp": "2026-11-07T00:00:00Z",
   "authors": [
    {
     "name": "Andrea Cavazzini"
@@ -23,7 +23,7 @@
      }
     }
    ],
-   "purl": "pkg:generic/star-coords@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_coords",
+   "purl": "pkg:generic/star-coords@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61d%23packages%2Fstar_coords",
    "author": "Andrea Cavazzini",
    "externalReferences": [
     {
@@ -38,7 +38,7 @@
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "3ddc4340a6efa74b4fbc0af8fcb359889d1cc4a62ed4a1e63d534086bf31fa0e"
+     "content": "b70c28803d242e6ea46bc62ccd13f95ad48fd769fee7718305a04afd196cf134"
     }
    ]
   },

@@ -1,10 +1,10 @@
 {
  "bomFormat": "CycloneDX",
  "specVersion": "1.5",
- "serialNumber": "urn:uuid:698ae300-997e-5dcb-943f-20d99c8baa19",
+ "serialNumber": "urn:uuid:e43813fe-4423-55ab-8e85-0667358ce661",
  "version": 1,
  "metadata": {
-  "timestamp": "2026-11-04T00:00:00Z",
+  "timestamp": "2026-11-07T00:00:00Z",
   "authors": [
    {
     "name": "Andrea Cavazzini"
@@ -23,7 +23,7 @@
      }
     }
    ],
-   "purl": "pkg:generic/star-euler@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_euler",
+   "purl": "pkg:generic/star-euler@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61d%23packages%2Fstar_euler",
    "author": "Andrea Cavazzini",
    "externalReferences": [
     {
@@ -38,7 +38,7 @@
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "017cd461611a8e50d9e4c825ed8c887dcdc4a523294c41a9397d0e1d05eb8194"
+     "content": "11d38bac4492dcfdd2e080edba8683bb515637e4c3aee33547f6736d230be403"
     }
    ]
   },

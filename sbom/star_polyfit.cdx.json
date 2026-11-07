@@ -1,10 +1,10 @@
 {
  "bomFormat": "CycloneDX",
  "specVersion": "1.5",
- "serialNumber": "urn:uuid:bba24988-3be8-58c3-a199-61ef81fe45da",
+ "serialNumber": "urn:uuid:82097065-1555-58bd-ad99-3f7ea64f6e2b",
  "version": 1,
  "metadata": {
-  "timestamp": "2026-11-04T00:00:00Z",
+  "timestamp": "2026-11-07T00:00:00Z",
   "authors": [
    {
     "name": "Andrea Cavazzini"
@@ -23,7 +23,7 @@
      }
     }
    ],
-   "purl": "pkg:generic/star-polyfit@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_polyfit",
+   "purl": "pkg:generic/star-polyfit@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61d%23packages%2Fstar_polyfit",
    "author": "Andrea Cavazzini",
    "externalReferences": [
     {
@@ -38,7 +38,7 @@
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "9926c7dd32ac688632e6c6fe7ab4e183df30e8316c670f590c6643be6b11bfe3"
+     "content": "0d4acaeaae061d098da675f78771d0a9cd490c630def7ab21f1bea41b679040b"
     }
    ]
   },

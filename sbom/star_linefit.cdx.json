@@ -1,10 +1,10 @@
 {
  "bomFormat": "CycloneDX",
  "specVersion": "1.5",
- "serialNumber": "urn:uuid:63979097-5a35-5a1e-8f30-6311a37815fc",
+ "serialNumber": "urn:uuid:4496e196-644b-5eb7-8d45-18a7f498682d",
  "version": 1,
  "metadata": {
-  "timestamp": "2026-11-04T00:00:00Z",
+  "timestamp": "2026-11-07T00:00:00Z",
   "authors": [
    {
     "name": "Andrea Cavazzini"
@@ -23,7 +23,7 @@
      }
     }
    ],
-   "purl": "pkg:generic/star-linefit@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_linefit",
+   "purl": "pkg:generic/star-linefit@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61d%23packages%2Fstar_linefit",
    "author": "Andrea Cavazzini",
    "externalReferences": [
     {
@@ -38,7 +38,7 @@
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "fa87266cb8bc6b8fefb4c939a180df51def0c379c6842f4b1608ba4c9a65fdff"
+     "content": "26012dbe91a4af044d7f07710455a204e8fa0cc426998ef8cdbd6c89f1206613"
     }
    ]
   },

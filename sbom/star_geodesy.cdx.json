@@ -1,10 +1,10 @@
 {
  "bomFormat": "CycloneDX",
  "specVersion": "1.5",
- "serialNumber": "urn:uuid:93a0b2a9-586e-5b49-b8de-d595f9e5ae48",
+ "serialNumber": "urn:uuid:76371e17-3880-5086-a512-b5a0f25ab2e9",
  "version": 1,
  "metadata": {
-  "timestamp": "2026-11-04T00:00:00Z",
+  "timestamp": "2026-11-07T00:00:00Z",
   "authors": [
    {
     "name": "Andrea Cavazzini"
@@ -23,7 +23,7 @@
      }
     }
    ],
-   "purl": "pkg:generic/star-geodesy@0.1.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_geodesy",
+   "purl": "pkg:generic/star-geodesy@0.1.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61d%23packages%2Fstar_geodesy",
    "author": "Andrea Cavazzini",
    "externalReferences": [
     {
@@ -38,7 +38,7 @@
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "7e5ec875704229be41604233c74a5835ec9a3c57354183ef0dfa91a00a75fc83"
+     "content": "8ca738bee5dd8b5e22e91ede0b44d5d0abe847d39bf0f197c37a7e19fa7bf46f"
     }
    ]
   },

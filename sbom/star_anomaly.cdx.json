@@ -1,10 +1,10 @@
 {
  "bomFormat": "CycloneDX",
  "specVersion": "1.5",
- "serialNumber": "urn:uuid:84bee825-e966-5b5c-ad86-56d90527e21c",
+ "serialNumber": "urn:uuid:59e8b076-9f01-537a-855a-fda5df035a88",
  "version": 1,
  "metadata": {
-  "timestamp": "2026-11-04T00:00:00Z",
+  "timestamp": "2026-11-07T00:00:00Z",
   "authors": [
    {
     "name": "Andrea Cavazzini"
@@ -23,7 +23,7 @@
      }
     }
    ],
-   "purl": "pkg:generic/star-anomaly@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_anomaly",
+   "purl": "pkg:generic/star-anomaly@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61d%23packages%2Fstar_anomaly",
    "author": "Andrea Cavazzini",
    "externalReferences": [
     {
@@ -38,7 +38,7 @@
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "cb214faa0924822980038a5a38592afc054c278762ef5922bf06ad9889ea4ade"
+     "content": "6b3e006d93e330afc23017218c3fb5d38efb65e2889c7df4c859f2c5ca962599"
     }
    ]
   },

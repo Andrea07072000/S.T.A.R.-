@@ -1,10 +1,10 @@
 {
  "bomFormat": "CycloneDX",
  "specVersion": "1.5",
- "serialNumber": "urn:uuid:06a40e2a-c6f9-56a3-929a-6aaea02afb6f",
+ "serialNumber": "urn:uuid:bce31878-4800-50a9-8189-ec6fe196b460",
  "version": 1,
  "metadata": {
-  "timestamp": "2026-11-04T00:00:00Z",
+  "timestamp": "2026-11-07T00:00:00Z",
   "authors": [
    {
     "name": "Andrea Cavazzini"
@@ -23,7 +23,7 @@
      }
     }
    ],
-   "purl": "pkg:generic/star-telemetry@0.2.7?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_telemetry",
+   "purl": "pkg:generic/star-telemetry@0.2.7?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61d%23packages%2Fstar_telemetry",
    "author": "Andrea Cavazzini",
    "externalReferences": [
     {
@@ -38,7 +38,7 @@
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "575fb66b0d71dc7c3ab0288dafa8b436510cbfc98a3b0ad419a8eee8acadbf1c"
+     "content": "d4c3808f025685bd39a750a85ce8125022cdd268c10dc4a1ff403f3ac099400a"
     }
    ]
   },

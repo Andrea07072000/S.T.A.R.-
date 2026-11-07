@@ -3,9 +3,9 @@
  "dataLicense": "CC0-1.0",
  "SPDXID": "SPDXRef-DOCUMENT",
  "name": "conjunction-screen-sgp4-0.2.1",
- "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/conjunction_screen_sgp4-0.2.1-dc09f61",
+ "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/conjunction_screen_sgp4-0.2.1-dc09f61d",
  "creationInfo": {
-  "created": "2026-11-04T00:00:00Z",
+  "created": "2026-11-07T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -16,7 +16,7 @@
    "SPDXID": "SPDXRef-Package-conjunction-screen-sgp4",
    "name": "conjunction-screen-sgp4",
    "versionInfo": "0.2.1",
-   "downloadLocation": "git+https://github.com/Andrea07072000/S.T.A.R.-@dc09f61#packages/conjunction_screen_sgp4",
+   "downloadLocation": "git+https://github.com/Andrea07072000/S.T.A.R.-@dc09f61d#packages/conjunction_screen_sgp4",
    "homepage": "https://andrea07072000.github.io/S.T.A.R.-/software/conjunction_screen_sgp4/",
    "filesAnalyzed": false,
    "licenseConcluded": "Apache-2.0",
@@ -28,13 +28,13 @@
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:generic/conjunction-screen-sgp4@0.2.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fconjunction_screen_sgp4"
+     "referenceLocator": "pkg:generic/conjunction-screen-sgp4@0.2.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61d%23packages%2Fconjunction_screen_sgp4"
     }
    ],
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "d82e63c66d7a9506bb71912336ab0aa3215863defbccf2f43c0355318c3f3056"
+     "checksumValue": "2815ae919d95c83bb02252f4335e321784d31138243e8b32ccf1e6a74176c1cb"
     }
    ]
   },

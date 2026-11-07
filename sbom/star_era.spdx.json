@@ -3,9 +3,9 @@
  "dataLicense": "CC0-1.0",
  "SPDXID": "SPDXRef-DOCUMENT",
  "name": "star-era-0.1.2",
- "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_era-0.1.2-dc09f61",
+ "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_era-0.1.2-dc09f61d",
  "creationInfo": {
-  "created": "2026-11-04T00:00:00Z",
+  "created": "2026-11-07T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -16,7 +16,7 @@
    "SPDXID": "SPDXRef-Package-star-era",
    "name": "star-era",
    "versionInfo": "0.1.2",
-   "downloadLocation": "git+https://github.com/Andrea07072000/S.T.A.R.-@dc09f61#packages/star_era",
+   "downloadLocation": "git+https://github.com/Andrea07072000/S.T.A.R.-@dc09f61d#packages/star_era",
    "homepage": "https://andrea07072000.github.io/S.T.A.R.-/software/star_era/",
    "filesAnalyzed": false,
    "licenseConcluded": "Apache-2.0",
@@ -28,13 +28,13 @@
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:generic/star-era@0.1.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_era"
+     "referenceLocator": "pkg:generic/star-era@0.1.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61d%23packages%2Fstar_era"
     }
    ],
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "66f6d6863d1794df15655d01be3391f9655030d6ceb3c0193ce32e8f91afb02a"
+     "checksumValue": "8e91acb9cbbd4e27950a870a9222818516f6f46cb2e3ed486d1387d544e00618"
     }
    ]
   }

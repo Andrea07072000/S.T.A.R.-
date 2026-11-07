@@ -1,10 +1,10 @@
 {
  "bomFormat": "CycloneDX",
  "specVersion": "1.5",
- "serialNumber": "urn:uuid:fa84718a-ad98-5aa2-a21d-226d4717a8e2",
+ "serialNumber": "urn:uuid:d8a2ba8b-33ac-53cf-91be-c0a6e99a9094",
  "version": 1,
  "metadata": {
-  "timestamp": "2026-11-04T00:00:00Z",
+  "timestamp": "2026-11-07T00:00:00Z",
   "authors": [
    {
     "name": "Andrea Cavazzini"
@@ -23,7 +23,7 @@
      }
     }
    ],
-   "purl": "pkg:generic/star-topo@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61%23packages%2Fstar_topo",
+   "purl": "pkg:generic/star-topo@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FAndrea07072000%2FS.T.A.R.-%40dc09f61d%23packages%2Fstar_topo",
    "author": "Andrea Cavazzini",
    "externalReferences": [
     {
@@ -38,7 +38,7 @@
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "651d85454a7d2c83f6cd3f23719fe46fe0641fec2bdec6951feafb4b7f37ca30"
+     "content": "aa20f467fa394fe82c5953a586d0bbc290bb2af575b262b3fa13bfc4ea8f0914"
     }
    ]
   },
