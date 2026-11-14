@@ -5,7 +5,7 @@
  "name": "star-elements-0.2.4",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_elements-0.2.4-dc09f61d",
  "creationInfo": {
-  "created": "2026-11-07T00:00:00Z",
+  "created": "2026-11-14T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "b4db56c61c969c737474031d0b6ef21643f896d029e3273d76fbfba8beacb5e9"
+     "checksumValue": "3251779db65a9ce2dd855c40c39b5afc86656a50b2dcf7b950573c0e3d9d77e9"
     }
    ]
   }

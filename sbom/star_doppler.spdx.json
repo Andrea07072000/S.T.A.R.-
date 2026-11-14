@@ -5,7 +5,7 @@
  "name": "star-doppler-0.1.0",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_doppler-0.1.0-dc09f61d",
  "creationInfo": {
-  "created": "2026-11-07T00:00:00Z",
+  "created": "2026-11-14T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "c16fa11acf02f9fee5af201390676a8f303f6be5418513504a048672148a3752"
+     "checksumValue": "2055191143f0aa2761fd3655f89fc406840d14c749e8e731c57d4dce4b421bee"
     }
    ]
   }

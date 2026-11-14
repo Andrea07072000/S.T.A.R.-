@@ -5,7 +5,7 @@
  "name": "star-polyfit-0.1.0",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_polyfit-0.1.0-dc09f61d",
  "creationInfo": {
-  "created": "2026-11-07T00:00:00Z",
+  "created": "2026-11-14T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "0d4acaeaae061d098da675f78771d0a9cd490c630def7ab21f1bea41b679040b"
+     "checksumValue": "49acb4686867899904dc7bee27350be4955458499ebcde26eb8edc015ac76e6a"
     }
    ]
   }

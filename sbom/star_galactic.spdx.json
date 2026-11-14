@@ -5,7 +5,7 @@
  "name": "star-galactic-0.1.0",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_galactic-0.1.0-dc09f61d",
  "creationInfo": {
-  "created": "2026-11-07T00:00:00Z",
+  "created": "2026-11-14T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "c4aead4503ca87e943828f0fc169d0c97fed5a9660100981c801d1ac5bbfd5cf"
+     "checksumValue": "4a8d24f0ea855c6a2dec30a1955680fa2e535595c21dc57ce479531b3d50dc30"
     }
    ]
   }

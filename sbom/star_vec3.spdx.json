@@ -5,7 +5,7 @@
  "name": "star-vec3-0.1.0",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_vec3-0.1.0-dc09f61d",
  "creationInfo": {
-  "created": "2026-11-07T00:00:00Z",
+  "created": "2026-11-14T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "a9e16aa8b4d3ba2dc667bf52b75ffff5af450848dd72940bbbdf913190e6de69"
+     "checksumValue": "44099734307ef3d4aad4c68cfdc10c7b0c83d72ce2424564875dc18968f4a5a8"
     }
    ]
   }

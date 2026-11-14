@@ -5,7 +5,7 @@
  "name": "star-coverage-0.1.0",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_coverage-0.1.0-dc09f61d",
  "creationInfo": {
-  "created": "2026-11-07T00:00:00Z",
+  "created": "2026-11-14T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "273e820c6946de4a30824e3274d7044f453c4222c8e2be68278474f7ec6a2fe3"
+     "checksumValue": "08278a0abfa790c636b74ea4bfa0e8f44d8374c46de6dc96df75daac71ec1cb3"
     }
    ]
   }

@@ -5,7 +5,7 @@
  "name": "star-crc-0.1.0",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_crc-0.1.0-dc09f61d",
  "creationInfo": {
-  "created": "2026-11-07T00:00:00Z",
+  "created": "2026-11-14T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "fc9bdf9e7f6a765eb8bfe55b49d328342b929f00c4f794e641737d6e4917b2b4"
+     "checksumValue": "bf7c11d34812c26b1794093250260a3ef5fbec20e8d86c222a957f2e2ec1179f"
     }
    ]
   }

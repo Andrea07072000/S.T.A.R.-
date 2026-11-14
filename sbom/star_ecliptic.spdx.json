@@ -5,7 +5,7 @@
  "name": "star-ecliptic-0.1.0",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_ecliptic-0.1.0-dc09f61d",
  "creationInfo": {
-  "created": "2026-11-07T00:00:00Z",
+  "created": "2026-11-14T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "f2887fdb9cb0c76bfc0e1d8638f449d7fd2b9dfae28c556a88587b5fe905b173"
+     "checksumValue": "28dbf682d6ad89e7097a65a77362f6eccdf2a8ab9ec971cb092120e1a8d2b2d1"
     }
    ]
   }

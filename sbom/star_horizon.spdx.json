@@ -5,7 +5,7 @@
  "name": "star-horizon-0.1.0",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_horizon-0.1.0-dc09f61d",
  "creationInfo": {
-  "created": "2026-11-07T00:00:00Z",
+  "created": "2026-11-14T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "ed5db581c650e7f7d890c3ff0f525a828e1721e3bec94e22e2a6e1d9fa16ef0b"
+     "checksumValue": "42da7a1415e7103ffc27234cb0878716ee58c33cbc687670dfd08adb3446866b"
     }
    ]
   }

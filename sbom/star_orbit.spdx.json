@@ -5,7 +5,7 @@
  "name": "star-orbit-0.2.2",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_orbit-0.2.2-dc09f61d",
  "creationInfo": {
-  "created": "2026-11-07T00:00:00Z",
+  "created": "2026-11-14T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "4c0883726a0f93d37619b7a06253fc89916e821931ad822fd11b210abd84cff8"
+     "checksumValue": "05556a902e78121d6f4ffae80e30114f6748805e5dd938efca61d02ea80cc0a5"
     }
    ]
   }

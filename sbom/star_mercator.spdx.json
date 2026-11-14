@@ -5,7 +5,7 @@
  "name": "star-mercator-0.1.0",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_mercator-0.1.0-dc09f61d",
  "creationInfo": {
-  "created": "2026-11-07T00:00:00Z",
+  "created": "2026-11-14T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "b8cc72c9ac37691ec62f757cd65a79fae975e35dbcfaba6f447d34e807e5b5c1"
+     "checksumValue": "1a9686a870f425af0d89162056e8bbe8382bf6809f61ee04d9c1a898a6ef007b"
     }
    ]
   }

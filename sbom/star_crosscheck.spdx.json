@@ -5,7 +5,7 @@
  "name": "star-crosscheck-0.1.3",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_crosscheck-0.1.3-dc09f61d",
  "creationInfo": {
-  "created": "2026-11-07T00:00:00Z",
+  "created": "2026-11-14T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "726ba6811728a2edce8a1d6b0088fb6e8776313f0d2ac4c5838121a5ff5241fd"
+     "checksumValue": "a2efce950f93328cdac22441ba9e75245f10f64b0ff3d552aba0c5836790c3f4"
     }
    ]
   }

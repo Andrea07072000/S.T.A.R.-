@@ -5,7 +5,7 @@
  "name": "star-linefit-0.1.0",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_linefit-0.1.0-dc09f61d",
  "creationInfo": {
-  "created": "2026-11-07T00:00:00Z",
+  "created": "2026-11-14T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "26012dbe91a4af044d7f07710455a204e8fa0cc426998ef8cdbd6c89f1206613"
+     "checksumValue": "1151cf6e2447507fc37f561972e9d67d84f4270e92f5fdbe8917badae6e60061"
     }
    ]
   }

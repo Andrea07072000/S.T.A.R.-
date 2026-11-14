@@ -5,7 +5,7 @@
  "name": "star-units-0.1.1",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_units-0.1.1-dc09f61d",
  "creationInfo": {
-  "created": "2026-11-07T00:00:00Z",
+  "created": "2026-11-14T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "72caa9cde5cb2dddf1e97f2fe26097a09693f43753651deca4cda6c8085c2c2d"
+     "checksumValue": "6a8319d872b96a1b742fa1010422df85e45f35cd4827c10ee5abcfa55a254f43"
     }
    ]
   }

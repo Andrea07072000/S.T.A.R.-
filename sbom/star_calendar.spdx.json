@@ -5,7 +5,7 @@
  "name": "star-calendar-0.1.0",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_calendar-0.1.0-dc09f61d",
  "creationInfo": {
-  "created": "2026-11-07T00:00:00Z",
+  "created": "2026-11-14T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "d2595562b0b1834974172f8c6eddb71b4bcfa5b470987589c567f16b0a863c41"
+     "checksumValue": "e2a966d4a3712313dbcc6c0680d3f67aa2c3d9e470602d5cc1f456f9d459bdd5"
     }
    ]
   }

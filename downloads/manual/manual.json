@@ -2,11 +2,11 @@
  "en": {
   "file": "star-manual-en.pdf",
   "pages": 44,
-  "sha256": "fa3c0e41c7104910d461c92fd515ceaa72495b4b6a1b89e57355fcf05e68808d"
+  "sha256": "0376fd7c7a3621d331e670e13066ed53688e002fb46d71ba22847c0ede0ac9cc"
  },
  "it": {
   "file": "star-manual-it.pdf",
   "pages": 45,
-  "sha256": "c730fdde2b80621dba24f6771ce76b80647a409e2a0a36721ec64f41404e21f8"
+  "sha256": "72f3685d0ad4496e9d938eeddb8edb1cfa6ea30477a93fb593c2d49a29ffc7a7"
  }
 }
