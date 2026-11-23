@@ -5,7 +5,7 @@
  "name": "star-timecode-0.1.0",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_timecode-0.1.0-dc09f61d",
  "creationInfo": {
-  "created": "2026-11-14T00:00:00Z",
+  "created": "2026-11-23T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "e1c965b4012c017a91fba45906f115fce01f17aa09b7198c1e13a6b91860e7ca"
+     "checksumValue": "53ce07840dfd001c33f88d2c708da687914a6f10813d023a0673d34a993ff8da"
     }
    ]
   }

@@ -5,7 +5,7 @@
  "name": "star-wrap-0.1.0",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_wrap-0.1.0-dc09f61d",
  "creationInfo": {
-  "created": "2026-11-14T00:00:00Z",
+  "created": "2026-11-23T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "6b3440c71cee3c6a54de2a71604447b06ef156aa40f5d0c188d678dadfbe397e"
+     "checksumValue": "fcbc3e630b7ce6d55e22436c1056a2c12e8b54c78b9127f4e66a8690749e1f30"
     }
    ]
   }

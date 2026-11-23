@@ -5,7 +5,7 @@
  "name": "star-kepler-0.1.1",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_kepler-0.1.1-dc09f61d",
  "creationInfo": {
-  "created": "2026-11-14T00:00:00Z",
+  "created": "2026-11-23T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "9e26da5ebc56781c19e5dfd086bdd1360695556842da81132c9cfa4ed2c6f89d"
+     "checksumValue": "f55c30ab1c90f9802542ea566207c713ee57234cffbd931a9f37990009a4c5b0"
     }
    ]
   }

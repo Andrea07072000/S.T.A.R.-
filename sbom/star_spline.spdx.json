@@ -5,7 +5,7 @@
  "name": "star-spline-0.1.0",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_spline-0.1.0-dc09f61d",
  "creationInfo": {
-  "created": "2026-11-14T00:00:00Z",
+  "created": "2026-11-23T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "54d42da4992de2f60fd026676d38f286c7e5e7381663b300b085a1cca787b832"
+     "checksumValue": "24ccc0ee6622fe252b512569896acc164055b71da6439890b17670fd106dd4fa"
     }
    ]
   }

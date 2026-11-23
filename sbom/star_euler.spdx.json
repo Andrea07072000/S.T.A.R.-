@@ -5,7 +5,7 @@
  "name": "star-euler-0.1.0",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_euler-0.1.0-dc09f61d",
  "creationInfo": {
-  "created": "2026-11-14T00:00:00Z",
+  "created": "2026-11-23T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "85168f5b1cedc6c68a4f809ae3a46217ca66be3ff085f5b11275bae77a694237"
+     "checksumValue": "c2ee414f66a5e8ce7ef45b92653da0788ede74cc530dbdb44bcc812795aed052"
     }
    ]
   }

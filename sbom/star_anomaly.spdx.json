@@ -5,7 +5,7 @@
  "name": "star-anomaly-0.1.0",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_anomaly-0.1.0-dc09f61d",
  "creationInfo": {
-  "created": "2026-11-14T00:00:00Z",
+  "created": "2026-11-23T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "4764dff6a0f7e3fa0f0b057eb5a4b32fc45ba9353a7fe2fbe62f8fe3ced49723"
+     "checksumValue": "ef50d76b035b0f0ea4eacb9c743dacba4f619395af98cdea02634c1b14a92a92"
     }
    ]
   }

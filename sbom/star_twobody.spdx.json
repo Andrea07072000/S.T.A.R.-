@@ -5,7 +5,7 @@
  "name": "star-twobody-0.1.0",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_twobody-0.1.0-dc09f61d",
  "creationInfo": {
-  "created": "2026-11-14T00:00:00Z",
+  "created": "2026-11-23T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "4aafdcdb64056114b799ab8ed3ffa3b7de87d957711ee858a27ed871e0cc0de8"
+     "checksumValue": "991a4eba18e982fd92143c763495addf8afa1d82c02dd6f389b96ebd07d317d7"
     }
    ]
   }

@@ -5,7 +5,7 @@
  "name": "star-ellipsoid-0.1.0",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_ellipsoid-0.1.0-dc09f61d",
  "creationInfo": {
-  "created": "2026-11-14T00:00:00Z",
+  "created": "2026-11-23T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "7c68cd73f17b0087e18be1c4a758143642bba8873048ca62fd3ed4f7f02e74a7"
+     "checksumValue": "2be5697ee4f378dde947eed9545899a9f1d1b8d597b191ea36f2e3df87e57d1f"
     }
    ]
   }

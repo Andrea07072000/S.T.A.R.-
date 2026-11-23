@@ -5,7 +5,7 @@
  "name": "star-mat3-0.1.0",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_mat3-0.1.0-dc09f61d",
  "creationInfo": {
-  "created": "2026-11-14T00:00:00Z",
+  "created": "2026-11-23T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "68a16dc706097debe0ca974ed86ec2fdb62ae58d56e7ebea596d7a3f3a32698d"
+     "checksumValue": "a43dbc5fa62c9d9b1aa023375a145d98369a5931eb96cf09e8cef87dce772acd"
     }
    ]
   }

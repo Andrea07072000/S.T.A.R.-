@@ -5,7 +5,7 @@
  "name": "star-maneuver-0.2.2",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_maneuver-0.2.2-dc09f61d",
  "creationInfo": {
-  "created": "2026-11-14T00:00:00Z",
+  "created": "2026-11-23T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "558c2f400506a77b780e68d1dff7321d564284229c00666122f2f6dd6c3036ca"
+     "checksumValue": "d84f1d73f0d907d1a1e7df4c87822e1d3b9d302735c05ada79694d4bbd767965"
     }
    ]
   }

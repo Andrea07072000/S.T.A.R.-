@@ -5,7 +5,7 @@
  "name": "star-wahba-0.1.0",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_wahba-0.1.0-dc09f61d",
  "creationInfo": {
-  "created": "2026-11-14T00:00:00Z",
+  "created": "2026-11-23T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "324322784d64353ba194cd89d764af5f2f84df6ad5d1049a9daeefb579c0fa95"
+     "checksumValue": "1822bb8f136e7080bb1bd923bccaec1fc6c00eb5259250b2bbbd8e1e731745ad"
     }
    ]
   }

@@ -5,7 +5,7 @@
  "name": "star-sigma-0.1.0",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_sigma-0.1.0-dc09f61d",
  "creationInfo": {
-  "created": "2026-11-14T00:00:00Z",
+  "created": "2026-11-23T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "813636225a1c9b3c3425a016b883a7d88d9edae760eb5ca53a853201bcfb55c6"
+     "checksumValue": "de41f1e657714cc9b203a8709a6d67b0b9258776692de7d2a056addc4464aa50"
     }
    ]
   }

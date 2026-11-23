@@ -5,7 +5,7 @@
  "name": "star-spacepacket-0.1.1",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_spacepacket-0.1.1-dc09f61d",
  "creationInfo": {
-  "created": "2026-11-14T00:00:00Z",
+  "created": "2026-11-23T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "dc12176ddf9b7c24089f8c023b1fb4dea967880c5d0b5336418fc68e9de9678d"
+     "checksumValue": "c125ed4da0e7df6ba5dfa0a583d89b3f48d1e17b2207eb840d5eba22c9252f7f"
     }
    ]
   }

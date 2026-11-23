@@ -5,7 +5,7 @@
  "name": "star-rootfind-0.1.0",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_rootfind-0.1.0-dc09f61d",
  "creationInfo": {
-  "created": "2026-11-14T00:00:00Z",
+  "created": "2026-11-23T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "42139c7d9e206ee59fda4355607fcd52605127f6e5d57d3a31187ca93e2617df"
+     "checksumValue": "943984b32d2a1212bdc68875deb8ee45504c09f1cee62e0ce864b5043a75100a"
     }
    ]
   }

@@ -5,7 +5,7 @@
  "name": "star-quaternion-0.1.0",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_quaternion-0.1.0-dc09f61d",
  "creationInfo": {
-  "created": "2026-11-14T00:00:00Z",
+  "created": "2026-11-23T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "3a85f87742bc4c57463cb60ebaa875f080f1265e6b15f59fed1c65d1f7a56674"
+     "checksumValue": "c66e06142eacc3ad6ba850d472d43bda045b63fc3a9a8f337447f2d3ec0b6910"
     }
    ]
   }

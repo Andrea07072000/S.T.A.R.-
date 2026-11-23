@@ -5,7 +5,7 @@
  "name": "star-interp-0.1.0",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_interp-0.1.0-dc09f61d",
  "creationInfo": {
-  "created": "2026-11-14T00:00:00Z",
+  "created": "2026-11-23T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "79de916bd67863fa511cdf42a87f347aefe7bf7f9b790c40fc7576a5f782d28e"
+     "checksumValue": "d22a442ef7847297ec6fec1ee55462e9bb5cb72de73dcbab7a2fc68a08142e51"
     }
    ]
   }

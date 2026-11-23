@@ -5,7 +5,7 @@
  "name": "star-geodesy-0.1.1",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_geodesy-0.1.1-dc09f61d",
  "creationInfo": {
-  "created": "2026-11-14T00:00:00Z",
+  "created": "2026-11-23T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "c4a6d5d6559dd80a86fa2b349a09068b6ac07ace032e3c610c23e4aa09b3e330"
+     "checksumValue": "31c32d559f5635c58b4bfd779c3158fdfe5ee901cc60520bb56381247aaf3911"
     }
    ]
   }

@@ -5,7 +5,7 @@
  "name": "star-quantile-0.1.0",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_quantile-0.1.0-dc09f61d",
  "creationInfo": {
-  "created": "2026-11-14T00:00:00Z",
+  "created": "2026-11-23T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "818e3847f2618fc5d525684f72411ed91c7764a89854349466c230a12db9fb7a"
+     "checksumValue": "bc33d37868f778300a601ede31e847e09d75096e2c7a5e566efbeafe48da7375"
     }
    ]
   }

@@ -5,7 +5,7 @@
  "name": "star-j2-0.1.0",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_j2-0.1.0-dc09f61d",
  "creationInfo": {
-  "created": "2026-11-14T00:00:00Z",
+  "created": "2026-11-23T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "239dfe9a82f9f557544de08057289aa0fa9d059a95c65c275cc426c923cc3cb2"
+     "checksumValue": "53948a19eb367cae41ffaf2cda736c51497efdbe7730f3a2d087e93c94f69aa3"
     }
    ]
   }

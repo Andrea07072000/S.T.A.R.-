@@ -5,7 +5,7 @@
  "name": "star-utm-0.1.0",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_utm-0.1.0-dc09f61d",
  "creationInfo": {
-  "created": "2026-11-14T00:00:00Z",
+  "created": "2026-11-23T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "bcda42629d95ed5c9d368ba40c8f21062e152f1677c68c6ef37f3856d137ae45"
+     "checksumValue": "28a8a79d06cd81fa29100186f27eb2e7b38ce613e1a1ea4b04b2c29f0e322b21"
     }
    ]
   }

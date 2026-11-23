@@ -5,7 +5,7 @@
  "name": "star-lcc-0.1.0",
  "documentNamespace": "https://andrea07072000.github.io/S.T.A.R.-/sbom/star_lcc-0.1.0-dc09f61d",
  "creationInfo": {
-  "created": "2026-11-14T00:00:00Z",
+  "created": "2026-11-23T00:00:00Z",
   "creators": [
    "Person: Andrea Cavazzini",
    "Tool: star-site-gen"
@@ -34,7 +34,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "29eb71a8f28255163b165550f87d9152b24b47ba34df70894c60ad19b2411de9"
+     "checksumValue": "f879de3fd25d6083a813332a6d9dd3d543b61bb42ff82cc713a2e010a44136d8"
     }
    ]
   }
